@@ -1,0 +1,194 @@
+{% extends "base.html" %}
+
+{% block title %}{{ card['name'] }} — QF Flash Cards{% endblock %}
+
+{% block meta %}
+<meta name="description"        content="{{ card_excerpt }}">
+<meta property="og:type"        content="article">
+<meta property="og:site_name"   content="Quantitative Finance Flash Cards">
+<meta property="og:title"       content="{{ card['name'] }} — QF Flash Cards">
+<meta property="og:description" content="{{ card_excerpt }}">
+<meta name="twitter:card"       content="summary">
+{% endblock %}
+
+{% block content %}
+{% set tc = card_tc %}
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ url_for('main.index') }}">Cards</a>
+  <span class="breadcrumb-sep">›</span>
+  <a href="{{ url_for('main.index', topic=card['topic']) }}">{{ card['topic'] }}</a>
+  <span class="breadcrumb-sep">›</span>
+  <span class="breadcrumb-current">{{ card['name'] }}</span>
+  <button class="copy-link-btn" onclick="copyLink()" title="Copy link" aria-label="Copy link to clipboard">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+    </svg>
+  </button>
+</nav>
+
+<div class="card-layout" style="--tc:{{ tc }}">
+
+  <article class="card-body">
+    <div class="card-meta">
+      <span class="badge-topic" style="--tc:{{ tc }}">{{ card['topic'] }}</span>
+      {% for tag in card['tags'].split(',') %}
+        <a class="tag" href="{{ url_for('main.tag_page', tag=tag.strip()) }}">{{ tag.strip() }}</a>
+      {% endfor %}
+    </div>
+
+    {% if incoming %}
+    <div class="prerequisites">
+      <h3 class="prerequisites-heading">Prerequisites</h3>
+      <ul class="prerequisites-list">
+        {% for edge in incoming %}
+        <li class="prerequisites-item">
+          <a class="prerequisites-link" href="{{ url_for('main.card_detail', card_id=edge['source_id']) }}"
+             style="--tc:{{ topic_colour(edge['source_topic']) }}">
+            <span class="prerequisites-dot"></span>
+            <span class="prerequisites-name">{{ edge['source_name'] }}</span>
+            {% if edge['label'] %}<span class="prerequisites-label">{{ edge['label'] }}</span>{% endif %}
+          </a>
+          {% if edge['description'] %}
+          <p class="prerequisites-desc">{{ edge['description'] }}</p>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <div class="card-content" style="--tc:{{ tc }}">
+      {{ card['html_content']|safe }}
+    </div>
+
+    {% if outgoing %}
+    <div class="see-also">
+      <h3 class="see-also-heading">See also</h3>
+      <ul class="see-also-list">
+        {% for edge in outgoing %}
+        <li class="see-also-item">
+          <a class="see-also-link" href="{{ url_for('main.card_detail', card_id=edge['target_id']) }}"
+             style="--tc:{{ topic_colour(edge['target_topic']) }}">
+            <span class="see-also-dot"></span>
+            <span class="see-also-name">{{ edge['target_name'] }}</span>
+            {% if edge['label'] %}<span class="see-also-label">{{ edge['label'] }}</span>{% endif %}
+          </a>
+          {% if edge['description'] %}
+          <p class="see-also-desc">{{ edge['description'] }}</p>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <nav class="card-nav-links">
+      {% if prev_card %}
+        <a class="card-nav-prev" href="{{ url_for('main.card_detail', card_id=prev_card['id']) }}"
+           id="nav-prev" title="Previous card in topic (←)">
+          <span class="card-nav-arrow">&larr;</span>
+          <span class="card-nav-label">{{ prev_card['name'] }}</span>
+        </a>
+      {% else %}
+        <span class="card-nav-prev card-nav-disabled"></span>
+      {% endif %}
+      <div class="card-nav-centre">
+        <a href="{{ url_for('main.index') }}">All cards</a>
+        <a href="{{ url_for('main.graph_view') }}">Graph</a>
+      </div>
+      {% if next_card %}
+        <a class="card-nav-next" href="{{ url_for('main.card_detail', card_id=next_card['id']) }}"
+           id="nav-next" title="Next card in topic (→)">
+          <span class="card-nav-label">{{ next_card['name'] }}</span>
+          <span class="card-nav-arrow">&rarr;</span>
+        </a>
+      {% else %}
+        <span class="card-nav-next card-nav-disabled"></span>
+      {% endif %}
+    </nav>
+  </article>
+
+  <aside class="card-sidebar">
+
+    <section class="sidebar-section">
+      <h3>Links to</h3>
+      {% if outgoing %}
+        <ul class="link-list">
+          {% for edge in outgoing %}
+            <li>
+              <a href="{{ url_for('main.card_detail', card_id=edge['target_id']) }}">{{ edge['target_name'] }}</a>
+              {% if edge['label'] %}<span class="edge-label">{{ edge['label'] }}</span>{% endif %}
+              <form method="post" action="{{ url_for('main.remove_link', card_id=card['id']) }}" class="inline-form">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                <input type="hidden" name="source_id" value="{{ card['id'] }}">
+                <input type="hidden" name="target_id" value="{{ edge['target_id'] }}">
+                <button type="submit" class="btn-remove" title="Remove link">&times;</button>
+              </form>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="muted">No outgoing links.</p>
+      {% endif %}
+    </section>
+
+    <section class="sidebar-section">
+      <h3>Linked from</h3>
+      {% if incoming %}
+        <ul class="link-list">
+          {% for edge in incoming %}
+            <li class="link-list-item">
+              <div class="link-list-row">
+                <a href="{{ url_for('main.card_detail', card_id=edge['source_id']) }}">{{ edge['source_name'] }}</a>
+                {% if edge['label'] %}<span class="edge-label">{{ edge['label'] }}</span>{% endif %}
+              </div>
+              {% if edge['description'] %}
+                <p class="link-list-desc">{{ edge['description'] }}</p>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="muted">No incoming links.</p>
+      {% endif %}
+    </section>
+
+  </aside>
+</div>
+{% endblock %}
+
+{% block page_scripts %}
+<script>
+/* Mark this card as visited in localStorage */
+(function() {
+  const id      = {{ card['id']|tojson }};
+  const visited = new Set(JSON.parse(localStorage.getItem('visited_cards') || '[]'));
+  visited.add(id);
+  localStorage.setItem('visited_cards', JSON.stringify([...visited]));
+})();
+
+/* Arrow key navigation between cards in same topic */
+function handleCardNav(key) {
+  if (key === 'ArrowLeft') {
+    const prev = document.getElementById('nav-prev');
+    if (prev) prev.click();
+  } else if (key === 'ArrowRight') {
+    const next = document.getElementById('nav-next');
+    if (next) next.click();
+  }
+}
+
+/* Copy card URL to clipboard */
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const toast = document.getElementById('copy-toast');
+    toast.hidden = false;
+    clearTimeout(toast._t);
+    toast._t = setTimeout(() => { toast.hidden = true; }, 2000);
+  });
+}
+</script>
+{% endblock %}

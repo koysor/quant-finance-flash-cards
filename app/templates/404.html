@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found — QF Flash Cards{% endblock %}
+
+{% block content %}
+<div class="error-page">
+  <div class="error-code">404</div>
+  <h1>Card not found</h1>
+  <p>This card doesn't exist in the deck. It may have been moved or the URL is incorrect.</p>
+  <a href="{{ url_for('main.index') }}" class="btn-primary">Back to all cards</a>
+</div>
+{% endblock %}

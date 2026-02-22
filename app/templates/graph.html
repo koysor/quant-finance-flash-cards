@@ -1,0 +1,354 @@
+{% extends "base.html" %}
+
+{% block title %}Graph — Quantitative Finance Flash Cards{% endblock %}
+
+{% block content %}
+<div class="graph-page-header">
+  <h1>Card Graph</h1>
+  <p>Click two nodes to find the shortest path &mdash; double-click to open a card.</p>
+</div>
+
+<div class="graph-legend">
+  {% for item in legend %}
+    <span class="legend-item" data-topic="{{ item.topic }}"
+          onclick="setTopicFilter('{{ item.topic }}')"
+          title="Click to highlight {{ item.topic }}">
+      <span class="legend-swatch" style="background:{{ item.colour }}"></span>
+      {{ item.topic }}
+    </span>
+  {% endfor %}
+  <span class="legend-hint">click to filter</span>
+</div>
+
+<div class="path-banner" id="path-banner" hidden>
+  <span id="path-msg"></span>
+  <button class="path-clear" onclick="clearPath()" title="Clear path (Esc)">&times;</button>
+</div>
+
+<div id="graph-container">
+  <div class="graph-loading" id="graph-loading">
+    <div class="graph-spinner"></div>
+    <span>Positioning nodes…</span>
+    <span class="graph-progress" id="graph-progress"></span>
+  </div>
+</div>
+{% endblock %}
+
+{% block head_extra %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/dist/dist/vis-network.min.css">
+<style>
+.vis-tooltip {
+  background: var(--surface)    !important;
+  border:     1px solid var(--border) !important;
+  color:      var(--text-2)     !important;
+  font-family: Inter, system-ui, sans-serif !important;
+  font-size:  12px  !important;
+  line-height: 1.5  !important;
+  padding:    8px 12px !important;
+  border-radius: 8px  !important;
+  box-shadow: var(--shadow-lg)  !important;
+  max-width:  280px !important;
+}
+</style>
+{% endblock %}
+
+{% block page_scripts %}
+<script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/dist/vis-network.min.js"></script>
+
+<script>
+const RAW_NODES = {{ nodes_json|safe }};
+const RAW_EDGES = {{ edges_json|safe }};
+
+function isDark() {
+  return document.documentElement.getAttribute('data-theme') !== 'light';
+}
+
+function themeTokens() {
+  const dark = isDark();
+  return {
+    edgeColour: dark ? '#444c56' : '#c8d0d9',
+    edgeFont:   dark ? '#8b949e' : '#6b7280',
+    nodeFont:   dark ? '#e6edf3' : '#111827',
+  };
+}
+
+function escHtml(str) {
+  return str
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function buildNodes(t) {
+  const maxDeg = Math.max(...RAW_NODES.map(n => n.degree || 0), 1);
+  return RAW_NODES.map(n => ({
+    id:    n.id,
+    label: n.label,
+    title: `<strong style="font-family:Inter,sans-serif">${n.label}</strong><br>
+            <small style="color:#8b949e;font-family:Inter,sans-serif">${n.title}</small>`,
+    color: {
+      background: n.color,
+      border:     n.color,
+      highlight:  { background: n.color, border: '#ffffff' },
+      hover:      { background: n.color, border: '#ffffff' },
+    },
+    font:   { color: t.nodeFont, size: 12, face: 'Inter, system-ui, sans-serif' },
+    shape:  'dot',
+    size:   16 + (n.degree / maxDeg) * 20,
+    shadow: { enabled: true, color: n.color + '55', size: 18, x: 0, y: 4 },
+    _url:   n.url,
+  }));
+}
+
+function buildEdges(t) {
+  const maxShared = Math.max(...RAW_EDGES.map(e => e.shared || 0), 1);
+  return RAW_EDGES.map((e, i) => {
+    /* More shared tags → shorter spring (tighter clustering) */
+    const ratio = (e.shared || 0) / maxShared;
+    const springLen = 250 - ratio * 120;  /* range: 130–250 */
+    return {
+      id:     i,
+      from:   e.from,
+      to:     e.to,
+      label:  e.label || '',
+      title:  e.description
+        ? `<span style="font-family:Inter,sans-serif">${escHtml(e.description)}</span>`
+        : undefined,
+      arrows: { to: { enabled: true, scaleFactor: 0.6 } },
+      color:  { color: t.edgeColour, highlight: '#4f9ef8', hover: '#4f9ef8', opacity: 0.85 },
+      font:   { size: 10, color: t.edgeFont, face: 'Inter, system-ui, sans-serif',
+                strokeWidth: 0, align: 'middle' },
+      smooth: { type: 'curvedCW', roundness: 0.15 },
+      width:  1.5, selectionWidth: 3, hoverWidth: 2.5,
+      length: springLen,
+    };
+  });
+}
+
+const t      = themeTokens();
+const nodes  = new vis.DataSet(buildNodes(t));
+const edges  = new vis.DataSet(buildEdges(t));
+const container = document.getElementById('graph-container');
+const loading   = document.getElementById('graph-loading');
+const progress  = document.getElementById('graph-progress');
+
+const network = new vis.Network(container, { nodes, edges }, {
+  physics: {
+    stabilization: { iterations: 300, updateInterval: 20 },
+    barnesHut: {
+      gravitationalConstant: -10000,
+      centralGravity: 0.25,
+      springLength: 220,
+      springConstant: 0.04,
+      damping: 0.12,
+    },
+  },
+  interaction: { hover: true, tooltipDelay: 120, zoomView: true },
+  nodes: { borderWidth: 2, borderWidthSelected: 3 },
+  layout: { improvedLayout: true },
+});
+
+network.on('stabilizationProgress', params => {
+  const pct = Math.round(params.iterations / params.total * 100);
+  progress.textContent = pct + '%';
+});
+
+network.on('stabilizationIterationsDone', () => {
+  loading.classList.add('hidden');
+  setTimeout(() => { loading.style.display = 'none'; }, 500);
+  network.setOptions({ physics: false });
+});
+
+network.on('doubleClick', params => {
+  if (params.nodes.length > 0) {
+    const n = RAW_NODES.find(n => n.id === params.nodes[0]);
+    if (n) window.location.href = n.url;
+  }
+});
+network.on('hoverNode', () => { container.style.cursor = 'pointer'; });
+network.on('blurNode',  () => { container.style.cursor = 'default'; });
+
+/* ── Path finding (BFS, undirected) ── */
+let pathStart = null;
+const pathBanner = document.getElementById('path-banner');
+const pathMsg    = document.getElementById('path-msg');
+
+function buildAdj() {
+  const adj = {};
+  RAW_NODES.forEach(n => { adj[n.id] = []; });
+  RAW_EDGES.forEach((e, i) => {
+    adj[e.from].push({ node: e.to, edge: i });
+    adj[e.to].push({ node: e.from, edge: i });
+  });
+  return adj;
+}
+
+function bfs(adj, start, end) {
+  const visited = new Set([start]);
+  const queue = [[start, []]];
+  while (queue.length) {
+    const [cur, path] = queue.shift();
+    for (const { node, edge } of adj[cur]) {
+      if (visited.has(node)) continue;
+      const newPath = [...path, { node, edge }];
+      if (node === end) return newPath;
+      visited.add(node);
+      queue.push([node, newPath]);
+    }
+  }
+  return null;
+}
+
+function highlightPath(pathNodes, pathEdgeIds) {
+  const t = themeTokens();
+  const dimBg     = isDark() ? '#2d333b' : '#e5e7eb';
+  const dimBorder = isDark() ? '#3d444d' : '#d1d5db';
+  const dimFont   = isDark() ? '#484f5a' : '#c4c9d4';
+  const dimEdge   = isDark() ? '#2d333b' : '#e5e7eb';
+  const nodeSet   = new Set(pathNodes);
+  const edgeSet   = new Set(pathEdgeIds);
+
+  nodes.update(RAW_NODES.map(n => {
+    const onPath = nodeSet.has(n.id);
+    return {
+      id: n.id,
+      color: {
+        background: onPath ? n.color : dimBg,
+        border:     onPath ? n.color : dimBorder,
+        highlight:  { background: n.color, border: '#ffffff' },
+        hover:      { background: n.color, border: '#ffffff' },
+      },
+      font:   { color: onPath ? t.nodeFont : dimFont, size: 12, face: 'Inter, system-ui, sans-serif' },
+      shadow: onPath ? { enabled: true, color: n.color + '55', size: 18, x: 0, y: 4 } : { enabled: false },
+      borderWidth: onPath ? 3 : 2,
+    };
+  }));
+
+  edges.update(RAW_EDGES.map((e, i) => {
+    const onPath = edgeSet.has(i);
+    return {
+      id: i,
+      color: { color: onPath ? '#4f9ef8' : dimEdge, highlight: '#4f9ef8', hover: '#4f9ef8', opacity: onPath ? 1 : 0.3 },
+      width: onPath ? 3 : 1,
+    };
+  }));
+}
+
+function clearPath() {
+  pathStart = null;
+  pathBanner.hidden = true;
+  activeTopic = null;
+  /* Reset all nodes and edges to default */
+  const t = themeTokens();
+  nodes.update(RAW_NODES.map(n => ({
+    id: n.id,
+    color: {
+      background: n.color, border: n.color,
+      highlight: { background: n.color, border: '#ffffff' },
+      hover:     { background: n.color, border: '#ffffff' },
+    },
+    font:   { color: t.nodeFont, size: 12, face: 'Inter, system-ui, sans-serif' },
+    shadow: { enabled: true, color: n.color + '55', size: 18, x: 0, y: 4 },
+    borderWidth: 2,
+  })));
+  edges.update(RAW_EDGES.map((e, i) => ({
+    id: i,
+    color: { color: t.edgeColour, highlight: '#4f9ef8', hover: '#4f9ef8', opacity: 0.85 },
+    width: 1.5,
+  })));
+  document.querySelectorAll('.legend-item[data-topic]').forEach(el => {
+    el.classList.remove('legend-active', 'legend-dimmed');
+    el.querySelector('.legend-swatch').style.boxShadow = '';
+  });
+}
+
+network.on('click', params => {
+  if (params.nodes.length === 0) {
+    clearPath();
+    return;
+  }
+  const clicked = params.nodes[0];
+  const label = RAW_NODES.find(n => n.id === clicked)?.label || clicked;
+
+  if (pathStart === null) {
+    pathStart = clicked;
+    pathBanner.hidden = false;
+    pathMsg.textContent = `Start: ${label} — click a second node to find the shortest path`;
+    /* Highlight start node */
+    nodes.update([{ id: clicked, borderWidth: 4 }]);
+  } else if (clicked === pathStart) {
+    clearPath();
+  } else {
+    const adj  = buildAdj();
+    const path = bfs(adj, pathStart, clicked);
+    if (path) {
+      const pathNodes = [pathStart, ...path.map(p => p.node)];
+      const pathEdges = path.map(p => p.edge);
+      highlightPath(pathNodes, pathEdges);
+      const startLabel = RAW_NODES.find(n => n.id === pathStart)?.label || pathStart;
+      pathMsg.textContent = `Path: ${startLabel} → ${label} (${path.length} step${path.length !== 1 ? 's' : ''})`;
+    } else {
+      pathMsg.textContent = `No path between ${RAW_NODES.find(n => n.id === pathStart)?.label} and ${label}`;
+    }
+    pathStart = null;
+  }
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && !pathBanner.hidden) {
+    clearPath();
+  }
+});
+
+/* ── Topic filter ── */
+let activeTopic = null;
+
+function applyTopicFilter() {
+  const t = themeTokens();
+  const dimBg     = isDark() ? '#2d333b' : '#e5e7eb';
+  const dimBorder = isDark() ? '#3d444d' : '#d1d5db';
+  const dimFont   = isDark() ? '#484f5a' : '#c4c9d4';
+
+  nodes.update(RAW_NODES.map(n => {
+    const dimmed = activeTopic !== null && n.title !== activeTopic;
+    return {
+      id:     n.id,
+      color:  {
+        background: dimmed ? dimBg : n.color,
+        border:     dimmed ? dimBorder : n.color,
+        highlight:  { background: n.color, border: '#ffffff' },
+        hover:      { background: n.color, border: '#ffffff' },
+      },
+      font:   { color: dimmed ? dimFont : t.nodeFont, size: 12, face: 'Inter, system-ui, sans-serif' },
+      shadow: dimmed ? { enabled: false } : { enabled: true, color: n.color + '55', size: 18, x: 0, y: 4 },
+    };
+  }));
+
+  document.querySelectorAll('.legend-item[data-topic]').forEach(el => {
+    const isActive = activeTopic !== null && el.dataset.topic === activeTopic;
+    const isDimmed = activeTopic !== null && !isActive;
+    el.classList.toggle('legend-active', isActive);
+    el.classList.toggle('legend-dimmed', isDimmed);
+    const swatch = el.querySelector('.legend-swatch');
+    swatch.style.boxShadow = isActive
+      ? `0 0 0 2px var(--bg), 0 0 0 4px ${swatch.style.background}`
+      : '';
+  });
+}
+
+function setTopicFilter(topic) {
+  activeTopic = (activeTopic === topic) ? null : topic;
+  applyTopicFilter();
+}
+
+function onThemeChange(theme) {
+  const t = themeTokens();
+  applyTopicFilter();  /* redraws nodes respecting active filter + new theme */
+  edges.update(RAW_EDGES.map((e, i) => ({
+    id:    i,
+    color: { color: t.edgeColour, highlight: '#4f9ef8', hover: '#4f9ef8', opacity: 0.85 },
+    font:  { size: 10, color: t.edgeFont, face: 'Inter, system-ui, sans-serif',
+             strokeWidth: 0, align: 'middle' },
+  })));
+}
+</script>
+{% endblock %}

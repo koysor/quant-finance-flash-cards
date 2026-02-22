@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}{{ tag }} — Quantitative Finance Flash Cards{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ url_for('main.index') }}">Cards</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">{{ tag }}</span>
+  </nav>
+  <h1 class="tag-page-title">
+    <span class="tag-page-label">Tag</span>
+    {{ tag }}
+  </h1>
+  <p class="tag-page-count">{{ card_count }} card{{ 's' if card_count != 1 }} tagged <strong>{{ tag }}</strong></p>
+</div>
+
+{% set card_i = namespace(value=0) %}
+{% for topic, cards in grouped|dictsort %}
+  {% set tc = topic_colour(topic) %}
+  <section class="topic-section">
+    <h2 class="topic-heading">
+      <span class="topic-dot" style="background:{{ tc }}"></span>
+      <span class="topic-heading-text">{{ topic }}</span>
+      <span class="topic-count">{{ cards|length }}</span>
+    </h2>
+    <div class="card-grid">
+      {% for card in cards %}
+        <a class="card-tile"
+           href="{{ url_for('main.card_detail', card_id=card['id']) }}"
+           data-card-id="{{ card['id'] }}"
+           style="--tc:{{ tc }};--delay:{{ card_i.value * 35 }}ms"
+           tabindex="0">
+          <div class="card-tile-header">
+            <span class="card-tile-name">{{ card['name'] }}</span>
+            <span class="visited-check" aria-label="Visited">✓</span>
+          </div>
+          <span class="card-tile-tags">
+            {% for t in card['tags'].split(',') %}
+              <a class="tag {% if t.strip() == tag %}tag-active{% endif %}"
+                 href="{{ url_for('main.tag_page', tag=t.strip()) }}"
+                 onclick="event.stopPropagation()">{{ t.strip() }}</a>
+            {% endfor %}
+          </span>
+        </a>
+        {% set card_i.value = card_i.value + 1 %}
+      {% endfor %}
+    </div>
+  </section>
+{% endfor %}
+{% endblock %}
+
+{% block page_scripts %}
+<script>
+(function() {
+  const visited = new Set(JSON.parse(localStorage.getItem('visited_cards') || '[]'));
+  document.querySelectorAll('.card-tile[data-card-id]').forEach(tile => {
+    if (visited.has(tile.dataset.cardId)) tile.classList.add('visited');
+  });
+})();
+</script>
+{% endblock %}

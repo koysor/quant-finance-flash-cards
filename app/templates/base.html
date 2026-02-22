@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Quantitative Finance Flash Cards{% endblock %}</title>
+
+  {% block meta %}
+  <meta name="description" content="Bite-sized revision flash cards for Quantitative Finance exams and interviews, pitched at A Level mathematics standard.">
+  <meta property="og:type"        content="website">
+  <meta property="og:site_name"   content="Quantitative Finance Flash Cards">
+  <meta property="og:title"       content="Quantitative Finance Flash Cards">
+  <meta property="og:description" content="Bite-sized revision flash cards for Quantitative Finance exams and interviews, pitched at A Level mathematics standard.">
+  <meta name="twitter:card"       content="summary">
+  {% endblock %}
+
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body,{delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ]})"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  {% block head_extra %}{% endblock %}
+
+  <!-- Apply saved theme + font size before paint — prevents flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      var fs = parseInt(localStorage.getItem('font_size_step'), 10);
+      if (fs) document.documentElement.style.fontSize = (100 + fs * 10) + '%';
+    })();
+  </script>
+</head>
+<body>
+
+<!-- Scroll progress bar -->
+<div id="scroll-progress"></div>
+
+<header class="site-header">
+  <nav class="nav">
+
+    <!-- Brand -->
+    <a class="nav-brand" href="{{ url_for('main.index') }}">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+           style="-webkit-text-fill-color:initial;color:var(--accent)">
+        <rect x="2" y="3" width="20" height="14" rx="2"/>
+        <path d="M8 21h8M12 17v4"/>
+      </svg>
+      Quantitative Finance Flash Cards
+    </a>
+
+    <!-- Centre links (desktop) -->
+    <div class="nav-centre">
+      <a href="{{ url_for('main.index') }}"
+         {% if request.endpoint == 'main.index' %}class="active"{% endif %}>Cards</a>
+      <a href="{{ url_for('main.graph_view') }}"
+         {% if request.endpoint == 'main.graph_view' %}class="active"{% endif %}>Graph</a>
+    </div>
+
+    <!-- Right controls (desktop) -->
+    <div class="nav-right">
+      <button class="search-trigger" onclick="goRandom()" title="Random card (r)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/>
+          <polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/>
+        </svg>
+        Random <kbd>r</kbd>
+      </button>
+
+      <button class="search-trigger" onclick="openSearch()" title="Search (/)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        Search <kbd>/</kbd>
+      </button>
+
+      <button class="help-btn" onclick="openShortcuts()" title="Keyboard shortcuts (?)">?</button>
+
+      <!-- Font size controls -->
+      <div class="font-size-controls" role="group" aria-label="Font size">
+        <button class="font-btn" onclick="changeFontSize(-1)" title="Decrease font size">A&minus;</button>
+        <button class="font-btn" onclick="changeFontSize(0)" title="Reset font size">A</button>
+        <button class="font-btn" onclick="changeFontSize(1)" title="Increase font size">A+</button>
+      </div>
+
+      <!-- Sliding theme toggle -->
+      <div class="theme-toggle" role="group" aria-label="Colour theme">
+        <div class="toggle-pill" id="toggle-pill"></div>
+        <button class="toggle-btn" id="btn-dark"  onclick="setTheme('dark')"  title="Dark">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>Dark
+        </button>
+        <button class="toggle-btn" id="btn-light" onclick="setTheme('light')" title="Light">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>Light
+        </button>
+      </div>
+    </div>
+
+    <!-- Hamburger (mobile only) -->
+    <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileMenu()"
+            aria-label="Open menu" aria-expanded="false">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6"  x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile dropdown -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a href="{{ url_for('main.index') }}"
+       {% if request.endpoint == 'main.index' %}class="active"{% endif %}>Cards</a>
+    <a href="{{ url_for('main.graph_view') }}"
+       {% if request.endpoint == 'main.graph_view' %}class="active"{% endif %}>Graph</a>
+    <div class="mobile-menu-footer">
+      <button class="search-trigger" onclick="closeMenu();goRandom()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/>
+          <polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/>
+        </svg>Random
+      </button>
+      <button class="search-trigger" onclick="closeMenu();openSearch()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>Search
+      </button>
+      <div class="font-size-controls" role="group" aria-label="Font size">
+        <button class="font-btn" onclick="changeFontSize(-1)" title="Decrease font size">A&minus;</button>
+        <button class="font-btn" onclick="changeFontSize(0)" title="Reset font size">A</button>
+        <button class="font-btn" onclick="changeFontSize(1)" title="Increase font size">A+</button>
+      </div>
+      <div class="theme-toggle" role="group" aria-label="Colour theme">
+        <div class="toggle-pill" id="toggle-pill-mobile"></div>
+        <button class="toggle-btn" id="btn-dark-m"  onclick="setTheme('dark')"  title="Dark">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>Dark
+        </button>
+        <button class="toggle-btn" id="btn-light-m" onclick="setTheme('light')" title="Light">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          </svg>Light
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  {% block content %}{% endblock %}
+</main>
+
+<!-- Copy-link toast -->
+<div id="copy-toast" class="copy-toast" aria-live="polite" hidden>Link copied!</div>
+
+<!-- Back to top -->
+<button class="back-to-top" id="back-to-top"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+       stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+  Top
+</button>
+
+<!-- Search overlay -->
+<div id="search-overlay" class="search-overlay" hidden role="dialog" aria-label="Search cards">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input type="text" id="search-input" placeholder="Search cards by name or tag…"
+             autocomplete="off" spellcheck="false">
+    </div>
+    <div id="search-results" class="search-results"></div>
+    <div class="search-hint">
+      <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+      <span><kbd>↵</kbd> open</span>
+      <span><kbd>Esc</kbd> close</span>
+    </div>
+  </div>
+</div>
+
+<!-- Keyboard shortcuts modal -->
+<div id="shortcuts-overlay" class="shortcuts-overlay" hidden role="dialog" aria-label="Keyboard shortcuts">
+  <div class="shortcuts-box">
+    <h2>Keyboard Shortcuts</h2>
+    <div class="shortcut-row">
+      <span class="shortcut-desc">Open search</span>
+      <span class="shortcut-keys"><kbd>/</kbd></span>
+    </div>
+    <div class="shortcut-row">
+      <span class="shortcut-desc">Go to graph</span>
+      <span class="shortcut-keys"><kbd>g</kbd></span>
+    </div>
+    <div class="shortcut-row">
+      <span class="shortcut-desc">Go to card list</span>
+      <span class="shortcut-keys"><kbd>c</kbd></span>
+    </div>
+    <div class="shortcut-row">
+      <span class="shortcut-desc">Random card</span>
+      <span class="shortcut-keys"><kbd>r</kbd></span>
+    </div>
+    <div class="shortcut-row">
+      <span class="shortcut-desc">Next / previous card (list)</span>
+      <span class="shortcut-keys"><kbd>j</kbd><kbd>k</kbd></span>
+    </div>
+    <div class="shortcut-row">
+      <span class="shortcut-desc">Next / previous card (topic)</span>
+      <span class="shortcut-keys"><kbd>←</kbd><kbd>→</kbd></span>
+    </div>
+    <div class="shortcut-row">
+      <span class="shortcut-desc">Show shortcuts</span>
+      <span class="shortcut-keys"><kbd>?</kbd></span>
+    </div>
+    <div class="shortcut-row">
+      <span class="shortcut-desc">Close overlay</span>
+      <span class="shortcut-keys"><kbd>Esc</kbd></span>
+    </div>
+  </div>
+</div>
+
+<script>
+const ALL_CARDS = {{ search_data_json|safe }};
+
+/* ── Theme toggle ── */
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  updatePills(theme);
+  if (typeof onThemeChange === 'function') onThemeChange(theme);
+}
+
+function updatePills(theme) {
+  ['', '-m'].forEach(suffix => {
+    const d = document.getElementById('btn-dark'  + suffix);
+    const l = document.getElementById('btn-light' + suffix);
+    const p = document.getElementById('toggle-pill' + suffix);
+    if (!d || !l || !p) return;
+    const active = theme === 'dark' ? d : l;
+    d.classList.toggle('active', theme === 'dark');
+    l.classList.toggle('active', theme === 'light');
+    requestAnimationFrame(() => {
+      const parentLeft = p.parentElement.getBoundingClientRect().left;
+      const btnLeft    = active.getBoundingClientRect().left;
+      p.style.width     = active.offsetWidth + 'px';
+      p.style.transform = `translateX(${btnLeft - parentLeft - 3}px)`;
+    });
+  });
+}
+
+(function() {
+  const t = document.documentElement.getAttribute('data-theme') || 'dark';
+  requestAnimationFrame(() => updatePills(t));
+})();
+window.addEventListener('resize', () => {
+  updatePills(document.documentElement.getAttribute('data-theme') || 'dark');
+});
+
+/* ── Font size ── */
+const FONT_MIN = -2, FONT_MAX = 3;
+let fontStep = parseInt(localStorage.getItem('font_size_step'), 10) || 0;
+
+function changeFontSize(dir) {
+  if (dir === 0) {
+    fontStep = 0;
+  } else {
+    fontStep = Math.max(FONT_MIN, Math.min(FONT_MAX, fontStep + dir));
+  }
+  document.documentElement.style.fontSize = fontStep === 0 ? '' : (100 + fontStep * 10) + '%';
+  localStorage.setItem('font_size_step', fontStep);
+}
+
+/* ── Scroll progress + back to top ── */
+const scrollBar = document.getElementById('scroll-progress');
+const btt       = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  const pct = window.scrollY / Math.max(1, document.body.scrollHeight - window.innerHeight) * 100;
+  scrollBar.style.width = Math.min(pct, 100) + '%';
+  btt.classList.toggle('visible', window.scrollY > 400);
+}, { passive: true });
+
+/* ── Mobile menu ── */
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const btn  = document.getElementById('nav-hamburger');
+  const open = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+  menu.setAttribute('aria-hidden', !open);
+  if (open) updatePills(document.documentElement.getAttribute('data-theme') || 'dark');
+}
+function closeMenu() {
+  document.getElementById('mobile-menu').classList.remove('open');
+  document.getElementById('nav-hamburger').setAttribute('aria-expanded', false);
+}
+document.addEventListener('click', e => {
+  const menu = document.getElementById('mobile-menu');
+  if (menu.classList.contains('open') &&
+      !menu.contains(e.target) &&
+      !document.getElementById('nav-hamburger').contains(e.target)) {
+    closeMenu();
+  }
+});
+
+/* ── Random card ── */
+function goRandom() {
+  if (!ALL_CARDS.length) return;
+  const visited = new Set(JSON.parse(localStorage.getItem('visited_cards') || '[]'));
+  const unvisited = ALL_CARDS.filter(c => !visited.has(c.id));
+  const pool = unvisited.length > 0 ? unvisited : ALL_CARDS;
+  const card = pool[Math.floor(Math.random() * pool.length)];
+  window.location.href = card.url;
+}
+
+/* ── Search overlay ── */
+let searchFocusIdx = -1;
+
+function openSearch() {
+  document.getElementById('search-overlay').hidden = false;
+  const inp = document.getElementById('search-input');
+  inp.value = '';
+  inp.focus();
+  renderSearchResults('');
+  searchFocusIdx = -1;
+}
+function closeSearch() { document.getElementById('search-overlay').hidden = true; }
+
+function escHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function fuzzyScore(text, query) {
+  const t = text.toLowerCase(), q = query.toLowerCase();
+  let score = 0, qi = 0, lastMatch = -1;
+  for (let ti = 0; ti < t.length && qi < q.length; ti++) {
+    if (t[ti] === q[qi]) {
+      score += (ti === lastMatch + 1) ? 3 : 1;
+      lastMatch = ti;
+      qi++;
+    }
+  }
+  return qi === q.length ? score : 0;
+}
+
+function renderSearchResults(query) {
+  const container = document.getElementById('search-results');
+  const q = query.trim();
+
+  let matches;
+  if (!q) {
+    matches = ALL_CARDS.slice(0, 8);
+  } else {
+    matches = ALL_CARDS
+      .map(c => ({
+        card: c,
+        score: fuzzyScore(c.name, q) * 3 +
+               fuzzyScore(c.topic, q)      +
+               fuzzyScore(c.tags, q),
+      }))
+      .filter(x => x.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 8)
+      .map(x => x.card);
+  }
+
+  if (!matches.length) {
+    container.innerHTML = `<div class="search-empty">No cards match "<em>${escHtml(q)}</em>"</div>`;
+    return;
+  }
+  container.innerHTML = matches.map((c, i) => `
+    <a class="search-result" href="${c.url}" data-idx="${i}">
+      <span class="search-result-dot" style="background:${c.colour}"></span>
+      <span class="search-result-info">
+        <span class="search-result-name">${hl(c.name, q)}</span>
+        <span class="search-result-topic">${escHtml(c.topic)}</span>
+      </span>
+    </a>
+  `).join('');
+  searchFocusIdx = -1;
+}
+
+function hl(text, q) {
+  const safe = escHtml(text);
+  if (!q) return safe;
+  const escaped = escHtml(q).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return safe.replace(
+    new RegExp(`(${escaped})`, 'gi'),
+    '<mark style="background:var(--accent-soft);color:var(--accent);border-radius:2px">$1</mark>'
+  );
+}
+
+function moveSearchFocus(dir) {
+  const results = document.querySelectorAll('.search-result');
+  if (!results.length) return;
+  results[Math.max(searchFocusIdx, 0)]?.classList.remove('focused');
+  searchFocusIdx = Math.max(0, Math.min(searchFocusIdx + dir, results.length - 1));
+  results[searchFocusIdx].classList.add('focused');
+  results[searchFocusIdx].scrollIntoView({ block: 'nearest' });
+}
+
+document.getElementById('search-input').addEventListener('input', e => renderSearchResults(e.target.value));
+document.getElementById('search-overlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('search-overlay')) closeSearch();
+});
+
+/* ── Shortcuts modal ── */
+function openShortcuts()  { document.getElementById('shortcuts-overlay').hidden = false; }
+function closeShortcuts() { document.getElementById('shortcuts-overlay').hidden = true; }
+document.getElementById('shortcuts-overlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('shortcuts-overlay')) closeShortcuts();
+});
+
+/* ── Global keyboard handler ── */
+document.addEventListener('keydown', e => {
+  const tag = document.activeElement?.tagName;
+  const inInput    = tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA';
+  const searchOpen = !document.getElementById('search-overlay').hidden;
+  const shortcutsOpen = !document.getElementById('shortcuts-overlay').hidden;
+
+  if (e.key === 'Escape') {
+    if (searchOpen)    { closeSearch();    return; }
+    if (shortcutsOpen) { closeShortcuts(); return; }
+    closeMenu();
+    return;
+  }
+  if (searchOpen) {
+    if (e.key === 'ArrowDown') { e.preventDefault(); moveSearchFocus(1);  return; }
+    if (e.key === 'ArrowUp')   { e.preventDefault(); moveSearchFocus(-1); return; }
+    if (e.key === 'Enter') {
+      const f = document.querySelector('.search-result.focused') ||
+                document.querySelector('.search-result');
+      if (f) { f.click(); closeSearch(); }
+      return;
+    }
+    return;
+  }
+  if (inInput) return;
+  if (e.key === '/')  { e.preventDefault(); openSearch();   return; }
+  if (e.key === '?')  { openShortcuts();                    return; }
+  if (e.key === 'r')  { goRandom();                         return; }
+  if (e.key === 'g')  { window.location.href = '{{ url_for("main.graph_view") }}'; return; }
+  if (e.key === 'c')  { window.location.href = '{{ url_for("main.index") }}';      return; }
+  if (typeof handleCardNav === 'function') handleCardNav(e.key);
+});
+</script>
+
+{% block page_scripts %}{% endblock %}
+</body>
+</html>

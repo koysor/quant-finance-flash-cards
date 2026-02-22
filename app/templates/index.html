@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block title %}Cards — Quantitative Finance Flash Cards{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>Flash Cards</h1>
+  <div class="stats-bar">
+    <span>{{ site_stats.card_count }} cards</span>
+    <span class="stats-sep">·</span>
+    <span>{{ site_stats.topic_count }} topics</span>
+    <span class="stats-sep">·</span>
+    <span>{{ site_stats.edge_count }} connections</span>
+    <span class="stats-progress" id="visited-stat"></span>
+  </div>
+  {% if active_tag %}
+    <p class="filter-note" style="margin-top:0.6rem">
+      Filtered by tag <strong>{{ active_tag }}</strong>
+      &mdash; <a href="{{ url_for('main.index') }}">clear filter</a>
+    </p>
+  {% elif active_topic %}
+    <p class="filter-note" style="margin-top:0.6rem">
+      Showing topic <strong>{{ active_topic }}</strong>
+      &mdash; <a href="{{ url_for('main.index') }}">show all</a>
+    </p>
+  {% endif %}
+</div>
+
+<!-- Tag filter strip -->
+{% if all_tags %}
+<div class="tag-strip-wrap">
+  <div class="tag-strip">
+    <a class="tag-pill tag-pill-all {% if not active_tag %}active{% endif %}"
+       href="{{ url_for('main.index') }}">All</a>
+    {% for tag in all_tags %}
+      <a class="tag-pill {% if active_tag == tag %}active{% endif %}"
+         href="{{ url_for('main.tag_page', tag=tag) }}">{{ tag }}</a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% if grouped %}
+  {% set card_i = namespace(value=0) %}
+  {% for topic, cards in grouped|dictsort %}
+    {% set tc = topic_colour(topic) %}
+    <section class="topic-section">
+      <h2 class="topic-heading">
+        <span class="topic-dot" style="background:{{ tc }}"></span>
+        <span class="topic-heading-text">{{ topic }}</span>
+        <span class="topic-count">{{ cards|length }}</span>
+      </h2>
+      <div class="card-grid">
+        {% for card in cards %}
+          <a class="card-tile"
+             href="{{ url_for('main.card_detail', card_id=card['id']) }}"
+             data-card-id="{{ card['id'] }}"
+             style="--tc:{{ tc }};--delay:{{ card_i.value * 35 }}ms"
+             tabindex="0">
+            <div class="card-tile-header">
+              <span class="card-tile-name">{{ card['name'] }}</span>
+              <span class="visited-check" aria-label="Visited">✓</span>
+            </div>
+            <span class="card-tile-tags">
+              {% for tag in card['tags'].split(',') %}
+                <span class="tag">{{ tag.strip() }}</span>
+              {% endfor %}
+            </span>
+          </a>
+          {% set card_i.value = card_i.value + 1 %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+{% else %}
+  <p class="muted">No cards found{% if active_tag %} for tag "<em>{{ active_tag }}</em>"{% endif %}.</p>
+{% endif %}
+{% endblock %}
+
+{% block page_scripts %}
+<script>
+/* ── Visited card tracking ── */
+(function() {
+  const visited = new Set(JSON.parse(localStorage.getItem('visited_cards') || '[]'));
+  const total   = {{ site_stats.card_count }};
+
+  document.querySelectorAll('.card-tile[data-card-id]').forEach(tile => {
+    if (visited.has(tile.dataset.cardId)) tile.classList.add('visited');
+  });
+
+  const stat = document.getElementById('visited-stat');
+  if (stat && visited.size > 0) {
+    stat.innerHTML = `· <strong>${visited.size}</strong> of ${total} visited`;
+  }
+})();
+
+/* ── j/k keyboard navigation ── */
+const tiles = Array.from(document.querySelectorAll('.card-tile'));
+let idx = -1;
+
+function handleCardNav(key) {
+  if (!tiles.length) return;
+  if (key === 'j') {
+    idx = Math.min(idx + 1, tiles.length - 1);
+    tiles[idx].focus(); tiles[idx].scrollIntoView({ block: 'nearest' });
+  } else if (key === 'k') {
+    idx = Math.max(idx - 1, 0);
+    tiles[idx].focus(); tiles[idx].scrollIntoView({ block: 'nearest' });
+  } else if (key === 'Enter' && idx >= 0) {
+    tiles[idx].click();
+  }
+}
+
+tiles.forEach((t, i) => t.addEventListener('focus', () => { idx = i; }));
+</script>
+{% endblock %}

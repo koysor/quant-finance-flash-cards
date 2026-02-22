@@ -1,0 +1,224 @@
+[
+  {
+    "source": "calculus/taylor-series",
+    "target": "stochastic-processes/itos-lemma",
+    "label": "motivates",
+    "description": "Itô's Lemma is the stochastic calculus equivalent of a Taylor expansion — it tells you how a function of a random process changes, using the same first- and second-derivative structure."
+  },
+  {
+    "source": "derivatives/black-scholes-equation",
+    "target": "derivatives/delta-hedging",
+    "label": "enables",
+    "description": "Black-Scholes shows that a continuously rebalanced Delta hedge eliminates all price risk, which is precisely the argument used to derive the Black-Scholes PDE."
+  },
+  {
+    "source": "derivatives/black-scholes-equation",
+    "target": "derivatives/implied-volatility",
+    "label": "inverted to get",
+    "description": "Implied volatility is found by running Black-Scholes in reverse: given a market price for an option, you solve numerically for the volatility that makes the formula match."
+  },
+  {
+    "source": "derivatives/black-scholes-equation",
+    "target": "derivatives/option-greeks",
+    "label": "defines",
+    "description": "The Black-Scholes formula gives closed-form expressions for Delta, Gamma, Vega, Theta and Rho — the Greeks are simply partial derivatives of the Black-Scholes price with respect to each input."
+  },
+  {
+    "source": "derivatives/option-greeks",
+    "target": "calculus/taylor-series",
+    "label": "derived via",
+    "description": "The Greeks are partial derivatives of the option price; a Taylor expansion in those derivatives gives a local approximation of how the portfolio P&L changes with small moves in price, time, and volatility."
+  },
+  {
+    "source": "derivatives/option-greeks",
+    "target": "derivatives/delta-hedging",
+    "label": "parameterises",
+    "description": "Delta is the hedge ratio — it tells you exactly how many units of the underlying to hold in order to offset the option's directional exposure."
+  },
+  {
+    "source": "derivatives/put-call-parity",
+    "target": "derivatives/option-greeks",
+    "label": "constrains",
+    "description": "Put-call parity forces the Delta of a put and the Delta of the equivalent call to sum to one (or negative one), providing a quick sanity check on any Greeks calculation."
+  },
+  {
+    "source": "derivatives/risk-neutral-pricing",
+    "target": "derivatives/black-scholes-equation",
+    "label": "framework for",
+    "description": "The Black-Scholes price equals the discounted expected payoff under the risk-neutral measure — risk-neutral pricing is the theoretical foundation that justifies the formula."
+  },
+  {
+    "source": "financial-maths/return-on-investment",
+    "target": "statistics/statistical-properties-of-returns",
+    "label": "input to",
+    "description": "Daily returns calculated from asset prices are the raw data whose mean and standard deviation characterise the asset's drift and volatility."
+  },
+  {
+    "source": "probability/bayes-theorem",
+    "target": "probability/expected-value",
+    "label": "updates",
+    "description": "Bayes' Theorem updates your probability distribution as new information arrives; the expected value computed from that updated distribution is your revised estimate of fair value."
+  },
+  {
+    "source": "probability/expected-value",
+    "target": "financial-maths/time-value-of-money",
+    "label": "discounted by",
+    "description": "A fair price equals the expected future payoff discounted back to today — combining expected value with time-value-of-money discounting is the core of risk-neutral option pricing."
+  },
+  {
+    "source": "probability/lognormal-distribution",
+    "target": "derivatives/black-scholes-equation",
+    "label": "assumed by",
+    "description": "Black-Scholes assumes stock prices are lognormally distributed — the N(d₁) and N(d₂) terms in the formula are computed from the normal distribution of log-prices."
+  },
+  {
+    "source": "probability/normal-distribution",
+    "target": "derivatives/black-scholes-equation",
+    "label": "N(d1), N(d2) from",
+    "description": "The Black-Scholes formula contains N(d₁) and N(d₂), which are cumulative normal probabilities representing the option's Delta and the risk-neutral probability of finishing in the money."
+  },
+  {
+    "source": "probability/normal-distribution",
+    "target": "probability/lognormal-distribution",
+    "label": "exponentiates to",
+    "description": "If log-returns are normally distributed then the price itself is lognormally distributed — the lognormal is simply the exponential of a normal random variable."
+  },
+  {
+    "source": "probability/normal-distribution",
+    "target": "risk/value-at-risk",
+    "label": "used in",
+    "description": "Parametric VaR assumes returns are normally distributed, so the 1% or 5% loss quantile is simply the mean minus a fixed multiple of the standard deviation (1.645σ for 95%, 2.326σ for 99%)."
+  },
+  {
+    "source": "probability/normal-distribution",
+    "target": "statistics/statistical-properties-of-returns",
+    "label": "fits",
+    "description": "Standardised daily returns closely match the normal bell curve — this empirical observation is the justification for modelling returns as normally distributed random variables."
+  },
+  {
+    "source": "probability/normal-distribution",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "parameterised by",
+    "description": "The normal distribution is fully described by its mean and variance — knowing these two parameters is enough to calculate any probability or quantile, including VaR."
+  },
+  {
+    "source": "probability/normal-distribution",
+    "target": "stochastic-processes/brownian-motion",
+    "label": "increments of",
+    "description": "Brownian motion is built from normal increments — each infinitesimal step dW is drawn from N(0, dt), so the normal distribution is the elementary building block of all continuous-time models."
+  },
+  {
+    "source": "risk/model-limitations",
+    "target": "probability/normal-distribution",
+    "label": "challenges",
+    "description": "Real returns have fatter tails than the normal distribution predicts — extreme events like the 1987 crash occur far more often than the model allows, undermining VaR and Black-Scholes in the tails."
+  },
+  {
+    "source": "risk/model-limitations",
+    "target": "stochastic-processes/drift-and-volatility",
+    "label": "questions",
+    "description": "The basic model assumes constant drift and volatility, but real markets exhibit volatility clustering and regime changes — motivating GARCH, stochastic volatility, and jump-diffusion models."
+  },
+  {
+    "source": "risk/monte-carlo-simulation",
+    "target": "risk/value-at-risk",
+    "label": "computes",
+    "description": "Monte Carlo VaR simulates thousands of portfolio paths and reads the loss quantile directly from the resulting distribution, avoiding the normality assumption of parametric VaR."
+  },
+  {
+    "source": "statistics/correlation",
+    "target": "risk/value-at-risk",
+    "label": "feeds into",
+    "description": "Portfolio VaR depends on the correlations between positions — in a multi-asset portfolio, low correlations reduce aggregate risk even when individual volatilities are unchanged."
+  },
+  {
+    "source": "statistics/estimating-parameters",
+    "target": "stochastic-processes/drift-and-volatility",
+    "label": "calibrates",
+    "description": "The annualised drift and volatility used in every pricing and risk model are estimated from historical daily returns — multiplying the mean by 252 and the standard deviation by √252."
+  },
+  {
+    "source": "statistics/scaling-mean-with-time",
+    "target": "stochastic-processes/growth-vs-volatility-timescales",
+    "label": "contrasted in",
+    "description": "Mean returns scale linearly with time while volatility scales with the square root — this asymmetry explains why drift dominates at long horizons but is invisible at short ones."
+  },
+  {
+    "source": "statistics/square-root-rule",
+    "target": "risk/value-at-risk",
+    "label": "scales",
+    "description": "The square-root rule is used to convert VaR between time horizons — a 1-day VaR is scaled to a 10-day VaR by multiplying by √10, as required by Basel regulatory standards."
+  },
+  {
+    "source": "statistics/square-root-rule",
+    "target": "stochastic-processes/growth-vs-volatility-timescales",
+    "label": "explains",
+    "description": "Because volatility grows as √t while drift grows as t, the signal-to-noise ratio improves with horizon length — the square-root rule is the quantitative reason why short-term forecasting is so difficult."
+  },
+  {
+    "source": "statistics/variance-and-standard-deviation",
+    "target": "statistics/square-root-rule",
+    "label": "underpins",
+    "description": "The square-root rule follows directly from the variance addition property for independent random variables — total variance equals the sum of individual variances, so total standard deviation grows as √n."
+  },
+  {
+    "source": "stochastic-processes/brownian-motion",
+    "target": "derivatives/option-greeks",
+    "label": "underlies",
+    "description": "Because the underlying asset follows a Brownian-driven process, option prices are stochastic and their sensitivities (the Greeks) describe how that randomness flows through to the portfolio."
+  },
+  {
+    "source": "stochastic-processes/brownian-motion",
+    "target": "stochastic-processes/geometric-brownian-motion",
+    "label": "extended to",
+    "description": "Geometric Brownian Motion replaces the additive increments of standard Brownian Motion with multiplicative ones, ensuring the stock price can never go negative."
+  },
+  {
+    "source": "stochastic-processes/discrete-random-walk",
+    "target": "risk/monte-carlo-simulation",
+    "label": "implements",
+    "description": "Monte Carlo simulation works by repeatedly applying the discrete random walk formula with fresh random draws — each application of the formula generates one step of one simulated price path."
+  },
+  {
+    "source": "stochastic-processes/discrete-random-walk",
+    "target": "stochastic-processes/stochastic-differential-equation",
+    "label": "becomes",
+    "description": "The discrete random walk is the finite-step approximation that becomes the continuous SDE dS = μS dt + σS dX as the time step δt → 0."
+  },
+  {
+    "source": "stochastic-processes/geometric-brownian-motion",
+    "target": "derivatives/black-scholes-equation",
+    "label": "models stock price for",
+    "description": "Black-Scholes assumes the stock price follows GBM — this single assumption leads directly to the lognormal distribution of returns and the closed-form pricing formula."
+  },
+  {
+    "source": "stochastic-processes/geometric-brownian-motion",
+    "target": "probability/lognormal-distribution",
+    "label": "produces",
+    "description": "GBM implies that log-prices are normally distributed, so the price itself follows a lognormal distribution — this is why asset prices are always positive and right-skewed."
+  },
+  {
+    "source": "stochastic-processes/itos-lemma",
+    "target": "derivatives/black-scholes-equation",
+    "label": "derives",
+    "description": "Applying Itô's Lemma to the option price as a function of a GBM stock price, then invoking the no-arbitrage condition, yields the Black-Scholes PDE."
+  },
+  {
+    "source": "stochastic-processes/itos-lemma",
+    "target": "stochastic-processes/geometric-brownian-motion",
+    "label": "solves",
+    "description": "Itô's Lemma is used to derive the explicit solution for GBM — applying it to ln(S) converts the stochastic differential equation into a simple integral that gives S(t) in closed form."
+  },
+  {
+    "source": "stochastic-processes/stochastic-differential-equation",
+    "target": "derivatives/black-scholes-equation",
+    "label": "foundation of",
+    "description": "The SDE dS = μS dt + σS dX is the starting point for deriving the Black-Scholes PDE — applying Itô's Lemma and the no-arbitrage condition to this equation produces the pricing formula."
+  },
+  {
+    "source": "stochastic-processes/stochastic-differential-equation",
+    "target": "stochastic-processes/drift-and-volatility",
+    "label": "parameterised by",
+    "description": "The SDE contains exactly two parameters — drift μ and volatility σ — which fully specify the probabilistic behaviour of the asset price."
+  }
+]
