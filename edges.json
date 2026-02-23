@@ -1,9 +1,81 @@
 [
   {
+    "source": "calculus/lemma",
+    "target": "calculus/taylor-series",
+    "label": "used in",
+    "description": "The Taylor expansion is itself a lemma — a proven result invoked as a building block inside larger proofs, such as deriving the Greeks or the Itô correction term."
+  },
+  {
+    "source": "calculus/lemma",
+    "target": "stochastic-processes/itos-lemma",
+    "label": "exemplified by",
+    "description": "Itô's Lemma is the most important lemma in quantitative finance — a proven stepping-stone result that is invoked every time a function of a stochastic process needs to be differentiated."
+  },
+  {
+    "source": "calculus/lemma",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "proves",
+    "description": "The variance addition lemma for independent random variables — Var(X + Y) = Var(X) + Var(Y) — is the foundational step behind the square-root rule for scaling volatility."
+  },
+  {
     "source": "calculus/taylor-series",
     "target": "stochastic-processes/itos-lemma",
     "label": "motivates",
     "description": "Itô's Lemma is the stochastic calculus equivalent of a Taylor expansion — it tells you how a function of a random process changes, using the same first- and second-derivative structure."
+  },
+  {
+    "source": "derivatives/american-option-pricing",
+    "target": "derivatives/european-option-pricing",
+    "label": "extends",
+    "description": "An American option is worth at least as much as its European counterpart — the early-exercise premium is the additional value from the right to exercise before expiry."
+  },
+  {
+    "source": "derivatives/american-option-pricing",
+    "target": "derivatives/early-exercise-decision",
+    "label": "requires",
+    "description": "Pricing an American option requires evaluating the early exercise decision at every node — the option price is the maximum of the intrinsic value and the continuation value."
+  },
+  {
+    "source": "derivatives/american-vs-european-options",
+    "target": "derivatives/american-option-pricing",
+    "label": "compares",
+    "description": "The comparison card contrasts the pricing methodologies, exercise rights, and put-call parity relationships that distinguish American from European options."
+  },
+  {
+    "source": "derivatives/american-vs-european-options",
+    "target": "derivatives/european-option-pricing",
+    "label": "compares",
+    "description": "The comparison card highlights that European options admit closed-form Black-Scholes prices and exact put-call parity, serving as the analytically tractable baseline."
+  },
+  {
+    "source": "derivatives/american-vs-european-options",
+    "target": "derivatives/put-call-parity",
+    "label": "constrains",
+    "description": "Put-call parity holds exactly for European options but only as inequality bounds for American options — the early-exercise right breaks the strict equality."
+  },
+  {
+    "source": "derivatives/early-exercise-decision",
+    "target": "derivatives/option-greeks",
+    "label": "informed by",
+    "description": "Theta and the cost of carry determine whether early exercise is worthwhile — when Theta decay exceeds the interest earned on the intrinsic value, continuing to hold is optimal."
+  },
+  {
+    "source": "derivatives/early-exercise-decision",
+    "target": "financial-maths/time-value-of-money",
+    "label": "driven by",
+    "description": "The core trade-off in early exercise is whether receiving cash now and earning interest outweighs the option's remaining time value — a direct application of the time value of money."
+  },
+  {
+    "source": "derivatives/black-scholes-equation",
+    "target": "derivatives/european-option-pricing",
+    "label": "prices",
+    "description": "The Black-Scholes formula gives closed-form prices for European calls and puts — it is the standard analytical pricing tool for European-style options."
+  },
+  {
+    "source": "derivatives/european-option-pricing",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "valued via",
+    "description": "European option prices equal the discounted expected payoff under the risk-neutral measure — this expectation is the defining calculation for European-style derivatives."
   },
   {
     "source": "derivatives/black-scholes-equation",

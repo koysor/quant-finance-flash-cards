@@ -1037,7 +1037,8 @@ a.tag:hover {
 }
 
 /* KaTeX inline overflow protection (all widths) */
-.card-content .katex { overflow-x: auto; overflow-y: hidden; display: inline-block; max-width: 100%; }
+.card-content .katex:not(.katex-display .katex) { vertical-align: middle; }
+.card-content .katex-display .katex { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 
 /* ── Graph stabilisation indicator ─────────────────────────── */
 #graph-container { position: relative; }
