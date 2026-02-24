@@ -1,5 +1,17 @@
 [
   {
+    "source": "calculus/differentiation-rules",
+    "target": "calculus/taylor-series",
+    "label": "foundation of",
+    "description": "A Taylor series is built from repeated differentiation — the nth term is the nth derivative evaluated at the expansion point, so mastery of differentiation rules is a prerequisite for constructing any Taylor approximation."
+  },
+  {
+    "source": "calculus/differentiation-rules",
+    "target": "derivatives/option-greeks",
+    "label": "applied in",
+    "description": "The Greeks are partial derivatives of the option price with respect to its inputs — computing Delta, Gamma, Theta, and Vega requires direct application of the chain rule, product rule, and differentiation of the normal CDF."
+  },
+  {
     "source": "calculus/lemma",
     "target": "calculus/taylor-series",
     "label": "used in",
@@ -96,6 +108,12 @@
     "description": "The Black-Scholes formula gives closed-form expressions for Delta, Gamma, Vega, Theta and Rho — the Greeks are simply partial derivatives of the Black-Scholes price with respect to each input."
   },
   {
+    "source": "derivatives/implied-volatility",
+    "target": "risk/model-limitations",
+    "label": "reveals",
+    "description": "The volatility smile and skew observed in implied volatility across strikes expose the failure of Black-Scholes' constant-volatility assumption — the market prices in fat tails and jump risk that the model ignores."
+  },
+  {
     "source": "derivatives/option-greeks",
     "target": "calculus/taylor-series",
     "label": "derived via",
@@ -126,16 +144,154 @@
     "description": "Daily returns calculated from asset prices are the raw data whose mean and standard deviation characterise the asset's drift and volatility."
   },
   {
+    "source": "linear-algebra/matrix-multiplication",
+    "target": "risk/value-at-risk",
+    "label": "used in",
+    "description": "Portfolio VaR for multiple assets requires the matrix calculation w'Σw to compute portfolio variance — matrix multiplication is the computational tool that combines individual volatilities with their correlations."
+  },
+  {
+    "source": "linear-algebra/matrix-multiplication",
+    "target": "statistics/correlation",
+    "label": "computes",
+    "description": "The correlation matrix is built and manipulated via matrix operations — portfolio risk, principal component analysis, and factor models all rely on multiplying weight vectors by covariance or correlation matrices."
+  },
+  {
     "source": "probability/bayes-theorem",
     "target": "probability/expected-value",
     "label": "updates",
     "description": "Bayes' Theorem updates your probability distribution as new information arrives; the expected value computed from that updated distribution is your revised estimate of fair value."
   },
   {
+    "source": "probability/binomial-distribution",
+    "target": "derivatives/american-option-pricing",
+    "label": "prices via",
+    "description": "The binomial tree model prices American options by working backwards through a recombining tree — at each node the number of up-moves follows a binomial distribution, and early exercise is checked at every step."
+  },
+  {
+    "source": "probability/binomial-distribution",
+    "target": "probability/poisson-distribution",
+    "label": "limiting case of",
+    "description": "When the number of trials n is large and the probability p is small, the binomial distribution converges to the Poisson — this limit is used in credit risk to model rare default events in large portfolios."
+  },
+  {
+    "source": "probability/binomial-distribution",
+    "target": "probability/expected-value",
+    "label": "defines mean of",
+    "description": "The expected value of a binomial random variable is np — this simple formula gives the average number of up-moves in a binomial tree, which determines the expected terminal stock price."
+  },
+  {
+    "source": "probability/binomial-distribution",
+    "target": "probability/normal-distribution",
+    "label": "converges to",
+    "description": "By the Central Limit Theorem, the binomial distribution approaches the normal distribution as n grows — this convergence is why the binomial tree model reproduces Black-Scholes prices in the continuous limit."
+  },
+  {
+    "source": "probability/binomial-distribution",
+    "target": "stochastic-processes/discrete-random-walk",
+    "label": "counts steps of",
+    "description": "Each step of a discrete random walk is an independent up-or-down trial — the total number of up-moves after n steps follows a binomial distribution B(n, p)."
+  },
+  {
+    "source": "probability/chi-squared-distribution",
+    "target": "probability/normal-distribution",
+    "label": "built from",
+    "description": "The chi-squared distribution is the sum of squared standard normals — it arises naturally when testing whether the variance of normally distributed returns has changed."
+  },
+  {
+    "source": "probability/chi-squared-distribution",
+    "target": "probability/students-t-distribution",
+    "label": "related to",
+    "description": "The t-distribution is constructed as a standard normal divided by the square root of a chi-squared divided by its degrees of freedom — the two distributions are algebraically inseparable in small-sample inference."
+  },
+  {
+    "source": "probability/chi-squared-distribution",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "tests",
+    "description": "The chi-squared test statistic (n−1)s²/σ₀² follows a chi-squared distribution under the null hypothesis — this is the standard method for testing whether realised volatility matches a hypothesised value."
+  },
+  {
+    "source": "probability/cumulative-distribution-function",
+    "target": "derivatives/black-scholes-equation",
+    "label": "applied in",
+    "description": "The Black-Scholes formula uses Φ(d₁) and Φ(d₂) — the cumulative normal distribution function — to compute the option price as a weighted combination of probabilities."
+  },
+  {
+    "source": "probability/cumulative-distribution-function",
+    "target": "probability/probability-density-function",
+    "label": "integrates",
+    "description": "The CDF is the integral of the PDF — F(x) accumulates the density from −∞ to x, and conversely the PDF is the derivative of the CDF."
+  },
+  {
+    "source": "probability/cumulative-distribution-function",
+    "target": "probability/uniform-distribution",
+    "label": "inverted via",
+    "description": "The inverse CDF (quantile function) transforms a uniform U(0,1) draw into a sample from any target distribution — this inverse transform method is the bridge between uniform random numbers and Monte Carlo simulation."
+  },
+  {
+    "source": "probability/cumulative-distribution-function",
+    "target": "risk/value-at-risk",
+    "label": "defines quantile of",
+    "description": "Value at Risk is defined as a quantile of the loss distribution — it is the inverse CDF evaluated at the confidence level, making the CDF the mathematical object that directly determines VaR."
+  },
+  {
+    "source": "probability/exponential-distribution",
+    "target": "probability/poisson-distribution",
+    "label": "inter-arrival times of",
+    "description": "If events arrive as a Poisson process with rate λ, the waiting time between consecutive events follows an exponential distribution with the same rate — the two distributions are inseparable."
+  },
+  {
+    "source": "probability/exponential-distribution",
+    "target": "financial-maths/time-value-of-money",
+    "label": "mirrors",
+    "description": "The survival probability e^{−λt} has the same exponential form as the continuous discount factor e^{−rt} — default intensity in credit risk plays an analogous role to the risk-free rate in time-value-of-money discounting."
+  },
+  {
     "source": "probability/expected-value",
     "target": "financial-maths/time-value-of-money",
     "label": "discounted by",
     "description": "A fair price equals the expected future payoff discounted back to today — combining expected value with time-value-of-money discounting is the core of risk-neutral option pricing."
+  },
+  {
+    "source": "probability/poisson-distribution",
+    "target": "risk/model-limitations",
+    "label": "addresses",
+    "description": "Jump-diffusion models add Poisson-distributed jumps to GBM to capture the fat tails and sudden crashes that pure Brownian motion cannot explain — a direct response to the limitations of the normal model."
+  },
+  {
+    "source": "probability/poisson-distribution",
+    "target": "stochastic-processes/brownian-motion",
+    "label": "augments",
+    "description": "In Merton's jump-diffusion model, a Poisson process is layered on top of Brownian motion — the continuous diffusion handles normal price moves while Poisson jumps capture sudden large moves."
+  },
+  {
+    "source": "probability/probability-density-function",
+    "target": "probability/expected-value",
+    "label": "computes",
+    "description": "The expected value of a continuous random variable is defined as the integral of x weighted by the PDF — E[X] = ∫x f(x) dx — making the density function the essential ingredient for computing fair values."
+  },
+  {
+    "source": "probability/probability-density-function",
+    "target": "probability/normal-distribution",
+    "label": "exemplified by",
+    "description": "The normal distribution's bell-shaped PDF is the most widely used density in finance — its specific functional form determines the probabilities that feed into Black-Scholes, VaR, and every Gaussian risk model."
+  },
+  {
+    "source": "probability/students-t-distribution",
+    "target": "probability/normal-distribution",
+    "label": "generalises",
+    "description": "The t-distribution has heavier tails than the normal and converges to it as degrees of freedom increase — with low ν it captures the excess kurtosis observed in real asset returns."
+  },
+  {
+    "source": "probability/students-t-distribution",
+    "target": "risk/value-at-risk",
+    "label": "improves",
+    "description": "Using the t-distribution instead of the normal for VaR calculations produces wider tail quantiles, giving more conservative and realistic loss estimates that account for fat tails in returns."
+  },
+  {
+    "source": "probability/uniform-distribution",
+    "target": "risk/monte-carlo-simulation",
+    "label": "drives",
+    "description": "Monte Carlo simulation begins with uniform U(0,1) random draws, which are transformed into the target distribution via the inverse CDF method — the uniform distribution is the raw input to every simulation."
   },
   {
     "source": "probability/lognormal-distribution",
@@ -202,6 +358,12 @@
     "target": "risk/value-at-risk",
     "label": "feeds into",
     "description": "Portfolio VaR depends on the correlations between positions — in a multi-asset portfolio, low correlations reduce aggregate risk even when individual volatilities are unchanged."
+  },
+  {
+    "source": "statistics/statistical-properties-of-returns",
+    "target": "risk/model-limitations",
+    "label": "motivates",
+    "description": "Empirical return distributions exhibit fat tails, skewness, and volatility clustering that deviate from the normal assumption — these observed properties are the primary evidence motivating more sophisticated risk models."
   },
   {
     "source": "statistics/estimating-parameters",

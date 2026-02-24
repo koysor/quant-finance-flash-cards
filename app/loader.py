@@ -13,7 +13,7 @@ TOPIC_RE = re.compile(r'^\*\*Topic:\*\*\s*(.+)$', re.MULTILINE)
 LEVEL_RE = re.compile(r'^\*\*Level:\*\*\s*(.+)$', re.MULTILINE)
 TAGS_RE  = re.compile(r'^\*\*Tags:\*\*\s*(.+)$', re.MULTILINE)
 
-_md = MarkdownIt()
+_md = MarkdownIt().enable("table")
 
 
 def _parse_card(path: Path) -> dict:
