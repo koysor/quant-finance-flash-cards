@@ -144,6 +144,66 @@
     "description": "Daily returns calculated from asset prices are the raw data whose mean and standard deviation characterise the asset's drift and volatility."
   },
   {
+    "source": "linear-algebra/cholesky-decomposition",
+    "target": "linear-algebra/transpose-and-symmetric-matrices",
+    "label": "requires",
+    "description": "The Cholesky decomposition A = LLᵀ is only defined for symmetric, positive-definite matrices — the symmetry of the covariance matrix is a prerequisite for the factorisation."
+  },
+  {
+    "source": "linear-algebra/cholesky-decomposition",
+    "target": "risk/monte-carlo-simulation",
+    "label": "enables",
+    "description": "Multi-asset Monte Carlo simulation uses the Cholesky decomposition of the correlation matrix to convert independent random draws into correctly correlated shocks — without it, simulated paths would ignore diversification."
+  },
+  {
+    "source": "linear-algebra/cholesky-decomposition",
+    "target": "statistics/correlation",
+    "label": "decomposes",
+    "description": "The Cholesky factorisation splits the correlation matrix into a lower triangular matrix and its transpose — this is the practical mechanism for imposing a correlation structure on simulated random variables."
+  },
+  {
+    "source": "linear-algebra/determinant",
+    "target": "linear-algebra/matrix-inverse",
+    "label": "gates",
+    "description": "A matrix is invertible if and only if its determinant is non-zero — checking the determinant is the first step before attempting to invert a covariance matrix for portfolio optimisation."
+  },
+  {
+    "source": "linear-algebra/eigenvalues-and-eigenvectors",
+    "target": "linear-algebra/determinant",
+    "label": "product gives",
+    "description": "The determinant of a matrix equals the product of its eigenvalues — a zero eigenvalue means the matrix is singular, directly linking spectral analysis to invertibility."
+  },
+  {
+    "source": "linear-algebra/eigenvalues-and-eigenvectors",
+    "target": "linear-algebra/transpose-and-symmetric-matrices",
+    "label": "simplified by",
+    "description": "Symmetric matrices guarantee real eigenvalues and orthogonal eigenvectors — this is why covariance matrices, which are always symmetric, admit clean PCA decompositions with interpretable risk factors."
+  },
+  {
+    "source": "linear-algebra/eigenvalues-and-eigenvectors",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "decomposes",
+    "description": "Each eigenvalue of the covariance matrix represents the variance explained by its corresponding eigenvector — the total variance is the sum of all eigenvalues, partitioning risk across independent factors."
+  },
+  {
+    "source": "linear-algebra/matrix-inverse",
+    "target": "linear-algebra/systems-of-linear-equations",
+    "label": "solves",
+    "description": "The solution to Ax = b is x = A⁻¹b — computing the matrix inverse is one method for solving systems of linear equations, used in regression and portfolio optimisation."
+  },
+  {
+    "source": "linear-algebra/matrix-multiplication",
+    "target": "linear-algebra/determinant",
+    "label": "prerequisite for",
+    "description": "Computing the determinant of larger matrices via cofactor expansion requires repeated multiplication of matrix elements — matrix arithmetic is the foundation on which the determinant is built."
+  },
+  {
+    "source": "linear-algebra/matrix-multiplication",
+    "target": "linear-algebra/matrix-inverse",
+    "label": "defines",
+    "description": "The inverse is defined by the product AA⁻¹ = I — verifying and computing an inverse requires matrix multiplication."
+  },
+  {
     "source": "linear-algebra/matrix-multiplication",
     "target": "risk/value-at-risk",
     "label": "used in",
@@ -154,6 +214,18 @@
     "target": "statistics/correlation",
     "label": "computes",
     "description": "The correlation matrix is built and manipulated via matrix operations — portfolio risk, principal component analysis, and factor models all rely on multiplying weight vectors by covariance or correlation matrices."
+  },
+  {
+    "source": "linear-algebra/systems-of-linear-equations",
+    "target": "linear-algebra/determinant",
+    "label": "checked via",
+    "description": "The determinant determines whether a system has a unique solution (det ≠ 0), no solution, or infinitely many solutions — it is the first diagnostic tool for any linear system."
+  },
+  {
+    "source": "linear-algebra/transpose-and-symmetric-matrices",
+    "target": "linear-algebra/matrix-multiplication",
+    "label": "used in",
+    "description": "The portfolio variance formula wᵀΣw requires the transpose operation to convert the weight vector into a row — the transpose is integral to every quadratic form in matrix algebra."
   },
   {
     "source": "probability/bayes-theorem",
@@ -397,6 +469,12 @@
   },
   {
     "source": "stochastic-processes/brownian-motion",
+    "target": "stochastic-processes/martingales",
+    "label": "example of",
+    "description": "Standard Brownian motion is the canonical continuous-time martingale — its independent, zero-mean increments ensure that the conditional expectation of any future value equals the current value."
+  },
+  {
+    "source": "stochastic-processes/brownian-motion",
     "target": "derivatives/option-greeks",
     "label": "underlies",
     "description": "Because the underlying asset follows a Brownian-driven process, option prices are stochastic and their sensitivities (the Greeks) describe how that randomness flows through to the portfolio."
@@ -406,6 +484,24 @@
     "target": "stochastic-processes/geometric-brownian-motion",
     "label": "extended to",
     "description": "Geometric Brownian Motion replaces the additive increments of standard Brownian Motion with multiplicative ones, ensuring the stock price can never go negative."
+  },
+  {
+    "source": "stochastic-processes/martingales",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "foundation of",
+    "description": "Risk-neutral pricing rests on the martingale property — under the risk-neutral measure Q, discounted asset prices are martingales, which is the mathematical condition that guarantees no-arbitrage pricing."
+  },
+  {
+    "source": "stochastic-processes/martingales",
+    "target": "probability/expected-value",
+    "label": "defined via",
+    "description": "The martingale property is a statement about conditional expected values — E[M_t | F_s] = M_s — so understanding expectation is a prerequisite for understanding martingales."
+  },
+  {
+    "source": "stochastic-processes/geometric-brownian-motion",
+    "target": "stochastic-processes/martingales",
+    "label": "becomes under Q",
+    "description": "Under the real-world measure, GBM with drift μ ≠ r is not a martingale after discounting — but under the risk-neutral measure Q, the discounted GBM stock price becomes a martingale, which is the key insight enabling derivative pricing."
   },
   {
     "source": "stochastic-processes/discrete-random-walk",
