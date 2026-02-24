@@ -144,6 +144,24 @@
     "description": "Daily returns calculated from asset prices are the raw data whose mean and standard deviation characterise the asset's drift and volatility."
   },
   {
+    "source": "financial-maths/time-value-of-money",
+    "target": "financial-maths/yield-curve",
+    "label": "generalised by",
+    "description": "The time value of money uses a single discount rate, but the yield curve generalises this to a different rate for every maturity — each cash flow is discounted at its own spot rate rather than one flat rate."
+  },
+  {
+    "source": "financial-maths/yield-curve",
+    "target": "linear-algebra/eigenvalues-and-eigenvectors",
+    "label": "analysed via",
+    "description": "PCA on the covariance matrix of yield curve changes decomposes movements into eigenvectors (level, slope, curvature) — typically three factors explain over 95% of all variation in interest rates."
+  },
+  {
+    "source": "financial-maths/yield-curve",
+    "target": "linear-algebra/systems-of-linear-equations",
+    "label": "bootstrapped via",
+    "description": "Constructing the yield curve from coupon bond prices requires solving a triangular system of linear equations — each new maturity adds one equation and one unknown spot rate."
+  },
+  {
     "source": "linear-algebra/cholesky-decomposition",
     "target": "linear-algebra/transpose-and-symmetric-matrices",
     "label": "requires",
