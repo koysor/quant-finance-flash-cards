@@ -65,6 +65,8 @@
          {% if request.endpoint == 'main.index' %}class="active"{% endif %}>Cards</a>
       <a href="{{ url_for('main.graph_view') }}"
          {% if request.endpoint == 'main.graph_view' %}class="active"{% endif %}>Graph</a>
+      <a href="{{ url_for('main.formulas') }}"
+         {% if request.endpoint == 'main.formulas' %}class="active"{% endif %}>Formulas</a>
     </div>
 
     <!-- Right controls (desktop) -->
@@ -136,6 +138,8 @@
        {% if request.endpoint == 'main.index' %}class="active"{% endif %}>Cards</a>
     <a href="{{ url_for('main.graph_view') }}"
        {% if request.endpoint == 'main.graph_view' %}class="active"{% endif %}>Graph</a>
+    <a href="{{ url_for('main.formulas') }}"
+       {% if request.endpoint == 'main.formulas' %}class="active"{% endif %}>Formulas</a>
     <div class="mobile-menu-footer">
       <button class="search-trigger" onclick="closeMenu();goRandom()">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -232,7 +236,11 @@
       <span class="shortcut-keys"><kbd>r</kbd></span>
     </div>
     <div class="shortcut-row">
-      <span class="shortcut-desc">Next / previous card (list)</span>
+      <span class="shortcut-desc">Go to formulas</span>
+      <span class="shortcut-keys"><kbd>f</kbd></span>
+    </div>
+    <div class="shortcut-row">
+      <span class="shortcut-desc">Next / previous card</span>
       <span class="shortcut-keys"><kbd>j</kbd><kbd>k</kbd></span>
     </div>
     <div class="shortcut-row">
@@ -469,6 +477,7 @@ document.addEventListener('keydown', e => {
   if (e.key === '?')  { openShortcuts();                    return; }
   if (e.key === 'r')  { goRandom();                         return; }
   if (e.key === 'g')  { window.location.href = '{{ url_for("main.graph_view") }}'; return; }
+  if (e.key === 'f')  { window.location.href = '{{ url_for("main.formulas") }}';   return; }
   if (e.key === 'c')  { window.location.href = '{{ url_for("main.index") }}';      return; }
   if (typeof handleCardNav === 'function') handleCardNav(e.key);
 });

@@ -93,6 +93,13 @@ def get_all_cards() -> list[sqlite3.Row]:
         ).fetchall()
 
 
+def get_all_cards_with_content() -> list[sqlite3.Row]:
+    with get_db() as conn:
+        return conn.execute(
+            "SELECT id, name, topic, tags, html_content FROM cards ORDER BY topic, name"
+        ).fetchall()
+
+
 def get_card(card_id: str) -> sqlite3.Row | None:
     with get_db() as conn:
         return conn.execute(

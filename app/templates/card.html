@@ -172,10 +172,10 @@
 
 /* Arrow key navigation between cards in same topic */
 function handleCardNav(key) {
-  if (key === 'ArrowLeft') {
+  if (key === 'ArrowLeft' || key === 'j') {
     const prev = document.getElementById('nav-prev');
     if (prev) prev.click();
-  } else if (key === 'ArrowRight') {
+  } else if (key === 'ArrowRight' || key === 'k') {
     const next = document.getElementById('nav-next');
     if (next) next.click();
   }

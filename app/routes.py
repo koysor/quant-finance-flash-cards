@@ -7,6 +7,7 @@ from flask import Blueprint, abort, redirect, render_template, request, session,
 from app.db import (
     delete_edge,
     get_all_cards,
+    get_all_cards_with_content,
     get_all_edges,
     get_card,
     get_cards_by_tag,
@@ -147,6 +148,29 @@ def remove_link(card_id: str):
         save_edges_to_file()
 
     return redirect(url_for("main.card_detail", card_id=card_id))
+
+
+_FORMULA_RE = re.compile(
+    r'(<h2[^>]*>\s*Key\s+Formul(?:a|ae)\s*</h2>)(.*?)(?=<h2|$)',
+    re.IGNORECASE | re.DOTALL,
+)
+
+
+@bp.get("/formulas")
+def formulas():
+    cards = get_all_cards_with_content()
+    grouped: dict[str, list] = {}
+    for card in cards:
+        m = _FORMULA_RE.search(card["html_content"])
+        if not m:
+            continue
+        formula_html = m.group(1) + m.group(2)
+        grouped.setdefault(card["topic"], []).append({
+            "name": card["name"],
+            "id": card["id"],
+            "formula_html": formula_html,
+        })
+    return render_template("formulas.html", grouped=grouped)
 
 
 @bp.get("/graph")

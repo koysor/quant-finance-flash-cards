@@ -108,6 +108,30 @@
     "description": "The Black-Scholes formula gives closed-form expressions for Delta, Gamma, Vega, Theta and Rho — the Greeks are simply partial derivatives of the Black-Scholes price with respect to each input."
   },
   {
+    "source": "derivatives/heston-model",
+    "target": "derivatives/black-scholes-equation",
+    "label": "extends",
+    "description": "The Heston model generalises Black-Scholes by replacing the constant-volatility assumption with a stochastic variance process — Black-Scholes is recovered as the special case where the vol of vol is zero."
+  },
+  {
+    "source": "derivatives/heston-model",
+    "target": "derivatives/implied-volatility",
+    "label": "explains",
+    "description": "The Heston model's stochastic volatility and negative correlation between returns and variance reproduce the implied volatility smile and skew that Black-Scholes' flat volatility assumption cannot capture."
+  },
+  {
+    "source": "derivatives/heston-model",
+    "target": "stochastic-processes/geometric-brownian-motion",
+    "label": "generalises",
+    "description": "GBM assumes constant volatility, while the Heston model replaces this with a mean-reverting stochastic variance process — the asset price SDE is augmented with a second coupled SDE for the variance."
+  },
+  {
+    "source": "derivatives/heston-model",
+    "target": "risk/monte-carlo-simulation",
+    "label": "priced via",
+    "description": "Although the Heston model has a semi-analytical solution for European options, exotic and path-dependent derivatives under Heston are typically priced by Monte Carlo simulation of the two correlated SDEs."
+  },
+  {
     "source": "derivatives/implied-volatility",
     "target": "risk/model-limitations",
     "label": "reveals",

@@ -1252,6 +1252,77 @@ a.tag:hover {
   line-height: 1.5;
 }
 
+/* ── Formula sheet page ────────────────────────────────────── */
+.formulas-page { max-width: 960px; margin: 0 auto; }
+
+.formulas-header {
+  display: flex; align-items: baseline; gap: 1rem;
+  flex-wrap: wrap; margin-bottom: 2rem;
+}
+.formulas-title {
+  font-family: var(--font-display);
+  font-size: 2rem; font-weight: 800;
+  letter-spacing: -0.04em;
+  background: linear-gradient(135deg, var(--text) 0%, var(--muted) 120%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.formulas-subtitle { color: var(--muted); font-size: 0.9rem; }
+.print-btn { margin-left: auto; }
+
+.formulas-toc {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.1rem 1.4rem;
+  margin-bottom: 2rem; box-shadow: var(--shadow-sm);
+}
+.formulas-toc-heading {
+  font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--muted); margin-bottom: 0.6rem;
+}
+.formulas-toc-list {
+  list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem;
+}
+.formulas-toc-list li {
+  display: flex; align-items: center; gap: 0.4rem; font-size: 0.88rem;
+}
+.formulas-toc-dot {
+  width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0;
+}
+.formulas-toc-count {
+  font-size: 0.7rem; color: var(--muted-2);
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: 20px; padding: 0 6px;
+}
+
+.formulas-topic { margin-bottom: 2.5rem; }
+
+.formulas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1rem;
+}
+@media (max-width: 500px) {
+  .formulas-grid { grid-template-columns: 1fr; }
+}
+
+.formula-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-left: 3px solid var(--tc, var(--accent));
+  border-radius: var(--radius); padding: 1.1rem 1.3rem;
+  box-shadow: var(--shadow-sm);
+}
+.formula-card-name {
+  font-size: 0.92rem; font-weight: 600; margin-bottom: 0.5rem;
+}
+.formula-card-name a { color: var(--text); }
+.formula-card-name a:hover { color: var(--accent); }
+
+.formula-card-content {
+  border: none !important; box-shadow: none !important;
+  padding: 0 !important; background: transparent !important;
+  border-top: none !important;
+}
+.formula-card-content h2 { display: none; }
+
 /* ── Print stylesheet ───────────────────────────────────────── */
 @media print {
   @page { margin: 1.5cm 2cm; }
@@ -1320,4 +1391,19 @@ a.tag:hover {
   /* Breadcrumb — keep as a simple topic path header */
   .breadcrumb { margin-bottom: 0.4cm; font-size: 9pt; }
   .copy-link-btn { display: none !important; }
+
+  /* Formula sheet print rules */
+  .print-btn { display: none !important; }
+  .formulas-toc { display: none !important; }
+  .formulas-header { margin-bottom: 0.5cm; }
+  .formulas-title { font-size: 18pt; }
+
+  .formulas-topic { break-inside: avoid; page-break-inside: avoid; }
+  .formulas-grid { display: block; }
+  .formula-card {
+    border: none !important; border-left: 2px solid var(--tc, #999) !important;
+    box-shadow: none !important; padding: 0.3cm 0 0.3cm 0.4cm;
+    margin-bottom: 0.3cm; break-inside: avoid; page-break-inside: avoid;
+  }
+  .formula-card-name { font-size: 10pt; }
 }

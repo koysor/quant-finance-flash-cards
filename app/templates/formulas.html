@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Formula Sheet — QF Flash Cards{% endblock %}
+
+{% block meta %}
+<meta name="description" content="All Key Formula sections from every flash card, grouped by topic.">
+{% endblock %}
+
+{% block content %}
+<div class="formulas-page">
+  <div class="formulas-header">
+    <h1 class="formulas-title">Formula Sheet</h1>
+    <p class="formulas-subtitle">All Key Formula sections, grouped by topic</p>
+    <button class="btn-primary print-btn" onclick="window.print()">Print</button>
+  </div>
+
+  {% if grouped %}
+  <nav class="formulas-toc">
+    <h2 class="formulas-toc-heading">Contents</h2>
+    <ul class="formulas-toc-list">
+      {% for topic in grouped %}
+      <li>
+        <span class="formulas-toc-dot" style="background:{{ topic_colour(topic) }}"></span>
+        <a href="#topic-{{ loop.index }}">{{ topic }}</a>
+        <span class="formulas-toc-count">{{ grouped[topic]|length }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  {% for topic, cards in grouped.items() %}
+  <section class="formulas-topic" id="topic-{{ loop.index }}">
+    <h2 class="topic-heading" style="--tc:{{ topic_colour(topic) }}">
+      <span class="topic-dot" style="background:{{ topic_colour(topic) }}"></span>
+      <span class="topic-heading-text">{{ topic }}</span>
+      <span class="topic-count">{{ cards|length }}</span>
+    </h2>
+
+    <div class="formulas-grid">
+      {% for card in cards %}
+      <div class="formula-card" style="--tc:{{ topic_colour(topic) }}">
+        <h3 class="formula-card-name">
+          <a href="{{ url_for('main.card_detail', card_id=card.id) }}">{{ card.name }}</a>
+        </h3>
+        <div class="formula-card-content card-content" style="--tc:{{ topic_colour(topic) }}">
+          {{ card.formula_html|safe }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+  {% else %}
+  <p class="muted">No cards have a Key Formula section yet.</p>
+  {% endif %}
+</div>
+{% endblock %}
