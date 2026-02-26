@@ -17,6 +17,14 @@ def create_app() -> Flask:
     init_db()
     load_all_cards(app)
     load_edges_from_file()
+
+    resources_path = os.path.join(os.path.dirname(app.root_path), "resources.json")
+    if os.path.exists(resources_path):
+        with open(resources_path) as f:
+            app.config["RESOURCES"] = json.load(f)
+    else:
+        app.config["RESOURCES"] = {}
+
     app.register_blueprint(bp)
 
     @app.context_processor

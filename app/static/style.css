@@ -1128,6 +1128,25 @@ a.tag:hover {
   line-height: 1.45;
 }
 
+/* ── Resource list (Learn more sidebar) ─────────────────────── */
+.resource-list {
+  list-style: none; display: flex; flex-direction: column; gap: 0.55rem;
+}
+.resource-list li {
+  display: flex; align-items: center; gap: 0.45rem;
+  font-size: 0.85rem; line-height: 1.4;
+}
+.resource-icon {
+  flex-shrink: 0; color: var(--muted);
+}
+.resource-list a {
+  color: var(--accent); text-decoration: none;
+  transition: color 0.15s;
+}
+.resource-list a:hover {
+  color: var(--text); text-decoration: underline;
+}
+
 /* ── Prerequisites section ──────────────────────────────────── */
 .prerequisites {
   margin-bottom: 1.5rem;

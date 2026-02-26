@@ -57,6 +57,14 @@ For each related card, create a directed edge (pick whichever direction makes mo
 
 Append the new edges to `edges.json`, keeping the array sorted by `source_id` then `target_id`. Preserve the existing formatting (2-space indent, trailing newline).
 
-## Step 4 — Summary
+## Step 4 — Generate learning resources
+
+Read `resources.json`. Add an entry for the new card with:
+- **`websites`** — 2 objects, each with `title` and `url`. Use well-known, beginner-friendly sources (Khan Academy, Investopedia, Wikipedia, Brilliant, Paul's Online Math Notes, Corporate Finance Institute, etc.).
+- **`videos`** — 2 objects, each with `title` and `url`. Use well-known educational YouTube channels (3Blue1Brown, Khan Academy, StatQuest, The Organic Chemistry Tutor, MIT OpenCourseWare, etc.). Only use URLs you are confident exist.
+
+Write the updated `resources.json` back, keeping the object sorted by card ID. Preserve 2-space indent formatting and trailing newline.
+
+## Step 5 — Summary
 
 Report what was created: the card path, and a table of new edges (source → target, label, description).

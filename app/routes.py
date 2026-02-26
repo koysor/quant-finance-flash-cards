@@ -2,7 +2,7 @@
 import json
 import re
 
-from flask import Blueprint, abort, redirect, render_template, request, session, url_for
+from flask import Blueprint, abort, current_app, redirect, render_template, request, session, url_for
 
 from app.db import (
     delete_edge,
@@ -118,6 +118,8 @@ def card_detail(card_id: str):
     prev_card = dict(siblings[idx - 1]) if idx > 0 else None
     next_card = dict(siblings[idx + 1]) if idx < len(siblings) - 1 else None
 
+    resources = current_app.config["RESOURCES"].get(card_id, {})
+
     return render_template(
         "card.html",
         card=card,
@@ -127,6 +129,7 @@ def card_detail(card_id: str):
         next_card=next_card,
         card_tc=_topic_colour(card["topic"]),
         card_excerpt=_card_excerpt(card["html_content"]),
+        resources=resources,
     )
 
 

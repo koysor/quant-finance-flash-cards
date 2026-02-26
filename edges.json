@@ -314,7 +314,7 @@
   {
     "source": "probability/chi-squared-distribution",
     "target": "probability/students-t-distribution",
-    "label": "related to",
+    "label": "component of",
     "description": "The t-distribution is constructed as a standard normal divided by the square root of a chi-squared divided by its degrees of freedom — the two distributions are algebraically inseparable in small-sample inference."
   },
   {

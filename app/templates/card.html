@@ -156,6 +156,34 @@
       {% endif %}
     </section>
 
+    {% if resources and (resources.get('websites') or resources.get('videos')) %}
+    <section class="sidebar-section">
+      <h3>Learn more</h3>
+      <ul class="resource-list">
+        {% for site in resources.get('websites', []) %}
+        <li>
+          <svg class="resource-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <a href="{{ site.url }}" target="_blank" rel="noopener">{{ site.title }}</a>
+        </li>
+        {% endfor %}
+        {% for video in resources.get('videos', []) %}
+        <li>
+          <svg class="resource-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+          <a href="{{ video.url }}" target="_blank" rel="noopener">{{ video.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
   </aside>
 </div>
 {% endblock %}
