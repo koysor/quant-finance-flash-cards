@@ -96,7 +96,7 @@ Each card is a single `.md` file in `cards/<topic>/`. The loader uses regex (not
 
 `scripts/validate_urls.py` checks every URL in `resources.json` using async HEAD requests (GET fallback on 405). It runs automatically:
 
-- **Claude Code:** `PreCommit` hook in `.claude/settings.json` fires when `resources.json` is in the commit
+- **Claude Code:** `PreToolUse` hook in `.claude/settings.json` fires on `git commit` when `resources.json` is staged
 - **Git:** pre-commit hook in `.git/hooks/` (not committed — run `bash scripts/install_hooks.sh` after cloning)
 
 Run manually: `uv run python scripts/validate_urls.py --force`
