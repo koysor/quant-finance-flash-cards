@@ -12,4 +12,6 @@ dependencies = [
 Repository = "https://github.com/koysor/quant-finance-flash-cards"
 
 [dependency-groups]
-dev = []
+dev = [
+    "aiohttp>=3.13.3",
+]

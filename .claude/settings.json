@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "PreCommit": [
+      {
+        "matcher": "resources.json",
+        "command": "uv run python scripts/validate_urls.py --force"
+      }
+    ]
+  }
+}
