@@ -1,9 +1,16 @@
 {
   "hooks": {
-    "PreCommit": [
+    "PreToolUse": [
       {
-        "matcher": "resources.json",
-        "command": "uv run python scripts/validate_urls.py --force"
+        "matcher": {
+          "tools": ["Bash"]
+        },
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if echo \"$TOOL_INPUT\" | grep -q 'git commit' && git diff --cached --name-only | grep -q 'resources.json'; then uv run python scripts/validate_urls.py --force; fi"
+          }
+        ]
       }
     ]
   }
