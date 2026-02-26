@@ -7,6 +7,10 @@
           {
             "type": "command",
             "command": "if echo \"$TOOL_INPUT\" | grep -q 'git commit' && git diff --cached --name-only | grep -q 'resources.json'; then uv run python scripts/validate_urls.py --force; fi"
+          },
+          {
+            "type": "command",
+            "command": "if echo \"$TOOL_INPUT\" | grep -q 'git commit' && git diff --cached --name-only | grep -qE '^(cards/|edges\\.json$)'; then uv run python scripts/update_readme_stats.py && git add README.md; fi"
           }
         ]
       }

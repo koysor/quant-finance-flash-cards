@@ -7,8 +7,8 @@ A Flask web application that reads Markdown flash cards from the filesystem, sto
 ```
 cards/**/*.md  ──►  SQLite (graph.db)  ──►  Flask  ──►  Browser
   (source)     ↗     (cache + graph)      (server)     (KaTeX + vis.js)
-edges.json   ──►
-  (source)
+edges.json   ──►    resources.json  ──►
+  (source)             (source)
 ```
 
 ---
@@ -74,11 +74,12 @@ Every function opens its own connection via `get_db()` and closes it at the end 
 init_db()                # idempotent DDL — safe to call every restart
 load_all_cards()         # mtime-checked upserts + stale card removal
 load_edges_from_file()   # clears edges table, repopulates from edges.json
+# load resources.json into app.config["RESOURCES"] (keyed by card ID)
 app.register_blueprint(bp)
 # context_processor → injects topic_colour(), search_data_json, site_stats, csrf_token
 ```
 
-The context processor runs on every request and queries `get_all_cards()` + `get_site_stats()`. Given 19 cards and SQLite, this is negligible; if the card count grows substantially, results should be cached.
+The context processor runs on every request and queries `get_all_cards()` + `get_site_stats()`. Given the current card count and SQLite, this is negligible; if the card count grows substantially, results should be cached.
 
 ### 5. Routes — `app/routes.py`
 
@@ -89,6 +90,7 @@ GET  /                          index()        — groups cards by topic, ?tag= 
 GET  /tag/<tag>                 tag_page()     — dedicated page for a single tag
 GET  /card/<path:card_id>       card_detail()  — prerequisites, content, see-also, prev/next nav
 POST /card/<path:card_id>/remove-link  remove_link() — deletes edge (CSRF), 302 redirect
+GET  /formulas                  formulas()     — all Key Formula sections aggregated by topic
 GET  /graph                     graph_view()   — vis.js with path finding, topic filter, edge weights
 GET  /random                    random_card()  — redirects to a random card
 ```
@@ -107,7 +109,8 @@ base.html     Shared layout: fonts, KaTeX CDN, scroll bar, search overlay,
               keyboard shortcuts modal, theme toggle, mobile nav, back-to-top
 index.html    Card grid grouped by topic, tag filter strip, stats bar, visited state
 tag.html      Dedicated tag page showing all cards for a given tag
-card.html     Breadcrumb, prerequisites, card content, see-also, prev/next nav, sidebar
+card.html     Breadcrumb, prerequisites, card content, see-also, prev/next nav, sidebar, resources
+formulas.html All Key Formula sections grouped by topic
 graph.html    vis.js Network, path finding, topic filter, edge weights, theme-aware
 404.html      Branded error page
 ```
@@ -134,7 +137,7 @@ No build step. All third-party JS/CSS is CDN:
 
 ## Key Design Decisions
 
-**Two committed sources of truth, one disposable cache.** `cards/**/*.md` owns card content; `edges.json` owns relationships (labels + plain-English descriptions). `graph.db` is derived from both and is gitignored — delete it and restart to rebuild completely.
+**Three committed sources of truth, one disposable cache.** `cards/**/*.md` owns card content; `edges.json` owns relationships (labels + plain-English descriptions); `resources.json` owns per-card learning resources (websites and videos, keyed by card ID). `graph.db` is derived from the first two and is gitignored — delete it and restart to rebuild completely.
 
 **Card IDs from file paths.** Renaming or moving a card file changes its ID. The cascade delete removes the orphaned edges from the DB, and the next mutation (add/remove link) writes the updated state back to `edges.json`. If you rename a card with important edges, update `edges.json` manually before committing.
 
@@ -174,5 +177,7 @@ The Flask debug reloader watches Python files. **It does not watch `cards/*.md`*
 **New topic:** create the directory, add a card, add an entry to `TOPIC_COLOURS` in `app/routes.py`, restart. The colour cascades automatically to all UI elements.
 
 **New edge:** add an entry to `edges.json` and restart the server. Each entry has `source`, `target`, `label`, and `description` fields. The remove-link form on the card detail page can delete edges at runtime (and writes the change back to `edges.json`).
+
+**New learning resource:** add an entry to `resources.json` under the card ID key. Each card can have `websites` and `videos` arrays of `{title, url}` objects. URLs are validated by `scripts/validate_urls.py` on commit.
 
 **New route:** add a handler to `app/routes.py` and a template to `app/templates/`. The context processor variables (`topic_colour`, `search_data_json`, `site_stats`) are available in all templates automatically.

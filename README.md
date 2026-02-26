@@ -2,7 +2,7 @@
 
 Bite-sized revision flash cards for Quantitative Finance exams and interviews, pitched at **A Level mathematics** standard. Each card covers one concept — definition, key formula, worked example, and its finance application.
 
-31 cards · 8 topics · 37 concept connections
+53 cards · 8 topics · 99 concept connections
 
 ## Running the app
 
@@ -17,14 +17,14 @@ On first run the app scans `cards/` and loads `edges.json`, building `graph.db` 
 
 | Topic | Cards |
 |---|---|
-| Probability | Normal Distribution, Lognormal Distribution, Expected Value, Bayes' Theorem |
-| Statistics | Variance & Std Dev, Correlation, Statistical Properties of Returns, Scaling Mean with Time, Square-Root Rule, Estimating Parameters |
-| Calculus | Differentiation Rules, Taylor Series |
-| Linear Algebra | Matrix Multiplication |
-| Financial Mathematics | Time Value of Money, Return on Investment |
-| Derivatives | Put-Call Parity, Option Greeks, Black-Scholes Equation, Risk-Neutral Pricing, Implied Volatility, Delta Hedging |
-| Stochastic Processes | Brownian Motion, Geometric Brownian Motion, Itô's Lemma, Drift & Volatility, Discrete Random Walk, SDE, Growth vs Volatility Timescales |
-| Risk | Value at Risk (VaR), Monte Carlo Simulation, Model Limitations |
+| Calculus | Differentiation Rules, Lemma, Taylor Series |
+| Derivatives | American Option Pricing, American vs European Options, Black-Scholes Equation, Delta Hedging, Early Exercise Decision, European Option Pricing, Heston Model, Implied Volatility, Option Greeks, Put-Call Parity, Risk-Neutral Pricing |
+| Financial Mathematics | Return on Investment, Time Value of Money, Yield Curve |
+| Linear Algebra | Cholesky Decomposition, Determinant, Eigenvalues & Eigenvectors, Matrix Inverse, Matrix Multiplication, Systems of Linear Equations, Transpose & Symmetric Matrices |
+| Probability | Bayes' Theorem, Binomial Distribution, Chi-Squared Distribution, CDF, Expected Value, Exponential Distribution, Lognormal Distribution, Normal Distribution, PDF, Poisson Distribution, Student's t-Distribution, Uniform Distribution |
+| Risk | Model Limitations, Monte Carlo Simulation, Value at Risk (VaR) |
+| Statistics | Correlation, Estimating Parameters, Scaling Mean with Time, Square-Root Rule, Statistical Properties of Returns, Variance & Std Dev |
+| Stochastic Processes | Brownian Motion, Discrete Random Walk, Drift & Volatility, GBM, Growth vs Volatility Timescales, Itô's Lemma, Martingales, SDE |
 
 ## Features
 
@@ -36,6 +36,8 @@ On first run the app scans `cards/` and loads `edges.json`, building `graph.db` 
 - **Keyboard navigation** — `←`/`→` for prev/next card in topic, `j`/`k` for card list, `r` for random, `g` for graph, `?` for shortcuts
 - **Dark / Light theme** — persisted across sessions
 - **Concept links** — directed relationships between cards with plain-English descriptions, stored in `edges.json`
+- **Formula sheet** — all Key Formula sections aggregated on a single `/formulas` page
+- **Learning resources** — curated website and video links per card, stored in `resources.json`
 - **Visited tracking** — cards you have read are marked in the browser
 
 ## Stack
@@ -56,6 +58,7 @@ No npm, no build step, no Docker.
 ```
 cards/          Markdown source files — card content source of truth
 edges.json      Concept relationships — edge source of truth
+resources.json  Per-card learning resources (websites, videos)
 app/            Flask application package
   __init__.py   Application factory (create_app)
   db.py         SQLite schema and all query functions

@@ -29,7 +29,8 @@ Flask web application that reads Markdown flash cards from `cards/` and stores t
 **Sources of truth:**
 - `cards/**/*.md` — card content (committed)
 - `edges.json` — relationships between cards: label + plain-English description (committed)
-- `graph.db` — derived cache of both; gitignored; fully regenerable by deleting and restarting
+- `resources.json` — per-card learning resources (websites, videos), keyed by card ID (committed)
+- `graph.db` — derived cache of cards+edges; gitignored; fully regenerable by deleting and restarting
 
 **Startup sequence** (`app/__init__.py` → `create_app()`):
 1. `init_db()` — idempotent DDL (creates `cards` and `edges` tables if absent)
@@ -38,6 +39,10 @@ Flask web application that reads Markdown flash cards from `cards/` and stores t
 4. Blueprint registered, context processor attached (CSRF token, topic colours, search data, stats)
 
 **Edge mutations:** removing a link via the card detail sidebar writes to `graph.db` first, then calls `save_edges_to_file()` to keep `edges.json` in sync. Commit `edges.json` after changes. Adding edges is done by editing `edges.json` directly and restarting.
+
+**`edges.json` format:** a JSON array of objects with `source`, `target` (card IDs), `label` (short relationship type like "foundation of"), and `description` (plain-English explanation of the relationship).
+
+**`resources.json` format:** a JSON object keyed by card ID, each value containing `websites` and/or `videos` arrays of `{title, url}` objects. Loaded into `app.config["RESOURCES"]` at startup and displayed on card detail pages.
 
 **Card ID scheme:** strip `cards/` prefix and `.md` suffix, keep the `/` separator.
 `cards/derivatives/black-scholes-equation.md` → `derivatives/black-scholes-equation`
@@ -62,6 +67,7 @@ Flask routes use `<path:card_id>` to allow the `/` in URLs.
 | GET | `/card/<path:card_id>` | Card content + prerequisites + see-also + sidebar |
 | POST | `/card/<path:card_id>/remove-link` | Delete edge (CSRF-protected), redirect back |
 | GET | `/graph` | vis.js network — path finding, topic filtering, edge weights |
+| GET | `/formulas` | All Key Formula sections aggregated by topic |
 | GET | `/random` | Redirect to a random card (JS version prefers unvisited) |
 
 ## Card Authoring
