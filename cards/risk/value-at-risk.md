@@ -18,7 +18,7 @@ Common conventions: 95% VaR (5% chance of exceeding) or 99% VaR (1% chance).
 
 For a portfolio with normally distributed P&L with mean μ and standard deviation σ:
 
-$$\text{VaR}_\alpha = -\left(\mu + z_\alpha \, \sigma\right)$$
+$$\text{VaR}\_{\alpha} = -(\mu + z\_{\alpha} \sigma)$$
 
 Where z_α is the α-quantile of the standard normal distribution:
 

@@ -301,6 +301,12 @@
   },
   {
     "source": "probability/binomial-distribution",
+    "target": "statistics/central-limit-theorem",
+    "label": "illustrates",
+    "description": "The binomial distribution is the textbook illustration of the CLT — the sum of n independent Bernoulli trials becomes approximately normal as n grows, which is exactly the convergence that turns a binomial tree into Black-Scholes."
+  },
+  {
+    "source": "probability/binomial-distribution",
     "target": "stochastic-processes/discrete-random-walk",
     "label": "counts steps of",
     "description": "Each step of a discrete random walk is an independent up-or-down trial — the total number of up-moves after n steps follows a binomial distribution B(n, p)."
@@ -466,6 +472,24 @@
     "target": "risk/value-at-risk",
     "label": "computes",
     "description": "Monte Carlo VaR simulates thousands of portfolio paths and reads the loss quantile directly from the resulting distribution, avoiding the normality assumption of parametric VaR."
+  },
+  {
+    "source": "statistics/central-limit-theorem",
+    "target": "probability/normal-distribution",
+    "label": "converges to",
+    "description": "The CLT states that the standardised sum of i.i.d. random variables converges to the normal distribution — this is the fundamental reason the normal distribution is the default model for aggregate returns and portfolio losses."
+  },
+  {
+    "source": "statistics/central-limit-theorem",
+    "target": "risk/value-at-risk",
+    "label": "justifies",
+    "description": "Parametric VaR assumes portfolio losses are normally distributed — the CLT justifies this by guaranteeing that the sum of many independent risk factors is approximately normal, even when individual factors are not."
+  },
+  {
+    "source": "statistics/central-limit-theorem",
+    "target": "statistics/estimating-parameters",
+    "label": "validates",
+    "description": "The CLT guarantees that sample means are approximately normal for large n, which justifies constructing confidence intervals and hypothesis tests for estimated drift and volatility using normal quantiles."
   },
   {
     "source": "statistics/correlation",

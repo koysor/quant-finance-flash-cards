@@ -12,7 +12,7 @@
 
 ## Key Formula
 
-$$C - P = S_0 - K \, e^{-rT}$$
+$$C - P = S_0 - K e^{-rT}$$
 
 Where:
 - **C** — price of European call option

@@ -857,6 +857,28 @@
       }
     ]
   },
+  "statistics/central-limit-theorem": {
+    "websites": [
+      {
+        "title": "Khan Academy — Central Limit Theorem",
+        "url": "https://www.khanacademy.org/math/ap-statistics/sampling-distribution-ap/what-is-sampling-distribution/v/central-limit-theorem"
+      },
+      {
+        "title": "Wikipedia — Central Limit Theorem",
+        "url": "https://en.wikipedia.org/wiki/Central_limit_theorem"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — But What Is the Central Limit Theorem?",
+        "url": "https://www.youtube.com/watch?v=zeJD6dqJ5lo"
+      },
+      {
+        "title": "StatQuest — Central Limit Theorem",
+        "url": "https://www.youtube.com/watch?v=YAlJCEDp768"
+      }
+    ]
+  },
   "statistics/correlation": {
     "websites": [
       {
