@@ -1,3 +1,4 @@
+"""Test suite for search context and index page filtering."""
 import json
 import pytest
 

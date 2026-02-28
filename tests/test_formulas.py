@@ -1,3 +1,4 @@
+"""Test suite for formula aggregation and topic grouping."""
 import json
 import pytest
 

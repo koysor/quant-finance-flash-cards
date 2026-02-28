@@ -1,3 +1,4 @@
+"""Shared pytest fixtures for the flash card application."""
 import pytest
 import os
 import sys

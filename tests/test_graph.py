@@ -1,3 +1,4 @@
+"""Test suite for knowledge graph integrity and connectivity."""
 import json
 import pytest
 from pathlib import Path

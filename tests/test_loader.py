@@ -1,3 +1,4 @@
+"""Test suite for card parsing, math protection, and loading logic."""
 import pytest
 import os
 from pathlib import Path
