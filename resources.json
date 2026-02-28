@@ -58,10 +58,6 @@
       {
         "title": "3Blue1Brown — Taylor Series",
         "url": "https://www.youtube.com/watch?v=3d6DsjIBzJ4"
-      },
-      {
-        "title": "The Organic Chemistry Tutor — Taylor Series",
-        "url": "https://www.youtube.com/watch?v=syMwhIAacOE"
       }
     ]
   },
@@ -77,10 +73,6 @@
       }
     ],
     "videos": [
-      {
-        "title": "MIT OpenCourseWare — Options Pricing",
-        "url": "https://www.youtube.com/watch?v=TnS8kI7jSXw"
-      },
       {
         "title": "Khan Academy — American Option Pricing",
         "url": "https://www.youtube.com/watch?v=VJgHkAqohbU"
@@ -102,10 +94,6 @@
       {
         "title": "Khan Academy — European and American Options",
         "url": "https://www.youtube.com/watch?v=VJgHkAqohbU"
-      },
-      {
-        "title": "Patrick Boyle — Options Explained",
-        "url": "https://www.youtube.com/watch?v=3bEOTaXSXsg"
       }
     ]
   },
@@ -124,10 +112,6 @@
       {
         "title": "Khan Academy — Black-Scholes Formula",
         "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
-      },
-      {
-        "title": "MIT OpenCourseWare — Black-Scholes",
-        "url": "https://www.youtube.com/watch?v=HCgunMYe5kI"
       }
     ]
   },
@@ -142,16 +126,7 @@
         "url": "https://en.wikipedia.org/wiki/Delta_neutral"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Hedging Strategies",
-        "url": "https://www.youtube.com/watch?v=tEYCsVrI6TQ"
-      },
-      {
-        "title": "MIT OpenCourseWare — Delta Hedging Explained",
-        "url": "https://www.youtube.com/watch?v=UFWGeK7dKxk"
-      }
-    ]
+    "videos": []
   },
   "derivatives/early-exercise-decision": {
     "websites": [
@@ -168,10 +143,6 @@
       {
         "title": "Khan Academy — When to Exercise an Option",
         "url": "https://www.youtube.com/watch?v=VJgHkAqohbU"
-      },
-      {
-        "title": "MIT OpenCourseWare — American Options and Early Exercise",
-        "url": "https://www.youtube.com/watch?v=TnS8kI7jSXw"
       }
     ]
   },
@@ -190,10 +161,6 @@
       {
         "title": "Khan Academy — European Option Pricing",
         "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
-      },
-      {
-        "title": "MIT OpenCourseWare — Option Pricing Theory",
-        "url": "https://www.youtube.com/watch?v=HCgunMYe5kI"
       }
     ]
   },
@@ -208,16 +175,7 @@
         "url": "https://www.investopedia.com/terms/s/stochastic-volatility.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "QuantPy — Heston Model Explained",
-        "url": "https://www.youtube.com/watch?v=R8DnwPNssXk"
-      },
-      {
-        "title": "MIT OpenCourseWare — Stochastic Volatility Models",
-        "url": "https://www.youtube.com/watch?v=UFWGeK7dKxk"
-      }
-    ]
+    "videos": []
   },
   "derivatives/implied-volatility": {
     "websites": [
@@ -234,10 +192,6 @@
       {
         "title": "Khan Academy — Implied Volatility",
         "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
-      },
-      {
-        "title": "tastylive — Understanding Implied Volatility",
-        "url": "https://www.youtube.com/watch?v=kz4wm3EvYnI"
       }
     ]
   },
@@ -276,10 +230,6 @@
     ],
     "videos": [
       {
-        "title": "Khan Academy — Put-Call Parity",
-        "url": "https://www.youtube.com/watch?v=B7KAi8y8Cr0"
-      },
-      {
         "title": "The Organic Chemistry Tutor — Put-Call Parity Explained",
         "url": "https://www.youtube.com/watch?v=VJgHkAqohbU"
       }
@@ -298,10 +248,6 @@
     ],
     "videos": [
       {
-        "title": "MIT OpenCourseWare — Risk-Neutral Pricing",
-        "url": "https://www.youtube.com/watch?v=HCgunMYe5kI"
-      },
-      {
         "title": "Khan Academy — Risk-Neutral Valuation",
         "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
       }
@@ -318,16 +264,7 @@
         "url": "https://en.wikipedia.org/wiki/Volatility_smile"
       }
     ],
-    "videos": [
-      {
-        "title": "Patrick Boyle — The Volatility Smile Explained",
-        "url": "https://www.youtube.com/watch?v=kz4wm3EvYnI"
-      },
-      {
-        "title": "MIT OpenCourseWare — Volatility Modeling",
-        "url": "https://www.youtube.com/watch?v=HCgunMYe5kI"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/modern-portfolio-theory": {
     "websites": [
@@ -344,10 +281,6 @@
       {
         "title": "MIT OpenCourseWare — Portfolio Theory",
         "url": "https://www.youtube.com/watch?v=8TJQhQ2GZ0Y"
-      },
-      {
-        "title": "Ben Felix — The Portfolio That Works",
-        "url": "https://www.youtube.com/watch?v=NXo3NBjIt8E"
       }
     ]
   },
@@ -362,16 +295,7 @@
         "url": "https://corporatefinanceinstitute.com/resources/financial-modeling/return-on-investment-roi/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Return on Investment",
-        "url": "https://www.youtube.com/watch?v=Am8ydVVpjQk"
-      },
-      {
-        "title": "The Organic Chemistry Tutor — ROI Calculations",
-        "url": "https://www.youtube.com/watch?v=aM-URjMeFuY"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/time-value-of-money": {
     "websites": [
@@ -388,10 +312,6 @@
       {
         "title": "Khan Academy — Time Value of Money",
         "url": "https://www.youtube.com/watch?v=733mgqrzNKs"
-      },
-      {
-        "title": "The Organic Chemistry Tutor — Present and Future Value",
-        "url": "https://www.youtube.com/watch?v=KGnMSsdHJmA"
       }
     ]
   },
@@ -406,16 +326,7 @@
         "url": "https://en.wikipedia.org/wiki/Yield_curve"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Yield Curve",
-        "url": "https://www.youtube.com/watch?v=nUDEBxMWrdM"
-      },
-      {
-        "title": "Wall Street Survivor — Understanding the Yield Curve",
-        "url": "https://www.youtube.com/watch?v=b4nDApRwzwI"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/cholesky-decomposition": {
     "websites": [
@@ -429,10 +340,6 @@
       }
     ],
     "videos": [
-      {
-        "title": "Steve Brunton — Cholesky Decomposition",
-        "url": "https://www.youtube.com/watch?v=omgUjsGXrKY"
-      },
       {
         "title": "MIT OpenCourseWare — Positive Definite Matrices",
         "url": "https://www.youtube.com/watch?v=umt6BB1nJ4w"
@@ -694,10 +601,6 @@
     ],
     "videos": [
       {
-        "title": "StatQuest — Exponential Distribution",
-        "url": "https://www.youtube.com/watch?v=2ig7mA1KSLU"
-      },
-      {
         "title": "The Organic Chemistry Tutor — Exponential Distribution",
         "url": "https://www.youtube.com/watch?v=2kg1O0j1J9c"
       }
@@ -714,10 +617,6 @@
       {
         "title": "StatQuest — Kurtosis and Fat Tails",
         "url": "https://www.youtube.com/watch?v=ISaVvSO_3Sg"
-      },
-      {
-        "title": "Khan Academy — Kurtosis",
-        "url": "https://www.youtube.com/watch?v=0GJnA-ABXQ8"
       }
     ]
   },
@@ -732,16 +631,7 @@
         "url": "https://www.investopedia.com/terms/l/log-normal-distribution.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest — Logs and Log-Normal Distribution",
-        "url": "https://www.youtube.com/watch?v=cKzTlHRPfkQ"
-      },
-      {
-        "title": "Khan Academy — Lognormal Distribution",
-        "url": "https://www.youtube.com/watch?v=1ZfDHkBhMKM"
-      }
-    ]
+    "videos": []
   },
   "probability/moment-generating-function": {
     "websites": [
@@ -750,16 +640,7 @@
         "url": "https://en.wikipedia.org/wiki/Moment-generating_function"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest — Moment Generating Functions",
-        "url": "https://www.youtube.com/watch?v=AM-mkdbSxnA"
-      },
-      {
-        "title": "The Organic Chemistry Tutor — Moment Generating Functions",
-        "url": "https://www.youtube.com/watch?v=6cS_O1GSmHk"
-      }
-    ]
+    "videos": []
   },
   "probability/normal-distribution": {
     "websites": [
@@ -862,10 +743,6 @@
     ],
     "videos": [
       {
-        "title": "The Organic Chemistry Tutor — Uniform Distribution",
-        "url": "https://www.youtube.com/watch?v=shGYBVsQJwQ"
-      },
-      {
         "title": "Khan Academy — Uniform Distribution",
         "url": "https://www.youtube.com/watch?v=Fvi9A_tEmXQ"
       }
@@ -882,16 +759,7 @@
         "url": "https://www.investopedia.com/terms/c/conditional_value_at_risk.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "Bionic Turtle — Coherent Risk Measures",
-        "url": "https://www.youtube.com/watch?v=LQRTdYJkjnM"
-      },
-      {
-        "title": "MIT OpenCourseWare — Risk Measures and Portfolio Theory",
-        "url": "https://www.youtube.com/watch?v=TnS8kI7jSXw"
-      }
-    ]
+    "videos": []
   },
   "risk/extreme-value-theory": {
     "websites": [
@@ -904,16 +772,7 @@
         "url": "https://www.investopedia.com/terms/t/tailrisk.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "Bionic Turtle — Extreme Value Theory for Risk Management",
-        "url": "https://www.youtube.com/watch?v=JF1_UiKFJMs"
-      },
-      {
-        "title": "MIT OpenCourseWare — Extreme Value Theory",
-        "url": "https://www.youtube.com/watch?v=HCgunMYe5kI"
-      }
-    ]
+    "videos": []
   },
   "risk/model-limitations": {
     "websites": [
@@ -927,10 +786,6 @@
       }
     ],
     "videos": [
-      {
-        "title": "MIT OpenCourseWare — Financial Models and Their Limitations",
-        "url": "https://www.youtube.com/watch?v=HCgunMYe5kI"
-      },
       {
         "title": "Patrick Boyle — When Models Fail",
         "url": "https://www.youtube.com/watch?v=A5w-dEgIU1M"
@@ -970,16 +825,7 @@
         "url": "https://en.wikipedia.org/wiki/Value_at_risk"
       }
     ],
-    "videos": [
-      {
-        "title": "Bionic Turtle — Value at Risk Explained",
-        "url": "https://www.youtube.com/watch?v=LQRTdYJkjnM"
-      },
-      {
-        "title": "MIT OpenCourseWare — Risk Management",
-        "url": "https://www.youtube.com/watch?v=TnS8kI7jSXw"
-      }
-    ]
+    "videos": []
   },
   "statistics/autocorrelation": {
     "websites": [
@@ -1018,10 +864,6 @@
       {
         "title": "3Blue1Brown — But What Is the Central Limit Theorem?",
         "url": "https://www.youtube.com/watch?v=zeJD6dqJ5lo"
-      },
-      {
-        "title": "StatQuest — Central Limit Theorem",
-        "url": "https://www.youtube.com/watch?v=YAlJCEDp768"
       }
     ]
   },
@@ -1062,10 +904,6 @@
       {
         "title": "StatQuest — Maximum Likelihood Estimation",
         "url": "https://www.youtube.com/watch?v=XepXtl9YKwc"
-      },
-      {
-        "title": "Khan Academy — Point Estimators",
-        "url": "https://www.youtube.com/watch?v=AOFi5dEpJx0"
       }
     ]
   },
@@ -1081,10 +919,6 @@
       }
     ],
     "videos": [
-      {
-        "title": "StatQuest — Skewness and Kurtosis",
-        "url": "https://www.youtube.com/watch?v=z3XaFfMFRBg"
-      },
       {
         "title": "Khan Academy — Normality Tests and Skewness",
         "url": "https://www.youtube.com/watch?v=uhxtUt_-GyM"
@@ -1103,10 +937,6 @@
       }
     ],
     "videos": [
-      {
-        "title": "StatQuest — Kurtosis",
-        "url": "https://www.youtube.com/watch?v=ISaVvSxFMHk"
-      },
       {
         "title": "Khan Academy — Comparing Distributions with Dot Plots",
         "url": "https://www.youtube.com/watch?v=HMkllhBI91Y"
@@ -1170,10 +1000,6 @@
     ],
     "videos": [
       {
-        "title": "Bionic Turtle — Square Root Rule for Volatility",
-        "url": "https://www.youtube.com/watch?v=2p2AcoRdBuE"
-      },
-      {
         "title": "Khan Academy — Variance of Sum of Random Variables",
         "url": "https://www.youtube.com/watch?v=j__Kredt7vY"
       }
@@ -1191,10 +1017,6 @@
       }
     ],
     "videos": [
-      {
-        "title": "MIT OpenCourseWare — Statistics of Financial Returns",
-        "url": "https://www.youtube.com/watch?v=HCgunMYe5kI"
-      },
       {
         "title": "Khan Academy — Describing Distributions",
         "url": "https://www.youtube.com/watch?v=uhxtUt_-GyM"
@@ -1234,16 +1056,7 @@
         "url": "https://en.wikipedia.org/wiki/Volatility_clustering"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest — GARCH and Volatility Clustering",
-        "url": "https://www.youtube.com/watch?v=lMGMEfKvL7E"
-      },
-      {
-        "title": "QuantPy — Understanding Volatility Clustering",
-        "url": "https://www.youtube.com/watch?v=R8DnwPNssXk"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/brownian-motion": {
     "websites": [
@@ -1326,10 +1139,6 @@
       {
         "title": "MIT OpenCourseWare — Drift and Diffusion",
         "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
-      },
-      {
-        "title": "QuantPy — Drift and Volatility in Finance",
-        "url": "https://www.youtube.com/watch?v=R8DnwPNssXk"
       }
     ]
   },
@@ -1390,10 +1199,6 @@
     ],
     "videos": [
       {
-        "title": "QuantPy — Geometric Brownian Motion Simulation",
-        "url": "https://www.youtube.com/watch?v=R8DnwPNssXk"
-      },
-      {
         "title": "MIT OpenCourseWare — Stochastic Processes in Finance",
         "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
       }
@@ -1410,16 +1215,7 @@
         "url": "https://www.investopedia.com/terms/v/volatility.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "Ben Felix — Volatility Drag Explained",
-        "url": "https://www.youtube.com/watch?v=NXo3NBjIt8E"
-      },
-      {
-        "title": "MIT OpenCourseWare — Growth and Volatility",
-        "url": "https://www.youtube.com/watch?v=HCgunMYe5kI"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/itos-lemma": {
     "websites": [
@@ -1436,10 +1232,6 @@
       {
         "title": "MIT OpenCourseWare — Itô Calculus",
         "url": "https://www.youtube.com/watch?v=Z5yRMMVUC5w"
-      },
-      {
-        "title": "QuantPy — Itô's Lemma Explained",
-        "url": "https://www.youtube.com/watch?v=R8DnwPNssXk"
       }
     ]
   },
@@ -1476,16 +1268,7 @@
         "url": "https://www.investopedia.com/terms/m/meanreversion.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "QuantPy — Mean Reversion in Finance",
-        "url": "https://www.youtube.com/watch?v=R8DnwPNssXk"
-      },
-      {
-        "title": "MIT OpenCourseWare — Interest Rate Models",
-        "url": "https://www.youtube.com/watch?v=HCgunMYe5kI"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/stochastic-differential-equation": {
     "websites": [
