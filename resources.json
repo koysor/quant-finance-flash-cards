@@ -220,12 +220,12 @@
     ],
     "videos": [
       {
-        "title": "Bionic Turtle — Binomial Option Pricing",
-        "url": "https://www.youtube.com/watch?v=vj2dUqoGoLs"
+        "title": "Khan Academy — Put-Call Options",
+        "url": "https://www.youtube.com/watch?v=VJgHkAqohbU"
       },
       {
-        "title": "MIT OpenCourseWare — Options Markets",
-        "url": "https://www.youtube.com/watch?v=Mw6K2cOAHAo"
+        "title": "Khan Academy — Option Greeks Overview",
+        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
       }
     ]
   },
@@ -242,12 +242,12 @@
     ],
     "videos": [
       {
-        "title": "QuantPy — Binomial Option Pricing in Python",
-        "url": "https://www.youtube.com/watch?v=ryeVpOQRges"
+        "title": "Khan Academy — Risk-Neutral Pricing",
+        "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
       },
       {
-        "title": "Bionic Turtle — Binomial Trees",
-        "url": "https://www.youtube.com/watch?v=vj2dUqoGoLs"
+        "title": "Khan Academy — Put-Call Options",
+        "url": "https://www.youtube.com/watch?v=VJgHkAqohbU"
       }
     ]
   },
@@ -278,12 +278,12 @@
     ],
     "videos": [
       {
-        "title": "Patrick Boyle — Options and Derivatives",
-        "url": "https://www.youtube.com/watch?v=Y6ljFDqNx6w"
+        "title": "Khan Academy — Risk-Neutral Pricing",
+        "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
       },
       {
-        "title": "MIT OpenCourseWare — Options Markets",
-        "url": "https://www.youtube.com/watch?v=Mw6K2cOAHAo"
+        "title": "Khan Academy — Arbitrage Basics",
+        "url": "https://www.youtube.com/watch?v=AuCH7fHZsZ4"
       }
     ]
   },
@@ -300,12 +300,12 @@
     ],
     "videos": [
       {
-        "title": "QuantPy — Binomial Model in Python",
-        "url": "https://www.youtube.com/watch?v=ryeVpOQRges"
+        "title": "Khan Academy — Risk-Neutral Pricing",
+        "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
       },
       {
-        "title": "Bionic Turtle — Binomial Option Pricing",
-        "url": "https://www.youtube.com/watch?v=vj2dUqoGoLs"
+        "title": "3Blue1Brown — Taylor Series",
+        "url": "https://www.youtube.com/watch?v=3d6DsjIBzJ4"
       }
     ]
   },
@@ -406,8 +406,8 @@
         "url": "https://www.youtube.com/watch?v=AuCH7fHZsZ4"
       },
       {
-        "title": "Bionic Turtle — No-Arbitrage Pricing",
-        "url": "https://www.youtube.com/watch?v=xp1P1PzR56c"
+        "title": "Khan Academy — Risk-Neutral Pricing",
+        "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
       }
     ]
   },
