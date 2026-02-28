@@ -9,37 +9,36 @@
 
 ## Definition
 
-**Standard Brownian motion** (or Wiener process) W(t) is a continuous-time stochastic process that models random movement. It is the mathematical foundation of most asset price models in finance.
+**Standard Brownian motion** (or Wiener process) $W(t)$ is a continuous-time stochastic process that models random movement. It satisfies four properties: $W(0) = 0$, independent increments, normally distributed increments $W(t) - W(s) \sim N(0, t - s)$, and continuous (but nowhere differentiable) paths. It is the mathematical foundation of most asset price models in finance.
 
-## Key Properties
+## Key Formula
 
-Let W(t) denote standard Brownian motion:
+The increment over an infinitesimal time step:
 
-1. **W(0) = 0** — starts at zero.
-2. **Independent increments** — W(t) − W(s) is independent of all information up to time s.
-3. **Normally distributed increments** — W(t) − W(s) ~ N(0, t − s) for t > s.
-4. **Continuous paths** — W(t) is continuous (but not differentiable) everywhere.
+$$dW \sim N(0, dt) \qquad \Rightarrow \qquad (dW)^2 = dt$$
 
-A key result:
-
-$$dW \sim N(0, dt) \quad \Rightarrow \quad (dW)^2 = dt$$
-
-## Geometric Brownian Motion (GBM)
-
-Asset prices are typically modelled using **Geometric Brownian Motion**, which ensures prices remain positive:
+Geometric Brownian Motion (GBM) uses Brownian motion to model asset prices:
 
 $$dS = \mu S \, dt + \sigma S \, dW$$
 
-- **μ** — drift (expected return)
-- **σ** — volatility
-- **dW** — Brownian increment
-
-The solution is:
+with solution:
 
 $$S(T) = S(0) \exp\!\left(\left(\mu - \tfrac{\sigma^2}{2}\right)T + \sigma W(T)\right)$$
 
+## Example
+
+Simulate one step of Brownian motion with $\delta t = 0.01$.
+
+Draw $Z \sim N(0, 1)$. The Brownian increment is $\Delta W = Z \sqrt{\delta t} = Z \times 0.1$.
+
+If $Z = 1.5$, then $\Delta W = 0.15$. Starting from $W(0) = 0$, we get $W(0.01) = 0.15$.
+
+For GBM with $S_0 = 100$, $\mu = 0.08$, $\sigma = 0.2$, $\delta t = 0.01$:
+
+$$S(0.01) = 100 \times \exp\!\left((0.08 - 0.02) \times 0.01 + 0.2 \times 0.15\right) = 100 \times e^{0.0306} \approx £103.11$$
+
 ## Remember
 
-- The (dW)² = dt result is crucial — it means that at the second order, the randomness is actually **deterministic**. This is what makes Itô's lemma tractable.
-- GBM implies that **log returns** are normally distributed, which is why the Black-Scholes model leads to a lognormal stock price distribution.
+- The $(dW)^2 = dt$ result is crucial — it means that at the second order, the randomness is actually **deterministic**. This is what makes Itô's lemma tractable.
+- GBM implies that **log-returns** are normally distributed, which is why the Black-Scholes model leads to a lognormal stock price distribution.
 - GBM does **not** capture: fat tails, volatility clustering, or jumps — real limitations of the Black-Scholes model.

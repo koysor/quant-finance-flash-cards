@@ -11,37 +11,33 @@
 
 Differentiation finds the **instantaneous rate of change** of a function. In finance, derivatives (the mathematical kind) of functions appear everywhere — from option pricing sensitivities (the Greeks) to optimisation.
 
-## Key Rules
+## Key Formula
 
-| Rule | Formula |
-|---|---|
-| Power rule | d/dx [xⁿ] = nxⁿ⁻¹ |
-| Constant | d/dx [c] = 0 |
-| Sum rule | d/dx [f + g] = f' + g' |
-| Product rule | d/dx [fg] = f'g + fg' |
-| Quotient rule | d/dx [f/g] = (f'g − fg') / g² |
-| Chain rule | d/dx [f(g(x))] = f'(g(x)) · g'(x) |
+$$\frac{d}{dx}[x^n] = nx^{n-1} \qquad \frac{d}{dx}[c] = 0$$
 
-**Common functions:**
+$$\frac{d}{dx}[f + g] = f' + g' \qquad \frac{d}{dx}[fg] = f'g + fg'$$
 
-| Function | Derivative |
-|---|---|
-| eˣ | eˣ |
-| ln(x) | 1/x |
-| sin(x) | cos(x) |
-| cos(x) | −sin(x) |
+$$\frac{d}{dx}\!\left[\frac{f}{g}\right] = \frac{f'g - fg'}{g^2} \qquad \frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x)$$
 
-## Example (Chain Rule)
+Common functions:
 
-Differentiate f(x) = e^(−x²):
+$$\frac{d}{dx}[e^x] = e^x \qquad \frac{d}{dx}[\ln x] = \frac{1}{x}$$
 
-Let u = −x², so f = eᵘ.
+$$\frac{d}{dx}[\sin x] = \cos x \qquad \frac{d}{dx}[\cos x] = -\sin x$$
 
-f'(x) = eᵘ · (−2x) = **−2x · e^(−x²)**
+## Example
 
-This appears in the normal distribution PDF.
+Differentiate $f(x) = e^{-x^2}$ using the chain rule.
+
+Let $u = -x^2$, so $f = e^u$.
+
+$$f'(x) = e^u \cdot (-2x) = -2x \, e^{-x^2}$$
+
+At $x = 1$: $f'(1) = -2 \times e^{-1} \approx -0.736$.
+
+This derivative appears in the normal distribution PDF.
 
 ## Remember
 
 - The **chain rule** is essential for differentiating composite functions — used constantly when working with the Black-Scholes formula and the Greeks.
-- **Delta** (Δ) of an option is the partial derivative of the option price with respect to the underlying asset price: Δ = ∂V/∂S.
+- **Delta** ($\Delta$) of an option is the partial derivative of the option price with respect to the underlying asset price: $\Delta = \partial V / \partial S$.
