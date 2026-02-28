@@ -1,5 +1,47 @@
 [
   {
+    "source": "calculus/chain-rule",
+    "target": "derivatives/option-greeks",
+    "label": "computes",
+    "description": "Every Greek is a partial derivative of the option price — computing how Delta changes with the underlying (Gamma) or how a multi-leg portfolio s risk decomposes requires repeated application of the chain rule."
+  },
+  {
+    "source": "calculus/chain-rule",
+    "target": "stochastic-processes/itos-lemma",
+    "label": "extended by",
+    "description": "Ito s Lemma is the stochastic generalisation of the chain rule — it adds the correction term (1/2)sigma^2 S^2 f_{SS} dt that arises because (dW)^2 = dt, making it the essential tool for differentiating functions of stochastic processes."
+  },
+  {
+    "source": "calculus/differentiation-rules",
+    "target": "calculus/chain-rule",
+    "label": "includes",
+    "description": "The chain rule is one of the core differentiation rules — it handles composite functions and is essential for differentiating any function where one quantity depends on another through an intermediate variable."
+  },
+  {
+    "source": "calculus/differentiation-rules",
+    "target": "calculus/fundamental-theorem-of-calculus",
+    "label": "inverse of",
+    "description": "The Fundamental Theorem of Calculus establishes that differentiation and integration are inverse operations — differentiating the integral of a function recovers the original function, making differentiation rules the mirror image of integration."
+  },
+  {
+    "source": "calculus/differentiation-rules",
+    "target": "calculus/integration-rules",
+    "label": "inverse of",
+    "description": "Integration is the reverse operation of differentiation — the Fundamental Theorem of Calculus states that the integral of a derivative recovers the original function, and every integration technique has a corresponding differentiation rule it reverses."
+  },
+  {
+    "source": "calculus/differentiation-rules",
+    "target": "calculus/logarithmic-and-exponential-functions",
+    "label": "applied to",
+    "description": "The derivatives of ln(x) and e^x are among the most important differentiation rules — they appear whenever continuous compounding, log-returns, or the lognormal model are differentiated."
+  },
+  {
+    "source": "calculus/differentiation-rules",
+    "target": "calculus/partial-derivatives",
+    "label": "generalised by",
+    "description": "Partial differentiation extends single-variable differentiation to functions of several variables — the same power, product, chain, and quotient rules apply, but each derivative is taken with respect to one variable while holding the others constant."
+  },
+  {
     "source": "calculus/differentiation-rules",
     "target": "calculus/taylor-series",
     "label": "foundation of",
@@ -10,6 +52,36 @@
     "target": "derivatives/option-greeks",
     "label": "applied in",
     "description": "The Greeks are partial derivatives of the option price with respect to its inputs — computing Delta, Gamma, Theta, and Vega requires direct application of the chain rule, product rule, and differentiation of the normal CDF."
+  },
+  {
+    "source": "calculus/fundamental-theorem-of-calculus",
+    "target": "probability/cumulative-distribution-function",
+    "label": "applied in",
+    "description": "Part 1 of the FTC gives the key identity F_X’(x) = f_X(x): the derivative of the CDF is the PDF. This relationship is used constantly when converting between cumulative probabilities and densities in option pricing and risk measurement."
+  },
+  {
+    "source": "calculus/fundamental-theorem-of-calculus",
+    "target": "probability/probability-density-function",
+    "label": "foundation of",
+    "description": "Part 2 of the FTC is what makes a PDF useful — the probability P(a < X < b) equals the integral of the density from a to b, evaluated as the antiderivative difference F(b) − F(a)."
+  },
+  {
+    "source": "calculus/integration-rules",
+    "target": "calculus/taylor-series",
+    "label": "applied in",
+    "description": "Taylor series can be integrated term by term within their radius of convergence, and many integral representations of special functions (such as the error function used in option pricing) are derived by integrating a Taylor expansion."
+  },
+  {
+    "source": "calculus/integration-rules",
+    "target": "probability/cumulative-distribution-function",
+    "label": "foundation of",
+    "description": "The CDF is defined as the integral of the probability density function from minus infinity to x — computing any probability from a continuous distribution is a direct application of definite integration."
+  },
+  {
+    "source": "calculus/integration-rules",
+    "target": "probability/probability-density-function",
+    "label": "applied in",
+    "description": "A valid probability density must integrate to one over its support, and every probability calculation involves integrating the PDF over an interval — substitution and by-parts are routinely needed for non-trivial densities."
   },
   {
     "source": "calculus/lemma",
@@ -28,6 +100,36 @@
     "target": "stochastic-processes/itos-lemma",
     "label": "exemplified by",
     "description": "Itô's Lemma is the most important lemma in quantitative finance — a proven stepping-stone result that is invoked every time a function of a stochastic process needs to be differentiated."
+  },
+  {
+    "source": "calculus/logarithmic-and-exponential-functions",
+    "target": "financial-maths/time-value-of-money",
+    "label": "extends",
+    "description": "Continuous compounding A = Pe^{rt} is the limiting case of discrete compounding — the exponential function provides the natural framework for discounting and present value calculations in continuous time."
+  },
+  {
+    "source": "calculus/logarithmic-and-exponential-functions",
+    "target": "probability/lognormal-distribution",
+    "label": "foundation of",
+    "description": "The lognormal distribution arises because if ln(S) is normally distributed then S = e^X is lognormal — the entire model rests on the inverse relationship between log and exponential functions."
+  },
+  {
+    "source": "calculus/logarithmic-and-exponential-functions",
+    "target": "statistics/statistical-properties-of-returns",
+    "label": "defines",
+    "description": "Log-returns r_t = ln(S_t/S_{t-1}) are the standard return measure in quantitative finance because the logarithm converts multiplicative price ratios into additive quantities that are easier to model statistically."
+  },
+  {
+    "source": "calculus/partial-derivatives",
+    "target": "derivatives/black-scholes-equation",
+    "label": "foundation of",
+    "description": "The Black-Scholes PDE is expressed entirely in terms of partial derivatives of the option price with respect to the underlying price, time, and volatility — without partial differentiation the equation cannot be stated or solved."
+  },
+  {
+    "source": "calculus/partial-derivatives",
+    "target": "derivatives/option-greeks",
+    "label": "applied in",
+    "description": "Each Greek is a partial derivative of the option price: Delta = dV/dS, Gamma = d2V/dS2, Theta = dV/dt, Vega = dV/dsigma — computing and interpreting them requires fluency in partial differentiation."
   },
   {
     "source": "calculus/taylor-series",
@@ -366,6 +468,24 @@
     "description": "A matrix is invertible if and only if its determinant is non-zero — checking the determinant is the first step before attempting to invert a covariance matrix for portfolio optimisation."
   },
   {
+    "source": "linear-algebra/dot-product-and-norms",
+    "target": "financial-maths/modern-portfolio-theory",
+    "label": "underlies",
+    "description": "Portfolio variance w^T Sigma w is a quadratic form built from dot products of weight and return vectors — the entire mean-variance optimisation framework rests on this inner product structure."
+  },
+  {
+    "source": "linear-algebra/dot-product-and-norms",
+    "target": "linear-algebra/matrix-multiplication",
+    "label": "building block of",
+    "description": "Matrix multiplication is defined as a collection of dot products — the (i,j) entry of AB is the dot product of row i of A with column j of B."
+  },
+  {
+    "source": "linear-algebra/dot-product-and-norms",
+    "target": "statistics/correlation",
+    "label": "defines",
+    "description": "Correlation is a normalised dot product of de-meaned return vectors — the geometric interpretation cos(theta) explains why correlation is bounded between -1 and +1 via the Cauchy-Schwarz inequality."
+  },
+  {
     "source": "linear-algebra/eigenvalues-and-eigenvectors",
     "target": "linear-algebra/determinant",
     "label": "product gives",
@@ -414,10 +534,64 @@
     "description": "The correlation matrix is built and manipulated via matrix operations — portfolio risk, principal component analysis, and factor models all rely on multiplying weight vectors by covariance or correlation matrices."
   },
   {
+    "source": "linear-algebra/positive-definite-matrices",
+    "target": "linear-algebra/cholesky-decomposition",
+    "label": "required for",
+    "description": "The Cholesky decomposition A = LL^T exists if and only if A is positive definite — this is the standard factorisation used to generate correlated random variables in Monte Carlo simulation."
+  },
+  {
+    "source": "linear-algebra/positive-definite-matrices",
+    "target": "linear-algebra/eigenvalues-and-eigenvectors",
+    "label": "characterised by",
+    "description": "A symmetric matrix is positive definite if and only if all its eigenvalues are strictly positive — checking the eigenvalue spectrum is the most reliable test for valid covariance matrices."
+  },
+  {
+    "source": "linear-algebra/positive-definite-matrices",
+    "target": "risk/monte-carlo-simulation",
+    "label": "enables",
+    "description": "Monte Carlo simulation of correlated assets requires Cholesky-decomposing the covariance matrix, which is only possible when it is positive definite — a rank-deficient or indefinite matrix breaks the simulation."
+  },
+  {
+    "source": "linear-algebra/rank",
+    "target": "linear-algebra/determinant",
+    "label": "equivalent to",
+    "description": "A square matrix has full rank if and only if its determinant is non-zero — rank and the determinant are two different lenses on the same question of whether a matrix is singular."
+  },
+  {
+    "source": "linear-algebra/rank",
+    "target": "linear-algebra/eigenvalues-and-eigenvectors",
+    "label": "counted via",
+    "description": "The rank of a matrix equals the number of non-zero eigenvalues — a zero eigenvalue signals a rank deficiency, which in PCA means that principal component explains no variance."
+  },
+  {
+    "source": "linear-algebra/rank",
+    "target": "linear-algebra/matrix-inverse",
+    "label": "gates",
+    "description": "A square matrix is invertible if and only if it has full rank — rank deficiency in a covariance matrix means the inverse does not exist and portfolio optimisation cannot proceed without regularisation."
+  },
+  {
+    "source": "linear-algebra/rank",
+    "target": "linear-algebra/systems-of-linear-equations",
+    "label": "classifies",
+    "description": "The rank of the coefficient matrix determines whether a linear system has a unique solution (full rank), infinitely many solutions, or no solution — it is the central diagnostic for solvability."
+  },
+  {
     "source": "linear-algebra/systems-of-linear-equations",
     "target": "linear-algebra/determinant",
     "label": "checked via",
     "description": "The determinant determines whether a system has a unique solution (det ≠ 0), no solution, or infinitely many solutions — it is the first diagnostic tool for any linear system."
+  },
+  {
+    "source": "linear-algebra/trace",
+    "target": "linear-algebra/determinant",
+    "label": "complements",
+    "description": "While the trace gives the sum of eigenvalues, the determinant gives their product — together they provide scalar summaries of a matrix that appear in characteristic polynomial coefficients."
+  },
+  {
+    "source": "linear-algebra/trace",
+    "target": "linear-algebra/eigenvalues-and-eigenvectors",
+    "label": "equals sum of",
+    "description": "The trace of a matrix equals the sum of its eigenvalues — this identity connects a simple diagonal sum to the spectral decomposition used in PCA and risk factor analysis."
   },
   {
     "source": "linear-algebra/transpose-and-symmetric-matrices",

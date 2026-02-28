@@ -1,4 +1,26 @@
 {
+  "calculus/chain-rule": {
+    "websites": [
+      {
+        "title": "Khan Academy — Chain Rule",
+        "url": "https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-2-new/ab-3-1a/v/chain-rule-introduction"
+      },
+      {
+        "title": "Paul's Online Math Notes — Chain Rule",
+        "url": "https://tutorial.math.lamar.edu/Classes/CalcI/ChainRule.aspx"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Visualising the Chain Rule",
+        "url": "https://www.youtube.com/watch?v=YG15m2VwSjA"
+      },
+      {
+        "title": "Khan Academy — Chain Rule Introduction",
+        "url": "https://www.youtube.com/watch?v=0T0QrHO56qg"
+      }
+    ]
+  },
   "calculus/differentiation-rules": {
     "websites": [
       {
@@ -21,6 +43,50 @@
       }
     ]
   },
+  "calculus/fundamental-theorem-of-calculus": {
+    "websites": [
+      {
+        "title": "Khan Academy — Fundamental Theorem of Calculus",
+        "url": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-4/v/fundamental-theorem-of-calculus"
+      },
+      {
+        "title": "Paul's Online Math Notes — Fundamental Theorem of Calculus",
+        "url": "https://tutorial.math.lamar.edu/Classes/CalcI/FundThmOfCalc.aspx"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Integration and the Fundamental Theorem",
+        "url": "https://www.youtube.com/watch?v=rfG8ce4nNh0"
+      },
+      {
+        "title": "Khan Academy — Fundamental Theorem of Calculus",
+        "url": "https://www.youtube.com/watch?v=C7ducZoLKgw"
+      }
+    ]
+  },
+  "calculus/integration-rules": {
+    "websites": [
+      {
+        "title": "Khan Academy — Integration Techniques",
+        "url": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new"
+      },
+      {
+        "title": "Paul's Online Math Notes — Integration",
+        "url": "https://tutorial.math.lamar.edu/Classes/CalcI/IntegralsIntro.aspx"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Integration and the Fundamental Theorem of Calculus",
+        "url": "https://www.youtube.com/watch?v=rfG8ce4nNh0"
+      },
+      {
+        "title": "The Organic Chemistry Tutor — Integration Techniques",
+        "url": "https://www.youtube.com/watch?v=o75AqTInKDU"
+      }
+    ]
+  },
   "calculus/lemma": {
     "websites": [
       {
@@ -40,6 +106,50 @@
       {
         "title": "Khan Academy — Calculus Concepts",
         "url": "https://www.youtube.com/watch?v=riXcZT2ICjA"
+      }
+    ]
+  },
+  "calculus/logarithmic-and-exponential-functions": {
+    "websites": [
+      {
+        "title": "Khan Academy — Derivatives of Logarithmic Functions",
+        "url": "https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-2-new/ab-3-1b/v/derivative-of-ln-x"
+      },
+      {
+        "title": "Paul's Online Math Notes — Derivatives of Exponentials and Logarithms",
+        "url": "https://tutorial.math.lamar.edu/Classes/CalcI/DiffExpLogFcns.aspx"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — What is e and ln(x)?",
+        "url": "https://www.youtube.com/watch?v=m2MIpDrF7Es"
+      },
+      {
+        "title": "Khan Academy — Derivative of ln(x)",
+        "url": "https://www.youtube.com/watch?v=yUpDRpkUhf4"
+      }
+    ]
+  },
+  "calculus/partial-derivatives": {
+    "websites": [
+      {
+        "title": "Khan Academy — Partial Derivatives",
+        "url": "https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/partial-derivative-and-gradient-articles/a/introduction-to-partial-derivatives"
+      },
+      {
+        "title": "Paul's Online Math Notes — Partial Derivatives",
+        "url": "https://tutorial.math.lamar.edu/Classes/CalcIII/PartialDerivatives.aspx"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Partial Derivatives and the Gradient",
+        "url": "https://www.youtube.com/watch?v=TEB2z7ZlRAw"
+      },
+      {
+        "title": "Khan Academy — Partial Derivatives Introduction",
+        "url": "https://www.youtube.com/watch?v=AXqhWeUEtQU"
       }
     ]
   },
@@ -110,12 +220,12 @@
     ],
     "videos": [
       {
-        "title": "MIT OpenCourseWare — Binomial Option Pricing",
-        "url": "https://www.youtube.com/watch?v=88kFSJPBGSA"
+        "title": "Bionic Turtle — Binomial Option Pricing",
+        "url": "https://www.youtube.com/watch?v=vj2dUqoGoLs"
       },
       {
-        "title": "Khan Academy — Binomial Trees for Option Pricing",
-        "url": "https://www.youtube.com/watch?v=VJgHkAqohbU"
+        "title": "MIT OpenCourseWare — Options Markets",
+        "url": "https://www.youtube.com/watch?v=Mw6K2cOAHAo"
       }
     ]
   },
@@ -132,12 +242,12 @@
     ],
     "videos": [
       {
-        "title": "Khan Academy — Binomial Option Pricing",
-        "url": "https://www.youtube.com/watch?v=O8qXoV1jEiA"
+        "title": "QuantPy — Binomial Option Pricing in Python",
+        "url": "https://www.youtube.com/watch?v=ryeVpOQRges"
       },
       {
-        "title": "MIT OpenCourseWare — Binomial Model (Andrew Lo)",
-        "url": "https://www.youtube.com/watch?v=RuPMsK0mQC8"
+        "title": "Bionic Turtle — Binomial Trees",
+        "url": "https://www.youtube.com/watch?v=vj2dUqoGoLs"
       }
     ]
   },
@@ -168,12 +278,12 @@
     ],
     "videos": [
       {
-        "title": "MIT OpenCourseWare — Complete Markets and Arrow-Debreu",
-        "url": "https://www.youtube.com/watch?v=TPCGo4bEhU4"
+        "title": "Patrick Boyle — Options and Derivatives",
+        "url": "https://www.youtube.com/watch?v=Y6ljFDqNx6w"
       },
       {
-        "title": "Patrick Boyle — Risk Neutral Pricing and Complete Markets",
-        "url": "https://www.youtube.com/watch?v=2V2cCKRiFoY"
+        "title": "MIT OpenCourseWare — Options Markets",
+        "url": "https://www.youtube.com/watch?v=Mw6K2cOAHAo"
       }
     ]
   },
@@ -190,12 +300,12 @@
     ],
     "videos": [
       {
-        "title": "MIT OpenCourseWare — Binomial Model and Black-Scholes",
-        "url": "https://www.youtube.com/watch?v=HdBhvCrgNX0"
+        "title": "QuantPy — Binomial Model in Python",
+        "url": "https://www.youtube.com/watch?v=ryeVpOQRges"
       },
       {
-        "title": "Khan Academy — Binomial Option Pricing",
-        "url": "https://www.youtube.com/watch?v=O86sFeHCIHE"
+        "title": "Bionic Turtle — Binomial Option Pricing",
+        "url": "https://www.youtube.com/watch?v=vj2dUqoGoLs"
       }
     ]
   },
@@ -296,8 +406,8 @@
         "url": "https://www.youtube.com/watch?v=AuCH7fHZsZ4"
       },
       {
-        "title": "Patrick Boyle — No-Arbitrage and Derivative Pricing",
-        "url": "https://www.youtube.com/watch?v=Q5eEgKbPOqs"
+        "title": "Bionic Turtle — No-Arbitrage Pricing",
+        "url": "https://www.youtube.com/watch?v=xp1P1PzR56c"
       }
     ]
   },
@@ -474,6 +584,28 @@
       }
     ]
   },
+  "linear-algebra/dot-product-and-norms": {
+    "websites": [
+      {
+        "title": "Khan Academy — Dot Product",
+        "url": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/dot-cross-products/v/vector-dot-product-and-vector-length"
+      },
+      {
+        "title": "Wikipedia — Dot Product",
+        "url": "https://en.wikipedia.org/wiki/Dot_product"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Dot Products and Duality",
+        "url": "https://www.youtube.com/watch?v=LyGKycYT2v0"
+      },
+      {
+        "title": "Khan Academy — Vector Dot Product and Length",
+        "url": "https://www.youtube.com/watch?v=WNuIhXo39_k"
+      }
+    ]
+  },
   "linear-algebra/eigenvalues-and-eigenvectors": {
     "websites": [
       {
@@ -540,6 +672,50 @@
       }
     ]
   },
+  "linear-algebra/positive-definite-matrices": {
+    "websites": [
+      {
+        "title": "Wikipedia — Definite Matrix",
+        "url": "https://en.wikipedia.org/wiki/Definite_matrix"
+      },
+      {
+        "title": "MIT OpenCourseWare — Positive Definite Matrices",
+        "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Positive Definite Matrices and Minima",
+        "url": "https://www.youtube.com/watch?v=umt6BB1nJ4w"
+      },
+      {
+        "title": "3Blue1Brown — Essence of Linear Algebra",
+        "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"
+      }
+    ]
+  },
+  "linear-algebra/rank": {
+    "websites": [
+      {
+        "title": "Khan Academy — Matrix Rank",
+        "url": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/null-column-space/v/dimension-of-the-column-space-or-rank"
+      },
+      {
+        "title": "Wikipedia — Rank (Linear Algebra)",
+        "url": "https://en.wikipedia.org/wiki/Rank_(linear_algebra)"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Nonsquare Matrices and Rank",
+        "url": "https://www.youtube.com/watch?v=v8VSDg_WQlA"
+      },
+      {
+        "title": "MIT OpenCourseWare — Column Space and Rank",
+        "url": "https://www.youtube.com/watch?v=yjBerM5jWsc"
+      }
+    ]
+  },
   "linear-algebra/systems-of-linear-equations": {
     "websites": [
       {
@@ -559,6 +735,28 @@
       {
         "title": "The Organic Chemistry Tutor — Systems of Linear Equations",
         "url": "https://www.youtube.com/watch?v=eYSASx8_nyg"
+      }
+    ]
+  },
+  "linear-algebra/trace": {
+    "websites": [
+      {
+        "title": "Wikipedia — Trace (Linear Algebra)",
+        "url": "https://en.wikipedia.org/wiki/Trace_(linear_algebra)"
+      },
+      {
+        "title": "MathWorld — Matrix Trace",
+        "url": "https://mathworld.wolfram.com/MatrixTrace.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Properties of Determinants (includes trace)",
+        "url": "https://www.youtube.com/watch?v=srxexLishgY"
+      },
+      {
+        "title": "Khan Academy — Linear Algebra",
+        "url": "https://www.youtube.com/watch?v=xyAuNHPsq-g"
       }
     ]
   },
