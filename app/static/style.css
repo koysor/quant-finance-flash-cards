@@ -547,6 +547,12 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
   font-weight: 600; font-size: 0.93rem; line-height: 1.35;
 }
 .card-tile-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: auto; }
+.card-tile-meta { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem; }
+.card-tile-badge {
+  display: inline-block; font-size: 0.7rem; font-weight: 600;
+  color: #fff; padding: 0.1rem 0.5rem; border-radius: 20px;
+}
+.card-tile-author { font-size: 0.72rem; color: var(--muted); }
 
 /* ── Tags & badges ──────────────────────────────────────────── */
 .tag {

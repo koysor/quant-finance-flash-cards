@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Recent Cards — Quantitative Finance Flash Cards{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>Recent Cards</h1>
+</div>
+
+{% if grouped %}
+  {% set card_i = namespace(value=0) %}
+  {% for date, cards in grouped.items() %}
+    <section class="topic-section">
+      <h2 class="topic-heading">
+        <span class="topic-heading-text">{{ date }}</span>
+        <span class="topic-count">{{ cards|length }}</span>
+      </h2>
+      <div class="card-grid">
+        {% for card in cards %}
+          {% set tc = topic_colour(card['topic']) %}
+          <a class="card-tile"
+             href="{{ url_for('main.card_detail', card_id=card['id']) }}"
+             data-card-id="{{ card['id'] }}"
+             style="--tc:{{ tc }};--delay:{{ card_i.value * 35 }}ms"
+             tabindex="0">
+            <div class="card-tile-header">
+              <span class="card-tile-name">{{ card['name'] }}</span>
+              <span class="visited-check" aria-label="Visited">✓</span>
+            </div>
+            <div class="card-tile-meta">
+              <span class="card-tile-badge" style="background:{{ tc }}">{{ card['topic'] }}</span>
+              {% if card['author'] %}
+                <span class="card-tile-author">{{ card['author'] }}</span>
+              {% endif %}
+            </div>
+            <span class="card-tile-tags">
+              {% for tag in card['tags'].split(',') %}
+                <span class="tag">{{ tag.strip() }}</span>
+              {% endfor %}
+            </span>
+          </a>
+          {% set card_i.value = card_i.value + 1 %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+{% else %}
+  <p class="muted">No cards found.</p>
+{% endif %}
+{% endblock %}
+
+{% block page_scripts %}
+<script>
+(function() {
+  const visited = new Set(JSON.parse(localStorage.getItem('visited_cards') || '[]'));
+  document.querySelectorAll('.card-tile[data-card-id]').forEach(tile => {
+    if (visited.has(tile.dataset.cardId)) tile.classList.add('visited');
+  });
+})();
+</script>
+{% endblock %}

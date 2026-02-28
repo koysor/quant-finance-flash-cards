@@ -7,6 +7,7 @@ from flask import Blueprint, abort, current_app, redirect, render_template, requ
 from app.db import (
     delete_edge,
     get_all_cards,
+    get_all_cards_by_date,
     get_all_cards_with_content,
     get_all_edges,
     get_card,
@@ -101,6 +102,16 @@ def random_card():
     if card is None:
         abort(404)
     return redirect(url_for("main.card_detail", card_id=card["id"]))
+
+
+@bp.get("/recent")
+def recent():
+    cards = get_all_cards_by_date()
+    grouped: dict[str, list] = {}
+    for card in cards:
+        date = card["created_date"] or "Unknown"
+        grouped.setdefault(date, []).append(card)
+    return render_template("recent.html", grouped=grouped)
 
 
 @bp.get("/card/<path:card_id>")

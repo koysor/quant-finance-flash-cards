@@ -68,6 +68,7 @@ Flask routes use `<path:card_id>` to allow the `/` in URLs.
 | POST | `/card/<path:card_id>/remove-link` | Delete edge (CSRF-protected), redirect back |
 | GET | `/graph` | vis.js network — path finding, topic filtering, edge weights |
 | GET | `/formulas` | All Key Formula sections aggregated by topic |
+| GET | `/recent` | Reverse-chronological card list, grouped by date (unlisted) |
 | GET | `/random` | Redirect to a random card (JS version prefers unvisited) |
 
 ## Card Authoring

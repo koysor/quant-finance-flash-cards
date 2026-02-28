@@ -125,6 +125,15 @@ def get_topic_cards(topic: str) -> list[sqlite3.Row]:
         ).fetchall()
 
 
+def get_all_cards_by_date() -> list[sqlite3.Row]:
+    """Return all cards ordered by created_date descending, then name ascending."""
+    with get_db() as conn:
+        return conn.execute(
+            "SELECT id, name, topic, tags, created_date, author"
+            " FROM cards ORDER BY created_date DESC, name ASC"
+        ).fetchall()
+
+
 def get_random_card() -> sqlite3.Row | None:
     with get_db() as conn:
         return conn.execute(
