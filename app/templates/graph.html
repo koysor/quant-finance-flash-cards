@@ -48,6 +48,7 @@
   border-radius: 8px  !important;
   box-shadow: var(--shadow-lg)  !important;
   max-width:  280px !important;
+  white-space: pre-wrap !important;
 }
 </style>
 {% endblock %}
@@ -83,8 +84,7 @@ function buildNodes(t) {
   return RAW_NODES.map(n => ({
     id:    n.id,
     label: n.label,
-    title: `<strong style="font-family:Inter,sans-serif">${n.label}</strong><br>
-            <small style="color:#8b949e;font-family:Inter,sans-serif">${n.title}</small>`,
+    title: `${n.label} (${n.title})`,
     color: {
       background: n.color,
       border:     n.color,
@@ -110,9 +110,7 @@ function buildEdges(t) {
       from:   e.from,
       to:     e.to,
       label:  e.label || '',
-      title:  e.description
-        ? `<span style="font-family:Inter,sans-serif">${escHtml(e.description)}</span>`
-        : undefined,
+      title:  e.description || undefined,
       arrows: { to: { enabled: true, scaleFactor: 0.6 } },
       color:  { color: t.edgeColour, highlight: '#4f9ef8', hover: '#4f9ef8', opacity: 0.85 },
       font:   { size: 10, color: t.edgeFont, face: 'Inter, system-ui, sans-serif',
