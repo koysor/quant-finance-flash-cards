@@ -3,6 +3,8 @@
 **Topic:** Derivatives
 **Level:** A Level Mathematics
 **Tags:** early exercise, American options, optimal stopping, intrinsic value, time value, dividends
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

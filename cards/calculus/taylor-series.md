@@ -3,6 +3,8 @@
 **Topic:** Calculus
 **Level:** A Level Mathematics
 **Tags:** calculus, Taylor series, approximation
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

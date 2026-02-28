@@ -3,6 +3,8 @@
 **Topic:** Stochastic Processes
 **Level:** A Level Mathematics
 **Tags:** Itô's lemma, stochastic calculus, SDE, chain rule, Black-Scholes
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

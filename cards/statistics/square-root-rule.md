@@ -3,6 +3,8 @@
 **Topic:** Statistics
 **Level:** A Level Mathematics
 **Tags:** volatility, standard deviation, scaling, square root, risk
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

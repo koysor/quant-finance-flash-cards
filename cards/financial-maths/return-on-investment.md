@@ -3,6 +3,8 @@
 **Topic:** Financial Mathematics
 **Level:** A Level Mathematics
 **Tags:** returns, investment, relative change, asset pricing
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

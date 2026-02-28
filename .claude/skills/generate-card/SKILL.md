@@ -1,7 +1,7 @@
 ---
 name: generate-card
 description: Generate a new flash card and its edges from a concept name
-allowed-tools: Read, Write, Glob, Edit
+allowed-tools: Read, Write, Glob, Edit, Bash
 ---
 
 Generate a flash card for the concept: $ARGUMENTS
@@ -20,6 +20,8 @@ Write the card to `cards/<topic-slug>/<concept-slug>.md` using this exact struct
 **Topic:** <must exactly match a TOPIC_COLOURS key>
 **Level:** A Level Mathematics
 **Tags:** <3-6 lowercase comma-separated tags relevant to quant finance>
+**Created:** <today's date in YYYY-MM-DD>
+**Author:** <model name, e.g. Claude Opus 4.6>
 
 ---
 
@@ -65,6 +67,28 @@ Read `resources.json`. Add an entry for the new card with:
 
 Write the updated `resources.json` back, keeping the object sorted by card ID. Preserve 2-space indent formatting and trailing newline.
 
-## Step 5 — Summary
+## Step 5 — Restart the app
+
+Delete `graph.db` and restart the Flask dev server so the new card and edges are loaded:
+
+```bash
+pkill -f "python run.py" 2>/dev/null; rm -f graph.db; uv run python run.py &
+```
+
+Wait a couple of seconds, then verify the server is running by curling the new card's URL.
+
+## Step 6 — Summary
 
 Report what was created: the card path, and a table of new edges (source → target, label, description).
+
+## Step 7 — Suggest related cards
+
+Suggest 3-5 related concepts that would make good future flash cards. These should be concepts that:
+- Are closely related to the newly created card
+- Do **not** already exist in `cards/**/*.md`
+- Are relevant to quantitative finance at A Level mathematics standard
+
+Present them as a bulleted list with a one-line description of each, e.g.:
+
+> **Suggested next cards:**
+> - **Concept Name** — brief description of what the card would cover and why it connects

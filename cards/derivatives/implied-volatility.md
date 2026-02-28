@@ -3,6 +3,8 @@
 **Topic:** Derivatives
 **Level:** A Level Mathematics
 **Tags:** implied volatility, volatility smile, volatility skew, Black-Scholes, options
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

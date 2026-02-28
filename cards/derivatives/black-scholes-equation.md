@@ -3,6 +3,8 @@
 **Topic:** Derivatives
 **Level:** A Level Mathematics
 **Tags:** Black-Scholes, options, PDE, pricing, lognormal
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

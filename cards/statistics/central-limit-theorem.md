@@ -3,6 +3,8 @@
 **Topic:** Statistics
 **Level:** A Level Mathematics
 **Tags:** CLT, convergence, normal distribution, sampling, estimation
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

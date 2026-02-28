@@ -3,6 +3,8 @@
 **Topic:** Probability
 **Level:** A Level Mathematics
 **Tags:** distributions, probability, continuous, exponential, survival
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

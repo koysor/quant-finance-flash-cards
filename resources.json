@@ -307,6 +307,28 @@
       }
     ]
   },
+  "derivatives/volatility-smile": {
+    "websites": [
+      {
+        "title": "Investopedia — Volatility Smile",
+        "url": "https://www.investopedia.com/terms/v/volatilitysmile.asp"
+      },
+      {
+        "title": "Wikipedia — Volatility Smile",
+        "url": "https://en.wikipedia.org/wiki/Volatility_smile"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Patrick Boyle — The Volatility Smile Explained",
+        "url": "https://www.youtube.com/watch?v=kz4wm3EvYnI"
+      },
+      {
+        "title": "MIT OpenCourseWare — Volatility Modeling",
+        "url": "https://www.youtube.com/watch?v=HCgunMYe5kI"
+      }
+    ]
+  },
   "financial-maths/return-on-investment": {
     "websites": [
       {
@@ -326,6 +348,28 @@
       {
         "title": "The Organic Chemistry Tutor — ROI Calculations",
         "url": "https://www.youtube.com/watch?v=aM-URjMeFuY"
+      }
+    ]
+  },
+  "financial-maths/modern-portfolio-theory": {
+    "websites": [
+      {
+        "title": "Investopedia — Modern Portfolio Theory",
+        "url": "https://www.investopedia.com/terms/m/modernportfoliotheory.asp"
+      },
+      {
+        "title": "Wikipedia — Modern Portfolio Theory",
+        "url": "https://en.wikipedia.org/wiki/Modern_portfolio_theory"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Portfolio Theory",
+        "url": "https://www.youtube.com/watch?v=8TJQhQ2GZ0Y"
+      },
+      {
+        "title": "Ben Felix — The Portfolio That Works",
+        "url": "https://www.youtube.com/watch?v=NXo3NBjIt8E"
       }
     ]
   },
@@ -791,6 +835,50 @@
       }
     ]
   },
+  "risk/coherent-risk-measure": {
+    "websites": [
+      {
+        "title": "Wikipedia — Coherent Risk Measure",
+        "url": "https://en.wikipedia.org/wiki/Coherent_risk_measure"
+      },
+      {
+        "title": "Investopedia — Expected Shortfall (CVaR)",
+        "url": "https://www.investopedia.com/terms/c/conditional_value_at_risk.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bionic Turtle — Coherent Risk Measures",
+        "url": "https://www.youtube.com/watch?v=LQRTdYJkjnM"
+      },
+      {
+        "title": "MIT OpenCourseWare — Risk Measures and Portfolio Theory",
+        "url": "https://www.youtube.com/watch?v=TnS8kI7jSXw"
+      }
+    ]
+  },
+  "risk/extreme-value-theory": {
+    "websites": [
+      {
+        "title": "Wikipedia — Extreme Value Theory",
+        "url": "https://en.wikipedia.org/wiki/Extreme_value_theory"
+      },
+      {
+        "title": "Investopedia — Tail Risk",
+        "url": "https://www.investopedia.com/terms/t/tailrisk.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bionic Turtle — Extreme Value Theory for Risk Management",
+        "url": "https://www.youtube.com/watch?v=JF1_UiKFJMs"
+      },
+      {
+        "title": "MIT OpenCourseWare — Extreme Value Theory",
+        "url": "https://www.youtube.com/watch?v=HCgunMYe5kI"
+      }
+    ]
+  },
   "risk/model-limitations": {
     "websites": [
       {
@@ -1055,6 +1143,72 @@
       }
     ]
   },
+  "stochastic-processes/diffusion-coefficient": {
+    "websites": [
+      {
+        "title": "Wikipedia — Diffusion Process",
+        "url": "https://en.wikipedia.org/wiki/Diffusion_process"
+      },
+      {
+        "title": "Wikipedia — Itô Diffusion",
+        "url": "https://en.wikipedia.org/wiki/It%C3%B4_diffusion"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Drift and Diffusion",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      },
+      {
+        "title": "Steve Brunton — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=qdbkvD4N-us"
+      }
+    ]
+  },
+  "stochastic-processes/drift-coefficient": {
+    "websites": [
+      {
+        "title": "Wikipedia — Stochastic Differential Equation",
+        "url": "https://en.wikipedia.org/wiki/Stochastic_differential_equation"
+      },
+      {
+        "title": "Wikipedia — Girsanov Theorem",
+        "url": "https://en.wikipedia.org/wiki/Girsanov_theorem"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Drift and Diffusion",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      },
+      {
+        "title": "Steve Brunton — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=qdbkvD4N-us"
+      }
+    ]
+  },
+  "stochastic-processes/fokker-planck-equation": {
+    "websites": [
+      {
+        "title": "Wikipedia — Fokker-Planck Equation",
+        "url": "https://en.wikipedia.org/wiki/Fokker%E2%80%93Planck_equation"
+      },
+      {
+        "title": "Wikipedia — Kolmogorov Forward Equation",
+        "url": "https://en.wikipedia.org/wiki/Kolmogorov_equations"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Steve Brunton — Fokker-Planck Equation",
+        "url": "https://www.youtube.com/watch?v=8idr1WZ1A7Q"
+      },
+      {
+        "title": "MIT OpenCourseWare — Diffusion and the Fokker-Planck Equation",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
   "stochastic-processes/drift-and-volatility": {
     "websites": [
       {
@@ -1162,6 +1316,28 @@
       {
         "title": "Numberphile — The Martingale Strategy",
         "url": "https://www.youtube.com/watch?v=zTsRGQj6VT4"
+      }
+    ]
+  },
+  "stochastic-processes/mean-reversion": {
+    "websites": [
+      {
+        "title": "Wikipedia — Ornstein–Uhlenbeck Process",
+        "url": "https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process"
+      },
+      {
+        "title": "Investopedia — Mean Reversion",
+        "url": "https://www.investopedia.com/terms/m/meanreversion.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "QuantPy — Mean Reversion in Finance",
+        "url": "https://www.youtube.com/watch?v=R8DnwPNssXk"
+      },
+      {
+        "title": "MIT OpenCourseWare — Interest Rate Models",
+        "url": "https://www.youtube.com/watch?v=HCgunMYe5kI"
       }
     ]
   },

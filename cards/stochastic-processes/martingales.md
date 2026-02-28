@@ -3,6 +3,8 @@
 **Topic:** Stochastic Processes
 **Level:** A Level Mathematics
 **Tags:** martingale, conditional expectation, fair game, risk-neutral, no-arbitrage
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

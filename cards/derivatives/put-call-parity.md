@@ -3,6 +3,8 @@
 **Topic:** Derivatives
 **Level:** A Level Mathematics
 **Tags:** options, put-call parity, arbitrage, no-arbitrage
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

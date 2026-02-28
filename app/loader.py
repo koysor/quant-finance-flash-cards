@@ -1,4 +1,5 @@
 """Scan cards/**/*.md, parse metadata, and upsert to the database."""
+import datetime
 import re
 from pathlib import Path
 
@@ -11,9 +12,24 @@ CARDS_DIR = Path(__file__).parent.parent / "cards"
 TITLE_RE = re.compile(r'^#\s+(.+)$', re.MULTILINE)
 TOPIC_RE = re.compile(r'^\*\*Topic:\*\*\s*(.+)$', re.MULTILINE)
 LEVEL_RE = re.compile(r'^\*\*Level:\*\*\s*(.+)$', re.MULTILINE)
-TAGS_RE  = re.compile(r'^\*\*Tags:\*\*\s*(.+)$', re.MULTILINE)
+TAGS_RE     = re.compile(r'^\*\*Tags:\*\*\s*(.+)$', re.MULTILINE)
+CREATED_RE  = re.compile(r'^\*\*Created:\*\*\s*(.+)$', re.MULTILINE)
+AUTHOR_RE   = re.compile(r'^\*\*Author:\*\*\s*(.+)$', re.MULTILINE)
+
+# Matches display math ($$...$$) and inline math ($...$), non-greedy
+_MATH_RE = re.compile(r'(\$\$[\s\S]*?\$\$|\$(?!\s)[^$\n]+?\$)')
 
 _md = MarkdownIt().enable("table")
+
+
+def _protect_math(text: str) -> str:
+    """Double backslashes inside LaTeX math blocks so markdown-it escaping
+    does not strip them (e.g. \\! → ! or \\, → ,).  The extra backslash is
+    consumed by the Markdown renderer, leaving the original LaTeX intact for
+    KaTeX on the client side."""
+    def _escape(m: re.Match) -> str:
+        return m.group(0).replace("\\", "\\\\")
+    return _MATH_RE.sub(_escape, text)
 
 
 def _parse_card(path: Path) -> dict:
@@ -34,7 +50,14 @@ def _parse_card(path: Path) -> dict:
     # Normalise tags: strip whitespace around each tag
     tags = ",".join(t.strip() for t in tags.split(","))
 
-    html_content = _md.render(text)
+    # Optional metadata — default gracefully
+    m_created = CREATED_RE.search(text)
+    created_date = m_created.group(1).strip() if m_created else datetime.date.today().isoformat()
+
+    m_author = AUTHOR_RE.search(text)
+    author = m_author.group(1).strip() if m_author else "Unknown"
+
+    html_content = _md.render(_protect_math(text))
 
     return {
         "id":           card_id,
@@ -42,6 +65,8 @@ def _parse_card(path: Path) -> dict:
         "topic":        topic,
         "level":        level,
         "tags":         tags,
+        "created_date": created_date,
+        "author":       author,
         "html_content": html_content,
         "file_mtime":   path.stat().st_mtime,
     }

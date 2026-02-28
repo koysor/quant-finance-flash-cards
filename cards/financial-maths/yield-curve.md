@@ -3,6 +3,8 @@
 **Topic:** Financial Mathematics
 **Level:** A Level Mathematics
 **Tags:** yield curve, interest rates, term structure, bonds, discounting
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

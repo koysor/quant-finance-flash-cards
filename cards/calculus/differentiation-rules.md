@@ -3,6 +3,8 @@
 **Topic:** Calculus
 **Level:** A Level Mathematics
 **Tags:** calculus, differentiation, derivatives
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

@@ -3,6 +3,8 @@
 **Topic:** Risk
 **Level:** A Level Mathematics
 **Tags:** risk, VaR, quantile, loss distribution
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

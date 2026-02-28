@@ -3,6 +3,8 @@
 **Topic:** Probability
 **Level:** A Level Mathematics
 **Tags:** lognormal, distributions, asset prices, returns, probability
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

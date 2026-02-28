@@ -3,6 +3,8 @@
 **Topic:** Derivatives
 **Level:** A Level Mathematics
 **Tags:** delta hedging, delta-neutral, Greeks, replication, options
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

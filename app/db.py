@@ -14,6 +14,8 @@ CREATE TABLE IF NOT EXISTS cards (
     level        TEXT NOT NULL,
     tags         TEXT NOT NULL,
     html_content TEXT NOT NULL,
+    created_date TEXT NOT NULL DEFAULT '',
+    author       TEXT NOT NULL DEFAULT '',
     file_mtime   REAL NOT NULL
 );
 
@@ -46,6 +48,12 @@ def init_db() -> None:
             conn.execute("ALTER TABLE edges ADD COLUMN description TEXT NOT NULL DEFAULT ''")
         except sqlite3.OperationalError:
             pass  # column already exists
+        # Migrate existing databases that pre-date created_date/author columns
+        for col in ("created_date TEXT NOT NULL DEFAULT ''", "author TEXT NOT NULL DEFAULT ''"):
+            try:
+                conn.execute(f"ALTER TABLE cards ADD COLUMN {col}")
+            except sqlite3.OperationalError:
+                pass  # column already exists
 
 
 # ---------------------------------------------------------------------------
@@ -54,14 +62,16 @@ def init_db() -> None:
 
 def upsert_card(card: dict) -> None:
     sql = """
-    INSERT INTO cards (id, name, topic, level, tags, html_content, file_mtime)
-    VALUES (:id, :name, :topic, :level, :tags, :html_content, :file_mtime)
+    INSERT INTO cards (id, name, topic, level, tags, html_content, created_date, author, file_mtime)
+    VALUES (:id, :name, :topic, :level, :tags, :html_content, :created_date, :author, :file_mtime)
     ON CONFLICT(id) DO UPDATE SET
         name         = excluded.name,
         topic        = excluded.topic,
         level        = excluded.level,
         tags         = excluded.tags,
         html_content = excluded.html_content,
+        created_date = excluded.created_date,
+        author       = excluded.author,
         file_mtime   = excluded.file_mtime
     """
     with get_db() as conn:

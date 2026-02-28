@@ -616,5 +616,197 @@
     "target": "stochastic-processes/drift-and-volatility",
     "label": "parameterised by",
     "description": "The SDE contains exactly two parameters — drift μ and volatility σ — which fully specify the probabilistic behaviour of the asset price."
+  },
+  {
+    "source": "risk/extreme-value-theory",
+    "target": "risk/value-at-risk",
+    "label": "improves tail of",
+    "description": "EVT provides a statistically rigorous estimate of VaR at very high confidence levels (99.9%) by modelling the tail directly, rather than relying on the normal approximation that systematically underestimates extreme losses."
+  },
+  {
+    "source": "risk/extreme-value-theory",
+    "target": "risk/model-limitations",
+    "label": "addresses",
+    "description": "EVT directly confronts the fat-tail limitation of Gaussian risk models — by fitting only the extreme observations, it captures the heavy tails that the normal distribution misses."
+  },
+  {
+    "source": "risk/extreme-value-theory",
+    "target": "probability/normal-distribution",
+    "label": "extends beyond",
+    "description": "The normal distribution's exponentially decaying tails correspond to the Gumbel case (ξ = 0) of the GEV family — financial returns typically exhibit Fréchet-type tails (ξ > 0), which are heavier than the normal allows."
+  },
+  {
+    "source": "statistics/statistical-properties-of-returns",
+    "target": "risk/extreme-value-theory",
+    "label": "motivates",
+    "description": "The empirically observed fat tails, excess kurtosis, and occasional extreme moves in financial returns are precisely the phenomena that EVT is designed to model — stylised facts of returns provide the motivation for using EVT."
+  },
+  {
+    "source": "risk/coherent-risk-measure",
+    "target": "risk/value-at-risk",
+    "label": "critiques",
+    "description": "VaR violates the subadditivity axiom of coherence — merging portfolios can increase VaR, penalising diversification — which is the central motivation for replacing VaR with coherent alternatives like Expected Shortfall."
+  },
+  {
+    "source": "risk/coherent-risk-measure",
+    "target": "risk/extreme-value-theory",
+    "label": "complements",
+    "description": "EVT models the shape of the tail while coherence axioms govern how a risk measure aggregates tail losses — combining EVT-fitted tails with a coherent measure like Expected Shortfall produces robust extreme-risk estimates."
+  },
+  {
+    "source": "risk/coherent-risk-measure",
+    "target": "risk/model-limitations",
+    "label": "formalises",
+    "description": "The coherence axioms formalise the shortcomings of naive risk measures — subadditivity failure in VaR is a specific, mathematically precise model limitation that coherent measures are designed to eliminate."
+  },
+  {
+    "source": "risk/coherent-risk-measure",
+    "target": "probability/cumulative-distribution-function",
+    "label": "defined via",
+    "description": "Both VaR and Expected Shortfall are defined as functionals of the loss CDF — VaR is the quantile (inverse CDF) and ES is the average of quantiles beyond the VaR level, so the CDF is the mathematical foundation for evaluating coherence."
+  },
+  {
+    "source": "financial-maths/modern-portfolio-theory",
+    "target": "statistics/correlation",
+    "label": "depends on",
+    "description": "Portfolio variance is determined by the pairwise correlations between assets — the off-diagonal terms of the covariance matrix drive the diversification benefit that is the central result of MPT."
+  },
+  {
+    "source": "financial-maths/modern-portfolio-theory",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "minimises",
+    "description": "MPT defines risk as portfolio variance and seeks the weight vector that minimises it for a given target return — variance is the objective function at the heart of mean-variance optimisation."
+  },
+  {
+    "source": "financial-maths/modern-portfolio-theory",
+    "target": "linear-algebra/matrix-multiplication",
+    "label": "computed via",
+    "description": "Portfolio variance is the quadratic form w'Σw and expected return is the dot product w'μ — both are matrix multiplications, making linear algebra the computational engine of portfolio optimisation."
+  },
+  {
+    "source": "financial-maths/modern-portfolio-theory",
+    "target": "risk/value-at-risk",
+    "label": "feeds into",
+    "description": "The portfolio variance from MPT is the key input to parametric VaR — once mean-variance weights are chosen, the portfolio standard deviation is plugged directly into the VaR formula to quantify downside risk."
+  },
+  {
+    "source": "stochastic-processes/diffusion-coefficient",
+    "target": "derivatives/black-scholes-equation",
+    "label": "appears in",
+    "description": "The diffusion coefficient σS enters the Black-Scholes PDE as the ½σ²S² term multiplying the second derivative — it is the source of the Gamma risk that delta hedging must manage."
+  },
+  {
+    "source": "stochastic-processes/diffusion-coefficient",
+    "target": "stochastic-processes/drift-and-volatility",
+    "label": "scales by",
+    "description": "The diffusion coefficient σS combines the volatility parameter σ with the current price S — volatility sets the percentage scale of randomness, while the diffusion coefficient converts it into absolute price units."
+  },
+  {
+    "source": "stochastic-processes/stochastic-differential-equation",
+    "target": "stochastic-processes/diffusion-coefficient",
+    "label": "decomposed into",
+    "description": "The SDE dS = μS dt + σS dW splits into a drift term and a diffusion term — the diffusion coefficient b(S) = σS is the function that controls the size of the random component."
+  },
+  {
+    "source": "stochastic-processes/diffusion-coefficient",
+    "target": "stochastic-processes/brownian-motion",
+    "label": "multiplies",
+    "description": "The diffusion coefficient scales the Brownian increment dW — without it, the raw Wiener process has unit variance per unit time, so the diffusion coefficient is what calibrates the noise to match observed market volatility."
+  },
+  {
+    "source": "stochastic-processes/stochastic-differential-equation",
+    "target": "stochastic-processes/drift-coefficient",
+    "label": "decomposed into",
+    "description": "The SDE dS = μS dt + σS dW splits into a drift term and a diffusion term — the drift coefficient a(S) = μS is the function that controls the expected rate of change."
+  },
+  {
+    "source": "stochastic-processes/drift-coefficient",
+    "target": "stochastic-processes/drift-and-volatility",
+    "label": "formalises",
+    "description": "The drift coefficient a(S) = μS is the continuous-time formalisation of the drift parameter μ — it converts the annualised expected return into an instantaneous rate of price change proportional to the current level."
+  },
+  {
+    "source": "stochastic-processes/drift-coefficient",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "replaced under",
+    "description": "Under the risk-neutral measure the drift coefficient changes from μS to rS — this replacement is the mathematical content of risk-neutral pricing and the reason option prices do not depend on expected returns."
+  },
+  {
+    "source": "stochastic-processes/drift-coefficient",
+    "target": "stochastic-processes/diffusion-coefficient",
+    "label": "paired with",
+    "description": "The drift and diffusion coefficients are the two components of any SDE — the drift controls the deterministic trend while the diffusion controls the random fluctuations, and together they fully specify the process."
+  },
+  {
+    "source": "stochastic-processes/fokker-planck-equation",
+    "target": "stochastic-processes/diffusion-coefficient",
+    "label": "driven by",
+    "description": "The diffusion coefficient b(X) enters the Fokker-Planck equation as the second-order term ½∂²(b²p)/∂x² — it determines how quickly the probability density spreads out over time."
+  },
+  {
+    "source": "stochastic-processes/fokker-planck-equation",
+    "target": "stochastic-processes/drift-coefficient",
+    "label": "driven by",
+    "description": "The drift coefficient a(X) enters the Fokker-Planck equation as the first-order term −∂(ap)/∂x — it determines the direction in which the probability density shifts over time."
+  },
+  {
+    "source": "stochastic-processes/fokker-planck-equation",
+    "target": "derivatives/black-scholes-equation",
+    "label": "dual of",
+    "description": "The Fokker-Planck equation and the Black-Scholes PDE are adjoint operators — Fokker-Planck evolves the density forward in time while Black-Scholes evolves the option price backward, both governed by the same drift and diffusion."
+  },
+  {
+    "source": "stochastic-processes/fokker-planck-equation",
+    "target": "probability/lognormal-distribution",
+    "label": "derives",
+    "description": "Solving the Fokker-Planck equation for GBM confirms that the terminal stock price is lognormally distributed — the equation provides the rigorous proof of the distributional assumption underlying Black-Scholes."
+  },
+  {
+    "source": "derivatives/volatility-smile",
+    "target": "derivatives/implied-volatility",
+    "label": "maps across strikes",
+    "description": "The volatility smile is the graph of implied volatility as a function of strike price — each point on the smile is an implied volatility extracted from a single option's market price via the Black-Scholes formula."
+  },
+  {
+    "source": "derivatives/volatility-smile",
+    "target": "derivatives/black-scholes-equation",
+    "label": "exposes limitation of",
+    "description": "The existence of the smile directly contradicts Black-Scholes' constant-volatility assumption — if the model were exact, implied volatility would be flat across all strikes."
+  },
+  {
+    "source": "derivatives/volatility-smile",
+    "target": "derivatives/heston-model",
+    "label": "reproduced by",
+    "description": "The Heston model's stochastic volatility and correlation between returns and variance generate an implied volatility smile from first principles, providing a theoretically grounded alternative to strike-by-strike fitting."
+  },
+  {
+    "source": "derivatives/volatility-smile",
+    "target": "risk/model-limitations",
+    "label": "evidences",
+    "description": "The volatility smile is empirical proof that real return distributions have fatter tails and asymmetry compared to the lognormal — it is one of the most visible model limitations in practice."
+  },
+  {
+    "source": "stochastic-processes/mean-reversion",
+    "target": "stochastic-processes/brownian-motion",
+    "label": "modifies",
+    "description": "Mean reversion adds a restoring drift term κ(θ − X) to the Brownian motion framework — without it, Brownian motion drifts without bound, which is unsuitable for quantities like interest rates."
+  },
+  {
+    "source": "stochastic-processes/mean-reversion",
+    "target": "stochastic-processes/drift-coefficient",
+    "label": "state-dependent",
+    "description": "In the Ornstein-Uhlenbeck process the drift coefficient is κ(θ − X), which depends on the current state — when X is above θ the drift is negative, pulling the process back down, and vice versa."
+  },
+  {
+    "source": "stochastic-processes/mean-reversion",
+    "target": "financial-maths/yield-curve",
+    "label": "models rates for",
+    "description": "Mean-reverting models like Vasicek and Hull-White are the standard tools for modelling the short rate — the mean reversion ensures that interest rates stay within realistic bounds and the yield curve can be fitted exactly."
+  },
+  {
+    "source": "derivatives/heston-model",
+    "target": "stochastic-processes/mean-reversion",
+    "label": "uses",
+    "description": "The Heston model's variance process is a mean-reverting square-root diffusion (CIR process) — the speed of mean reversion κ and long-run variance θ control how quickly volatility returns to its equilibrium after a shock."
   }
 ]

@@ -37,6 +37,7 @@
       {% for tag in card['tags'].split(',') %}
         <a class="tag" href="{{ url_for('main.tag_page', tag=tag.strip()) }}">{{ tag.strip() }}</a>
       {% endfor %}
+      <span class="card-info">Added {{ card['created_date'] }} by {{ card['author'] }}</span>
     </div>
 
     {% if incoming %}

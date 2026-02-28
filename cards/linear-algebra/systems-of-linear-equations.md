@@ -3,6 +3,8 @@
 **Topic:** Linear Algebra
 **Level:** A Level Mathematics
 **Tags:** linear algebra, systems, simultaneous equations, calibration, replication
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

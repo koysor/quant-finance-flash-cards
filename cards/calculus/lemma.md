@@ -3,6 +3,8 @@
 **Topic:** Calculus
 **Level:** A Level Mathematics
 **Tags:** lemma, proof, theorem, mathematical reasoning, logic
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 

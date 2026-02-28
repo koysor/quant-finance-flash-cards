@@ -597,6 +597,12 @@ a.tag:hover {
   align-items: center; margin-bottom: 1.25rem;
 }
 
+.card-info {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-left: auto;
+}
+
 .card-content {
   background: var(--surface);
   border: 1px solid var(--border);

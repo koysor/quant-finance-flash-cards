@@ -3,6 +3,8 @@
 **Topic:** Linear Algebra
 **Level:** A Level Mathematics
 **Tags:** linear algebra, eigenvalues, eigenvectors, PCA, covariance matrix, risk
+**Created:** 2026-02-28
+**Author:** Unknown
 
 ---
 
