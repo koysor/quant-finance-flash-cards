@@ -2,7 +2,7 @@
 import json
 import re
 
-from flask import Blueprint, abort, current_app, redirect, render_template, request, session, url_for
+from flask import Blueprint, abort, current_app, jsonify, redirect, render_template, request, session, url_for
 
 from app.db import (
     delete_edge,
@@ -11,6 +11,7 @@ from app.db import (
     get_all_cards_with_content,
     get_all_edges,
     get_card,
+    get_cards_by_date_range,
     get_cards_by_tag,
     get_incoming,
     get_outgoing,
@@ -106,7 +107,19 @@ def random_card():
 
 @bp.get("/recent")
 def recent():
-    cards = get_all_cards_by_date()
+    start = request.args.get("start", "").strip() or None
+    end = request.args.get("end", "").strip() or None
+    is_json = (
+        request.args.get("format") == "json" or
+        request.headers.get("Accept") == "application/json"
+    )
+
+    # Use ASC order by default as requested (earliest record first)
+    cards = get_cards_by_date_range(start_date=start, end_date=end, order="ASC")
+
+    if is_json:
+        return jsonify([dict(c) for c in cards])
+
     grouped: dict[str, list] = {}
     for card in cards:
         date = card["created_date"] or "Unknown"

@@ -97,6 +97,50 @@
       }
     ]
   },
+  "derivatives/backward-induction": {
+    "websites": [
+      {
+        "title": "Wikipedia — Binomial Options Pricing Model",
+        "url": "https://en.wikipedia.org/wiki/Binomial_options_pricing_model"
+      },
+      {
+        "title": "Investopedia — Binomial Option Pricing Model",
+        "url": "https://www.investopedia.com/terms/b/binomialoptionpricing.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Binomial Option Pricing",
+        "url": "https://www.youtube.com/watch?v=88kFSJPBGSA"
+      },
+      {
+        "title": "Khan Academy — Binomial Trees for Option Pricing",
+        "url": "https://www.youtube.com/watch?v=VJgHkAqohbU"
+      }
+    ]
+  },
+  "derivatives/binomial-option-pricing": {
+    "websites": [
+      {
+        "title": "Investopedia — Binomial Option Pricing Model",
+        "url": "https://www.investopedia.com/terms/b/binomialoptionpricing.asp"
+      },
+      {
+        "title": "Wikipedia — Binomial Options Pricing Model",
+        "url": "https://en.wikipedia.org/wiki/Binomial_options_pricing_model"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Binomial Option Pricing",
+        "url": "https://www.youtube.com/watch?v=O8qXoV1jEiA"
+      },
+      {
+        "title": "MIT OpenCourseWare — Binomial Model (Andrew Lo)",
+        "url": "https://www.youtube.com/watch?v=RuPMsK0mQC8"
+      }
+    ]
+  },
   "derivatives/black-scholes-equation": {
     "websites": [
       {
@@ -112,6 +156,46 @@
       {
         "title": "Khan Academy — Black-Scholes Formula",
         "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
+      }
+    ]
+  },
+  "derivatives/complete-markets": {
+    "websites": [
+      {
+        "title": "Wikipedia — Complete Market",
+        "url": "https://en.wikipedia.org/wiki/Complete_market"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Complete Markets and Arrow-Debreu",
+        "url": "https://www.youtube.com/watch?v=TPCGo4bEhU4"
+      },
+      {
+        "title": "Patrick Boyle — Risk Neutral Pricing and Complete Markets",
+        "url": "https://www.youtube.com/watch?v=2V2cCKRiFoY"
+      }
+    ]
+  },
+  "derivatives/continuous-time-limit": {
+    "websites": [
+      {
+        "title": "Wikipedia — Binomial Options Pricing Model",
+        "url": "https://en.wikipedia.org/wiki/Binomial_options_pricing_model"
+      },
+      {
+        "title": "Investopedia — Binomial Option Pricing Model",
+        "url": "https://www.investopedia.com/terms/b/binomialoptionpricing.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Binomial Model and Black-Scholes",
+        "url": "https://www.youtube.com/watch?v=HdBhvCrgNX0"
+      },
+      {
+        "title": "Khan Academy — Binomial Option Pricing",
+        "url": "https://www.youtube.com/watch?v=O86sFeHCIHE"
       }
     ]
   },
@@ -192,6 +276,28 @@
       {
         "title": "Khan Academy — Implied Volatility",
         "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
+      }
+    ]
+  },
+  "derivatives/no-arbitrage-principle": {
+    "websites": [
+      {
+        "title": "Investopedia — Arbitrage",
+        "url": "https://www.investopedia.com/terms/a/arbitrage.asp"
+      },
+      {
+        "title": "Wikipedia — Fundamental Theorem of Asset Pricing",
+        "url": "https://en.wikipedia.org/wiki/Fundamental_theorem_of_asset_pricing"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Arbitrage Basics",
+        "url": "https://www.youtube.com/watch?v=AuCH7fHZsZ4"
+      },
+      {
+        "title": "Patrick Boyle — No-Arbitrage and Derivative Pricing",
+        "url": "https://www.youtube.com/watch?v=Q5eEgKbPOqs"
       }
     ]
   },

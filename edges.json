@@ -31,6 +31,12 @@
   },
   {
     "source": "calculus/taylor-series",
+    "target": "derivatives/continuous-time-limit",
+    "label": "applied in",
+    "description": "The continuous-time limit derivation uses a Taylor expansion of the option value in powers of delta-t to extract the Black-Scholes PDE from the discrete binomial pricing formula."
+  },
+  {
+    "source": "calculus/taylor-series",
     "target": "stochastic-processes/itos-lemma",
     "label": "motivates",
     "description": "Itô's Lemma is the stochastic calculus equivalent of a Taylor expansion — it tells you how a function of a random process changes, using the same first- and second-derivative structure."
@@ -66,6 +72,48 @@
     "description": "Put-call parity holds exactly for European options but only as inequality bounds for American options — the early-exercise right breaks the strict equality."
   },
   {
+    "source": "derivatives/backward-induction",
+    "target": "derivatives/american-option-pricing",
+    "label": "extended by",
+    "description": "American option pricing uses backward induction with an additional early-exercise check at each node — the algorithm compares the continuation value against the immediate exercise payoff and keeps the maximum."
+  },
+  {
+    "source": "derivatives/backward-induction",
+    "target": "derivatives/delta-hedging",
+    "label": "computes",
+    "description": "At each node of the backward pass, the hedge ratio (delta) is computed as the ratio of the change in option value to the change in stock price across the two successor nodes, giving the exact number of shares needed to replicate the option."
+  },
+  {
+    "source": "derivatives/backward-induction",
+    "target": "derivatives/european-option-pricing",
+    "label": "prices",
+    "description": "Backward induction on a binomial tree prices European options by discounting terminal payoffs step-by-step to the present — as the number of steps grows, the price converges to the Black-Scholes closed form."
+  },
+  {
+    "source": "derivatives/backward-induction",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "implements",
+    "description": "Each backward step applies the one-period risk-neutral pricing formula — discounting the probability-weighted average of successor values at the risk-free rate — making backward induction a discrete implementation of risk-neutral valuation."
+  },
+  {
+    "source": "derivatives/binomial-option-pricing",
+    "target": "derivatives/black-scholes-equation",
+    "label": "converges to",
+    "description": "As the number of time steps N tends to infinity, the binomial tree converges to the continuous-time Black-Scholes model — this is the Cox-Ross-Rubinstein convergence result."
+  },
+  {
+    "source": "derivatives/binomial-option-pricing",
+    "target": "derivatives/delta-hedging",
+    "label": "derives",
+    "description": "The hedge ratio (delta) emerges naturally within the binomial framework as the ratio of the spread in option values to the spread in stock prices at each node."
+  },
+  {
+    "source": "derivatives/binomial-option-pricing",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "demonstrates",
+    "description": "The binomial model is the simplest demonstration of risk-neutral pricing — the real-world probability cancels out and only the risk-neutral probability p-prime enters the pricing formula."
+  },
+  {
     "source": "derivatives/black-scholes-equation",
     "target": "derivatives/delta-hedging",
     "label": "enables",
@@ -90,6 +138,30 @@
     "description": "The Black-Scholes formula gives closed-form expressions for Delta, Gamma, Vega, Theta and Rho — the Greeks are simply partial derivatives of the Black-Scholes price with respect to each input."
   },
   {
+    "source": "derivatives/complete-markets",
+    "target": "derivatives/black-scholes-equation",
+    "label": "assumed by",
+    "description": "The Black-Scholes equation is derived under the assumption of a complete market — continuous trading in the stock and bond is sufficient to replicate any European payoff, yielding a unique price."
+  },
+  {
+    "source": "derivatives/complete-markets",
+    "target": "derivatives/delta-hedging",
+    "label": "enables",
+    "description": "Market completeness is the theoretical guarantee that delta hedging works: because every contingent claim can be replicated, the hedging portfolio perfectly offsets the option exposure."
+  },
+  {
+    "source": "derivatives/complete-markets",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "guarantees uniqueness of",
+    "description": "In a complete market the risk-neutral measure is unique — completeness plus no-arbitrage together ensure there is exactly one pricing measure, which is the second Fundamental Theorem of Asset Pricing."
+  },
+  {
+    "source": "derivatives/continuous-time-limit",
+    "target": "derivatives/black-scholes-equation",
+    "label": "derives",
+    "description": "Taking the continuous-time limit of the binomial model produces the Black-Scholes PDE — this card shows how the discrete one-step formula converges to the continuous PDE as the time step shrinks to zero."
+  },
+  {
     "source": "derivatives/early-exercise-decision",
     "target": "derivatives/option-greeks",
     "label": "informed by",
@@ -112,6 +184,12 @@
     "target": "derivatives/black-scholes-equation",
     "label": "extends",
     "description": "The Heston model generalises Black-Scholes by replacing the constant-volatility assumption with a stochastic variance process — Black-Scholes is recovered as the special case where the vol of vol is zero."
+  },
+  {
+    "source": "derivatives/heston-model",
+    "target": "derivatives/complete-markets",
+    "label": "violates",
+    "description": "The Heston model introduces stochastic volatility as a second source of randomness that cannot be hedged with the stock alone, making the market incomplete and requiring an additional instrument or a market price of volatility risk."
   },
   {
     "source": "derivatives/heston-model",
@@ -144,6 +222,24 @@
     "description": "The volatility smile and skew observed in implied volatility across strikes expose the failure of Black-Scholes' constant-volatility assumption — the market prices in fat tails and jump risk that the model ignores."
   },
   {
+    "source": "derivatives/no-arbitrage-principle",
+    "target": "derivatives/delta-hedging",
+    "label": "justified by",
+    "description": "Delta hedging constructs the riskless portfolio whose existence the no-arbitrage principle requires — without a perfect hedge, the argument that the portfolio must earn exactly r collapses."
+  },
+  {
+    "source": "derivatives/no-arbitrage-principle",
+    "target": "derivatives/put-call-parity",
+    "label": "implies",
+    "description": "Put-call parity is a direct consequence of no-arbitrage: if the relationship between a call, a put, the stock, and a bond were violated, a trader could construct a risk-free profit from the mispricing."
+  },
+  {
+    "source": "derivatives/no-arbitrage-principle",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "foundation of",
+    "description": "The no-arbitrage condition guarantees the existence of a risk-neutral measure under which all discounted asset prices are martingales — this is the First Fundamental Theorem of Asset Pricing."
+  },
+  {
     "source": "derivatives/option-greeks",
     "target": "calculus/taylor-series",
     "label": "derived via",
@@ -166,6 +262,12 @@
     "target": "derivatives/black-scholes-equation",
     "label": "framework for",
     "description": "The Black-Scholes price equals the discounted expected payoff under the risk-neutral measure — risk-neutral pricing is the theoretical foundation that justifies the formula."
+  },
+  {
+    "source": "derivatives/risk-neutral-pricing",
+    "target": "derivatives/continuous-time-limit",
+    "label": "foundation of",
+    "description": "Risk-neutral pricing provides the one-step discounted expectation formula that is the starting point for the continuous-time limit derivation; the risk-neutral probability is what causes the drift to cancel."
   },
   {
     "source": "derivatives/volatility-smile",
@@ -334,6 +436,12 @@
     "target": "derivatives/american-option-pricing",
     "label": "prices via",
     "description": "The binomial tree model prices American options by working backwards through a recombining tree — at each node the number of up-moves follows a binomial distribution, and early exercise is checked at every step."
+  },
+  {
+    "source": "probability/binomial-distribution",
+    "target": "derivatives/binomial-option-pricing",
+    "label": "applied in",
+    "description": "The terminal stock price distribution in an N-step recombining binomial tree follows a binomial distribution with parameters N and p-prime, connecting discrete probability theory directly to option pricing."
   },
   {
     "source": "probability/binomial-distribution",
@@ -898,6 +1006,12 @@
     "target": "derivatives/black-scholes-equation",
     "label": "models stock price for",
     "description": "Black-Scholes assumes the stock price follows GBM — this single assumption leads directly to the lognormal distribution of returns and the closed-form pricing formula."
+  },
+  {
+    "source": "stochastic-processes/geometric-brownian-motion",
+    "target": "derivatives/continuous-time-limit",
+    "label": "emerges from",
+    "description": "Geometric Brownian Motion is the continuous-time stock-price model that the binomial tree converges to in the limit — the CRR up/down parameters are chosen precisely so that this convergence holds."
   },
   {
     "source": "stochastic-processes/geometric-brownian-motion",

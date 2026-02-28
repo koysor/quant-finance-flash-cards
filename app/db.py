@@ -132,6 +132,28 @@ def get_all_cards_by_date() -> list[sqlite3.Row]:
         ).fetchall()
 
 
+def get_cards_by_date_range(
+    start_date: str | None = None,
+    end_date: str | None = None,
+    order: str = "ASC"
+) -> list[sqlite3.Row]:
+    """Return cards within a date range (inclusive), ordered by date."""
+    query = "SELECT id, name, topic, tags, created_date, author FROM cards WHERE 1=1"
+    params = []
+
+    if start_date:
+        query += " AND created_date >= ?"
+        params.append(start_date)
+    if end_date:
+        query += " AND created_date <= ?"
+        params.append(end_date)
+
+    query += f" ORDER BY created_date {order}, name ASC"
+
+    with get_db() as conn:
+        return conn.execute(query, params).fetchall()
+
+
 def get_random_card() -> sqlite3.Row | None:
     with get_db() as conn:
         return conn.execute(

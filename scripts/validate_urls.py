@@ -19,10 +19,9 @@ import aiohttp
 RESOURCES_PATH = Path(__file__).resolve().parent.parent / "resources.json"
 CONCURRENCY = 20
 TIMEOUT = aiohttp.ClientTimeout(total=20)
-# Use a more realistic browser User-Agent to avoid being blocked by YouTube/others
 USER_AGENT = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+    "Mozilla/5.0 (compatible; URLValidator/1.0; "
+    "+https://github.com/koysor/quant-finance-flash-cards)"
 )
 
 
