@@ -1,7 +1,6 @@
 # Coherent Risk Measure
 
 **Topic:** Risk
-**Level:** A Level Mathematics
 **Tags:** risk, coherent, subadditivity, expected shortfall, risk measure, regulation
 **Created:** 2026-02-28
 **Author:** Claude Opus 4.6

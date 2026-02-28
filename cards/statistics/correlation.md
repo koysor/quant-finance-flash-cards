@@ -1,7 +1,6 @@
 # Correlation
 
 **Topic:** Statistics
-**Level:** A Level Mathematics
 **Tags:** statistics, correlation, covariance, portfolio theory
 **Created:** 2026-02-28
 **Author:** Unknown

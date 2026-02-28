@@ -1,7 +1,6 @@
 # Growth vs Volatility Timescales
 
 **Topic:** Stochastic Processes
-**Level:** A Level Mathematics
 **Tags:** drift, volatility, timescales, scaling, noise, trend
 **Created:** 2026-02-28
 **Author:** Unknown

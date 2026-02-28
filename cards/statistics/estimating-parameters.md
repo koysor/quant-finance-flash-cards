@@ -1,7 +1,6 @@
 # Estimating Parameters from Data
 
 **Topic:** Statistics
-**Level:** A Level Mathematics
 **Tags:** estimation, annualisation, drift, volatility, calibration
 **Created:** 2026-02-28
 **Author:** Unknown

@@ -1,7 +1,6 @@
 # Geometric Brownian Motion
 
 **Topic:** Stochastic Processes
-**Level:** A Level Mathematics
 **Tags:** GBM, stochastic processes, asset prices, lognormal, Itô's lemma
 **Created:** 2026-02-28
 **Author:** Unknown

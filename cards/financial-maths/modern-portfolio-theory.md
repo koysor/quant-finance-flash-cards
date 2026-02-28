@@ -1,7 +1,6 @@
 # Modern Portfolio Theory
 
 **Topic:** Financial Mathematics
-**Level:** A Level Mathematics
 **Tags:** portfolio theory, diversification, efficient frontier, mean-variance, optimisation
 **Created:** 2026-02-28
 **Author:** Claude Opus 4.6

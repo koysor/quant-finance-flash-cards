@@ -1,7 +1,6 @@
 # Brownian Motion
 
 **Topic:** Stochastic Processes
-**Level:** A Level Mathematics
 **Tags:** stochastic processes, Brownian motion, Wiener process, random walk
 **Created:** 2026-02-28
 **Author:** Unknown

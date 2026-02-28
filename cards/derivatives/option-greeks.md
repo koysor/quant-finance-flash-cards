@@ -1,7 +1,6 @@
 # Option Greeks
 
 **Topic:** Derivatives
-**Level:** A Level Mathematics
 **Tags:** options, Greeks, delta, gamma, theta, vega, rho
 **Created:** 2026-02-28
 **Author:** Unknown

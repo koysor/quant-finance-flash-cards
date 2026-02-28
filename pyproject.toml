@@ -1,7 +1,7 @@
 [project]
 name = "quant-finance-flash-cards"
 version = "0.1.0"
-description = "Bite-sized revision flash cards for Quantitative Finance exams and interviews, pitched at A Level mathematics standard."
+description = "Bite-sized revision flash cards for Quantitative Finance exams and interviews, designed for accessibility and clarity."
 requires-python = ">=3.12"
 dependencies = [
     "flask>=3.1.3",

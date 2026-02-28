@@ -1,7 +1,6 @@
 # Scaling of Mean Returns with Time
 
 **Topic:** Statistics
-**Level:** A Level Mathematics
 **Tags:** mean, drift, scaling, time, annualisation
 **Created:** 2026-02-28
 **Author:** Unknown

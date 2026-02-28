@@ -329,28 +329,6 @@
       }
     ]
   },
-  "financial-maths/return-on-investment": {
-    "websites": [
-      {
-        "title": "Investopedia — Return on Investment (ROI)",
-        "url": "https://www.investopedia.com/terms/r/returnoninvestment.asp"
-      },
-      {
-        "title": "Corporate Finance Institute — Return on Investment",
-        "url": "https://corporatefinanceinstitute.com/resources/financial-modeling/return-on-investment-roi/"
-      }
-    ],
-    "videos": [
-      {
-        "title": "Khan Academy — Return on Investment",
-        "url": "https://www.youtube.com/watch?v=Am8ydVVpjQk"
-      },
-      {
-        "title": "The Organic Chemistry Tutor — ROI Calculations",
-        "url": "https://www.youtube.com/watch?v=aM-URjMeFuY"
-      }
-    ]
-  },
   "financial-maths/modern-portfolio-theory": {
     "websites": [
       {
@@ -370,6 +348,28 @@
       {
         "title": "Ben Felix — The Portfolio That Works",
         "url": "https://www.youtube.com/watch?v=NXo3NBjIt8E"
+      }
+    ]
+  },
+  "financial-maths/return-on-investment": {
+    "websites": [
+      {
+        "title": "Investopedia — Return on Investment (ROI)",
+        "url": "https://www.investopedia.com/terms/r/returnoninvestment.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Return on Investment",
+        "url": "https://corporatefinanceinstitute.com/resources/financial-modeling/return-on-investment-roi/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Return on Investment",
+        "url": "https://www.youtube.com/watch?v=Am8ydVVpjQk"
+      },
+      {
+        "title": "The Organic Chemistry Tutor — ROI Calculations",
+        "url": "https://www.youtube.com/watch?v=aM-URjMeFuY"
       }
     ]
   },
@@ -703,6 +703,24 @@
       }
     ]
   },
+  "probability/fat-tailed-distributions": {
+    "websites": [
+      {
+        "title": "Wikipedia — Heavy-Tailed Distribution",
+        "url": "https://en.wikipedia.org/wiki/Heavy-tailed_distribution"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Kurtosis and Fat Tails",
+        "url": "https://www.youtube.com/watch?v=ISaVvSO_3Sg"
+      },
+      {
+        "title": "Khan Academy — Kurtosis",
+        "url": "https://www.youtube.com/watch?v=0GJnA-ABXQ8"
+      }
+    ]
+  },
   "probability/lognormal-distribution": {
     "websites": [
       {
@@ -722,6 +740,24 @@
       {
         "title": "Khan Academy — Lognormal Distribution",
         "url": "https://www.youtube.com/watch?v=1ZfDHkBhMKM"
+      }
+    ]
+  },
+  "probability/moment-generating-function": {
+    "websites": [
+      {
+        "title": "Wikipedia — Moment-Generating Function",
+        "url": "https://en.wikipedia.org/wiki/Moment-generating_function"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Moment Generating Functions",
+        "url": "https://www.youtube.com/watch?v=AM-mkdbSxnA"
+      },
+      {
+        "title": "The Organic Chemistry Tutor — Moment Generating Functions",
+        "url": "https://www.youtube.com/watch?v=6cS_O1GSmHk"
       }
     ]
   },
@@ -945,6 +981,28 @@
       }
     ]
   },
+  "statistics/autocorrelation": {
+    "websites": [
+      {
+        "title": "Wikipedia — Autocorrelation",
+        "url": "https://en.wikipedia.org/wiki/Autocorrelation"
+      },
+      {
+        "title": "Investopedia — Autocorrelation",
+        "url": "https://www.investopedia.com/terms/a/autocorrelation.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Autocorrelation Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=ZjaBn93YPWo"
+      },
+      {
+        "title": "Khan Academy — Autocorrelation and Partial Autocorrelation",
+        "url": "https://www.youtube.com/watch?v=DeORzP0go5I"
+      }
+    ]
+  },
   "statistics/central-limit-theorem": {
     "websites": [
       {
@@ -1011,6 +1069,50 @@
       }
     ]
   },
+  "statistics/jarque-bera-test": {
+    "websites": [
+      {
+        "title": "Wikipedia — Jarque-Bera Test",
+        "url": "https://en.wikipedia.org/wiki/Jarque%E2%80%93Bera_test"
+      },
+      {
+        "title": "Investopedia — Kurtosis",
+        "url": "https://www.investopedia.com/terms/k/kurtosis.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Skewness and Kurtosis",
+        "url": "https://www.youtube.com/watch?v=z3XaFfMFRBg"
+      },
+      {
+        "title": "Khan Academy — Normality Tests and Skewness",
+        "url": "https://www.youtube.com/watch?v=uhxtUt_-GyM"
+      }
+    ]
+  },
+  "statistics/kurtosis": {
+    "websites": [
+      {
+        "title": "Investopedia — Kurtosis",
+        "url": "https://www.investopedia.com/terms/k/kurtosis.asp"
+      },
+      {
+        "title": "Wikipedia — Kurtosis",
+        "url": "https://en.wikipedia.org/wiki/Kurtosis"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Kurtosis",
+        "url": "https://www.youtube.com/watch?v=ISaVvSxFMHk"
+      },
+      {
+        "title": "Khan Academy — Comparing Distributions with Dot Plots",
+        "url": "https://www.youtube.com/watch?v=HMkllhBI91Y"
+      }
+    ]
+  },
   "statistics/scaling-mean-with-time": {
     "websites": [
       {
@@ -1030,6 +1132,28 @@
       {
         "title": "MIT OpenCourseWare — Random Walks and Diffusion",
         "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "statistics/skewness": {
+    "websites": [
+      {
+        "title": "Wikipedia — Skewness",
+        "url": "https://en.wikipedia.org/wiki/Skewness"
+      },
+      {
+        "title": "Investopedia — Skewness",
+        "url": "https://www.investopedia.com/terms/s/skewness.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Skewness and Kurtosis",
+        "url": "https://www.youtube.com/watch?v=XSSRrVMOqlQ"
+      },
+      {
+        "title": "Khan Academy — Mean, Median and Skew",
+        "url": "https://www.youtube.com/watch?v=GrynkZB3E7M"
       }
     ]
   },
@@ -1099,6 +1223,28 @@
       }
     ]
   },
+  "statistics/volatility-clustering": {
+    "websites": [
+      {
+        "title": "Investopedia — Volatility Clustering",
+        "url": "https://www.investopedia.com/terms/v/volatility.asp"
+      },
+      {
+        "title": "Wikipedia — Volatility Clustering",
+        "url": "https://en.wikipedia.org/wiki/Volatility_clustering"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — GARCH and Volatility Clustering",
+        "url": "https://www.youtube.com/watch?v=lMGMEfKvL7E"
+      },
+      {
+        "title": "QuantPy — Understanding Volatility Clustering",
+        "url": "https://www.youtube.com/watch?v=R8DnwPNssXk"
+      }
+    ]
+  },
   "stochastic-processes/brownian-motion": {
     "websites": [
       {
@@ -1118,6 +1264,28 @@
       {
         "title": "MIT OpenCourseWare — Brownian Motion",
         "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "stochastic-processes/diffusion-coefficient": {
+    "websites": [
+      {
+        "title": "Wikipedia — Diffusion Process",
+        "url": "https://en.wikipedia.org/wiki/Diffusion_process"
+      },
+      {
+        "title": "Wikipedia — Itô Diffusion",
+        "url": "https://en.wikipedia.org/wiki/It%C3%B4_diffusion"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Drift and Diffusion",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      },
+      {
+        "title": "Steve Brunton — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=qdbkvD4N-us"
       }
     ]
   },
@@ -1143,15 +1311,15 @@
       }
     ]
   },
-  "stochastic-processes/diffusion-coefficient": {
+  "stochastic-processes/drift-and-volatility": {
     "websites": [
       {
-        "title": "Wikipedia — Diffusion Process",
-        "url": "https://en.wikipedia.org/wiki/Diffusion_process"
+        "title": "Investopedia — Volatility",
+        "url": "https://www.investopedia.com/terms/v/volatility.asp"
       },
       {
-        "title": "Wikipedia — Itô Diffusion",
-        "url": "https://en.wikipedia.org/wiki/It%C3%B4_diffusion"
+        "title": "Wikipedia — Geometric Brownian Motion",
+        "url": "https://en.wikipedia.org/wiki/Geometric_Brownian_motion"
       }
     ],
     "videos": [
@@ -1160,8 +1328,8 @@
         "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
       },
       {
-        "title": "Steve Brunton — Stochastic Differential Equations",
-        "url": "https://www.youtube.com/watch?v=qdbkvD4N-us"
+        "title": "QuantPy — Drift and Volatility in Finance",
+        "url": "https://www.youtube.com/watch?v=R8DnwPNssXk"
       }
     ]
   },
@@ -1206,28 +1374,6 @@
       {
         "title": "MIT OpenCourseWare — Diffusion and the Fokker-Planck Equation",
         "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
-      }
-    ]
-  },
-  "stochastic-processes/drift-and-volatility": {
-    "websites": [
-      {
-        "title": "Investopedia — Volatility",
-        "url": "https://www.investopedia.com/terms/v/volatility.asp"
-      },
-      {
-        "title": "Wikipedia — Geometric Brownian Motion",
-        "url": "https://en.wikipedia.org/wiki/Geometric_Brownian_motion"
-      }
-    ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare — Drift and Diffusion",
-        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
-      },
-      {
-        "title": "QuantPy — Drift and Volatility in Finance",
-        "url": "https://www.youtube.com/watch?v=R8DnwPNssXk"
       }
     ]
   },

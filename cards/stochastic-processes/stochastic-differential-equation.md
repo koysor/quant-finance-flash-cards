@@ -1,7 +1,6 @@
 # Stochastic Differential Equation
 
 **Topic:** Stochastic Processes
-**Level:** A Level Mathematics
 **Tags:** SDE, stochastic, differential equation, GBM, continuous time
 **Created:** 2026-02-28
 **Author:** Unknown

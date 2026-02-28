@@ -1,7 +1,6 @@
 # Drift and Volatility Parameters
 
 **Topic:** Stochastic Processes
-**Level:** A Level Mathematics
 **Tags:** drift, volatility, parameters, annualisation, mu, sigma
 **Created:** 2026-02-28
 **Author:** Unknown

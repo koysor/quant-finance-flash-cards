@@ -1,7 +1,6 @@
 # Diffusion Coefficient
 
 **Topic:** Stochastic Processes
-**Level:** A Level Mathematics
 **Tags:** diffusion, volatility, SDE, stochastic processes, noise, sigma
 **Created:** 2026-02-28
 **Author:** Claude Opus 4.6

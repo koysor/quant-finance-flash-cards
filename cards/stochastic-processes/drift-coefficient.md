@@ -1,7 +1,6 @@
 # Drift Coefficient
 
 **Topic:** Stochastic Processes
-**Level:** A Level Mathematics
 **Tags:** drift, SDE, risk-neutral, mu, deterministic, continuous time
 **Created:** 2026-02-28
 **Author:** Claude Opus 4.6

@@ -1,7 +1,6 @@
 # Bayes' Theorem
 
 **Topic:** Probability
-**Level:** A Level Mathematics
 **Tags:** probability, conditional probability, Bayesian
 **Created:** 2026-02-28
 **Author:** Unknown

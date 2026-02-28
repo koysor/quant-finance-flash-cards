@@ -1,7 +1,6 @@
 # Fokker-Planck Equation
 
 **Topic:** Stochastic Processes
-**Level:** A Level Mathematics
 **Tags:** Fokker-Planck, probability density, PDE, diffusion, Kolmogorov, transition density
 **Created:** 2026-02-28
 **Author:** Claude Opus 4.6

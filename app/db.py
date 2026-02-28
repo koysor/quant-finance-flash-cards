@@ -11,7 +11,6 @@ CREATE TABLE IF NOT EXISTS cards (
     id           TEXT PRIMARY KEY,
     name         TEXT NOT NULL,
     topic        TEXT NOT NULL,
-    level        TEXT NOT NULL,
     tags         TEXT NOT NULL,
     html_content TEXT NOT NULL,
     created_date TEXT NOT NULL DEFAULT '',
@@ -62,12 +61,11 @@ def init_db() -> None:
 
 def upsert_card(card: dict) -> None:
     sql = """
-    INSERT INTO cards (id, name, topic, level, tags, html_content, created_date, author, file_mtime)
-    VALUES (:id, :name, :topic, :level, :tags, :html_content, :created_date, :author, :file_mtime)
+    INSERT INTO cards (id, name, topic, tags, html_content, created_date, author, file_mtime)
+    VALUES (:id, :name, :topic, :tags, :html_content, :created_date, :author, :file_mtime)
     ON CONFLICT(id) DO UPDATE SET
         name         = excluded.name,
         topic        = excluded.topic,
-        level        = excluded.level,
         tags         = excluded.tags,
         html_content = excluded.html_content,
         created_date = excluded.created_date,

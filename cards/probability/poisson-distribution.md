@@ -1,7 +1,6 @@
 # Poisson Distribution
 
 **Topic:** Probability
-**Level:** A Level Mathematics
 **Tags:** distributions, probability, discrete, poisson, counting
 **Created:** 2026-02-28
 **Author:** Unknown

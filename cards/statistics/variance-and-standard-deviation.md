@@ -1,7 +1,6 @@
 # Variance and Standard Deviation
 
 **Topic:** Statistics
-**Level:** A Level Mathematics
 **Tags:** statistics, descriptive stats, risk, spread
 **Created:** 2026-02-28
 **Author:** Unknown

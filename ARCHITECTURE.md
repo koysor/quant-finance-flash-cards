@@ -33,7 +33,6 @@ Runs once at startup. Scans `cards/**/*.md` with `Path.rglob`, skips any file wh
 ```
 TITLE_RE  ^#\s+(.+)$
 TOPIC_RE  ^\*\*Topic:\*\*\s*(.+)$
-LEVEL_RE  ^\*\*Level:\*\*\s*(.+)$
 TAGS_RE   ^\*\*Tags:\*\*\s*(.+)$
 ```
 
@@ -48,7 +47,6 @@ cards
   id           TEXT PK        "derivatives/black-scholes-equation"
   name         TEXT           "Black-Scholes Equation"
   topic        TEXT           "Derivatives"
-  level        TEXT           "A Level Mathematics"
   tags         TEXT           comma-joined: "Black-Scholes,options,PDE,pricing,lognormal"
   html_content TEXT           pre-rendered HTML from markdown-it-py
   file_mtime   REAL           st_mtime used for incremental reload

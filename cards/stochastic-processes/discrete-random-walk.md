@@ -1,7 +1,6 @@
 # Discrete Random Walk Model
 
 **Topic:** Stochastic Processes
-**Level:** A Level Mathematics
 **Tags:** random walk, discrete, simulation, price model, GBM
 **Created:** 2026-02-28
 **Author:** Unknown

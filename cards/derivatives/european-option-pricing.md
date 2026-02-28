@@ -1,7 +1,6 @@
 # European Option Pricing
 
 **Topic:** Derivatives
-**Level:** A Level Mathematics
 **Tags:** European options, options pricing, Black-Scholes, payoff, exercise
 **Created:** 2026-02-28
 **Author:** Unknown

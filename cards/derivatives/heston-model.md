@@ -1,7 +1,6 @@
 # Heston Model
 
 **Topic:** Derivatives
-**Level:** A Level Mathematics
 **Tags:** stochastic volatility, Heston, volatility smile, options, pricing, mean reversion
 **Created:** 2026-02-28
 **Author:** Unknown

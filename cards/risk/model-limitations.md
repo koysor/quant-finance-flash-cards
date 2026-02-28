@@ -1,7 +1,6 @@
 # Model Limitations
 
 **Topic:** Risk
-**Level:** A Level Mathematics
 **Tags:** limitations, fat tails, volatility clustering, model risk, assumptions
 **Created:** 2026-02-28
 **Author:** Unknown

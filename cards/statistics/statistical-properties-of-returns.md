@@ -1,7 +1,6 @@
 # Statistical Properties of Returns
 
 **Topic:** Statistics
-**Level:** A Level Mathematics
 **Tags:** returns, mean, standard deviation, standardisation, volatility
 **Created:** 2026-02-28
 **Author:** Unknown

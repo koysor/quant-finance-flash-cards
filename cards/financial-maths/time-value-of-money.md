@@ -1,7 +1,6 @@
 # Time Value of Money
 
 **Topic:** Financial Mathematics
-**Level:** A Level Mathematics
 **Tags:** TVM, discounting, compounding, present value, future value
 **Created:** 2026-02-28
 **Author:** Unknown

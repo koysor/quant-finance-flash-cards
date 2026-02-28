@@ -1,7 +1,6 @@
 # Extreme Value Theory
 
 **Topic:** Risk
-**Level:** A Level Mathematics
 **Tags:** risk, tail risk, EVT, extreme events, loss distribution, GEV
 **Created:** 2026-02-28
 **Author:** Claude Opus 4.6

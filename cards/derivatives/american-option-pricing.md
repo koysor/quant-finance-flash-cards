@@ -1,7 +1,6 @@
 # American Option Pricing
 
 **Topic:** Derivatives
-**Level:** A Level Mathematics
 **Tags:** American options, options pricing, early exercise, binomial tree, exercise boundary
 **Created:** 2026-02-28
 **Author:** Unknown

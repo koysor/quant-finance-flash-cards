@@ -1,7 +1,6 @@
 # Monte Carlo Simulation
 
 **Topic:** Risk
-**Level:** A Level Mathematics
 **Tags:** Monte Carlo, simulation, random paths, pricing, risk
 **Created:** 2026-02-28
 **Author:** Unknown

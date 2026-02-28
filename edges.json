@@ -19,15 +19,15 @@
   },
   {
     "source": "calculus/lemma",
-    "target": "stochastic-processes/itos-lemma",
-    "label": "exemplified by",
-    "description": "Itô's Lemma is the most important lemma in quantitative finance — a proven stepping-stone result that is invoked every time a function of a stochastic process needs to be differentiated."
-  },
-  {
-    "source": "calculus/lemma",
     "target": "statistics/variance-and-standard-deviation",
     "label": "proves",
     "description": "The variance addition lemma for independent random variables — Var(X + Y) = Var(X) + Var(Y) — is the foundational step behind the square-root rule for scaling volatility."
+  },
+  {
+    "source": "calculus/lemma",
+    "target": "stochastic-processes/itos-lemma",
+    "label": "exemplified by",
+    "description": "Itô's Lemma is the most important lemma in quantitative finance — a proven stepping-stone result that is invoked every time a function of a stochastic process needs to be differentiated."
   },
   {
     "source": "calculus/taylor-series",
@@ -37,15 +37,15 @@
   },
   {
     "source": "derivatives/american-option-pricing",
-    "target": "derivatives/european-option-pricing",
-    "label": "extends",
-    "description": "An American option is worth at least as much as its European counterpart — the early-exercise premium is the additional value from the right to exercise before expiry."
-  },
-  {
-    "source": "derivatives/american-option-pricing",
     "target": "derivatives/early-exercise-decision",
     "label": "requires",
     "description": "Pricing an American option requires evaluating the early exercise decision at every node — the option price is the maximum of the intrinsic value and the continuation value."
+  },
+  {
+    "source": "derivatives/american-option-pricing",
+    "target": "derivatives/european-option-pricing",
+    "label": "extends",
+    "description": "An American option is worth at least as much as its European counterpart — the early-exercise premium is the additional value from the right to exercise before expiry."
   },
   {
     "source": "derivatives/american-vs-european-options",
@@ -66,34 +66,16 @@
     "description": "Put-call parity holds exactly for European options but only as inequality bounds for American options — the early-exercise right breaks the strict equality."
   },
   {
-    "source": "derivatives/early-exercise-decision",
-    "target": "derivatives/option-greeks",
-    "label": "informed by",
-    "description": "Theta and the cost of carry determine whether early exercise is worthwhile — when Theta decay exceeds the interest earned on the intrinsic value, continuing to hold is optimal."
-  },
-  {
-    "source": "derivatives/early-exercise-decision",
-    "target": "financial-maths/time-value-of-money",
-    "label": "driven by",
-    "description": "The core trade-off in early exercise is whether receiving cash now and earning interest outweighs the option's remaining time value — a direct application of the time value of money."
+    "source": "derivatives/black-scholes-equation",
+    "target": "derivatives/delta-hedging",
+    "label": "enables",
+    "description": "Black-Scholes shows that a continuously rebalanced Delta hedge eliminates all price risk, which is precisely the argument used to derive the Black-Scholes PDE."
   },
   {
     "source": "derivatives/black-scholes-equation",
     "target": "derivatives/european-option-pricing",
     "label": "prices",
     "description": "The Black-Scholes formula gives closed-form prices for European calls and puts — it is the standard analytical pricing tool for European-style options."
-  },
-  {
-    "source": "derivatives/european-option-pricing",
-    "target": "derivatives/risk-neutral-pricing",
-    "label": "valued via",
-    "description": "European option prices equal the discounted expected payoff under the risk-neutral measure — this expectation is the defining calculation for European-style derivatives."
-  },
-  {
-    "source": "derivatives/black-scholes-equation",
-    "target": "derivatives/delta-hedging",
-    "label": "enables",
-    "description": "Black-Scholes shows that a continuously rebalanced Delta hedge eliminates all price risk, which is precisely the argument used to derive the Black-Scholes PDE."
   },
   {
     "source": "derivatives/black-scholes-equation",
@@ -106,6 +88,24 @@
     "target": "derivatives/option-greeks",
     "label": "defines",
     "description": "The Black-Scholes formula gives closed-form expressions for Delta, Gamma, Vega, Theta and Rho — the Greeks are simply partial derivatives of the Black-Scholes price with respect to each input."
+  },
+  {
+    "source": "derivatives/early-exercise-decision",
+    "target": "derivatives/option-greeks",
+    "label": "informed by",
+    "description": "Theta and the cost of carry determine whether early exercise is worthwhile — when Theta decay exceeds the interest earned on the intrinsic value, continuing to hold is optimal."
+  },
+  {
+    "source": "derivatives/early-exercise-decision",
+    "target": "financial-maths/time-value-of-money",
+    "label": "driven by",
+    "description": "The core trade-off in early exercise is whether receiving cash now and earning interest outweighs the option's remaining time value — a direct application of the time value of money."
+  },
+  {
+    "source": "derivatives/european-option-pricing",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "valued via",
+    "description": "European option prices equal the discounted expected payoff under the risk-neutral measure — this expectation is the defining calculation for European-style derivatives."
   },
   {
     "source": "derivatives/heston-model",
@@ -121,15 +121,21 @@
   },
   {
     "source": "derivatives/heston-model",
+    "target": "risk/monte-carlo-simulation",
+    "label": "priced via",
+    "description": "Although the Heston model has a semi-analytical solution for European options, exotic and path-dependent derivatives under Heston are typically priced by Monte Carlo simulation of the two correlated SDEs."
+  },
+  {
+    "source": "derivatives/heston-model",
     "target": "stochastic-processes/geometric-brownian-motion",
     "label": "generalises",
     "description": "GBM assumes constant volatility, while the Heston model replaces this with a mean-reverting stochastic variance process — the asset price SDE is augmented with a second coupled SDE for the variance."
   },
   {
     "source": "derivatives/heston-model",
-    "target": "risk/monte-carlo-simulation",
-    "label": "priced via",
-    "description": "Although the Heston model has a semi-analytical solution for European options, exotic and path-dependent derivatives under Heston are typically priced by Monte Carlo simulation of the two correlated SDEs."
+    "target": "stochastic-processes/mean-reversion",
+    "label": "uses",
+    "description": "The Heston model's variance process is a mean-reverting square-root diffusion (CIR process) — the speed of mean reversion κ and long-run variance θ control how quickly volatility returns to its equilibrium after a shock."
   },
   {
     "source": "derivatives/implied-volatility",
@@ -160,6 +166,54 @@
     "target": "derivatives/black-scholes-equation",
     "label": "framework for",
     "description": "The Black-Scholes price equals the discounted expected payoff under the risk-neutral measure — risk-neutral pricing is the theoretical foundation that justifies the formula."
+  },
+  {
+    "source": "derivatives/volatility-smile",
+    "target": "derivatives/black-scholes-equation",
+    "label": "exposes limitation of",
+    "description": "The existence of the smile directly contradicts Black-Scholes' constant-volatility assumption — if the model were exact, implied volatility would be flat across all strikes."
+  },
+  {
+    "source": "derivatives/volatility-smile",
+    "target": "derivatives/heston-model",
+    "label": "reproduced by",
+    "description": "The Heston model's stochastic volatility and correlation between returns and variance generate an implied volatility smile from first principles, providing a theoretically grounded alternative to strike-by-strike fitting."
+  },
+  {
+    "source": "derivatives/volatility-smile",
+    "target": "derivatives/implied-volatility",
+    "label": "maps across strikes",
+    "description": "The volatility smile is the graph of implied volatility as a function of strike price — each point on the smile is an implied volatility extracted from a single option's market price via the Black-Scholes formula."
+  },
+  {
+    "source": "derivatives/volatility-smile",
+    "target": "risk/model-limitations",
+    "label": "evidences",
+    "description": "The volatility smile is empirical proof that real return distributions have fatter tails and asymmetry compared to the lognormal — it is one of the most visible model limitations in practice."
+  },
+  {
+    "source": "financial-maths/modern-portfolio-theory",
+    "target": "linear-algebra/matrix-multiplication",
+    "label": "computed via",
+    "description": "Portfolio variance is the quadratic form w'Σw and expected return is the dot product w'μ — both are matrix multiplications, making linear algebra the computational engine of portfolio optimisation."
+  },
+  {
+    "source": "financial-maths/modern-portfolio-theory",
+    "target": "risk/value-at-risk",
+    "label": "feeds into",
+    "description": "The portfolio variance from MPT is the key input to parametric VaR — once mean-variance weights are chosen, the portfolio standard deviation is plugged directly into the VaR formula to quantify downside risk."
+  },
+  {
+    "source": "financial-maths/modern-portfolio-theory",
+    "target": "statistics/correlation",
+    "label": "depends on",
+    "description": "Portfolio variance is determined by the pairwise correlations between assets — the off-diagonal terms of the covariance matrix drive the diversification benefit that is the central result of MPT."
+  },
+  {
+    "source": "financial-maths/modern-portfolio-theory",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "minimises",
+    "description": "MPT defines risk as portfolio variance and seeks the weight vector that minimises it for a given target return — variance is the objective function at the heart of mean-variance optimisation."
   },
   {
     "source": "financial-maths/return-on-investment",
@@ -283,12 +337,6 @@
   },
   {
     "source": "probability/binomial-distribution",
-    "target": "probability/poisson-distribution",
-    "label": "limiting case of",
-    "description": "When the number of trials n is large and the probability p is small, the binomial distribution converges to the Poisson — this limit is used in credit risk to model rare default events in large portfolios."
-  },
-  {
-    "source": "probability/binomial-distribution",
     "target": "probability/expected-value",
     "label": "defines mean of",
     "description": "The expected value of a binomial random variable is np — this simple formula gives the average number of up-moves in a binomial tree, which determines the expected terminal stock price."
@@ -298,6 +346,12 @@
     "target": "probability/normal-distribution",
     "label": "converges to",
     "description": "By the Central Limit Theorem, the binomial distribution approaches the normal distribution as n grows — this convergence is why the binomial tree model reproduces Black-Scholes prices in the continuous limit."
+  },
+  {
+    "source": "probability/binomial-distribution",
+    "target": "probability/poisson-distribution",
+    "label": "limiting case of",
+    "description": "When the number of trials n is large and the probability p is small, the binomial distribution converges to the Poisson — this limit is used in credit risk to model rare default events in large portfolios."
   },
   {
     "source": "probability/binomial-distribution",
@@ -322,6 +376,12 @@
     "target": "probability/students-t-distribution",
     "label": "component of",
     "description": "The t-distribution is constructed as a standard normal divided by the square root of a chi-squared divided by its degrees of freedom — the two distributions are algebraically inseparable in small-sample inference."
+  },
+  {
+    "source": "probability/chi-squared-distribution",
+    "target": "statistics/jarque-bera-test",
+    "label": "distribution of",
+    "description": "The Jarque-Bera test statistic follows a chi-squared distribution with 2 degrees of freedom under the null hypothesis of normality — the chi-squared CDF provides the p-value used to accept or reject."
   },
   {
     "source": "probability/chi-squared-distribution",
@@ -354,10 +414,10 @@
     "description": "Value at Risk is defined as a quantile of the loss distribution — it is the inverse CDF evaluated at the confidence level, making the CDF the mathematical object that directly determines VaR."
   },
   {
-    "source": "probability/exponential-distribution",
-    "target": "probability/poisson-distribution",
-    "label": "inter-arrival times of",
-    "description": "If events arrive as a Poisson process with rate λ, the waiting time between consecutive events follows an exponential distribution with the same rate — the two distributions are inseparable."
+    "source": "probability/expected-value",
+    "target": "financial-maths/time-value-of-money",
+    "label": "discounted by",
+    "description": "A fair price equals the expected future payoff discounted back to today — combining expected value with time-value-of-money discounting is the core of risk-neutral option pricing."
   },
   {
     "source": "probability/exponential-distribution",
@@ -366,58 +426,52 @@
     "description": "The survival probability e^{−λt} has the same exponential form as the continuous discount factor e^{−rt} — default intensity in credit risk plays an analogous role to the risk-free rate in time-value-of-money discounting."
   },
   {
-    "source": "probability/expected-value",
-    "target": "financial-maths/time-value-of-money",
-    "label": "discounted by",
-    "description": "A fair price equals the expected future payoff discounted back to today — combining expected value with time-value-of-money discounting is the core of risk-neutral option pricing."
+    "source": "probability/exponential-distribution",
+    "target": "probability/poisson-distribution",
+    "label": "inter-arrival times of",
+    "description": "If events arrive as a Poisson process with rate λ, the waiting time between consecutive events follows an exponential distribution with the same rate — the two distributions are inseparable."
   },
   {
-    "source": "probability/poisson-distribution",
+    "source": "probability/fat-tailed-distributions",
+    "target": "probability/normal-distribution",
+    "label": "contrasts with",
+    "description": "Fat-tailed distributions are defined by comparison with the normal — the normal's exponentially decaying tails assign negligibly small probabilities to extreme events, while fat-tailed distributions assign far greater probability, making the normal the baseline that fat tails violate."
+  },
+  {
+    "source": "probability/fat-tailed-distributions",
     "target": "risk/model-limitations",
-    "label": "addresses",
-    "description": "Jump-diffusion models add Poisson-distributed jumps to GBM to capture the fat tails and sudden crashes that pure Brownian motion cannot explain — a direct response to the limitations of the normal model."
+    "label": "motivates",
+    "description": "The presence of fat tails in real return data is the single most important empirical fact driving model limitations — any model that assumes normality will systematically underestimate the frequency and severity of extreme losses."
   },
   {
-    "source": "probability/poisson-distribution",
-    "target": "stochastic-processes/brownian-motion",
-    "label": "augments",
-    "description": "In Merton's jump-diffusion model, a Poisson process is layered on top of Brownian motion — the continuous diffusion handles normal price moves while Poisson jumps capture sudden large moves."
-  },
-  {
-    "source": "probability/probability-density-function",
-    "target": "probability/expected-value",
-    "label": "computes",
-    "description": "The expected value of a continuous random variable is defined as the integral of x weighted by the PDF — E[X] = ∫x f(x) dx — making the density function the essential ingredient for computing fair values."
-  },
-  {
-    "source": "probability/probability-density-function",
-    "target": "probability/normal-distribution",
-    "label": "exemplified by",
-    "description": "The normal distribution's bell-shaped PDF is the most widely used density in finance — its specific functional form determines the probabilities that feed into Black-Scholes, VaR, and every Gaussian risk model."
-  },
-  {
-    "source": "probability/students-t-distribution",
-    "target": "probability/normal-distribution",
-    "label": "generalises",
-    "description": "The t-distribution has heavier tails than the normal and converges to it as degrees of freedom increase — with low ν it captures the excess kurtosis observed in real asset returns."
-  },
-  {
-    "source": "probability/students-t-distribution",
+    "source": "probability/fat-tailed-distributions",
     "target": "risk/value-at-risk",
-    "label": "improves",
-    "description": "Using the t-distribution instead of the normal for VaR calculations produces wider tail quantiles, giving more conservative and realistic loss estimates that account for fat tails in returns."
-  },
-  {
-    "source": "probability/uniform-distribution",
-    "target": "risk/monte-carlo-simulation",
-    "label": "drives",
-    "description": "Monte Carlo simulation begins with uniform U(0,1) random draws, which are transformed into the target distribution via the inverse CDF method — the uniform distribution is the raw input to every simulation."
+    "label": "undermines",
+    "description": "Parametric VaR computed under a normal assumption understates tail losses because fat-tailed returns produce extreme quantiles that are far larger than the Gaussian z-score implies."
   },
   {
     "source": "probability/lognormal-distribution",
     "target": "derivatives/black-scholes-equation",
     "label": "assumed by",
     "description": "Black-Scholes assumes stock prices are lognormally distributed — the N(d₁) and N(d₂) terms in the formula are computed from the normal distribution of log-prices."
+  },
+  {
+    "source": "probability/moment-generating-function",
+    "target": "probability/expected-value",
+    "label": "generalises",
+    "description": "The MGF encodes all moments of a distribution — the first derivative at zero gives the expected value, and higher derivatives give higher moments, making it a compact summary of the entire moment sequence."
+  },
+  {
+    "source": "probability/moment-generating-function",
+    "target": "probability/normal-distribution",
+    "label": "characterises",
+    "description": "The normal distribution's MGF exp(μt + ½σ²t²) uniquely identifies it — this is the tool used to prove that the sum of independent normals is again normal, a result that underpins portfolio variance calculations."
+  },
+  {
+    "source": "probability/moment-generating-function",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "extracts",
+    "description": "The variance is recovered from the MGF via Var(X) = M''(0) − [M'(0)]² — the MGF packages the first and second moments needed to compute volatility into a single generating function."
   },
   {
     "source": "probability/normal-distribution",
@@ -456,6 +510,96 @@
     "description": "Brownian motion is built from normal increments — each infinitesimal step dW is drawn from N(0, dt), so the normal distribution is the elementary building block of all continuous-time models."
   },
   {
+    "source": "probability/poisson-distribution",
+    "target": "risk/model-limitations",
+    "label": "addresses",
+    "description": "Jump-diffusion models add Poisson-distributed jumps to GBM to capture the fat tails and sudden crashes that pure Brownian motion cannot explain — a direct response to the limitations of the normal model."
+  },
+  {
+    "source": "probability/poisson-distribution",
+    "target": "stochastic-processes/brownian-motion",
+    "label": "augments",
+    "description": "In Merton's jump-diffusion model, a Poisson process is layered on top of Brownian motion — the continuous diffusion handles normal price moves while Poisson jumps capture sudden large moves."
+  },
+  {
+    "source": "probability/probability-density-function",
+    "target": "probability/expected-value",
+    "label": "computes",
+    "description": "The expected value of a continuous random variable is defined as the integral of x weighted by the PDF — E[X] = ∫x f(x) dx — making the density function the essential ingredient for computing fair values."
+  },
+  {
+    "source": "probability/probability-density-function",
+    "target": "probability/normal-distribution",
+    "label": "exemplified by",
+    "description": "The normal distribution's bell-shaped PDF is the most widely used density in finance — its specific functional form determines the probabilities that feed into Black-Scholes, VaR, and every Gaussian risk model."
+  },
+  {
+    "source": "probability/students-t-distribution",
+    "target": "probability/fat-tailed-distributions",
+    "label": "example of",
+    "description": "The Student's t-distribution is the most commonly used fat-tailed distribution in finance — its polynomial tail decay and tuneable degrees-of-freedom parameter make it a tractable replacement for the normal when modelling heavy-tailed returns."
+  },
+  {
+    "source": "probability/students-t-distribution",
+    "target": "probability/normal-distribution",
+    "label": "generalises",
+    "description": "The t-distribution has heavier tails than the normal and converges to it as degrees of freedom increase — with low ν it captures the excess kurtosis observed in real asset returns."
+  },
+  {
+    "source": "probability/students-t-distribution",
+    "target": "risk/value-at-risk",
+    "label": "improves",
+    "description": "Using the t-distribution instead of the normal for VaR calculations produces wider tail quantiles, giving more conservative and realistic loss estimates that account for fat tails in returns."
+  },
+  {
+    "source": "probability/uniform-distribution",
+    "target": "risk/monte-carlo-simulation",
+    "label": "drives",
+    "description": "Monte Carlo simulation begins with uniform U(0,1) random draws, which are transformed into the target distribution via the inverse CDF method — the uniform distribution is the raw input to every simulation."
+  },
+  {
+    "source": "risk/coherent-risk-measure",
+    "target": "probability/cumulative-distribution-function",
+    "label": "defined via",
+    "description": "Both VaR and Expected Shortfall are defined as functionals of the loss CDF — VaR is the quantile (inverse CDF) and ES is the average of quantiles beyond the VaR level, so the CDF is the mathematical foundation for evaluating coherence."
+  },
+  {
+    "source": "risk/coherent-risk-measure",
+    "target": "risk/extreme-value-theory",
+    "label": "complements",
+    "description": "EVT models the shape of the tail while coherence axioms govern how a risk measure aggregates tail losses — combining EVT-fitted tails with a coherent measure like Expected Shortfall produces robust extreme-risk estimates."
+  },
+  {
+    "source": "risk/coherent-risk-measure",
+    "target": "risk/model-limitations",
+    "label": "formalises",
+    "description": "The coherence axioms formalise the shortcomings of naive risk measures — subadditivity failure in VaR is a specific, mathematically precise model limitation that coherent measures are designed to eliminate."
+  },
+  {
+    "source": "risk/coherent-risk-measure",
+    "target": "risk/value-at-risk",
+    "label": "critiques",
+    "description": "VaR violates the subadditivity axiom of coherence — merging portfolios can increase VaR, penalising diversification — which is the central motivation for replacing VaR with coherent alternatives like Expected Shortfall."
+  },
+  {
+    "source": "risk/extreme-value-theory",
+    "target": "probability/normal-distribution",
+    "label": "extends beyond",
+    "description": "The normal distribution's exponentially decaying tails correspond to the Gumbel case (ξ = 0) of the GEV family — financial returns typically exhibit Fréchet-type tails (ξ > 0), which are heavier than the normal allows."
+  },
+  {
+    "source": "risk/extreme-value-theory",
+    "target": "risk/model-limitations",
+    "label": "addresses",
+    "description": "EVT directly confronts the fat-tail limitation of Gaussian risk models — by fitting only the extreme observations, it captures the heavy tails that the normal distribution misses."
+  },
+  {
+    "source": "risk/extreme-value-theory",
+    "target": "risk/value-at-risk",
+    "label": "improves tail of",
+    "description": "EVT provides a statistically rigorous estimate of VaR at very high confidence levels (99.9%) by modelling the tail directly, rather than relying on the normal approximation that systematically underestimates extreme losses."
+  },
+  {
     "source": "risk/model-limitations",
     "target": "probability/normal-distribution",
     "label": "challenges",
@@ -472,6 +616,30 @@
     "target": "risk/value-at-risk",
     "label": "computes",
     "description": "Monte Carlo VaR simulates thousands of portfolio paths and reads the loss quantile directly from the resulting distribution, avoiding the normality assumption of parametric VaR."
+  },
+  {
+    "source": "statistics/autocorrelation",
+    "target": "risk/model-limitations",
+    "label": "exposes",
+    "description": "Significant autocorrelation in squared returns reveals volatility clustering — a direct violation of the constant-volatility assumption in Black-Scholes and basic VaR models."
+  },
+  {
+    "source": "statistics/autocorrelation",
+    "target": "statistics/correlation",
+    "label": "special case of",
+    "description": "Autocorrelation is correlation applied to a time series and its own lagged values, rather than between two different variables — the same Pearson formula underpins both measures."
+  },
+  {
+    "source": "statistics/autocorrelation",
+    "target": "statistics/statistical-properties-of-returns",
+    "label": "diagnoses",
+    "description": "Testing for autocorrelation in returns is a key diagnostic — near-zero autocorrelation in raw returns supports market efficiency, while positive autocorrelation in squared returns confirms volatility clustering."
+  },
+  {
+    "source": "statistics/central-limit-theorem",
+    "target": "probability/moment-generating-function",
+    "label": "proved via",
+    "description": "The classic proof of the CLT uses moment generating functions — showing that the MGF of the standardised sum converges to the normal MGF establishes convergence in distribution to the Gaussian."
   },
   {
     "source": "statistics/central-limit-theorem",
@@ -498,22 +666,70 @@
     "description": "Portfolio VaR depends on the correlations between positions — in a multi-asset portfolio, low correlations reduce aggregate risk even when individual volatilities are unchanged."
   },
   {
-    "source": "statistics/statistical-properties-of-returns",
-    "target": "risk/model-limitations",
-    "label": "motivates",
-    "description": "Empirical return distributions exhibit fat tails, skewness, and volatility clustering that deviate from the normal assumption — these observed properties are the primary evidence motivating more sophisticated risk models."
-  },
-  {
     "source": "statistics/estimating-parameters",
     "target": "stochastic-processes/drift-and-volatility",
     "label": "calibrates",
     "description": "The annualised drift and volatility used in every pricing and risk model are estimated from historical daily returns — multiplying the mean by 252 and the standard deviation by √252."
   },
   {
+    "source": "statistics/jarque-bera-test",
+    "target": "probability/normal-distribution",
+    "label": "tests for",
+    "description": "The Jarque-Bera test is a formal hypothesis test for normality — it checks whether a sample's skewness and kurtosis are consistent with the normal distribution, which is the assumed return distribution in many pricing and risk models."
+  },
+  {
+    "source": "statistics/jarque-bera-test",
+    "target": "risk/model-limitations",
+    "label": "diagnoses",
+    "description": "When the Jarque-Bera test rejects normality for a return series, it provides direct statistical evidence that Gaussian-based models (Black-Scholes, parametric VaR) may understate tail risk — motivating fat-tailed alternatives."
+  },
+  {
+    "source": "statistics/jarque-bera-test",
+    "target": "statistics/statistical-properties-of-returns",
+    "label": "formalises",
+    "description": "The Jarque-Bera test converts the descriptive observation that returns exhibit skewness and excess kurtosis into a formal statistical test with a p-value, quantifying how far the data deviate from normality."
+  },
+  {
+    "source": "statistics/kurtosis",
+    "target": "derivatives/volatility-smile",
+    "label": "explains",
+    "description": "The volatility smile arises because the market prices in fatter tails than Black-Scholes assumes — kurtosis quantifies exactly this tail heaviness, and higher excess kurtosis in the risk-neutral distribution produces a more pronounced smile."
+  },
+  {
+    "source": "statistics/kurtosis",
+    "target": "probability/normal-distribution",
+    "label": "benchmarked against",
+    "description": "The normal distribution serves as the reference point for kurtosis — its kurtosis of exactly 3 (excess kurtosis 0) is the baseline, and deviations from this value indicate heavier or lighter tails than the Gaussian model assumes."
+  },
+  {
+    "source": "statistics/kurtosis",
+    "target": "risk/value-at-risk",
+    "label": "feeds into",
+    "description": "High kurtosis means extreme losses occur more frequently than a normal model predicts — VaR estimates that ignore excess kurtosis systematically understate tail risk, which is why practitioners adjust for fat tails when calibrating loss distributions."
+  },
+  {
     "source": "statistics/scaling-mean-with-time",
     "target": "stochastic-processes/growth-vs-volatility-timescales",
     "label": "contrasted in",
     "description": "Mean returns scale linearly with time while volatility scales with the square root — this asymmetry explains why drift dominates at long horizons but is invisible at short ones."
+  },
+  {
+    "source": "statistics/skewness",
+    "target": "derivatives/implied-volatility",
+    "label": "explains",
+    "description": "Negative skewness in equity returns is the physical-measure counterpart of the implied volatility skew — the market prices out-of-the-money puts higher because large downward moves are more probable than a symmetric model predicts."
+  },
+  {
+    "source": "statistics/skewness",
+    "target": "probability/normal-distribution",
+    "label": "absent from",
+    "description": "The normal distribution has zero skewness by symmetry — any observed skewness in return data is direct evidence that the Gaussian assumption is inadequate for tail risk estimation."
+  },
+  {
+    "source": "statistics/skewness",
+    "target": "statistics/statistical-properties-of-returns",
+    "label": "characterises",
+    "description": "Skewness is one of the key stylised facts of financial returns — equity indices typically show negative skewness, meaning crash risk is more pronounced than a symmetric distribution would imply."
   },
   {
     "source": "statistics/square-root-rule",
@@ -528,16 +744,64 @@
     "description": "Because volatility grows as √t while drift grows as t, the signal-to-noise ratio improves with horizon length — the square-root rule is the quantitative reason why short-term forecasting is so difficult."
   },
   {
+    "source": "statistics/statistical-properties-of-returns",
+    "target": "risk/extreme-value-theory",
+    "label": "motivates",
+    "description": "The empirically observed fat tails, excess kurtosis, and occasional extreme moves in financial returns are precisely the phenomena that EVT is designed to model — stylised facts of returns provide the motivation for using EVT."
+  },
+  {
+    "source": "statistics/statistical-properties-of-returns",
+    "target": "risk/model-limitations",
+    "label": "motivates",
+    "description": "Empirical return distributions exhibit fat tails, skewness, and volatility clustering that deviate from the normal assumption — these observed properties are the primary evidence motivating more sophisticated risk models."
+  },
+  {
+    "source": "statistics/variance-and-standard-deviation",
+    "target": "statistics/autocorrelation",
+    "label": "extended by",
+    "description": "Variance measures dispersion at a single point in time, while autocorrelation extends this to measure how dispersion persists across time — connecting static risk measurement to dynamic volatility behaviour."
+  },
+  {
+    "source": "statistics/variance-and-standard-deviation",
+    "target": "statistics/kurtosis",
+    "label": "foundation of",
+    "description": "Kurtosis is defined as the fourth moment divided by the square of the variance — without understanding variance as the second central moment, the standardisation that makes kurtosis comparable across distributions is meaningless."
+  },
+  {
+    "source": "statistics/variance-and-standard-deviation",
+    "target": "statistics/skewness",
+    "label": "extended by",
+    "description": "Variance captures the spread of a distribution (second moment) while skewness captures its asymmetry (third moment) — both are needed to fully describe the shape of a return distribution beyond its centre."
+  },
+  {
     "source": "statistics/variance-and-standard-deviation",
     "target": "statistics/square-root-rule",
     "label": "underpins",
     "description": "The square-root rule follows directly from the variance addition property for independent random variables — total variance equals the sum of individual variances, so total standard deviation grows as √n."
   },
   {
-    "source": "stochastic-processes/brownian-motion",
-    "target": "stochastic-processes/martingales",
-    "label": "example of",
-    "description": "Standard Brownian motion is the canonical continuous-time martingale — its independent, zero-mean increments ensure that the conditional expectation of any future value equals the current value."
+    "source": "statistics/volatility-clustering",
+    "target": "derivatives/heston-model",
+    "label": "motivates",
+    "description": "The empirical observation that volatility clusters in time is the primary motivation for stochastic volatility models like Heston — the model's mean-reverting variance process directly captures the persistence of high- and low-volatility regimes."
+  },
+  {
+    "source": "statistics/volatility-clustering",
+    "target": "risk/value-at-risk",
+    "label": "invalidates assumptions of",
+    "description": "Volatility clustering means that the constant-variance assumption behind parametric VaR is violated — during turbulent periods the true conditional volatility is much higher than the unconditional estimate, causing VaR to understate risk precisely when it matters most."
+  },
+  {
+    "source": "statistics/volatility-clustering",
+    "target": "statistics/statistical-properties-of-returns",
+    "label": "refines",
+    "description": "While the statistical properties card establishes that standardised returns are approximately normal, volatility clustering reveals that the variance used for standardisation is itself time-varying — a deeper stylised fact that simple summary statistics miss."
+  },
+  {
+    "source": "statistics/volatility-clustering",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "extends",
+    "description": "Variance and standard deviation treat volatility as a fixed number, but volatility clustering shows that it changes over time — motivating conditional variance models like GARCH that update the volatility estimate as new data arrives."
   },
   {
     "source": "stochastic-processes/brownian-motion",
@@ -552,22 +816,28 @@
     "description": "Geometric Brownian Motion replaces the additive increments of standard Brownian Motion with multiplicative ones, ensuring the stock price can never go negative."
   },
   {
-    "source": "stochastic-processes/martingales",
-    "target": "derivatives/risk-neutral-pricing",
-    "label": "foundation of",
-    "description": "Risk-neutral pricing rests on the martingale property — under the risk-neutral measure Q, discounted asset prices are martingales, which is the mathematical condition that guarantees no-arbitrage pricing."
-  },
-  {
-    "source": "stochastic-processes/martingales",
-    "target": "probability/expected-value",
-    "label": "defined via",
-    "description": "The martingale property is a statement about conditional expected values — E[M_t | F_s] = M_s — so understanding expectation is a prerequisite for understanding martingales."
-  },
-  {
-    "source": "stochastic-processes/geometric-brownian-motion",
+    "source": "stochastic-processes/brownian-motion",
     "target": "stochastic-processes/martingales",
-    "label": "becomes under Q",
-    "description": "Under the real-world measure, GBM with drift μ ≠ r is not a martingale after discounting — but under the risk-neutral measure Q, the discounted GBM stock price becomes a martingale, which is the key insight enabling derivative pricing."
+    "label": "example of",
+    "description": "Standard Brownian motion is the canonical continuous-time martingale — its independent, zero-mean increments ensure that the conditional expectation of any future value equals the current value."
+  },
+  {
+    "source": "stochastic-processes/diffusion-coefficient",
+    "target": "derivatives/black-scholes-equation",
+    "label": "appears in",
+    "description": "The diffusion coefficient σS enters the Black-Scholes PDE as the ½σ²S² term multiplying the second derivative — it is the source of the Gamma risk that delta hedging must manage."
+  },
+  {
+    "source": "stochastic-processes/diffusion-coefficient",
+    "target": "stochastic-processes/brownian-motion",
+    "label": "multiplies",
+    "description": "The diffusion coefficient scales the Brownian increment dW — without it, the raw Wiener process has unit variance per unit time, so the diffusion coefficient is what calibrates the noise to match observed market volatility."
+  },
+  {
+    "source": "stochastic-processes/diffusion-coefficient",
+    "target": "stochastic-processes/drift-and-volatility",
+    "label": "scales by",
+    "description": "The diffusion coefficient σS combines the volatility parameter σ with the current price S — volatility sets the percentage scale of randomness, while the diffusion coefficient converts it into absolute price units."
   },
   {
     "source": "stochastic-processes/discrete-random-walk",
@@ -582,150 +852,6 @@
     "description": "The discrete random walk is the finite-step approximation that becomes the continuous SDE dS = μS dt + σS dX as the time step δt → 0."
   },
   {
-    "source": "stochastic-processes/geometric-brownian-motion",
-    "target": "derivatives/black-scholes-equation",
-    "label": "models stock price for",
-    "description": "Black-Scholes assumes the stock price follows GBM — this single assumption leads directly to the lognormal distribution of returns and the closed-form pricing formula."
-  },
-  {
-    "source": "stochastic-processes/geometric-brownian-motion",
-    "target": "probability/lognormal-distribution",
-    "label": "produces",
-    "description": "GBM implies that log-prices are normally distributed, so the price itself follows a lognormal distribution — this is why asset prices are always positive and right-skewed."
-  },
-  {
-    "source": "stochastic-processes/itos-lemma",
-    "target": "derivatives/black-scholes-equation",
-    "label": "derives",
-    "description": "Applying Itô's Lemma to the option price as a function of a GBM stock price, then invoking the no-arbitrage condition, yields the Black-Scholes PDE."
-  },
-  {
-    "source": "stochastic-processes/itos-lemma",
-    "target": "stochastic-processes/geometric-brownian-motion",
-    "label": "solves",
-    "description": "Itô's Lemma is used to derive the explicit solution for GBM — applying it to ln(S) converts the stochastic differential equation into a simple integral that gives S(t) in closed form."
-  },
-  {
-    "source": "stochastic-processes/stochastic-differential-equation",
-    "target": "derivatives/black-scholes-equation",
-    "label": "foundation of",
-    "description": "The SDE dS = μS dt + σS dX is the starting point for deriving the Black-Scholes PDE — applying Itô's Lemma and the no-arbitrage condition to this equation produces the pricing formula."
-  },
-  {
-    "source": "stochastic-processes/stochastic-differential-equation",
-    "target": "stochastic-processes/drift-and-volatility",
-    "label": "parameterised by",
-    "description": "The SDE contains exactly two parameters — drift μ and volatility σ — which fully specify the probabilistic behaviour of the asset price."
-  },
-  {
-    "source": "risk/extreme-value-theory",
-    "target": "risk/value-at-risk",
-    "label": "improves tail of",
-    "description": "EVT provides a statistically rigorous estimate of VaR at very high confidence levels (99.9%) by modelling the tail directly, rather than relying on the normal approximation that systematically underestimates extreme losses."
-  },
-  {
-    "source": "risk/extreme-value-theory",
-    "target": "risk/model-limitations",
-    "label": "addresses",
-    "description": "EVT directly confronts the fat-tail limitation of Gaussian risk models — by fitting only the extreme observations, it captures the heavy tails that the normal distribution misses."
-  },
-  {
-    "source": "risk/extreme-value-theory",
-    "target": "probability/normal-distribution",
-    "label": "extends beyond",
-    "description": "The normal distribution's exponentially decaying tails correspond to the Gumbel case (ξ = 0) of the GEV family — financial returns typically exhibit Fréchet-type tails (ξ > 0), which are heavier than the normal allows."
-  },
-  {
-    "source": "statistics/statistical-properties-of-returns",
-    "target": "risk/extreme-value-theory",
-    "label": "motivates",
-    "description": "The empirically observed fat tails, excess kurtosis, and occasional extreme moves in financial returns are precisely the phenomena that EVT is designed to model — stylised facts of returns provide the motivation for using EVT."
-  },
-  {
-    "source": "risk/coherent-risk-measure",
-    "target": "risk/value-at-risk",
-    "label": "critiques",
-    "description": "VaR violates the subadditivity axiom of coherence — merging portfolios can increase VaR, penalising diversification — which is the central motivation for replacing VaR with coherent alternatives like Expected Shortfall."
-  },
-  {
-    "source": "risk/coherent-risk-measure",
-    "target": "risk/extreme-value-theory",
-    "label": "complements",
-    "description": "EVT models the shape of the tail while coherence axioms govern how a risk measure aggregates tail losses — combining EVT-fitted tails with a coherent measure like Expected Shortfall produces robust extreme-risk estimates."
-  },
-  {
-    "source": "risk/coherent-risk-measure",
-    "target": "risk/model-limitations",
-    "label": "formalises",
-    "description": "The coherence axioms formalise the shortcomings of naive risk measures — subadditivity failure in VaR is a specific, mathematically precise model limitation that coherent measures are designed to eliminate."
-  },
-  {
-    "source": "risk/coherent-risk-measure",
-    "target": "probability/cumulative-distribution-function",
-    "label": "defined via",
-    "description": "Both VaR and Expected Shortfall are defined as functionals of the loss CDF — VaR is the quantile (inverse CDF) and ES is the average of quantiles beyond the VaR level, so the CDF is the mathematical foundation for evaluating coherence."
-  },
-  {
-    "source": "financial-maths/modern-portfolio-theory",
-    "target": "statistics/correlation",
-    "label": "depends on",
-    "description": "Portfolio variance is determined by the pairwise correlations between assets — the off-diagonal terms of the covariance matrix drive the diversification benefit that is the central result of MPT."
-  },
-  {
-    "source": "financial-maths/modern-portfolio-theory",
-    "target": "statistics/variance-and-standard-deviation",
-    "label": "minimises",
-    "description": "MPT defines risk as portfolio variance and seeks the weight vector that minimises it for a given target return — variance is the objective function at the heart of mean-variance optimisation."
-  },
-  {
-    "source": "financial-maths/modern-portfolio-theory",
-    "target": "linear-algebra/matrix-multiplication",
-    "label": "computed via",
-    "description": "Portfolio variance is the quadratic form w'Σw and expected return is the dot product w'μ — both are matrix multiplications, making linear algebra the computational engine of portfolio optimisation."
-  },
-  {
-    "source": "financial-maths/modern-portfolio-theory",
-    "target": "risk/value-at-risk",
-    "label": "feeds into",
-    "description": "The portfolio variance from MPT is the key input to parametric VaR — once mean-variance weights are chosen, the portfolio standard deviation is plugged directly into the VaR formula to quantify downside risk."
-  },
-  {
-    "source": "stochastic-processes/diffusion-coefficient",
-    "target": "derivatives/black-scholes-equation",
-    "label": "appears in",
-    "description": "The diffusion coefficient σS enters the Black-Scholes PDE as the ½σ²S² term multiplying the second derivative — it is the source of the Gamma risk that delta hedging must manage."
-  },
-  {
-    "source": "stochastic-processes/diffusion-coefficient",
-    "target": "stochastic-processes/drift-and-volatility",
-    "label": "scales by",
-    "description": "The diffusion coefficient σS combines the volatility parameter σ with the current price S — volatility sets the percentage scale of randomness, while the diffusion coefficient converts it into absolute price units."
-  },
-  {
-    "source": "stochastic-processes/stochastic-differential-equation",
-    "target": "stochastic-processes/diffusion-coefficient",
-    "label": "decomposed into",
-    "description": "The SDE dS = μS dt + σS dW splits into a drift term and a diffusion term — the diffusion coefficient b(S) = σS is the function that controls the size of the random component."
-  },
-  {
-    "source": "stochastic-processes/diffusion-coefficient",
-    "target": "stochastic-processes/brownian-motion",
-    "label": "multiplies",
-    "description": "The diffusion coefficient scales the Brownian increment dW — without it, the raw Wiener process has unit variance per unit time, so the diffusion coefficient is what calibrates the noise to match observed market volatility."
-  },
-  {
-    "source": "stochastic-processes/stochastic-differential-equation",
-    "target": "stochastic-processes/drift-coefficient",
-    "label": "decomposed into",
-    "description": "The SDE dS = μS dt + σS dW splits into a drift term and a diffusion term — the drift coefficient a(S) = μS is the function that controls the expected rate of change."
-  },
-  {
-    "source": "stochastic-processes/drift-coefficient",
-    "target": "stochastic-processes/drift-and-volatility",
-    "label": "formalises",
-    "description": "The drift coefficient a(S) = μS is the continuous-time formalisation of the drift parameter μ — it converts the annualised expected return into an instantaneous rate of price change proportional to the current level."
-  },
-  {
     "source": "stochastic-processes/drift-coefficient",
     "target": "derivatives/risk-neutral-pricing",
     "label": "replaced under",
@@ -738,16 +864,10 @@
     "description": "The drift and diffusion coefficients are the two components of any SDE — the drift controls the deterministic trend while the diffusion controls the random fluctuations, and together they fully specify the process."
   },
   {
-    "source": "stochastic-processes/fokker-planck-equation",
-    "target": "stochastic-processes/diffusion-coefficient",
-    "label": "driven by",
-    "description": "The diffusion coefficient b(X) enters the Fokker-Planck equation as the second-order term ½∂²(b²p)/∂x² — it determines how quickly the probability density spreads out over time."
-  },
-  {
-    "source": "stochastic-processes/fokker-planck-equation",
-    "target": "stochastic-processes/drift-coefficient",
-    "label": "driven by",
-    "description": "The drift coefficient a(X) enters the Fokker-Planck equation as the first-order term −∂(ap)/∂x — it determines the direction in which the probability density shifts over time."
+    "source": "stochastic-processes/drift-coefficient",
+    "target": "stochastic-processes/drift-and-volatility",
+    "label": "formalises",
+    "description": "The drift coefficient a(S) = μS is the continuous-time formalisation of the drift parameter μ — it converts the annualised expected return into an instantaneous rate of price change proportional to the current level."
   },
   {
     "source": "stochastic-processes/fokker-planck-equation",
@@ -762,28 +882,64 @@
     "description": "Solving the Fokker-Planck equation for GBM confirms that the terminal stock price is lognormally distributed — the equation provides the rigorous proof of the distributional assumption underlying Black-Scholes."
   },
   {
-    "source": "derivatives/volatility-smile",
-    "target": "derivatives/implied-volatility",
-    "label": "maps across strikes",
-    "description": "The volatility smile is the graph of implied volatility as a function of strike price — each point on the smile is an implied volatility extracted from a single option's market price via the Black-Scholes formula."
+    "source": "stochastic-processes/fokker-planck-equation",
+    "target": "stochastic-processes/diffusion-coefficient",
+    "label": "driven by",
+    "description": "The diffusion coefficient b(X) enters the Fokker-Planck equation as the second-order term ½∂²(b²p)/∂x² — it determines how quickly the probability density spreads out over time."
   },
   {
-    "source": "derivatives/volatility-smile",
+    "source": "stochastic-processes/fokker-planck-equation",
+    "target": "stochastic-processes/drift-coefficient",
+    "label": "driven by",
+    "description": "The drift coefficient a(X) enters the Fokker-Planck equation as the first-order term −∂(ap)/∂x — it determines the direction in which the probability density shifts over time."
+  },
+  {
+    "source": "stochastic-processes/geometric-brownian-motion",
     "target": "derivatives/black-scholes-equation",
-    "label": "exposes limitation of",
-    "description": "The existence of the smile directly contradicts Black-Scholes' constant-volatility assumption — if the model were exact, implied volatility would be flat across all strikes."
+    "label": "models stock price for",
+    "description": "Black-Scholes assumes the stock price follows GBM — this single assumption leads directly to the lognormal distribution of returns and the closed-form pricing formula."
   },
   {
-    "source": "derivatives/volatility-smile",
-    "target": "derivatives/heston-model",
-    "label": "reproduced by",
-    "description": "The Heston model's stochastic volatility and correlation between returns and variance generate an implied volatility smile from first principles, providing a theoretically grounded alternative to strike-by-strike fitting."
+    "source": "stochastic-processes/geometric-brownian-motion",
+    "target": "probability/lognormal-distribution",
+    "label": "produces",
+    "description": "GBM implies that log-prices are normally distributed, so the price itself follows a lognormal distribution — this is why asset prices are always positive and right-skewed."
   },
   {
-    "source": "derivatives/volatility-smile",
-    "target": "risk/model-limitations",
-    "label": "evidences",
-    "description": "The volatility smile is empirical proof that real return distributions have fatter tails and asymmetry compared to the lognormal — it is one of the most visible model limitations in practice."
+    "source": "stochastic-processes/geometric-brownian-motion",
+    "target": "stochastic-processes/martingales",
+    "label": "becomes under Q",
+    "description": "Under the real-world measure, GBM with drift μ ≠ r is not a martingale after discounting — but under the risk-neutral measure Q, the discounted GBM stock price becomes a martingale, which is the key insight enabling derivative pricing."
+  },
+  {
+    "source": "stochastic-processes/itos-lemma",
+    "target": "derivatives/black-scholes-equation",
+    "label": "derives",
+    "description": "Applying Itô's Lemma to the option price as a function of a GBM stock price, then invoking the no-arbitrage condition, yields the Black-Scholes PDE."
+  },
+  {
+    "source": "stochastic-processes/itos-lemma",
+    "target": "stochastic-processes/geometric-brownian-motion",
+    "label": "solves",
+    "description": "Itô's Lemma is used to derive the explicit solution for GBM — applying it to ln(S) converts the stochastic differential equation into a simple integral that gives S(t) in closed form."
+  },
+  {
+    "source": "stochastic-processes/martingales",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "foundation of",
+    "description": "Risk-neutral pricing rests on the martingale property — under the risk-neutral measure Q, discounted asset prices are martingales, which is the mathematical condition that guarantees no-arbitrage pricing."
+  },
+  {
+    "source": "stochastic-processes/martingales",
+    "target": "probability/expected-value",
+    "label": "defined via",
+    "description": "The martingale property is a statement about conditional expected values — E[M_t | F_s] = M_s — so understanding expectation is a prerequisite for understanding martingales."
+  },
+  {
+    "source": "stochastic-processes/mean-reversion",
+    "target": "financial-maths/yield-curve",
+    "label": "models rates for",
+    "description": "Mean-reverting models like Vasicek and Hull-White are the standard tools for modelling the short rate — the mean reversion ensures that interest rates stay within realistic bounds and the yield curve can be fitted exactly."
   },
   {
     "source": "stochastic-processes/mean-reversion",
@@ -798,15 +954,27 @@
     "description": "In the Ornstein-Uhlenbeck process the drift coefficient is κ(θ − X), which depends on the current state — when X is above θ the drift is negative, pulling the process back down, and vice versa."
   },
   {
-    "source": "stochastic-processes/mean-reversion",
-    "target": "financial-maths/yield-curve",
-    "label": "models rates for",
-    "description": "Mean-reverting models like Vasicek and Hull-White are the standard tools for modelling the short rate — the mean reversion ensures that interest rates stay within realistic bounds and the yield curve can be fitted exactly."
+    "source": "stochastic-processes/stochastic-differential-equation",
+    "target": "derivatives/black-scholes-equation",
+    "label": "foundation of",
+    "description": "The SDE dS = μS dt + σS dX is the starting point for deriving the Black-Scholes PDE — applying Itô's Lemma and the no-arbitrage condition to this equation produces the pricing formula."
   },
   {
-    "source": "derivatives/heston-model",
-    "target": "stochastic-processes/mean-reversion",
-    "label": "uses",
-    "description": "The Heston model's variance process is a mean-reverting square-root diffusion (CIR process) — the speed of mean reversion κ and long-run variance θ control how quickly volatility returns to its equilibrium after a shock."
+    "source": "stochastic-processes/stochastic-differential-equation",
+    "target": "stochastic-processes/diffusion-coefficient",
+    "label": "decomposed into",
+    "description": "The SDE dS = μS dt + σS dW splits into a drift term and a diffusion term — the diffusion coefficient b(S) = σS is the function that controls the size of the random component."
+  },
+  {
+    "source": "stochastic-processes/stochastic-differential-equation",
+    "target": "stochastic-processes/drift-and-volatility",
+    "label": "parameterised by",
+    "description": "The SDE contains exactly two parameters — drift μ and volatility σ — which fully specify the probabilistic behaviour of the asset price."
+  },
+  {
+    "source": "stochastic-processes/stochastic-differential-equation",
+    "target": "stochastic-processes/drift-coefficient",
+    "label": "decomposed into",
+    "description": "The SDE dS = μS dt + σS dW splits into a drift term and a diffusion term — the drift coefficient a(S) = μS is the function that controls the expected rate of change."
   }
 ]

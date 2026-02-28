@@ -1,7 +1,6 @@
 # Determinant
 
 **Topic:** Linear Algebra
-**Level:** A Level Mathematics
 **Tags:** linear algebra, matrices, determinant, invertibility, covariance matrix
 **Created:** 2026-02-28
 **Author:** Unknown

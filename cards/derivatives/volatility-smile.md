@@ -1,7 +1,6 @@
 # Volatility Smile
 
 **Topic:** Derivatives
-**Level:** A Level Mathematics
 **Tags:** volatility smile, implied volatility, skew, Black-Scholes, options, strike price
 **Created:** 2026-02-28
 **Author:** Claude Opus 4.6

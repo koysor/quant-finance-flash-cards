@@ -1,7 +1,6 @@
 # Mean Reversion
 
 **Topic:** Stochastic Processes
-**Level:** A Level Mathematics
 **Tags:** mean reversion, Ornstein-Uhlenbeck, interest rates, Vasicek, speed of reversion, long-run mean
 **Created:** 2026-02-28
 **Author:** Claude Opus 4.6

@@ -12,7 +12,6 @@ Every card must contain all four metadata fields and all four sections, in this 
 # Concept Name
 
 **Topic:** Derivatives
-**Level:** A Level Mathematics
 **Tags:** tag1, tag2, tag3
 
 ---
@@ -43,11 +42,11 @@ Every card must contain all four metadata fields and all four sections, in this 
 
 A typo here will create a new topic with the default grey colour. To add a genuinely new topic, add an entry to `TOPIC_COLOURS` in `app/routes.py` at the same time.
 
-**`**Level:**`** must be `A Level Mathematics` verbatim.
-
 **`**Tags:**`** is a comma-separated list of lowercase tags used for filtering, e.g. `options, Greeks, delta, gamma`. Tags appear in the filter strip on the index page.
 
 ### Section content rules
+
+**Accessibility** — while the subject matter can be advanced, the explanation should remain accessible to a student of A Level mathematics age. Avoid unnecessary jargon and explain technical terms where possible.
 
 **Definition** — one or two sentences. State precisely what the concept is.
 

@@ -1,7 +1,6 @@
 # Binomial Distribution
 
 **Topic:** Probability
-**Level:** A Level Mathematics
 **Tags:** distributions, probability, discrete, binomial
 **Created:** 2026-02-28
 **Author:** Unknown

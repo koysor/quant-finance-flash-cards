@@ -79,7 +79,6 @@ Each card is a single `.md` file in `cards/<topic>/`. The loader uses regex (not
 # Concept Name
 
 **Topic:** <must match a key in TOPIC_COLOURS exactly>
-**Level:** A Level Mathematics
 **Tags:** tag1, tag2, tag3
 **Created:** YYYY-MM-DD
 **Author:** <model name or "Unknown">

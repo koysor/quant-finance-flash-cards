@@ -11,7 +11,6 @@ CARDS_DIR = Path(__file__).parent.parent / "cards"
 
 TITLE_RE = re.compile(r'^#\s+(.+)$', re.MULTILINE)
 TOPIC_RE = re.compile(r'^\*\*Topic:\*\*\s*(.+)$', re.MULTILINE)
-LEVEL_RE = re.compile(r'^\*\*Level:\*\*\s*(.+)$', re.MULTILINE)
 TAGS_RE     = re.compile(r'^\*\*Tags:\*\*\s*(.+)$', re.MULTILINE)
 CREATED_RE  = re.compile(r'^\*\*Created:\*\*\s*(.+)$', re.MULTILINE)
 AUTHOR_RE   = re.compile(r'^\*\*Author:\*\*\s*(.+)$', re.MULTILINE)
@@ -44,7 +43,6 @@ def _parse_card(path: Path) -> dict:
     card_id = path.relative_to(CARDS_DIR.parent / "cards").with_suffix("").as_posix()
     name    = _require(TITLE_RE, "title (#)")
     topic   = _require(TOPIC_RE, "**Topic:**")
-    level   = _require(LEVEL_RE, "**Level:**")
     tags    = _require(TAGS_RE,  "**Tags:**")
 
     # Normalise tags: strip whitespace around each tag
@@ -63,7 +61,6 @@ def _parse_card(path: Path) -> dict:
         "id":           card_id,
         "name":         name,
         "topic":        topic,
-        "level":        level,
         "tags":         tags,
         "created_date": created_date,
         "author":       author,

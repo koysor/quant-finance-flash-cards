@@ -1,7 +1,6 @@
 # American vs European Options
 
 **Topic:** Derivatives
-**Level:** A Level Mathematics
 **Tags:** American options, European options, early exercise, options pricing, comparison
 **Created:** 2026-02-28
 **Author:** Unknown

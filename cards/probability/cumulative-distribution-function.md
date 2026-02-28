@@ -1,7 +1,6 @@
 # Cumulative Distribution Function
 
 **Topic:** Probability
-**Level:** A Level Mathematics
 **Tags:** distributions, probability, quantiles, CDF
 **Created:** 2026-02-28
 **Author:** Unknown
