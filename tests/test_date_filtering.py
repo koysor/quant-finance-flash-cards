@@ -35,25 +35,32 @@ def test_recent_route_filtering_by_date(client):
         start_date = dates[0]
         end_date = dates[-1]
 
+    start_date_param = start_date
+    end_date_param = end_date
+    if len(start_date_param) == 10:
+        start_date_param = f"{start_date_param} 00:00:00"
+    if len(end_date_param) == 10:
+        end_date_param = f"{end_date_param} 23:59:59"
+
     # Filter with start and end
-    filtered_response = client.get(f'/recent?format=json&start={start_date}&end={end_date}')
+    filtered_response = client.get(f'/recent?format=json&start={start_date_param}&end={end_date_param}')
     filtered_data = filtered_response.get_json()
     
     # Check that all returned cards are within range
     for card in filtered_data:
-        assert start_date <= card['created_date'] <= end_date
+        assert start_date_param <= card['created_date'] <= end_date_param
 
 def test_recent_route_default_sorting(client):
-    """Test that /recent defaults to earliest record (ASC order)."""
+    """Test that /recent defaults to newest record (DESC order)."""
     response = client.get('/recent?format=json')
     data = response.get_json()
     
     if len(data) < 2:
         pytest.skip("Not enough cards to test sorting.")
 
-    # Dates should be in ascending order
+    # Dates should be in descending order
     dates = [c['created_date'] for c in data if c['created_date']]
-    assert dates == sorted(dates)
+    assert dates == sorted(dates, reverse=True)
 
 def test_recent_route_invalid_dates(client):
     """Test that invalid date formats don't crash the app."""

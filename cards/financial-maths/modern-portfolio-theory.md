@@ -2,7 +2,7 @@
 
 **Topic:** Financial Mathematics
 **Tags:** portfolio theory, diversification, efficient frontier, mean-variance, optimisation
-**Created:** 2026-02-28
+**Created:** 2026-02-28 20:46:20
 **Author:** Claude Opus 4.6
 
 ---

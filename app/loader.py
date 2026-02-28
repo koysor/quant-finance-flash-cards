@@ -12,7 +12,6 @@ CARDS_DIR = Path(__file__).parent.parent / "cards"
 TITLE_RE = re.compile(r'^#\s+(.+)$', re.MULTILINE)
 TOPIC_RE = re.compile(r'^\*\*Topic:\*\*\s*(.+)$', re.MULTILINE)
 TAGS_RE     = re.compile(r'^\*\*Tags:\*\*\s*(.+)$', re.MULTILINE)
-CREATED_RE  = re.compile(r'^\*\*Created:\*\*\s*(.+)$', re.MULTILINE)
 AUTHOR_RE   = re.compile(r'^\*\*Author:\*\*\s*(.+)$', re.MULTILINE)
 
 # Matches display math ($$...$$) and inline math ($...$), non-greedy
@@ -48,9 +47,10 @@ def _parse_card(path: Path) -> dict:
     # Normalise tags: strip whitespace around each tag
     tags = ",".join(t.strip() for t in tags.split(","))
 
-    # Optional metadata — default gracefully
-    m_created = CREATED_RE.search(text)
-    created_date = m_created.group(1).strip() if m_created else datetime.date.today().isoformat()
+    # The created_date is now derived from the file's modification time (mtime).
+    # This ensures that "recent" cards are genuinely recent based on file changes.
+    created_date_ts = datetime.datetime.fromtimestamp(path.stat().st_mtime)
+    created_date = created_date_ts.isoformat(sep=' ', timespec='seconds')
 
     m_author = AUTHOR_RE.search(text)
     author = m_author.group(1).strip() if m_author else "Unknown"

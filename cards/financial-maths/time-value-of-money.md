@@ -2,7 +2,7 @@
 
 **Topic:** Financial Mathematics
 **Tags:** TVM, discounting, compounding, present value, future value
-**Created:** 2026-02-28
+**Created:** 2026-02-28 20:46:20
 **Author:** Unknown
 
 ---

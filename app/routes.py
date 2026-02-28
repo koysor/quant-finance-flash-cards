@@ -114,18 +114,27 @@ def recent():
         request.headers.get("Accept") == "application/json"
     )
 
-    # Use ASC order by default as requested (earliest record first)
-    cards = get_cards_by_date_range(start_date=start, end_date=end, order="ASC")
+    # The database stores dates as 'YYYY-MM-DD HH:MM:SS' when time is present.
+    # If start/end are provided as just dates (YYYY-MM-DD), append the earliest/latest time.
+    if start and len(start) == 10: # YYYY-MM-DD format
+        start = f"{start} 00:00:00"
+    if end and len(end) == 10: # YYYY-MM-DD format
+        end = f"{end} 23:59:59"
+
+    # Use DESC order by default to show newest cards first
+    cards = get_cards_by_date_range(start_date=start, end_date=end, order="DESC")
 
     if is_json:
+        # Convert Row objects to dicts for JSON serialization
         return jsonify([dict(c) for c in cards])
 
     grouped: dict[str, list] = {}
     for card in cards:
+        # Grouping by date might need adjustment if we want to group by date only,
+        # but for now, let's keep the date string as is from the DB.
         date = card["created_date"] or "Unknown"
         grouped.setdefault(date, []).append(card)
     return render_template("recent.html", grouped=grouped)
-
 
 @bp.get("/card/<path:card_id>")
 def card_detail(card_id: str):

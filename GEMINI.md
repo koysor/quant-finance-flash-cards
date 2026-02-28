@@ -56,7 +56,6 @@ Cards are stored in `cards/<topic>/<slug>.md`. They MUST follow a strict format 
 
 **Topic:** <Topic Name>
 **Tags:** tag1, tag2
-**Created:** YYYY-MM-DD
 **Author:** <Name/Model>
 
 ---

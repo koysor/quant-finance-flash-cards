@@ -22,7 +22,6 @@ def test_parse_card_valid(tmp_path):
     card_content = """# Test Card
 **Topic:** Calculus
 **Tags:** test, math
-**Created:** 2026-02-28
 **Author:** Test Author
 
 ---

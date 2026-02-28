@@ -2,7 +2,7 @@
 
 **Topic:** Stochastic Processes
 **Tags:** SDE, stochastic, differential equation, GBM, continuous time
-**Created:** 2026-02-28
+**Created:** 2026-02-28 20:46:20
 **Author:** Unknown
 
 ---

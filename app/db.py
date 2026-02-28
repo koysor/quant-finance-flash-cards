@@ -13,11 +13,10 @@ CREATE TABLE IF NOT EXISTS cards (
     topic        TEXT NOT NULL,
     tags         TEXT NOT NULL,
     html_content TEXT NOT NULL,
-    created_date TEXT NOT NULL DEFAULT '',
-    author       TEXT NOT NULL DEFAULT '',
-    file_mtime   REAL NOT NULL
-);
-
+        created_date TEXT NOT NULL DEFAULT '',
+        author       TEXT NOT NULL DEFAULT '',
+            file_mtime   REAL NOT NULL
+        );
 CREATE TABLE IF NOT EXISTS edges (
     source_id   TEXT NOT NULL REFERENCES cards(id) ON DELETE CASCADE,
     target_id   TEXT NOT NULL REFERENCES cards(id) ON DELETE CASCADE,

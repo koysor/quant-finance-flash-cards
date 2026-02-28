@@ -2,7 +2,7 @@
 
 **Topic:** Stochastic Processes
 **Tags:** drift, volatility, timescales, scaling, noise, trend
-**Created:** 2026-02-28
+**Created:** 2026-02-28 20:46:20
 **Author:** Unknown
 
 ---

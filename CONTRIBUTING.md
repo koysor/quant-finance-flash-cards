@@ -13,6 +13,7 @@ Every card must contain all four metadata fields and all four sections, in this 
 
 **Topic:** Derivatives
 **Tags:** tag1, tag2, tag3
+**Author:** <Your Name or AI model>
 
 ---
 

@@ -2,7 +2,7 @@
 
 **Topic:** Statistics
 **Tags:** autocorrelation, time series, serial correlation, stationarity, returns
-**Created:** 2026-02-28
+**Created:** 2026-02-28 20:46:20
 **Author:** Claude Opus 4.6
 
 ---

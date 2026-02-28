@@ -2,7 +2,7 @@
 
 **Topic:** Financial Mathematics
 **Tags:** yield curve, interest rates, term structure, bonds, discounting
-**Created:** 2026-02-28
+**Created:** 2026-02-28 20:46:20
 **Author:** Unknown
 
 ---
