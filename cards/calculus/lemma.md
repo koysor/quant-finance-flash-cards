@@ -2,8 +2,6 @@
 
 **Topic:** Calculus
 **Tags:** lemma, proof, theorem, mathematical reasoning, logic
-**Created:** 2026-02-28 20:46:20
-**Author:** Unknown
 
 ---
 

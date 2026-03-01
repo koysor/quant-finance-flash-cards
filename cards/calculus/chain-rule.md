@@ -2,8 +2,6 @@
 
 **Topic:** Calculus
 **Tags:** chain rule, differentiation, composite functions, total derivative, Itô
-**Created:** 2026-02-28 20:46:20
-**Author:** Claude Opus 4.6
 
 ---
 

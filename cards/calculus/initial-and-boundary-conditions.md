@@ -2,8 +2,6 @@
 
 **Topic:** Calculus
 **Tags:** calculus, PDE, boundary conditions, initial conditions, Black-Scholes, option pricing
-**Created:** 2026-02-28
-**Author:** Claude Opus 4.6
 
 ---
 

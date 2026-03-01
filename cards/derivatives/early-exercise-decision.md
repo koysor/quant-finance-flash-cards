@@ -2,8 +2,6 @@
 
 **Topic:** Derivatives
 **Tags:** early exercise, American options, optimal stopping, intrinsic value, time value, dividends
-**Created:** 2026-02-28 20:46:20
-**Author:** Unknown
 
 ---
 

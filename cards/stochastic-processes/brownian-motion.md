@@ -2,8 +2,6 @@
 
 **Topic:** Stochastic Processes
 **Tags:** stochastic processes, Brownian motion, Wiener process, random walk
-**Created:** 2026-02-28 20:46:20
-**Author:** Unknown
 
 ---
 

@@ -2,8 +2,6 @@
 
 **Topic:** Stochastic Processes
 **Tags:** mean reversion, Ornstein-Uhlenbeck, interest rates, Vasicek, speed of reversion, long-run mean
-**Created:** 2026-02-28 20:46:20
-**Author:** Claude Opus 4.6
 
 ---
 

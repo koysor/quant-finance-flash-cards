@@ -98,6 +98,7 @@ Each card is a single `.md` file in `cards/<topic>/`. The loader uses regex (not
 - `$$...$$` for display maths, `$...$` for inline — passed through to KaTeX by the browser
 - The **Remember** section must connect the maths to a quantitative finance application
 - One concept per card, no padding
+- Do **not** add a `**Level:**` field — it is not a recognised metadata field
 
 ## URL Validation Hook
 
@@ -120,3 +121,4 @@ Run manually: `uv run python scripts/validate_urls.py --force`
 | `cards/derivatives/` | Options, futures, Greeks, pricing |
 | `cards/stochastic-processes/` | Brownian motion, GBM, Itô's lemma |
 | `cards/risk/` | VaR, CVaR, risk measures |
+| `cards/mathematical-notation/` | Sigma, pi, set, and logical notation conventions |

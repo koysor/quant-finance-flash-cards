@@ -2,8 +2,6 @@
 
 **Topic:** Derivatives
 **Tags:** American options, European options, early exercise, options pricing, comparison
-**Created:** 2026-02-28 20:46:20
-**Author:** Unknown
 
 ---
 

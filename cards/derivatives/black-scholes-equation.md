@@ -2,8 +2,6 @@
 
 **Topic:** Derivatives
 **Tags:** Black-Scholes, options, PDE, pricing, lognormal
-**Created:** 2026-02-28 20:46:20
-**Author:** Unknown
 
 ---
 

@@ -2,8 +2,6 @@
 
 **Topic:** Risk
 **Tags:** risk, coherent, subadditivity, expected shortfall, risk measure, regulation
-**Created:** 2026-02-28 20:46:20
-**Author:** Claude Opus 4.6
 
 ---
 

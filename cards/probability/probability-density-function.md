@@ -2,8 +2,6 @@
 
 **Topic:** Probability
 **Tags:** distributions, probability, continuous, density, integration
-**Created:** 2026-02-28 20:46:20
-**Author:** Unknown
 
 ---
 

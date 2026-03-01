@@ -2,8 +2,6 @@
 
 **Topic:** Stochastic Processes
 **Tags:** random walk, trinomial, discrete, diffusion, Fokker-Planck, option pricing
-**Created:** 2026-02-28
-**Author:** Claude Opus 4.6
 
 ---
 

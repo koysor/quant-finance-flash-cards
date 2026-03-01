@@ -2,8 +2,6 @@
 
 **Topic:** Linear Algebra
 **Tags:** linear algebra, matrices, rank, nullity, invertibility, portfolio optimisation
-**Created:** 2026-02-28 20:46:20
-**Author:** Claude Opus 4.6
 
 ---
 

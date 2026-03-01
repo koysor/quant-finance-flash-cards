@@ -18,12 +18,12 @@ CREATE TABLE IF NOT EXISTS cards (
             file_mtime   REAL NOT NULL
         );
 CREATE TABLE IF NOT EXISTS edges (
+    id          INTEGER PRIMARY KEY AUTOINCREMENT,
     source_id   TEXT NOT NULL REFERENCES cards(id) ON DELETE CASCADE,
     target_id   TEXT NOT NULL REFERENCES cards(id) ON DELETE CASCADE,
     label       TEXT NOT NULL DEFAULT '',
     description TEXT NOT NULL DEFAULT '',
-    created_at  TEXT NOT NULL DEFAULT (datetime('now')),
-    PRIMARY KEY (source_id, target_id)
+    created_at  TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
 CREATE INDEX IF NOT EXISTS idx_edges_source ON edges(source_id);
@@ -175,7 +175,7 @@ def get_cards_by_tag(tag: str) -> list[sqlite3.Row]:
 def get_outgoing(card_id: str) -> list[sqlite3.Row]:
     with get_db() as conn:
         return conn.execute(
-            """SELECT e.target_id, e.label, e.description,
+            """SELECT e.id, e.target_id, e.label, e.description,
                       c.name AS target_name, c.topic AS target_topic
                FROM edges e JOIN cards c ON c.id = e.target_id
                WHERE e.source_id = ?""",
@@ -186,7 +186,7 @@ def get_outgoing(card_id: str) -> list[sqlite3.Row]:
 def get_incoming(card_id: str) -> list[sqlite3.Row]:
     with get_db() as conn:
         return conn.execute(
-            """SELECT e.source_id, e.label, e.description,
+            """SELECT e.id, e.source_id, e.label, e.description,
                       c.name AS source_name, c.topic AS source_topic
                FROM edges e JOIN cards c ON c.id = e.source_id
                WHERE e.target_id = ?""",
@@ -194,12 +194,9 @@ def get_incoming(card_id: str) -> list[sqlite3.Row]:
         ).fetchall()
 
 
-def delete_edge(source_id: str, target_id: str) -> None:
+def delete_edge(edge_id: int) -> None:
     with get_db() as conn:
-        conn.execute(
-            "DELETE FROM edges WHERE source_id = ? AND target_id = ?",
-            (source_id, target_id),
-        )
+        conn.execute("DELETE FROM edges WHERE id = ?", (edge_id,))
 
 
 def load_edges_from_file() -> None:
@@ -210,7 +207,7 @@ def load_edges_from_file() -> None:
     with get_db() as conn:
         conn.execute("DELETE FROM edges")
         conn.executemany(
-            "INSERT OR IGNORE INTO edges (source_id, target_id, label, description)"
+            "INSERT INTO edges (source_id, target_id, label, description)"
             " VALUES (?, ?, ?, ?)",
             [
                 (e["source"], e["target"], e.get("label", ""), e.get("description", ""))

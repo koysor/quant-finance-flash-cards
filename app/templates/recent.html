@@ -10,11 +10,7 @@
 {% if grouped %}
   {% set card_i = namespace(value=0) %}
   {% for date, cards in grouped.items() %}
-    <section class="topic-section">
-      <h2 class="topic-heading">
-        <span class="topic-heading-text">{{ date }}</span>
-        <span class="topic-count">{{ cards|length }}</span>
-      </h2>
+
       <div class="card-grid">
         {% for card in cards %}
           {% set tc = topic_colour(card['topic']) %}
@@ -29,9 +25,6 @@
             </div>
             <div class="card-tile-meta">
               <span class="card-tile-badge" style="background:{{ tc }}">{{ card['topic'] }}</span>
-              {% if card['author'] %}
-                <span class="card-tile-author">{{ card['author'] }}</span>
-              {% endif %}
             </div>
             <span class="card-tile-tags">
               {% for tag in card['tags'].split(',') %}

@@ -28,6 +28,7 @@ TOPIC_COLOURS: dict[str, str] = {
     "Derivatives":          "#3b82f6",   # blue
     "Financial Mathematics":"#10b981",   # emerald
     "Linear Algebra":       "#8b5cf6",   # violet
+    "Mathematical Notation":"#f97316",   # orange
     "Probability":          "#f43f5e",   # rose
     "Risk":                 "#ef4444",   # red
     "Statistics":           "#06b6d4",   # cyan
@@ -176,11 +177,10 @@ def remove_link(card_id: str):
     if get_card(card_id) is None:
         abort(404)
 
-    source_id = request.form.get("source_id", "").strip()
-    target_id = request.form.get("target_id", "").strip()
+    edge_id = request.form.get("edge_id", "").strip()
 
-    if source_id and target_id:
-        delete_edge(source_id, target_id)
+    if edge_id:
+        delete_edge(int(edge_id))
         save_edges_to_file()
 
     return redirect(url_for("main.card_detail", card_id=card_id))

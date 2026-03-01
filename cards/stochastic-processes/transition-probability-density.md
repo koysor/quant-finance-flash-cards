@@ -2,8 +2,6 @@
 
 **Topic:** Stochastic Processes
 **Tags:** transition density, probability density, Fokker-Planck, Kolmogorov, normalisation, option pricing
-**Created:** 2026-02-28
-**Author:** Claude Opus 4.6
 
 ---
 

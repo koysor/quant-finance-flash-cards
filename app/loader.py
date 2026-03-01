@@ -14,6 +14,9 @@ TOPIC_RE = re.compile(r'^\*\*Topic:\*\*\s*(.+)$', re.MULTILINE)
 TAGS_RE     = re.compile(r'^\*\*Tags:\*\*\s*(.+)$', re.MULTILINE)
 AUTHOR_RE   = re.compile(r'^\*\*Author:\*\*\s*(.+)$', re.MULTILINE)
 
+# Regular expression to match and remove metadata fields before Markdown rendering
+_METADATA_RE = re.compile(r'^\*\*(?:Topic|Tags|Created|Author):\*\*\s*.+$', re.MULTILINE)
+
 # Matches display math ($$...$$) and inline math ($...$), non-greedy
 _MATH_RE = re.compile(r'(\$\$[\s\S]*?\$\$|\$(?!\s)[^$\n]+?\$)')
 
@@ -52,10 +55,13 @@ def _parse_card(path: Path) -> dict:
     created_date_ts = datetime.datetime.fromtimestamp(path.stat().st_mtime)
     created_date = created_date_ts.isoformat(sep=' ', timespec='seconds')
 
+    # Re-enable parsing author from metadata
     m_author = AUTHOR_RE.search(text)
     author = m_author.group(1).strip() if m_author else "Unknown"
 
-    html_content = _md.render(_protect_math(text))
+    # Remove metadata lines before rendering to HTML
+    rendered_text = _METADATA_RE.sub('', text, count=4).strip() # Remove Topic, Tags, Created, Author
+    html_content = _md.render(_protect_math(rendered_text))
 
     return {
         "id":           card_id,

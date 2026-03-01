@@ -548,6 +548,72 @@
     ],
     "videos": []
   },
+  "financial-maths/arbitrage-pricing-theory": {
+    "websites": [
+      {
+        "title": "Investopedia — Arbitrage Pricing Theory (APT)",
+        "url": "https://www.investopedia.com/terms/a/apt.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Arbitrage Pricing Theory",
+        "url": "https://corporatefinanceinstitute.com/resources/valuation/arbitrage-pricing-theory-apt/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Arbitrage Pricing Theory",
+        "url": "https://www.youtube.com/watch?v=vLbGX3cA-HA"
+      },
+      {
+        "title": "Patrick Boyle — Factor Models and APT",
+        "url": "https://www.youtube.com/watch?v=eXLbFgIRkOs"
+      }
+    ]
+  },
+  "financial-maths/capital-asset-pricing-model": {
+    "websites": [
+      {
+        "title": "Investopedia — Capital Asset Pricing Model (CAPM)",
+        "url": "https://www.investopedia.com/terms/c/capm.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — CAPM",
+        "url": "https://corporatefinanceinstitute.com/resources/valuation/capital-asset-pricing-model-capm/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — CAPM",
+        "url": "https://www.youtube.com/watch?v=LWRYmOJNGjA"
+      },
+      {
+        "title": "The Organic Chemistry Tutor — CAPM Explained",
+        "url": "https://www.youtube.com/watch?v=2hSgWOqpEVk"
+      }
+    ]
+  },
+  "financial-maths/fama-french-three-factor-model": {
+    "websites": [
+      {
+        "title": "Investopedia — Fama and French Three-Factor Model",
+        "url": "https://www.investopedia.com/terms/f/famaandfrenchthreefactormodel.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Fama-French Three-Factor Model",
+        "url": "https://corporatefinanceinstitute.com/resources/valuation/fama-french-three-factor-model/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Ben Felix — The Fama-French Three-Factor Model",
+        "url": "https://www.youtube.com/watch?v=jg2dDlGEbEk"
+      },
+      {
+        "title": "Patrick Boyle — Factor Investing Explained",
+        "url": "https://www.youtube.com/watch?v=ViTnIebSzj4"
+      }
+    ]
+  },
   "financial-maths/modern-portfolio-theory": {
     "websites": [
       {
@@ -563,6 +629,50 @@
       {
         "title": "MIT OpenCourseWare \u2014 Portfolio Theory",
         "url": "https://www.youtube.com/watch?v=8TJQhQ2GZ0Y"
+      }
+    ]
+  },
+  "financial-maths/security-market-line": {
+    "websites": [
+      {
+        "title": "Investopedia — Security Market Line (SML)",
+        "url": "https://www.investopedia.com/terms/s/sml.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Security Market Line",
+        "url": "https://corporatefinanceinstitute.com/resources/valuation/security-market-line-sml/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Security Market Line",
+        "url": "https://www.youtube.com/watch?v=1EP810IuHCU"
+      },
+      {
+        "title": "The Organic Chemistry Tutor — Security Market Line Explained",
+        "url": "https://www.youtube.com/watch?v=H6TwePkGp9Q"
+      }
+    ]
+  },
+  "financial-maths/sharpe-ratio": {
+    "websites": [
+      {
+        "title": "Investopedia — Sharpe Ratio",
+        "url": "https://www.investopedia.com/terms/s/sharperatio.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Sharpe Ratio",
+        "url": "https://corporatefinanceinstitute.com/resources/risk-management/sharpe-ratio/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Sharpe Ratio",
+        "url": "https://www.youtube.com/watch?v=XfGHkFBiB0g"
+      },
+      {
+        "title": "Ben Felix — Understanding Risk-Adjusted Returns",
+        "url": "https://www.youtube.com/watch?v=t2rFR4M1qq0"
       }
     ]
   },
@@ -1216,6 +1326,28 @@
       {
         "title": "Khan Academy \u2014 Autocorrelation and Partial Autocorrelation",
         "url": "https://www.youtube.com/watch?v=DeORzP0go5I"
+      }
+    ]
+  },
+  "statistics/beta-estimation": {
+    "websites": [
+      {
+        "title": "Investopedia — Beta: Definition and How to Calculate",
+        "url": "https://www.investopedia.com/terms/b/beta.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Beta in Finance",
+        "url": "https://corporatefinanceinstitute.com/resources/valuation/what-is-beta-guide/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Beta for Stocks",
+        "url": "https://www.youtube.com/watch?v=lBDa1NH8MNo"
+      },
+      {
+        "title": "Patrick Boyle — What Is Beta?",
+        "url": "https://www.youtube.com/watch?v=vZMudPi7T2M"
       }
     ]
   },

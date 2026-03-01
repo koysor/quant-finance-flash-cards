@@ -2,8 +2,6 @@
 
 **Topic:** Statistics
 **Tags:** estimation, annualisation, drift, volatility, calibration
-**Created:** 2026-02-28 20:46:20
-**Author:** Unknown
 
 ---
 
