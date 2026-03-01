@@ -736,6 +736,25 @@ a.tag:hover {
 }
 .btn-remove:hover { border-color: var(--danger); color: var(--danger); background: var(--danger-soft); }
 
+.notation-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.3rem 0.7rem;
+  margin: 0;
+}
+.notation-entry { display: contents; }
+.notation-symbol {
+  font-size: 0.95rem;
+  text-align: center;
+  white-space: nowrap;
+}
+.notation-meaning {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
 .btn-primary {
   background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 70%, #a78bfa) 100%);
   color: #fff; border: none; border-radius: var(--radius-sm);

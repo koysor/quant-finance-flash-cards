@@ -153,6 +153,7 @@ def card_detail(card_id: str):
     next_card = dict(siblings[idx + 1]) if idx < len(siblings) - 1 else None
 
     resources = current_app.config["RESOURCES"].get(card_id, {})
+    notation = json.loads(card["notation"]) if card["notation"] else []
 
     return render_template(
         "card.html",
@@ -164,6 +165,7 @@ def card_detail(card_id: str):
         card_tc=_topic_colour(card["topic"]),
         card_excerpt=_card_excerpt(card["html_content"]),
         resources=resources,
+        notation=notation,
     )
 
 

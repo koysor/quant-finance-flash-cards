@@ -1,0 +1,354 @@
+{
+  "\\alpha": {
+    "symbol": "$\\alpha$",
+    "meaning": "significance level / excess return"
+  },
+  "\\beta": {
+    "symbol": "$\\beta$",
+    "meaning": "sensitivity to market / beta coefficient"
+  },
+  "\\gamma": {
+    "symbol": "$\\gamma$",
+    "meaning": "gamma (option curvature) / Euler–Mascheroni constant"
+  },
+  "\\delta": {
+    "symbol": "$\\delta$",
+    "meaning": "small change / delta (option sensitivity)"
+  },
+  "\\Delta": {
+    "symbol": "$\\Delta$",
+    "meaning": "finite change / hedge ratio"
+  },
+  "\\epsilon": {
+    "symbol": "$\\epsilon$",
+    "meaning": "error term / small positive quantity"
+  },
+  "\\varepsilon": {
+    "symbol": "$\\varepsilon$",
+    "meaning": "error term / small positive quantity"
+  },
+  "\\zeta": {
+    "symbol": "$\\zeta$",
+    "meaning": "zeta function argument"
+  },
+  "\\eta": {
+    "symbol": "$\\eta$",
+    "meaning": "learning rate / elasticity"
+  },
+  "\\theta": {
+    "symbol": "$\\theta$",
+    "meaning": "parameter / theta (option time decay)"
+  },
+  "\\Theta": {
+    "symbol": "$\\Theta$",
+    "meaning": "big-theta complexity / option time decay"
+  },
+  "\\iota": {
+    "symbol": "$\\iota$",
+    "meaning": "index / inclusion map"
+  },
+  "\\kappa": {
+    "symbol": "$\\kappa$",
+    "meaning": "mean-reversion speed / kurtosis excess"
+  },
+  "\\lambda": {
+    "symbol": "$\\lambda$",
+    "meaning": "rate parameter / eigenvalue / risk premium"
+  },
+  "\\Lambda": {
+    "symbol": "$\\Lambda$",
+    "meaning": "diagonal eigenvalue matrix"
+  },
+  "\\mu": {
+    "symbol": "$\\mu$",
+    "meaning": "mean / drift rate / expected return"
+  },
+  "\\nu": {
+    "symbol": "$\\nu$",
+    "meaning": "degrees of freedom / vega (option volatility sensitivity)"
+  },
+  "\\xi": {
+    "symbol": "$\\xi$",
+    "meaning": "random variable / noise term"
+  },
+  "\\pi": {
+    "symbol": "$\\pi$",
+    "meaning": "ratio of circumference to diameter (3.14159...)"
+  },
+  "\\Pi": {
+    "symbol": "$\\Pi$",
+    "meaning": "product operator / portfolio value"
+  },
+  "\\rho": {
+    "symbol": "$\\rho$",
+    "meaning": "correlation coefficient / option interest-rate sensitivity"
+  },
+  "\\sigma": {
+    "symbol": "$\\sigma$",
+    "meaning": "standard deviation / volatility"
+  },
+  "\\Sigma": {
+    "symbol": "$\\Sigma$",
+    "meaning": "summation operator / covariance matrix"
+  },
+  "\\tau": {
+    "symbol": "$\\tau$",
+    "meaning": "time to maturity / time step"
+  },
+  "\\upsilon": {
+    "symbol": "$\\upsilon$",
+    "meaning": "upsilon (rare in finance)"
+  },
+  "\\phi": {
+    "symbol": "$\\phi$",
+    "meaning": "standard normal PDF / golden ratio"
+  },
+  "\\Phi": {
+    "symbol": "$\\Phi$",
+    "meaning": "standard normal CDF"
+  },
+  "\\varphi": {
+    "symbol": "$\\varphi$",
+    "meaning": "characteristic function / phase angle"
+  },
+  "\\chi": {
+    "symbol": "$\\chi$",
+    "meaning": "chi-squared test statistic"
+  },
+  "\\psi": {
+    "symbol": "$\\psi$",
+    "meaning": "wave function / digamma function"
+  },
+  "\\omega": {
+    "symbol": "$\\omega$",
+    "meaning": "individual outcome / angular frequency"
+  },
+  "\\Omega": {
+    "symbol": "$\\Omega$",
+    "meaning": "sample space / set of all outcomes"
+  },
+  "\\sum": {
+    "symbol": "$\\sum$",
+    "meaning": "summation"
+  },
+  "\\prod": {
+    "symbol": "$\\prod$",
+    "meaning": "product of a sequence"
+  },
+  "\\int": {
+    "symbol": "$\\int$",
+    "meaning": "integral"
+  },
+  "\\partial": {
+    "symbol": "$\\partial$",
+    "meaning": "partial derivative"
+  },
+  "\\nabla": {
+    "symbol": "$\\nabla$",
+    "meaning": "gradient operator"
+  },
+  "\\infty": {
+    "symbol": "$\\infty$",
+    "meaning": "infinity"
+  },
+  "\\sqrt": {
+    "symbol": "$\\sqrt{\\cdot}$",
+    "meaning": "square root"
+  },
+  "\\log": {
+    "symbol": "$\\log$",
+    "meaning": "logarithm (natural unless base specified)"
+  },
+  "\\ln": {
+    "symbol": "$\\ln$",
+    "meaning": "natural logarithm"
+  },
+  "\\exp": {
+    "symbol": "$\\exp$",
+    "meaning": "exponential function"
+  },
+  "\\max": {
+    "symbol": "$\\max$",
+    "meaning": "maximum value"
+  },
+  "\\min": {
+    "symbol": "$\\min$",
+    "meaning": "minimum value"
+  },
+  "\\lim": {
+    "symbol": "$\\lim$",
+    "meaning": "limit of a function or sequence"
+  },
+  "\\in": {
+    "symbol": "$\\in$",
+    "meaning": "is an element of"
+  },
+  "\\notin": {
+    "symbol": "$\\notin$",
+    "meaning": "is not an element of"
+  },
+  "\\subset": {
+    "symbol": "$\\subset$",
+    "meaning": "is a proper subset of"
+  },
+  "\\subseteq": {
+    "symbol": "$\\subseteq$",
+    "meaning": "is a subset of (or equal to)"
+  },
+  "\\cup": {
+    "symbol": "$\\cup$",
+    "meaning": "set union"
+  },
+  "\\cap": {
+    "symbol": "$\\cap$",
+    "meaning": "set intersection"
+  },
+  "\\emptyset": {
+    "symbol": "$\\emptyset$",
+    "meaning": "empty set"
+  },
+  "\\forall": {
+    "symbol": "$\\forall$",
+    "meaning": "for all"
+  },
+  "\\exists": {
+    "symbol": "$\\exists$",
+    "meaning": "there exists"
+  },
+  "\\neg": {
+    "symbol": "$\\neg$",
+    "meaning": "logical NOT / negation"
+  },
+  "\\Rightarrow": {
+    "symbol": "$\\Rightarrow$",
+    "meaning": "implies"
+  },
+  "\\Leftrightarrow": {
+    "symbol": "$\\Leftrightarrow$",
+    "meaning": "if and only if"
+  },
+  "\\rightarrow": {
+    "symbol": "$\\rightarrow$",
+    "meaning": "tends to / maps to"
+  },
+  "\\to": {
+    "symbol": "$\\to$",
+    "meaning": "tends to / maps to"
+  },
+  "\\leq": {
+    "symbol": "$\\leq$",
+    "meaning": "less than or equal to"
+  },
+  "\\geq": {
+    "symbol": "$\\geq$",
+    "meaning": "greater than or equal to"
+  },
+  "\\neq": {
+    "symbol": "$\\neq$",
+    "meaning": "not equal to"
+  },
+  "\\approx": {
+    "symbol": "$\\approx$",
+    "meaning": "approximately equal to"
+  },
+  "\\sim": {
+    "symbol": "$\\sim$",
+    "meaning": "distributed as / similar to"
+  },
+  "\\equiv": {
+    "symbol": "$\\equiv$",
+    "meaning": "identically equal to / defined as"
+  },
+  "\\propto": {
+    "symbol": "$\\propto$",
+    "meaning": "proportional to"
+  },
+  "\\mathbb{E}": {
+    "symbol": "$\\mathbb{E}$",
+    "meaning": "expected value"
+  },
+  "\\mathbb{P}": {
+    "symbol": "$\\mathbb{P}$",
+    "meaning": "probability measure"
+  },
+  "\\mathbb{Q}": {
+    "symbol": "$\\mathbb{Q}$",
+    "meaning": "risk-neutral probability measure"
+  },
+  "\\mathbb{R}": {
+    "symbol": "$\\mathbb{R}$",
+    "meaning": "set of real numbers"
+  },
+  "\\mathbb{N}": {
+    "symbol": "$\\mathbb{N}$",
+    "meaning": "set of natural numbers"
+  },
+  "\\mathbb{Z}": {
+    "symbol": "$\\mathbb{Z}$",
+    "meaning": "set of integers"
+  },
+  "\\mathcal{F}": {
+    "symbol": "$\\mathcal{F}$",
+    "meaning": "sigma-algebra / filtration"
+  },
+  "\\mathcal{N}": {
+    "symbol": "$\\mathcal{N}$",
+    "meaning": "normal distribution"
+  },
+  "\\text{Var}": {
+    "symbol": "$\\text{Var}$",
+    "meaning": "variance"
+  },
+  "\\text{Cov}": {
+    "symbol": "$\\text{Cov}$",
+    "meaning": "covariance"
+  },
+  "\\text{Corr}": {
+    "symbol": "$\\text{Corr}$",
+    "meaning": "correlation"
+  },
+  "\\operatorname{Var}": {
+    "symbol": "$\\operatorname{Var}$",
+    "meaning": "variance"
+  },
+  "\\operatorname{Cov}": {
+    "symbol": "$\\operatorname{Cov}$",
+    "meaning": "covariance"
+  },
+  "\\frac": {
+    "symbol": "$\\frac{a}{b}$",
+    "meaning": "fraction: a divided by b"
+  },
+  "\\binom": {
+    "symbol": "$\\binom{n}{k}$",
+    "meaning": "binomial coefficient: n choose k"
+  },
+  "\\cdot": {
+    "symbol": "$\\cdot$",
+    "meaning": "multiplication / dot product"
+  },
+  "\\times": {
+    "symbol": "$\\times$",
+    "meaning": "multiplication / cross product"
+  },
+  "\\det": {
+    "symbol": "$\\det$",
+    "meaning": "determinant of a matrix"
+  },
+  "\\mathbf": {
+    "symbol": "$\\mathbf{x}$",
+    "meaning": "bold: vector or matrix"
+  },
+  "\\hat": {
+    "symbol": "$\\hat{x}$",
+    "meaning": "estimator / unit vector"
+  },
+  "\\bar": {
+    "symbol": "$\\bar{x}$",
+    "meaning": "sample mean / average"
+  },
+  "\\tilde": {
+    "symbol": "$\\tilde{x}$",
+    "meaning": "modified or approximate value"
+  }
+}

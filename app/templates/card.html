@@ -155,6 +155,20 @@
       {% endif %}
     </section>
 
+    {% if notation %}
+    <section class="sidebar-section notation-section">
+      <h3>Notation</h3>
+      <dl class="notation-list">
+        {% for entry in notation %}
+        <div class="notation-entry">
+          <dt class="notation-symbol">{{ entry.symbol }}</dt>
+          <dd class="notation-meaning">{{ entry.meaning }}</dd>
+        </div>
+        {% endfor %}
+      </dl>
+    </section>
+    {% endif %}
+
     {% if resources and (resources.get('websites') or resources.get('videos')) %}
     <section class="sidebar-section">
       <h3>Learn more</h3>

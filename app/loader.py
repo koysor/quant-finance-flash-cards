@@ -1,5 +1,6 @@
 """Scan cards/**/*.md, parse metadata, and upsert to the database."""
 import datetime
+import json
 import re
 from pathlib import Path
 
@@ -22,6 +23,34 @@ _MATH_RE = re.compile(r'(\$\$[\s\S]*?\$\$|\$(?!\s)[^$\n]+?\$)')
 
 _md = MarkdownIt().enable("table")
 
+# Matches \command sequences in LaTeX
+_LATEX_CMD_RE = re.compile(r'\\([a-zA-Z]+)')
+
+# Matches \mathbb{X}, \mathcal{X}, \text{Word}, \operatorname{Word}
+_LATEX_CONSTRUCT_RE = re.compile(r'\\(mathbb|mathcal|text|operatorname)\{([^}]+)\}')
+
+
+def extract_notation(raw_text: str, notation_dict: dict) -> list[dict]:
+    """Find LaTeX commands in raw Markdown and return matching notation entries."""
+    found: set[str] = set()
+
+    # Match compound constructs first (e.g. \mathbb{E}, \text{Var})
+    for m in _LATEX_CONSTRUCT_RE.finditer(raw_text):
+        key = f"\\{m.group(1)}{{{m.group(2)}}}"
+        if key in notation_dict:
+            found.add(key)
+
+    # Match simple commands (e.g. \sigma, \int)
+    for m in _LATEX_CMD_RE.finditer(raw_text):
+        key = f"\\{m.group(1)}"
+        if key in notation_dict:
+            found.add(key)
+
+    return sorted(
+        [notation_dict[k] for k in found],
+        key=lambda e: e["meaning"],
+    )
+
 
 def _protect_math(text: str) -> str:
     """Double backslashes inside LaTeX math blocks so markdown-it escaping
@@ -33,7 +62,7 @@ def _protect_math(text: str) -> str:
     return _MATH_RE.sub(_escape, text)
 
 
-def _parse_card(path: Path) -> dict:
+def _parse_card(path: Path, notation_dict: dict | None = None) -> dict:
     text = path.read_text(encoding="utf-8")
 
     def _require(pattern: re.Pattern, field: str) -> str:
@@ -63,6 +92,8 @@ def _parse_card(path: Path) -> dict:
     rendered_text = _METADATA_RE.sub('', text, count=4).strip() # Remove Topic, Tags, Created, Author
     html_content = _md.render(_protect_math(rendered_text))
 
+    notation = extract_notation(text, notation_dict) if notation_dict else []
+
     return {
         "id":           card_id,
         "name":         name,
@@ -71,11 +102,12 @@ def _parse_card(path: Path) -> dict:
         "created_date": created_date,
         "author":       author,
         "html_content": html_content,
+        "notation":     json.dumps(notation),
         "file_mtime":   path.stat().st_mtime,
     }
 
 
-def load_all_cards(app=None) -> int:
+def load_all_cards(app=None, notation_dict: dict | None = None) -> int:
     """Scan all card files and upsert changed ones. Returns count of cards loaded."""
     paths = sorted(CARDS_DIR.rglob("*.md"))
     loaded = 0
@@ -88,7 +120,7 @@ def load_all_cards(app=None) -> int:
         if stored_mtime is not None and abs(current_mtime - stored_mtime) < 0.001:
             continue  # unchanged
 
-        card = _parse_card(path)  # raises ValueError loudly on bad card
+        card = _parse_card(path, notation_dict)  # raises ValueError loudly on bad card
         upsert_card(card)
         loaded += 1
 

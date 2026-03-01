@@ -15,7 +15,15 @@ def create_app() -> Flask:
     app.secret_key = os.environ.get("SECRET_KEY") or secrets.token_hex(32)
 
     init_db()
-    load_all_cards(app)
+
+    notation_path = os.path.join(os.path.dirname(app.root_path), "notation.json")
+    if os.path.exists(notation_path):
+        with open(notation_path) as f:
+            app.config["NOTATION"] = json.load(f)
+    else:
+        app.config["NOTATION"] = {}
+
+    load_all_cards(app, notation_dict=app.config["NOTATION"])
     load_edges_from_file()
 
     resources_path = os.path.join(os.path.dirname(app.root_path), "resources.json")
