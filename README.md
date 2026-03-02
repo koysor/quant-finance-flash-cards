@@ -2,7 +2,7 @@
 
 Bite-sized revision flash cards for Quantitative Finance exams and interviews, designed for accessibility and clarity. Each card covers one concept — definition, key formula, worked example, and its finance application.
 
-53 cards · 8 topics · 99 concept connections
+117 cards · 9 topics · 321 concept connections
 
 ## Running the app
 

@@ -49,6 +49,9 @@ cards
   topic        TEXT           "Derivatives"
   tags         TEXT           comma-joined: "Black-Scholes,options,PDE,pricing,lognormal"
   html_content TEXT           pre-rendered HTML from markdown-it-py
+  created_date TEXT           ISO8601 string derived from file mtime
+  author       TEXT           "Claude 3.5 Sonnet" or "Unknown"
+  notation     TEXT           JSON list of notation definitions used in this card
   file_mtime   REAL           st_mtime used for incremental reload
 
 edges
@@ -91,6 +94,7 @@ POST /card/<path:card_id>/remove-link  remove_link() — deletes edge (CSRF), 30
 GET  /formulas                  formulas()     — all Key Formula sections aggregated by topic
 GET  /graph                     graph_view()   — vis.js with path finding, topic filter, edge weights
 GET  /random                    random_card()  — redirects to a random card
+GET  /recent                    recent()       — cards ordered by modification time (JSON or HTML)
 ```
 
 `<path:card_id>` is Flask's path converter, which allows `/` within the parameter — required because card IDs contain a topic segment (e.g. `derivatives/black-scholes-equation`).
@@ -135,7 +139,7 @@ No build step. All third-party JS/CSS is CDN:
 
 ## Key Design Decisions
 
-**Three committed sources of truth, one disposable cache.** `cards/**/*.md` owns card content; `edges.json` owns relationships (labels + plain-English descriptions); `resources.json` owns per-card learning resources (websites and videos, keyed by card ID). `graph.db` is derived from the first two and is gitignored — delete it and restart to rebuild completely.
+**Four committed sources of truth, one disposable cache.** `cards/**/*.md` owns card content; `edges.json` owns relationships (labels + plain-English descriptions); `resources.json` owns per-card learning resources (websites and videos, keyed by card ID); `notation.json` owns LaTeX symbol definitions. `graph.db` is derived from these and is gitignored — delete it and restart to rebuild completely.
 
 **Card IDs from file paths.** Renaming or moving a card file changes its ID. The cascade delete removes the orphaned edges from the DB, and the next mutation (add/remove link) writes the updated state back to `edges.json`. If you rename a card with important edges, update `edges.json` manually before committing.
 

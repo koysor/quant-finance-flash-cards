@@ -16,6 +16,7 @@ A Flask-based web application that manages revision flash cards for Quantitative
 - **Content:** `cards/**/*.md` (Card body and metadata)
 - **Relationships:** `edges.json` (Directed edges between cards)
 - **Resources:** `resources.json` (External links per card)
+- **Notation:** `notation.json` (LaTeX symbol definitions)
 - **Cache:** `graph.db` (Gitignored SQLite database, rebuilt on startup)
 
 ## Building and Running
