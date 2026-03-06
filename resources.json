@@ -335,6 +335,50 @@
       }
     ]
   },
+  "derivatives/charm-greeks": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Greeks (finance): Charm",
+        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Charm"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Option Greeks",
+        "url": "https://corporatefinanceinstitute.com/resources/derivatives/option-greeks/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "tastylive \u2014 Second-Order Greeks",
+        "url": "https://www.youtube.com/watch?v=OSJDhZMCvhI"
+      },
+      {
+        "title": "Khan Academy \u2014 Option Greeks Overview",
+        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
+      }
+    ]
+  },
+  "derivatives/colour-greeks": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Greeks (finance): Color",
+        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Color"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Option Greeks",
+        "url": "https://corporatefinanceinstitute.com/resources/derivatives/option-greeks/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "tastylive \u2014 Second-Order Greeks",
+        "url": "https://www.youtube.com/watch?v=OSJDhZMCvhI"
+      },
+      {
+        "title": "Khan Academy \u2014 Option Greeks Overview",
+        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
+      }
+    ]
+  },
   "derivatives/complete-markets": {
     "websites": [
       {
@@ -372,6 +416,50 @@
       {
         "title": "3Blue1Brown \u2014 Taylor Series",
         "url": "https://www.youtube.com/watch?v=3d6DsjIBzJ4"
+      }
+    ]
+  },
+  "derivatives/delta-gamma-approximation": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Delta-Gamma Hedging",
+        "url": "https://www.investopedia.com/terms/d/deltagamma-hedging.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Taylor Series",
+        "url": "https://en.wikipedia.org/wiki/Taylor_series"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown \u2014 Taylor Series",
+        "url": "https://www.youtube.com/watch?v=3d6DsjIBzJ4"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Taylor Approximation",
+        "url": "https://www.youtube.com/watch?v=3d6DsjIBzJ4"
+      }
+    ]
+  },
+  "derivatives/delta-greeks": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Delta",
+        "url": "https://www.investopedia.com/terms/d/delta.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Greeks (finance): Delta",
+        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Delta"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Option Greeks: Delta",
+        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
+      },
+      {
+        "title": "tastylive \u2014 Understanding Delta",
+        "url": "https://www.youtube.com/watch?v=SSk3x7_fRaY"
       }
     ]
   },
@@ -421,6 +509,28 @@
       {
         "title": "Khan Academy \u2014 European Option Pricing",
         "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
+      }
+    ]
+  },
+  "derivatives/gamma-greeks": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Gamma",
+        "url": "https://www.investopedia.com/terms/g/gamma.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Greeks (finance): Gamma",
+        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Gamma"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Option Greeks Overview",
+        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
+      },
+      {
+        "title": "tastylive \u2014 Understanding Gamma",
+        "url": "https://www.youtube.com/watch?v=OSJDhZMCvhI"
       }
     ]
   },
@@ -517,6 +627,28 @@
       }
     ]
   },
+  "derivatives/rho-greeks": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Rho",
+        "url": "https://www.investopedia.com/terms/r/rho.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Greeks (finance): Rho",
+        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Rho"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Option Greeks Overview",
+        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
+      },
+      {
+        "title": "tastylive \u2014 Understanding Rho",
+        "url": "https://www.youtube.com/watch?v=2hbMGMMBIas"
+      }
+    ]
+  },
   "derivatives/risk-neutral-pricing": {
     "websites": [
       {
@@ -535,6 +667,116 @@
       }
     ]
   },
+  "derivatives/speed-greeks": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Greeks (finance): Speed",
+        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Speed"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Option Greeks",
+        "url": "https://corporatefinanceinstitute.com/resources/derivatives/option-greeks/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "tastylive \u2014 Second-Order Greeks",
+        "url": "https://www.youtube.com/watch?v=OSJDhZMCvhI"
+      },
+      {
+        "title": "Khan Academy \u2014 Option Greeks Overview",
+        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
+      }
+    ]
+  },
+  "derivatives/theta-greeks": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Theta",
+        "url": "https://www.investopedia.com/terms/t/theta.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Greeks (finance): Theta",
+        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Theta"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Option Greeks Overview",
+        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
+      },
+      {
+        "title": "tastylive \u2014 Understanding Theta",
+        "url": "https://www.youtube.com/watch?v=7PM4rNDr4oI"
+      }
+    ]
+  },
+  "derivatives/vanna-greeks": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Greeks (finance): Vanna",
+        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Vanna"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Option Greeks",
+        "url": "https://corporatefinanceinstitute.com/resources/derivatives/option-greeks/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "tastylive \u2014 Second-Order Greeks",
+        "url": "https://www.youtube.com/watch?v=OSJDhZMCvhI"
+      },
+      {
+        "title": "Khan Academy \u2014 Option Greeks Overview",
+        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
+      }
+    ]
+  },
+  "derivatives/vega-greeks": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Vega",
+        "url": "https://www.investopedia.com/terms/v/vega.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Greeks (finance): Vega",
+        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Vega"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Option Greeks Overview",
+        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
+      },
+      {
+        "title": "tastylive \u2014 Understanding Vega",
+        "url": "https://www.youtube.com/watch?v=lnGniFFgkIc"
+      }
+    ]
+  },
+  "derivatives/veta-greeks": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Greeks (finance): Veta",
+        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Veta"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Option Greeks",
+        "url": "https://corporatefinanceinstitute.com/resources/derivatives/option-greeks/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "tastylive \u2014 Second-Order Greeks",
+        "url": "https://www.youtube.com/watch?v=OSJDhZMCvhI"
+      },
+      {
+        "title": "Khan Academy \u2014 Option Greeks Overview",
+        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
+      }
+    ]
+  },
   "derivatives/volatility-smile": {
     "websites": [
       {
@@ -548,69 +790,377 @@
     ],
     "videos": []
   },
+  "derivatives/volga-greeks": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Greeks (finance): Vomma",
+        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Vomma"
+      },
+      {
+        "title": "Investopedia \u2014 Vomma",
+        "url": "https://www.investopedia.com/terms/v/vomma.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "tastylive \u2014 Second-Order Greeks",
+        "url": "https://www.youtube.com/watch?v=OSJDhZMCvhI"
+      },
+      {
+        "title": "Khan Academy \u2014 Option Greeks Overview",
+        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
+      }
+    ]
+  },
+  "derivatives/zomma-greeks": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Greeks (finance): Zomma",
+        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Zomma"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Option Greeks",
+        "url": "https://corporatefinanceinstitute.com/resources/derivatives/option-greeks/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "tastylive \u2014 Second-Order Greeks",
+        "url": "https://www.youtube.com/watch?v=OSJDhZMCvhI"
+      },
+      {
+        "title": "Khan Academy \u2014 Option Greeks Overview",
+        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
+      }
+    ]
+  },
+  "financial-maths/absolute-return": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Absolute Return",
+        "url": "https://www.investopedia.com/terms/a/absolutereturn.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Absolute Return",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/absolute-return/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Patrick Boyle \u2014 Absolute vs Relative Return",
+        "url": "https://www.youtube.com/watch?v=Pu8gDCmMFbo"
+      },
+      {
+        "title": "Khan Academy \u2014 Return on Investment",
+        "url": "https://www.youtube.com/watch?v=RuPMsK0mQC8"
+      }
+    ]
+  },
+  "financial-maths/active-share": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Active Share",
+        "url": "https://www.investopedia.com/terms/a/active-share.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Active Share",
+        "url": "https://en.wikipedia.org/wiki/Active_share"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Patrick Boyle \u2014 Closet Indexing and Active Share",
+        "url": "https://www.youtube.com/watch?v=nL5RXQK-wbA"
+      },
+      {
+        "title": "CFA Institute \u2014 Active Share Explained",
+        "url": "https://www.youtube.com/watch?v=Kq3dGNi-xCM"
+      }
+    ]
+  },
+  "financial-maths/alpha-and-beta": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Alpha",
+        "url": "https://www.investopedia.com/terms/a/alpha.asp"
+      },
+      {
+        "title": "Investopedia \u2014 Beta",
+        "url": "https://www.investopedia.com/terms/b/beta.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 CAPM: Alpha and Beta",
+        "url": "https://www.youtube.com/watch?v=oMnOwhGIgHE"
+      },
+      {
+        "title": "Patrick Boyle \u2014 Alpha, Beta, and Smart Beta",
+        "url": "https://www.youtube.com/watch?v=Iq3E4vkBL3o"
+      }
+    ]
+  },
   "financial-maths/arbitrage-pricing-theory": {
     "websites": [
       {
-        "title": "Investopedia — Arbitrage Pricing Theory (APT)",
+        "title": "Investopedia \u2014 Arbitrage Pricing Theory (APT)",
         "url": "https://www.investopedia.com/terms/a/apt.asp"
       },
       {
-        "title": "Corporate Finance Institute — Arbitrage Pricing Theory",
+        "title": "Corporate Finance Institute \u2014 Arbitrage Pricing Theory",
         "url": "https://corporatefinanceinstitute.com/resources/valuation/arbitrage-pricing-theory-apt/"
       }
     ],
     "videos": [
       {
-        "title": "Khan Academy — Arbitrage Pricing Theory",
+        "title": "Khan Academy \u2014 Arbitrage Pricing Theory",
         "url": "https://www.youtube.com/watch?v=vLbGX3cA-HA"
       },
       {
-        "title": "Patrick Boyle — Factor Models and APT",
+        "title": "Patrick Boyle \u2014 Factor Models and APT",
         "url": "https://www.youtube.com/watch?v=eXLbFgIRkOs"
+      }
+    ]
+  },
+  "financial-maths/benchmark-index": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Benchmark",
+        "url": "https://www.investopedia.com/terms/b/benchmark.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Benchmark",
+        "url": "https://corporatefinanceinstitute.com/resources/valuation/benchmark/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 What Is an Index Fund?",
+        "url": "https://www.youtube.com/watch?v=Wv0pnBYFLSY"
+      },
+      {
+        "title": "Patrick Boyle \u2014 How Indices Work",
+        "url": "https://www.youtube.com/watch?v=SrDEgNBxlqA"
+      }
+    ]
+  },
+  "financial-maths/calmar-ratio": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Calmar Ratio",
+        "url": "https://www.investopedia.com/terms/c/calmarratio.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Calmar Ratio",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/risk-management/calmar-ratio/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bionic Turtle \u2014 Calmar and Sterling Ratios",
+        "url": "https://www.youtube.com/watch?v=ZSELQj1pEgY"
+      },
+      {
+        "title": "QuantPy \u2014 Risk-Adjusted Performance Ratios in Python",
+        "url": "https://www.youtube.com/watch?v=7PK1JTsDOjU"
       }
     ]
   },
   "financial-maths/capital-asset-pricing-model": {
     "websites": [
       {
-        "title": "Investopedia — Capital Asset Pricing Model (CAPM)",
+        "title": "Investopedia \u2014 Capital Asset Pricing Model (CAPM)",
         "url": "https://www.investopedia.com/terms/c/capm.asp"
       },
       {
-        "title": "Corporate Finance Institute — CAPM",
+        "title": "Corporate Finance Institute \u2014 CAPM",
         "url": "https://corporatefinanceinstitute.com/resources/valuation/capital-asset-pricing-model-capm/"
       }
     ],
     "videos": [
       {
-        "title": "Khan Academy — CAPM",
+        "title": "Khan Academy \u2014 CAPM",
         "url": "https://www.youtube.com/watch?v=LWRYmOJNGjA"
       },
       {
-        "title": "The Organic Chemistry Tutor — CAPM Explained",
+        "title": "The Organic Chemistry Tutor \u2014 CAPM Explained",
         "url": "https://www.youtube.com/watch?v=2hSgWOqpEVk"
+      }
+    ]
+  },
+  "financial-maths/factor-investing": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Factor Investing",
+        "url": "https://www.investopedia.com/terms/f/factor-investing.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Factor Investing",
+        "url": "https://en.wikipedia.org/wiki/Factor_investing"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Patrick Boyle \u2014 Factor Investing Explained",
+        "url": "https://www.youtube.com/watch?v=ViTnIebSzj4"
+      },
+      {
+        "title": "Ben Felix \u2014 Factor Investing for Beginners",
+        "url": "https://www.youtube.com/watch?v=jKWbW7Wgm0w"
       }
     ]
   },
   "financial-maths/fama-french-three-factor-model": {
     "websites": [
       {
-        "title": "Investopedia — Fama and French Three-Factor Model",
+        "title": "Investopedia \u2014 Fama and French Three-Factor Model",
         "url": "https://www.investopedia.com/terms/f/famaandfrenchthreefactormodel.asp"
       },
       {
-        "title": "Corporate Finance Institute — Fama-French Three-Factor Model",
+        "title": "Corporate Finance Institute \u2014 Fama-French Three-Factor Model",
         "url": "https://corporatefinanceinstitute.com/resources/valuation/fama-french-three-factor-model/"
       }
     ],
     "videos": [
       {
-        "title": "Ben Felix — The Fama-French Three-Factor Model",
+        "title": "Ben Felix \u2014 The Fama-French Three-Factor Model",
         "url": "https://www.youtube.com/watch?v=jg2dDlGEbEk"
       },
       {
-        "title": "Patrick Boyle — Factor Investing Explained",
+        "title": "Patrick Boyle \u2014 Factor Investing Explained",
         "url": "https://www.youtube.com/watch?v=ViTnIebSzj4"
+      }
+    ]
+  },
+  "financial-maths/fund-of-funds": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Fund of Funds",
+        "url": "https://www.investopedia.com/terms/f/fundsoffunds.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Fund of Funds",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/fund-of-funds/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Patrick Boyle \u2014 Fund of Funds Explained",
+        "url": "https://www.youtube.com/watch?v=BWKjHsNLDx4"
+      },
+      {
+        "title": "Khan Academy \u2014 Hedge Fund Fee Structure",
+        "url": "https://www.youtube.com/watch?v=kxkrdVzEXdI"
+      }
+    ]
+  },
+  "financial-maths/hedge-funds": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Hedge Fund",
+        "url": "https://www.investopedia.com/terms/h/hedgefund.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Hedge Fund",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/hedge-fund/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Hedge Funds Intro",
+        "url": "https://www.youtube.com/watch?v=Rgl_TmHEMeg"
+      },
+      {
+        "title": "Patrick Boyle \u2014 How Hedge Funds Actually Work",
+        "url": "https://www.youtube.com/watch?v=do2vLKeAK3I"
+      }
+    ]
+  },
+  "financial-maths/information-ratio": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Information Ratio",
+        "url": "https://www.investopedia.com/terms/i/informationratio.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Information Ratio",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/information-ratio/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bionic Turtle \u2014 Information Ratio vs Sharpe Ratio",
+        "url": "https://www.youtube.com/watch?v=2VkO4wiG-gA"
+      },
+      {
+        "title": "AnalystPrep \u2014 Information Ratio Explained",
+        "url": "https://www.youtube.com/watch?v=pq1cYdkQEsU"
+      }
+    ]
+  },
+  "financial-maths/jensens-alpha": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Jensen's Alpha",
+        "url": "https://www.investopedia.com/terms/j/jensensmeasure.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Jensen's Alpha",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/risk-management/jensens-measure/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bionic Turtle \u2014 Jensen's Alpha Explained",
+        "url": "https://www.youtube.com/watch?v=6-23ABIVbrM"
+      },
+      {
+        "title": "AnalystPrep \u2014 Jensen's Alpha vs Sharpe vs Treynor",
+        "url": "https://www.youtube.com/watch?v=4-g7krFJN5Y"
+      }
+    ]
+  },
+  "financial-maths/leverage": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Financial Leverage",
+        "url": "https://www.investopedia.com/terms/l/leverage.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Leverage",
+        "url": "https://corporatefinanceinstitute.com/resources/accounting/leverage/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Introduction to Leverage",
+        "url": "https://www.youtube.com/watch?v=ij3j22IiQLE"
+      },
+      {
+        "title": "The Plain Bagel \u2014 How Leverage Works",
+        "url": "https://www.youtube.com/watch?v=Kf8E0XKjGXY"
+      }
+    ]
+  },
+  "financial-maths/long-short-equity": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Long-Short Equity",
+        "url": "https://www.investopedia.com/terms/l/long-shortequity.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Long-Short Equity",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/long-short-equity/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Patrick Boyle \u2014 Long-Short Equity Strategies",
+        "url": "https://www.youtube.com/watch?v=2Ht5_qGJPsI"
+      },
+      {
+        "title": "Khan Academy \u2014 Short Selling",
+        "url": "https://www.youtube.com/watch?v=2GI1gLqMEEo"
       }
     ]
   },
@@ -632,47 +1182,47 @@
       }
     ]
   },
-  "financial-maths/security-market-line": {
+  "financial-maths/omega-ratio": {
     "websites": [
       {
-        "title": "Investopedia — Security Market Line (SML)",
-        "url": "https://www.investopedia.com/terms/s/sml.asp"
+        "title": "Investopedia \u2014 Omega Ratio",
+        "url": "https://www.investopedia.com/terms/o/omega-ratio.asp"
       },
       {
-        "title": "Corporate Finance Institute — Security Market Line",
-        "url": "https://corporatefinanceinstitute.com/resources/valuation/security-market-line-sml/"
+        "title": "Wikipedia \u2014 Omega Ratio",
+        "url": "https://en.wikipedia.org/wiki/Omega_ratio"
       }
     ],
     "videos": [
       {
-        "title": "Khan Academy — Security Market Line",
-        "url": "https://www.youtube.com/watch?v=1EP810IuHCU"
+        "title": "QuantPy \u2014 Omega Ratio in Python",
+        "url": "https://www.youtube.com/watch?v=BhPjEdS2GEk"
       },
       {
-        "title": "The Organic Chemistry Tutor — Security Market Line Explained",
-        "url": "https://www.youtube.com/watch?v=H6TwePkGp9Q"
+        "title": "Bionic Turtle \u2014 Beyond the Sharpe Ratio",
+        "url": "https://www.youtube.com/watch?v=J95KxXfMfqI"
       }
     ]
   },
-  "financial-maths/sharpe-ratio": {
+  "financial-maths/relative-return": {
     "websites": [
       {
-        "title": "Investopedia — Sharpe Ratio",
-        "url": "https://www.investopedia.com/terms/s/sharperatio.asp"
+        "title": "Investopedia \u2014 Relative Return",
+        "url": "https://www.investopedia.com/terms/r/relativereturn.asp"
       },
       {
-        "title": "Corporate Finance Institute — Sharpe Ratio",
-        "url": "https://corporatefinanceinstitute.com/resources/risk-management/sharpe-ratio/"
+        "title": "Investopedia \u2014 Tracking Error",
+        "url": "https://www.investopedia.com/terms/t/trackingerror.asp"
       }
     ],
     "videos": [
       {
-        "title": "Khan Academy — Sharpe Ratio",
-        "url": "https://www.youtube.com/watch?v=XfGHkFBiB0g"
+        "title": "CFA Institute \u2014 Performance Measurement Basics",
+        "url": "https://www.youtube.com/watch?v=1QF4AuPJFGo"
       },
       {
-        "title": "Ben Felix — Understanding Risk-Adjusted Returns",
-        "url": "https://www.youtube.com/watch?v=t2rFR4M1qq0"
+        "title": "Patrick Boyle \u2014 How Fund Managers Are Evaluated",
+        "url": "https://www.youtube.com/watch?v=p3y4pMRPk_4"
       }
     ]
   },
@@ -689,6 +1239,160 @@
     ],
     "videos": []
   },
+  "financial-maths/risk-budgeting": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Risk Budgeting",
+        "url": "https://www.investopedia.com/terms/r/risk-budgeting.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Risk Parity (Risk Budgeting section)",
+        "url": "https://en.wikipedia.org/wiki/Risk_parity"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bionic Turtle \u2014 Risk Budgeting and Contributions",
+        "url": "https://www.youtube.com/watch?v=VcOLIqhXj5c"
+      },
+      {
+        "title": "QuantPy \u2014 Risk Contributions in Python",
+        "url": "https://www.youtube.com/watch?v=NKEkRxE0vH0"
+      }
+    ]
+  },
+  "financial-maths/risk-parity": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Risk Parity",
+        "url": "https://www.investopedia.com/terms/r/risk-parity.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Risk Parity",
+        "url": "https://en.wikipedia.org/wiki/Risk_parity"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Patrick Boyle \u2014 Risk Parity Explained",
+        "url": "https://www.youtube.com/watch?v=UYdoxqtEMn0"
+      },
+      {
+        "title": "Bridgewater \u2014 All Weather Principles",
+        "url": "https://www.youtube.com/watch?v=Nu4lHaSh7D4"
+      }
+    ]
+  },
+  "financial-maths/security-market-line": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Security Market Line (SML)",
+        "url": "https://www.investopedia.com/terms/s/sml.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Security Market Line",
+        "url": "https://corporatefinanceinstitute.com/resources/valuation/security-market-line-sml/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Security Market Line",
+        "url": "https://www.youtube.com/watch?v=1EP810IuHCU"
+      },
+      {
+        "title": "The Organic Chemistry Tutor \u2014 Security Market Line Explained",
+        "url": "https://www.youtube.com/watch?v=H6TwePkGp9Q"
+      }
+    ]
+  },
+  "financial-maths/sharpe-ratio": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Sharpe Ratio",
+        "url": "https://www.investopedia.com/terms/s/sharperatio.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Sharpe Ratio",
+        "url": "https://corporatefinanceinstitute.com/resources/risk-management/sharpe-ratio/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Sharpe Ratio",
+        "url": "https://www.youtube.com/watch?v=XfGHkFBiB0g"
+      },
+      {
+        "title": "Ben Felix \u2014 Understanding Risk-Adjusted Returns",
+        "url": "https://www.youtube.com/watch?v=t2rFR4M1qq0"
+      }
+    ]
+  },
+  "financial-maths/short-selling": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Short Selling",
+        "url": "https://www.investopedia.com/terms/s/shortselling.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Short Selling",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/short-selling/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Short Selling",
+        "url": "https://www.youtube.com/watch?v=2GI1gLqMEEo"
+      },
+      {
+        "title": "The Plain Bagel \u2014 Short Selling Explained",
+        "url": "https://www.youtube.com/watch?v=1mlR3y8DIKU"
+      }
+    ]
+  },
+  "financial-maths/sortino-ratio": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Sortino Ratio",
+        "url": "https://www.investopedia.com/terms/s/sortinoratio.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Sortino Ratio",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/risk-management/sortino-ratio-2/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bionic Turtle \u2014 Sortino Ratio vs Sharpe Ratio",
+        "url": "https://www.youtube.com/watch?v=v0s0_H2Z9Fs"
+      },
+      {
+        "title": "AnalystPrep \u2014 Sortino Ratio Explained",
+        "url": "https://www.youtube.com/watch?v=ohD70a1sEKo"
+      }
+    ]
+  },
+  "financial-maths/sterling-ratio": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Sterling Ratio",
+        "url": "https://www.investopedia.com/terms/s/sterling-ratio.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Sterling Ratio",
+        "url": "https://en.wikipedia.org/wiki/Sterling_ratio"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bionic Turtle \u2014 Calmar and Sterling Ratios",
+        "url": "https://www.youtube.com/watch?v=ZSELQj1pEgY"
+      },
+      {
+        "title": "QuantPy \u2014 Risk-Adjusted Performance Ratios",
+        "url": "https://www.youtube.com/watch?v=7PK1JTsDOjU"
+      }
+    ]
+  },
   "financial-maths/time-value-of-money": {
     "websites": [
       {
@@ -704,6 +1408,50 @@
       {
         "title": "Khan Academy \u2014 Time Value of Money",
         "url": "https://www.youtube.com/watch?v=733mgqrzNKs"
+      }
+    ]
+  },
+  "financial-maths/tracking-error": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Tracking Error",
+        "url": "https://www.investopedia.com/terms/t/trackingerror.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Tracking Error",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/portfolio-management/tracking-error/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bionic Turtle \u2014 Tracking Error",
+        "url": "https://www.youtube.com/watch?v=5-ci4EgdwJY"
+      },
+      {
+        "title": "AnalystPrep \u2014 Tracking Error and Information Ratio",
+        "url": "https://www.youtube.com/watch?v=6K1NCWU5b60"
+      }
+    ]
+  },
+  "financial-maths/treynor-ratio": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Treynor Ratio",
+        "url": "https://www.investopedia.com/terms/t/treynorratio.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Treynor Ratio",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/risk-management/treynor-ratio/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bionic Turtle \u2014 Treynor vs Sharpe vs Jensen",
+        "url": "https://www.youtube.com/watch?v=E4TIYFljgJM"
+      },
+      {
+        "title": "AnalystPrep \u2014 Treynor Ratio",
+        "url": "https://www.youtube.com/watch?v=_35uErvO920"
       }
     ]
   },
@@ -1241,6 +1989,28 @@
     ],
     "videos": []
   },
+  "risk/drawdown-duration": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Drawdown Duration",
+        "url": "https://www.investopedia.com/terms/d/drawdown.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Drawdown (Economics)",
+        "url": "https://en.wikipedia.org/wiki/Drawdown_(economics)"
+      }
+    ],
+    "videos": [
+      {
+        "title": "QuantPy \u2014 Drawdown Analysis in Python",
+        "url": "https://www.youtube.com/watch?v=scNyIxMTt9M"
+      },
+      {
+        "title": "Bionic Turtle \u2014 Drawdown Measures",
+        "url": "https://www.youtube.com/watch?v=jl0NMDbGFP0"
+      }
+    ]
+  },
   "risk/extreme-value-theory": {
     "websites": [
       {
@@ -1253,6 +2023,28 @@
       }
     ],
     "videos": []
+  },
+  "risk/maximum-drawdown": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Maximum Drawdown",
+        "url": "https://www.investopedia.com/terms/m/maximum-drawdown-mdd.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Maximum Drawdown",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/risk-management/maximum-drawdown/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bionic Turtle \u2014 Maximum Drawdown",
+        "url": "https://www.youtube.com/watch?v=jl0NMDbGFP0"
+      },
+      {
+        "title": "QuantPy \u2014 Calculating Maximum Drawdown in Python",
+        "url": "https://www.youtube.com/watch?v=scNyIxMTt9M"
+      }
+    ]
   },
   "risk/model-limitations": {
     "websites": [
@@ -1332,21 +2124,21 @@
   "statistics/beta-estimation": {
     "websites": [
       {
-        "title": "Investopedia — Beta: Definition and How to Calculate",
+        "title": "Investopedia \u2014 Beta: Definition and How to Calculate",
         "url": "https://www.investopedia.com/terms/b/beta.asp"
       },
       {
-        "title": "Corporate Finance Institute — Beta in Finance",
+        "title": "Corporate Finance Institute \u2014 Beta in Finance",
         "url": "https://corporatefinanceinstitute.com/resources/valuation/what-is-beta-guide/"
       }
     ],
     "videos": [
       {
-        "title": "Khan Academy — Beta for Stocks",
+        "title": "Khan Academy \u2014 Beta for Stocks",
         "url": "https://www.youtube.com/watch?v=lBDa1NH8MNo"
       },
       {
-        "title": "Patrick Boyle — What Is Beta?",
+        "title": "Patrick Boyle \u2014 What Is Beta?",
         "url": "https://www.youtube.com/watch?v=vZMudPi7T2M"
       }
     ]
