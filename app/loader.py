@@ -47,7 +47,7 @@ def extract_notation(raw_text: str, notation_dict: dict) -> list[dict]:
             found.add(key)
 
     return sorted(
-        [notation_dict[k] for k in found],
+        [{**notation_dict[k], "key": k} for k in found],
         key=lambda e: e["meaning"],
     )
 

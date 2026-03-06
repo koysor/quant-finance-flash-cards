@@ -944,6 +944,28 @@
       }
     ]
   },
+  "financial-maths/black-litterman-model": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Black\u2013Litterman Model",
+        "url": "https://en.wikipedia.org/wiki/Black%E2%80%93Litterman_model"
+      },
+      {
+        "title": "Investopedia \u2014 Black-Litterman Model",
+        "url": "https://www.investopedia.com/terms/b/black-litterman_model.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "QuantPy \u2014 Black-Litterman Portfolio Optimisation",
+        "url": "https://www.youtube.com/watch?v=kT6HqVBGwGA"
+      },
+      {
+        "title": "ritvikmath \u2014 Black-Litterman Model",
+        "url": "https://www.youtube.com/watch?v=bfJvHCaF8YA"
+      }
+    ]
+  },
   "financial-maths/calmar-ratio": {
     "websites": [
       {
@@ -963,6 +985,50 @@
       {
         "title": "QuantPy \u2014 Risk-Adjusted Performance Ratios in Python",
         "url": "https://www.youtube.com/watch?v=7PK1JTsDOjU"
+      }
+    ]
+  },
+  "financial-maths/capital-market-line": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Capital Market Line",
+        "url": "https://www.investopedia.com/terms/c/cml.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Capital Market Line",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/capital-market-line-cml/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Efficient Frontier and CML",
+        "url": "https://www.youtube.com/watch?v=cjU1tVeP-9o"
+      },
+      {
+        "title": "Patrick Boyle \u2014 Capital Market Line Explained",
+        "url": "https://www.youtube.com/watch?v=XZOGKMCdXkk"
+      }
+    ]
+  },
+  "financial-maths/efficient-frontier": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Efficient Frontier",
+        "url": "https://www.investopedia.com/terms/e/efficientfrontier.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Efficient Frontier",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/efficient-frontier/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Efficient Frontier",
+        "url": "https://www.youtube.com/watch?v=cjU1tVeP-9o"
+      },
+      {
+        "title": "Ben Felix \u2014 The Problem with the Efficient Frontier",
+        "url": "https://www.youtube.com/watch?v=DhMYCnAEyQ8"
       }
     ]
   },
@@ -1164,6 +1230,28 @@
       }
     ]
   },
+  "financial-maths/minimum-variance-portfolio": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Minimum Variance Portfolio",
+        "url": "https://www.investopedia.com/terms/m/minimum-variance-portfolio.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Modern Portfolio Theory (Minimum Variance)",
+        "url": "https://en.wikipedia.org/wiki/Modern_portfolio_theory#The_minimum_variance_portfolio"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Patrick Boyle \u2014 Minimum Variance Portfolios",
+        "url": "https://www.youtube.com/watch?v=5JePICTXaps"
+      },
+      {
+        "title": "QuantPy \u2014 Minimum Variance Portfolio in Python",
+        "url": "https://www.youtube.com/watch?v=uQQi5Lx3KE4"
+      }
+    ]
+  },
   "financial-maths/modern-portfolio-theory": {
     "websites": [
       {
@@ -1223,6 +1311,28 @@
       {
         "title": "Patrick Boyle \u2014 How Fund Managers Are Evaluated",
         "url": "https://www.youtube.com/watch?v=p3y4pMRPk_4"
+      }
+    ]
+  },
+  "financial-maths/resampled-efficient-frontier": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Resampled Efficient Frontier",
+        "url": "https://en.wikipedia.org/wiki/Resampled_efficient_frontier"
+      },
+      {
+        "title": "New Frontier Advisors \u2014 Resampled Efficiency",
+        "url": "https://www.newfrontieradvisors.com/research/resampled-efficiency/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "QuantPy \u2014 Robust Portfolio Optimisation",
+        "url": "https://www.youtube.com/watch?v=fJPJfJnCSMg"
+      },
+      {
+        "title": "ritvikmath \u2014 Bootstrap Methods in Finance",
+        "url": "https://www.youtube.com/watch?v=N4ZQQqyIf6k"
       }
     ]
   },
@@ -1455,6 +1565,28 @@
       }
     ]
   },
+  "financial-maths/two-fund-separation-theorem": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Mutual Fund Separation Theorem",
+        "url": "https://en.wikipedia.org/wiki/Mutual_fund_separation_theorem"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Two-Fund Separation",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/separation-theorem/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Capital Market Line and Separation",
+        "url": "https://www.youtube.com/watch?v=8TJQhQ2GZ0Y"
+      },
+      {
+        "title": "Patrick Boyle \u2014 CAPM and Two Fund Separation",
+        "url": "https://www.youtube.com/watch?v=lCaFzQzlgSU"
+      }
+    ]
+  },
   "financial-maths/yield-curve": {
     "websites": [
       {
@@ -1486,6 +1618,50 @@
       }
     ]
   },
+  "linear-algebra/condition-number": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Condition Number",
+        "url": "https://en.wikipedia.org/wiki/Condition_number"
+      },
+      {
+        "title": "MathWorld \u2014 Condition Number",
+        "url": "https://mathworld.wolfram.com/ConditionNumber.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Numerical Linear Algebra",
+        "url": "https://www.youtube.com/watch?v=LZMiEO5vmSE"
+      },
+      {
+        "title": "Steve Brunton \u2014 Condition Number and Matrix Norms",
+        "url": "https://www.youtube.com/watch?v=GXhLrU5sm14"
+      }
+    ]
+  },
+  "linear-algebra/covariance-matrix": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Covariance Matrix",
+        "url": "https://en.wikipedia.org/wiki/Covariance_matrix"
+      },
+      {
+        "title": "Investopedia \u2014 Variance-Covariance Method",
+        "url": "https://www.investopedia.com/terms/v/variance-covariance-method.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest \u2014 Covariance Matrix Explained",
+        "url": "https://www.youtube.com/watch?v=152tSYtiQbw"
+      },
+      {
+        "title": "ritvikmath \u2014 Covariance Matrix",
+        "url": "https://www.youtube.com/watch?v=locZabK4POc"
+      }
+    ]
+  },
   "linear-algebra/determinant": {
     "websites": [
       {
@@ -1505,6 +1681,28 @@
       {
         "title": "The Organic Chemistry Tutor \u2014 Determinants",
         "url": "https://www.youtube.com/watch?v=H9BWRYJNIv4"
+      }
+    ]
+  },
+  "linear-algebra/eigenvalue-clipping": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Marchenko\u2013Pastur Distribution",
+        "url": "https://en.wikipedia.org/wiki/Marchenko%E2%80%93Pastur_distribution"
+      },
+      {
+        "title": "Wikipedia \u2014 Random Matrix Theory",
+        "url": "https://en.wikipedia.org/wiki/Random_matrix"
+      }
+    ],
+    "videos": [
+      {
+        "title": "QuantPy \u2014 Random Matrix Theory for Portfolio Optimisation",
+        "url": "https://www.youtube.com/watch?v=H6gR9PJuA7k"
+      },
+      {
+        "title": "Marcos L\u00f3pez de Prado \u2014 Denoising Covariance Matrices",
+        "url": "https://www.youtube.com/watch?v=G0t1_FE1JHs"
       }
     ]
   },
@@ -1772,6 +1970,28 @@
       }
     ]
   },
+  "probability/copulas": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Copula (Probability Theory)",
+        "url": "https://en.wikipedia.org/wiki/Copula_(probability_theory)"
+      },
+      {
+        "title": "Investopedia \u2014 Copula",
+        "url": "https://www.investopedia.com/terms/c/copula.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "ritvikmath \u2014 Copulas Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=Nh-GMnYsfUM"
+      },
+      {
+        "title": "QuantPy \u2014 Copulas in Finance",
+        "url": "https://www.youtube.com/watch?v=vxK1Hh1JdNY"
+      }
+    ]
+  },
   "probability/cumulative-distribution-function": {
     "websites": [
       {
@@ -1870,6 +2090,28 @@
     ],
     "videos": []
   },
+  "probability/multivariate-normal-distribution": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Multivariate Normal Distribution",
+        "url": "https://en.wikipedia.org/wiki/Multivariate_normal_distribution"
+      },
+      {
+        "title": "Brilliant \u2014 Multivariate Gaussian Distribution",
+        "url": "https://brilliant.org/wiki/multivariate-normal-distribution/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest \u2014 Multivariate Normal Distribution",
+        "url": "https://www.youtube.com/watch?v=eho8xH3E6mE"
+      },
+      {
+        "title": "ritvikmath \u2014 Multivariate Gaussian",
+        "url": "https://www.youtube.com/watch?v=d4_96ZWu3Vk"
+      }
+    ]
+  },
   "probability/normal-distribution": {
     "websites": [
       {
@@ -1955,6 +2197,28 @@
       {
         "title": "Khan Academy \u2014 t-Distribution Explained",
         "url": "https://www.youtube.com/watch?v=Uv6nGIgZMVw"
+      }
+    ]
+  },
+  "probability/tail-dependence": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Tail Dependence",
+        "url": "https://en.wikipedia.org/wiki/Tail_dependence"
+      },
+      {
+        "title": "Investopedia \u2014 Tail Risk",
+        "url": "https://www.investopedia.com/terms/t/tailrisk.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "ritvikmath \u2014 Tail Dependence and Copulas",
+        "url": "https://www.youtube.com/watch?v=Nh-GMnYsfUM"
+      },
+      {
+        "title": "QuantPy \u2014 Copulas and Tail Risk",
+        "url": "https://www.youtube.com/watch?v=vxK1Hh1JdNY"
       }
     ]
   },
@@ -2121,6 +2385,28 @@
       }
     ]
   },
+  "statistics/arch-model": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 ARCH Model",
+        "url": "https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity"
+      },
+      {
+        "title": "Investopedia \u2014 ARCH Models",
+        "url": "https://www.investopedia.com/terms/a/autoregressive-conditional-heteroskedasticity.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest \u2014 ARCH Model Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=lJDiDSHMisQ"
+      },
+      {
+        "title": "ritvikmath \u2014 ARCH Model",
+        "url": "https://www.youtube.com/watch?v=wL8VjS4bKAU"
+      }
+    ]
+  },
   "statistics/beta-estimation": {
     "websites": [
       {
@@ -2158,6 +2444,28 @@
       {
         "title": "3Blue1Brown \u2014 But What Is the Central Limit Theorem?",
         "url": "https://www.youtube.com/watch?v=zeJD6dqJ5lo"
+      }
+    ]
+  },
+  "statistics/covariance": {
+    "websites": [
+      {
+        "title": "Khan Academy \u2014 Covariance",
+        "url": "https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/more-on-regression/v/covariance-and-the-regression-line"
+      },
+      {
+        "title": "Investopedia \u2014 Covariance",
+        "url": "https://www.investopedia.com/terms/c/covariance.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest \u2014 Covariance Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=qtaqvPAeEJY"
+      },
+      {
+        "title": "Khan Academy \u2014 Covariance and the Regression Line",
+        "url": "https://www.youtube.com/watch?v=xGbpuFNR1ME"
       }
     ]
   },
@@ -2201,6 +2509,94 @@
       }
     ]
   },
+  "statistics/ewma-volatility": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Exponentially Weighted Moving Average",
+        "url": "https://www.investopedia.com/articles/07/ewma.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 EWMA Chart",
+        "url": "https://en.wikipedia.org/wiki/EWMA_chart"
+      }
+    ],
+    "videos": [
+      {
+        "title": "QuantPy \u2014 EWMA Volatility Estimation",
+        "url": "https://www.youtube.com/watch?v=QH-hPZiHMQ4"
+      },
+      {
+        "title": "ritvikmath \u2014 Exponential Smoothing",
+        "url": "https://www.youtube.com/watch?v=k_HN0wOKDd0"
+      }
+    ]
+  },
+  "statistics/egarch-model": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 EGARCH",
+        "url": "https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity#EGARCH"
+      },
+      {
+        "title": "Investopedia \u2014 GARCH Models (EGARCH Variant)",
+        "url": "https://www.investopedia.com/terms/g/garch.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "ritvikmath \u2014 EGARCH Model",
+        "url": "https://www.youtube.com/watch?v=hksVMO0WBHI"
+      },
+      {
+        "title": "QuantPy \u2014 Asymmetric Volatility Models",
+        "url": "https://www.youtube.com/watch?v=QH-hPZiHMQ4"
+      }
+    ]
+  },
+  "statistics/factor-models": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Factor Analysis",
+        "url": "https://en.wikipedia.org/wiki/Factor_analysis"
+      },
+      {
+        "title": "Investopedia \u2014 Factor Models",
+        "url": "https://www.investopedia.com/terms/m/multifactor-model.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Ben Felix \u2014 Factor Investing",
+        "url": "https://www.youtube.com/watch?v=jKWbW7Wgm0w"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Factor Models",
+        "url": "https://www.youtube.com/watch?v=9MPoFJHpNqU"
+      }
+    ]
+  },
+  "statistics/garch-model": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 GARCH",
+        "url": "https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity#GARCH"
+      },
+      {
+        "title": "Investopedia \u2014 GARCH Process",
+        "url": "https://www.investopedia.com/terms/g/garch.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest \u2014 GARCH Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=lJDiDSHMisQ"
+      },
+      {
+        "title": "ritvikmath \u2014 GARCH Model",
+        "url": "https://www.youtube.com/watch?v=hksVMO0WBHI"
+      }
+    ]
+  },
   "statistics/jarque-bera-test": {
     "websites": [
       {
@@ -2234,6 +2630,50 @@
       {
         "title": "Khan Academy \u2014 Comparing Distributions with Dot Plots",
         "url": "https://www.youtube.com/watch?v=HMkllhBI91Y"
+      }
+    ]
+  },
+  "statistics/portfolio-variance": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Portfolio Variance",
+        "url": "https://www.investopedia.com/terms/p/portfolio-variance.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Portfolio Variance",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/portfolio-variance/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Diversification",
+        "url": "https://www.youtube.com/watch?v=KFQoIG4-CIE"
+      },
+      {
+        "title": "The Organic Chemistry Tutor \u2014 Portfolio Expected Return and Variance",
+        "url": "https://www.youtube.com/watch?v=RDKmvtj3jiA"
+      }
+    ]
+  },
+  "statistics/principal-component-analysis": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Principal Component Analysis",
+        "url": "https://en.wikipedia.org/wiki/Principal_component_analysis"
+      },
+      {
+        "title": "Investopedia \u2014 Principal Component Analysis",
+        "url": "https://www.investopedia.com/terms/p/principal-component-analysis-pca.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest \u2014 PCA Step-by-Step",
+        "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ"
+      },
+      {
+        "title": "3Blue1Brown \u2014 Eigenvectors and Eigenvalues",
+        "url": "https://www.youtube.com/watch?v=PFDu9oVAE1g"
       }
     ]
   },
@@ -2278,6 +2718,28 @@
       {
         "title": "Khan Academy \u2014 Mean, Median and Skew",
         "url": "https://www.youtube.com/watch?v=GrynkZB3E7M"
+      }
+    ]
+  },
+  "statistics/shrinkage-estimators": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Shrinkage Estimator",
+        "url": "https://en.wikipedia.org/wiki/Shrinkage_(statistics)"
+      },
+      {
+        "title": "Ledoit & Wolf \u2014 Honey, I Shrunk the Sample Covariance Matrix",
+        "url": "https://www.ledoit.net/honey.pdf"
+      }
+    ],
+    "videos": [
+      {
+        "title": "ritvikmath \u2014 Shrinkage Estimators",
+        "url": "https://www.youtube.com/watch?v=gfI-9Gih3No"
+      },
+      {
+        "title": "Quantopian \u2014 Estimating Covariance Matrices",
+        "url": "https://www.youtube.com/watch?v=siwIJx8MdZ0"
       }
     ]
   },

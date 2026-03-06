@@ -858,6 +858,24 @@
     "description": "Tracking error measures the volatility of the difference between portfolio and benchmark returns \u2014 the benchmark is the anchor from which deviations are calculated."
   },
   {
+    "source": "financial-maths/black-litterman-model",
+    "target": "financial-maths/efficient-frontier",
+    "label": "stabilises",
+    "description": "Black-Litterman produces stable expected returns that, when fed into Markowitz optimisation, generate sensible portfolios on the efficient frontier \u2014 unlike raw return estimates which cause the frontier to shift erratically."
+  },
+  {
+    "source": "financial-maths/black-litterman-model",
+    "target": "financial-maths/modern-portfolio-theory",
+    "label": "extends",
+    "description": "Black-Litterman is a Bayesian extension of Markowitz that solves the practical problem of estimating expected returns \u2014 it anchors to market equilibrium and tilts towards investor views, making mean-variance optimisation usable in practice."
+  },
+  {
+    "source": "financial-maths/black-litterman-model",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "uses",
+    "description": "The equilibrium returns \u03a0 = \u03b4\u03a3w are derived directly from the covariance matrix \u2014 Black-Litterman requires a well-estimated \u03a3 as its starting point for computing implied returns."
+  },
+  {
     "source": "financial-maths/calmar-ratio",
     "target": "financial-maths/hedge-funds",
     "label": "evaluates",
@@ -874,6 +892,42 @@
     "target": "risk/maximum-drawdown",
     "label": "denominator is",
     "description": "Maximum drawdown appears in the denominator of the Calmar ratio \u2014 it anchors the risk-adjusted performance measure to the worst peak-to-trough loss the strategy actually experienced."
+  },
+  {
+    "source": "financial-maths/capital-market-line",
+    "target": "financial-maths/capital-asset-pricing-model",
+    "label": "foundation of",
+    "description": "CAPM is derived by assuming all investors hold portfolios on the CML \u2014 the tangency portfolio becomes the market portfolio, and the CML slope becomes the market price of risk."
+  },
+  {
+    "source": "financial-maths/capital-market-line",
+    "target": "financial-maths/efficient-frontier",
+    "label": "dominates",
+    "description": "The CML is a straight line from the risk-free rate through the tangency portfolio that lies above the curved efficient frontier at every risk level \u2014 adding a risk-free asset strictly improves the attainable risk-return trade-off."
+  },
+  {
+    "source": "financial-maths/capital-market-line",
+    "target": "financial-maths/sharpe-ratio",
+    "label": "slope equals",
+    "description": "The slope of the CML is the Sharpe ratio of the tangency portfolio \u2014 the maximum attainable Sharpe ratio among all portfolios of risky assets."
+  },
+  {
+    "source": "financial-maths/efficient-frontier",
+    "target": "financial-maths/modern-portfolio-theory",
+    "label": "output of",
+    "description": "The efficient frontier is the geometric output of Markowitz optimisation \u2014 it plots the set of portfolios that offer maximum return for each level of risk, summarising the entire mean-variance trade-off."
+  },
+  {
+    "source": "financial-maths/efficient-frontier",
+    "target": "statistics/portfolio-variance",
+    "label": "minimises",
+    "description": "Each point on the efficient frontier is a portfolio that minimises variance for its target return \u2014 the portfolio variance formula is the objective function solved at every point along the curve."
+  },
+  {
+    "source": "financial-maths/efficient-frontier",
+    "target": "financial-maths/sharpe-ratio",
+    "label": "maximised at tangency",
+    "description": "The tangency portfolio, where a line from the risk-free rate is tangent to the efficient frontier, is the portfolio with the maximum Sharpe ratio \u2014 the optimal mix of risky assets for any investor."
   },
   {
     "source": "financial-maths/capital-asset-pricing-model",
@@ -1086,6 +1140,24 @@
     "description": "MPT defines risk as portfolio variance and seeks the weight vector that minimises it for a given target return \u2014 variance is the objective function at the heart of mean-variance optimisation."
   },
   {
+    "source": "financial-maths/minimum-variance-portfolio",
+    "target": "financial-maths/efficient-frontier",
+    "label": "leftmost point of",
+    "description": "The MVP is the leftmost point on the efficient frontier \u2014 the portfolio with the absolute lowest variance, dividing the frontier into an upper (efficient) and lower (inefficient) branch."
+  },
+  {
+    "source": "financial-maths/minimum-variance-portfolio",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "depends only on",
+    "description": "The MVP weights are \u03a3\u207b\u00b9\u00b7\u00b9 / (\u00b9\u1d40\u03a3\u207b\u00b9\u00b7\u00b9) \u2014 they require only the covariance matrix, not expected returns, making the MVP the most robust optimal portfolio against return estimation error."
+  },
+  {
+    "source": "financial-maths/minimum-variance-portfolio",
+    "target": "statistics/portfolio-variance",
+    "label": "minimises globally",
+    "description": "The MVP is the unconstrained global minimum of the portfolio variance function w\u1d40\u03a3w subject only to full investment \u2014 no return target is imposed."
+  },
+  {
     "source": "financial-maths/omega-ratio",
     "target": "financial-maths/sharpe-ratio",
     "label": "generalises",
@@ -1120,6 +1192,24 @@
     "target": "statistics/variance-and-standard-deviation",
     "label": "tracked via",
     "description": "Tracking error is the standard deviation of relative returns \u2014 it measures how consistently a portfolio follows or deviates from its benchmark over time."
+  },
+  {
+    "source": "financial-maths/resampled-efficient-frontier",
+    "target": "financial-maths/efficient-frontier",
+    "label": "stabilises",
+    "description": "The resampled frontier averages portfolio weights across many bootstrapped frontiers, producing more diversified and stable allocations than the classical frontier computed from a single set of noisy inputs."
+  },
+  {
+    "source": "financial-maths/resampled-efficient-frontier",
+    "target": "probability/multivariate-normal-distribution",
+    "label": "simulates from",
+    "description": "Each resample draws returns from a multivariate normal calibrated to the original estimates \u2014 the normality assumption enables fast bootstrapping of alternative efficient frontiers."
+  },
+  {
+    "source": "financial-maths/resampled-efficient-frontier",
+    "target": "statistics/shrinkage-estimators",
+    "label": "alternative to",
+    "description": "Both resampling and shrinkage address estimation error in Markowitz optimisation, but through different mechanisms \u2014 resampling averages over input uncertainty while shrinkage biases the inputs towards a stable target."
   },
   {
     "source": "financial-maths/return-on-investment",
@@ -1290,6 +1380,24 @@
     "description": "The Treynor ratio uses beta (systematic risk) as the denominator while the Sharpe ratio uses total volatility \u2014 they agree for fully diversified portfolios but diverge when idiosyncratic risk is present."
   },
   {
+    "source": "financial-maths/two-fund-separation-theorem",
+    "target": "financial-maths/capital-market-line",
+    "label": "implies",
+    "description": "Two-fund separation is the algebraic result that all CML portfolios are combinations of the risk-free asset and the tangency portfolio \u2014 the CML is the geometric expression of the theorem."
+  },
+  {
+    "source": "financial-maths/two-fund-separation-theorem",
+    "target": "financial-maths/capital-asset-pricing-model",
+    "label": "foundation of",
+    "description": "CAPM is derived by assuming all investors satisfy two-fund separation \u2014 if everyone holds the tangency portfolio, it must equal the market portfolio, yielding the CAPM pricing equation."
+  },
+  {
+    "source": "financial-maths/two-fund-separation-theorem",
+    "target": "financial-maths/modern-portfolio-theory",
+    "label": "key result of",
+    "description": "Two-fund separation is the central structural result of Markowitz theory with a risk-free asset \u2014 it reduces the infinite-dimensional portfolio choice to a single parameter (the allocation to risky assets)."
+  },
+  {
     "source": "financial-maths/yield-curve",
     "target": "derivatives/rho-greeks",
     "label": "drives",
@@ -1332,10 +1440,64 @@
     "description": "Cholesky decomposition transforms independent normal draws into correlated ones with exactly the right correlation structure \u2014 it is the standard method for simulating correlated Brownian motions."
   },
   {
+    "source": "linear-algebra/covariance-matrix",
+    "target": "financial-maths/modern-portfolio-theory",
+    "label": "central input to",
+    "description": "Portfolio variance is w\u1d40\u03a3w \u2014 the covariance matrix encodes every pairwise asset interaction, making it the single object that determines the entire efficient frontier in Markowitz optimisation."
+  },
+  {
+    "source": "linear-algebra/covariance-matrix",
+    "target": "linear-algebra/positive-definite-matrices",
+    "label": "must satisfy",
+    "description": "A valid covariance matrix must be positive semi-definite to guarantee non-negative portfolio variance \u2014 when estimation error violates this property, the optimiser produces nonsensical infinite-leverage solutions."
+  },
+  {
+    "source": "linear-algebra/cholesky-decomposition",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "factorises",
+    "description": "The Cholesky decomposition splits the covariance matrix into LL\u1d40, providing the standard method for generating correlated random draws in Monte Carlo simulation."
+  },
+  {
+    "source": "linear-algebra/condition-number",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "diagnoses",
+    "description": "The condition number of the covariance matrix measures how much estimation noise is amplified when the matrix is inverted for portfolio optimisation \u2014 a large condition number warns that the optimal weights will be unstable."
+  },
+  {
+    "source": "linear-algebra/condition-number",
+    "target": "linear-algebra/eigenvalues-and-eigenvectors",
+    "label": "computed from",
+    "description": "The condition number is the ratio of the largest to smallest eigenvalue \u2014 eigendecomposition directly reveals how ill-conditioned a matrix is and which directions are numerically fragile."
+  },
+  {
+    "source": "statistics/covariance",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "assembled into",
+    "description": "Each pairwise covariance becomes an entry in the covariance matrix \u2014 the matrix form enables the compact expression w\u1d40\u03a3w for portfolio variance and unlocks linear algebra tools like eigendecomposition and Cholesky factorisation."
+  },
+  {
     "source": "linear-algebra/determinant",
     "target": "linear-algebra/matrix-inverse",
     "label": "gates",
     "description": "A matrix is invertible if and only if its determinant is non-zero \u2014 checking the determinant is the first step before attempting to invert a covariance matrix for portfolio optimisation."
+  },
+  {
+    "source": "linear-algebra/eigenvalue-clipping",
+    "target": "linear-algebra/condition-number",
+    "label": "reduces",
+    "description": "Clipping noise eigenvalues up to a constant dramatically reduces the condition number of the covariance matrix, making its inversion numerically stable for portfolio optimisation."
+  },
+  {
+    "source": "linear-algebra/eigenvalue-clipping",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "denoises",
+    "description": "Eigenvalue clipping uses the Marchenko-Pastur law to identify and replace noise eigenvalues in the sample covariance matrix, producing a cleaner estimate that leads to more stable portfolio weights."
+  },
+  {
+    "source": "linear-algebra/eigenvalue-clipping",
+    "target": "linear-algebra/eigenvalues-and-eigenvectors",
+    "label": "applies",
+    "description": "Eigenvalue clipping works by eigendecomposing the covariance matrix, modifying the noise eigenvalues, and reconstructing \u2014 the eigenvectors are preserved while only the eigenvalue magnitudes change."
   },
   {
     "source": "linear-algebra/dot-product-and-norms",
@@ -1650,6 +1812,24 @@
     "description": "Value at Risk is defined as a quantile of the loss distribution \u2014 it is the inverse CDF evaluated at the confidence level, making the CDF the mathematical object that directly determines VaR."
   },
   {
+    "source": "probability/copulas",
+    "target": "probability/cumulative-distribution-function",
+    "label": "uses",
+    "description": "Copulas are defined in terms of uniform marginals obtained by applying the CDF to each variable \u2014 Sklar's theorem decomposes any joint CDF into marginal CDFs and a copula."
+  },
+  {
+    "source": "probability/copulas",
+    "target": "probability/multivariate-normal-distribution",
+    "label": "generalises dependence of",
+    "description": "The Gaussian copula reproduces multivariate normal dependence but copulas in general allow non-elliptical, asymmetric dependencies \u2014 capturing tail behaviour that the multivariate normal misses."
+  },
+  {
+    "source": "probability/copulas",
+    "target": "risk/value-at-risk",
+    "label": "improves tail modelling of",
+    "description": "Copulas with non-zero tail dependence produce more realistic joint loss distributions for portfolio VaR, correcting the systematic underestimation of joint extreme events by Gaussian models."
+  },
+  {
     "source": "probability/expected-value",
     "target": "financial-maths/time-value-of-money",
     "label": "discounted by",
@@ -1752,6 +1932,24 @@
     "description": "The variance is recovered from the MGF via Var(X) = M''(0) \u2212 [M'(0)]\u00b2 \u2014 the MGF packages the first and second moments needed to compute volatility into a single generating function."
   },
   {
+    "source": "probability/multivariate-normal-distribution",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "parameterised by",
+    "description": "The multivariate normal is fully specified by its mean vector and covariance matrix \u2014 the covariance matrix encodes all pairwise dependencies, making it the sufficient statistic for joint normality."
+  },
+  {
+    "source": "probability/multivariate-normal-distribution",
+    "target": "probability/normal-distribution",
+    "label": "generalises",
+    "description": "The univariate normal is a special case of the multivariate normal with n=1 \u2014 the multivariate version extends the bell-curve concept to vectors of random variables with correlated components."
+  },
+  {
+    "source": "probability/multivariate-normal-distribution",
+    "target": "risk/value-at-risk",
+    "label": "assumed by",
+    "description": "Parametric VaR assumes portfolio returns are normally distributed \u2014 the multivariate normal justifies computing VaR from just the portfolio mean and variance without simulating the full return distribution."
+  },
+  {
     "source": "probability/normal-distribution",
     "target": "derivatives/black-scholes-equation",
     "label": "N(d1), N(d2) from",
@@ -1828,6 +2026,18 @@
     "target": "risk/value-at-risk",
     "label": "improves",
     "description": "Using the t-distribution instead of the normal for VaR calculations produces wider tail quantiles, giving more conservative and realistic loss estimates that account for fat tails in returns."
+  },
+  {
+    "source": "probability/tail-dependence",
+    "target": "probability/copulas",
+    "label": "distinguishes",
+    "description": "The tail dependence coefficient is the key property that distinguishes copula families \u2014 Gaussian copulas have zero tail dependence while Student-t and Clayton copulas have non-zero values, making copula selection a choice about tail behaviour."
+  },
+  {
+    "source": "probability/tail-dependence",
+    "target": "risk/value-at-risk",
+    "label": "critical for",
+    "description": "Portfolio VaR in the tails depends on whether assets crash together \u2014 models with zero tail dependence systematically underestimate joint extreme losses, producing dangerously optimistic VaR at high confidence levels."
   },
   {
     "source": "probability/uniform-distribution",
@@ -1950,6 +2160,18 @@
     "description": "Testing for autocorrelation in returns is a key diagnostic \u2014 near-zero autocorrelation in raw returns supports market efficiency, while positive autocorrelation in squared returns confirms volatility clustering."
   },
   {
+    "source": "statistics/arch-model",
+    "target": "statistics/garch-model",
+    "label": "generalised by",
+    "description": "GARCH extends ARCH by adding the lagged variance term \u03b2\u03c3\u00b2, which parsimoniously captures the long memory in volatility that ARCH needs many lagged squared-return terms to achieve."
+  },
+  {
+    "source": "statistics/arch-model",
+    "target": "statistics/volatility-clustering",
+    "label": "formalises",
+    "description": "ARCH was the first model to formalise volatility clustering mathematically \u2014 expressing conditional variance as a function of past squared shocks turned an empirical observation into a testable, estimable model."
+  },
+  {
     "source": "statistics/beta-estimation",
     "target": "financial-maths/capital-asset-pricing-model",
     "label": "parameterises",
@@ -2004,6 +2226,30 @@
     "description": "The CLT guarantees that sample means are approximately normal for large n, which justifies constructing confidence intervals and hypothesis tests for estimated drift and volatility using normal quantiles."
   },
   {
+    "source": "statistics/covariance",
+    "target": "financial-maths/modern-portfolio-theory",
+    "label": "feeds into",
+    "description": "The covariance matrix is the central input to Markowitz optimisation \u2014 portfolio variance is w\u1d40\u03a3w, so every allocation decision is ultimately driven by the pairwise covariances between asset returns."
+  },
+  {
+    "source": "statistics/covariance",
+    "target": "statistics/correlation",
+    "label": "normalised to",
+    "description": "Correlation is covariance divided by the product of the two standard deviations \u2014 this normalisation removes scale dependence and produces a dimensionless measure bounded between \u22121 and +1."
+  },
+  {
+    "source": "statistics/covariance",
+    "target": "stochastic-processes/correlated-brownian-motions",
+    "label": "modelled by",
+    "description": "The covariance between two asset returns in continuous time is modelled via correlated Brownian motions \u2014 the instantaneous covariance \u03c1\u03c3\u2081\u03c3\u2082 dt drives multi-asset pricing and hedging."
+  },
+  {
+    "source": "statistics/variance-and-standard-deviation",
+    "target": "statistics/covariance",
+    "label": "special case of",
+    "description": "Variance is the covariance of a variable with itself \u2014 Cov(X, X) = Var(X) \u2014 making covariance the natural generalisation of variance to pairs of variables."
+  },
+  {
     "source": "statistics/correlation",
     "target": "risk/value-at-risk",
     "label": "feeds into",
@@ -2014,6 +2260,72 @@
     "target": "stochastic-processes/drift-and-volatility",
     "label": "calibrates",
     "description": "The annualised drift and volatility used in every pricing and risk model are estimated from historical daily returns \u2014 multiplying the mean by 252 and the standard deviation by \u221a252."
+  },
+  {
+    "source": "statistics/ewma-volatility",
+    "target": "statistics/garch-model",
+    "label": "special case of",
+    "description": "EWMA is a restricted GARCH(1,1) where \u03b1 + \u03b2 = 1 and \u03c9 = 0 \u2014 this removes mean reversion, making volatility shocks persist indefinitely rather than decaying to a long-run level."
+  },
+  {
+    "source": "statistics/ewma-volatility",
+    "target": "risk/value-at-risk",
+    "label": "feeds into",
+    "description": "The RiskMetrics EWMA model was the industry standard for computing conditional VaR through the 1990s \u2014 its adaptive volatility estimate replaced the static historical window with an exponentially weighted one."
+  },
+  {
+    "source": "statistics/egarch-model",
+    "target": "statistics/arch-model",
+    "label": "extends",
+    "description": "EGARCH extends the ARCH family by modelling the log-variance with an asymmetric response to positive and negative shocks \u2014 capturing the leverage effect that symmetric ARCH and GARCH models miss."
+  },
+  {
+    "source": "statistics/egarch-model",
+    "target": "statistics/garch-model",
+    "label": "asymmetric variant of",
+    "description": "EGARCH adds a signed shock term to GARCH, allowing negative returns to increase volatility more than positive returns of the same magnitude \u2014 matching the empirically observed leverage effect in equity markets."
+  },
+  {
+    "source": "statistics/egarch-model",
+    "target": "derivatives/volatility-smile",
+    "label": "explains",
+    "description": "The leverage effect captured by EGARCH \u2014 negative returns increasing volatility disproportionately \u2014 is a primary driver of the implied volatility skew observed in equity options."
+  },
+  {
+    "source": "statistics/factor-models",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "approximates",
+    "description": "A factor model approximates the full covariance matrix as B\u03a3\u2086B\u1d40 + D, reducing the number of parameters from O(n\u00b2) to O(n) and producing a better-conditioned estimate for large portfolios."
+  },
+  {
+    "source": "statistics/factor-models",
+    "target": "statistics/principal-component-analysis",
+    "label": "estimated via",
+    "description": "Statistical factor models use PCA to extract the dominant eigenvectors of the covariance matrix as factors \u2014 the eigenvalues determine how many factors to retain."
+  },
+  {
+    "source": "statistics/factor-models",
+    "target": "financial-maths/fama-french-three-factor-model",
+    "label": "generalises",
+    "description": "The Fama-French model is a specific three-factor model \u2014 the general factor model framework extends to any number of fundamental, macroeconomic, or statistical factors."
+  },
+  {
+    "source": "statistics/garch-model",
+    "target": "risk/value-at-risk",
+    "label": "improves",
+    "description": "GARCH-based conditional volatility produces VaR estimates that adapt to current market conditions \u2014 during turbulent periods the forecast widens automatically, unlike static historical volatility."
+  },
+  {
+    "source": "statistics/garch-model",
+    "target": "statistics/volatility-clustering",
+    "label": "models",
+    "description": "GARCH is the standard parametric model for volatility clustering \u2014 the \u03b1 and \u03b2 coefficients directly capture how past shocks and past variance feed into today's conditional variance."
+  },
+  {
+    "source": "statistics/volatility-clustering",
+    "target": "statistics/garch-model",
+    "label": "motivates",
+    "description": "The empirical observation that large return shocks tend to be followed by more large shocks is the stylised fact that GARCH models were specifically designed to capture."
   },
   {
     "source": "statistics/jarque-bera-test",
@@ -2052,6 +2364,30 @@
     "description": "High kurtosis means extreme losses occur more frequently than a normal model predicts \u2014 VaR estimates that ignore excess kurtosis systematically understate tail risk, which is why practitioners adjust for fat tails when calibrating loss distributions."
   },
   {
+    "source": "statistics/portfolio-variance",
+    "target": "financial-maths/modern-portfolio-theory",
+    "label": "objective of",
+    "description": "Markowitz optimisation minimises portfolio variance for a given target return \u2014 the portfolio variance formula is the objective function that defines every point on the efficient frontier."
+  },
+  {
+    "source": "statistics/portfolio-variance",
+    "target": "statistics/covariance",
+    "label": "built from",
+    "description": "Portfolio variance depends on pairwise covariances between all assets \u2014 the cross-terms 2w\u2081w\u2082Cov(R\u2081,R\u2082) are what make diversification reduce total risk below the weighted sum of individual risks."
+  },
+  {
+    "source": "statistics/principal-component-analysis",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "decomposes",
+    "description": "PCA is the eigendecomposition of the covariance matrix \u2014 it identifies the orthogonal directions of greatest variance, revealing the dominant risk factors hidden in the correlation structure."
+  },
+  {
+    "source": "statistics/principal-component-analysis",
+    "target": "linear-algebra/eigenvalues-and-eigenvectors",
+    "label": "applies",
+    "description": "Each principal component is an eigenvector of the covariance matrix, and its eigenvalue measures the variance explained \u2014 PCA is the most important practical application of eigendecomposition in finance."
+  },
+  {
     "source": "statistics/scaling-mean-with-time",
     "target": "stochastic-processes/growth-vs-volatility-timescales",
     "label": "contrasted in",
@@ -2074,6 +2410,18 @@
     "target": "statistics/statistical-properties-of-returns",
     "label": "characterises",
     "description": "Skewness is one of the key stylised facts of financial returns \u2014 equity indices typically show negative skewness, meaning crash risk is more pronounced than a symmetric distribution would imply."
+  },
+  {
+    "source": "statistics/shrinkage-estimators",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "regularises",
+    "description": "Shrinkage blends the noisy sample covariance matrix with a structured target to produce a better-conditioned estimate \u2014 essential when the number of assets approaches the sample size."
+  },
+  {
+    "source": "statistics/shrinkage-estimators",
+    "target": "statistics/estimating-parameters",
+    "label": "improves",
+    "description": "Shrinkage reduces estimation error by trading a small amount of bias for a large reduction in variance \u2014 the classic bias-variance tradeoff applied to covariance estimation."
   },
   {
     "source": "statistics/square-root-rule",

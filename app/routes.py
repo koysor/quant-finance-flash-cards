@@ -154,6 +154,21 @@ def card_detail(card_id: str):
 
     resources = current_app.config["RESOURCES"].get(card_id, {})
     notation = json.loads(card["notation"]) if card["notation"] else []
+    # Exclude visually obvious structural LaTeX commands from tooltips
+    _SKIP_TOOLTIP = {
+        "\\frac", "\\binom", "\\sqrt", "\\cdot", "\\times",
+        "\\hat", "\\bar", "\\tilde", "\\mathbf",
+        "\\log", "\\ln", "\\exp", "\\max", "\\min", "\\lim",
+        "\\leq", "\\geq", "\\neq", "\\approx", "\\equiv",
+        "\\in", "\\notin", "\\neg",
+        "\\infty", "\\sum", "\\prod", "\\int",
+        "\\Rightarrow", "\\Leftrightarrow", "\\rightarrow", "\\to",
+    }
+    notation_map = {
+        e["key"]: e["meaning"] for e in notation
+        if "key" in e and e["key"] not in _SKIP_TOOLTIP
+    }
+    notation_map_json = json.dumps(notation_map)
 
     return render_template(
         "card.html",
@@ -166,6 +181,7 @@ def card_detail(card_id: str):
         card_excerpt=_card_excerpt(card["html_content"]),
         resources=resources,
         notation=notation,
+        notation_map_json=notation_map_json,
     )
 
 
