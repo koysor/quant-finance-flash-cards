@@ -1760,3 +1760,12 @@
 | ﬂoating strike lookback put | No |
 | ﬂoor | No |
 | ﬂoortion | No |
+
+## Suggested New Cards
+
+| Term | Description |
+|---|---|
+| Covered Interest Arbitrage | Explores arbitrage involving interest rate differentials and forward contracts. |
+| Cross-Currency Swap | How institutions swap principal and interest in different currencies. |
+| Law of One Price | A foundational concept for all arbitrage-based pricing models. |
+| Market Microstructure | How bid-ask spreads and liquidity impact the execution of arbitrage trades. |

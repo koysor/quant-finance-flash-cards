@@ -1,5 +1,15 @@
 # Contributing
 
+## Using Gemini Skills
+
+If you are using Gemini to contribute, you can leverage the following skills to automate card creation and validation:
+
+- **`quant-card-generator`**: "Create a card for [Concept Name]" — Handles file creation, edge linking, and resource gathering.
+- **`quant-card-validator`**: "Validate [card-path]" — Checks structure, British English, and finance relevance.
+- **`quant-graph-architect`**: "Check edges for [card-path]" — Ensures graph connectivity.
+
+---
+
 ## Adding a flash card
 
 Create a single `.md` file in `cards/<topic>/`. The filename becomes part of the card's permanent ID, so use a short lowercase hyphenated slug (e.g. `black-scholes-equation.md`).

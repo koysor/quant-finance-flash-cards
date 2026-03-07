@@ -2,6 +2,7 @@
 
 **Topic:** Financial Mathematics
 **Tags:** short selling, borrowing, risk, hedge funds, market neutral, profit from decline
+**Created:** 2026-03-07
 **Author:** Claude Opus 4.6
 
 ---

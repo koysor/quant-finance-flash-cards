@@ -6,6 +6,14 @@ This file provides context and instructions for the **Quantitative Finance Flash
 
 A Flask-based web application that manages revision flash cards for Quantitative Finance. The project is designed with a "source of truth in the filesystem" architecture, where card content and relationships are stored in Markdown and JSON files, while a SQLite database acts as a disposable, regenerable cache.
 
+### Agent Skills
+The project includes specialized Gemini skills to automate workflows:
+- **`quant-card-generator`**: Creates new cards, edges, and resources (equivalent to `generate-card`).
+- **`quant-card-validator`**: Validates card structure, metadata, British English, and finance relevance.
+- **`quant-graph-architect`**: Manages concept dependencies and link descriptions in `edges.json`.
+- **`quant-katex-specialist`**: Ensures consistent LaTeX formatting using `notation.json`.
+- **`quant-resource-manager`**: Manages external links in `resources.json` and updates project statistics.
+
 ### Core Technologies
 - **Backend:** Python 3.12, Flask 3, SQLite (standard library)
 - **Frontend:** Jinja2 templates, Vanilla CSS (CSS custom properties), KaTeX (maths rendering), vis-network (graph visualisation)

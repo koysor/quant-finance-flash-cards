@@ -2,6 +2,7 @@
 
 **Topic:** Financial Mathematics
 **Tags:** leverage, borrowing, margin, risk, amplification, portfolio management
+**Created:** 2026-03-07
 **Author:** Claude Opus 4.6
 
 ---
@@ -36,4 +37,4 @@ A modest 5% loss becomes a 23% loss — nearly half the equity is wiped out.
 
 ## Remember
 
-Leverage is the mechanism through which hedge funds, banks, and proprietary trading desks amplify returns — but it also amplifies Value at Risk by the same factor. The 2008 financial crisis demonstrated that institutions running leverage ratios of 30:1 or more had almost no margin for error. Understanding the linear scaling of both return and volatility with leverage is essential for any quantitative risk assessment.
+Leverage is the mechanism through which hedge funds, banks, and proprietary trading desks amplify returns — but it also amplifies Value at Risk by the same factor. Crucially, leverage does **not** improve the Sharpe ratio — it stretches both excess return and volatility by the same factor $L$. The 2008 financial crisis demonstrated that institutions running leverage ratios of 30:1 or more had almost no margin for error. Understanding the linear scaling of both return and volatility with leverage is essential for any quantitative risk assessment.
