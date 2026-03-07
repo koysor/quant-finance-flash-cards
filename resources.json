@@ -2049,28 +2049,6 @@
       }
     ]
   },
-  "financial-maths/two-fund-separation-theorem": {
-    "websites": [
-      {
-        "title": "Wikipedia — Mutual Fund Separation Theorem",
-        "url": "https://en.wikipedia.org/wiki/Mutual_fund_separation_theorem"
-      },
-      {
-        "title": "Corporate Finance Institute — Two-Fund Separation",
-        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/separation-theorem/"
-      }
-    ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare — Capital Market Line and Separation",
-        "url": "https://www.youtube.com/watch?v=8TJQhQ2GZ0Y"
-      },
-      {
-        "title": "Patrick Boyle — CAPM and Two Fund Separation",
-        "url": "https://www.youtube.com/watch?v=lCaFzQzlgSU"
-      }
-    ]
-  },
   "financial-maths/triangular-arbitrage": {
     "websites": [
       {
@@ -2090,6 +2068,28 @@
       {
         "title": "Khan Academy — Cross Exchange Rates",
         "url": "https://www.youtube.com/watch?v=E-K7_28qNf0"
+      }
+    ]
+  },
+  "financial-maths/two-fund-separation-theorem": {
+    "websites": [
+      {
+        "title": "Wikipedia — Mutual Fund Separation Theorem",
+        "url": "https://en.wikipedia.org/wiki/Mutual_fund_separation_theorem"
+      },
+      {
+        "title": "Corporate Finance Institute — Two-Fund Separation",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/separation-theorem/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Capital Market Line and Separation",
+        "url": "https://www.youtube.com/watch?v=8TJQhQ2GZ0Y"
+      },
+      {
+        "title": "Patrick Boyle — CAPM and Two Fund Separation",
+        "url": "https://www.youtube.com/watch?v=lCaFzQzlgSU"
       }
     ]
   },
@@ -2407,6 +2407,182 @@
       {
         "title": "The Organic Chemistry Tutor — Matrix Transpose",
         "url": "https://www.youtube.com/watch?v=TZrKrNVhbjI"
+      }
+    ]
+  },
+  "mathematical-notation/conditional-expectation-notation": {
+    "websites": [
+      {
+        "title": "Wikipedia — Conditional Expectation",
+        "url": "https://en.wikipedia.org/wiki/Conditional_expectation"
+      },
+      {
+        "title": "Brilliant — Conditional Expectation",
+        "url": "https://brilliant.org/wiki/conditional-expectation/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Conditional Expectation",
+        "url": "https://www.youtube.com/watch?v=dTYsYwqjjA8"
+      },
+      {
+        "title": "Khan Academy — Conditional Probability and Expectation",
+        "url": "https://www.youtube.com/watch?v=ibINrxJLvlM"
+      }
+    ]
+  },
+  "mathematical-notation/convergence-notation": {
+    "websites": [
+      {
+        "title": "Wikipedia — Convergence of Random Variables",
+        "url": "https://en.wikipedia.org/wiki/Convergence_of_random_variables"
+      },
+      {
+        "title": "Brilliant — Convergence in Probability",
+        "url": "https://brilliant.org/wiki/convergence-in-probability/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Central Limit Theorem",
+        "url": "https://www.youtube.com/watch?v=YAlJCEDH2uY"
+      },
+      {
+        "title": "MIT OpenCourseWare — Modes of Convergence",
+        "url": "https://www.youtube.com/watch?v=VzHzzmLLBjM"
+      }
+    ]
+  },
+  "mathematical-notation/differential-notation": {
+    "websites": [
+      {
+        "title": "Wikipedia — Differential (Mathematics)",
+        "url": "https://en.wikipedia.org/wiki/Differential_(mathematics)"
+      },
+      {
+        "title": "Paul's Online Math Notes — Differentials",
+        "url": "https://tutorial.math.lamar.edu/Classes/CalcI/Differentials.aspx"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — What does d/dx actually mean?",
+        "url": "https://www.youtube.com/watch?v=CfW845LNObM"
+      },
+      {
+        "title": "Khan Academy — Differentials",
+        "url": "https://www.youtube.com/watch?v=QVyvo_HZ3Vs"
+      }
+    ]
+  },
+  "mathematical-notation/expectation-and-variance-notation": {
+    "websites": [
+      {
+        "title": "Khan Academy — Expected Value",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/mean-var-standard-deviation/a/expected-value-and-standard-deviation"
+      },
+      {
+        "title": "Wikipedia — Expected Value",
+        "url": "https://en.wikipedia.org/wiki/Expected_value"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Expected Values",
+        "url": "https://www.youtube.com/watch?v=KLs_7b7SKi4"
+      },
+      {
+        "title": "Khan Academy — Variance and Standard Deviation",
+        "url": "https://www.youtube.com/watch?v=E4HAYd0QnRc"
+      }
+    ]
+  },
+  "mathematical-notation/integral-notation": {
+    "websites": [
+      {
+        "title": "Khan Academy — Introduction to Integrals",
+        "url": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-1/a/integration-overview"
+      },
+      {
+        "title": "Paul's Online Math Notes — Integrals",
+        "url": "https://tutorial.math.lamar.edu/Classes/CalcI/DefnOfDefiniteIntegral.aspx"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Integration and the Fundamental Theorem",
+        "url": "https://www.youtube.com/watch?v=rfG8ce4nNh0"
+      },
+      {
+        "title": "Khan Academy — Definite Integral Notation",
+        "url": "https://www.youtube.com/watch?v=0RdI3-8G4Fs"
+      }
+    ]
+  },
+  "mathematical-notation/limit-notation": {
+    "websites": [
+      {
+        "title": "Khan Academy — Limits Introduction",
+        "url": "https://www.khanacademy.org/math/ap-calculus-ab/ab-limits-new/ab-1-2/a/limits-intro"
+      },
+      {
+        "title": "Paul's Online Math Notes — The Definition of the Limit",
+        "url": "https://tutorial.math.lamar.edu/Classes/CalcI/DefnOfLimit.aspx"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Limits",
+        "url": "https://www.youtube.com/watch?v=kfF40MiS7zA"
+      },
+      {
+        "title": "Khan Academy — Limits and Continuity",
+        "url": "https://www.youtube.com/watch?v=riXcZT2ICjA"
+      }
+    ]
+  },
+  "mathematical-notation/partial-derivative-notation": {
+    "websites": [
+      {
+        "title": "Khan Academy — Partial Derivatives",
+        "url": "https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/partial-derivative-and-gradient-articles/a/introduction-to-partial-derivatives"
+      },
+      {
+        "title": "Paul's Online Math Notes — Partial Derivatives",
+        "url": "https://tutorial.math.lamar.edu/Classes/CalcIII/PartialDerivatives.aspx"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Gradient and Partial Derivatives",
+        "url": "https://www.youtube.com/watch?v=TEB2z7ZlRAw"
+      },
+      {
+        "title": "Khan Academy — Partial Derivative Notation",
+        "url": "https://www.youtube.com/watch?v=dfvnCHqzK54"
+      }
+    ]
+  },
+  "mathematical-notation/probability-measure-notation": {
+    "websites": [
+      {
+        "title": "Wikipedia — Probability Space",
+        "url": "https://en.wikipedia.org/wiki/Probability_space"
+      },
+      {
+        "title": "Wikipedia — Filtration (Probability Theory)",
+        "url": "https://en.wikipedia.org/wiki/Filtration_(probability_theory)"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Probability Spaces",
+        "url": "https://www.youtube.com/watch?v=mUxg3j_h5GM"
+      },
+      {
+        "title": "Measure Theory for Probability — Sigma-Algebras",
+        "url": "https://www.youtube.com/watch?v=gALVbJ0sHO8"
       }
     ]
   },

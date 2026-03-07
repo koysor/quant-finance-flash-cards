@@ -1782,12 +1782,6 @@
     "description": "The borrow rate is the ongoing cost that makes short selling expensive for hard-to-borrow stocks — a trade with positive gross alpha can be unprofitable once the lending fee is deducted."
   },
   {
-    "source": "financial-maths/triangular-arbitrage",
-    "target": "financial-maths/statistical-arbitrage",
-    "label": "contrasts with",
-    "description": "Triangular arbitrage is deterministic and riskless (ignoring execution risk), whereas statistical arbitrage is probabilistic and carries market risk on individual trades."
-  },
-  {
     "source": "financial-maths/time-value-of-money",
     "target": "financial-maths/yield-curve",
     "label": "generalised by",
@@ -1828,6 +1822,12 @@
     "target": "financial-maths/sharpe-ratio",
     "label": "complements",
     "description": "The Treynor ratio uses beta (systematic risk) as the denominator while the Sharpe ratio uses total volatility — they agree for fully diversified portfolios but diverge when idiosyncratic risk is present."
+  },
+  {
+    "source": "financial-maths/triangular-arbitrage",
+    "target": "financial-maths/statistical-arbitrage",
+    "label": "contrasts with",
+    "description": "Triangular arbitrage is deterministic and riskless (ignoring execution risk), whereas statistical arbitrage is probabilistic and carries market risk on individual trades."
   },
   {
     "source": "financial-maths/two-fund-separation-theorem",
@@ -2076,6 +2076,78 @@
     "description": "The portfolio variance formula wᵀΣw requires the transpose operation to convert the weight vector into a row — the transpose is integral to every quadratic form in matrix algebra."
   },
   {
+    "source": "mathematical-notation/conditional-expectation-notation",
+    "target": "stochastic-processes/martingales",
+    "label": "notation for",
+    "description": "The martingale property E[M_t | ℱ_s] = M_s is a statement in conditional expectation notation — the bar separates the future value being predicted from the information available now."
+  },
+  {
+    "source": "mathematical-notation/conditional-expectation-notation",
+    "target": "stochastic-processes/tower-property",
+    "label": "notation for",
+    "description": "The tower property E[E[X | ℱ_t] | ℱ_s] = E[X | ℱ_s] is expressed entirely in conditional expectation notation — understanding the nesting of bars and filtrations is essential to reading and applying it."
+  },
+  {
+    "source": "mathematical-notation/convergence-notation",
+    "target": "mathematical-notation/limit-notation",
+    "label": "extends",
+    "description": "Convergence notation extends deterministic limit notation to random variables — the different arrow types (in distribution, in probability, almost surely) formalise what ‘approaching a limit’ means when randomness is involved."
+  },
+  {
+    "source": "mathematical-notation/convergence-notation",
+    "target": "statistics/central-limit-theorem",
+    "label": "notation for",
+    "description": "The CLT is stated using convergence in distribution: the arrow →ᵈ N(0,1) means the standardised sample mean’s CDF approaches the standard normal CDF as n grows."
+  },
+  {
+    "source": "mathematical-notation/differential-notation",
+    "target": "mathematical-notation/partial-derivative-notation",
+    "label": "complements",
+    "description": "Differential notation (d, ∂, Δ) and partial derivative notation (∂f/∂x) work together — the total differential df uses partial derivatives to express the full change in a multivariable function."
+  },
+  {
+    "source": "mathematical-notation/differential-notation",
+    "target": "stochastic-processes/brownian-motion",
+    "label": "used in",
+    "description": "The notation dW_t for a Brownian increment is a differential that behaves unlike ordinary differentials — (dW)² = dt rather than zero, which is the source of all differences between ordinary and stochastic calculus."
+  },
+  {
+    "source": "mathematical-notation/expectation-and-variance-notation",
+    "target": "mathematical-notation/conditional-expectation-notation",
+    "label": "extended by",
+    "description": "Conditional expectation notation E[X | ℱ_t] extends basic expectation notation E[X] by adding a conditioning bar that specifies what information is assumed known."
+  },
+  {
+    "source": "mathematical-notation/expectation-and-variance-notation",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "notation for",
+    "description": "This card explains the symbols E[X], Var(X), σ, and σ² that are used when computing and discussing variance and standard deviation."
+  },
+  {
+    "source": "mathematical-notation/integral-notation",
+    "target": "calculus/integration-rules",
+    "label": "notation for",
+    "description": "This card explains how to read the integral symbol ∫, its limits, and the differential dx that appear in all integration rules and formulas."
+  },
+  {
+    "source": "mathematical-notation/integral-notation",
+    "target": "stochastic-processes/ito-integral",
+    "label": "notation for",
+    "description": "The notational shift from ∫f(x)dx to ∫g(t)dW_t signals the transition from ordinary to stochastic integration — recognising dW versus dt is essential for applying the correct calculus rules."
+  },
+  {
+    "source": "mathematical-notation/limit-notation",
+    "target": "mathematical-notation/summation-notation",
+    "label": "connects to",
+    "description": "The definite integral is defined as the limit of a Riemann sum — limit notation formalises the transition from discrete summation (Σ) to continuous integration (∫)."
+  },
+  {
+    "source": "mathematical-notation/limit-notation",
+    "target": "stochastic-processes/itos-lemma",
+    "label": "used in",
+    "description": "The big-O and little-o notation in limits explains why (dW)² = O(dt) is kept while (dt)² = o(dt) is discarded — the asymptotic distinction that produces the Itô correction term."
+  },
+  {
     "source": "mathematical-notation/logical-quantifiers",
     "target": "calculus/lemma",
     "label": "notation for",
@@ -2092,6 +2164,30 @@
     "target": "stochastic-processes/martingales",
     "label": "notation for",
     "description": "The martingale property E[Xₜ | Fₛ] = Xₛ is a universally quantified statement that must hold for all s ≤ t — understanding ∀ and conditional statements is essential for grasping what the definition requires."
+  },
+  {
+    "source": "mathematical-notation/partial-derivative-notation",
+    "target": "calculus/partial-derivatives",
+    "label": "notation for",
+    "description": "This card explains how to read and write the symbols ∂f/∂x, f_x, and ∇f that are used when working with partial derivatives in multivariable calculus."
+  },
+  {
+    "source": "mathematical-notation/partial-derivative-notation",
+    "target": "derivatives/option-greeks",
+    "label": "notation for",
+    "description": "Every option Greek is a partial derivative written in this notation — Delta (∂V/∂S), Gamma (∂²V/∂S²), Theta (∂V/∂t), Vega (∂V/∂σ), and Rho (∂V/∂r)."
+  },
+  {
+    "source": "mathematical-notation/probability-measure-notation",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "notation for",
+    "description": "The risk-neutral pricing formula V = Eᵠ[e^{-rT} payoff | ℱ₀] uses every piece of this notation — the measure ℚ, the filtration ℱ₀, and the expectation operator E."
+  },
+  {
+    "source": "mathematical-notation/probability-measure-notation",
+    "target": "stochastic-processes/equivalent-probability-measures",
+    "label": "notation for",
+    "description": "This card explains the symbols ℙ, ℚ, ℱ_t, and dℚ/dℙ that are used when working with equivalent probability measures and changes of measure."
   },
   {
     "source": "mathematical-notation/product-notation",

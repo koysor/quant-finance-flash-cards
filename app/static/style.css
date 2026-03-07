@@ -1179,10 +1179,60 @@ a.tag:hover {
 }
 
 /* ── Prerequisites section ──────────────────────────────────── */
-.prerequisites {
+.prerequisites-details {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
   margin-bottom: 1.5rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--border-soft);
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+.prerequisites-details:hover {
+  border-color: var(--tc, var(--accent));
+}
+.prerequisites-details[open] {
+  border-color: var(--tc, var(--accent));
+}
+
+.prerequisites-summary {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  list-style: none; /* Hide default triangle in some browsers */
+  user-select: none;
+}
+.prerequisites-summary::-webkit-details-marker { display: none; }
+
+.prerequisites-summary .prerequisites-heading {
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.prerequisites-count {
+  margin-left: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: var(--surface-3);
+  color: var(--muted);
+  padding: 1px 6px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.details-chevron {
+  margin-left: auto;
+  color: var(--muted-2);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.15s;
+}
+.prerequisites-details[open] .details-chevron {
+  transform: rotate(180deg);
+  color: var(--tc, var(--accent));
+}
+
+.prerequisites {
+  padding: 0.5rem 1rem 1rem;
+  border-top: 1px solid var(--border-soft);
 }
 .prerequisites-heading {
   font-family: var(--font-display);

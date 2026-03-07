@@ -40,24 +40,30 @@
     </div>
 
     {% if incoming %}
-    <div class="prerequisites">
-      <h3 class="prerequisites-heading">Prerequisites</h3>
-      <ul class="prerequisites-list">
-        {% for edge in incoming %}
-        <li class="prerequisites-item">
-          <a class="prerequisites-link" href="{{ url_for('main.card_detail', card_id=edge['source_id']) }}"
-             style="--tc:{{ topic_colour(edge['source_topic']) }}">
-            <span class="prerequisites-dot"></span>
-            <span class="prerequisites-name">{{ edge['source_name'] }}</span>
-            {% if edge['label'] %}<span class="prerequisites-label">{{ edge['label'] }}</span>{% endif %}
-          </a>
-          {% if edge['description'] %}
-          <p class="prerequisites-desc">{{ edge['description'] }}</p>
-          {% endif %}
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
+    <details class="prerequisites-details">
+      <summary class="prerequisites-summary">
+        <h3 class="prerequisites-heading">Prerequisites</h3>
+        <span class="prerequisites-count">{{ incoming|length }}</span>
+        <svg class="details-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="prerequisites">
+        <ul class="prerequisites-list">
+          {% for edge in incoming %}
+          <li class="prerequisites-item">
+            <a class="prerequisites-link" href="{{ url_for('main.card_detail', card_id=edge['source_id']) }}"
+               style="--tc:{{ topic_colour(edge['source_topic']) }}">
+              <span class="prerequisites-dot"></span>
+              <span class="prerequisites-name">{{ edge['source_name'] }}</span>
+              {% if edge['label'] %}<span class="prerequisites-label">{{ edge['label'] }}</span>{% endif %}
+            </a>
+            {% if edge['description'] %}
+            <p class="prerequisites-desc">{{ edge['description'] }}</p>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </details>
     {% endif %}
 
     <div class="card-content" style="--tc:{{ tc }}">
