@@ -21,6 +21,46 @@
       }
     ]
   },
+  "calculus/completing-the-square": {
+    "websites": [
+      {
+        "title": "Khan Academy — Completing the Square",
+        "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:completing-the-square/v/solving-quadratic-equations-by-completing-the-square"
+      }
+    ],
+    "videos": [
+      {
+        "title": "The Organic Chemistry Tutor — Completing the Square",
+        "url": "https://www.youtube.com/watch?v=xGOQYTo9AKY"
+      },
+      {
+        "title": "Khan Academy — Completing the Square to Solve Quadratics",
+        "url": "https://www.youtube.com/watch?v=i7idZfS8t8w"
+      }
+    ]
+  },
+  "calculus/convex-function": {
+    "websites": [
+      {
+        "title": "Wikipedia — Convex Function",
+        "url": "https://en.wikipedia.org/wiki/Convex_function"
+      },
+      {
+        "title": "Khan Academy — Concavity and the Second Derivative",
+        "url": "https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-analytical/ab-5-6b/a/concavity-review"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Convexity in Optimisation",
+        "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w"
+      },
+      {
+        "title": "Khan Academy — Second Derivative Test",
+        "url": "https://www.youtube.com/watch?v=QtXCIxB6kW8"
+      }
+    ]
+  },
   "calculus/differentiation-rules": {
     "websites": [
       {
@@ -65,25 +105,31 @@
       }
     ]
   },
+  "calculus/indices-and-index-laws": {
+    "websites": [
+      {
+        "title": "Khan Academy — Exponent Properties",
+        "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals/x2f8bb11595b61c86:exponent-properties-review/a/exponent-properties-review"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Exponent Rules",
+        "url": "https://www.youtube.com/watch?v=kITJ6qH7jS0"
+      }
+    ]
+  },
   "calculus/initial-and-boundary-conditions": {
     "websites": [
       {
         "title": "Khan Academy — Boundary Value Problems",
         "url": "https://www.khanacademy.org/math/differential-equations/laplace-transform/laplace-transform-to-solve-a-boundary-value-problem/v/using-the-laplace-transform-to-solve-a-nonhomogeneous-eq"
-      },
-      {
-        "title": "Paul Wilmott — Chapter 7: Black-Scholes Boundary Conditions",
-        "url": "https://www.paulwilmott.com/on-quantitative-finance.html"
       }
     ],
     "videos": [
       {
         "title": "3Blue1Brown — But What Is a Partial Differential Equation?",
         "url": "https://www.youtube.com/watch?v=ly4S0oi3Yz8"
-      },
-      {
-        "title": "Steve Brunton — Boundary Conditions for PDEs",
-        "url": "https://www.youtube.com/watch?v=G_yPIBSILeI"
       }
     ]
   },
@@ -158,20 +204,12 @@
       {
         "title": "Wikipedia — Parabolic Partial Differential Equation",
         "url": "https://en.wikipedia.org/wiki/Parabolic_partial_differential_equation"
-      },
-      {
-        "title": "MathWorld — Heat Equation",
-        "url": "https://mathworld.wolfram.com/HeatEquation.html"
       }
     ],
     "videos": [
       {
         "title": "3Blue1Brown — But What Is a Partial Differential Equation?",
         "url": "https://www.youtube.com/watch?v=ly4S0oi3Yz8"
-      },
-      {
-        "title": "Steve Brunton — Classification of PDEs",
-        "url": "https://www.youtube.com/watch?v=YDPYe22Fxs0"
       }
     ]
   },
@@ -197,6 +235,34 @@
       }
     ]
   },
+  "calculus/quadratic-formula": {
+    "websites": [
+      {
+        "title": "Khan Academy — Quadratic Formula",
+        "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:quadratic-formula-a1/v/using-the-quadratic-formula"
+      }
+    ],
+    "videos": [
+      {
+        "title": "The Organic Chemistry Tutor — Quadratic Formula Explained",
+        "url": "https://www.youtube.com/watch?v=IlNAJl36-10"
+      }
+    ]
+  },
+  "calculus/rationalisation-techniques": {
+    "websites": [
+      {
+        "title": "Khan Academy — Rationalising Denominators",
+        "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals/x2f8bb11595b61c86:radicals/v/rationalizing-denominators-of-expressions"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Simplifying Radical Expressions",
+        "url": "https://www.youtube.com/watch?v=BpBh8gvMifs"
+      }
+    ]
+  },
   "calculus/similarity-solutions": {
     "websites": [
       {
@@ -208,14 +274,19 @@
         "url": "https://en.wikipedia.org/wiki/Similarity_solution"
       }
     ],
+    "videos": []
+  },
+  "calculus/surds": {
+    "websites": [
+      {
+        "title": "Khan Academy — Simplifying Square Roots",
+        "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals/x2f8bb11595b61c86:simplifying-square-roots/v/simplifying-square-roots-1"
+      }
+    ],
     "videos": [
       {
-        "title": "Steve Brunton — Similarity Solutions and the Diffusion Equation",
-        "url": "https://www.youtube.com/watch?v=i6VBTnKKBdM"
-      },
-      {
-        "title": "Faculty of Khan — Solving PDEs Using Similarity Variables",
-        "url": "https://www.youtube.com/watch?v=p7ZMHB3V3ZQ"
+        "title": "Khan Academy — Understanding Square Roots",
+        "url": "https://www.youtube.com/watch?v=mbc3_e5lWw0"
       }
     ]
   },
@@ -348,10 +419,6 @@
     ],
     "videos": [
       {
-        "title": "tastylive — Second-Order Greeks",
-        "url": "https://www.youtube.com/watch?v=OSJDhZMCvhI"
-      },
-      {
         "title": "Khan Academy — Option Greeks Overview",
         "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
       }
@@ -369,10 +436,6 @@
       }
     ],
     "videos": [
-      {
-        "title": "tastylive — Second-Order Greeks",
-        "url": "https://www.youtube.com/watch?v=OSJDhZMCvhI"
-      },
       {
         "title": "Khan Academy — Option Greeks Overview",
         "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
@@ -456,10 +519,6 @@
       {
         "title": "Khan Academy — Option Greeks: Delta",
         "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
-      },
-      {
-        "title": "tastylive — Understanding Delta",
-        "url": "https://www.youtube.com/watch?v=SSk3x7_fRaY"
       }
     ]
   },
@@ -512,6 +571,19 @@
       }
     ]
   },
+  "derivatives/fundamental-theorems-of-asset-pricing": {
+    "websites": [
+      {
+        "title": "Wikipedia — Fundamental Theorem of Asset Pricing",
+        "url": "https://en.wikipedia.org/wiki/Fundamental_theorem_of_asset_pricing"
+      },
+      {
+        "title": "Wikipedia — Complete Market",
+        "url": "https://en.wikipedia.org/wiki/Complete_market"
+      }
+    ],
+    "videos": []
+  },
   "derivatives/gamma-greeks": {
     "websites": [
       {
@@ -527,10 +599,6 @@
       {
         "title": "Khan Academy — Option Greeks Overview",
         "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
-      },
-      {
-        "title": "tastylive — Understanding Gamma",
-        "url": "https://www.youtube.com/watch?v=OSJDhZMCvhI"
       }
     ]
   },
@@ -565,6 +633,46 @@
       }
     ]
   },
+  "derivatives/market-price-of-risk": {
+    "websites": [
+      {
+        "title": "Investopedia — Sharpe Ratio",
+        "url": "https://www.investopedia.com/terms/s/sharperatio.asp"
+      }
+    ],
+    "videos": []
+  },
+  "derivatives/martingale-test": {
+    "websites": [
+      {
+        "title": "Wikipedia — Monte Carlo Methods in Finance",
+        "url": "https://en.wikipedia.org/wiki/Monte_Carlo_methods_in_finance"
+      },
+      {
+        "title": "Wikipedia — Martingale (Probability Theory)",
+        "url": "https://en.wikipedia.org/wiki/Martingale_(probability_theory)"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Monte Carlo Methods",
+        "url": "https://www.youtube.com/watch?v=OgO1gpXSUzU"
+      }
+    ]
+  },
+  "derivatives/martingales-in-quantitative-finance": {
+    "websites": [
+      {
+        "title": "Wikipedia — Martingale (Probability Theory)",
+        "url": "https://en.wikipedia.org/wiki/Martingale_(probability_theory)"
+      },
+      {
+        "title": "Wikipedia — Risk-Neutral Measure",
+        "url": "https://en.wikipedia.org/wiki/Risk-neutral_measure"
+      }
+    ],
+    "videos": []
+  },
   "derivatives/no-arbitrage-principle": {
     "websites": [
       {
@@ -587,6 +695,19 @@
       }
     ]
   },
+  "derivatives/numeraire-change": {
+    "websites": [
+      {
+        "title": "Wikipedia — Numéraire",
+        "url": "https://en.wikipedia.org/wiki/Num%C3%A9raire"
+      },
+      {
+        "title": "Wikipedia — Forward Measure",
+        "url": "https://en.wikipedia.org/wiki/Forward_measure"
+      }
+    ],
+    "videos": []
+  },
   "derivatives/option-greeks": {
     "websites": [
       {
@@ -608,6 +729,19 @@
         "url": "https://www.youtube.com/watch?v=kCJcEOYuuII"
       }
     ]
+  },
+  "derivatives/p-measure-vs-q-measure": {
+    "websites": [
+      {
+        "title": "Wikipedia — Risk-Neutral Measure",
+        "url": "https://en.wikipedia.org/wiki/Risk-neutral_measure"
+      },
+      {
+        "title": "Investopedia — Risk-Neutral Probabilities",
+        "url": "https://www.investopedia.com/terms/r/risk-neutral-measures.asp"
+      }
+    ],
+    "videos": []
   },
   "derivatives/put-call-parity": {
     "websites": [
@@ -642,10 +776,6 @@
       {
         "title": "Khan Academy — Option Greeks Overview",
         "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
-      },
-      {
-        "title": "tastylive — Understanding Rho",
-        "url": "https://www.youtube.com/watch?v=2hbMGMMBIas"
       }
     ]
   },
@@ -667,6 +797,32 @@
       }
     ]
   },
+  "derivatives/risk-premium": {
+    "websites": [
+      {
+        "title": "Investopedia — Risk Premium",
+        "url": "https://www.investopedia.com/terms/r/riskpremium.asp"
+      },
+      {
+        "title": "Wikipedia — Equity Premium Puzzle",
+        "url": "https://en.wikipedia.org/wiki/Equity_premium_puzzle"
+      }
+    ],
+    "videos": []
+  },
+  "derivatives/snell-envelope": {
+    "websites": [
+      {
+        "title": "Wikipedia — Snell Envelope",
+        "url": "https://en.wikipedia.org/wiki/Snell_envelope"
+      },
+      {
+        "title": "Wikipedia — Optimal Stopping",
+        "url": "https://en.wikipedia.org/wiki/Optimal_stopping"
+      }
+    ],
+    "videos": []
+  },
   "derivatives/speed-greeks": {
     "websites": [
       {
@@ -679,10 +835,6 @@
       }
     ],
     "videos": [
-      {
-        "title": "tastylive — Second-Order Greeks",
-        "url": "https://www.youtube.com/watch?v=OSJDhZMCvhI"
-      },
       {
         "title": "Khan Academy — Option Greeks Overview",
         "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
@@ -724,10 +876,6 @@
     ],
     "videos": [
       {
-        "title": "tastylive — Second-Order Greeks",
-        "url": "https://www.youtube.com/watch?v=OSJDhZMCvhI"
-      },
-      {
         "title": "Khan Academy — Option Greeks Overview",
         "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
       }
@@ -748,10 +896,6 @@
       {
         "title": "Khan Academy — Option Greeks Overview",
         "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
-      },
-      {
-        "title": "tastylive — Understanding Vega",
-        "url": "https://www.youtube.com/watch?v=lnGniFFgkIc"
       }
     ]
   },
@@ -767,10 +911,6 @@
       }
     ],
     "videos": [
-      {
-        "title": "tastylive — Second-Order Greeks",
-        "url": "https://www.youtube.com/watch?v=OSJDhZMCvhI"
-      },
       {
         "title": "Khan Academy — Option Greeks Overview",
         "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
@@ -803,10 +943,6 @@
     ],
     "videos": [
       {
-        "title": "tastylive — Second-Order Greeks",
-        "url": "https://www.youtube.com/watch?v=OSJDhZMCvhI"
-      },
-      {
         "title": "Khan Academy — Option Greeks Overview",
         "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
       }
@@ -824,10 +960,6 @@
       }
     ],
     "videos": [
-      {
-        "title": "tastylive — Second-Order Greeks",
-        "url": "https://www.youtube.com/watch?v=OSJDhZMCvhI"
-      },
       {
         "title": "Khan Academy — Option Greeks Overview",
         "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
@@ -847,38 +979,12 @@
     ],
     "videos": [
       {
-        "title": "Patrick Boyle — Absolute vs Relative Return",
-        "url": "https://www.youtube.com/watch?v=Pu8gDCmMFbo"
-      },
-      {
         "title": "Khan Academy — Return on Investment",
         "url": "https://www.youtube.com/watch?v=RuPMsK0mQC8"
       }
     ]
   },
-  "financial-maths/active-share": {
-    "websites": [
-      {
-        "title": "Investopedia — Active Share",
-        "url": "https://www.investopedia.com/terms/a/active-share.asp"
-      },
-      {
-        "title": "Wikipedia — Active Share",
-        "url": "https://en.wikipedia.org/wiki/Active_share"
-      }
-    ],
-    "videos": [
-      {
-        "title": "Patrick Boyle — Closet Indexing and Active Share",
-        "url": "https://www.youtube.com/watch?v=nL5RXQK-wbA"
-      },
-      {
-        "title": "CFA Institute — Active Share Explained",
-        "url": "https://www.youtube.com/watch?v=Kq3dGNi-xCM"
-      }
-    ]
-  },
-  "financial-maths/alpha-and-beta": {
+  "portfolio-theory/alpha-and-beta": {
     "websites": [
       {
         "title": "Investopedia — Alpha",
@@ -889,18 +995,9 @@
         "url": "https://www.investopedia.com/terms/b/beta.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — CAPM: Alpha and Beta",
-        "url": "https://www.youtube.com/watch?v=oMnOwhGIgHE"
-      },
-      {
-        "title": "Patrick Boyle — Alpha, Beta, and Smart Beta",
-        "url": "https://www.youtube.com/watch?v=Iq3E4vkBL3o"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/arbitrage-pricing-theory": {
+  "portfolio-theory/arbitrage-pricing-theory": {
     "websites": [
       {
         "title": "Investopedia — Arbitrage Pricing Theory (APT)",
@@ -911,16 +1008,7 @@
         "url": "https://corporatefinanceinstitute.com/resources/valuation/arbitrage-pricing-theory-apt/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Arbitrage Pricing Theory",
-        "url": "https://www.youtube.com/watch?v=vLbGX3cA-HA"
-      },
-      {
-        "title": "Patrick Boyle — Factor Models and APT",
-        "url": "https://www.youtube.com/watch?v=eXLbFgIRkOs"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/benchmark-index": {
     "websites": [
@@ -933,16 +1021,7 @@
         "url": "https://corporatefinanceinstitute.com/resources/valuation/benchmark/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — What Is an Index Fund?",
-        "url": "https://www.youtube.com/watch?v=Wv0pnBYFLSY"
-      },
-      {
-        "title": "Patrick Boyle — How Indices Work",
-        "url": "https://www.youtube.com/watch?v=SrDEgNBxlqA"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/beta-hedging": {
     "websites": [
@@ -955,18 +1034,9 @@
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/portfolio-beta/"
       }
     ],
-    "videos": [
-      {
-        "title": "Bionic Turtle — How to Hedge with Index Futures",
-        "url": "https://www.youtube.com/watch?v=HBXoOajLOm8"
-      },
-      {
-        "title": "QuantPy — Beta Hedging in Python",
-        "url": "https://www.youtube.com/watch?v=_fJkExEK6mY"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/black-litterman-model": {
+  "portfolio-theory/black-litterman-model": {
     "websites": [
       {
         "title": "Wikipedia — Black–Litterman Model",
@@ -977,18 +1047,9 @@
         "url": "https://www.investopedia.com/terms/b/black-litterman_model.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "QuantPy — Black-Litterman Portfolio Optimisation",
-        "url": "https://www.youtube.com/watch?v=kT6HqVBGwGA"
-      },
-      {
-        "title": "ritvikmath — Black-Litterman Model",
-        "url": "https://www.youtube.com/watch?v=bfJvHCaF8YA"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/calmar-ratio": {
+  "portfolio-theory/calmar-ratio": {
     "websites": [
       {
         "title": "Investopedia — Calmar Ratio",
@@ -999,60 +1060,25 @@
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/risk-management/calmar-ratio/"
       }
     ],
-    "videos": [
-      {
-        "title": "Bionic Turtle — Calmar and Sterling Ratios",
-        "url": "https://www.youtube.com/watch?v=ZSELQj1pEgY"
-      },
-      {
-        "title": "QuantPy — Risk-Adjusted Performance Ratios in Python",
-        "url": "https://www.youtube.com/watch?v=7PK1JTsDOjU"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/capital-asset-pricing-model": {
+  "portfolio-theory/capital-asset-pricing-model": {
     "websites": [
       {
         "title": "Investopedia — Capital Asset Pricing Model (CAPM)",
         "url": "https://www.investopedia.com/terms/c/capm.asp"
-      },
-      {
-        "title": "Corporate Finance Institute — CAPM",
-        "url": "https://corporatefinanceinstitute.com/resources/valuation/capital-asset-pricing-model-capm/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — CAPM",
-        "url": "https://www.youtube.com/watch?v=LWRYmOJNGjA"
-      },
-      {
-        "title": "The Organic Chemistry Tutor — CAPM Explained",
-        "url": "https://www.youtube.com/watch?v=2hSgWOqpEVk"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/capital-market-line": {
+  "portfolio-theory/capital-market-line": {
     "websites": [
       {
         "title": "Investopedia — Capital Market Line",
         "url": "https://www.investopedia.com/terms/c/cml.asp"
-      },
-      {
-        "title": "Corporate Finance Institute — Capital Market Line",
-        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/capital-market-line-cml/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Efficient Frontier and CML",
-        "url": "https://www.youtube.com/watch?v=cjU1tVeP-9o"
-      },
-      {
-        "title": "Patrick Boyle — Capital Market Line Explained",
-        "url": "https://www.youtube.com/watch?v=XZOGKMCdXkk"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/central-counterparty": {
     "websites": [
@@ -1065,16 +1091,7 @@
         "url": "https://en.wikipedia.org/wiki/Central_counterparty_clearing"
       }
     ],
-    "videos": [
-      {
-        "title": "CME Group — What Is a Clearinghouse?",
-        "url": "https://www.youtube.com/watch?v=CcrNBs9oR_0"
-      },
-      {
-        "title": "Bionic Turtle — Central Counterparties Explained",
-        "url": "https://www.youtube.com/watch?v=3H1j2bJ5sJM"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/collateral-management": {
     "websites": [
@@ -1087,16 +1104,7 @@
         "url": "https://corporatefinanceinstitute.com/resources/commercial-lending/collateral/"
       }
     ],
-    "videos": [
-      {
-        "title": "ISDA — Understanding Initial Margin",
-        "url": "https://www.youtube.com/watch?v=jGhHF3PaOck"
-      },
-      {
-        "title": "Finastra — Collateral Management Explained",
-        "url": "https://www.youtube.com/watch?v=QT0C2QI8Xvo"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/debt-to-equity-ratio": {
     "websites": [
@@ -1109,18 +1117,9 @@
         "url": "https://corporatefinanceinstitute.com/resources/accounting/debt-to-equity-ratio/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Debt and Equity Introduction",
-        "url": "https://www.youtube.com/watch?v=Dgs3AXMpECM"
-      },
-      {
-        "title": "The Organic Chemistry Tutor — Debt to Equity Ratio Explained",
-        "url": "https://www.youtube.com/watch?v=BNnTFpaGhGI"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/efficient-frontier": {
+  "portfolio-theory/efficient-frontier": {
     "websites": [
       {
         "title": "Investopedia — Efficient Frontier",
@@ -1131,16 +1130,7 @@
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/efficient-frontier/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Efficient Frontier",
-        "url": "https://www.youtube.com/watch?v=cjU1tVeP-9o"
-      },
-      {
-        "title": "Ben Felix — The Problem with the Efficient Frontier",
-        "url": "https://www.youtube.com/watch?v=DhMYCnAEyQ8"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/factor-investing": {
     "websites": [
@@ -1164,7 +1154,7 @@
       }
     ]
   },
-  "financial-maths/fama-french-three-factor-model": {
+  "portfolio-theory/fama-french-three-factor-model": {
     "websites": [
       {
         "title": "Investopedia — Fama and French Three-Factor Model",
@@ -1176,10 +1166,6 @@
       }
     ],
     "videos": [
-      {
-        "title": "Ben Felix — The Fama-French Three-Factor Model",
-        "url": "https://www.youtube.com/watch?v=jg2dDlGEbEk"
-      },
       {
         "title": "Patrick Boyle — Factor Investing Explained",
         "url": "https://www.youtube.com/watch?v=ViTnIebSzj4"
@@ -1197,38 +1183,16 @@
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/fund-of-funds/"
       }
     ],
-    "videos": [
-      {
-        "title": "Patrick Boyle — Fund of Funds Explained",
-        "url": "https://www.youtube.com/watch?v=BWKjHsNLDx4"
-      },
-      {
-        "title": "Khan Academy — Hedge Fund Fee Structure",
-        "url": "https://www.youtube.com/watch?v=kxkrdVzEXdI"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/funding-rate": {
     "websites": [
       {
         "title": "Investopedia — Cost of Carry",
         "url": "https://www.investopedia.com/terms/c/costofcarry.asp"
-      },
-      {
-        "title": "Corporate Finance Institute — Repo Rate",
-        "url": "https://corporatefinanceinstitute.com/resources/fixed-income/repo-rate/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Repo Agreements",
-        "url": "https://www.youtube.com/watch?v=1U2T2R6AQOI"
-      },
-      {
-        "title": "Patrick Boyle — Understanding Funding Costs",
-        "url": "https://www.youtube.com/watch?v=K8hP82fPdDo"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/haircut": {
     "websites": [
@@ -1241,16 +1205,7 @@
         "url": "https://en.wikipedia.org/wiki/Haircut_(finance)"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Repo Agreements and Haircuts",
-        "url": "https://www.youtube.com/watch?v=1U2T2R6AQOI"
-      },
-      {
-        "title": "Bionic Turtle — Collateral Haircuts Explained",
-        "url": "https://www.youtube.com/watch?v=WddJP9kF_TQ"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/hedge-funds": {
     "websites": [
@@ -1263,18 +1218,9 @@
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/hedge-fund/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Hedge Funds Intro",
-        "url": "https://www.youtube.com/watch?v=Rgl_TmHEMeg"
-      },
-      {
-        "title": "Patrick Boyle — How Hedge Funds Actually Work",
-        "url": "https://www.youtube.com/watch?v=do2vLKeAK3I"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/information-ratio": {
+  "portfolio-theory/information-ratio": {
     "websites": [
       {
         "title": "Investopedia — Information Ratio",
@@ -1285,38 +1231,16 @@
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/information-ratio/"
       }
     ],
-    "videos": [
-      {
-        "title": "Bionic Turtle — Information Ratio vs Sharpe Ratio",
-        "url": "https://www.youtube.com/watch?v=2VkO4wiG-gA"
-      },
-      {
-        "title": "AnalystPrep — Information Ratio Explained",
-        "url": "https://www.youtube.com/watch?v=pq1cYdkQEsU"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/jensens-alpha": {
+  "portfolio-theory/jensens-alpha": {
     "websites": [
       {
         "title": "Investopedia — Jensen's Alpha",
         "url": "https://www.investopedia.com/terms/j/jensensmeasure.asp"
-      },
-      {
-        "title": "Corporate Finance Institute — Jensen's Alpha",
-        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/risk-management/jensens-measure/"
       }
     ],
-    "videos": [
-      {
-        "title": "Bionic Turtle — Jensen's Alpha Explained",
-        "url": "https://www.youtube.com/watch?v=6-23ABIVbrM"
-      },
-      {
-        "title": "AnalystPrep — Jensen's Alpha vs Sharpe vs Treynor",
-        "url": "https://www.youtube.com/watch?v=4-g7krFJN5Y"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/kelly-criterion": {
     "websites": [
@@ -1330,10 +1254,6 @@
       }
     ],
     "videos": [
-      {
-        "title": "Numberphile — How to Bet (Kelly Criterion)",
-        "url": "https://www.youtube.com/watch?v=mvzMSoHmMuQ"
-      },
       {
         "title": "Zedstatistics — The Kelly Criterion Explained",
         "url": "https://www.youtube.com/watch?v=_FuuYSM7yOo"
@@ -1351,60 +1271,25 @@
         "url": "https://corporatefinanceinstitute.com/resources/accounting/leverage/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Introduction to Leverage",
-        "url": "https://www.youtube.com/watch?v=ij3j22IiQLE"
-      },
-      {
-        "title": "The Plain Bagel — How Leverage Works",
-        "url": "https://www.youtube.com/watch?v=Kf8E0XKjGXY"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/libor-ois-spread": {
     "websites": [
-      {
-        "title": "Investopedia — LIBOR-OIS Spread",
-        "url": "https://www.investopedia.com/terms/l/libor-ois-spread.asp"
-      },
       {
         "title": "Wikipedia — TED Spread (related concept)",
         "url": "https://en.wikipedia.org/wiki/TED_spread"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — LIBOR and Interest Rate Markets",
-        "url": "https://www.youtube.com/watch?v=hnU8-lTp4JU"
-      },
-      {
-        "title": "Patrick Boyle — LIBOR Explained and the Transition to SOFR",
-        "url": "https://www.youtube.com/watch?v=i8z05GNPeVE"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/long-short-equity": {
     "websites": [
       {
         "title": "Investopedia — Long-Short Equity",
         "url": "https://www.investopedia.com/terms/l/long-shortequity.asp"
-      },
-      {
-        "title": "Corporate Finance Institute — Long-Short Equity",
-        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/long-short-equity/"
       }
     ],
-    "videos": [
-      {
-        "title": "Patrick Boyle — Long-Short Equity Strategies",
-        "url": "https://www.youtube.com/watch?v=2Ht5_qGJPsI"
-      },
-      {
-        "title": "Khan Academy — Short Selling",
-        "url": "https://www.youtube.com/watch?v=2GI1gLqMEEo"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/market-impact-model": {
     "websites": [
@@ -1417,16 +1302,7 @@
         "url": "https://www.investopedia.com/terms/i/implementation-shortfall.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "QuantPy — Optimal Execution and Market Impact",
-        "url": "https://www.youtube.com/watch?v=3c1RFkE1Q3k"
-      },
-      {
-        "title": "Bionic Turtle — Market Risk: Liquidity and Market Impact",
-        "url": "https://www.youtube.com/watch?v=cKBwSCbW_c4"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/market-neutral-strategy": {
     "websites": [
@@ -1439,40 +1315,18 @@
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/market-neutral/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Hedge Fund Strategies",
-        "url": "https://www.youtube.com/watch?v=Xu5JY-3CrEg"
-      },
-      {
-        "title": "Patrick Boyle — Market Neutral Strategies Explained",
-        "url": "https://www.youtube.com/watch?v=QnftYM3fqaI"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/minimum-variance-portfolio": {
+  "portfolio-theory/minimum-variance-portfolio": {
     "websites": [
-      {
-        "title": "Investopedia — Minimum Variance Portfolio",
-        "url": "https://www.investopedia.com/terms/m/minimum-variance-portfolio.asp"
-      },
       {
         "title": "Wikipedia — Modern Portfolio Theory (Minimum Variance)",
         "url": "https://en.wikipedia.org/wiki/Modern_portfolio_theory#The_minimum_variance_portfolio"
       }
     ],
-    "videos": [
-      {
-        "title": "Patrick Boyle — Minimum Variance Portfolios",
-        "url": "https://www.youtube.com/watch?v=5JePICTXaps"
-      },
-      {
-        "title": "QuantPy — Minimum Variance Portfolio in Python",
-        "url": "https://www.youtube.com/watch?v=uQQi5Lx3KE4"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/modern-portfolio-theory": {
+  "portfolio-theory/modern-portfolio-theory": {
     "websites": [
       {
         "title": "Investopedia — Modern Portfolio Theory",
@@ -1490,27 +1344,14 @@
       }
     ]
   },
-  "financial-maths/omega-ratio": {
+  "portfolio-theory/omega-ratio": {
     "websites": [
-      {
-        "title": "Investopedia — Omega Ratio",
-        "url": "https://www.investopedia.com/terms/o/omega-ratio.asp"
-      },
       {
         "title": "Wikipedia — Omega Ratio",
         "url": "https://en.wikipedia.org/wiki/Omega_ratio"
       }
     ],
-    "videos": [
-      {
-        "title": "QuantPy — Omega Ratio in Python",
-        "url": "https://www.youtube.com/watch?v=BhPjEdS2GEk"
-      },
-      {
-        "title": "Bionic Turtle — Beyond the Sharpe Ratio",
-        "url": "https://www.youtube.com/watch?v=J95KxXfMfqI"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/overnight-index-swap": {
     "websites": [
@@ -1523,16 +1364,7 @@
         "url": "https://en.wikipedia.org/wiki/Overnight_indexed_swap"
       }
     ],
-    "videos": [
-      {
-        "title": "Bionic Turtle — OIS Discounting Explained",
-        "url": "https://www.youtube.com/watch?v=pMIIJVe3YeE"
-      },
-      {
-        "title": "Patrick Boyle — The LIBOR to SOFR Transition",
-        "url": "https://www.youtube.com/watch?v=i8z05GNPeVE"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/pairs-trading": {
     "websites": [
@@ -1545,16 +1377,7 @@
         "url": "https://en.wikipedia.org/wiki/Pairs_trade"
       }
     ],
-    "videos": [
-      {
-        "title": "QuantPy — Pairs Trading Strategy in Python",
-        "url": "https://www.youtube.com/watch?v=XqOjGLs3BTY"
-      },
-      {
-        "title": "Hudson & Thames — Introduction to Pairs Trading",
-        "url": "https://www.youtube.com/watch?v=189BXHmpxWM"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/relative-return": {
     "websites": [
@@ -1567,16 +1390,7 @@
         "url": "https://www.investopedia.com/terms/t/trackingerror.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "CFA Institute — Performance Measurement Basics",
-        "url": "https://www.youtube.com/watch?v=1QF4AuPJFGo"
-      },
-      {
-        "title": "Patrick Boyle — How Fund Managers Are Evaluated",
-        "url": "https://www.youtube.com/watch?v=p3y4pMRPk_4"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/repo-agreement": {
     "websites": [
@@ -1589,33 +1403,16 @@
         "url": "https://corporatefinanceinstitute.com/resources/fixed-income/repurchase-agreement-repo/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Repurchase Agreements",
-        "url": "https://www.youtube.com/watch?v=1U2T2R6AQOI"
-      },
-      {
-        "title": "Patrick Boyle — The Repo Market Explained",
-        "url": "https://www.youtube.com/watch?v=K8hP82fPdDo"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/resampled-efficient-frontier": {
+  "portfolio-theory/resampled-efficient-frontier": {
     "websites": [
       {
         "title": "Wikipedia — Resampled Efficient Frontier",
         "url": "https://en.wikipedia.org/wiki/Resampled_efficient_frontier"
-      },
-      {
-        "title": "New Frontier Advisors — Resampled Efficiency",
-        "url": "https://www.newfrontieradvisors.com/research/resampled-efficiency/"
       }
     ],
     "videos": [
-      {
-        "title": "QuantPy — Robust Portfolio Optimisation",
-        "url": "https://www.youtube.com/watch?v=fJPJfJnCSMg"
-      },
       {
         "title": "ritvikmath — Bootstrap Methods in Finance",
         "url": "https://www.youtube.com/watch?v=N4ZQQqyIf6k"
@@ -1627,22 +1424,9 @@
       {
         "title": "Investopedia — Return on Equity (ROE)",
         "url": "https://www.investopedia.com/terms/r/returnonequity.asp"
-      },
-      {
-        "title": "Corporate Finance Institute — Return on Equity",
-        "url": "https://corporatefinanceinstitute.com/resources/financial-modeling/return-on-equity-roe/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Return on Equity",
-        "url": "https://www.youtube.com/watch?v=KoA3WMEkJsE"
-      },
-      {
-        "title": "The Plain Bagel — Return on Equity Explained",
-        "url": "https://www.youtube.com/watch?v=mGfxf9bOat0"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/return-on-investment": {
     "websites": [
@@ -1670,38 +1454,21 @@
     ],
     "videos": [
       {
-        "title": "Khan Academy — Repurchase Agreements",
-        "url": "https://www.youtube.com/watch?v=1U2T2R6AQOI"
-      },
-      {
         "title": "Heresy Financial — The Reverse Repo Facility Explained",
         "url": "https://www.youtube.com/watch?v=O0fSPO7AW7k"
       }
     ]
   },
-  "financial-maths/risk-budgeting": {
+  "portfolio-theory/risk-budgeting": {
     "websites": [
-      {
-        "title": "Investopedia — Risk Budgeting",
-        "url": "https://www.investopedia.com/terms/r/risk-budgeting.asp"
-      },
       {
         "title": "Wikipedia — Risk Parity (Risk Budgeting section)",
         "url": "https://en.wikipedia.org/wiki/Risk_parity"
       }
     ],
-    "videos": [
-      {
-        "title": "Bionic Turtle — Risk Budgeting and Contributions",
-        "url": "https://www.youtube.com/watch?v=VcOLIqhXj5c"
-      },
-      {
-        "title": "QuantPy — Risk Contributions in Python",
-        "url": "https://www.youtube.com/watch?v=NKEkRxE0vH0"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/risk-parity": {
+  "portfolio-theory/risk-parity": {
     "websites": [
       {
         "title": "Investopedia — Risk Parity",
@@ -1713,10 +1480,6 @@
       }
     ],
     "videos": [
-      {
-        "title": "Patrick Boyle — Risk Parity Explained",
-        "url": "https://www.youtube.com/watch?v=UYdoxqtEMn0"
-      },
       {
         "title": "Bridgewater — All Weather Principles",
         "url": "https://www.youtube.com/watch?v=Nu4lHaSh7D4"
@@ -1738,10 +1501,6 @@
       {
         "title": "Khan Academy — Arbitrage Basics",
         "url": "https://www.youtube.com/watch?v=AuCH7fHZsZ4"
-      },
-      {
-        "title": "Patrick Boyle — What is Arbitrage?",
-        "url": "https://www.youtube.com/watch?v=V9sINKMEfKo"
       }
     ]
   },
@@ -1756,18 +1515,9 @@
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/securities-lending/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Short Selling and Securities Lending",
-        "url": "https://www.youtube.com/watch?v=2GI1gLqMEEo"
-      },
-      {
-        "title": "J.P. Morgan — What Is Securities Lending?",
-        "url": "https://www.youtube.com/watch?v=5y0Vmje0pHI"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/security-market-line": {
+  "portfolio-theory/security-market-line": {
     "websites": [
       {
         "title": "Investopedia — Security Market Line (SML)",
@@ -1778,18 +1528,9 @@
         "url": "https://corporatefinanceinstitute.com/resources/valuation/security-market-line-sml/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Security Market Line",
-        "url": "https://www.youtube.com/watch?v=1EP810IuHCU"
-      },
-      {
-        "title": "The Organic Chemistry Tutor — Security Market Line Explained",
-        "url": "https://www.youtube.com/watch?v=H6TwePkGp9Q"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/sharpe-ratio": {
+  "portfolio-theory/sharpe-ratio": {
     "websites": [
       {
         "title": "Investopedia — Sharpe Ratio",
@@ -1800,16 +1541,7 @@
         "url": "https://corporatefinanceinstitute.com/resources/risk-management/sharpe-ratio/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Sharpe Ratio",
-        "url": "https://www.youtube.com/watch?v=XfGHkFBiB0g"
-      },
-      {
-        "title": "Ben Felix — Understanding Risk-Adjusted Returns",
-        "url": "https://www.youtube.com/watch?v=t2rFR4M1qq0"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/short-interest": {
     "websites": [
@@ -1822,16 +1554,7 @@
         "url": "https://en.wikipedia.org/wiki/Short_interest_ratio"
       }
     ],
-    "videos": [
-      {
-        "title": "The Plain Bagel — Understanding Short Interest",
-        "url": "https://www.youtube.com/watch?v=1mlR3y8DIKU"
-      },
-      {
-        "title": "Investopedia — Short Interest Explained",
-        "url": "https://www.youtube.com/watch?v=rnkNpMrpFrI"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/short-sale-constraints": {
     "websites": [
@@ -1848,10 +1571,6 @@
       {
         "title": "Patrick Boyle — Short Selling Bans: Do They Work?",
         "url": "https://www.youtube.com/watch?v=7PM4rNDr4oI"
-      },
-      {
-        "title": "The Plain Bagel — Should Short Selling Be Banned?",
-        "url": "https://www.youtube.com/watch?v=1mlR3y8DIKU"
       }
     ]
   },
@@ -1866,16 +1585,7 @@
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/short-selling/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Short Selling",
-        "url": "https://www.youtube.com/watch?v=2GI1gLqMEEo"
-      },
-      {
-        "title": "The Plain Bagel — Short Selling Explained",
-        "url": "https://www.youtube.com/watch?v=1mlR3y8DIKU"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/short-squeeze": {
     "websites": [
@@ -1888,18 +1598,9 @@
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/short-squeeze/"
       }
     ],
-    "videos": [
-      {
-        "title": "The Plain Bagel — What Is a Short Squeeze?",
-        "url": "https://www.youtube.com/watch?v=sLJmnhH3kHI"
-      },
-      {
-        "title": "Patrick Boyle — GameStop Short Squeeze Explained",
-        "url": "https://www.youtube.com/watch?v=bBfBKBv1dAk"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/sortino-ratio": {
+  "portfolio-theory/sortino-ratio": {
     "websites": [
       {
         "title": "Investopedia — Sortino Ratio",
@@ -1910,16 +1611,7 @@
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/risk-management/sortino-ratio-2/"
       }
     ],
-    "videos": [
-      {
-        "title": "Bionic Turtle — Sortino Ratio vs Sharpe Ratio",
-        "url": "https://www.youtube.com/watch?v=v0s0_H2Z9Fs"
-      },
-      {
-        "title": "AnalystPrep — Sortino Ratio Explained",
-        "url": "https://www.youtube.com/watch?v=ohD70a1sEKo"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/statistical-arbitrage": {
     "websites": [
@@ -1932,38 +1624,16 @@
         "url": "https://en.wikipedia.org/wiki/Statistical_arbitrage"
       }
     ],
-    "videos": [
-      {
-        "title": "QuantPy — Statistical Arbitrage Strategy",
-        "url": "https://www.youtube.com/watch?v=K4MVeHGWpTk"
-      },
-      {
-        "title": "Hudson & Thames — Statistical Arbitrage Overview",
-        "url": "https://www.youtube.com/watch?v=2CXHP9Xf6FE"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/sterling-ratio": {
+  "portfolio-theory/sterling-ratio": {
     "websites": [
-      {
-        "title": "Investopedia — Sterling Ratio",
-        "url": "https://www.investopedia.com/terms/s/sterling-ratio.asp"
-      },
       {
         "title": "Wikipedia — Sterling Ratio",
         "url": "https://en.wikipedia.org/wiki/Sterling_ratio"
       }
     ],
-    "videos": [
-      {
-        "title": "Bionic Turtle — Calmar and Sterling Ratios",
-        "url": "https://www.youtube.com/watch?v=ZSELQj1pEgY"
-      },
-      {
-        "title": "QuantPy — Risk-Adjusted Performance Ratios",
-        "url": "https://www.youtube.com/watch?v=7PK1JTsDOjU"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/stock-borrow-rate": {
     "websites": [
@@ -1976,16 +1646,7 @@
         "url": "https://en.wikipedia.org/wiki/Securities_lending"
       }
     ],
-    "videos": [
-      {
-        "title": "Patrick Boyle — Securities Lending and Borrow Costs",
-        "url": "https://www.youtube.com/watch?v=JlxQVHHrXh8"
-      },
-      {
-        "title": "Investor Trading Academy — Hard to Borrow Stocks",
-        "url": "https://www.youtube.com/watch?v=WZiKtEFmpz0"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/time-value-of-money": {
     "websites": [
@@ -2005,7 +1666,7 @@
       }
     ]
   },
-  "financial-maths/tracking-error": {
+  "portfolio-theory/tracking-error": {
     "websites": [
       {
         "title": "Investopedia — Tracking Error",
@@ -2016,18 +1677,9 @@
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/portfolio-management/tracking-error/"
       }
     ],
-    "videos": [
-      {
-        "title": "Bionic Turtle — Tracking Error",
-        "url": "https://www.youtube.com/watch?v=5-ci4EgdwJY"
-      },
-      {
-        "title": "AnalystPrep — Tracking Error and Information Ratio",
-        "url": "https://www.youtube.com/watch?v=6K1NCWU5b60"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/treynor-ratio": {
+  "portfolio-theory/treynor-ratio": {
     "websites": [
       {
         "title": "Investopedia — Treynor Ratio",
@@ -2038,16 +1690,7 @@
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/risk-management/treynor-ratio/"
       }
     ],
-    "videos": [
-      {
-        "title": "Bionic Turtle — Treynor vs Sharpe vs Jensen",
-        "url": "https://www.youtube.com/watch?v=E4TIYFljgJM"
-      },
-      {
-        "title": "AnalystPrep — Treynor Ratio",
-        "url": "https://www.youtube.com/watch?v=_35uErvO920"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/triangular-arbitrage": {
     "websites": [
@@ -2060,36 +1703,19 @@
         "url": "https://corporatefinanceinstitute.com/resources/foreign-exchange/triangular-arbitrage/"
       }
     ],
-    "videos": [
-      {
-        "title": "Trading 212 — How Triangular Arbitrage Works",
-        "url": "https://www.youtube.com/watch?v=fX3iP-m-j_E"
-      },
-      {
-        "title": "Khan Academy — Cross Exchange Rates",
-        "url": "https://www.youtube.com/watch?v=E-K7_28qNf0"
-      }
-    ]
+    "videos": []
   },
-  "financial-maths/two-fund-separation-theorem": {
+  "portfolio-theory/two-fund-separation-theorem": {
     "websites": [
       {
         "title": "Wikipedia — Mutual Fund Separation Theorem",
         "url": "https://en.wikipedia.org/wiki/Mutual_fund_separation_theorem"
-      },
-      {
-        "title": "Corporate Finance Institute — Two-Fund Separation",
-        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/separation-theorem/"
       }
     ],
     "videos": [
       {
         "title": "MIT OpenCourseWare — Capital Market Line and Separation",
         "url": "https://www.youtube.com/watch?v=8TJQhQ2GZ0Y"
-      },
-      {
-        "title": "Patrick Boyle — CAPM and Two Fund Separation",
-        "url": "https://www.youtube.com/watch?v=lCaFzQzlgSU"
       }
     ]
   },
@@ -2105,6 +1731,28 @@
       }
     ],
     "videos": []
+  },
+  "linear-algebra/applications-of-linear-algebra": {
+    "websites": [
+      {
+        "title": "Wikipedia — Linear Algebra",
+        "url": "https://en.wikipedia.org/wiki/Linear_algebra"
+      },
+      {
+        "title": "Investopedia — Modern Portfolio Theory",
+        "url": "https://www.investopedia.com/terms/m/modernportfoliotheory.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Essence of Linear Algebra",
+        "url": "https://www.youtube.com/watch?v=fNk_zzaMoSs"
+      },
+      {
+        "title": "MIT OpenCourseWare — Linear Algebra (Gilbert Strang)",
+        "url": "https://www.youtube.com/watch?v=ZK3O402wf1c"
+      }
+    ]
   },
   "linear-algebra/cholesky-decomposition": {
     "websites": [
@@ -2135,36 +1783,19 @@
         "url": "https://mathworld.wolfram.com/ConditionNumber.html"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare — Numerical Linear Algebra",
-        "url": "https://www.youtube.com/watch?v=LZMiEO5vmSE"
-      },
-      {
-        "title": "Steve Brunton — Condition Number and Matrix Norms",
-        "url": "https://www.youtube.com/watch?v=GXhLrU5sm14"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/covariance-matrix": {
     "websites": [
       {
         "title": "Wikipedia — Covariance Matrix",
         "url": "https://en.wikipedia.org/wiki/Covariance_matrix"
-      },
-      {
-        "title": "Investopedia — Variance-Covariance Method",
-        "url": "https://www.investopedia.com/terms/v/variance-covariance-method.asp"
       }
     ],
     "videos": [
       {
         "title": "StatQuest — Covariance Matrix Explained",
         "url": "https://www.youtube.com/watch?v=152tSYtiQbw"
-      },
-      {
-        "title": "ritvikmath — Covariance Matrix",
-        "url": "https://www.youtube.com/watch?v=locZabK4POc"
       }
     ]
   },
@@ -2223,16 +1854,7 @@
         "url": "https://en.wikipedia.org/wiki/Random_matrix"
       }
     ],
-    "videos": [
-      {
-        "title": "QuantPy — Random Matrix Theory for Portfolio Optimisation",
-        "url": "https://www.youtube.com/watch?v=H6gR9PJuA7k"
-      },
-      {
-        "title": "Marcos López de Prado — Denoising Covariance Matrices",
-        "url": "https://www.youtube.com/watch?v=G0t1_FE1JHs"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/eigenvalues-and-eigenvectors": {
     "websites": [
@@ -2253,6 +1875,24 @@
       {
         "title": "The Organic Chemistry Tutor — Eigenvalues and Eigenvectors",
         "url": "https://www.youtube.com/watch?v=TQvxWaQnrqI"
+      }
+    ]
+  },
+  "linear-algebra/linear-transformations": {
+    "websites": [
+      {
+        "title": "Wikipedia — Linear Map",
+        "url": "https://en.wikipedia.org/wiki/Linear_map"
+      },
+      {
+        "title": "Khan Academy — Linear Transformations",
+        "url": "https://www.khanacademy.org/math/linear-algebra/matrix-transformations/linear-transformations/v/linear-transformations"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Linear Transformations and Matrices",
+        "url": "https://www.youtube.com/watch?v=kYB8IZa5AuE"
       }
     ]
   },
@@ -2300,6 +1940,24 @@
       }
     ]
   },
+  "linear-algebra/matrix-norms": {
+    "websites": [
+      {
+        "title": "Wikipedia — Matrix Norm",
+        "url": "https://en.wikipedia.org/wiki/Matrix_norm"
+      },
+      {
+        "title": "MathWorld — Matrix Norm",
+        "url": "https://mathworld.wolfram.com/MatrixNorm.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Norms of Vectors and Matrices",
+        "url": "https://www.youtube.com/watch?v=NcPUI7aPFhA"
+      }
+    ]
+  },
   "linear-algebra/positive-definite-matrices": {
     "websites": [
       {
@@ -2341,6 +1999,50 @@
       {
         "title": "MIT OpenCourseWare — Column Space and Rank",
         "url": "https://www.youtube.com/watch?v=yjBerM5jWsc"
+      }
+    ]
+  },
+  "linear-algebra/singular-value-decomposition": {
+    "websites": [
+      {
+        "title": "Wikipedia — Singular Value Decomposition",
+        "url": "https://en.wikipedia.org/wiki/Singular_value_decomposition"
+      },
+      {
+        "title": "Brilliant — Singular Value Decomposition",
+        "url": "https://brilliant.org/wiki/singular-value-decomposition/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — SVD Visualised",
+        "url": "https://www.youtube.com/watch?v=vSczTbgc8Rc"
+      },
+      {
+        "title": "Steve Brunton — SVD Overview",
+        "url": "https://www.youtube.com/watch?v=nbBvuuNVfco"
+      }
+    ]
+  },
+  "linear-algebra/spectral-decomposition": {
+    "websites": [
+      {
+        "title": "Wikipedia — Eigendecomposition of a Matrix",
+        "url": "https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix"
+      },
+      {
+        "title": "Brilliant — Spectral Theorem",
+        "url": "https://brilliant.org/wiki/spectral-theorem/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Eigenvectors and Eigenvalues",
+        "url": "https://www.youtube.com/watch?v=PFDu9oVAE-g"
+      },
+      {
+        "title": "MIT OpenCourseWare — Symmetric Matrices and Positive Definiteness",
+        "url": "https://www.youtube.com/watch?v=umt6BB1nJ4w"
       }
     ]
   },
@@ -2415,17 +2117,9 @@
       {
         "title": "Wikipedia — Conditional Expectation",
         "url": "https://en.wikipedia.org/wiki/Conditional_expectation"
-      },
-      {
-        "title": "Brilliant — Conditional Expectation",
-        "url": "https://brilliant.org/wiki/conditional-expectation/"
       }
     ],
     "videos": [
-      {
-        "title": "MIT OpenCourseWare — Conditional Expectation",
-        "url": "https://www.youtube.com/watch?v=dTYsYwqjjA8"
-      },
       {
         "title": "Khan Academy — Conditional Probability and Expectation",
         "url": "https://www.youtube.com/watch?v=ibINrxJLvlM"
@@ -2437,20 +2131,12 @@
       {
         "title": "Wikipedia — Convergence of Random Variables",
         "url": "https://en.wikipedia.org/wiki/Convergence_of_random_variables"
-      },
-      {
-        "title": "Brilliant — Convergence in Probability",
-        "url": "https://brilliant.org/wiki/convergence-in-probability/"
       }
     ],
     "videos": [
       {
         "title": "StatQuest — Central Limit Theorem",
         "url": "https://www.youtube.com/watch?v=YAlJCEDH2uY"
-      },
-      {
-        "title": "MIT OpenCourseWare — Modes of Convergence",
-        "url": "https://www.youtube.com/watch?v=VzHzzmLLBjM"
       }
     ]
   },
@@ -2469,10 +2155,6 @@
       {
         "title": "3Blue1Brown — What does d/dx actually mean?",
         "url": "https://www.youtube.com/watch?v=CfW845LNObM"
-      },
-      {
-        "title": "Khan Academy — Differentials",
-        "url": "https://www.youtube.com/watch?v=QVyvo_HZ3Vs"
       }
     ]
   },
@@ -2579,10 +2261,6 @@
       {
         "title": "MIT OpenCourseWare — Probability Spaces",
         "url": "https://www.youtube.com/watch?v=mUxg3j_h5GM"
-      },
-      {
-        "title": "Measure Theory for Probability — Sigma-Algebras",
-        "url": "https://www.youtube.com/watch?v=gALVbJ0sHO8"
       }
     ]
   },
@@ -2630,6 +2308,15 @@
       }
     ]
   },
+  "probability/box-muller-transform": {
+    "websites": [
+      {
+        "title": "Wikipedia — Box–Muller Transform",
+        "url": "https://en.wikipedia.org/wiki/Box%E2%80%93Muller_transform"
+      }
+    ],
+    "videos": []
+  },
   "probability/chi-squared-distribution": {
     "websites": [
       {
@@ -2663,14 +2350,23 @@
         "url": "https://www.investopedia.com/terms/c/copula.asp"
       }
     ],
+    "videos": []
+  },
+  "probability/cornish-fisher-expansion": {
+    "websites": [
+      {
+        "title": "Wikipedia — Cornish–Fisher Expansion",
+        "url": "https://en.wikipedia.org/wiki/Cornish%E2%80%93Fisher_expansion"
+      }
+    ],
     "videos": [
       {
-        "title": "ritvikmath — Copulas Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=Nh-GMnYsfUM"
+        "title": "StatQuest — Skewness and Kurtosis Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=xi0vhXFPegw"
       },
       {
-        "title": "QuantPy — Copulas in Finance",
-        "url": "https://www.youtube.com/watch?v=vxK1Hh1JdNY"
+        "title": "Khan Academy — Skewness and Kurtosis",
+        "url": "https://www.youtube.com/watch?v=HnMGKsupF8Q"
       }
     ]
   },
@@ -2693,6 +2389,24 @@
       {
         "title": "The Organic Chemistry Tutor — CDF and PDF",
         "url": "https://www.youtube.com/watch?v=YXLVjCKVP7U"
+      }
+    ]
+  },
+  "probability/error-function": {
+    "websites": [
+      {
+        "title": "Wikipedia — Error Function",
+        "url": "https://en.wikipedia.org/wiki/Error_function"
+      },
+      {
+        "title": "Brilliant — Error Function",
+        "url": "https://brilliant.org/wiki/error-function/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Normal Distribution and the Empirical Rule",
+        "url": "https://www.youtube.com/watch?v=xgQhefFOXrM"
       }
     ]
   },
@@ -2750,6 +2464,24 @@
       }
     ]
   },
+  "probability/hazard-rate-function": {
+    "websites": [
+      {
+        "title": "Wikipedia — Failure Rate (Hazard Function)",
+        "url": "https://en.wikipedia.org/wiki/Failure_rate"
+      },
+      {
+        "title": "Investopedia — Credit Default Swap (CDS)",
+        "url": "https://www.investopedia.com/terms/c/creditdefaultswap.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Survival Analysis Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=v1QqpG0rR1k"
+      }
+    ]
+  },
   "probability/lognormal-distribution": {
     "websites": [
       {
@@ -2762,6 +2494,24 @@
       }
     ],
     "videos": []
+  },
+  "probability/mills-ratio": {
+    "websites": [
+      {
+        "title": "Wikipedia — Mills Ratio",
+        "url": "https://en.wikipedia.org/wiki/Mills_ratio"
+      },
+      {
+        "title": "Wolfram MathWorld — Mills Ratio",
+        "url": "https://mathworld.wolfram.com/MillsRatio.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "The Organic Chemistry Tutor — Normal Distribution and Z-scores",
+        "url": "https://www.youtube.com/watch?v=dOr0NKyD31Q"
+      }
+    ]
   },
   "probability/moment-generating-function": {
     "websites": [
@@ -2860,6 +2610,82 @@
       }
     ]
   },
+  "probability/probability-integral-transform": {
+    "websites": [
+      {
+        "title": "Wikipedia — Probability Integral Transform",
+        "url": "https://en.wikipedia.org/wiki/Probability_integral_transform"
+      },
+      {
+        "title": "Brilliant — Inverse Transform Sampling",
+        "url": "https://brilliant.org/wiki/inverse-transform-sampling/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Simulation and Random Variables",
+        "url": "https://www.youtube.com/watch?v=nt63k3bfXS0"
+      }
+    ]
+  },
+  "probability/probit-function": {
+    "websites": [
+      {
+        "title": "Wikipedia — Probit",
+        "url": "https://en.wikipedia.org/wiki/Probit"
+      },
+      {
+        "title": "Investopedia — Z-Score: Definition and How to Calculate",
+        "url": "https://www.investopedia.com/terms/z/zscore.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Z-scores and Percentiles",
+        "url": "https://www.youtube.com/watch?v=uAxyI_XfqXk"
+      }
+    ]
+  },
+  "probability/standardised-normal-distribution-function": {
+    "websites": [
+      {
+        "title": "Wikipedia — Normal Distribution (Cumulative Distribution Function)",
+        "url": "https://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function"
+      },
+      {
+        "title": "Khan Academy — Normal Distribution and Z-scores",
+        "url": "https://www.khanacademy.org/math/statistics-probability/modeling-distributions-of-data/z-scores/v/ck12-org-normal-distribution-problems-z-score"
+      }
+    ],
+    "videos": [
+      {
+        "title": "The Organic Chemistry Tutor — Standard Normal Distribution Tables",
+        "url": "https://www.youtube.com/watch?v=dOr0NKyD31Q"
+      }
+    ]
+  },
+  "probability/standardised-normal-variable": {
+    "websites": [
+      {
+        "title": "Khan Academy — Z-scores Introduction",
+        "url": "https://www.khanacademy.org/math/statistics-probability/modeling-distributions-of-data/z-scores/v/ck12-org-normal-distribution-problems-z-score"
+      },
+      {
+        "title": "Wikipedia — Standard Score",
+        "url": "https://en.wikipedia.org/wiki/Standard_score"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — The Normal Distribution, Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=rzFX5NWojp0"
+      },
+      {
+        "title": "The Organic Chemistry Tutor — Z-scores and Standard Normal Distribution",
+        "url": "https://www.youtube.com/watch?v=dOr0NKyD31Q"
+      }
+    ]
+  },
   "probability/students-t-distribution": {
     "websites": [
       {
@@ -2893,16 +2719,7 @@
         "url": "https://www.investopedia.com/terms/t/tailrisk.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "ritvikmath — Tail Dependence and Copulas",
-        "url": "https://www.youtube.com/watch?v=Nh-GMnYsfUM"
-      },
-      {
-        "title": "QuantPy — Copulas and Tail Risk",
-        "url": "https://www.youtube.com/watch?v=vxK1Hh1JdNY"
-      }
-    ]
+    "videos": []
   },
   "probability/uniform-distribution": {
     "websites": [
@@ -2919,6 +2736,24 @@
       {
         "title": "Khan Academy — Uniform Distribution",
         "url": "https://www.youtube.com/watch?v=Fvi9A_tEmXQ"
+      }
+    ]
+  },
+  "probability/z-table": {
+    "websites": [
+      {
+        "title": "Khan Academy — Z-table for Proportion Below",
+        "url": "https://www.khanacademy.org/math/statistics-probability/modeling-distributions-of-data/z-scores/v/ck12-org-normal-distribution-problems-z-score"
+      },
+      {
+        "title": "Wikipedia — Standard Normal Table",
+        "url": "https://en.wikipedia.org/wiki/Standard_normal_table"
+      }
+    ],
+    "videos": [
+      {
+        "title": "The Organic Chemistry Tutor — How to Use the Z-Table",
+        "url": "https://www.youtube.com/watch?v=dOr0NKyD31Q"
       }
     ]
   },
@@ -2946,16 +2781,7 @@
         "url": "https://corporatefinanceinstitute.com/resources/derivatives/credit-valuation-adjustment-cva/"
       }
     ],
-    "videos": [
-      {
-        "title": "Bionic Turtle — Counterparty Credit Risk and CVA",
-        "url": "https://www.youtube.com/watch?v=x2cE2Nkb1uc"
-      },
-      {
-        "title": "QuantPy — Understanding CVA",
-        "url": "https://www.youtube.com/watch?v=ZvW9R_7VefI"
-      }
-    ]
+    "videos": []
   },
   "risk/drawdown-duration": {
     "websites": [
@@ -2968,16 +2794,7 @@
         "url": "https://en.wikipedia.org/wiki/Drawdown_(economics)"
       }
     ],
-    "videos": [
-      {
-        "title": "QuantPy — Drawdown Analysis in Python",
-        "url": "https://www.youtube.com/watch?v=scNyIxMTt9M"
-      },
-      {
-        "title": "Bionic Turtle — Drawdown Measures",
-        "url": "https://www.youtube.com/watch?v=jl0NMDbGFP0"
-      }
-    ]
+    "videos": []
   },
   "risk/extreme-value-theory": {
     "websites": [
@@ -3003,38 +2820,16 @@
         "url": "https://en.wikipedia.org/wiki/Fire_sale"
       }
     ],
-    "videos": [
-      {
-        "title": "Patrick Boyle — Liquidity Crises and Fire Sales",
-        "url": "https://www.youtube.com/watch?v=wkRi3bAomOw"
-      },
-      {
-        "title": "MIT OpenCourseWare — Systemic Risk and Financial Crises",
-        "url": "https://www.youtube.com/watch?v=QPy7VU_M6s0"
-      }
-    ]
+    "videos": []
   },
   "risk/liquidity-risk": {
     "websites": [
       {
         "title": "Investopedia — Liquidity Risk",
         "url": "https://www.investopedia.com/terms/l/liquidityrisk.asp"
-      },
-      {
-        "title": "Corporate Finance Institute — Liquidity Risk",
-        "url": "https://corporatefinanceinstitute.com/resources/risk-management/liquidity-risk/"
       }
     ],
-    "videos": [
-      {
-        "title": "Bionic Turtle — Liquidity Risk Explained",
-        "url": "https://www.youtube.com/watch?v=cKBwSCbW_c4"
-      },
-      {
-        "title": "Patrick Boyle — Market Liquidity and the Flash Crash",
-        "url": "https://www.youtube.com/watch?v=wkRi3bAomOw"
-      }
-    ]
+    "videos": []
   },
   "risk/margin-call": {
     "websites": [
@@ -3047,16 +2842,7 @@
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/margin-call/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Margin Trading",
-        "url": "https://www.youtube.com/watch?v=AyOREBnWbSI"
-      },
-      {
-        "title": "The Plain Bagel — What Is a Margin Call?",
-        "url": "https://www.youtube.com/watch?v=xN9BHm5Taq0"
-      }
-    ]
+    "videos": []
   },
   "risk/margin-requirements": {
     "websites": [
@@ -3069,16 +2855,7 @@
         "url": "https://corporatefinanceinstitute.com/resources/derivatives/initial-margin/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Margin Trading",
-        "url": "https://www.youtube.com/watch?v=AyOREBnWbSI"
-      },
-      {
-        "title": "CME Group — Understanding Futures Margins",
-        "url": "https://www.youtube.com/watch?v=NtVOgCvasOA"
-      }
-    ]
+    "videos": []
   },
   "risk/maximum-drawdown": {
     "websites": [
@@ -3091,16 +2868,7 @@
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/risk-management/maximum-drawdown/"
       }
     ],
-    "videos": [
-      {
-        "title": "Bionic Turtle — Maximum Drawdown",
-        "url": "https://www.youtube.com/watch?v=jl0NMDbGFP0"
-      },
-      {
-        "title": "QuantPy — Calculating Maximum Drawdown in Python",
-        "url": "https://www.youtube.com/watch?v=scNyIxMTt9M"
-      }
-    ]
+    "videos": []
   },
   "risk/model-limitations": {
     "websites": [
@@ -3166,38 +2934,16 @@
         "url": "https://www.investopedia.com/terms/a/autoregressive-conditional-heteroskedasticity.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest — ARCH Model Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=lJDiDSHMisQ"
-      },
-      {
-        "title": "ritvikmath — ARCH Model",
-        "url": "https://www.youtube.com/watch?v=wL8VjS4bKAU"
-      }
-    ]
+    "videos": []
   },
   "statistics/augmented-dickey-fuller-test": {
     "websites": [
-      {
-        "title": "Investopedia — Augmented Dickey-Fuller Test",
-        "url": "https://www.investopedia.com/terms/a/adf-augmented-dickey-fuller-test.asp"
-      },
       {
         "title": "Wikipedia — Augmented Dickey–Fuller Test",
         "url": "https://en.wikipedia.org/wiki/Augmented_Dickey%E2%80%93Fuller_test"
       }
     ],
-    "videos": [
-      {
-        "title": "Ben Lambert — The Dickey-Fuller Test",
-        "url": "https://www.youtube.com/watch?v=2GBl2FV-1Gk"
-      },
-      {
-        "title": "Ritvik Math — Augmented Dickey-Fuller Test Explained",
-        "url": "https://www.youtube.com/watch?v=anS6DqaOp6I"
-      }
-    ]
+    "videos": []
   },
   "statistics/autocorrelation": {
     "websites": [
@@ -3232,16 +2978,7 @@
         "url": "https://corporatefinanceinstitute.com/resources/valuation/what-is-beta-guide/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Beta for Stocks",
-        "url": "https://www.youtube.com/watch?v=lBDa1NH8MNo"
-      },
-      {
-        "title": "Patrick Boyle — What Is Beta?",
-        "url": "https://www.youtube.com/watch?v=vZMudPi7T2M"
-      }
-    ]
+    "videos": []
   },
   "statistics/central-limit-theorem": {
     "websites": [
@@ -3264,24 +3001,11 @@
   "statistics/cointegration": {
     "websites": [
       {
-        "title": "Investopedia — Cointegration",
-        "url": "https://www.investopedia.com/terms/c/cointegration.asp"
-      },
-      {
         "title": "Wikipedia — Cointegration",
         "url": "https://en.wikipedia.org/wiki/Cointegration"
       }
     ],
-    "videos": [
-      {
-        "title": "Ben Lambert — Cointegration and Error Correction",
-        "url": "https://www.youtube.com/watch?v=OJzEqGy1s-I"
-      },
-      {
-        "title": "QuantPy — Cointegration for Pairs Trading",
-        "url": "https://www.youtube.com/watch?v=5PXcHMnVaKE"
-      }
-    ]
+    "videos": []
   },
   "statistics/confidence-intervals": {
     "websites": [
@@ -3360,16 +3084,7 @@
         "url": "https://www.investopedia.com/terms/g/garch.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "ritvikmath — EGARCH Model",
-        "url": "https://www.youtube.com/watch?v=hksVMO0WBHI"
-      },
-      {
-        "title": "QuantPy — Asymmetric Volatility Models",
-        "url": "https://www.youtube.com/watch?v=QH-hPZiHMQ4"
-      }
-    ]
+    "videos": []
   },
   "statistics/estimating-parameters": {
     "websites": [
@@ -3402,10 +3117,6 @@
     ],
     "videos": [
       {
-        "title": "QuantPy — EWMA Volatility Estimation",
-        "url": "https://www.youtube.com/watch?v=QH-hPZiHMQ4"
-      },
-      {
         "title": "ritvikmath — Exponential Smoothing",
         "url": "https://www.youtube.com/watch?v=k_HN0wOKDd0"
       }
@@ -3426,10 +3137,6 @@
       {
         "title": "Ben Felix — Factor Investing",
         "url": "https://www.youtube.com/watch?v=jKWbW7Wgm0w"
-      },
-      {
-        "title": "MIT OpenCourseWare — Factor Models",
-        "url": "https://www.youtube.com/watch?v=9MPoFJHpNqU"
       }
     ]
   },
@@ -3444,16 +3151,7 @@
         "url": "https://www.investopedia.com/terms/g/garch.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest — GARCH Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=lJDiDSHMisQ"
-      },
-      {
-        "title": "ritvikmath — GARCH Model",
-        "url": "https://www.youtube.com/watch?v=hksVMO0WBHI"
-      }
-    ]
+    "videos": []
   },
   "statistics/hypothesis-testing": {
     "websites": [
@@ -3513,6 +3211,24 @@
       }
     ]
   },
+  "statistics/mahalanobis-distance": {
+    "websites": [
+      {
+        "title": "Wikipedia — Mahalanobis Distance",
+        "url": "https://en.wikipedia.org/wiki/Mahalanobis_distance"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Mahalanobis Distance, Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=3IdvoI8O9hU"
+      },
+      {
+        "title": "Normalized Nerd — Mahalanobis Distance Explained",
+        "url": "https://www.youtube.com/watch?v=spNpfmWZBmg"
+      }
+    ]
+  },
   "statistics/multiple-testing-correction": {
     "websites": [
       {
@@ -3535,6 +3251,28 @@
       }
     ]
   },
+  "statistics/ordinary-least-squares-regression": {
+    "websites": [
+      {
+        "title": "Wikipedia — Ordinary Least Squares",
+        "url": "https://en.wikipedia.org/wiki/Ordinary_least_squares"
+      },
+      {
+        "title": "Khan Academy — Linear Regression",
+        "url": "https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/more-on-regression/v/regression-line-example"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Linear Regression Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=nk2CQITm_eo"
+      },
+      {
+        "title": "Khan Academy — Least Squares Regression",
+        "url": "https://www.youtube.com/watch?v=GAmzwIkGFgE"
+      }
+    ]
+  },
   "statistics/portfolio-variance": {
     "websites": [
       {
@@ -3546,36 +3284,33 @@
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/portfolio-variance/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy — Diversification",
-        "url": "https://www.youtube.com/watch?v=KFQoIG4-CIE"
-      },
-      {
-        "title": "The Organic Chemistry Tutor — Portfolio Expected Return and Variance",
-        "url": "https://www.youtube.com/watch?v=RDKmvtj3jiA"
-      }
-    ]
+    "videos": []
   },
   "statistics/principal-component-analysis": {
     "websites": [
       {
         "title": "Wikipedia — Principal Component Analysis",
         "url": "https://en.wikipedia.org/wiki/Principal_component_analysis"
-      },
-      {
-        "title": "Investopedia — Principal Component Analysis",
-        "url": "https://www.investopedia.com/terms/p/principal-component-analysis-pca.asp"
       }
     ],
     "videos": [
       {
         "title": "StatQuest — PCA Step-by-Step",
         "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ"
-      },
+      }
+    ]
+  },
+  "statistics/qq-plot": {
+    "websites": [
       {
-        "title": "3Blue1Brown — Eigenvectors and Eigenvalues",
-        "url": "https://www.youtube.com/watch?v=PFDu9oVAE1g"
+        "title": "Wikipedia — Q–Q Plot",
+        "url": "https://en.wikipedia.org/wiki/Q%E2%80%93Q_plot"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Quantile-Quantile Plots (QQ plots), Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=okjYjClSjOg"
       }
     ]
   },
@@ -3606,22 +3341,9 @@
       {
         "title": "Wikipedia — Shrinkage Estimator",
         "url": "https://en.wikipedia.org/wiki/Shrinkage_(statistics)"
-      },
-      {
-        "title": "Ledoit & Wolf — Honey, I Shrunk the Sample Covariance Matrix",
-        "url": "https://www.ledoit.net/honey.pdf"
       }
     ],
-    "videos": [
-      {
-        "title": "ritvikmath — Shrinkage Estimators",
-        "url": "https://www.youtube.com/watch?v=gfI-9Gih3No"
-      },
-      {
-        "title": "Quantopian — Estimating Covariance Matrices",
-        "url": "https://www.youtube.com/watch?v=siwIJx8MdZ0"
-      }
-    ]
+    "videos": []
   },
   "statistics/skewness": {
     "websites": [
@@ -3771,12 +3493,7 @@
         "url": "https://www.quantstart.com/articles/Deriving-the-Black-Scholes-Equation/"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare — Kolmogorov Equations",
-        "url": "https://www.youtube.com/watch?v=FnSMilOH6Nk"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/brownian-motion": {
     "websites": [
@@ -3895,36 +3612,28 @@
         "url": "https://en.wikipedia.org/wiki/Fundamental_theorem_of_asset_pricing"
       }
     ],
-    "videos": [
-      {
-        "title": "QuantPy — Risk-Neutral Measure Explained",
-        "url": "https://www.youtube.com/watch?v=1BidLr07mGo"
-      },
-      {
-        "title": "MIT OpenCourseWare — Equivalent Martingale Measures",
-        "url": "https://www.youtube.com/watch?v=QBMKHr1yFkI"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/exponential-martingale": {
     "websites": [
       {
         "title": "Wikipedia — Doléans-Dade Exponential",
         "url": "https://en.wikipedia.org/wiki/Dol%C3%A9ans-Dade_exponential"
-      },
+      }
+    ],
+    "videos": []
+  },
+  "stochastic-processes/feynman-kac-formula": {
+    "websites": [
       {
-        "title": "Wikipedia — Exponential Martingale",
-        "url": "https://en.wikipedia.org/wiki/Exponential_martingale"
+        "title": "Wikipedia — Feynman–Kac Formula",
+        "url": "https://en.wikipedia.org/wiki/Feynman%E2%80%93Kac_formula"
       }
     ],
     "videos": [
       {
-        "title": "QuantPy — Exponential Martingales in Finance",
-        "url": "https://www.youtube.com/watch?v=pNJB-kNxf-4"
-      },
-      {
-        "title": "NPTEL — Exponential Martingales and Girsanov",
-        "url": "https://www.youtube.com/watch?v=8pGSqOkSZ3Q"
+        "title": "MIT OpenCourseWare — Stochastic Calculus and PDEs",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
       }
     ]
   },
@@ -3965,10 +3674,6 @@
       {
         "title": "Steve Brunton — Diffusion Equation and Fundamental Solutions",
         "url": "https://www.youtube.com/watch?v=a3V0BJLIo_c"
-      },
-      {
-        "title": "Faculty of Khan — The Heat Equation and Gaussian",
-        "url": "https://www.youtube.com/watch?v=GICnosCP0TI"
       }
     ]
   },
@@ -4001,16 +3706,7 @@
         "url": "https://www.investopedia.com/terms/r/risk-neutral-measures.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "QuantPy — Girsanov’s Theorem Explained",
-        "url": "https://www.youtube.com/watch?v=pNJB-kNxf-4"
-      },
-      {
-        "title": "MIT OpenCourseWare — Girsanov and Change of Numeraire",
-        "url": "https://www.youtube.com/watch?v=QBMKHr1yFkI"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/growth-vs-volatility-timescales": {
     "websites": [
@@ -4036,16 +3732,7 @@
         "url": "https://en.wikipedia.org/wiki/It%C3%B4_calculus#Integration_with_respect_to_stochastic_processes"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare — Stochastic Integration",
-        "url": "https://www.youtube.com/watch?v=Z5njsSkhbyE"
-      },
-      {
-        "title": "QuantPy — Itô Integral Explained",
-        "url": "https://www.youtube.com/watch?v=pNJB-kNxf-4"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/ito-isometry": {
     "websites": [
@@ -4058,16 +3745,7 @@
         "url": "https://en.wikipedia.org/wiki/It%C3%B4_calculus#Properties"
       }
     ],
-    "videos": [
-      {
-        "title": "NPTEL — Itô Isometry and Stochastic Integrals",
-        "url": "https://www.youtube.com/watch?v=8pGSqOkSZ3Q"
-      },
-      {
-        "title": "Quantitative Finance — Variance of Stochastic Integrals",
-        "url": "https://www.youtube.com/watch?v=X67213zUFcU"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/ito-product-rule": {
     "websites": [
@@ -4080,16 +3758,7 @@
         "url": "https://en.wikipedia.org/wiki/Quadratic_variation"
       }
     ],
-    "videos": [
-      {
-        "title": "QuantPy — Itô Product Rule",
-        "url": "https://www.youtube.com/watch?v=pNJB-kNxf-4"
-      },
-      {
-        "title": "NPTEL — Stochastic Product and Quotient Rules",
-        "url": "https://www.youtube.com/watch?v=8pGSqOkSZ3Q"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/itos-lemma": {
     "websites": [
@@ -4114,22 +3783,9 @@
       {
         "title": "Wikipedia — Brownian Motion: Characterisations",
         "url": "https://en.wikipedia.org/wiki/Brownian_motion#Characterizations_of_Brownian_motion"
-      },
-      {
-        "title": "Wikipedia — Lévy’s Characterisation Theorem",
-        "url": "https://en.wikipedia.org/wiki/L%C3%A9vy%27s_characterization_of_Brownian_motion"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare — Properties of Brownian Motion",
-        "url": "https://www.youtube.com/watch?v=jLbB9lwtHJo"
-      },
-      {
-        "title": "NPTEL — Brownian Motion and Martingales",
-        "url": "https://www.youtube.com/watch?v=Z5njsSkhbyE"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/markov-property": {
     "websites": [
@@ -4164,16 +3820,7 @@
         "url": "https://en.wikipedia.org/wiki/Complete_market"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare — Martingale Representation",
-        "url": "https://www.youtube.com/watch?v=QBMKHr1yFkI"
-      },
-      {
-        "title": "QuantPy — Complete Markets and Hedging",
-        "url": "https://www.youtube.com/watch?v=1BidLr07mGo"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/martingales": {
     "websites": [
@@ -4221,14 +3868,28 @@
         "url": "https://en.wikipedia.org/wiki/Local_martingale"
       }
     ],
+    "videos": []
+  },
+  "stochastic-processes/optional-stopping-theorem": {
+    "websites": [
+      {
+        "title": "Wikipedia — Optional Stopping Theorem",
+        "url": "https://en.wikipedia.org/wiki/Optional_stopping_theorem"
+      }
+    ],
+    "videos": []
+  },
+  "stochastic-processes/ornstein-uhlenbeck-process": {
+    "websites": [
+      {
+        "title": "Wikipedia — Ornstein–Uhlenbeck Process",
+        "url": "https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process"
+      }
+    ],
     "videos": [
       {
-        "title": "NPTEL — Girsanov Theorem and Novikov Condition",
-        "url": "https://www.youtube.com/watch?v=8pGSqOkSZ3Q"
-      },
-      {
-        "title": "MIT OpenCourseWare — Change of Measure Prerequisites",
-        "url": "https://www.youtube.com/watch?v=QBMKHr1yFkI"
+        "title": "MIT OpenCourseWare — Mean Reverting Processes",
+        "url": "https://www.youtube.com/watch?v=PPl-7_RL0Ko"
       }
     ]
   },
@@ -4243,16 +3904,7 @@
         "url": "https://en.wikipedia.org/wiki/Girsanov_theorem#Statement"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare — Change of Measure",
-        "url": "https://www.youtube.com/watch?v=QBMKHr1yFkI"
-      },
-      {
-        "title": "QuantPy — Radon-Nikodym and Measure Change",
-        "url": "https://www.youtube.com/watch?v=pNJB-kNxf-4"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/stochastic-differential-equation": {
     "websites": [
@@ -4276,71 +3928,45 @@
       }
     ]
   },
+  "stochastic-processes/submartingales-and-supermartingales": {
+    "websites": [
+      {
+        "title": "Wikipedia — Martingale: Submartingales and Supermartingales",
+        "url": "https://en.wikipedia.org/wiki/Martingale_(probability_theory)#Submartingales,_supermartingales,_and_relationship_to_harmonic_functions"
+      },
+      {
+        "title": "Wikipedia — Doob’s Martingale Inequality",
+        "url": "https://en.wikipedia.org/wiki/Doob%27s_martingale_inequality"
+      }
+    ],
+    "videos": []
+  },
   "stochastic-processes/tower-property": {
     "websites": [
       {
         "title": "Wikipedia — Law of Total Expectation",
         "url": "https://en.wikipedia.org/wiki/Law_of_total_expectation"
-      },
-      {
-        "title": "Brilliant — Conditional Expectation",
-        "url": "https://brilliant.org/wiki/conditional-expectation/"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare — Iterated Expectations",
-        "url": "https://www.youtube.com/watch?v=dTYsYwqjjA8"
-      },
-      {
-        "title": "ritvikmath — Tower Property of Expectations",
-        "url": "https://www.youtube.com/watch?v=IVgNhXBSoKQ"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/transition-probability-density": {
     "websites": [
       {
         "title": "Wikipedia — Transition Rate Matrix and Transition Densities",
         "url": "https://en.wikipedia.org/wiki/Kolmogorov_equations"
-      },
-      {
-        "title": "QuantStart — Stochastic Calculus and Transition Densities",
-        "url": "https://www.quantstart.com/articles/Stochastic-Calculus-Refresher/"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare — Transition Densities and Kolmogorov Equations",
-        "url": "https://www.youtube.com/watch?v=Z5wMfCBfkBQ"
-      },
-      {
-        "title": "NPTEL — Fokker-Planck and Transition Probability",
-        "url": "https://www.youtube.com/watch?v=gIRVsMBwPBY"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/trinomial-random-walk": {
     "websites": [
       {
         "title": "Wikipedia — Trinomial Tree",
         "url": "https://en.wikipedia.org/wiki/Trinomial_tree"
-      },
-      {
-        "title": "QuantStart — Trinomial Trees in Option Pricing",
-        "url": "https://www.quantstart.com/articles/Trinomial-Trees-in-Option-Pricing/"
       }
     ],
-    "videos": [
-      {
-        "title": "QuantPy — Trinomial Model for Option Pricing",
-        "url": "https://www.youtube.com/watch?v=aTIMFfhJDdE"
-      },
-      {
-        "title": "Financial Engineering — Trinomial Tree Model Explained",
-        "url": "https://www.youtube.com/watch?v=gtXvPEkByTc"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/vasicek-model": {
     "websites": [
@@ -4353,15 +3979,6 @@
         "url": "https://www.investopedia.com/terms/v/vasicek-model.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "QuantPy — Vasicek Model for Interest Rates",
-        "url": "https://www.youtube.com/watch?v=GQs8sMdKxzU"
-      },
-      {
-        "title": "ritvikmath — Vasicek Model",
-        "url": "https://www.youtube.com/watch?v=gFZVnXfsDWI"
-      }
-    ]
+    "videos": []
   }
 }

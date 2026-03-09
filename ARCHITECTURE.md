@@ -7,8 +7,11 @@ A Flask web application that reads Markdown flash cards from the filesystem, sto
 ```
 cards/**/*.md  ──►  SQLite (graph.db)  ──►  Flask  ──►  Browser
   (source)     ↗     (cache + graph)      (server)     (KaTeX + vis.js)
-edges.json   ──►    resources.json  ──►
-  (source)             (source)
+edges.json   ──►
+notation.json ──►
+key-terms.json ──►
+resources.json ──►
+  (sources)
 ```
 
 ---
@@ -50,17 +53,18 @@ cards
   tags         TEXT           comma-joined: "Black-Scholes,options,PDE,pricing,lognormal"
   html_content TEXT           pre-rendered HTML from markdown-it-py
   created_date TEXT           ISO8601 string derived from file mtime
-  author       TEXT           "Claude 3.5 Sonnet" or "Unknown"
-  notation     TEXT           JSON list of notation definitions used in this card
+  author       TEXT           "Claude Sonnet 4.6" or "Unknown"
+  notation     TEXT           JSON list of LaTeX symbol entries used in this card
+  key_terms    TEXT           JSON list of plain-text variable entries used in this card
   file_mtime   REAL           st_mtime used for incremental reload
 
 edges
-  source_id    TEXT FK→cards
-  target_id    TEXT FK→cards
-  label        TEXT           short relationship tag, e.g. "derived via"
-  description  TEXT           plain-English explanation of why the cards are linked
-  created_at   TEXT           datetime('now')
-  PK (source_id, target_id)  — duplicate edges silently ignored via INSERT OR IGNORE
+  id          INTEGER PK AUTOINCREMENT
+  source_id   TEXT FK→cards
+  target_id   TEXT FK→cards
+  label       TEXT           short relationship tag, e.g. "derived via"
+  description TEXT           plain-English explanation of why the cards are linked
+  created_at  TEXT           datetime('now')
 ```
 
 `ON DELETE CASCADE` on both edge FK columns means deleting a card automatically removes its edges. Foreign keys are enabled per-connection via `PRAGMA foreign_keys = ON`.
@@ -72,10 +76,12 @@ Every function opens its own connection via `get_db()` and closes it at the end 
 `create_app()` wires everything together:
 
 ```python
-init_db()                # idempotent DDL — safe to call every restart
-load_all_cards()         # mtime-checked upserts + stale card removal
-load_edges_from_file()   # clears edges table, repopulates from edges.json
-# load resources.json into app.config["RESOURCES"] (keyed by card ID)
+init_db()                       # idempotent DDL — safe to call every restart
+# load notation.json  → app.config["NOTATION"]   (LaTeX symbol definitions)
+# load key-terms.json → app.config["KEY_TERMS"]  (plain variable definitions)
+load_all_cards(notation_dict, key_terms_dict)  # mtime-checked upserts + stale card removal
+load_edges_from_file()          # clears edges table, repopulates from edges.json
+# load resources.json → app.config["RESOURCES"]  (per-card website/video links)
 app.register_blueprint(bp)
 # context_processor → injects topic_colour(), search_data_json, site_stats, csrf_token
 ```
@@ -90,6 +96,7 @@ Single Flask Blueprint `main`. The remove-link mutation route is POST-only and r
 GET  /                          index()        — groups cards by topic, ?tag= and ?topic= filtering
 GET  /tag/<tag>                 tag_page()     — dedicated page for a single tag
 GET  /card/<path:card_id>       card_detail()  — prerequisites, content, see-also, prev/next nav
+                                                 slug-based redirect/disambiguation if not found verbatim
 POST /card/<path:card_id>/remove-link  remove_link() — deletes edge (CSRF), 302 redirect
 GET  /formulas                  formulas()     — all Key Formula sections aggregated by topic
 GET  /graph                     graph_view()   — vis.js with path finding, topic filter, edge weights
@@ -107,14 +114,16 @@ GET  /recent                    recent()       — cards ordered by modification
 ### 6. Templates — `app/templates/`
 
 ```
-base.html     Shared layout: fonts, KaTeX CDN, scroll bar, search overlay,
-              keyboard shortcuts modal, theme toggle, mobile nav, back-to-top
-index.html    Card grid grouped by topic, tag filter strip, stats bar, visited state
-tag.html      Dedicated tag page showing all cards for a given tag
-card.html     Breadcrumb, prerequisites, card content, see-also, prev/next nav, sidebar, resources
-formulas.html All Key Formula sections grouped by topic
-graph.html    vis.js Network, path finding, topic filter, edge weights, theme-aware
-404.html      Branded error page
+base.html         Shared layout: fonts, KaTeX CDN, scroll bar, search overlay,
+                  keyboard shortcuts modal, theme/wide-mode toggle, mobile nav, back-to-top
+index.html        Card grid grouped by topic, tag filter strip, stats bar, visited state
+tag.html          Dedicated tag page showing all cards for a given tag
+card.html         Breadcrumb, prerequisites, card content, see-also, prev/next nav,
+                  sidebar (notation, key terms, resources)
+formulas.html     All Key Formula sections grouped by topic
+graph.html        vis.js Network, path finding, topic filter, edge weights, theme-aware
+disambiguate.html Disambiguation page shown when multiple cards share a slug
+404.html          Branded error page
 ```
 
 `base.html` embeds all card metadata as `ALL_CARDS` JSON (from the context processor's `search_data_json`) so the Spotlight-style search overlay works entirely client-side with no additional requests.
@@ -122,8 +131,9 @@ graph.html    vis.js Network, path finding, topic filter, edge weights, theme-aw
 ### 7. Frontend — `app/static/`
 
 ```
-style.css     ~1100 lines — design tokens as CSS custom properties, dark/light themes
-              via [data-theme] attribute, per-topic --tc custom property, View Transitions
+style.css     ~1500 lines — design tokens as CSS custom properties, dark/light/barbie themes
+              via [data-theme] attribute, wide mode via [data-wide] attribute,
+              per-topic --tc custom property
 favicon.svg   SVG monitor icon
 ```
 
@@ -139,7 +149,7 @@ No build step. All third-party JS/CSS is CDN:
 
 ## Key Design Decisions
 
-**Four committed sources of truth, one disposable cache.** `cards/**/*.md` owns card content; `edges.json` owns relationships (labels + plain-English descriptions); `resources.json` owns per-card learning resources (websites and videos, keyed by card ID); `notation.json` owns LaTeX symbol definitions. `graph.db` is derived from these and is gitignored — delete it and restart to rebuild completely.
+**Six committed sources of truth, one disposable cache.** `cards/**/*.md` owns card content; `edges.json` owns relationships (labels + plain-English descriptions); `resources.json` owns per-card learning resources (websites and videos, keyed by card ID); `notation.json` owns LaTeX symbol definitions; `key-terms.json` owns plain-text equation variable definitions (e.g. `dW`, `S`). `graph.db` is derived from all of these and is gitignored — delete it and restart to rebuild completely.
 
 **Card IDs from file paths.** Renaming or moving a card file changes its ID. The cascade delete removes the orphaned edges from the DB, and the next mutation (add/remove link) writes the updated state back to `edges.json`. If you rename a card with important edges, update `edges.json` manually before committing.
 
@@ -149,7 +159,7 @@ No build step. All third-party JS/CSS is CDN:
 
 **Visited card state is client-only.** Stored in `localStorage` — no server sessions, no user accounts. Clearing browser storage resets progress.
 
-**Theme stored in `localStorage`, applied before paint.** A small inline `<script>` in `<head>` reads `localStorage` and sets `data-theme` on `<html>` before the stylesheet is applied, eliminating the flash-of-unstyled-content on reload.
+**Theme and wide mode stored in `localStorage`, applied before paint.** A small inline `<script>` in `<head>` reads `localStorage` and sets `data-theme` and `data-wide` on `<html>` before the stylesheet is applied, eliminating any flash on reload. Wide mode removes `max-width` constraints from `.nav`, `.container`, and `.formulas-page` so the layout fills the full viewport.
 
 ---
 
@@ -181,5 +191,9 @@ The Flask debug reloader watches Python files. **It does not watch `cards/*.md`*
 **New edge:** add an entry to `edges.json` and restart the server. Each entry has `source`, `target`, `label`, and `description` fields. The remove-link form on the card detail page can delete edges at runtime (and writes the change back to `edges.json`).
 
 **New learning resource:** add an entry to `resources.json` under the card ID key. Each card can have `websites` and `videos` arrays of `{title, url}` objects. URLs are validated by `scripts/validate_urls.py` on commit.
+
+**New notation symbol:** add an entry to `notation.json` mapping a LaTeX command (e.g. `\\sigma`) to `{symbol, meaning}`. It will appear automatically in the sidebar of every card that uses that command.
+
+**New key term:** add an entry to `key-terms.json` mapping a plain variable name (e.g. `dW`) to `{symbol, meaning}`. It will appear in the sidebar of every card whose LaTeX math blocks contain that variable.
 
 **New route:** add a handler to `app/routes.py` and a template to `app/templates/`. The context processor variables (`topic_colour`, `search_data_json`, `site_stats`) are available in all templates automatically.

@@ -1,0 +1,22 @@
+{
+  "C":  { "symbol": "$C$",  "meaning": "call option price" },
+  "dB": { "symbol": "$dB$", "meaning": "Brownian increment (alternative notation for $dW$)" },
+  "dS": { "symbol": "$dS$", "meaning": "infinitesimal change in asset price" },
+  "dW": { "symbol": "$dW$", "meaning": "Brownian (Wiener) increment; $dW \\sim N(0,\\,dt)$" },
+  "dX": { "symbol": "$dX$", "meaning": "infinitesimal change in stochastic process $X$" },
+  "dt": { "symbol": "$dt$", "meaning": "infinitesimal time step" },
+  "K":  { "symbol": "$K$",  "meaning": "option strike price" },
+  "N":  { "symbol": "$N$",  "meaning": "cumulative standard normal distribution" },
+  "p":  { "symbol": "$p$",  "meaning": "probability or probability density" },
+  "P":  { "symbol": "$P$",  "meaning": "real-world (physical) probability measure" },
+  "q":  { "symbol": "$q$",  "meaning": "continuous dividend yield or risk-neutral down-probability" },
+  "Q":  { "symbol": "$Q$",  "meaning": "risk-neutral (equivalent martingale) measure" },
+  "r":  { "symbol": "$r$",  "meaning": "continuously compounded risk-free interest rate" },
+  "S":  { "symbol": "$S$",  "meaning": "asset (stock) price" },
+  "t":  { "symbol": "$t$",  "meaning": "current time" },
+  "T":  { "symbol": "$T$",  "meaning": "maturity date or time horizon" },
+  "V":  { "symbol": "$V$",  "meaning": "option or portfolio value" },
+  "W":  { "symbol": "$W$",  "meaning": "Brownian motion (Wiener process)" },
+  "X":  { "symbol": "$X$",  "meaning": "generic stochastic process or random variable" },
+  "Z":  { "symbol": "$Z$",  "meaning": "standard normal random variable" }
+}

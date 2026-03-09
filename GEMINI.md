@@ -25,6 +25,7 @@ The project includes specialized Gemini skills to automate workflows:
 - **Relationships:** `edges.json` (Directed edges between cards)
 - **Resources:** `resources.json` (External links per card)
 - **Notation:** `notation.json` (LaTeX symbol definitions)
+- **Key Terms:** `key-terms.json` (Plain-text equation variable definitions, e.g. `dW`, `S`)
 - **Cache:** `graph.db` (Gitignored SQLite database, rebuilt on startup)
 
 ## Building and Running
@@ -82,6 +83,9 @@ Cards are stored in `cards/<topic>/<slug>.md`. They MUST follow a strict format 
 - **British English:** Use British spelling (e.g., "normalised", "behaviour").
 - **Maths:** Use `$...$` for inline and `$$...$$` for display maths (KaTeX).
 - **Topic Identity:** Topics must match keys in `app/routes.py::TOPIC_COLOURS`.
+- **Do not** add a `**Level:**` field — it is not a recognised metadata field.
+
+Topics (10): `Calculus`, `Derivatives`, `Financial Mathematics`, `Linear Algebra`, `Mathematical Notation`, `Portfolio Theory & Asset Pricing`, `Probability`, `Risk`, `Statistics`, `Stochastic Processes`.
 
 ### Database and Loading
 - **Card IDs:** Derived from file paths (e.g., `derivatives/black-scholes-equation`).
@@ -90,5 +94,7 @@ Cards are stored in `cards/<topic>/<slug>.md`. They MUST follow a strict format 
 
 ### Frontend
 - **No Build Step:** All CSS is in `app/static/style.css`. Third-party JS/CSS is loaded from CDNs.
-- **Theme:** Dark/Light theme is client-side only (localStorage).
+- **Theme:** Dark/Light theme is client-side only (`localStorage`, `data-theme` on `<html>`).
+- **Wide Mode:** Removes `max-width` constraints for full-viewport layouts (`localStorage`, `data-wide` on `<html>`). Toggle via the expand button in the navbar or the `w` keyboard shortcut.
 - **Search:** Fuzzy search is client-side using a JSON blob injected via context processor.
+- **Notation & Key Terms:** LaTeX symbols and plain-text variables used in each card are extracted at load time and displayed in the card sidebar, sourced from `notation.json` and `key-terms.json`.

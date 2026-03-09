@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Which card? — QF Flash Cards{% endblock %}
+
+{% block content %}
+<div class="error-page">
+  <div class="error-code" style="font-size:2.5rem">?</div>
+  <h1>Multiple cards match <em>{{ slug }}</em></h1>
+  <p>This concept exists in more than one topic. Choose the one you want:</p>
+  <ul class="disambig-list">
+    {% for card in matches %}
+    <li>
+      <a class="disambig-link" href="{{ url_for('main.card_detail', card_id=card['id']) }}"
+         style="--tc:{{ topic_colour(card['topic']) }}">
+        <span class="disambig-topic">{{ card['topic'] }}</span>
+        <span class="disambig-name">{{ card['name'] }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  <a href="{{ url_for('main.index') }}" class="btn-primary" style="margin-top:1.5rem">Back to all cards</a>
+</div>
+{% endblock %}

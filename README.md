@@ -2,7 +2,7 @@
 
 Bite-sized revision flash cards for Quantitative Finance exams and interviews, designed for accessibility and clarity. Each card covers one concept — definition, key formula, worked example, and its finance application.
 
-222 cards · 9 topics · 654 concept connections
+266 cards · 10 topics · 785 concept connections
 
 ## Running the app
 
@@ -15,16 +15,18 @@ On first run the app scans `cards/` and loads `edges.json`, building `graph.db` 
 
 ## Topics
 
-| Topic | Cards |
-|---|---|
-| Calculus | Differentiation Rules, Lemma, Taylor Series |
-| Derivatives | American Option Pricing, American vs European Options, Black-Scholes Equation, Delta Hedging, Early Exercise Decision, European Option Pricing, Heston Model, Implied Volatility, Option Greeks, Put-Call Parity, Risk-Neutral Pricing |
-| Financial Mathematics | Return on Investment, Time Value of Money, Yield Curve |
-| Linear Algebra | Cholesky Decomposition, Determinant, Eigenvalues & Eigenvectors, Matrix Inverse, Matrix Multiplication, Systems of Linear Equations, Transpose & Symmetric Matrices |
-| Probability | Bayes' Theorem, Binomial Distribution, Chi-Squared Distribution, CDF, Expected Value, Exponential Distribution, Lognormal Distribution, Normal Distribution, PDF, Poisson Distribution, Student's t-Distribution, Uniform Distribution |
-| Risk | Model Limitations, Monte Carlo Simulation, Value at Risk (VaR) |
-| Statistics | Correlation, Estimating Parameters, Scaling Mean with Time, Square-Root Rule, Statistical Properties of Returns, Variance & Std Dev |
-| Stochastic Processes | Brownian Motion, Discrete Random Walk, Drift & Volatility, GBM, Growth vs Volatility Timescales, Itô's Lemma, Martingales, SDE |
+| Topic | Cards | Scope |
+|---|---|---|
+| Calculus | 19 | Differentiation, integration, Taylor series, quadratic techniques |
+| Derivatives | 38 | Options, futures, Greeks, pricing models, risk-neutral theory |
+| Financial Mathematics | 35 | TVM, bonds, compounding, NPV, interest rate models |
+| Linear Algebra | 19 | Matrices, vectors, eigenvalues, SVD, decompositions |
+| Mathematical Notation | 12 | Sigma, pi, set theory, logical and summation notation |
+| Portfolio Theory & Asset Pricing | 24 | CAPM, efficient frontier, factor models, performance ratios |
+| Probability | 29 | Distributions, expectation, Bayes, transform methods |
+| Risk | 12 | VaR, CVaR, Monte Carlo, stress testing |
+| Statistics | 32 | Regression, hypothesis testing, covariance estimation |
+| Stochastic Processes | 46 | Brownian motion, GBM, Itô's lemma, SDEs, martingales |
 
 ## Features
 
@@ -33,12 +35,15 @@ On first run the app scans `cards/` and loads `edges.json`, building `graph.db` 
 - **Prerequisites & See Also** — incoming edges shown as prerequisites above card content; outgoing edges shown as "See Also" below
 - **Knowledge graph** — interactive force-directed network with topic filtering, shortest-path highlighting between any two nodes, and edge weights based on shared tags
 - **Spotlight search** — press `/` for fuzzy search across all cards by name or tag
-- **Keyboard navigation** — `←`/`→` for prev/next card in topic, `j`/`k` for card list, `r` for random, `g` for graph, `?` for shortcuts
+- **Keyboard navigation** — `←`/`→` for prev/next card in topic, `j`/`k` for card list, `r` for random, `g` for graph, `w` for wide mode, `?` for shortcuts
 - **Dark / Light theme** — persisted across sessions
+- **Wide mode** — toggle full-viewport-width layout via the expand button or `w` key; persisted across sessions
+- **Notation & Key Terms sidebar** — every card shows the LaTeX symbols and plain-text equation variables used, drawn from `notation.json` and `key-terms.json`
 - **Concept links** — directed relationships between cards with plain-English descriptions, stored in `edges.json`
 - **Formula sheet** — all Key Formula sections aggregated on a single `/formulas` page
 - **Learning resources** — curated website and video links per card, stored in `resources.json`
 - **Visited tracking** — cards you have read are marked in the browser
+- **Slug-based redirect** — if a card URL is not found verbatim, the app resolves by slug across all topics: one match redirects (301), multiple matches show a disambiguation page
 
 ## Stack
 

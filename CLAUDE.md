@@ -34,9 +34,12 @@ Flask web application that reads Markdown flash cards from `cards/` and stores t
 
 **Startup sequence** (`app/__init__.py` → `create_app()`):
 1. `init_db()` — idempotent DDL (creates `cards` and `edges` tables if absent)
-2. `load_all_cards()` — scans `cards/**/*.md`, skips unchanged files (mtime check), upserts changed ones, removes stale cards whose files no longer exist
-3. `load_edges_from_file()` — clears the `edges` table and repopulates from `edges.json`
-4. Blueprint registered, context processor attached (CSRF token, topic colours, search data, stats)
+2. Load `notation.json` → `app.config["NOTATION"]` (LaTeX symbol definitions)
+3. Load `key-terms.json` → `app.config["KEY_TERMS"]` (plain variable definitions, e.g. `dW`, `S`)
+4. `load_all_cards(notation_dict, key_terms_dict)` — scans `cards/**/*.md`, skips unchanged files (mtime check), upserts changed ones, removes stale cards whose files no longer exist
+5. `load_edges_from_file()` — clears the `edges` table and repopulates from `edges.json`
+6. Load `resources.json` → `app.config["RESOURCES"]` (per-card website/video links)
+7. Blueprint registered, context processor attached (CSRF token, topic colours, search data, stats)
 
 **Edge mutations:** removing a link via the card detail sidebar writes to `graph.db` first, then calls `save_edges_to_file()` to keep `edges.json` in sync. Commit `edges.json` after changes. Adding edges is done by editing `edges.json` directly and restarting.
 
@@ -56,7 +59,7 @@ Flask routes use `<path:card_id>` to allow the `/` in URLs.
 - `site_stats` — `card_count`, `topic_count`, `edge_count`
 - `csrf_token` — session-based token for POST form protection
 
-**Frontend:** no build step. KaTeX (maths) and vis.js (graph) loaded from CDN. Theme (dark/light) in `localStorage`, applied via `data-theme` on `<html>` before paint. Visited cards tracked client-side in `localStorage`.
+**Frontend:** no build step. KaTeX (maths) and vis.js (graph) loaded from CDN. Theme (dark/light) and wide mode in `localStorage`, applied via `data-theme` / `data-wide` on `<html>` before paint. Visited cards tracked client-side in `localStorage`.
 
 ## Routes
 
@@ -111,14 +114,15 @@ Run manually: `uv run python scripts/validate_urls.py --force`
 
 ## Topic Directories
 
-| Directory | Scope |
-|---|---|
-| `cards/probability/` | Distributions, expectation, Bayes |
-| `cards/statistics/` | Descriptive stats, regression, hypothesis testing |
-| `cards/calculus/` | Differentiation, integration, Taylor series |
-| `cards/linear-algebra/` | Matrices, vectors, eigenvalues |
-| `cards/financial-maths/` | TVM, bonds, compounding, NPV |
-| `cards/derivatives/` | Options, futures, Greeks, pricing |
-| `cards/stochastic-processes/` | Brownian motion, GBM, Itô's lemma |
-| `cards/risk/` | VaR, CVaR, risk measures |
-| `cards/mathematical-notation/` | Sigma, pi, set, and logical notation conventions |
+| Directory | Topic name | Scope |
+|---|---|---|
+| `cards/calculus/` | `Calculus` | Differentiation, integration, Taylor series |
+| `cards/derivatives/` | `Derivatives` | Options, futures, Greeks, pricing |
+| `cards/financial-maths/` | `Financial Mathematics` | TVM, bonds, compounding, NPV |
+| `cards/linear-algebra/` | `Linear Algebra` | Matrices, vectors, eigenvalues |
+| `cards/mathematical-notation/` | `Mathematical Notation` | Sigma, pi, set, and logical notation conventions |
+| `cards/portfolio-theory/` | `Portfolio Theory & Asset Pricing` | CAPM, factor models, performance ratios |
+| `cards/probability/` | `Probability` | Distributions, expectation, Bayes |
+| `cards/risk/` | `Risk` | VaR, CVaR, risk measures |
+| `cards/statistics/` | `Statistics` | Descriptive stats, regression, hypothesis testing |
+| `cards/stochastic-processes/` | `Stochastic Processes` | Brownian motion, GBM, Itô's lemma |

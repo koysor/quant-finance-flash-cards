@@ -75,6 +75,47 @@
   --noise-opacity: 0;
 }
 
+/* ── Barbie tokens (secret theme) ──────────────────────────── */
+[data-theme="barbie"] {
+  --bg:           #fff0f5;
+  --surface:      #ffffff;
+  --surface-2:    #fff5f8;
+  --surface-3:    #ffe4ed;
+  --border:       #f9a8c9;
+  --border-soft:  #fcd5e5;
+
+  --accent:       #e91e8c;
+  --accent-dark:  #c4147a;
+  --accent-soft:  rgba(233,30,140,0.10);
+
+  --text:         #4a1942;
+  --text-2:       #7b2d6e;
+  --muted:        #b05a9e;
+  --muted-2:      #d48cc4;
+
+  --danger:       #e91e63;
+  --danger-soft:  rgba(233,30,99,0.10);
+
+  --shadow-sm:    0 1px 3px rgba(233,30,140,0.08);
+  --shadow:       0 2px 8px rgba(233,30,140,0.10), 0 1px 2px rgba(233,30,140,0.06);
+  --shadow-lg:    0 8px 32px rgba(233,30,140,0.14), 0 2px 8px rgba(233,30,140,0.08);
+  --shadow-hover: 0 4px 16px rgba(233,30,140,0.16), 0 1px 4px rgba(233,30,140,0.08);
+
+  --noise-opacity: 0;
+}
+
+/* Barbie-themed scrollbar */
+[data-theme="barbie"] ::-webkit-scrollbar { width: 8px; }
+[data-theme="barbie"] ::-webkit-scrollbar-track { background: #fff0f5; }
+[data-theme="barbie"] ::-webkit-scrollbar-thumb { background: #f9a8c9; border-radius: 4px; }
+[data-theme="barbie"] ::-webkit-scrollbar-thumb:hover { background: #e91e8c; }
+
+/* Barbie scroll progress bar */
+[data-theme="barbie"] #scroll-progress { background: linear-gradient(90deg, #e91e8c, #ff69b4, #ff1493); }
+
+/* Barbie nav brand sparkle */
+[data-theme="barbie"] .nav-brand svg { color: #e91e8c; }
+
 /* ── Base ───────────────────────────────────────────────────── */
 html {
   font-size: 16px;
@@ -225,6 +266,20 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
   transition: border-color 0.15s, color 0.15s;
 }
 .help-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Icon-only button (wide mode toggle, etc.) */
+.icon-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.icon-btn:hover        { border-color: var(--accent); color: var(--accent); }
+.icon-btn.active       { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
 
 /* ── Font size controls ────────────────────────────────────── */
 .font-size-controls {
@@ -446,6 +501,11 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
   max-width: 1280px; margin: 0 auto;
   padding: 2.5rem 1.5rem;
 }
+
+/* ── Wide mode ──────────────────────────────────────────────── */
+[data-wide="true"] .nav       { max-width: none; }
+[data-wide="true"] .container { max-width: none; }
+[data-wide="true"] .formulas-page { max-width: none; }
 
 /* ── Page header ────────────────────────────────────────────── */
 .page-header { margin-bottom: 2.5rem; }
@@ -1120,6 +1180,25 @@ a.tag:hover {
 }
 .error-page p { color: var(--muted); font-size: 0.95rem; max-width: 340px; }
 .error-page .btn-primary { margin-top: 0.5rem; text-decoration: none; display: inline-block; }
+
+.disambig-list {
+  list-style: none; margin: 0.5rem 0 0; padding: 0;
+  display: flex; flex-direction: column; gap: 0.6rem; width: 100%; max-width: 380px;
+}
+.disambig-link {
+  display: flex; flex-direction: column; gap: 0.15rem;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--tc, var(--border));
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.disambig-link:hover { background: color-mix(in srgb, var(--tc, var(--accent)) 10%, transparent); }
+.disambig-topic {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em;
+  text-transform: uppercase; color: var(--tc, var(--accent));
+}
+.disambig-name { font-size: 1rem; font-weight: 600; color: var(--text); }
 
 /* ── Copy-link button & toast ───────────────────────────────── */
 .copy-link-btn {
