@@ -1092,76 +1092,16 @@
     "description": "The Sharpe ratio evaluates absolute return strategies by dividing excess return over the risk-free rate by portfolio volatility — it is the standard metric for comparing absolute return managers."
   },
   {
-    "source": "portfolio-theory/active-share",
-    "target": "financial-maths/benchmark-index",
-    "label": "measured against",
-    "description": "Active share quantifies the percentage of holdings that differ from the benchmark — without a defined benchmark index, the concept has no meaning."
-  },
-  {
-    "source": "portfolio-theory/active-share",
+    "source": "financial-maths/benchmark-index",
     "target": "financial-maths/relative-return",
-    "label": "predicts",
-    "description": "Research shows that funds with high active share tend to generate higher relative returns after fees — closet indexers with low active share consistently underperform their benchmarks."
-  },
-  {
-    "source": "portfolio-theory/active-share",
-    "target": "portfolio-theory/tracking-error",
-    "label": "complements",
-    "description": "Active share and tracking error together provide a two-dimensional view of active management — active share measures how different the holdings are, while tracking error measures how different the returns are."
-  },
-  {
-    "source": "portfolio-theory/alpha-and-beta",
-    "target": "portfolio-theory/capital-asset-pricing-model",
-    "label": "derived from",
-    "description": "Alpha and beta originate directly from the CAPM equation — beta is the slope of the security market line and alpha is any return that deviates from it."
-  },
-  {
-    "source": "portfolio-theory/alpha-and-beta",
-    "target": "portfolio-theory/fama-french-three-factor-model",
-    "label": "generalised by",
-    "description": "The Fama–French model extends the single-factor alpha-beta decomposition to three factors, redefining alpha as the return unexplained by market, size, and value exposures."
-  },
-  {
-    "source": "portfolio-theory/alpha-and-beta",
-    "target": "financial-maths/hedge-funds",
-    "label": "evaluated by",
-    "description": "Hedge fund investors decompose returns into alpha (manager skill) and beta (market exposure) to determine whether fees are justified by genuine stock-picking ability."
-  },
-  {
-    "source": "portfolio-theory/alpha-and-beta",
-    "target": "statistics/beta-estimation",
-    "label": "estimated via",
-    "description": "Beta is estimated by regressing asset returns against market returns — the slope coefficient is the beta and the intercept is the realised alpha over the estimation window."
-  },
-  {
-    "source": "portfolio-theory/arbitrage-pricing-theory",
-    "target": "derivatives/no-arbitrage-principle",
-    "label": "derived from",
-    "description": "APT is built on the no-arbitrage principle — if an asset's expected return does not equal the sum of its factor risk premia, a portfolio of many assets can be constructed to earn riskless profit, which the market eliminates."
-  },
-  {
-    "source": "portfolio-theory/arbitrage-pricing-theory",
-    "target": "portfolio-theory/capital-asset-pricing-model",
-    "label": "generalises",
-    "description": "APT generalises CAPM by allowing multiple systematic risk factors rather than a single market factor — CAPM is the special case of APT where the only priced factor is the market portfolio."
-  },
-  {
-    "source": "portfolio-theory/arbitrage-pricing-theory",
-    "target": "portfolio-theory/modern-portfolio-theory",
-    "label": "alternative to",
-    "description": "While MPT and CAPM derive asset pricing from equilibrium assumptions about investor behaviour, APT reaches similar conclusions using only the weaker no-arbitrage condition, making it a more general alternative framework."
+    "label": "defines",
+    "description": "Relative return is meaningless without a benchmark — the choice of index determines the reference point against which outperformance or underperformance is measured."
   },
   {
     "source": "financial-maths/benchmark-index",
     "target": "portfolio-theory/capital-asset-pricing-model",
     "label": "proxies for",
     "description": "The CAPM assumes a market portfolio containing all investable assets — in practice, a broad benchmark index like the FTSE All-Share or S&P 500 serves as the proxy for this theoretical market portfolio."
-  },
-  {
-    "source": "financial-maths/benchmark-index",
-    "target": "financial-maths/relative-return",
-    "label": "defines",
-    "description": "Relative return is meaningless without a benchmark — the choice of index determines the reference point against which outperformance or underperformance is measured."
   },
   {
     "source": "financial-maths/benchmark-index",
@@ -1186,78 +1126,6 @@
     "target": "statistics/beta-estimation",
     "label": "depends on",
     "description": "The accuracy of a beta hedge depends entirely on the quality of beta estimates — estimation error translates directly into residual market exposure that undermines the hedge."
-  },
-  {
-    "source": "portfolio-theory/black-litterman-model",
-    "target": "portfolio-theory/efficient-frontier",
-    "label": "stabilises",
-    "description": "Black-Litterman produces stable expected returns that, when fed into Markowitz optimisation, generate sensible portfolios on the efficient frontier — unlike raw return estimates which cause the frontier to shift erratically."
-  },
-  {
-    "source": "portfolio-theory/black-litterman-model",
-    "target": "portfolio-theory/modern-portfolio-theory",
-    "label": "extends",
-    "description": "Black-Litterman is a Bayesian extension of Markowitz that solves the practical problem of estimating expected returns — it anchors to market equilibrium and tilts towards investor views, making mean-variance optimisation usable in practice."
-  },
-  {
-    "source": "portfolio-theory/black-litterman-model",
-    "target": "linear-algebra/covariance-matrix",
-    "label": "uses",
-    "description": "The equilibrium returns Π = δΣw are derived directly from the covariance matrix — Black-Litterman requires a well-estimated Σ as its starting point for computing implied returns."
-  },
-  {
-    "source": "portfolio-theory/calmar-ratio",
-    "target": "financial-maths/hedge-funds",
-    "label": "evaluates",
-    "description": "The Calmar ratio is widely used to evaluate hedge fund and CTA performance, particularly for trend-following strategies where drawdown discipline is more important than day-to-day volatility."
-  },
-  {
-    "source": "portfolio-theory/calmar-ratio",
-    "target": "portfolio-theory/sharpe-ratio",
-    "label": "alternative to",
-    "description": "The Calmar ratio uses maximum drawdown as the risk denominator instead of volatility — it penalises the worst cumulative loss rather than average dispersion, making it more relevant for strategies where drawdown is the binding constraint."
-  },
-  {
-    "source": "portfolio-theory/calmar-ratio",
-    "target": "risk/maximum-drawdown",
-    "label": "denominator is",
-    "description": "Maximum drawdown appears in the denominator of the Calmar ratio — it anchors the risk-adjusted performance measure to the worst peak-to-trough loss the strategy actually experienced."
-  },
-  {
-    "source": "portfolio-theory/capital-asset-pricing-model",
-    "target": "financial-maths/return-on-investment",
-    "label": "models",
-    "description": "CAPM models the expected return of an asset as a linear function of its systematic risk — the return on investment is the quantity that CAPM predicts."
-  },
-  {
-    "source": "portfolio-theory/capital-asset-pricing-model",
-    "target": "statistics/correlation",
-    "label": "depends on",
-    "description": "Beta is the ratio of the covariance between asset and market returns to market variance — computing beta requires estimating the correlation between the asset and the market portfolio."
-  },
-  {
-    "source": "portfolio-theory/capital-asset-pricing-model",
-    "target": "statistics/variance-and-standard-deviation",
-    "label": "computed from",
-    "description": "Beta equals Cov(R_i, R_m) / Var(R_m) — the market variance in the denominator normalises the covariance to produce a unitless sensitivity measure."
-  },
-  {
-    "source": "portfolio-theory/capital-market-line",
-    "target": "portfolio-theory/capital-asset-pricing-model",
-    "label": "foundation of",
-    "description": "CAPM is derived by assuming all investors hold portfolios on the CML — the tangency portfolio becomes the market portfolio, and the CML slope becomes the market price of risk."
-  },
-  {
-    "source": "portfolio-theory/capital-market-line",
-    "target": "portfolio-theory/efficient-frontier",
-    "label": "dominates",
-    "description": "The CML is a straight line from the risk-free rate through the tangency portfolio that lies above the curved efficient frontier at every risk level — adding a risk-free asset strictly improves the attainable risk-return trade-off."
-  },
-  {
-    "source": "portfolio-theory/capital-market-line",
-    "target": "portfolio-theory/sharpe-ratio",
-    "label": "slope equals",
-    "description": "The slope of the CML is the Sharpe ratio of the tangency portfolio — the maximum attainable Sharpe ratio among all portfolios of risky assets."
   },
   {
     "source": "financial-maths/central-counterparty",
@@ -1297,15 +1165,15 @@
   },
   {
     "source": "financial-maths/debt-to-equity-ratio",
-    "target": "portfolio-theory/capital-asset-pricing-model",
-    "label": "feeds into",
-    "description": "The Hamada equation uses the debt-to-equity ratio to lever and unlever beta — higher D/E raises equity beta and therefore the cost of equity in the CAPM."
-  },
-  {
-    "source": "financial-maths/debt-to-equity-ratio",
     "target": "financial-maths/leverage",
     "label": "quantifies",
     "description": "The D/E ratio is the corporate finance measure of leverage — it captures the same amplification of returns and risk that the portfolio leverage ratio describes for trading positions."
+  },
+  {
+    "source": "financial-maths/debt-to-equity-ratio",
+    "target": "portfolio-theory/capital-asset-pricing-model",
+    "label": "feeds into",
+    "description": "The Hamada equation uses the debt-to-equity ratio to lever and unlever beta — higher D/E raises equity beta and therefore the cost of equity in the CAPM."
   },
   {
     "source": "financial-maths/debt-to-equity-ratio",
@@ -1314,22 +1182,10 @@
     "description": "Estimating beta for firms with different capital structures requires the Hamada equation to unlever and relever beta using the debt-to-equity ratio, ensuring like-for-like comparison."
   },
   {
-    "source": "portfolio-theory/efficient-frontier",
-    "target": "portfolio-theory/modern-portfolio-theory",
-    "label": "output of",
-    "description": "The efficient frontier is the geometric output of Markowitz optimisation — it plots the set of portfolios that offer maximum return for each level of risk, summarising the entire mean-variance trade-off."
-  },
-  {
-    "source": "portfolio-theory/efficient-frontier",
-    "target": "portfolio-theory/sharpe-ratio",
-    "label": "maximised at tangency",
-    "description": "The tangency portfolio, where a line from the risk-free rate is tangent to the efficient frontier, is the portfolio with the maximum Sharpe ratio — the optimal mix of risky assets for any investor."
-  },
-  {
-    "source": "portfolio-theory/efficient-frontier",
-    "target": "statistics/portfolio-variance",
-    "label": "minimises",
-    "description": "Each point on the efficient frontier is a portfolio that minimises variance for its target return — the portfolio variance formula is the objective function solved at every point along the curve."
+    "source": "financial-maths/factor-investing",
+    "target": "financial-maths/hedge-funds",
+    "label": "challenges",
+    "description": "Factor investing challenges the hedge fund model by showing that much of what active managers charge premium fees for can be replicated cheaply through systematic factor exposure — reducing the alpha that justifies high fees."
   },
   {
     "source": "financial-maths/factor-investing",
@@ -1342,24 +1198,6 @@
     "target": "portfolio-theory/fama-french-three-factor-model",
     "label": "built on",
     "description": "The Fama–French three-factor model was the foundational academic work that identified size and value as compensated factors alongside the market — it launched the factor investing industry."
-  },
-  {
-    "source": "financial-maths/factor-investing",
-    "target": "financial-maths/hedge-funds",
-    "label": "challenges",
-    "description": "Factor investing challenges the hedge fund model by showing that much of what active managers charge premium fees for can be replicated cheaply through systematic factor exposure — reducing the alpha that justifies high fees."
-  },
-  {
-    "source": "portfolio-theory/fama-french-three-factor-model",
-    "target": "portfolio-theory/capital-asset-pricing-model",
-    "label": "extends",
-    "description": "The Fama–French model adds size (SMB) and value (HML) factors to the single market factor of CAPM, explaining cross-sectional return patterns that CAPM alone attributes incorrectly to alpha."
-  },
-  {
-    "source": "portfolio-theory/fama-french-three-factor-model",
-    "target": "statistics/variance-and-standard-deviation",
-    "label": "estimated via",
-    "description": "Factor loadings in the Fama–French model are estimated by regressing excess returns on the three factor time series — the regression minimises the variance of the residual to find the best-fitting sensitivities."
   },
   {
     "source": "financial-maths/fund-of-funds",
@@ -1446,42 +1284,6 @@
     "description": "Hedge funds use Value at Risk to quantify downside exposure and set position limits — regulators and prime brokers also use VaR to monitor leverage and counterparty risk."
   },
   {
-    "source": "portfolio-theory/information-ratio",
-    "target": "financial-maths/relative-return",
-    "label": "normalises",
-    "description": "The information ratio divides average relative return by tracking error — it measures how much active return a manager earns per unit of active risk taken against the benchmark."
-  },
-  {
-    "source": "portfolio-theory/information-ratio",
-    "target": "portfolio-theory/sharpe-ratio",
-    "label": "analogous to",
-    "description": "The information ratio is to relative return what the Sharpe ratio is to absolute return — both divide excess return by its volatility, but the IR uses the benchmark as the baseline instead of the risk-free rate."
-  },
-  {
-    "source": "portfolio-theory/information-ratio",
-    "target": "portfolio-theory/tracking-error",
-    "label": "denominator is",
-    "description": "Tracking error appears in the denominator of the information ratio — a lower tracking error for the same active return produces a higher IR, rewarding consistency of outperformance."
-  },
-  {
-    "source": "portfolio-theory/jensens-alpha",
-    "target": "portfolio-theory/alpha-and-beta",
-    "label": "formalises",
-    "description": "Jensen's alpha is the statistical formalisation of the alpha concept — it provides a regression-based estimate with standard errors and significance tests, turning alpha from an informal notion into a testable hypothesis."
-  },
-  {
-    "source": "portfolio-theory/jensens-alpha",
-    "target": "portfolio-theory/capital-asset-pricing-model",
-    "label": "tests",
-    "description": "Jensen's alpha tests the CAPM prediction that all assets should lie on the Security Market Line — a statistically significant alpha implies the CAPM misprices the asset or the manager has genuine skill."
-  },
-  {
-    "source": "portfolio-theory/jensens-alpha",
-    "target": "statistics/beta-estimation",
-    "label": "estimated alongside",
-    "description": "Jensen's alpha and beta are jointly estimated by regressing portfolio excess returns on market excess returns — alpha is the intercept and beta is the slope of the same regression."
-  },
-  {
     "source": "financial-maths/kelly-criterion",
     "target": "financial-maths/leverage",
     "label": "optimises",
@@ -1543,27 +1345,27 @@
   },
   {
     "source": "financial-maths/long-short-equity",
-    "target": "portfolio-theory/alpha-and-beta",
-    "label": "decomposes via",
-    "description": "Long-short equity strategies aim to isolate alpha by hedging out beta — the net exposure determines how much market risk remains in the portfolio."
-  },
-  {
-    "source": "financial-maths/long-short-equity",
     "target": "financial-maths/hedge-funds",
     "label": "strategy of",
     "description": "Long-short equity is the most common hedge fund strategy, accounting for the largest share of hedge fund assets under management globally."
   },
   {
     "source": "financial-maths/long-short-equity",
-    "target": "portfolio-theory/sharpe-ratio",
-    "label": "measured by",
-    "description": "The Sharpe ratio of a long-short portfolio measures whether the alpha from stock selection compensates for the residual risk after hedging out market exposure."
-  },
-  {
-    "source": "financial-maths/long-short-equity",
     "target": "financial-maths/short-selling",
     "label": "requires",
     "description": "The short leg of a long-short portfolio requires borrowing and selling securities — without the mechanics of short selling, the strategy cannot be implemented."
+  },
+  {
+    "source": "financial-maths/long-short-equity",
+    "target": "portfolio-theory/alpha-and-beta",
+    "label": "decomposes via",
+    "description": "Long-short equity strategies aim to isolate alpha by hedging out beta — the net exposure determines how much market risk remains in the portfolio."
+  },
+  {
+    "source": "financial-maths/long-short-equity",
+    "target": "portfolio-theory/sharpe-ratio",
+    "label": "measured by",
+    "description": "The Sharpe ratio of a long-short portfolio measures whether the alpha from stock selection compensates for the residual risk after hedging out market exposure."
   },
   {
     "source": "financial-maths/market-impact-model",
@@ -1608,72 +1410,6 @@
     "description": "Achieving zero portfolio beta requires accurate beta estimates for every position — estimation error in betas translates directly into residual market exposure that undermines the strategy."
   },
   {
-    "source": "portfolio-theory/minimum-variance-portfolio",
-    "target": "portfolio-theory/efficient-frontier",
-    "label": "leftmost point of",
-    "description": "The MVP is the leftmost point on the efficient frontier — the portfolio with the absolute lowest variance, dividing the frontier into an upper (efficient) and lower (inefficient) branch."
-  },
-  {
-    "source": "portfolio-theory/minimum-variance-portfolio",
-    "target": "linear-algebra/covariance-matrix",
-    "label": "depends only on",
-    "description": "The MVP weights are Σ⁻¹·¹ / (¹ᵀΣ⁻¹·¹) — they require only the covariance matrix, not expected returns, making the MVP the most robust optimal portfolio against return estimation error."
-  },
-  {
-    "source": "portfolio-theory/minimum-variance-portfolio",
-    "target": "statistics/portfolio-variance",
-    "label": "minimises globally",
-    "description": "The MVP is the unconstrained global minimum of the portfolio variance function wᵀΣw subject only to full investment — no return target is imposed."
-  },
-  {
-    "source": "portfolio-theory/modern-portfolio-theory",
-    "target": "portfolio-theory/capital-asset-pricing-model",
-    "label": "foundation of",
-    "description": "CAPM is derived from Modern Portfolio Theory by asking what expected returns must hold in equilibrium when all investors hold mean-variance efficient portfolios — it is the single-factor equilibrium result of MPT."
-  },
-  {
-    "source": "portfolio-theory/modern-portfolio-theory",
-    "target": "linear-algebra/matrix-multiplication",
-    "label": "computed via",
-    "description": "Portfolio variance is the quadratic form w'Σw and expected return is the dot product w'μ — both are matrix multiplications, making linear algebra the computational engine of portfolio optimisation."
-  },
-  {
-    "source": "portfolio-theory/modern-portfolio-theory",
-    "target": "risk/value-at-risk",
-    "label": "feeds into",
-    "description": "The portfolio variance from MPT is the key input to parametric VaR — once mean-variance weights are chosen, the portfolio standard deviation is plugged directly into the VaR formula to quantify downside risk."
-  },
-  {
-    "source": "portfolio-theory/modern-portfolio-theory",
-    "target": "statistics/correlation",
-    "label": "depends on",
-    "description": "Portfolio variance is determined by the pairwise correlations between assets — the off-diagonal terms of the covariance matrix drive the diversification benefit that is the central result of MPT."
-  },
-  {
-    "source": "portfolio-theory/modern-portfolio-theory",
-    "target": "statistics/variance-and-standard-deviation",
-    "label": "minimises",
-    "description": "MPT defines risk as portfolio variance and seeks the weight vector that minimises it for a given target return — variance is the objective function at the heart of mean-variance optimisation."
-  },
-  {
-    "source": "portfolio-theory/omega-ratio",
-    "target": "portfolio-theory/sharpe-ratio",
-    "label": "generalises",
-    "description": "The Omega ratio captures the entire return distribution including skewness and kurtosis, while the Sharpe ratio uses only mean and variance — for normally distributed returns they rank strategies identically, but they diverge for non-normal distributions."
-  },
-  {
-    "source": "portfolio-theory/omega-ratio",
-    "target": "probability/cumulative-distribution-function",
-    "label": "computed from",
-    "description": "The Omega ratio is defined as the ratio of integrals of the CDF above and below the threshold — it directly uses the cumulative distribution function to weight gains against losses."
-  },
-  {
-    "source": "portfolio-theory/omega-ratio",
-    "target": "probability/fat-tailed-distributions",
-    "label": "sensitive to",
-    "description": "The Omega ratio captures fat-tail effects that the Sharpe ratio ignores — a strategy with positive skew and thin left tails will have a much higher Omega ratio than one with negative skew and fat left tails, even if their Sharpe ratios are similar."
-  },
-  {
     "source": "financial-maths/overnight-index-swap",
     "target": "financial-maths/funding-rate",
     "label": "benchmarks",
@@ -1711,15 +1447,15 @@
   },
   {
     "source": "financial-maths/relative-return",
-    "target": "portfolio-theory/alpha-and-beta",
-    "label": "quantified by",
-    "description": "Alpha is the relative return of a portfolio after adjusting for its beta exposure — it isolates the manager's skill from the market return that any passive fund could have captured."
-  },
-  {
-    "source": "financial-maths/relative-return",
     "target": "financial-maths/return-on-investment",
     "label": "built on",
     "description": "Relative return is computed by subtracting the benchmark return from the portfolio return — both sides of the subtraction require calculating returns on investment first."
+  },
+  {
+    "source": "financial-maths/relative-return",
+    "target": "portfolio-theory/alpha-and-beta",
+    "label": "quantified by",
+    "description": "Alpha is the relative return of a portfolio after adjusting for its beta exposure — it isolates the manager's skill from the market return that any passive fund could have captured."
   },
   {
     "source": "financial-maths/relative-return",
@@ -1744,24 +1480,6 @@
     "target": "risk/margin-requirements",
     "label": "analogous to",
     "description": "The repo haircut functions like an initial margin requirement — both protect the lender by requiring the borrower to have skin in the game, and both increase during market stress."
-  },
-  {
-    "source": "portfolio-theory/resampled-efficient-frontier",
-    "target": "portfolio-theory/efficient-frontier",
-    "label": "stabilises",
-    "description": "The resampled frontier averages portfolio weights across many bootstrapped frontiers, producing more diversified and stable allocations than the classical frontier computed from a single set of noisy inputs."
-  },
-  {
-    "source": "portfolio-theory/resampled-efficient-frontier",
-    "target": "probability/multivariate-normal-distribution",
-    "label": "simulates from",
-    "description": "Each resample draws returns from a multivariate normal calibrated to the original estimates — the normality assumption enables fast bootstrapping of alternative efficient frontiers."
-  },
-  {
-    "source": "portfolio-theory/resampled-efficient-frontier",
-    "target": "statistics/shrinkage-estimators",
-    "label": "alternative to",
-    "description": "Both resampling and shrinkage address estimation error in Markowitz optimisation, but through different mechanisms — resampling averages over input uncertainty while shrinkage biases the inputs towards a stable target."
   },
   {
     "source": "financial-maths/return-on-equity",
@@ -1806,42 +1524,6 @@
     "description": "A reverse repo is the same transaction as a repo viewed from the cash lender's side — one party's repo is the other party's reverse repo, with identical economics but opposite cash and collateral flows."
   },
   {
-    "source": "portfolio-theory/risk-budgeting",
-    "target": "portfolio-theory/modern-portfolio-theory",
-    "label": "extends",
-    "description": "Risk budgeting extends mean-variance optimisation by expressing the objective in risk-contribution units rather than capital weights — it produces more robust allocations because it avoids sensitivity to expected return estimates."
-  },
-  {
-    "source": "portfolio-theory/risk-budgeting",
-    "target": "portfolio-theory/risk-parity",
-    "label": "generalises",
-    "description": "Risk parity is the special case of risk budgeting where every asset receives an equal share of the risk budget — risk budgeting allows deliberate tilts towards assets with higher expected risk-adjusted returns."
-  },
-  {
-    "source": "portfolio-theory/risk-budgeting",
-    "target": "statistics/variance-and-standard-deviation",
-    "label": "denominated in",
-    "description": "Risk contributions are expressed in units of portfolio volatility — each asset's marginal contribution to standard deviation determines its share of the total risk budget."
-  },
-  {
-    "source": "portfolio-theory/risk-parity",
-    "target": "financial-maths/leverage",
-    "label": "requires",
-    "description": "Risk parity portfolios are heavily weighted towards low-volatility assets like bonds, so they use leverage to raise the expected return to competitive levels — without leverage, the strategy would deliver bond-like returns."
-  },
-  {
-    "source": "portfolio-theory/risk-parity",
-    "target": "portfolio-theory/modern-portfolio-theory",
-    "label": "extends",
-    "description": "Risk parity extends mean-variance optimisation by defining the objective as equal risk contribution from each asset, rather than minimising variance for a given return target."
-  },
-  {
-    "source": "portfolio-theory/risk-parity",
-    "target": "statistics/correlation",
-    "label": "depends on",
-    "description": "Risk parity allocations are computed from the covariance matrix — when correlations between assets spike (as in a crisis), the equal-risk-contribution assumption breaks down and the portfolio becomes less diversified than intended."
-  },
-  {
     "source": "financial-maths/riskless-arbitrage",
     "target": "derivatives/put-call-parity",
     "label": "enforces",
@@ -1876,36 +1558,6 @@
     "target": "risk/margin-requirements",
     "label": "collateralised by",
     "description": "Securities lending requires the borrower to post collateral (typically 102–105% of the loan value), and this collateral is governed by the same margin and haircut frameworks used in leveraged trading."
-  },
-  {
-    "source": "portfolio-theory/security-market-line",
-    "target": "portfolio-theory/capital-asset-pricing-model",
-    "label": "visualises",
-    "description": "The Security Market Line is the graphical representation of the CAPM equation — it plots expected return against beta, making the linear risk-return trade-off visually explicit."
-  },
-  {
-    "source": "portfolio-theory/sharpe-ratio",
-    "target": "portfolio-theory/capital-asset-pricing-model",
-    "label": "related to",
-    "description": "Both the Sharpe Ratio and CAPM use the risk-free rate as a baseline — CAPM prices expected return via systematic risk, while the Sharpe Ratio evaluates realised performance per unit of total risk."
-  },
-  {
-    "source": "portfolio-theory/sharpe-ratio",
-    "target": "portfolio-theory/modern-portfolio-theory",
-    "label": "optimised by",
-    "description": "The tangency portfolio on the efficient frontier is the portfolio that maximises the Sharpe Ratio — mean-variance optimisation and Sharpe maximisation are equivalent when a risk-free asset is available."
-  },
-  {
-    "source": "portfolio-theory/sharpe-ratio",
-    "target": "financial-maths/return-on-investment",
-    "label": "uses",
-    "description": "The numerator of the Sharpe Ratio is excess return — the portfolio return minus the risk-free rate — so computing the Sharpe Ratio begins with calculating returns."
-  },
-  {
-    "source": "portfolio-theory/sharpe-ratio",
-    "target": "statistics/variance-and-standard-deviation",
-    "label": "normalised by",
-    "description": "The denominator of the Sharpe Ratio is the standard deviation of portfolio returns — it normalises excess return by volatility to produce a risk-adjusted performance measure."
   },
   {
     "source": "financial-maths/short-interest",
@@ -1980,24 +1632,6 @@
     "description": "Rising prices during a short squeeze erode short sellers' equity, triggering margin calls that force further buying — this margin-driven feedback loop is the mechanism that makes squeezes so violent."
   },
   {
-    "source": "portfolio-theory/sortino-ratio",
-    "target": "financial-maths/absolute-return",
-    "label": "evaluates",
-    "description": "The Sortino ratio evaluates absolute return strategies by penalising only downside volatility — it is more appropriate than the Sharpe ratio for strategies with asymmetric return distributions."
-  },
-  {
-    "source": "portfolio-theory/sortino-ratio",
-    "target": "portfolio-theory/sharpe-ratio",
-    "label": "refines",
-    "description": "The Sortino ratio modifies the Sharpe ratio by replacing total standard deviation with downside deviation — it rewards strategies that achieve high returns with large upside moves but small downside moves."
-  },
-  {
-    "source": "portfolio-theory/sortino-ratio",
-    "target": "statistics/variance-and-standard-deviation",
-    "label": "modifies",
-    "description": "The Sortino ratio replaces standard deviation with semi-deviation (downside only), recognising that investors treat upside and downside volatility asymmetrically."
-  },
-  {
     "source": "financial-maths/statistical-arbitrage",
     "target": "financial-maths/market-neutral-strategy",
     "label": "implements",
@@ -2014,24 +1648,6 @@
     "target": "statistics/cointegration",
     "label": "relies on",
     "description": "Many stat arb strategies use cointegration to identify groups of securities that share long-run equilibria — trading the mean-reverting residuals across many such groups generates the diversified alpha stream."
-  },
-  {
-    "source": "portfolio-theory/sterling-ratio",
-    "target": "portfolio-theory/calmar-ratio",
-    "label": "smooths",
-    "description": "The Sterling ratio uses the average of the largest drawdowns instead of the single worst drawdown — this smooths the denominator and produces a less volatile risk-adjusted metric than the Calmar ratio."
-  },
-  {
-    "source": "portfolio-theory/sterling-ratio",
-    "target": "portfolio-theory/sharpe-ratio",
-    "label": "alternative to",
-    "description": "The Sterling ratio uses average drawdown as the risk denominator instead of standard deviation — it is more intuitive for investors who think about risk in terms of actual losses rather than statistical dispersion."
-  },
-  {
-    "source": "portfolio-theory/sterling-ratio",
-    "target": "risk/maximum-drawdown",
-    "label": "averages over",
-    "description": "While the Calmar ratio uses the single maximum drawdown, the Sterling ratio averages the largest drawdowns — this reduces the influence of a single extreme event on the risk assessment."
   },
   {
     "source": "financial-maths/stock-borrow-rate",
@@ -2052,64 +1668,10 @@
     "description": "The time value of money uses a single discount rate, but the yield curve generalises this to a different rate for every maturity — each cash flow is discounted at its own spot rate rather than one flat rate."
   },
   {
-    "source": "portfolio-theory/tracking-error",
-    "target": "financial-maths/benchmark-index",
-    "label": "measured against",
-    "description": "Tracking error quantifies how closely a portfolio follows its benchmark index — without a defined benchmark, the concept of tracking error has no meaning."
-  },
-  {
-    "source": "portfolio-theory/tracking-error",
-    "target": "financial-maths/relative-return",
-    "label": "volatility of",
-    "description": "Tracking error is the standard deviation of relative returns over time — it measures the consistency of the active return series rather than its average level."
-  },
-  {
-    "source": "portfolio-theory/tracking-error",
-    "target": "statistics/variance-and-standard-deviation",
-    "label": "instance of",
-    "description": "Tracking error is simply the standard deviation applied to the time series of active returns (portfolio minus benchmark) — it uses the same formula but on a derived return series."
-  },
-  {
-    "source": "portfolio-theory/treynor-ratio",
-    "target": "portfolio-theory/alpha-and-beta",
-    "label": "denominator is",
-    "description": "Beta appears in the denominator of the Treynor ratio — it measures excess return per unit of systematic risk, making beta estimation accuracy critical to the metric's reliability."
-  },
-  {
-    "source": "portfolio-theory/treynor-ratio",
-    "target": "portfolio-theory/capital-asset-pricing-model",
-    "label": "derived from",
-    "description": "The Treynor ratio is the CAPM-implied reward per unit of beta — a portfolio on the Security Market Line has a Treynor ratio equal to the market risk premium."
-  },
-  {
-    "source": "portfolio-theory/treynor-ratio",
-    "target": "portfolio-theory/sharpe-ratio",
-    "label": "complements",
-    "description": "The Treynor ratio uses beta (systematic risk) as the denominator while the Sharpe ratio uses total volatility — they agree for fully diversified portfolios but diverge when idiosyncratic risk is present."
-  },
-  {
     "source": "financial-maths/triangular-arbitrage",
     "target": "financial-maths/statistical-arbitrage",
     "label": "contrasts with",
     "description": "Triangular arbitrage is deterministic and riskless (ignoring execution risk), whereas statistical arbitrage is probabilistic and carries market risk on individual trades."
-  },
-  {
-    "source": "portfolio-theory/two-fund-separation-theorem",
-    "target": "portfolio-theory/capital-asset-pricing-model",
-    "label": "foundation of",
-    "description": "CAPM is derived by assuming all investors satisfy two-fund separation — if everyone holds the tangency portfolio, it must equal the market portfolio, yielding the CAPM pricing equation."
-  },
-  {
-    "source": "portfolio-theory/two-fund-separation-theorem",
-    "target": "portfolio-theory/capital-market-line",
-    "label": "implies",
-    "description": "Two-fund separation is the algebraic result that all CML portfolios are combinations of the risk-free asset and the tangency portfolio — the CML is the geometric expression of the theorem."
-  },
-  {
-    "source": "portfolio-theory/two-fund-separation-theorem",
-    "target": "portfolio-theory/modern-portfolio-theory",
-    "label": "key result of",
-    "description": "Two-fund separation is the central structural result of Markowitz theory with a risk-free asset — it reduces the infinite-dimensional portfolio choice to a single parameter (the allocation to risky assets)."
   },
   {
     "source": "financial-maths/yield-curve",
@@ -2131,12 +1693,6 @@
   },
   {
     "source": "linear-algebra/applications-of-linear-algebra",
-    "target": "portfolio-theory/modern-portfolio-theory",
-    "label": "underpins",
-    "description": "Modern Portfolio Theory is expressed entirely in linear algebra — expected return is wᵀμ, portfolio variance is wᵀΣw, and the efficient frontier is traced by solving a constrained quadratic programme over matrix quantities."
-  },
-  {
-    "source": "linear-algebra/applications-of-linear-algebra",
     "target": "linear-algebra/covariance-matrix",
     "label": "showcases",
     "description": "The covariance matrix is the centrepiece of portfolio-level linear algebra — it feeds into variance computation (wᵀΣw), eigendecomposition (PCA), and Cholesky factorisation (simulation), making it the single object that ties the main applications together."
@@ -2152,6 +1708,12 @@
     "target": "linear-algebra/systems-of-linear-equations",
     "label": "applied via",
     "description": "Yield curve bootstrapping, bond replication, and model calibration all reduce to solving Ax = b — systems of linear equations are the most direct application of linear algebra in day-to-day quantitative finance."
+  },
+  {
+    "source": "linear-algebra/applications-of-linear-algebra",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "underpins",
+    "description": "Modern Portfolio Theory is expressed entirely in linear algebra — expected return is wᵀμ, portfolio variance is wᵀΣw, and the efficient frontier is traced by solving a constrained quadratic programme over matrix quantities."
   },
   {
     "source": "linear-algebra/cholesky-decomposition",
@@ -2197,15 +1759,15 @@
   },
   {
     "source": "linear-algebra/covariance-matrix",
-    "target": "portfolio-theory/modern-portfolio-theory",
-    "label": "central input to",
-    "description": "Portfolio variance is wᵀΣw — the covariance matrix encodes every pairwise asset interaction, making it the single object that determines the entire efficient frontier in Markowitz optimisation."
-  },
-  {
-    "source": "linear-algebra/covariance-matrix",
     "target": "linear-algebra/positive-definite-matrices",
     "label": "must satisfy",
     "description": "A valid covariance matrix must be positive semi-definite to guarantee non-negative portfolio variance — when estimation error violates this property, the optimiser produces nonsensical infinite-leverage solutions."
+  },
+  {
+    "source": "linear-algebra/covariance-matrix",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "central input to",
+    "description": "Portfolio variance is wᵀΣw — the covariance matrix encodes every pairwise asset interaction, making it the single object that determines the entire efficient frontier in Markowitz optimisation."
   },
   {
     "source": "linear-algebra/determinant",
@@ -2215,15 +1777,15 @@
   },
   {
     "source": "linear-algebra/dot-product-and-norms",
-    "target": "portfolio-theory/modern-portfolio-theory",
-    "label": "underlies",
-    "description": "Portfolio variance w^T Sigma w is a quadratic form built from dot products of weight and return vectors — the entire mean-variance optimisation framework rests on this inner product structure."
-  },
-  {
-    "source": "linear-algebra/dot-product-and-norms",
     "target": "linear-algebra/matrix-multiplication",
     "label": "building block of",
     "description": "Matrix multiplication is defined as a collection of dot products — the (i,j) entry of AB is the dot product of row i of A with column j of B."
+  },
+  {
+    "source": "linear-algebra/dot-product-and-norms",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "underlies",
+    "description": "Portfolio variance w^T Sigma w is a quadratic form built from dot products of weight and return vectors — the entire mean-variance optimisation framework rests on this inner product structure."
   },
   {
     "source": "linear-algebra/dot-product-and-norms",
@@ -2436,6 +1998,24 @@
     "description": "The portfolio variance formula wᵀΣw requires the transpose operation to convert the weight vector into a row — the transpose is integral to every quadratic form in matrix algebra."
   },
   {
+    "source": "mathematical-notation/characteristic-function-notation",
+    "target": "derivatives/heston-model",
+    "label": "enables pricing in",
+    "description": "The Heston model has a closed-form characteristic function for log S_T but no closed-form density — option prices are computed by numerically inverting phi via the Carr-Madan FFT formula, making characteristic function notation essential for practical Heston implementation."
+  },
+  {
+    "source": "mathematical-notation/characteristic-function-notation",
+    "target": "probability/moment-generating-function",
+    "label": "compared to",
+    "description": "Both the MGF E[e^{tX}] and the characteristic function E[e^{iuX}] encode the full distribution, but the characteristic function always exists while the MGF diverges for heavy-tailed distributions — making phi the preferred tool for Levy process option pricing."
+  },
+  {
+    "source": "mathematical-notation/characteristic-function-notation",
+    "target": "probability/probability-density-function",
+    "label": "inverts to",
+    "description": "The Fourier inversion formula f_X(x) = (1/2pi) int e^{-iux} phi_X(u) du recovers the PDF from the characteristic function — in option pricing this inversion is performed numerically via FFT to obtain prices across a full strike grid at once."
+  },
+  {
     "source": "mathematical-notation/conditional-expectation-notation",
     "target": "stochastic-processes/martingales",
     "label": "notation for",
@@ -2484,6 +2064,36 @@
     "description": "This card explains the symbols E[X], Var(X), σ, and σ² that are used when computing and discussing variance and standard deviation."
   },
   {
+    "source": "mathematical-notation/filtration-and-sigma-algebra-notation",
+    "target": "mathematical-notation/conditional-expectation-notation",
+    "label": "used in",
+    "description": "Conditional expectation E[X | F_t] is defined relative to a filtration — understanding what F_t represents as an information set is a prerequisite for reading any conditional expectation expression in stochastic finance."
+  },
+  {
+    "source": "mathematical-notation/filtration-and-sigma-algebra-notation",
+    "target": "mathematical-notation/probability-measure-notation",
+    "label": "extends",
+    "description": "The filtered probability space (Omega, F, {F_t}, P) extends the basic probability space notation by adding a time-indexed filtration to track the evolution of information as prices are revealed."
+  },
+  {
+    "source": "mathematical-notation/filtration-and-sigma-algebra-notation",
+    "target": "stochastic-processes/martingales",
+    "label": "defines",
+    "description": "The martingale property E[M_t | F_s] = M_s is stated using filtration notation — the sigma-algebra F_s encodes the information set at time s against which the conditional expectation is taken."
+  },
+  {
+    "source": "mathematical-notation/functional-derivative-notation",
+    "target": "mathematical-notation/partial-derivative-notation",
+    "label": "generalises",
+    "description": "The functional derivative delta F / delta f(x) extends partial differentiation to infinite-dimensional function spaces — where a partial derivative varies one coordinate, a functional derivative measures the effect of perturbing a function at every point simultaneously."
+  },
+  {
+    "source": "mathematical-notation/functional-derivative-notation",
+    "target": "stochastic-processes/stochastic-differential-equation",
+    "label": "used in",
+    "description": "The Hamilton-Jacobi-Bellman equation — a key application of functional calculus — governs the value function in continuous-time optimal control problems, of which continuous-time portfolio optimisation over SDEs is the canonical finance example."
+  },
+  {
     "source": "mathematical-notation/integral-notation",
     "target": "calculus/integration-rules",
     "label": "notation for",
@@ -2494,6 +2104,24 @@
     "target": "stochastic-processes/ito-integral",
     "label": "notation for",
     "description": "The notational shift from ∫f(x)dx to ∫g(t)dW_t signals the transition from ordinary to stochastic integration — recognising dW versus dt is essential for applying the correct calculus rules."
+  },
+  {
+    "source": "mathematical-notation/law-and-distribution-notation",
+    "target": "mathematical-notation/convergence-notation",
+    "label": "complements",
+    "description": "Convergence notation (convergence in distribution, probability, almost surely) builds directly on distribution notation — together they allow precise statements about the long-run behaviour of estimators and the validity of CLT approximations in risk modelling."
+  },
+  {
+    "source": "mathematical-notation/law-and-distribution-notation",
+    "target": "mathematical-notation/probability-measure-notation",
+    "label": "extends",
+    "description": "Specifying the law L(X) of a random variable is equivalent to specifying the pushforward measure of P under X — distribution notation is a shorthand for statements about the underlying probability measure."
+  },
+  {
+    "source": "mathematical-notation/law-and-distribution-notation",
+    "target": "probability/normal-distribution",
+    "label": "expressed using",
+    "description": "The normal distribution is the most common instantiation of distribution notation in finance — log-returns are written r_t ~ N(mu dt, sigma^2 dt), and convergence in distribution to N(0,1) appears in every CLT application to return aggregation."
   },
   {
     "source": "mathematical-notation/limit-notation",
@@ -2524,6 +2152,24 @@
     "target": "stochastic-processes/martingales",
     "label": "notation for",
     "description": "The martingale property E[Xₜ | Fₛ] = Xₛ is a universally quantified statement that must hold for all s ≤ t — understanding ∀ and conditional statements is essential for grasping what the definition requires."
+  },
+  {
+    "source": "mathematical-notation/martingale-notation",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "underpins",
+    "description": "Risk-neutral pricing rests on finding a measure Q under which the discounted price e^{-rt} S_t is a martingale — the notation M^2(Q) and the conditional expectation property encode the entire no-arbitrage pricing argument compactly."
+  },
+  {
+    "source": "mathematical-notation/martingale-notation",
+    "target": "mathematical-notation/conditional-expectation-notation",
+    "label": "uses",
+    "description": "The defining equation E[M_T | F_t] = M_t embeds conditional expectation notation at its core — martingale notation cannot be read without first understanding the E[. | F_t] conditioning notation."
+  },
+  {
+    "source": "mathematical-notation/martingale-notation",
+    "target": "stochastic-processes/martingales",
+    "label": "notation for",
+    "description": "The martingales card covers the probabilistic content and finance applications; this notation card explains the symbols (M_t), M^2, local martingale, and how to read the defining conditional expectation property."
   },
   {
     "source": "mathematical-notation/partial-derivative-notation",
@@ -2592,6 +2238,24 @@
     "description": "Probability is defined on sets of outcomes within the sample space Ω — the PDF assigns density to events (measurable sets), and expressions like P(X ∈ A) = ∫_A f(x) dx require set notation to specify the domain of integration."
   },
   {
+    "source": "mathematical-notation/stochastic-integral-notation",
+    "target": "mathematical-notation/integral-notation",
+    "label": "extends",
+    "description": "The stochastic integral uses the same integral sign as the Riemann integral but requires an entirely different construction due to the infinite variation of Brownian paths — ordinary integration theory cannot handle dW."
+  },
+  {
+    "source": "mathematical-notation/stochastic-integral-notation",
+    "target": "stochastic-processes/itos-lemma",
+    "label": "used in",
+    "description": "Ito's lemma generates stochastic differential equations whose solutions are expressed as stochastic integrals — the notation int_0^t sigma(S_s) dW_s appears directly in every SDE solution and delta-hedging P&L formula."
+  },
+  {
+    "source": "mathematical-notation/stochastic-integral-notation",
+    "target": "stochastic-processes/stochastic-integrals",
+    "label": "notation for",
+    "description": "The stochastic integrals card covers the probabilistic construction and properties of the Ito integral; this notation card explains how to read the symbols int H dW, the adaptedness requirement, and the Ito versus Stratonovich conventions."
+  },
+  {
     "source": "mathematical-notation/summation-notation",
     "target": "calculus/integration-rules",
     "label": "discrete analogue of",
@@ -2614,6 +2278,444 @@
     "target": "statistics/variance-and-standard-deviation",
     "label": "notation for",
     "description": "Variance Var(X) = Σ (xᵢ − μ)² P(X = xᵢ) uses summation notation to express the expected squared deviation — understanding index variables and bounds is essential for computing sample and population variance."
+  },
+  {
+    "source": "portfolio-theory/active-share",
+    "target": "financial-maths/benchmark-index",
+    "label": "measured against",
+    "description": "Active share quantifies the percentage of holdings that differ from the benchmark — without a defined benchmark index, the concept has no meaning."
+  },
+  {
+    "source": "portfolio-theory/active-share",
+    "target": "financial-maths/relative-return",
+    "label": "predicts",
+    "description": "Research shows that funds with high active share tend to generate higher relative returns after fees — closet indexers with low active share consistently underperform their benchmarks."
+  },
+  {
+    "source": "portfolio-theory/active-share",
+    "target": "portfolio-theory/tracking-error",
+    "label": "complements",
+    "description": "Active share and tracking error together provide a two-dimensional view of active management — active share measures how different the holdings are, while tracking error measures how different the returns are."
+  },
+  {
+    "source": "portfolio-theory/alpha-and-beta",
+    "target": "financial-maths/hedge-funds",
+    "label": "evaluated by",
+    "description": "Hedge fund investors decompose returns into alpha (manager skill) and beta (market exposure) to determine whether fees are justified by genuine stock-picking ability."
+  },
+  {
+    "source": "portfolio-theory/alpha-and-beta",
+    "target": "portfolio-theory/capital-asset-pricing-model",
+    "label": "derived from",
+    "description": "Alpha and beta originate directly from the CAPM equation — beta is the slope of the security market line and alpha is any return that deviates from it."
+  },
+  {
+    "source": "portfolio-theory/alpha-and-beta",
+    "target": "portfolio-theory/fama-french-three-factor-model",
+    "label": "generalised by",
+    "description": "The Fama–French model extends the single-factor alpha-beta decomposition to three factors, redefining alpha as the return unexplained by market, size, and value exposures."
+  },
+  {
+    "source": "portfolio-theory/alpha-and-beta",
+    "target": "statistics/beta-estimation",
+    "label": "estimated via",
+    "description": "Beta is estimated by regressing asset returns against market returns — the slope coefficient is the beta and the intercept is the realised alpha over the estimation window."
+  },
+  {
+    "source": "portfolio-theory/arbitrage-pricing-theory",
+    "target": "derivatives/no-arbitrage-principle",
+    "label": "derived from",
+    "description": "APT is built on the no-arbitrage principle — if an asset's expected return does not equal the sum of its factor risk premia, a portfolio of many assets can be constructed to earn riskless profit, which the market eliminates."
+  },
+  {
+    "source": "portfolio-theory/arbitrage-pricing-theory",
+    "target": "portfolio-theory/capital-asset-pricing-model",
+    "label": "generalises",
+    "description": "APT generalises CAPM by allowing multiple systematic risk factors rather than a single market factor — CAPM is the special case of APT where the only priced factor is the market portfolio."
+  },
+  {
+    "source": "portfolio-theory/arbitrage-pricing-theory",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "alternative to",
+    "description": "While MPT and CAPM derive asset pricing from equilibrium assumptions about investor behaviour, APT reaches similar conclusions using only the weaker no-arbitrage condition, making it a more general alternative framework."
+  },
+  {
+    "source": "portfolio-theory/black-litterman-model",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "uses",
+    "description": "The equilibrium returns Π = δΣw are derived directly from the covariance matrix — Black-Litterman requires a well-estimated Σ as its starting point for computing implied returns."
+  },
+  {
+    "source": "portfolio-theory/black-litterman-model",
+    "target": "portfolio-theory/efficient-frontier",
+    "label": "stabilises",
+    "description": "Black-Litterman produces stable expected returns that, when fed into Markowitz optimisation, generate sensible portfolios on the efficient frontier — unlike raw return estimates which cause the frontier to shift erratically."
+  },
+  {
+    "source": "portfolio-theory/black-litterman-model",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "extends",
+    "description": "Black-Litterman is a Bayesian extension of Markowitz that solves the practical problem of estimating expected returns — it anchors to market equilibrium and tilts towards investor views, making mean-variance optimisation usable in practice."
+  },
+  {
+    "source": "portfolio-theory/calmar-ratio",
+    "target": "financial-maths/hedge-funds",
+    "label": "evaluates",
+    "description": "The Calmar ratio is widely used to evaluate hedge fund and CTA performance, particularly for trend-following strategies where drawdown discipline is more important than day-to-day volatility."
+  },
+  {
+    "source": "portfolio-theory/calmar-ratio",
+    "target": "portfolio-theory/sharpe-ratio",
+    "label": "alternative to",
+    "description": "The Calmar ratio uses maximum drawdown as the risk denominator instead of volatility — it penalises the worst cumulative loss rather than average dispersion, making it more relevant for strategies where drawdown is the binding constraint."
+  },
+  {
+    "source": "portfolio-theory/calmar-ratio",
+    "target": "risk/maximum-drawdown",
+    "label": "denominator is",
+    "description": "Maximum drawdown appears in the denominator of the Calmar ratio — it anchors the risk-adjusted performance measure to the worst peak-to-trough loss the strategy actually experienced."
+  },
+  {
+    "source": "portfolio-theory/capital-asset-pricing-model",
+    "target": "financial-maths/return-on-investment",
+    "label": "models",
+    "description": "CAPM models the expected return of an asset as a linear function of its systematic risk — the return on investment is the quantity that CAPM predicts."
+  },
+  {
+    "source": "portfolio-theory/capital-asset-pricing-model",
+    "target": "statistics/correlation",
+    "label": "depends on",
+    "description": "Beta is the ratio of the covariance between asset and market returns to market variance — computing beta requires estimating the correlation between the asset and the market portfolio."
+  },
+  {
+    "source": "portfolio-theory/capital-asset-pricing-model",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "computed from",
+    "description": "Beta equals Cov(R_i, R_m) / Var(R_m) — the market variance in the denominator normalises the covariance to produce a unitless sensitivity measure."
+  },
+  {
+    "source": "portfolio-theory/capital-market-line",
+    "target": "portfolio-theory/capital-asset-pricing-model",
+    "label": "foundation of",
+    "description": "CAPM is derived by assuming all investors hold portfolios on the CML — the tangency portfolio becomes the market portfolio, and the CML slope becomes the market price of risk."
+  },
+  {
+    "source": "portfolio-theory/capital-market-line",
+    "target": "portfolio-theory/efficient-frontier",
+    "label": "dominates",
+    "description": "The CML is a straight line from the risk-free rate through the tangency portfolio that lies above the curved efficient frontier at every risk level — adding a risk-free asset strictly improves the attainable risk-return trade-off."
+  },
+  {
+    "source": "portfolio-theory/capital-market-line",
+    "target": "portfolio-theory/sharpe-ratio",
+    "label": "slope equals",
+    "description": "The slope of the CML is the Sharpe ratio of the tangency portfolio — the maximum attainable Sharpe ratio among all portfolios of risky assets."
+  },
+  {
+    "source": "portfolio-theory/efficient-frontier",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "output of",
+    "description": "The efficient frontier is the geometric output of Markowitz optimisation — it plots the set of portfolios that offer maximum return for each level of risk, summarising the entire mean-variance trade-off."
+  },
+  {
+    "source": "portfolio-theory/efficient-frontier",
+    "target": "portfolio-theory/sharpe-ratio",
+    "label": "maximised at tangency",
+    "description": "The tangency portfolio, where a line from the risk-free rate is tangent to the efficient frontier, is the portfolio with the maximum Sharpe ratio — the optimal mix of risky assets for any investor."
+  },
+  {
+    "source": "portfolio-theory/efficient-frontier",
+    "target": "statistics/portfolio-variance",
+    "label": "minimises",
+    "description": "Each point on the efficient frontier is a portfolio that minimises variance for its target return — the portfolio variance formula is the objective function solved at every point along the curve."
+  },
+  {
+    "source": "portfolio-theory/fama-french-three-factor-model",
+    "target": "portfolio-theory/capital-asset-pricing-model",
+    "label": "extends",
+    "description": "The Fama–French model adds size (SMB) and value (HML) factors to the single market factor of CAPM, explaining cross-sectional return patterns that CAPM alone attributes incorrectly to alpha."
+  },
+  {
+    "source": "portfolio-theory/fama-french-three-factor-model",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "estimated via",
+    "description": "Factor loadings in the Fama–French model are estimated by regressing excess returns on the three factor time series — the regression minimises the variance of the residual to find the best-fitting sensitivities."
+  },
+  {
+    "source": "portfolio-theory/information-ratio",
+    "target": "financial-maths/relative-return",
+    "label": "normalises",
+    "description": "The information ratio divides average relative return by tracking error — it measures how much active return a manager earns per unit of active risk taken against the benchmark."
+  },
+  {
+    "source": "portfolio-theory/information-ratio",
+    "target": "portfolio-theory/sharpe-ratio",
+    "label": "analogous to",
+    "description": "The information ratio is to relative return what the Sharpe ratio is to absolute return — both divide excess return by its volatility, but the IR uses the benchmark as the baseline instead of the risk-free rate."
+  },
+  {
+    "source": "portfolio-theory/information-ratio",
+    "target": "portfolio-theory/tracking-error",
+    "label": "denominator is",
+    "description": "Tracking error appears in the denominator of the information ratio — a lower tracking error for the same active return produces a higher IR, rewarding consistency of outperformance."
+  },
+  {
+    "source": "portfolio-theory/jensens-alpha",
+    "target": "portfolio-theory/alpha-and-beta",
+    "label": "formalises",
+    "description": "Jensen's alpha is the statistical formalisation of the alpha concept — it provides a regression-based estimate with standard errors and significance tests, turning alpha from an informal notion into a testable hypothesis."
+  },
+  {
+    "source": "portfolio-theory/jensens-alpha",
+    "target": "portfolio-theory/capital-asset-pricing-model",
+    "label": "tests",
+    "description": "Jensen's alpha tests the CAPM prediction that all assets should lie on the Security Market Line — a statistically significant alpha implies the CAPM misprices the asset or the manager has genuine skill."
+  },
+  {
+    "source": "portfolio-theory/jensens-alpha",
+    "target": "statistics/beta-estimation",
+    "label": "estimated alongside",
+    "description": "Jensen's alpha and beta are jointly estimated by regressing portfolio excess returns on market excess returns — alpha is the intercept and beta is the slope of the same regression."
+  },
+  {
+    "source": "portfolio-theory/minimum-variance-portfolio",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "depends only on",
+    "description": "The MVP weights are Σ⁻¹·¹ / (¹ᵀΣ⁻¹·¹) — they require only the covariance matrix, not expected returns, making the MVP the most robust optimal portfolio against return estimation error."
+  },
+  {
+    "source": "portfolio-theory/minimum-variance-portfolio",
+    "target": "portfolio-theory/efficient-frontier",
+    "label": "leftmost point of",
+    "description": "The MVP is the leftmost point on the efficient frontier — the portfolio with the absolute lowest variance, dividing the frontier into an upper (efficient) and lower (inefficient) branch."
+  },
+  {
+    "source": "portfolio-theory/minimum-variance-portfolio",
+    "target": "statistics/portfolio-variance",
+    "label": "minimises globally",
+    "description": "The MVP is the unconstrained global minimum of the portfolio variance function wᵀΣw subject only to full investment — no return target is imposed."
+  },
+  {
+    "source": "portfolio-theory/modern-portfolio-theory",
+    "target": "linear-algebra/matrix-multiplication",
+    "label": "computed via",
+    "description": "Portfolio variance is the quadratic form w'Σw and expected return is the dot product w'μ — both are matrix multiplications, making linear algebra the computational engine of portfolio optimisation."
+  },
+  {
+    "source": "portfolio-theory/modern-portfolio-theory",
+    "target": "portfolio-theory/capital-asset-pricing-model",
+    "label": "foundation of",
+    "description": "CAPM is derived from Modern Portfolio Theory by asking what expected returns must hold in equilibrium when all investors hold mean-variance efficient portfolios — it is the single-factor equilibrium result of MPT."
+  },
+  {
+    "source": "portfolio-theory/modern-portfolio-theory",
+    "target": "risk/value-at-risk",
+    "label": "feeds into",
+    "description": "The portfolio variance from MPT is the key input to parametric VaR — once mean-variance weights are chosen, the portfolio standard deviation is plugged directly into the VaR formula to quantify downside risk."
+  },
+  {
+    "source": "portfolio-theory/modern-portfolio-theory",
+    "target": "statistics/correlation",
+    "label": "depends on",
+    "description": "Portfolio variance is determined by the pairwise correlations between assets — the off-diagonal terms of the covariance matrix drive the diversification benefit that is the central result of MPT."
+  },
+  {
+    "source": "portfolio-theory/modern-portfolio-theory",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "minimises",
+    "description": "MPT defines risk as portfolio variance and seeks the weight vector that minimises it for a given target return — variance is the objective function at the heart of mean-variance optimisation."
+  },
+  {
+    "source": "portfolio-theory/omega-ratio",
+    "target": "portfolio-theory/sharpe-ratio",
+    "label": "generalises",
+    "description": "The Omega ratio captures the entire return distribution including skewness and kurtosis, while the Sharpe ratio uses only mean and variance — for normally distributed returns they rank strategies identically, but they diverge for non-normal distributions."
+  },
+  {
+    "source": "portfolio-theory/omega-ratio",
+    "target": "probability/cumulative-distribution-function",
+    "label": "computed from",
+    "description": "The Omega ratio is defined as the ratio of integrals of the CDF above and below the threshold — it directly uses the cumulative distribution function to weight gains against losses."
+  },
+  {
+    "source": "portfolio-theory/omega-ratio",
+    "target": "probability/fat-tailed-distributions",
+    "label": "sensitive to",
+    "description": "The Omega ratio captures fat-tail effects that the Sharpe ratio ignores — a strategy with positive skew and thin left tails will have a much higher Omega ratio than one with negative skew and fat left tails, even if their Sharpe ratios are similar."
+  },
+  {
+    "source": "portfolio-theory/resampled-efficient-frontier",
+    "target": "portfolio-theory/efficient-frontier",
+    "label": "stabilises",
+    "description": "The resampled frontier averages portfolio weights across many bootstrapped frontiers, producing more diversified and stable allocations than the classical frontier computed from a single set of noisy inputs."
+  },
+  {
+    "source": "portfolio-theory/resampled-efficient-frontier",
+    "target": "probability/multivariate-normal-distribution",
+    "label": "simulates from",
+    "description": "Each resample draws returns from a multivariate normal calibrated to the original estimates — the normality assumption enables fast bootstrapping of alternative efficient frontiers."
+  },
+  {
+    "source": "portfolio-theory/resampled-efficient-frontier",
+    "target": "statistics/shrinkage-estimators",
+    "label": "alternative to",
+    "description": "Both resampling and shrinkage address estimation error in Markowitz optimisation, but through different mechanisms — resampling averages over input uncertainty while shrinkage biases the inputs towards a stable target."
+  },
+  {
+    "source": "portfolio-theory/risk-budgeting",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "extends",
+    "description": "Risk budgeting extends mean-variance optimisation by expressing the objective in risk-contribution units rather than capital weights — it produces more robust allocations because it avoids sensitivity to expected return estimates."
+  },
+  {
+    "source": "portfolio-theory/risk-budgeting",
+    "target": "portfolio-theory/risk-parity",
+    "label": "generalises",
+    "description": "Risk parity is the special case of risk budgeting where every asset receives an equal share of the risk budget — risk budgeting allows deliberate tilts towards assets with higher expected risk-adjusted returns."
+  },
+  {
+    "source": "portfolio-theory/risk-budgeting",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "denominated in",
+    "description": "Risk contributions are expressed in units of portfolio volatility — each asset's marginal contribution to standard deviation determines its share of the total risk budget."
+  },
+  {
+    "source": "portfolio-theory/risk-parity",
+    "target": "financial-maths/leverage",
+    "label": "requires",
+    "description": "Risk parity portfolios are heavily weighted towards low-volatility assets like bonds, so they use leverage to raise the expected return to competitive levels — without leverage, the strategy would deliver bond-like returns."
+  },
+  {
+    "source": "portfolio-theory/risk-parity",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "extends",
+    "description": "Risk parity extends mean-variance optimisation by defining the objective as equal risk contribution from each asset, rather than minimising variance for a given return target."
+  },
+  {
+    "source": "portfolio-theory/risk-parity",
+    "target": "statistics/correlation",
+    "label": "depends on",
+    "description": "Risk parity allocations are computed from the covariance matrix — when correlations between assets spike (as in a crisis), the equal-risk-contribution assumption breaks down and the portfolio becomes less diversified than intended."
+  },
+  {
+    "source": "portfolio-theory/security-market-line",
+    "target": "portfolio-theory/capital-asset-pricing-model",
+    "label": "visualises",
+    "description": "The Security Market Line is the graphical representation of the CAPM equation — it plots expected return against beta, making the linear risk-return trade-off visually explicit."
+  },
+  {
+    "source": "portfolio-theory/sharpe-ratio",
+    "target": "financial-maths/return-on-investment",
+    "label": "uses",
+    "description": "The numerator of the Sharpe Ratio is excess return — the portfolio return minus the risk-free rate — so computing the Sharpe Ratio begins with calculating returns."
+  },
+  {
+    "source": "portfolio-theory/sharpe-ratio",
+    "target": "portfolio-theory/capital-asset-pricing-model",
+    "label": "related to",
+    "description": "Both the Sharpe Ratio and CAPM use the risk-free rate as a baseline — CAPM prices expected return via systematic risk, while the Sharpe Ratio evaluates realised performance per unit of total risk."
+  },
+  {
+    "source": "portfolio-theory/sharpe-ratio",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "optimised by",
+    "description": "The tangency portfolio on the efficient frontier is the portfolio that maximises the Sharpe Ratio — mean-variance optimisation and Sharpe maximisation are equivalent when a risk-free asset is available."
+  },
+  {
+    "source": "portfolio-theory/sharpe-ratio",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "normalised by",
+    "description": "The denominator of the Sharpe Ratio is the standard deviation of portfolio returns — it normalises excess return by volatility to produce a risk-adjusted performance measure."
+  },
+  {
+    "source": "portfolio-theory/sortino-ratio",
+    "target": "financial-maths/absolute-return",
+    "label": "evaluates",
+    "description": "The Sortino ratio evaluates absolute return strategies by penalising only downside volatility — it is more appropriate than the Sharpe ratio for strategies with asymmetric return distributions."
+  },
+  {
+    "source": "portfolio-theory/sortino-ratio",
+    "target": "portfolio-theory/sharpe-ratio",
+    "label": "refines",
+    "description": "The Sortino ratio modifies the Sharpe ratio by replacing total standard deviation with downside deviation — it rewards strategies that achieve high returns with large upside moves but small downside moves."
+  },
+  {
+    "source": "portfolio-theory/sortino-ratio",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "modifies",
+    "description": "The Sortino ratio replaces standard deviation with semi-deviation (downside only), recognising that investors treat upside and downside volatility asymmetrically."
+  },
+  {
+    "source": "portfolio-theory/sterling-ratio",
+    "target": "portfolio-theory/calmar-ratio",
+    "label": "smooths",
+    "description": "The Sterling ratio uses the average of the largest drawdowns instead of the single worst drawdown — this smooths the denominator and produces a less volatile risk-adjusted metric than the Calmar ratio."
+  },
+  {
+    "source": "portfolio-theory/sterling-ratio",
+    "target": "portfolio-theory/sharpe-ratio",
+    "label": "alternative to",
+    "description": "The Sterling ratio uses average drawdown as the risk denominator instead of standard deviation — it is more intuitive for investors who think about risk in terms of actual losses rather than statistical dispersion."
+  },
+  {
+    "source": "portfolio-theory/sterling-ratio",
+    "target": "risk/maximum-drawdown",
+    "label": "averages over",
+    "description": "While the Calmar ratio uses the single maximum drawdown, the Sterling ratio averages the largest drawdowns — this reduces the influence of a single extreme event on the risk assessment."
+  },
+  {
+    "source": "portfolio-theory/tracking-error",
+    "target": "financial-maths/benchmark-index",
+    "label": "measured against",
+    "description": "Tracking error quantifies how closely a portfolio follows its benchmark index — without a defined benchmark, the concept of tracking error has no meaning."
+  },
+  {
+    "source": "portfolio-theory/tracking-error",
+    "target": "financial-maths/relative-return",
+    "label": "volatility of",
+    "description": "Tracking error is the standard deviation of relative returns over time — it measures the consistency of the active return series rather than its average level."
+  },
+  {
+    "source": "portfolio-theory/tracking-error",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "instance of",
+    "description": "Tracking error is simply the standard deviation applied to the time series of active returns (portfolio minus benchmark) — it uses the same formula but on a derived return series."
+  },
+  {
+    "source": "portfolio-theory/treynor-ratio",
+    "target": "portfolio-theory/alpha-and-beta",
+    "label": "denominator is",
+    "description": "Beta appears in the denominator of the Treynor ratio — it measures excess return per unit of systematic risk, making beta estimation accuracy critical to the metric's reliability."
+  },
+  {
+    "source": "portfolio-theory/treynor-ratio",
+    "target": "portfolio-theory/capital-asset-pricing-model",
+    "label": "derived from",
+    "description": "The Treynor ratio is the CAPM-implied reward per unit of beta — a portfolio on the Security Market Line has a Treynor ratio equal to the market risk premium."
+  },
+  {
+    "source": "portfolio-theory/treynor-ratio",
+    "target": "portfolio-theory/sharpe-ratio",
+    "label": "complements",
+    "description": "The Treynor ratio uses beta (systematic risk) as the denominator while the Sharpe ratio uses total volatility — they agree for fully diversified portfolios but diverge when idiosyncratic risk is present."
+  },
+  {
+    "source": "portfolio-theory/two-fund-separation-theorem",
+    "target": "portfolio-theory/capital-asset-pricing-model",
+    "label": "foundation of",
+    "description": "CAPM is derived by assuming all investors satisfy two-fund separation — if everyone holds the tangency portfolio, it must equal the market portfolio, yielding the CAPM pricing equation."
+  },
+  {
+    "source": "portfolio-theory/two-fund-separation-theorem",
+    "target": "portfolio-theory/capital-market-line",
+    "label": "implies",
+    "description": "Two-fund separation is the algebraic result that all CML portfolios are combinations of the risk-free asset and the tangency portfolio — the CML is the geometric expression of the theorem."
+  },
+  {
+    "source": "portfolio-theory/two-fund-separation-theorem",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "key result of",
+    "description": "Two-fund separation is the central structural result of Markowitz theory with a risk-free asset — it reduces the infinite-dimensional portfolio choice to a single parameter (the allocation to risky assets)."
   },
   {
     "source": "probability/bayes-theorem",
@@ -3511,15 +3613,15 @@
   },
   {
     "source": "statistics/covariance",
-    "target": "portfolio-theory/modern-portfolio-theory",
-    "label": "feeds into",
-    "description": "The covariance matrix is the central input to Markowitz optimisation — portfolio variance is wᵀΣw, so every allocation decision is ultimately driven by the pairwise covariances between asset returns."
-  },
-  {
-    "source": "statistics/covariance",
     "target": "linear-algebra/covariance-matrix",
     "label": "assembled into",
     "description": "Each pairwise covariance becomes an entry in the covariance matrix — the matrix form enables the compact expression wᵀΣw for portfolio variance and unlocks linear algebra tools like eigendecomposition and Cholesky factorisation."
+  },
+  {
+    "source": "statistics/covariance",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "feeds into",
+    "description": "The covariance matrix is the central input to Markowitz optimisation — portfolio variance is wᵀΣw, so every allocation decision is ultimately driven by the pairwise covariances between asset returns."
   },
   {
     "source": "statistics/covariance",
@@ -3571,15 +3673,15 @@
   },
   {
     "source": "statistics/factor-models",
-    "target": "portfolio-theory/fama-french-three-factor-model",
-    "label": "generalises",
-    "description": "The Fama-French model is a specific three-factor model — the general factor model framework extends to any number of fundamental, macroeconomic, or statistical factors."
-  },
-  {
-    "source": "statistics/factor-models",
     "target": "linear-algebra/covariance-matrix",
     "label": "approximates",
     "description": "A factor model approximates the full covariance matrix as BΣ₆Bᵀ + D, reducing the number of parameters from O(n²) to O(n) and producing a better-conditioned estimate for large portfolios."
+  },
+  {
+    "source": "statistics/factor-models",
+    "target": "portfolio-theory/fama-french-three-factor-model",
+    "label": "generalises",
+    "description": "The Fama-French model is a specific three-factor model — the general factor model framework extends to any number of fundamental, macroeconomic, or statistical factors."
   },
   {
     "source": "statistics/factor-models",
@@ -3709,15 +3811,15 @@
   },
   {
     "source": "statistics/ordinary-least-squares-regression",
-    "target": "portfolio-theory/capital-asset-pricing-model",
-    "label": "calibrates",
-    "description": "OLS regression is the standard method for estimating CAPM betas from historical return data — regressing excess asset returns on excess market returns yields the beta coefficient."
-  },
-  {
-    "source": "statistics/ordinary-least-squares-regression",
     "target": "linear-algebra/matrix-inverse",
     "label": "computed via",
     "description": "The OLS estimator β̂ = (XᵀX)⁻¹Xᵀy requires inverting the Gram matrix XᵀX — matrix inversion is the core linear algebra operation in regression."
+  },
+  {
+    "source": "statistics/ordinary-least-squares-regression",
+    "target": "portfolio-theory/capital-asset-pricing-model",
+    "label": "calibrates",
+    "description": "OLS regression is the standard method for estimating CAPM betas from historical return data — regressing excess asset returns on excess market returns yields the beta coefficient."
   },
   {
     "source": "statistics/ordinary-least-squares-regression",
