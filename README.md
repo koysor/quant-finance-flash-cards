@@ -2,7 +2,7 @@
 
 Bite-sized revision flash cards for Quantitative Finance exams and interviews, designed for accessibility and clarity. Each card covers one concept — definition, key formula, worked example, and its finance application.
 
-266 cards · 10 topics · 785 concept connections
+340 cards · 10 topics · 969 concept connections
 
 ## Running the app
 
@@ -17,16 +17,16 @@ On first run the app scans `cards/` and loads `edges.json`, building `graph.db` 
 
 | Topic | Cards | Scope |
 |---|---|---|
-| Calculus | 19 | Differentiation, integration, Taylor series, quadratic techniques |
-| Derivatives | 38 | Options, futures, Greeks, pricing models, risk-neutral theory |
-| Financial Mathematics | 35 | TVM, bonds, compounding, NPV, interest rate models |
-| Linear Algebra | 19 | Matrices, vectors, eigenvalues, SVD, decompositions |
-| Mathematical Notation | 12 | Sigma, pi, set theory, logical and summation notation |
+| Calculus | 23 | Differentiation, integration, Taylor series, quadratic techniques |
+| Derivatives | 39 | Options, futures, Greeks, pricing models, risk-neutral theory |
+| Financial Mathematics | 57 | TVM, bonds, compounding, NPV, interest rate models, short selling mechanics |
+| Linear Algebra | 48 | Matrices, vectors, eigenvalues, SVD, decompositions |
+| Mathematical Notation | 22 | Sigma, pi, set theory, logical and summation notation |
 | Portfolio Theory & Asset Pricing | 24 | CAPM, efficient frontier, factor models, performance ratios |
-| Probability | 29 | Distributions, expectation, Bayes, transform methods |
-| Risk | 12 | VaR, CVaR, Monte Carlo, stress testing |
+| Probability | 30 | Distributions, expectation, Bayes, transform methods |
+| Risk | 18 | VaR, CVaR, Monte Carlo, stress testing |
 | Statistics | 32 | Regression, hypothesis testing, covariance estimation |
-| Stochastic Processes | 46 | Brownian motion, GBM, Itô's lemma, SDEs, martingales |
+| Stochastic Processes | 47 | Brownian motion, GBM, Itô's lemma, SDEs, martingales |
 
 ## Features
 

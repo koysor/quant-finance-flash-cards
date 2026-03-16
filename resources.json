@@ -112,12 +112,7 @@
         "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals/x2f8bb11595b61c86:exponent-properties-review/a/exponent-properties-review"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Exponent Rules",
-        "url": "https://www.youtube.com/watch?v=kITJ6qH7jS0"
-      }
-    ]
+    "videos": []
   },
   "calculus/initial-and-boundary-conditions": {
     "websites": [
@@ -150,8 +145,8 @@
         "url": "https://www.youtube.com/watch?v=rfG8ce4nNh0"
       },
       {
-        "title": "The Organic Chemistry Tutor \u2014 Integration Techniques",
-        "url": "https://www.youtube.com/watch?v=o75AqTInKDU"
+        "title": "Khan Academy \u2014 Integration",
+        "url": "https://www.khanacademy.org/math/integral-calculus/ic-integration"
       }
     ]
   },
@@ -1036,6 +1031,19 @@
     ],
     "videos": []
   },
+  "financial-maths/days-to-cover": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Days to Cover",
+        "url": "https://www.investopedia.com/terms/d/daystocover.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Short Interest Ratio",
+        "url": "https://corporatefinanceinstitute.com/resources/equities/short-interest-ratio/"
+      }
+    ],
+    "videos": []
+  },
   "financial-maths/debt-to-equity-ratio": {
     "websites": [
       {
@@ -1159,11 +1167,37 @@
     ],
     "videos": []
   },
+  "financial-maths/locate-requirement": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Short Selling",
+        "url": "https://www.investopedia.com/terms/s/shortselling.asp"
+      },
+      {
+        "title": "Investopedia \u2014 Regulation SHO",
+        "url": "https://www.investopedia.com/terms/r/regsho.asp"
+      }
+    ],
+    "videos": []
+  },
   "financial-maths/long-short-equity": {
     "websites": [
       {
         "title": "Investopedia \u2014 Long-Short Equity",
         "url": "https://www.investopedia.com/terms/l/long-shortequity.asp"
+      }
+    ],
+    "videos": []
+  },
+  "financial-maths/margin-call": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Margin Call",
+        "url": "https://www.investopedia.com/terms/m/margincall.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Margin Call",
+        "url": "https://corporatefinanceinstitute.com/resources/equities/margin-call/"
       }
     ],
     "videos": []
@@ -1190,6 +1224,19 @@
       {
         "title": "Corporate Finance Institute \u2014 Market Neutral",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/market-neutral/"
+      }
+    ],
+    "videos": []
+  },
+  "financial-maths/naked-short-selling": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Naked Short Selling",
+        "url": "https://www.investopedia.com/terms/n/nakedshorting.asp"
+      },
+      {
+        "title": "Investopedia \u2014 Regulation SHO",
+        "url": "https://www.investopedia.com/terms/r/regsho.asp"
       }
     ],
     "videos": []
@@ -1427,6 +1474,19 @@
       {
         "title": "Corporate Finance Institute \u2014 Triangular Arbitrage Guide",
         "url": "https://corporatefinanceinstitute.com/resources/foreign-exchange/triangular-arbitrage/"
+      }
+    ],
+    "videos": []
+  },
+  "financial-maths/uptick-rule": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Uptick Rule",
+        "url": "https://www.investopedia.com/terms/u/uptickrule.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Uptick Rule",
+        "url": "https://en.wikipedia.org/wiki/Uptick_rule"
       }
     ],
     "videos": []

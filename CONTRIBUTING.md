@@ -1,12 +1,25 @@
 # Contributing
 
-## Using Gemini Skills
+## Using Claude Code Skills
 
-If you are using Gemini to contribute, you can leverage the following skills to automate card creation and validation:
+If you are using Claude Code to contribute, the following skills automate card creation and maintenance:
 
-- **`quant-card-generator`**: "Create a card for [Concept Name]" — Handles file creation, edge linking, and resource gathering.
-- **`quant-card-validator`**: "Validate [card-path]" — Checks structure, British English, and finance relevance.
-- **`quant-graph-architect`**: "Check edges for [card-path]" — Ensures graph connectivity.
+### Creating content
+- **`generate-card`**: `generate card: "[Concept Name]"` — Writes the card file, finds related cards, appends edges to `edges.json`, and adds learning resources to `resources.json`.
+- **`generate-edges`**: `generate edges: "[card-id]"` — Finds and appends concept relationship edges for a card that has few or no connections.
+- **`add-resources`**: `add resources: "[topic]"` — Populates `resources.json` entries (websites + videos) for cards that have none. Omit the argument to process all missing cards.
+
+### Reviewing quality
+- **`validate-card`**: `validate card: "[card-id]"` — Checks structure, metadata, British English spelling, and finance relevance for a single card.
+- **`bulk-validate`**: `bulk validate: "[topic]"` — Runs validation checks across an entire topic directory (or all cards if no argument given) and produces a summary report.
+- **`review-card`**: `review card: "[card-id]"` — Content-quality review: suggests improvements to Definition, Example, and Remember sections.
+- **`review-edges`**: `/review-edges` — Audits `edges.json` for broken references, missing descriptions, and quality issues.
+- **`find-duplicates`**: `/find-duplicates` — Scans the library for cards with significant concept overlap and recommends merges or clarifications.
+
+### Maintenance
+- **`update-docs`**: `/update-docs` — Recounts cards and edges, updates the README.md stats line and per-topic table, and syncs the skills list in this file.
+- **`gap-analysis`**: `/gap-analysis` — Identifies orphaned cards, topic connectivity gaps, and concepts referenced across cards that lack their own card.
+- **`validate-links`**: `/validate-links` — Validates all URLs in `resources.json` and offers to fix or remove broken links.
 
 ---
 
@@ -23,6 +36,7 @@ Every card must contain all four metadata fields and all four sections, in this 
 
 **Topic:** Derivatives
 **Tags:** tag1, tag2, tag3
+**Created:** YYYY-MM-DD
 **Author:** <Your Name or AI model>
 
 ---

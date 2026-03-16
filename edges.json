@@ -5722,5 +5722,95 @@
     "target": "linear-algebra/vector-spaces-and-subspaces",
     "label": "example of",
     "description": "The column space is one of the four fundamental subspaces of a matrix \u2014 understanding it as a subspace (closed under linear combinations) gives geometric meaning to the solvability condition Ax = b."
+  },
+  {
+    "source": "financial-maths/days-to-cover",
+    "target": "financial-maths/short-interest",
+    "label": "derived from",
+    "description": "Days to cover is calculated by dividing total short interest by average daily volume \u2014 short interest is the raw input that, when normalised by liquidity, yields the actionable squeeze-risk metric."
+  },
+  {
+    "source": "financial-maths/days-to-cover",
+    "target": "financial-maths/short-selling",
+    "label": "measures pressure of",
+    "description": "Days to cover quantifies the aggregate exit risk for all short sellers in a stock \u2014 a high ratio means shorts collectively hold a position that would take many days of normal volume to unwind, amplifying directional pressure."
+  },
+  {
+    "source": "financial-maths/days-to-cover",
+    "target": "financial-maths/short-squeeze",
+    "label": "predicts",
+    "description": "A high days-to-cover ratio is the primary quantitative signal for short squeeze risk \u2014 the more days required to cover, the more violent the forced buying when a positive catalyst arrives."
+  },
+  {
+    "source": "financial-maths/locate-requirement",
+    "target": "financial-maths/naked-short-selling",
+    "label": "prevents",
+    "description": "The locate requirement is the regulatory mechanism that prevents naked short selling \u2014 by requiring a confirmed borrow before a short order is accepted, it ensures that every short sale has a real share behind it."
+  },
+  {
+    "source": "financial-maths/locate-requirement",
+    "target": "financial-maths/securities-lending",
+    "label": "depends on",
+    "description": "Obtaining a locate requires the prime broker to source shares from the securities lending market \u2014 without an active lending pool, locates cannot be granted and short selling capacity collapses."
+  },
+  {
+    "source": "financial-maths/locate-requirement",
+    "target": "financial-maths/short-selling",
+    "label": "prerequisite for",
+    "description": "Under Regulation SHO, a broker must confirm a locate before executing any short sale \u2014 the locate requirement is the first mandatory step in the short-selling process and sets the capacity constraint for any short strategy."
+  },
+  {
+    "source": "financial-maths/locate-requirement",
+    "target": "financial-maths/stock-borrow-rate",
+    "label": "determines cost of",
+    "description": "When a locate is obtained for a hard-to-borrow security, the borrow rate charged reflects the scarcity of available shares \u2014 the locate process and the borrow rate are two sides of the same securities lending transaction."
+  },
+  {
+    "source": "financial-maths/margin-call",
+    "target": "financial-maths/leverage",
+    "label": "triggered by",
+    "description": "Margin calls arise directly from the use of leverage \u2014 when borrowed funds amplify a losing position, account equity can fall below the maintenance margin threshold, forcing the broker to issue a call for additional collateral."
+  },
+  {
+    "source": "financial-maths/margin-call",
+    "target": "financial-maths/short-selling",
+    "label": "risk of",
+    "description": "Short sellers face margin calls when the shorted stock rises in price, reducing the equity in their margin account \u2014 because short losses are theoretically unlimited, margin call risk is a key constraint on position sizing."
+  },
+  {
+    "source": "financial-maths/margin-call",
+    "target": "financial-maths/short-squeeze",
+    "label": "can cause",
+    "description": "Margin calls on short positions force involuntary buying, which pushes prices higher and triggers further margin calls in a feedback loop \u2014 this forced-covering cascade is a key mechanism driving short squeezes."
+  },
+  {
+    "source": "financial-maths/naked-short-selling",
+    "target": "derivatives/no-arbitrage-principle",
+    "label": "violates",
+    "description": "Naked short selling creates synthetic share supply without a genuine borrow, allowing prices to be artificially depressed below no-arbitrage levels \u2014 this breaks the assumption that short selling is limited to available lendable supply."
+  },
+  {
+    "source": "financial-maths/naked-short-selling",
+    "target": "financial-maths/locate-requirement",
+    "label": "bypasses",
+    "description": "Naked short selling is defined by the absence of a locate \u2014 the seller skips the step of confirming a borrowable share exists, making the locate requirement the direct regulatory counter to this practice."
+  },
+  {
+    "source": "financial-maths/naked-short-selling",
+    "target": "financial-maths/short-selling",
+    "label": "unregulated variant of",
+    "description": "Naked short selling is short selling without a confirmed borrow, in contrast to covered (standard) short selling where a locate is obtained first \u2014 it shares the same directional payoff but carries additional settlement and regulatory risk."
+  },
+  {
+    "source": "financial-maths/uptick-rule",
+    "target": "financial-maths/short-sale-constraints",
+    "label": "type of",
+    "description": "The uptick rule is one of the primary short-sale constraints imposed by regulators \u2014 it restricts the price at which a short sale can be executed, adding a friction cost to short selling during declining markets."
+  },
+  {
+    "source": "financial-maths/uptick-rule",
+    "target": "financial-maths/short-selling",
+    "label": "constrains",
+    "description": "The uptick rule constrains short selling by requiring that short orders be placed above the last transaction price or current best bid, preventing short sellers from relentlessly selling into a falling market at every downtick."
   }
 ]
