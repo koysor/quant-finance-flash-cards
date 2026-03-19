@@ -426,6 +426,24 @@
     "description": "The binomial model is the simplest demonstration of risk-neutral pricing \u2014 the real-world probability cancels out and only the risk-neutral probability p-prime enters the pricing formula."
   },
   {
+    "source": "derivatives/binary-option",
+    "target": "derivatives/black-scholes-equation",
+    "label": "priced by",
+    "description": "The cash-or-nothing binary call price Q·e^(-rT)·N(d₂) is derived directly from the Black-Scholes framework — N(d₂) is the risk-neutral probability that the option expires in the money."
+  },
+  {
+    "source": "derivatives/binary-option",
+    "target": "derivatives/risk-arbitrage",
+    "label": "models payoff of",
+    "description": "A merger arbitrage position has a binary payoff structure — a fixed profit if the deal closes, a fixed loss if it breaks — making the binary option the natural instrument for pricing and hedging deal risk."
+  },
+  {
+    "source": "derivatives/binary-option",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "illustrates",
+    "description": "The binary call price equals the discounted risk-neutral probability of finishing in the money, making it the clearest illustration of the risk-neutral pricing principle: price = e^(-rT)·E^Q[payoff]."
+  },
+  {
     "source": "derivatives/black-scholes-equation",
     "target": "derivatives/delta-greeks",
     "label": "defines",
@@ -478,6 +496,18 @@
     "target": "derivatives/vega-greeks",
     "label": "defines",
     "description": "The Black-Scholes formula gives the closed-form expression for Vega as S N prime(d1) sqrt(T), the sensitivity of the option price to changes in implied volatility."
+  },
+  {
+    "source": "derivatives/cash-and-carry-arbitrage",
+    "target": "derivatives/no-arbitrage-principle",
+    "label": "enforces",
+    "description": "Cash-and-carry arbitrage is the mechanism that enforces the no-arbitrage forward price — any deviation from F* = S\u2080e^(rT) is immediately exploited, driving the forward price back to fair value."
+  },
+  {
+    "source": "derivatives/cash-and-carry-arbitrage",
+    "target": "financial-maths/time-value-of-money",
+    "label": "applies",
+    "description": "The fair forward price F* = S\u2080e^(rT) is derived directly from the time value of money — carrying the spot asset to expiry costs exactly the compounded risk-free interest on the purchase price."
   },
   {
     "source": "derivatives/charm-greeks",
@@ -714,6 +744,36 @@
     "description": "The volatility smile and skew observed in implied volatility across strikes expose the failure of Black-Scholes' constant-volatility assumption \u2014 the market prices in fat tails and jump risk that the model ignores."
   },
   {
+    "source": "derivatives/law-of-one-price",
+    "target": "derivatives/put-call-parity",
+    "label": "implies",
+    "description": "Put-call parity is a direct consequence of the law of one price: a call plus discounted cash equals a put plus stock, so both portfolios must cost the same to prevent arbitrage."
+  },
+  {
+    "source": "derivatives/law-of-one-price",
+    "target": "derivatives/riskless-arbitrage",
+    "label": "violated by",
+    "description": "A violation of the law of one price immediately implies a riskless arbitrage \u2014 buying the cheap portfolio and selling the expensive one at identical future payoffs generates a guaranteed profit with zero net investment."
+  },
+  {
+    "source": "derivatives/law-of-one-price",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "underpins",
+    "description": "Risk-neutral pricing derives derivative values by constructing a replicating portfolio \u2014 the law of one price guarantees the derivative's price equals the replicating portfolio's cost."
+  },
+  {
+    "source": "derivatives/limits-to-arbitrage",
+    "target": "derivatives/riskless-arbitrage",
+    "label": "constrains",
+    "description": "Real-world frictions such as transaction costs, funding constraints, and short-selling restrictions limit the profitability of riskless arbitrage, allowing small mispricings to persist that pure theory would predict should vanish instantly."
+  },
+  {
+    "source": "derivatives/limits-to-arbitrage",
+    "target": "derivatives/no-arbitrage-principle",
+    "label": "qualifies",
+    "description": "The no-arbitrage principle assumes a frictionless market, but limits to arbitrage explain why real prices can deviate from their theoretical no-arbitrage values within bounds set by transaction costs and funding spreads."
+  },
+  {
     "source": "derivatives/market-price-of-risk",
     "target": "derivatives/p-measure-vs-q-measure",
     "label": "quantifies gap between",
@@ -942,6 +1002,42 @@
     "description": "Put-call parity forces the difference between call Rho and put Rho to equal KTe^{-rT}, providing a consistency check on any Rho calculation."
   },
   {
+    "source": "derivatives/replicating-portfolio",
+    "target": "derivatives/binomial-option-pricing",
+    "label": "core of",
+    "description": "The binomial model prices options by finding the replicating portfolio (\u0394 shares + B bonds) that matches the option's payoffs in the up and down states, then setting the option price equal to the portfolio's cost."
+  },
+  {
+    "source": "derivatives/replicating-portfolio",
+    "target": "derivatives/complete-markets",
+    "label": "possible in",
+    "description": "A replicating portfolio can be constructed for every derivative only in a complete market \u2014 completeness is precisely the condition that guarantees every payoff can be replicated by traded assets."
+  },
+  {
+    "source": "derivatives/replicating-portfolio",
+    "target": "derivatives/delta-hedging",
+    "label": "same construction as",
+    "description": "Delta hedging and replication are two perspectives on the same portfolio \u2014 the delta-hedged position replicates the derivative's risk profile by holding exactly \u0394 shares per option."
+  },
+  {
+    "source": "derivatives/risk-arbitrage",
+    "target": "derivatives/limits-to-arbitrage",
+    "label": "constrained by",
+    "description": "Risk arbitrage is the archetypal case where limits to arbitrage apply \u2014 deal risk, funding costs, and the threat of a sudden gap-down if a merger breaks prevent arbitrageurs from closing the spread to zero."
+  },
+  {
+    "source": "derivatives/risk-arbitrage",
+    "target": "derivatives/riskless-arbitrage",
+    "label": "contrasts with",
+    "description": "Unlike riskless arbitrage, which locks in a guaranteed profit with no net investment, risk arbitrage bears deal risk \u2014 the merger spread is compensation for the possibility that the transaction fails to complete."
+  },
+  {
+    "source": "derivatives/risk-arbitrage",
+    "target": "probability/expected-value",
+    "label": "priced via",
+    "description": "The fair value of a merger arbitrage position is the probability-weighted payoff across deal-success and deal-failure scenarios, making expected value the central calculation for sizing and pricing the trade."
+  },
+  {
     "source": "derivatives/risk-neutral-pricing",
     "target": "derivatives/black-scholes-equation",
     "label": "framework for",
@@ -972,6 +1068,30 @@
     "description": "The CAPM decomposes an asset\u2019s risk premium as \u03b2 times the market risk premium \u2014 beta estimation provides the sensitivity coefficient that scales the systematic risk compensation."
   },
   {
+    "source": "derivatives/riskless-arbitrage",
+    "target": "derivatives/no-arbitrage-principle",
+    "label": "ruled out by",
+    "description": "Riskless arbitrage is the exact opportunity the no-arbitrage principle asserts cannot persist in an efficient market — every derivative pricing model is built on the assumption that no such strategy exists."
+  },
+  {
+    "source": "derivatives/riskless-arbitrage",
+    "target": "derivatives/put-call-parity",
+    "label": "exploits violation of",
+    "description": "A breach of put-call parity is the textbook riskless arbitrage: buying the underpriced combination and shorting the overpriced one locks in a guaranteed profit with zero net investment."
+  },
+  {
+    "source": "derivatives/riskless-arbitrage",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "precondition for",
+    "description": "Risk-neutral pricing is mathematically valid only in an arbitrage-free market — the existence of a risk-neutral measure is equivalent to the assumption that no riskless arbitrage opportunities exist."
+  },
+  {
+    "source": "derivatives/riskless-arbitrage",
+    "target": "derivatives/cash-and-carry-arbitrage",
+    "label": "example of",
+    "description": "Cash-and-carry is the canonical example of a riskless arbitrage in forward markets — buying spot and selling the overpriced forward locks in a guaranteed profit with no net risk."
+  },
+  {
     "source": "derivatives/snell-envelope",
     "target": "derivatives/binomial-option-pricing",
     "label": "implemented via",
@@ -990,6 +1110,24 @@
     "description": "The backward induction that constructs the Snell envelope uses the tower property at each step \u2014 the continuation value E\u1d60[U_{t+1} | \u2131_t] nests expectations consistently across time steps."
   },
   {
+    "source": "derivatives/statistical-arbitrage",
+    "target": "derivatives/risk-arbitrage",
+    "label": "contrasts with",
+    "description": "Risk arbitrage is driven by a specific corporate event (a merger), whereas statistical arbitrage is driven by statistical patterns in price relationships with no single fundamental catalyst."
+  },
+  {
+    "source": "derivatives/statistical-arbitrage",
+    "target": "derivatives/riskless-arbitrage",
+    "label": "contrasts with",
+    "description": "Statistical arbitrage bets on mean reversion using statistical models but is not risk-free — unlike riskless arbitrage, the spread can fail to revert if the historical relationship breaks down."
+  },
+  {
+    "source": "derivatives/statistical-arbitrage",
+    "target": "statistics/autocorrelation",
+    "label": "exploits",
+    "description": "Statistical arbitrage strategies depend on the autocorrelation structure of spread returns — a stationary, mean-reverting spread has negative autocorrelation that makes deviations predictably self-correcting."
+  },
+  {
     "source": "derivatives/theta-greeks",
     "target": "derivatives/charm-greeks",
     "label": "related to",
@@ -1000,6 +1138,18 @@
     "target": "derivatives/veta-greeks",
     "label": "analogous to",
     "description": "Theta and Veta are both time-decay measures: Theta captures how the option price decays with time, while Veta captures how Vega (volatility sensitivity) decays with time."
+  },
+  {
+    "source": "derivatives/triangular-arbitrage",
+    "target": "derivatives/no-arbitrage-principle",
+    "label": "enforces",
+    "description": "Triangular arbitrage trading enforces the no-arbitrage principle in FX markets by immediately exploiting and eliminating any inconsistency in quoted cross rates."
+  },
+  {
+    "source": "derivatives/triangular-arbitrage",
+    "target": "derivatives/riskless-arbitrage",
+    "label": "instance of",
+    "description": "Triangular arbitrage is a specific instance of riskless arbitrage applied to FX markets — inconsistent cross rates allow a three-legged trade that returns a risk-free profit with no net currency exposure."
   },
   {
     "source": "derivatives/vanna-greeks",
