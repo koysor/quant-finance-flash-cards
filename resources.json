@@ -383,6 +383,19 @@
       }
     ]
   },
+  "derivatives/binary-option": {
+    "websites": [
+      {
+        "title": "Investopedia — Binary Option",
+        "url": "https://www.investopedia.com/terms/b/binary-option.asp"
+      },
+      {
+        "title": "Wikipedia — Binary Option",
+        "url": "https://en.wikipedia.org/wiki/Binary_option"
+      }
+    ],
+    "videos": []
+  },
   "derivatives/black-scholes-equation": {
     "websites": [
       {
@@ -400,6 +413,19 @@
         "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
       }
     ]
+  },
+  "derivatives/cash-and-carry-arbitrage": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Cash-and-Carry Arbitrage",
+        "url": "https://www.investopedia.com/terms/c/cash-and-carry-arbitrage.asp"
+      },
+      {
+        "title": "Corporate Finance Institute \u2014 Forward Price",
+        "url": "https://corporatefinanceinstitute.com/resources/derivatives/forward-price/"
+      }
+    ],
+    "videos": []
   },
   "derivatives/charm-greeks": {
     "websites": [
@@ -628,6 +654,32 @@
       }
     ]
   },
+  "derivatives/law-of-one-price": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Law of One Price",
+        "url": "https://www.investopedia.com/terms/l/law-one-price.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Law of One Price",
+        "url": "https://en.wikipedia.org/wiki/Law_of_one_price"
+      }
+    ],
+    "videos": []
+  },
+  "derivatives/limits-to-arbitrage": {
+    "websites": [
+      {
+        "title": "Investopedia — Limits to Arbitrage",
+        "url": "https://www.investopedia.com/terms/l/limits-to-arbitrage.asp"
+      },
+      {
+        "title": "Wikipedia — Limits to Arbitrage",
+        "url": "https://en.wikipedia.org/wiki/Limits_to_arbitrage"
+      }
+    ],
+    "videos": []
+  },
   "derivatives/market-price-of-risk": {
     "websites": [
       {
@@ -756,6 +808,19 @@
       }
     ]
   },
+  "derivatives/replicating-portfolio": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Replicating Portfolio",
+        "url": "https://www.investopedia.com/terms/r/replicating-portfolio.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Replicating Portfolio",
+        "url": "https://en.wikipedia.org/wiki/Replicating_portfolio"
+      }
+    ],
+    "videos": []
+  },
   "derivatives/rho-greeks": {
     "websites": [
       {
@@ -773,6 +838,19 @@
         "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
       }
     ]
+  },
+  "derivatives/risk-arbitrage": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Risk Arbitrage",
+        "url": "https://www.investopedia.com/terms/r/riskarbitrage.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Merger Arbitrage",
+        "url": "https://en.wikipedia.org/wiki/Merger_arbitrage"
+      }
+    ],
+    "videos": []
   },
   "derivatives/risk-neutral-pricing": {
     "websites": [
@@ -805,6 +883,24 @@
     ],
     "videos": []
   },
+  "derivatives/riskless-arbitrage": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Arbitrage",
+        "url": "https://www.investopedia.com/terms/a/arbitrage.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Arbitrage",
+        "url": "https://en.wikipedia.org/wiki/Arbitrage"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Arbitrage Basics",
+        "url": "https://www.youtube.com/watch?v=AuCH7fHZsZ4"
+      }
+    ]
+  },
   "derivatives/snell-envelope": {
     "websites": [
       {
@@ -817,6 +913,28 @@
       }
     ],
     "videos": []
+  },
+  "derivatives/statistical-arbitrage": {
+    "websites": [
+      {
+        "title": "Investopedia — Statistical Arbitrage",
+        "url": "https://www.investopedia.com/terms/s/statisticalarbitrage.asp"
+      },
+      {
+        "title": "Wikipedia — Statistical Arbitrage",
+        "url": "https://en.wikipedia.org/wiki/Statistical_arbitrage"
+      }
+    ],
+    "videos": [
+      {
+        "title": "QuantConnect — Pairs Trading Strategy",
+        "url": "https://www.youtube.com/watch?v=JTucMRYMOyY"
+      },
+      {
+        "title": "Quantopian — Introduction to Pairs Trading",
+        "url": "https://www.youtube.com/watch?v=g-qvFjvyqcs"
+      }
+    ]
   },
   "derivatives/speed-greeks": {
     "websites": [
@@ -857,6 +975,19 @@
         "url": "https://www.youtube.com/watch?v=7PM4rNDr4oI"
       }
     ]
+  },
+  "derivatives/triangular-arbitrage": {
+    "websites": [
+      {
+        "title": "Investopedia — Triangular Arbitrage",
+        "url": "https://www.investopedia.com/terms/t/triangulararbitrage.asp"
+      },
+      {
+        "title": "Wikipedia — Triangular Arbitrage",
+        "url": "https://en.wikipedia.org/wiki/Triangular_arbitrage"
+      }
+    ],
+    "videos": []
   },
   "derivatives/vanna-greeks": {
     "websites": [
