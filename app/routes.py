@@ -56,6 +56,7 @@ bp = Blueprint("main", __name__)
 TOPIC_COLOURS: dict[str, str] = {
     "Banking Regulation":              "#a855f7",   # purple
     "Calculus":                        "#f59e0b",   # amber
+    "Computational Finance":           "#84cc16",   # lime
     "Derivatives":                     "#3b82f6",   # blue
     "Financial Mathematics":           "#10b981",   # emerald
     "Fixed Income":                    "#0d9488",   # teal-dark

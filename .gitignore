@@ -27,3 +27,4 @@ graph.db
 
 # Skill artifacts
 *.skill
+app.log
