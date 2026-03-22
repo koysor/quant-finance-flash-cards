@@ -1,5 +1,251 @@
 [
   {
+    "source": "banking-regulation/basis-risk-banking-book",
+    "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
+    "label": "component of",
+    "description": "Basis risk is one of the four IRRBB sub-risks \u2014 it captures the exposure from imperfect correlation between the reference rates on assets and liabilities, which is invisible to repricing gap and duration gap analysis."
+  },
+  {
+    "source": "banking-regulation/basis-risk-banking-book",
+    "target": "financial-maths/net-interest-income",
+    "label": "impacts",
+    "description": "Basis risk impacts NII when the reference rates on assets and liabilities diverge \u2014 even if both sides reprice at the same time, a widening spread between reference rates squeezes net interest income."
+  },
+  {
+    "source": "banking-regulation/basis-risk-banking-book",
+    "target": "financial-maths/sofr-ibor-transition",
+    "label": "amplified by",
+    "description": "The LIBOR-to-SOFR transition amplified basis risk as banks migrated assets and liabilities to different replacement rates at different speeds, creating new and sometimes unexpected basis exposures."
+  },
+  {
+    "source": "banking-regulation/curvature-risk-charge",
+    "target": "banking-regulation/frtb-sensitivity-based-method",
+    "label": "component of",
+    "description": "The curvature risk charge is one of the three components of the FRTB Sensitivity-Based Method \u2014 it captures second-order price sensitivity for options and structured products that is not covered by the linear delta charge."
+  },
+  {
+    "source": "banking-regulation/curvature-risk-charge",
+    "target": "fixed-income/convexity",
+    "label": "quantifies regulatory cost of",
+    "description": "The curvature risk charge is the regulatory capital measure for convexity risk \u2014 just as bond convexity measures the second-order price sensitivity to yield, the curvature charge measures the second-order P&L deviation from the linear delta approximation for options."
+  },
+  {
+    "source": "banking-regulation/earnings-at-risk",
+    "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
+    "label": "income metric of",
+    "description": "EaR is the income-based IRRBB metric that complements EVE \u2014 it shows the near-term earnings impact of rate changes, which is what bank boards and equity analysts focus on."
+  },
+  {
+    "source": "banking-regulation/earnings-at-risk",
+    "target": "financial-maths/net-interest-income",
+    "label": "measures risk to",
+    "description": "EaR quantifies the potential decline in NII under adverse rate scenarios \u2014 it is the probabilistic wrapper around NII sensitivity that translates rate risk into an earnings impact figure."
+  },
+  {
+    "source": "banking-regulation/earnings-at-risk",
+    "target": "risk/value-at-risk",
+    "label": "analogous to",
+    "description": "EaR is the banking book analogue of VaR \u2014 both express worst-case losses at a confidence level, but VaR applies to mark-to-market P&L while EaR applies to accrual-based net interest income."
+  },
+  {
+    "source": "banking-regulation/economic-value-of-equity",
+    "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
+    "label": "solvency metric of",
+    "description": "EVE is the present-value (solvency) lens of IRRBB \u2014 it captures how rate changes affect the economic net worth of the banking book, complementing the near-term NII view."
+  },
+  {
+    "source": "banking-regulation/economic-value-of-equity",
+    "target": "banking-regulation/repricing-risk",
+    "label": "sensitive to",
+    "description": "EVE is affected by repricing mismatches because assets and liabilities with different repricing dates respond differently to rate changes, creating present-value gains or losses."
+  },
+  {
+    "source": "banking-regulation/economic-value-of-equity",
+    "target": "financial-maths/duration-gap",
+    "label": "driven by",
+    "description": "The duration gap is the primary determinant of EVE sensitivity \u2014 the larger the mismatch between asset and liability durations, the more EVE changes for a given rate shock."
+  },
+  {
+    "source": "banking-regulation/frtb-sensitivity-based-method",
+    "target": "banking-regulation/curvature-risk-charge",
+    "label": "includes",
+    "description": "The FRTB Sensitivity-Based Method has three components \u2014 delta, vega, and curvature charges \u2014 summed to give total SBM capital; the curvature charge captures the second-order (convexity) risk not covered by the delta sensitivity."
+  },
+  {
+    "source": "banking-regulation/frtb-sensitivity-based-method",
+    "target": "banking-regulation/interest-rate-tenor-vertices",
+    "label": "maps sensitivities to",
+    "description": "The FRTB SBM requires all interest rate delta sensitivities to be mapped to the ten prescribed tenor vertices before aggregation \u2014 these vertices are the buckets used within the GIRR risk class of the sensitivity-based method."
+  },
+  {
+    "source": "banking-regulation/frtb-sensitivity-based-method",
+    "target": "risk/expected-shortfall",
+    "label": "complements",
+    "description": "The FRTB SBM is the standardised capital charge that all banks must compute, whilst Expected Shortfall is the metric used by the Internal Models Approach \u2014 the two sit alongside each other in the FRTB framework as standardised and model-based capital floors."
+  },
+  {
+    "source": "banking-regulation/interest-rate-risk-in-the-banking-book",
+    "target": "banking-regulation/economic-value-of-equity",
+    "label": "measured via",
+    "description": "EVE is one of the two core IRRBB metrics \u2014 it captures the present-value impact of rate changes on the entire banking book, providing the solvency perspective that Basel requires alongside the earnings (NII) view."
+  },
+  {
+    "source": "banking-regulation/interest-rate-risk-in-the-banking-book",
+    "target": "banking-regulation/repricing-risk",
+    "label": "decomposed into",
+    "description": "Repricing risk is the most fundamental component of IRRBB \u2014 the maturity and repricing mismatches between banking book assets and liabilities are the primary source of interest rate exposure."
+  },
+  {
+    "source": "banking-regulation/interest-rate-risk-in-the-banking-book",
+    "target": "financial-maths/interest-rate-swap",
+    "label": "hedged using",
+    "description": "Interest rate swaps are the primary tool for managing IRRBB \u2014 paying or receiving fixed in a swap alters the duration profile of the banking book, allowing ALM teams to adjust the duration gap without changing the underlying loan and deposit portfolio."
+  },
+  {
+    "source": "banking-regulation/interest-rate-tenor-vertices",
+    "target": "banking-regulation/frtb-sensitivity-based-method",
+    "label": "defines buckets for",
+    "description": "The ten prescribed tenor vertices (0.25Y to 30Y) are the interest rate buckets used within the FRTB SBM's GIRR risk class \u2014 sensitivities are mapped to these vertices and then aggregated using prescribed correlations to produce the IR delta capital charge."
+  },
+  {
+    "source": "banking-regulation/interest-rate-tenor-vertices",
+    "target": "fixed-income/dv01",
+    "label": "receives sensitivity from",
+    "description": "Under FRTB, each position's DV01 (dollar value of a basis point) is assigned to the nearest prescribed tenor vertex \u2014 the vertex then accumulates the net DV01 from all positions, which becomes the sensitivity input s_k in the capital aggregation formula."
+  },
+  {
+    "source": "banking-regulation/liquidity-buffer-composition",
+    "target": "banking-regulation/economic-value-of-equity",
+    "label": "adds duration to",
+    "description": "Government bonds held in the HQLA buffer add duration to the asset side of the balance sheet, increasing EVE sensitivity to rate rises \u2014 the 2022 UK gilt crisis showed how LCR buffers can themselves become a source of mark-to-market loss."
+  },
+  {
+    "source": "banking-regulation/liquidity-buffer-composition",
+    "target": "banking-regulation/liquidity-coverage-ratio",
+    "label": "numerator of",
+    "description": "The HQLA stock \u2014 classified into Level 1, 2A, and 2B with haircuts and caps \u2014 forms the numerator of the LCR calculation, determining how much of the bank's liquid assets count toward the regulatory minimum."
+  },
+  {
+    "source": "banking-regulation/liquidity-buffer-composition",
+    "target": "risk/liquidity-risk",
+    "label": "mitigates",
+    "description": "The liquidity buffer is the bank's primary defence against short-term funding stress \u2014 its composition and size determine whether the bank can meet obligations without fire-selling illiquid assets."
+  },
+  {
+    "source": "banking-regulation/liquidity-coverage-ratio",
+    "target": "financial-maths/asset-liability-management",
+    "label": "constrains",
+    "description": "The LCR requirement forces banks to hold large HQLA buffers that add duration to the asset side, creating an interest rate position that ALM must manage alongside the rest of the banking book."
+  },
+  {
+    "source": "banking-regulation/liquidity-coverage-ratio",
+    "target": "financial-maths/non-maturity-deposits",
+    "label": "floors run-off of",
+    "description": "Basel's LCR assigns prescribed run-off rates to different deposit categories, establishing a regulatory floor for how stable deposits can be assumed to be \u2014 this interacts with the behavioural assumptions used in NMD modelling."
+  },
+  {
+    "source": "banking-regulation/liquidity-coverage-ratio",
+    "target": "risk/liquidity-risk",
+    "label": "mitigates",
+    "description": "The LCR is the primary regulatory tool for mitigating short-term liquidity risk \u2014 by requiring banks to hold sufficient HQLA to cover 30 days of stressed outflows, it ensures a minimum buffer against funding crises."
+  },
+  {
+    "source": "banking-regulation/net-stable-funding-ratio",
+    "target": "banking-regulation/liquidity-coverage-ratio",
+    "label": "complements",
+    "description": "The NSFR addresses structural funding stability over a 1-year horizon, complementing the LCR's 30-day stress focus \u2014 together they form Basel III's twin liquidity standards."
+  },
+  {
+    "source": "banking-regulation/net-stable-funding-ratio",
+    "target": "financial-maths/asset-liability-management",
+    "label": "constrains funding mix of",
+    "description": "The NSFR forces ALM teams to maintain a minimum proportion of stable funding, constraining the maturity transformation strategy and often requiring more expensive long-term debt issuance or retail deposit gathering."
+  },
+  {
+    "source": "banking-regulation/net-stable-funding-ratio",
+    "target": "risk/liquidity-risk",
+    "label": "mitigates structural",
+    "description": "The NSFR mitigates structural liquidity risk by requiring stable funding for illiquid assets, preventing the maturity mismatch that caused failures like Northern Rock where long-term mortgages were funded by overnight wholesale markets."
+  },
+  {
+    "source": "banking-regulation/non-modellable-risk-factor",
+    "target": "banking-regulation/risk-factor-eligibility-test",
+    "label": "results from failing",
+    "description": "A risk factor is classified as non-modellable precisely when it fails the Risk Factor Eligibility Test \u2014 the NMRF designation is the direct consequence of having fewer than 24 real price observations or a gap exceeding 90 days in the prior 12 months."
+  },
+  {
+    "source": "banking-regulation/non-modellable-risk-factor",
+    "target": "risk/expected-shortfall",
+    "label": "charged via stressed",
+    "description": "NMRFs receive a separate stressed Expected Shortfall capital charge computed from a single worst-case scenario rather than from historical simulation \u2014 this stressed ES is typically far larger than the equivalent IMA charge, reflecting the lack of observable market data."
+  },
+  {
+    "source": "banking-regulation/optionality-risk",
+    "target": "banking-regulation/economic-value-of-equity",
+    "label": "distorts",
+    "description": "Optionality risk distorts EVE calculations because embedded options create non-linear rate sensitivity \u2014 mortgage prepayment shortens asset duration when rates fall, reducing the EVE gain the bank would otherwise receive."
+  },
+  {
+    "source": "banking-regulation/optionality-risk",
+    "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
+    "label": "component of",
+    "description": "Optionality risk is one of the four IRRBB sub-risks \u2014 it captures the asymmetric exposure from embedded options in banking products that customers exercise adversely for the bank."
+  },
+  {
+    "source": "banking-regulation/optionality-risk",
+    "target": "financial-maths/non-maturity-deposits",
+    "label": "driven by",
+    "description": "Non-maturity deposits are a key source of optionality risk \u2014 depositors' behavioural option to withdraw creates an embedded option that shortens liability duration when rates rise."
+  },
+  {
+    "source": "banking-regulation/repricing-risk",
+    "target": "banking-regulation/economic-value-of-equity",
+    "label": "impacts",
+    "description": "Repricing mismatches also affect EVE because assets and liabilities with different repricing dates have different present-value sensitivities to rate changes."
+  },
+  {
+    "source": "banking-regulation/repricing-risk",
+    "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
+    "label": "component of",
+    "description": "Repricing risk is the most fundamental of the four IRRBB sub-risks (alongside yield curve, basis, and optionality risk) \u2014 it captures the core maturity mismatch exposure in the banking book."
+  },
+  {
+    "source": "banking-regulation/repricing-risk",
+    "target": "financial-maths/net-interest-income",
+    "label": "impacts",
+    "description": "Repricing risk directly impacts NII \u2014 when rate-sensitive assets and liabilities reprice at different times, rate movements create gaps that cause NII to rise or fall."
+  },
+  {
+    "source": "banking-regulation/risk-factor-eligibility-test",
+    "target": "banking-regulation/frtb-sensitivity-based-method",
+    "label": "feeds into",
+    "description": "Modellable risk factors that pass the RFET are included in the Internal Models Approach ES calculation, whilst those that fail are capitalised separately as NMRFs \u2014 the RFET therefore determines which risk factors enter the IMA versus which generate the NMRF add-on alongside the SBM floor."
+  },
+  {
+    "source": "banking-regulation/risk-factor-eligibility-test",
+    "target": "banking-regulation/non-modellable-risk-factor",
+    "label": "classifies",
+    "description": "The RFET is the gateway test that determines whether a risk factor is modellable or non-modellable \u2014 failing the minimum 24-observation threshold triggers NMRF classification and a separate, more punitive capital treatment."
+  },
+  {
+    "source": "banking-regulation/yield-curve-risk",
+    "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
+    "label": "component of",
+    "description": "Yield curve risk is one of the four IRRBB sub-risks \u2014 it captures the exposure to non-parallel rate movements that a simple duration gap (parallel shift) analysis would miss."
+  },
+  {
+    "source": "banking-regulation/yield-curve-risk",
+    "target": "banking-regulation/interest-rate-tenor-vertices",
+    "label": "measured at",
+    "description": "Yield curve risk is measured by computing PV01 sensitivities at each tenor vertex and applying non-parallel shocks \u2014 the tenor vertices are the grid points at which curve reshaping is assessed."
+  },
+  {
+    "source": "banking-regulation/yield-curve-risk",
+    "target": "fixed-income/yield-curve",
+    "label": "risk from reshaping of",
+    "description": "Yield curve risk is the exposure to non-parallel changes in the yield curve \u2014 steepening, flattening, and twisting \u2014 that affect different tenors of the banking book differently."
+  },
+  {
     "source": "calculus/big-o-notation",
     "target": "calculus/taylor-series",
     "label": "quantifies error of",
@@ -43,15 +289,15 @@
   },
   {
     "source": "calculus/complex-numbers",
-    "target": "derivatives/heston-model",
-    "label": "used in",
-    "description": "The Heston model's semi-analytic pricing formula is derived by inverting the characteristic function of log(S_T) via numerical integration in the complex plane \u2014 complex exponentials are the core computational tool for this Fourier-based approach."
-  },
-  {
-    "source": "calculus/complex-numbers",
     "target": "probability/moment-generating-function",
     "label": "extends",
     "description": "The characteristic function E[e^{iuX}] is the complex-variable generalisation of the moment generating function \u2014 replacing the real argument with iu ensures the expectation always exists for fat-tailed distributions where the MGF diverges."
+  },
+  {
+    "source": "calculus/complex-numbers",
+    "target": "volatility/heston-model",
+    "label": "used in",
+    "description": "The Heston model's semi-analytic pricing formula is derived by inverting the characteristic function of log(S_T) via numerical integration in the complex plane \u2014 complex exponentials are the core computational tool for this Fourier-based approach."
   },
   {
     "source": "calculus/convex-function",
@@ -79,7 +325,7 @@
   },
   {
     "source": "calculus/cubic-spline-interpolation",
-    "target": "financial-maths/zero-rate-curve",
+    "target": "fixed-income/zero-rate-curve",
     "label": "constructs",
     "description": "Cubic spline interpolation is the standard method for constructing the zero rate curve from discrete market quotes, ensuring smooth rates and continuous forward rates between observed tenors."
   },
@@ -133,7 +379,7 @@
   },
   {
     "source": "calculus/fast-fourier-transform",
-    "target": "derivatives/heston-model",
+    "target": "volatility/heston-model",
     "label": "prices options under",
     "description": "The FFT prices European options under the Heston model by inverting its known characteristic function, computing prices at all strikes simultaneously in milliseconds."
   },
@@ -277,15 +523,15 @@
   },
   {
     "source": "calculus/newton-raphson-method",
-    "target": "derivatives/implied-volatility",
-    "label": "solves for",
-    "description": "Newton-Raphson is the standard algorithm for computing implied volatility \u2014 it iteratively inverts the Black-Scholes formula using vega as the derivative to converge on the volatility matching the observed option price."
-  },
-  {
-    "source": "calculus/newton-raphson-method",
     "target": "derivatives/option-greeks",
     "label": "uses vega from",
     "description": "The Newton-Raphson implied volatility solver uses vega (the option price sensitivity to volatility) as the derivative in each iteration step, making vega essential to the algorithm s convergence."
+  },
+  {
+    "source": "calculus/newton-raphson-method",
+    "target": "volatility/implied-volatility",
+    "label": "solves for",
+    "description": "Newton-Raphson is the standard algorithm for computing implied volatility \u2014 it iteratively inverts the Black-Scholes formula using vega as the derivative to converge on the volatility matching the observed option price."
   },
   {
     "source": "calculus/parabolic-pdes",
@@ -577,12 +823,6 @@
   },
   {
     "source": "derivatives/black-scholes-equation",
-    "target": "derivatives/implied-volatility",
-    "label": "inverted to get",
-    "description": "Implied volatility is found by running Black-Scholes in reverse: given a market price for an option, you solve numerically for the volatility that makes the formula match."
-  },
-  {
-    "source": "derivatives/black-scholes-equation",
     "target": "derivatives/option-greeks",
     "label": "defines",
     "description": "The Black-Scholes formula gives closed-form expressions for Delta, Gamma, Vega, Theta and Rho \u2014 the Greeks are simply partial derivatives of the Black-Scholes price with respect to each input."
@@ -604,6 +844,12 @@
     "target": "derivatives/vega-greeks",
     "label": "defines",
     "description": "The Black-Scholes formula gives the closed-form expression for Vega as S N prime(d1) sqrt(T), the sensitivity of the option price to changes in implied volatility."
+  },
+  {
+    "source": "derivatives/black-scholes-equation",
+    "target": "volatility/implied-volatility",
+    "label": "inverted to get",
+    "description": "Implied volatility is found by running Black-Scholes in reverse: given a market price for an option, you solve numerically for the volatility that makes the formula match."
   },
   {
     "source": "derivatives/cash-and-carry-arbitrage",
@@ -652,24 +898,6 @@
     "target": "derivatives/black-scholes-equation",
     "label": "derives",
     "description": "Taking the continuous-time limit of the binomial model produces the Black-Scholes PDE \u2014 this card shows how the discrete one-step formula converges to the continuous PDE as the time step shrinks to zero."
-  },
-  {
-    "source": "derivatives/correlation-smile",
-    "target": "derivatives/volatility-smile",
-    "label": "analogous to",
-    "description": "The correlation smile is the correlation-space analogue of the volatility smile \u2014 just as implied vol varies with strike, implied correlation varies with the moneyness of index options."
-  },
-  {
-    "source": "derivatives/correlation-smile",
-    "target": "derivatives/volatility-surface",
-    "label": "links index and single-stock",
-    "description": "The correlation smile emerges from the difference between the index volatility surface and the average single-stock volatility surface \u2014 it quantifies how diversification changes across moneyness levels."
-  },
-  {
-    "source": "derivatives/correlation-smile",
-    "target": "statistics/correlation",
-    "label": "extends",
-    "description": "The correlation smile extends the concept of correlation from a single number to a strike-dependent function, revealing that the market prices in higher co-movement during sell-offs."
   },
   {
     "source": "derivatives/d1-and-d2-in-black-scholes",
@@ -876,96 +1104,6 @@
     "description": "Greeks computed by finite difference feed directly into P&L attribution \u2014 the bumped sensitivities are multiplied by actual market moves to explain the daily P&L."
   },
   {
-    "source": "derivatives/heston-model",
-    "target": "derivatives/black-scholes-equation",
-    "label": "extends",
-    "description": "The Heston model generalises Black-Scholes by replacing the constant-volatility assumption with a stochastic variance process \u2014 Black-Scholes is recovered as the special case where the vol of vol is zero. Black\u2013Scholes is recovered as the special case of the Heston model when the vol-of-vol \u03c3_v \u2192 0 and the initial variance equals \u03b8 \u2014 Heston nests BS as a degenerate limit, providing a consistency check on the more general framework."
-  },
-  {
-    "source": "derivatives/heston-model",
-    "target": "derivatives/complete-markets",
-    "label": "violates",
-    "description": "The Heston model introduces stochastic volatility as a second source of randomness that cannot be hedged with the stock alone, making the market incomplete and requiring an additional instrument or a market price of volatility risk."
-  },
-  {
-    "source": "derivatives/heston-model",
-    "target": "derivatives/implied-volatility",
-    "label": "explains",
-    "description": "The Heston model's stochastic volatility and negative correlation between returns and variance reproduce the implied volatility smile and skew that Black-Scholes' flat volatility assumption cannot capture."
-  },
-  {
-    "source": "derivatives/heston-model",
-    "target": "derivatives/volatility-surface",
-    "label": "generates",
-    "description": "The Heston model generates a volatility surface from its five parameters \u2014 calibrating Heston to market data means matching its implied surface to the observed one."
-  },
-  {
-    "source": "derivatives/heston-model",
-    "target": "derivatives/volatility-term-structure",
-    "label": "calibrated to",
-    "description": "Heston's mean-reversion speed and vol-of-vol parameters are calibrated to match the observed volatility term structure \u2014 the term structure pins down the dynamics of variance over time."
-  },
-  {
-    "source": "derivatives/heston-model",
-    "target": "risk/monte-carlo-simulation",
-    "label": "priced via",
-    "description": "Although the Heston model has a semi-analytical solution for European options, exotic and path-dependent derivatives under Heston are typically priced by Monte Carlo simulation of the two correlated SDEs."
-  },
-  {
-    "source": "derivatives/heston-model",
-    "target": "stochastic-processes/geometric-brownian-motion",
-    "label": "generalises",
-    "description": "GBM assumes constant volatility, while the Heston model replaces this with a mean-reverting stochastic variance process \u2014 the asset price SDE is augmented with a second coupled SDE for the variance."
-  },
-  {
-    "source": "derivatives/heston-model",
-    "target": "stochastic-processes/mean-reversion",
-    "label": "uses",
-    "description": "The Heston model's variance process is a mean-reverting square-root diffusion (CIR process) \u2014 the speed of mean reversion \u03ba and long-run variance \u03b8 control how quickly volatility returns to its equilibrium after a shock."
-  },
-  {
-    "source": "derivatives/heston-model",
-    "target": "stochastic-processes/multi-asset-itos-lemma",
-    "label": "uses",
-    "description": "The Heston model involves two correlated stochastic differential equations (price and variance) \u2014 applying multi-asset It\u00f4's lemma is required to derive the Heston PDE from the coupled SDEs."
-  },
-  {
-    "source": "derivatives/implied-volatility",
-    "target": "derivatives/implied-vs-realised-volatility",
-    "label": "compared in",
-    "description": "Implied volatility is one half of the implied-vs-realised comparison \u2014 the forward-looking market expectation whose accuracy is judged against subsequent realised moves."
-  },
-  {
-    "source": "derivatives/implied-volatility",
-    "target": "derivatives/vega-greeks",
-    "label": "quantified by",
-    "description": "Vega translates a change in implied volatility into a change in option price \u2014 it is the conversion factor that links the volatility market to the options market."
-  },
-  {
-    "source": "derivatives/implied-volatility",
-    "target": "risk/model-limitations",
-    "label": "reveals",
-    "description": "The volatility smile and skew observed in implied volatility across strikes expose the failure of Black-Scholes' constant-volatility assumption \u2014 the market prices in fat tails and jump risk that the model ignores."
-  },
-  {
-    "source": "derivatives/implied-vs-realised-volatility",
-    "target": "derivatives/delta-hedging",
-    "label": "determines P&L of",
-    "description": "The profit or loss from a delta-hedged option position depends on whether realised volatility exceeds or falls short of the implied volatility at which the option was traded."
-  },
-  {
-    "source": "derivatives/implied-vs-realised-volatility",
-    "target": "derivatives/variance-risk-premium",
-    "label": "quantified by",
-    "description": "The implied-vs-realised spread is the observable manifestation of the variance risk premium \u2014 the VRP formalises and measures this spread as a tradeable risk factor."
-  },
-  {
-    "source": "derivatives/implied-vs-realised-volatility",
-    "target": "derivatives/variance-swap",
-    "label": "settled by",
-    "description": "Variance swaps pay the difference between realised and implied variance, making them the purest instrument for monetising the implied-vs-realised spread without path-dependent Greeks."
-  },
-  {
     "source": "derivatives/law-of-one-price",
     "target": "derivatives/put-call-parity",
     "label": "implies",
@@ -994,30 +1132,6 @@
     "target": "derivatives/riskless-arbitrage",
     "label": "constrains",
     "description": "Real-world frictions such as transaction costs, funding constraints, and short-selling restrictions limit the profitability of riskless arbitrage, allowing small mispricings to persist that pure theory would predict should vanish instantly."
-  },
-  {
-    "source": "derivatives/local-volatility",
-    "target": "derivatives/black-scholes-equation",
-    "label": "generalises",
-    "description": "Local volatility generalises Black-Scholes by replacing the constant volatility parameter with a function sigma(S,t), reducing to Black-Scholes when the local vol surface is flat."
-  },
-  {
-    "source": "derivatives/local-volatility",
-    "target": "derivatives/heston-model",
-    "label": "complemented by",
-    "description": "Local volatility is complemented by the Heston stochastic volatility model \u2014 local vol gets the smile right today but has wrong dynamics, while Heston captures volatility dynamics but may not fit the smile exactly."
-  },
-  {
-    "source": "derivatives/local-volatility",
-    "target": "derivatives/volatility-smile",
-    "label": "calibrates to",
-    "description": "The local volatility model is uniquely determined by calibration to the observed volatility smile \u2014 the Dupire equation extracts the local vol surface directly from market option prices."
-  },
-  {
-    "source": "derivatives/local-volatility",
-    "target": "derivatives/volatility-surface",
-    "label": "calibrated to",
-    "description": "The Dupire local volatility function is uniquely determined by the volatility surface \u2014 it is the deterministic volatility field that exactly reproduces every point on the surface."
   },
   {
     "source": "derivatives/market-price-of-risk",
@@ -1320,30 +1434,6 @@
     "description": "Put-call parity forces the difference between call Rho and put Rho to equal KTe^{-rT}, providing a consistency check on any Rho calculation."
   },
   {
-    "source": "derivatives/realised-volatility",
-    "target": "derivatives/implied-vs-realised-volatility",
-    "label": "compared in",
-    "description": "Realised volatility is the backward-looking half of the implied-vs-realised comparison \u2014 the actual price variability that determines whether an option buyer or seller profits on a delta-hedged basis."
-  },
-  {
-    "source": "derivatives/realised-volatility",
-    "target": "risk/volatility-scaling",
-    "label": "feeds into",
-    "description": "Volatility scaling uses realised volatility estimates to normalise position sizes or risk exposures, ensuring that portfolio risk remains constant as market conditions change."
-  },
-  {
-    "source": "derivatives/realised-volatility",
-    "target": "statistics/ewma-volatility",
-    "label": "estimated by",
-    "description": "EWMA is a weighted estimator of realised volatility that gives greater weight to recent returns, providing a more responsive measure than the simple rolling-window standard deviation."
-  },
-  {
-    "source": "derivatives/realised-volatility",
-    "target": "statistics/garch-model",
-    "label": "modelled by",
-    "description": "GARCH models the conditional dynamics of realised volatility, capturing clustering and mean reversion \u2014 features that a simple rolling-window estimator cannot represent."
-  },
-  {
     "source": "derivatives/replicating-portfolio",
     "target": "derivatives/binomial-option-pricing",
     "label": "core of",
@@ -1434,36 +1524,6 @@
     "description": "Risk-neutral pricing is mathematically valid only in an arbitrage-free market \u2014 the existence of a risk-neutral measure is equivalent to the assumption that no riskless arbitrage opportunities exist."
   },
   {
-    "source": "derivatives/sabr-model",
-    "target": "derivatives/heston-model",
-    "label": "alternative to",
-    "description": "SABR and Heston are the two dominant stochastic volatility models \u2014 SABR is preferred on rates/FX desks for its analytical tractability, while Heston is more common for equities."
-  },
-  {
-    "source": "derivatives/sabr-model",
-    "target": "derivatives/local-volatility",
-    "label": "preferred over",
-    "description": "SABR is preferred over local volatility on rates desks because it produces more realistic smile dynamics \u2014 the smile moves with the forward in a way that matches empirical behaviour and produces more stable hedges."
-  },
-  {
-    "source": "derivatives/sabr-model",
-    "target": "derivatives/swaption",
-    "label": "calibrated to",
-    "description": "SABR is calibrated to the swaption volatility cube \u2014 each expiry-tenor pair has its own set of SABR parameters fitted to the market smile across strikes."
-  },
-  {
-    "source": "derivatives/sabr-model",
-    "target": "derivatives/volatility-smile",
-    "label": "models",
-    "description": "SABR is the standard model for fitting and interpolating the volatility smile on rates and FX desks \u2014 its four parameters capture the level, skew, and curvature of the smile."
-  },
-  {
-    "source": "derivatives/sabr-model",
-    "target": "derivatives/volatility-surface",
-    "label": "parameterises",
-    "description": "SABR provides a parsimonious parameterisation of the volatility surface for interest rate and FX options, allowing smooth interpolation and extrapolation from a few calibrated parameters."
-  },
-  {
     "source": "derivatives/snell-envelope",
     "target": "derivatives/binomial-option-pricing",
     "label": "implemented via",
@@ -1507,21 +1567,21 @@
   },
   {
     "source": "derivatives/swaption",
-    "target": "derivatives/implied-volatility",
+    "target": "financial-maths/interest-rate-swap",
+    "label": "option on",
+    "description": "A swaption is an option to enter into an interest rate swap \u2014 the underlying instrument is the swap itself, and the swaption s value depends on the forward swap rate and its volatility."
+  },
+  {
+    "source": "derivatives/swaption",
+    "target": "volatility/implied-volatility",
     "label": "quoted in",
     "description": "Swaptions are quoted in terms of implied volatility (either normal or lognormal) rather than price, forming the swaption volatility cube that is the rates market s equivalent of the equity vol surface."
   },
   {
     "source": "derivatives/swaption",
-    "target": "derivatives/sabr-model",
+    "target": "volatility/sabr-model",
     "label": "smile modelled by",
     "description": "The swaption volatility smile across strikes is modelled by SABR \u2014 each expiry-tenor point in the swaption cube has its own calibrated SABR parameters."
-  },
-  {
-    "source": "derivatives/swaption",
-    "target": "financial-maths/interest-rate-swap",
-    "label": "option on",
-    "description": "A swaption is an option to enter into an interest rate swap \u2014 the underlying instrument is the swap itself, and the swaption s value depends on the forward swap rate and its volatility."
   },
   {
     "source": "derivatives/theoretical-value",
@@ -1531,15 +1591,15 @@
   },
   {
     "source": "derivatives/theoretical-value",
-    "target": "derivatives/implied-volatility",
-    "label": "inverted to find",
-    "description": "Implied volatility is found by inverting the theoretical value formula \u2014 it is the volatility input that makes the model's theoretical value equal the observed market price."
-  },
-  {
-    "source": "derivatives/theoretical-value",
     "target": "derivatives/risk-neutral-pricing",
     "label": "derived from",
     "description": "The theoretical value of any derivative is the discounted expected payoff under the risk-neutral measure \u2014 this fundamental theorem converts the pricing problem into an expectation calculation."
+  },
+  {
+    "source": "derivatives/theoretical-value",
+    "target": "volatility/implied-volatility",
+    "label": "inverted to find",
+    "description": "Implied volatility is found by inverting the theoretical value formula \u2014 it is the volatility input that makes the model's theoretical value equal the observed market price."
   },
   {
     "source": "derivatives/theta-greeks",
@@ -1644,42 +1704,6 @@
     "description": "Vanna and Zomma both capture cross-sensitivities with volatility: Vanna measures how Delta changes with volatility, while Zomma measures how Gamma changes with volatility."
   },
   {
-    "source": "derivatives/variance-risk-premium",
-    "target": "derivatives/implied-volatility",
-    "label": "inflates",
-    "description": "The variance risk premium is the reason implied volatility systematically exceeds realised volatility \u2014 the premium is embedded in option prices as an insurance charge."
-  },
-  {
-    "source": "derivatives/variance-risk-premium",
-    "target": "derivatives/variance-swap",
-    "label": "captured via",
-    "description": "Variance swaps are the purest instrument for harvesting the variance risk premium \u2014 the difference between the swap's fixed strike (implied) and its floating leg (realised) directly isolates the VRP."
-  },
-  {
-    "source": "derivatives/variance-risk-premium",
-    "target": "derivatives/vix-index",
-    "label": "proxied by",
-    "description": "The VIX squared minus subsequent realised variance is the standard empirical proxy for the variance risk premium, making the VIX the most widely watched VRP indicator."
-  },
-  {
-    "source": "derivatives/variance-swap",
-    "target": "derivatives/heston-model",
-    "label": "priced under",
-    "description": "The Heston model provides a natural framework for pricing variance swaps, as its characteristic function yields a closed-form expression for the expected realised variance."
-  },
-  {
-    "source": "derivatives/variance-swap",
-    "target": "derivatives/implied-volatility",
-    "label": "priced from surface of",
-    "description": "The fair strike of a variance swap is determined by integrating over the entire implied volatility surface \u2014 it depends on option prices at all strikes, not just at-the-money volatility."
-  },
-  {
-    "source": "derivatives/variance-swap",
-    "target": "derivatives/volatility-smile",
-    "label": "encodes information from",
-    "description": "The variance swap strike encodes information from the entire volatility smile \u2014 it is a weighted integral of implied variances across all strikes, making it sensitive to skew and kurtosis."
-  },
-  {
     "source": "derivatives/vega-greeks",
     "target": "derivatives/vanna-greeks",
     "label": "cross-derivative of",
@@ -1696,138 +1720,6 @@
     "target": "derivatives/volga-greeks",
     "label": "differentiated to give",
     "description": "Volga is the derivative of Vega with respect to implied volatility \u2014 it measures how Vega itself changes as volatility moves, capturing the curvature of the option price in volatility space."
-  },
-  {
-    "source": "derivatives/vix-futures-term-structure",
-    "target": "derivatives/variance-risk-premium",
-    "label": "embeds",
-    "description": "The VIX futures term structure embeds the variance risk premium \u2014 contango reflects the cost of insuring against volatility spikes, and the roll yield earned by short-vol positions is a manifestation of this premium."
-  },
-  {
-    "source": "derivatives/vix-futures-term-structure",
-    "target": "derivatives/vix-index",
-    "label": "extends",
-    "description": "VIX futures extend the spot VIX into a forward curve, showing the market's expectation of implied volatility at future dates plus a risk premium for bearing volatility risk."
-  },
-  {
-    "source": "derivatives/vix-futures-term-structure",
-    "target": "derivatives/volatility-term-structure",
-    "label": "parallels",
-    "description": "The VIX futures term structure parallels the implied volatility term structure but for forward-starting implied vol \u2014 both curves respond to the same mean-reversion dynamics and risk premia."
-  },
-  {
-    "source": "derivatives/vix-index",
-    "target": "derivatives/implied-volatility",
-    "label": "index of",
-    "description": "The VIX is a model-free index of implied volatility that incorporates information from all listed SPX option strikes, not just the at-the-money implied vol."
-  },
-  {
-    "source": "derivatives/vix-index",
-    "target": "derivatives/variance-swap",
-    "label": "derived from same formula as",
-    "description": "The VIX calculation is mathematically equivalent to the fair strike of a 30-day variance swap on the S&P 500 \u2014 both use the same replicating portfolio of out-of-the-money options."
-  },
-  {
-    "source": "derivatives/vix-index",
-    "target": "derivatives/volatility-surface",
-    "label": "aggregates",
-    "description": "The VIX aggregates the entire strike dimension of the 30-day volatility surface into a single number, weighting each option by 1/K\u00b2 to capture the full smile."
-  },
-  {
-    "source": "derivatives/volatility-cone",
-    "target": "derivatives/implied-vs-realised-volatility",
-    "label": "visualises",
-    "description": "Overlaying implied volatility on the realised volatility cone directly visualises the implied-vs-realised comparison across all maturities, making it a practical tool for identifying trading opportunities."
-  },
-  {
-    "source": "derivatives/volatility-cone",
-    "target": "derivatives/realised-volatility",
-    "label": "contextualises",
-    "description": "The volatility cone plots the historical distribution of realised volatility at each measurement window, providing the benchmark against which current implied volatility is judged rich or cheap."
-  },
-  {
-    "source": "derivatives/volatility-cone",
-    "target": "statistics/square-root-rule",
-    "label": "shaped by",
-    "description": "The cone's characteristic funnel shape arises from the square-root-of-time rule \u2014 short-window realised vol is more dispersed than long-window vol because extreme readings are more likely over shorter periods."
-  },
-  {
-    "source": "derivatives/volatility-smile",
-    "target": "derivatives/black-scholes-equation",
-    "label": "exposes limitation of",
-    "description": "The existence of the smile directly contradicts Black-Scholes' constant-volatility assumption \u2014 if the model were exact, implied volatility would be flat across all strikes."
-  },
-  {
-    "source": "derivatives/volatility-smile",
-    "target": "derivatives/heston-model",
-    "label": "reproduced by",
-    "description": "The Heston model's stochastic volatility and correlation between returns and variance generate an implied volatility smile from first principles, providing a theoretically grounded alternative to strike-by-strike fitting."
-  },
-  {
-    "source": "derivatives/volatility-smile",
-    "target": "derivatives/implied-volatility",
-    "label": "maps across strikes",
-    "description": "The volatility smile is the graph of implied volatility as a function of strike price \u2014 each point on the smile is an implied volatility extracted from a single option's market price via the Black-Scholes formula."
-  },
-  {
-    "source": "derivatives/volatility-smile",
-    "target": "derivatives/vanna-greeks",
-    "label": "explained by",
-    "description": "Vanna captures how Delta shifts when volatility changes \u2014 the correlation between spot and volatility moves (the leverage effect) is a primary driver of the skew component of the volatility smile."
-  },
-  {
-    "source": "derivatives/volatility-smile",
-    "target": "derivatives/vega-greeks",
-    "label": "complicates",
-    "description": "The volatility smile means implied volatility varies by strike, so Vega exposure differs across the strike spectrum \u2014 a portfolio can be Vega-neutral in aggregate but still exposed to skew and curvature moves."
-  },
-  {
-    "source": "derivatives/volatility-smile",
-    "target": "derivatives/volga-greeks",
-    "label": "explained by",
-    "description": "OTM options have positive Volga, meaning they benefit from volatility convexity \u2014 the premium traders pay for this convexity is a key driver of the volatility smile."
-  },
-  {
-    "source": "derivatives/volatility-smile",
-    "target": "risk/model-limitations",
-    "label": "evidences",
-    "description": "The volatility smile is empirical proof that real return distributions have fatter tails and asymmetry compared to the lognormal \u2014 it is one of the most visible model limitations in practice."
-  },
-  {
-    "source": "derivatives/volatility-surface",
-    "target": "derivatives/implied-volatility",
-    "label": "maps",
-    "description": "The volatility surface is the complete map of implied volatility across all strikes and maturities, extending a single implied vol quote into a continuous function."
-  },
-  {
-    "source": "derivatives/volatility-surface",
-    "target": "derivatives/volatility-smile",
-    "label": "contains",
-    "description": "The volatility smile is a single maturity slice of the volatility surface \u2014 the surface generalises the smile by adding the term structure dimension."
-  },
-  {
-    "source": "derivatives/volatility-swap",
-    "target": "derivatives/realised-volatility",
-    "label": "settles against",
-    "description": "A volatility swap's floating leg is the realised volatility of the underlying over the contract period, making it a direct bet on the level of future realised vol."
-  },
-  {
-    "source": "derivatives/volatility-swap",
-    "target": "derivatives/variance-swap",
-    "label": "compared with",
-    "description": "Volatility swaps pay linearly in realised vol while variance swaps pay quadratically \u2014 the convexity adjustment between the two captures the vol-of-vol and is a key concept in volatility derivatives."
-  },
-  {
-    "source": "derivatives/volatility-term-structure",
-    "target": "derivatives/implied-volatility",
-    "label": "organises",
-    "description": "The term structure organises ATM implied volatility by maturity, revealing whether the market expects current volatility conditions to persist or mean-revert."
-  },
-  {
-    "source": "derivatives/volatility-term-structure",
-    "target": "derivatives/volatility-surface",
-    "label": "is a dimension of",
-    "description": "The volatility term structure is the time axis of the volatility surface \u2014 at each maturity the surface has a smile across strikes, and the ATM slice across maturities forms the term structure."
   },
   {
     "source": "derivatives/xva",
@@ -1873,6 +1765,12 @@
   },
   {
     "source": "financial-maths/asset-liability-management",
+    "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
+    "label": "manages",
+    "description": "ALM is the operational function responsible for managing IRRBB \u2014 it monitors EVE and NII sensitivities, executes hedges, and ensures compliance with regulatory limits."
+  },
+  {
+    "source": "financial-maths/asset-liability-management",
     "target": "financial-maths/duration-gap",
     "label": "manages",
     "description": "The duration gap is the primary structural metric that ALM teams monitor and adjust \u2014 narrowing or widening the gap via swaps or balance sheet changes is the core operational activity of ALM."
@@ -1882,48 +1780,6 @@
     "target": "financial-maths/net-interest-income",
     "label": "optimises",
     "description": "ALM optimises NII by managing the repricing profile of the banking book \u2014 the ALM desk decides how much rate risk to take in pursuit of higher net interest margins while staying within risk limits."
-  },
-  {
-    "source": "financial-maths/asset-liability-management",
-    "target": "risk/interest-rate-risk-in-the-banking-book",
-    "label": "manages",
-    "description": "ALM is the operational function responsible for managing IRRBB \u2014 it monitors EVE and NII sensitivities, executes hedges, and ensures compliance with regulatory limits."
-  },
-  {
-    "source": "financial-maths/asset-swap-spread",
-    "target": "financial-maths/interest-rate-swap",
-    "label": "uses",
-    "description": "An asset swap combines a bond purchase with an interest rate swap that exchanges the bond's fixed coupons for a floating rate plus the asset swap spread \u2014 the IRS is the mechanical component that converts fixed cash flows into the floating spread."
-  },
-  {
-    "source": "financial-maths/asset-swap-spread",
-    "target": "financial-maths/z-spread",
-    "label": "compared with",
-    "description": "The asset swap spread and Z-spread are both measures of a bond's credit and liquidity premium, but differ in construction \u2014 the ASW is a par-swap-based floored spread versus the swap curve, whilst the Z-spread shifts the entire zero curve; comparing the two reveals curve-shape effects."
-  },
-  {
-    "source": "financial-maths/basis-curve",
-    "target": "financial-maths/interest-rate-swap",
-    "label": "affects pricing of",
-    "description": "Multi-curve frameworks build a separate discount curve (OIS) and distinct forward curves for each tenor, so the basis between curves directly enters the fair value of every interest rate swap through the choice of projection and discounting curves."
-  },
-  {
-    "source": "financial-maths/basis-curve",
-    "target": "financial-maths/sofr-ibor-transition",
-    "label": "central to",
-    "description": "The LIBOR-OIS basis and tenor basis curves became central to derivatives pricing after the financial crisis, and the SOFR/IBOR transition required re-specifying these basis curves entirely as markets moved from LIBOR to risk-free overnight rates."
-  },
-  {
-    "source": "financial-maths/bear-raid",
-    "target": "financial-maths/short-selling",
-    "label": "weaponises",
-    "description": "A bear raid weaponises short selling by using aggressive, coordinated selling to artificially depress a stock price for profit, rather than simply expressing a bearish view."
-  },
-  {
-    "source": "financial-maths/bear-raid",
-    "target": "financial-maths/short-squeeze",
-    "label": "can backfire into",
-    "description": "A bear raid can backfire into a short squeeze if buyers absorb the selling pressure and push the price back up, trapping the raiders in losing short positions that they are forced to cover."
   },
   {
     "source": "financial-maths/benchmark-index",
@@ -2010,60 +1866,6 @@
     "description": "Margin requirements set the rules; collateral management is the operational process that executes them \u2014 calculating daily exposures, issuing margin calls, and tracking posted assets."
   },
   {
-    "source": "financial-maths/convexity",
-    "target": "financial-maths/modified-duration",
-    "label": "corrects",
-    "description": "Convexity corrects the linear approximation provided by modified duration for large yield moves \u2014 without the convexity term, duration alone systematically underestimates bond price gains when yields fall and overestimates losses when yields rise."
-  },
-  {
-    "source": "financial-maths/convexity",
-    "target": "financial-maths/option-adjusted-spread",
-    "label": "related to",
-    "description": "OAS calculation requires an interest rate model to value embedded options on a lattice \u2014 the curvature of the price\u2013yield relationship (convexity) determines how much option value is stripped out of the Z-spread to arrive at the OAS."
-  },
-  {
-    "source": "financial-maths/cover-the-short",
-    "target": "financial-maths/short-selling",
-    "label": "closes",
-    "description": "Covering the short is the exit mechanism for a short sale \u2014 buying back borrowed shares to return them and realise the profit or loss on the position."
-  },
-  {
-    "source": "financial-maths/cover-the-short",
-    "target": "financial-maths/short-squeeze",
-    "label": "triggers",
-    "description": "Mass covering by short sellers is the direct cause of a short squeeze \u2014 the collective buying pressure from forced or voluntary covering drives the price higher in a self-reinforcing loop."
-  },
-  {
-    "source": "financial-maths/credit-default-swap",
-    "target": "financial-maths/hazard-rate",
-    "label": "priced using",
-    "description": "The fair CDS spread is derived from the hazard rate model \u2014 the premium leg equals the expected discounted periodic fee given survival, and the protection leg equals the expected discounted loss given default, both expressed as functions of the hazard rate."
-  },
-  {
-    "source": "financial-maths/credit-default-swap",
-    "target": "financial-maths/z-spread",
-    "label": "related to",
-    "description": "The CDS spread theoretically equals the bond's Z-spread adjusted for recovery rate \u2014 divergence between the CDS spread and the Z-spread (the CDS-bond basis) creates arbitrage opportunities between the two markets."
-  },
-  {
-    "source": "financial-maths/days-to-cover",
-    "target": "financial-maths/short-interest",
-    "label": "derived from",
-    "description": "Days to cover is calculated by dividing total short interest by average daily volume \u2014 short interest is the raw input that, when normalised by liquidity, yields the actionable squeeze-risk metric."
-  },
-  {
-    "source": "financial-maths/days-to-cover",
-    "target": "financial-maths/short-selling",
-    "label": "measures pressure of",
-    "description": "Days to cover quantifies the aggregate exit risk for all short sellers in a stock \u2014 a high ratio means shorts collectively hold a position that would take many days of normal volume to unwind, amplifying directional pressure."
-  },
-  {
-    "source": "financial-maths/days-to-cover",
-    "target": "financial-maths/short-squeeze",
-    "label": "predicts",
-    "description": "A high days-to-cover ratio is the primary quantitative signal for short squeeze risk \u2014 the more days required to cover, the more violent the forced buying when a positive catalyst arrives."
-  },
-  {
     "source": "financial-maths/debt-to-equity-ratio",
     "target": "financial-maths/leverage",
     "label": "quantifies",
@@ -2083,6 +1885,12 @@
   },
   {
     "source": "financial-maths/deposit-beta",
+    "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
+    "label": "critical input to",
+    "description": "Deposit beta assumptions are among the most consequential inputs to IRRBB measurement \u2014 an overly low beta understates NII sensitivity and overstates the franchise value of deposits under rate stress."
+  },
+  {
+    "source": "financial-maths/deposit-beta",
     "target": "financial-maths/non-maturity-deposits",
     "label": "parameterises",
     "description": "Deposit beta is the key behavioural parameter that determines how NMD funding costs respond to market rate changes \u2014 it drives the effective duration and repricing profile of the entire deposit book."
@@ -2094,40 +1902,22 @@
     "description": "Deposit beta is the econometric formalisation of the pass-through rate concept \u2014 the regression coefficient that quantifies the fraction of policy rate changes transmitted to deposit pricing."
   },
   {
-    "source": "financial-maths/deposit-beta",
-    "target": "risk/interest-rate-risk-in-the-banking-book",
-    "label": "critical input to",
-    "description": "Deposit beta assumptions are among the most consequential inputs to IRRBB measurement \u2014 an overly low beta understates NII sensitivity and overstates the franchise value of deposits under rate stress."
-  },
-  {
     "source": "financial-maths/duration-gap",
-    "target": "financial-maths/modified-duration",
-    "label": "built from",
-    "description": "The duration gap is computed from the modified durations of a bank's assets and liabilities \u2014 modified duration is the fundamental building block that quantifies each side's interest rate sensitivity."
-  },
-  {
-    "source": "financial-maths/duration-gap",
-    "target": "risk/economic-value-of-equity",
+    "target": "banking-regulation/economic-value-of-equity",
     "label": "drives sensitivity of",
     "description": "The duration gap is the primary determinant of EVE sensitivity \u2014 a larger gap means a larger EVE change for a given rate shock, which is why ALM teams manage the gap to control EVE risk."
   },
   {
     "source": "financial-maths/duration-gap",
-    "target": "risk/interest-rate-risk-in-the-banking-book",
+    "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
     "label": "core metric of",
     "description": "The duration gap summarises the entire banking book's rate sensitivity in a single number, making it the core structural metric that IRRBB frameworks use to assess long-run balance sheet risk."
   },
   {
-    "source": "financial-maths/dv01",
-    "target": "financial-maths/modified-duration",
-    "label": "computed from",
-    "description": "DV01 equals modified duration multiplied by the bond price and 0.0001 \u2014 modified duration is therefore the direct input from which DV01 is derived, making the two measures complementary expressions of the same interest rate sensitivity."
-  },
-  {
-    "source": "financial-maths/dv01",
-    "target": "risk/interest-rate-tenor-vertices",
-    "label": "mapped to",
-    "description": "Under FRTB, every position's DV01 sensitivity must be assigned to the nearest prescribed tenor vertex \u2014 DV01 is the raw sensitivity measure that feeds directly into the FRTB interest rate delta capital calculation."
+    "source": "financial-maths/duration-gap",
+    "target": "fixed-income/modified-duration",
+    "label": "built from",
+    "description": "The duration gap is computed from the modified durations of a bank's assets and liabilities \u2014 modified duration is the fundamental building block that quantifies each side's interest rate sensitivity."
   },
   {
     "source": "financial-maths/factor-investing",
@@ -2146,36 +1936,6 @@
     "target": "portfolio-theory/fama-french-three-factor-model",
     "label": "built on",
     "description": "The Fama\u2013French three-factor model was the foundational academic work that identified size and value as compensated factors alongside the market \u2014 it launched the factor investing industry."
-  },
-  {
-    "source": "financial-maths/fail-to-deliver",
-    "target": "financial-maths/cover-the-short",
-    "label": "forces",
-    "description": "Regulatory close-out requirements on fails-to-deliver force short sellers to cover their positions by purchasing shares in the open market within a specified timeframe."
-  },
-  {
-    "source": "financial-maths/fail-to-deliver",
-    "target": "financial-maths/naked-short-selling",
-    "label": "indicates",
-    "description": "Persistent fails-to-deliver are a key indicator of naked short selling, as they reveal that sellers did not have borrowed shares to deliver at settlement."
-  },
-  {
-    "source": "financial-maths/fail-to-deliver",
-    "target": "financial-maths/securities-lending",
-    "label": "results from failure of",
-    "description": "Fails-to-deliver often result from breakdowns in the securities lending chain \u2014 when a borrow is recalled or cannot be sourced, the short seller cannot deliver the shares at settlement."
-  },
-  {
-    "source": "financial-maths/forward-rate-curve",
-    "target": "financial-maths/interest-rate-swap",
-    "label": "prices floating leg of",
-    "description": "The floating leg cash flows of an interest rate swap are sized using forward rates bootstrapped from the swap curve \u2014 each future SOFR/SONIA payment is the forward rate for that accrual period, discounted back to today."
-  },
-  {
-    "source": "financial-maths/forward-rate-curve",
-    "target": "financial-maths/zero-rate-curve",
-    "label": "derived from",
-    "description": "The forward rate curve is obtained from the zero rate curve via the relationship between consecutive discount factors, so the zero curve is the foundation from which all forward rates are derived through bootstrapping."
   },
   {
     "source": "financial-maths/fund-of-funds",
@@ -2209,15 +1969,21 @@
   },
   {
     "source": "financial-maths/funding-rate",
-    "target": "financial-maths/short-selling",
+    "target": "short-selling/short-selling",
     "label": "offsets via rebate",
     "description": "Short sellers receive a rebate on their cash collateral at a rate linked to the risk-free funding rate \u2014 this rebate partially offsets the stock borrow cost and can make the short leg self-financing."
   },
   {
     "source": "financial-maths/funding-rate",
-    "target": "financial-maths/stock-borrow-rate",
+    "target": "short-selling/stock-borrow-rate",
     "label": "related to",
     "description": "The stock borrow rate and the funding rate are the two main components of carry cost for a long-short portfolio \u2014 together they determine whether a leveraged strategy is profitable after financing."
+  },
+  {
+    "source": "financial-maths/funds-transfer-pricing",
+    "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
+    "label": "centralises",
+    "description": "FTP transfers interest rate risk from originating business units to treasury, centralising IRRBB management and ensuring the ALM desk has a consolidated view of the bank's rate exposure."
   },
   {
     "source": "financial-maths/funds-transfer-pricing",
@@ -2230,12 +1996,6 @@
     "target": "financial-maths/net-interest-income",
     "label": "decomposes",
     "description": "FTP splits aggregate NII into a true lending margin, a true deposit spread, and a treasury residual, revealing which business units genuinely contribute to profitability after accounting for funding cost."
-  },
-  {
-    "source": "financial-maths/funds-transfer-pricing",
-    "target": "risk/interest-rate-risk-in-the-banking-book",
-    "label": "centralises",
-    "description": "FTP transfers interest rate risk from originating business units to treasury, centralising IRRBB management and ensuring the ALM desk has a consolidated view of the bank's rate exposure."
   },
   {
     "source": "financial-maths/haircut",
@@ -2257,7 +2017,7 @@
   },
   {
     "source": "financial-maths/hazard-rate",
-    "target": "financial-maths/credit-default-swap",
+    "target": "fixed-income/credit-default-swap",
     "label": "implies spread for",
     "description": "Given a hazard rate \u03bb and recovery rate R, the fair CDS spread is approximately \u03bb(1\u2212R) \u2014 the hazard rate is the fundamental parameter that determines both survival probabilities and CDS pricing in reduced-form credit models."
   },
@@ -2341,7 +2101,7 @@
   },
   {
     "source": "financial-maths/libor-ois-spread",
-    "target": "financial-maths/overnight-index-swap",
+    "target": "fixed-income/overnight-index-swap",
     "label": "measured against",
     "description": "The OIS rate is the 'clean' benchmark against which LIBOR is compared \u2014 the spread between them isolates the credit and liquidity premia that banks charge for unsecured term lending."
   },
@@ -2376,40 +2136,10 @@
     "description": "The absence of liquidity creates liquidity risk \u2014 when markets become illiquid, positions cannot be exited at fair value, leading to forced selling at steep discounts."
   },
   {
-    "source": "financial-maths/locate-requirement",
-    "target": "financial-maths/naked-short-selling",
-    "label": "prevents",
-    "description": "The locate requirement is the regulatory mechanism that prevents naked short selling \u2014 by requiring a confirmed borrow before a short order is accepted, it ensures that every short sale has a real share behind it."
-  },
-  {
-    "source": "financial-maths/locate-requirement",
-    "target": "financial-maths/securities-lending",
-    "label": "depends on",
-    "description": "Obtaining a locate requires the prime broker to source shares from the securities lending market \u2014 without an active lending pool, locates cannot be granted and short selling capacity collapses."
-  },
-  {
-    "source": "financial-maths/locate-requirement",
-    "target": "financial-maths/short-selling",
-    "label": "prerequisite for",
-    "description": "Under Regulation SHO, a broker must confirm a locate before executing any short sale \u2014 the locate requirement is the first mandatory step in the short-selling process and sets the capacity constraint for any short strategy."
-  },
-  {
-    "source": "financial-maths/locate-requirement",
-    "target": "financial-maths/stock-borrow-rate",
-    "label": "determines cost of",
-    "description": "When a locate is obtained for a hard-to-borrow security, the borrow rate charged reflects the scarcity of available shares \u2014 the locate process and the borrow rate are two sides of the same securities lending transaction."
-  },
-  {
     "source": "financial-maths/long-short-equity",
     "target": "financial-maths/hedge-funds",
     "label": "strategy of",
     "description": "Long-short equity is the most common hedge fund strategy, accounting for the largest share of hedge fund assets under management globally."
-  },
-  {
-    "source": "financial-maths/long-short-equity",
-    "target": "financial-maths/short-selling",
-    "label": "requires",
-    "description": "The short leg of a long-short portfolio requires borrowing and selling securities \u2014 without the mechanics of short selling, the strategy cannot be implemented."
   },
   {
     "source": "financial-maths/long-short-equity",
@@ -2424,52 +2154,10 @@
     "description": "The Sharpe ratio of a long-short portfolio measures whether the alpha from stock selection compensates for the residual risk after hedging out market exposure."
   },
   {
-    "source": "financial-maths/margin-call",
-    "target": "financial-maths/cover-the-short",
-    "label": "forces",
-    "description": "A margin call on a short position forces the trader to cover by buying back shares, as the broker requires the account to return to the minimum equity threshold."
-  },
-  {
-    "source": "financial-maths/margin-call",
-    "target": "financial-maths/leverage",
-    "label": "triggered by",
-    "description": "Margin calls arise directly from the use of leverage \u2014 when borrowed funds amplify a losing position, account equity can fall below the maintenance margin threshold, forcing the broker to issue a call for additional collateral."
-  },
-  {
-    "source": "financial-maths/margin-call",
-    "target": "financial-maths/short-selling",
-    "label": "risk of",
-    "description": "Short sellers face margin calls when the shorted stock rises in price, reducing the equity in their margin account \u2014 because short losses are theoretically unlimited, margin call risk is a key constraint on position sizing."
-  },
-  {
-    "source": "financial-maths/margin-call",
-    "target": "financial-maths/short-squeeze",
-    "label": "can cause",
-    "description": "Margin calls on short positions force involuntary buying, which pushes prices higher and triggers further margin calls in a feedback loop \u2014 this forced-covering cascade is a key mechanism driving short squeezes."
-  },
-  {
-    "source": "financial-maths/margin-lending-rate",
-    "target": "financial-maths/leverage",
-    "label": "cost of",
-    "description": "The margin lending rate is the direct cost of financial leverage \u2014 it determines the hurdle rate that a leveraged portfolio must exceed for the leverage to add value."
-  },
-  {
-    "source": "financial-maths/margin-lending-rate",
-    "target": "financial-maths/margin-call",
-    "label": "compounds impact of",
-    "description": "A higher margin lending rate increases the carrying cost of leveraged positions, compounding the financial pressure when a margin call forces the trader to either inject capital or liquidate."
-  },
-  {
-    "source": "financial-maths/margin-lending-rate",
-    "target": "financial-maths/prime-broker",
-    "label": "set by",
-    "description": "The margin lending rate is set by the prime broker as a benchmark rate plus a spread, and is a key component of the overall cost of the prime brokerage relationship."
-  },
-  {
-    "source": "financial-maths/margin-lending-rate",
-    "target": "financial-maths/risk-free-rate",
-    "label": "benchmarked to",
-    "description": "The margin lending rate is typically quoted as the risk-free rate (or a proxy like SOFR) plus a credit spread, making changes in the risk-free rate the primary driver of margin borrowing costs."
+    "source": "financial-maths/long-short-equity",
+    "target": "short-selling/short-selling",
+    "label": "requires",
+    "description": "The short leg of a long-short portfolio requires borrowing and selling securities \u2014 without the mechanics of short selling, the strategy cannot be implemented."
   },
   {
     "source": "financial-maths/market-impact-model",
@@ -2503,7 +2191,7 @@
   },
   {
     "source": "financial-maths/market-neutral-strategy",
-    "target": "financial-maths/short-selling",
+    "target": "short-selling/short-selling",
     "label": "requires",
     "description": "Market neutral strategies require short selling to construct the short leg of the portfolio \u2014 without the ability to sell short, the fund cannot offset the market exposure of its long positions."
   },
@@ -2532,70 +2220,40 @@
     "description": "Matched-maturity funding establishes the baseline NIM that reflects only credit spread \u2014 any NIM above this level represents term premium earned from deliberate maturity mismatch."
   },
   {
-    "source": "financial-maths/modified-duration",
-    "target": "financial-maths/convexity",
-    "label": "first-order term of",
-    "description": "Modified duration is the linear (first-order) approximation to price sensitivity, whilst convexity is the second-order correction \u2014 together they form the two-term Taylor expansion of the price\u2013yield relationship."
-  },
-  {
-    "source": "financial-maths/modified-duration",
-    "target": "financial-maths/dv01",
-    "label": "converts to",
-    "description": "DV01 is obtained by multiplying modified duration by the bond price and by 0.0001 \u2014 modified duration gives the percentage sensitivity whilst DV01 expresses the same risk in cash terms per basis point."
-  },
-  {
-    "source": "financial-maths/naked-short-selling",
-    "target": "derivatives/no-arbitrage-principle",
-    "label": "violates",
-    "description": "Naked short selling creates synthetic share supply without a genuine borrow, allowing prices to be artificially depressed below no-arbitrage levels \u2014 this breaks the assumption that short selling is limited to available lendable supply."
-  },
-  {
-    "source": "financial-maths/naked-short-selling",
-    "target": "financial-maths/locate-requirement",
-    "label": "bypasses",
-    "description": "Naked short selling is defined by the absence of a locate \u2014 the seller skips the step of confirming a borrowable share exists, making the locate requirement the direct regulatory counter to this practice."
-  },
-  {
-    "source": "financial-maths/naked-short-selling",
-    "target": "financial-maths/short-selling",
-    "label": "unregulated variant of",
-    "description": "Naked short selling is short selling without a confirmed borrow, in contrast to covered (standard) short selling where a locate is obtained first \u2014 it shares the same directional payoff but carries additional settlement and regulatory risk."
-  },
-  {
     "source": "financial-maths/net-interest-income",
-    "target": "risk/earnings-at-risk",
+    "target": "banking-regulation/earnings-at-risk",
     "label": "measured by",
     "description": "Earnings at Risk quantifies the potential shortfall in NII under adverse rate scenarios \u2014 EaR is the risk metric that converts NII sensitivity into a probabilistic loss measure."
   },
   {
     "source": "financial-maths/net-interest-income",
-    "target": "risk/interest-rate-risk-in-the-banking-book",
+    "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
     "label": "earnings lens of",
     "description": "NII sensitivity is the earnings-based perspective of IRRBB \u2014 it captures how rate changes affect the bank's income statement over a 1-2 year horizon, complementing the longer-term EVE view."
   },
   {
     "source": "financial-maths/net-interest-income",
-    "target": "risk/repricing-risk",
+    "target": "banking-regulation/repricing-risk",
     "label": "exposed to",
     "description": "NII is directly exposed to repricing risk \u2014 when assets and liabilities reprice at different times, rate movements create gaps that squeeze or expand the net interest margin."
+  },
+  {
+    "source": "financial-maths/non-maturity-deposits",
+    "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
+    "label": "key assumption of",
+    "description": "NMD behavioural maturity is the single most influential modelling assumption in the IRRBB framework \u2014 shifting the assumed core deposit duration by one year can change EVE sensitivity by hundreds of millions."
+  },
+  {
+    "source": "financial-maths/non-maturity-deposits",
+    "target": "banking-regulation/optionality-risk",
+    "label": "source of",
+    "description": "NMDs carry embedded optionality because depositors can withdraw at any time \u2014 this behavioural option is exercised more frequently when rates rise, shortening liability duration adversely for the bank."
   },
   {
     "source": "financial-maths/non-maturity-deposits",
     "target": "financial-maths/asset-liability-management",
     "label": "modelled by",
     "description": "NMD behavioural modelling is one of ALM's most critical tasks \u2014 the assumed stability and duration of non-maturity deposits directly determines the bank's measured duration gap and IRRBB exposure."
-  },
-  {
-    "source": "financial-maths/non-maturity-deposits",
-    "target": "risk/interest-rate-risk-in-the-banking-book",
-    "label": "key assumption of",
-    "description": "NMD behavioural maturity is the single most influential modelling assumption in the IRRBB framework \u2014 shifting the assumed core deposit duration by one year can change EVE sensitivity by hundreds of millions."
-  },
-  {
-    "source": "financial-maths/non-maturity-deposits",
-    "target": "risk/optionality-risk",
-    "label": "source of",
-    "description": "NMDs carry embedded optionality because depositors can withdraw at any time \u2014 this behavioural option is exercised more frequently when rates rise, shortening liability duration adversely for the bank."
   },
   {
     "source": "financial-maths/optimal-execution",
@@ -2628,38 +2286,8 @@
     "description": "Order flow imbalance predicts short-term price changes via Kyle s lambda \u2014 the linear relationship between net order flow and price movement is the empirical foundation of market impact models."
   },
   {
-    "source": "financial-maths/outright-curve",
-    "target": "financial-maths/swap-spread",
-    "label": "input to",
-    "description": "The swap spread at each maturity is the difference between the swap outright curve and the government bond outright curve \u2014 both outright curves must be observed to compute this spread."
-  },
-  {
-    "source": "financial-maths/outright-curve",
-    "target": "financial-maths/yield-curve",
-    "label": "synonym of",
-    "description": "The outright curve is the yield curve for a specific instrument quoted in absolute yield terms \u2014 it is the raw term structure of yields before any spread adjustment is applied."
-  },
-  {
-    "source": "financial-maths/overnight-index-swap",
-    "target": "financial-maths/funding-rate",
-    "label": "benchmarks",
-    "description": "The OIS rate is the market's consensus forecast of the average overnight funding rate over the swap's term \u2014 it is the cleanest measure of the expected risk-free funding cost."
-  },
-  {
-    "source": "financial-maths/overnight-index-swap",
-    "target": "financial-maths/repo-agreement",
-    "label": "priced from",
-    "description": "OIS rates are closely tied to repo rates because both reflect the cost of secured overnight lending \u2014 the OIS curve is constructed from the same overnight rates that underpin the repo market."
-  },
-  {
-    "source": "financial-maths/overnight-index-swap",
-    "target": "financial-maths/yield-curve",
-    "label": "constructs",
-    "description": "OIS rates at different tenors form the OIS discount curve, which has replaced the LIBOR curve as the standard for discounting collateralised derivatives and constructing the risk-free term structure."
-  },
-  {
     "source": "financial-maths/pairs-trading",
-    "target": "financial-maths/short-selling",
+    "target": "short-selling/short-selling",
     "label": "requires",
     "description": "Pairs trading requires short selling one leg of the pair \u2014 the strategy is impossible without the ability to borrow and sell securities to profit from relative overvaluation."
   },
@@ -2676,10 +2304,10 @@
     "description": "The core assumption of pairs trading is that the spread between two cointegrated securities is mean-reverting \u2014 the strategy profits when the spread snaps back to its long-run average."
   },
   {
-    "source": "financial-maths/par-rate-curve",
-    "target": "financial-maths/interest-rate-swap",
-    "label": "defines rate for",
-    "description": "The par swap rate is mathematically identical to the par bond coupon rate \u2014 the fixed leg of an interest rate swap is set to the par rate so the swap has zero value at inception, directly linking the par curve to swap pricing."
+    "source": "financial-maths/pass-through-rate",
+    "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
+    "label": "critical assumption in",
+    "description": "Pass-through assumptions are among the most consequential inputs to IRRBB measurement \u2014 an overly optimistic pass-through rate understates the speed at which funding costs rise, masking the bank's true earnings sensitivity."
   },
   {
     "source": "financial-maths/pass-through-rate",
@@ -2692,12 +2320,6 @@
     "target": "financial-maths/non-maturity-deposits",
     "label": "key parameter of",
     "description": "The pass-through rate is the central behavioural parameter in NMD modelling \u2014 it determines how quickly deposit costs adjust to market rates, which in turn drives the effective duration and repricing profile of the deposit book."
-  },
-  {
-    "source": "financial-maths/pass-through-rate",
-    "target": "risk/interest-rate-risk-in-the-banking-book",
-    "label": "critical assumption in",
-    "description": "Pass-through assumptions are among the most consequential inputs to IRRBB measurement \u2014 an overly optimistic pass-through rate understates the speed at which funding costs rise, masking the bank's true earnings sensitivity."
   },
   {
     "source": "financial-maths/prime-broker",
@@ -2713,33 +2335,9 @@
   },
   {
     "source": "financial-maths/prime-broker",
-    "target": "financial-maths/securities-lending",
+    "target": "short-selling/securities-lending",
     "label": "provides",
     "description": "Prime brokers are the primary providers of securities lending services to hedge funds, sourcing borrows from custodians and institutional lenders to facilitate short selling."
-  },
-  {
-    "source": "financial-maths/regulation-sho",
-    "target": "financial-maths/fail-to-deliver",
-    "label": "addresses",
-    "description": "Regulation SHO addresses persistent fails-to-deliver by designating threshold securities and requiring mandatory close-out of open fail positions within 13 settlement days."
-  },
-  {
-    "source": "financial-maths/regulation-sho",
-    "target": "financial-maths/locate-requirement",
-    "label": "mandates",
-    "description": "Regulation SHO mandates the locate requirement \u2014 broker-dealers must confirm that a security can be borrowed before accepting a short sale order."
-  },
-  {
-    "source": "financial-maths/regulation-sho",
-    "target": "financial-maths/naked-short-selling",
-    "label": "restricts",
-    "description": "Regulation SHO was specifically designed to restrict naked short selling through locate and close-out requirements that force delivery of borrowed shares."
-  },
-  {
-    "source": "financial-maths/regulation-sho",
-    "target": "financial-maths/short-sale-constraints",
-    "label": "codifies",
-    "description": "Regulation SHO codifies the major short-sale constraints in US markets, including the locate rule, close-out requirements, and the alternative uptick rule (Rule 201)."
   },
   {
     "source": "financial-maths/relative-return",
@@ -2809,15 +2407,15 @@
   },
   {
     "source": "financial-maths/reverse-repo",
-    "target": "financial-maths/overnight-index-swap",
-    "label": "anchors",
-    "description": "The reverse repo rate is the floor of the overnight rate complex \u2014 central bank reverse repo facilities set the lower bound for OIS rates by providing a guaranteed secured return."
-  },
-  {
-    "source": "financial-maths/reverse-repo",
     "target": "financial-maths/repo-agreement",
     "label": "mirror of",
     "description": "A reverse repo is the same transaction as a repo viewed from the cash lender's side \u2014 one party's repo is the other party's reverse repo, with identical economics but opposite cash and collateral flows."
+  },
+  {
+    "source": "financial-maths/reverse-repo",
+    "target": "fixed-income/overnight-index-swap",
+    "label": "anchors",
+    "description": "The reverse repo rate is the floor of the overnight rate complex \u2014 central bank reverse repo facilities set the lower bound for OIS rates by providing a guaranteed secured return."
   },
   {
     "source": "financial-maths/risk-free-rate",
@@ -2856,148 +2454,16 @@
     "description": "The First Fundamental Theorem of Asset Pricing states that riskless arbitrage is impossible if and only if an equivalent martingale measure exists \u2014 the absence of arbitrage is mathematically equivalent to the existence of risk-neutral pricing."
   },
   {
-    "source": "financial-maths/runaway-short",
-    "target": "financial-maths/margin-call",
-    "label": "triggers",
-    "description": "A runaway short rapidly erodes account equity, triggering margin calls that force the trader to either inject capital or have the position forcibly closed at a loss."
-  },
-  {
-    "source": "financial-maths/runaway-short",
-    "target": "financial-maths/short-selling",
-    "label": "worst case of",
-    "description": "A runaway short is the worst-case outcome of a short sale, where the stock price rises persistently and the short seller faces theoretically unlimited losses."
-  },
-  {
-    "source": "financial-maths/runaway-short",
-    "target": "financial-maths/short-squeeze",
-    "label": "exacerbated by",
-    "description": "A runaway short is often exacerbated by short squeeze dynamics \u2014 as the price rises and short sellers are forced to cover, their buying pressure accelerates the very price increase causing their losses."
-  },
-  {
-    "source": "financial-maths/securities-lending",
-    "target": "financial-maths/short-selling",
-    "label": "enables",
-    "description": "Securities lending provides the borrowed shares that short sellers need \u2014 without a functioning lending market, short selling and the price discovery it facilitates would be impossible."
-  },
-  {
-    "source": "financial-maths/securities-lending",
-    "target": "risk/margin-requirements",
-    "label": "collateralised by",
-    "description": "Securities lending requires the borrower to post collateral (typically 102\u2013105% of the loan value), and this collateral is governed by the same margin and haircut frameworks used in leveraged trading."
-  },
-  {
-    "source": "financial-maths/short-interest",
-    "target": "financial-maths/short-selling",
-    "label": "measures",
-    "description": "Short interest quantifies the aggregate volume of short selling in a stock \u2014 it is the primary metric for gauging how many investors are betting against a security."
-  },
-  {
-    "source": "financial-maths/short-interest",
-    "target": "financial-maths/short-squeeze",
-    "label": "predicts",
-    "description": "Extremely high short interest (days to cover > 5, SI% > 20%) is the key predictor of short squeeze risk \u2014 the more shares sold short, the greater the forced buying pressure if prices rise."
-  },
-  {
-    "source": "financial-maths/short-interest",
-    "target": "financial-maths/stock-borrow-rate",
-    "label": "drives",
-    "description": "High short interest increases demand for borrowed shares, which pushes up the stock borrow rate \u2014 the two metrics are strongly correlated and together signal the difficulty and cost of maintaining a short position."
-  },
-  {
-    "source": "financial-maths/short-ladder-attack",
-    "target": "financial-maths/bear-raid",
-    "label": "technique used in",
-    "description": "A short ladder attack is a specific execution technique used within a bear raid \u2014 colluding parties trade back and forth at decreasing prices to create the illusion of selling pressure."
-  },
-  {
-    "source": "financial-maths/short-ladder-attack",
-    "target": "financial-maths/cover-the-short",
-    "label": "aims to cheapen",
-    "description": "The goal of a short ladder attack is to depress the price so that the manipulators can cover their short positions at an artificially low price, maximising their profit."
-  },
-  {
-    "source": "financial-maths/short-ladder-attack",
-    "target": "financial-maths/short-selling",
-    "label": "manipulative form of",
-    "description": "A short ladder attack is a manipulative application of short selling that uses wash trades between colluding parties to artificially depress a stock price."
-  },
-  {
-    "source": "financial-maths/short-sale-constraints",
-    "target": "derivatives/no-arbitrage-principle",
-    "label": "violates",
-    "description": "Short sale constraints prevent the execution of arbitrage trades that require shorting \u2014 without the ability to short, mispricings can persist because the no-arbitrage condition requires both buying underpriced and selling overpriced securities."
-  },
-  {
-    "source": "financial-maths/short-sale-constraints",
-    "target": "financial-maths/short-selling",
-    "label": "restricts",
-    "description": "Short sale constraints limit the ability to sell short through uptick rules, bans, and locate requirements \u2014 these restrictions prevent pessimistic investors from expressing negative views and allow overpricing to persist."
-  },
-  {
-    "source": "financial-maths/short-sale-constraints",
-    "target": "financial-maths/stock-borrow-rate",
-    "label": "drives up",
-    "description": "Constraints on short selling reduce the supply of lendable shares, pushing up the stock borrow rate \u2014 the borrow cost is the market price of the constraint."
-  },
-  {
-    "source": "financial-maths/short-selling",
-    "target": "derivatives/put-call-parity",
-    "label": "replicated by",
-    "description": "Put-call parity shows that a short stock position can be synthetically replicated using options \u2014 buying a put and selling a call at the same strike creates an equivalent payoff without borrowing shares."
-  },
-  {
-    "source": "financial-maths/short-selling",
-    "target": "financial-maths/hedge-funds",
-    "label": "enables",
-    "description": "Short selling is the fundamental tool that allows hedge funds to profit from overvalued securities and construct market-neutral portfolios \u2014 without it, hedging would be limited to derivatives."
-  },
-  {
-    "source": "financial-maths/short-selling",
-    "target": "financial-maths/return-on-investment",
-    "label": "inverts",
-    "description": "Short selling inverts the standard return calculation \u2014 the seller profits when the asset price falls, creating a negative relationship between price movement and portfolio return."
-  },
-  {
-    "source": "financial-maths/short-squeeze",
-    "target": "financial-maths/securities-lending",
-    "label": "amplified by",
-    "description": "When lenders recall borrowed shares during a price spike, short sellers must buy back immediately \u2014 securities recalls amplify a squeeze by removing the option to hold the position."
-  },
-  {
-    "source": "financial-maths/short-squeeze",
-    "target": "financial-maths/short-selling",
-    "label": "risk of",
-    "description": "A short squeeze is the primary tail risk of short selling \u2014 forced covering by short sellers creates a feedback loop that can drive prices far above fundamental value and generate unlimited losses."
-  },
-  {
-    "source": "financial-maths/short-squeeze",
-    "target": "risk/margin-call",
-    "label": "triggers",
-    "description": "Rising prices during a short squeeze erode short sellers' equity, triggering margin calls that force further buying \u2014 this margin-driven feedback loop is the mechanism that makes squeezes so violent."
-  },
-  {
     "source": "financial-maths/sofr-ibor-transition",
-    "target": "financial-maths/basis-curve",
+    "target": "fixed-income/basis-curve",
     "label": "restructured",
     "description": "The transition from LIBOR to SOFR/SONIA restructured existing basis curves \u2014 the LIBOR-OIS basis was replaced by the SOFR-OIS basis, and the credit adjustment spread embedded in legacy fallback rates compensates for the structural difference between secured and unsecured benchmarks."
   },
   {
     "source": "financial-maths/sofr-ibor-transition",
-    "target": "financial-maths/overnight-index-swap",
+    "target": "fixed-income/overnight-index-swap",
     "label": "shifts discounting to",
     "description": "The IBOR transition moved derivatives discounting from LIBOR-based curves to OIS curves \u2014 overnight index swaps referencing SOFR or SONIA are now the instruments used to build the discount curve for all collateralised derivatives."
-  },
-  {
-    "source": "financial-maths/spread-curve",
-    "target": "financial-maths/asset-swap-spread",
-    "label": "expressed as",
-    "description": "When the spread is computed versus the swap curve and structured as a par asset swap, the result is the asset swap spread \u2014 which is one common way to express a credit spread curve in the interbank market."
-  },
-  {
-    "source": "financial-maths/spread-curve",
-    "target": "financial-maths/outright-curve",
-    "label": "derived from",
-    "description": "A spread curve is constructed by subtracting the benchmark outright curve from the instrument's outright yield at each maturity \u2014 the outright curve is therefore the reference level from which all spread measurements are taken."
   },
   {
     "source": "financial-maths/statistical-arbitrage",
@@ -3018,32 +2484,8 @@
     "description": "Many stat arb strategies use cointegration to identify groups of securities that share long-run equilibria \u2014 trading the mean-reverting residuals across many such groups generates the diversified alpha stream."
   },
   {
-    "source": "financial-maths/stock-borrow-rate",
-    "target": "financial-maths/securities-lending",
-    "label": "priced by",
-    "description": "The stock borrow rate is the price determined by supply and demand in the securities lending market \u2014 it reflects how scarce the stock is to borrow and how many short sellers are competing for available shares."
-  },
-  {
-    "source": "financial-maths/stock-borrow-rate",
-    "target": "financial-maths/short-selling",
-    "label": "cost of",
-    "description": "The borrow rate is the ongoing cost that makes short selling expensive for hard-to-borrow stocks \u2014 a trade with positive gross alpha can be unprofitable once the lending fee is deducted."
-  },
-  {
-    "source": "financial-maths/swap-spread",
-    "target": "financial-maths/interest-rate-swap",
-    "label": "component of",
-    "description": "The swap spread equals the par swap rate minus the sovereign yield at the same maturity \u2014 it is the part of the interest rate swap fixed rate that compensates for bank credit and funding risk above the risk-free government yield."
-  },
-  {
-    "source": "financial-maths/swap-spread",
-    "target": "financial-maths/spread-curve",
-    "label": "single point on",
-    "description": "At each maturity, the swap spread is the most liquid point on the spread curve between the swap curve and the sovereign curve \u2014 together these tenor points trace out the full swap-spread curve used for relative-value analysis."
-  },
-  {
     "source": "financial-maths/time-value-of-money",
-    "target": "financial-maths/yield-curve",
+    "target": "fixed-income/yield-curve",
     "label": "generalised by",
     "description": "The time value of money uses a single discount rate, but the yield curve generalises this to a different rate for every maturity \u2014 each cash flow is discounted at its own spot rate rather than one flat rate."
   },
@@ -3052,24 +2494,6 @@
     "target": "financial-maths/statistical-arbitrage",
     "label": "contrasts with",
     "description": "Triangular arbitrage is deterministic and riskless (ignoring execution risk), whereas statistical arbitrage is probabilistic and carries market risk on individual trades."
-  },
-  {
-    "source": "financial-maths/uptick-rule",
-    "target": "financial-maths/bear-raid",
-    "label": "defends against",
-    "description": "The uptick rule was specifically designed to defend against bear raids by preventing short sellers from continuously hitting the bid in a declining market."
-  },
-  {
-    "source": "financial-maths/uptick-rule",
-    "target": "financial-maths/short-sale-constraints",
-    "label": "type of",
-    "description": "The uptick rule is one of the primary short-sale constraints imposed by regulators \u2014 it restricts the price at which a short sale can be executed, adding a friction cost to short selling during declining markets."
-  },
-  {
-    "source": "financial-maths/uptick-rule",
-    "target": "financial-maths/short-selling",
-    "label": "constrains",
-    "description": "The uptick rule constrains short selling by requiring that short orders be placed above the last transaction price or current best bid, preventing short sellers from relentlessly selling into a falling market at every downtick."
   },
   {
     "source": "financial-maths/vwap",
@@ -3090,74 +2514,218 @@
     "description": "VWAP is the most widely used benchmark in transaction cost analysis \u2014 execution quality is measured by comparing the achieved price against the day s VWAP."
   },
   {
-    "source": "financial-maths/yield-curve",
+    "source": "fixed-income/asset-swap-spread",
+    "target": "financial-maths/interest-rate-swap",
+    "label": "uses",
+    "description": "An asset swap combines a bond purchase with an interest rate swap that exchanges the bond's fixed coupons for a floating rate plus the asset swap spread \u2014 the IRS is the mechanical component that converts fixed cash flows into the floating spread."
+  },
+  {
+    "source": "fixed-income/asset-swap-spread",
+    "target": "fixed-income/z-spread",
+    "label": "compared with",
+    "description": "The asset swap spread and Z-spread are both measures of a bond's credit and liquidity premium, but differ in construction \u2014 the ASW is a par-swap-based floored spread versus the swap curve, whilst the Z-spread shifts the entire zero curve; comparing the two reveals curve-shape effects."
+  },
+  {
+    "source": "fixed-income/basis-curve",
+    "target": "financial-maths/interest-rate-swap",
+    "label": "affects pricing of",
+    "description": "Multi-curve frameworks build a separate discount curve (OIS) and distinct forward curves for each tenor, so the basis between curves directly enters the fair value of every interest rate swap through the choice of projection and discounting curves."
+  },
+  {
+    "source": "fixed-income/basis-curve",
+    "target": "financial-maths/sofr-ibor-transition",
+    "label": "central to",
+    "description": "The LIBOR-OIS basis and tenor basis curves became central to derivatives pricing after the financial crisis, and the SOFR/IBOR transition required re-specifying these basis curves entirely as markets moved from LIBOR to risk-free overnight rates."
+  },
+  {
+    "source": "fixed-income/convexity",
+    "target": "fixed-income/modified-duration",
+    "label": "corrects",
+    "description": "Convexity corrects the linear approximation provided by modified duration for large yield moves \u2014 without the convexity term, duration alone systematically underestimates bond price gains when yields fall and overestimates losses when yields rise."
+  },
+  {
+    "source": "fixed-income/convexity",
+    "target": "fixed-income/option-adjusted-spread",
+    "label": "related to",
+    "description": "OAS calculation requires an interest rate model to value embedded options on a lattice \u2014 the curvature of the price\u2013yield relationship (convexity) determines how much option value is stripped out of the Z-spread to arrive at the OAS."
+  },
+  {
+    "source": "fixed-income/credit-default-swap",
+    "target": "financial-maths/hazard-rate",
+    "label": "priced using",
+    "description": "The fair CDS spread is derived from the hazard rate model \u2014 the premium leg equals the expected discounted periodic fee given survival, and the protection leg equals the expected discounted loss given default, both expressed as functions of the hazard rate."
+  },
+  {
+    "source": "fixed-income/credit-default-swap",
+    "target": "fixed-income/z-spread",
+    "label": "related to",
+    "description": "The CDS spread theoretically equals the bond's Z-spread adjusted for recovery rate \u2014 divergence between the CDS spread and the Z-spread (the CDS-bond basis) creates arbitrage opportunities between the two markets."
+  },
+  {
+    "source": "fixed-income/dv01",
+    "target": "banking-regulation/interest-rate-tenor-vertices",
+    "label": "mapped to",
+    "description": "Under FRTB, every position's DV01 sensitivity must be assigned to the nearest prescribed tenor vertex \u2014 DV01 is the raw sensitivity measure that feeds directly into the FRTB interest rate delta capital calculation."
+  },
+  {
+    "source": "fixed-income/dv01",
+    "target": "fixed-income/modified-duration",
+    "label": "computed from",
+    "description": "DV01 equals modified duration multiplied by the bond price and 0.0001 \u2014 modified duration is therefore the direct input from which DV01 is derived, making the two measures complementary expressions of the same interest rate sensitivity."
+  },
+  {
+    "source": "fixed-income/forward-rate-curve",
+    "target": "financial-maths/interest-rate-swap",
+    "label": "prices floating leg of",
+    "description": "The floating leg cash flows of an interest rate swap are sized using forward rates bootstrapped from the swap curve \u2014 each future SOFR/SONIA payment is the forward rate for that accrual period, discounted back to today."
+  },
+  {
+    "source": "fixed-income/forward-rate-curve",
+    "target": "fixed-income/zero-rate-curve",
+    "label": "derived from",
+    "description": "The forward rate curve is obtained from the zero rate curve via the relationship between consecutive discount factors, so the zero curve is the foundation from which all forward rates are derived through bootstrapping."
+  },
+  {
+    "source": "fixed-income/modified-duration",
+    "target": "fixed-income/convexity",
+    "label": "first-order term of",
+    "description": "Modified duration is the linear (first-order) approximation to price sensitivity, whilst convexity is the second-order correction \u2014 together they form the two-term Taylor expansion of the price\u2013yield relationship."
+  },
+  {
+    "source": "fixed-income/modified-duration",
+    "target": "fixed-income/dv01",
+    "label": "converts to",
+    "description": "DV01 is obtained by multiplying modified duration by the bond price and by 0.0001 \u2014 modified duration gives the percentage sensitivity whilst DV01 expresses the same risk in cash terms per basis point."
+  },
+  {
+    "source": "fixed-income/outright-curve",
+    "target": "fixed-income/swap-spread",
+    "label": "input to",
+    "description": "The swap spread at each maturity is the difference between the swap outright curve and the government bond outright curve \u2014 both outright curves must be observed to compute this spread."
+  },
+  {
+    "source": "fixed-income/outright-curve",
+    "target": "fixed-income/yield-curve",
+    "label": "synonym of",
+    "description": "The outright curve is the yield curve for a specific instrument quoted in absolute yield terms \u2014 it is the raw term structure of yields before any spread adjustment is applied."
+  },
+  {
+    "source": "fixed-income/overnight-index-swap",
+    "target": "financial-maths/funding-rate",
+    "label": "benchmarks",
+    "description": "The OIS rate is the market's consensus forecast of the average overnight funding rate over the swap's term \u2014 it is the cleanest measure of the expected risk-free funding cost."
+  },
+  {
+    "source": "fixed-income/overnight-index-swap",
+    "target": "financial-maths/repo-agreement",
+    "label": "priced from",
+    "description": "OIS rates are closely tied to repo rates because both reflect the cost of secured overnight lending \u2014 the OIS curve is constructed from the same overnight rates that underpin the repo market."
+  },
+  {
+    "source": "fixed-income/overnight-index-swap",
+    "target": "fixed-income/yield-curve",
+    "label": "constructs",
+    "description": "OIS rates at different tenors form the OIS discount curve, which has replaced the LIBOR curve as the standard for discounting collateralised derivatives and constructing the risk-free term structure."
+  },
+  {
+    "source": "fixed-income/par-rate-curve",
+    "target": "financial-maths/interest-rate-swap",
+    "label": "defines rate for",
+    "description": "The par swap rate is mathematically identical to the par bond coupon rate \u2014 the fixed leg of an interest rate swap is set to the par rate so the swap has zero value at inception, directly linking the par curve to swap pricing."
+  },
+  {
+    "source": "fixed-income/spread-curve",
+    "target": "fixed-income/asset-swap-spread",
+    "label": "expressed as",
+    "description": "When the spread is computed versus the swap curve and structured as a par asset swap, the result is the asset swap spread \u2014 which is one common way to express a credit spread curve in the interbank market."
+  },
+  {
+    "source": "fixed-income/spread-curve",
+    "target": "fixed-income/outright-curve",
+    "label": "derived from",
+    "description": "A spread curve is constructed by subtracting the benchmark outright curve from the instrument's outright yield at each maturity \u2014 the outright curve is therefore the reference level from which all spread measurements are taken."
+  },
+  {
+    "source": "fixed-income/swap-spread",
+    "target": "financial-maths/interest-rate-swap",
+    "label": "component of",
+    "description": "The swap spread equals the par swap rate minus the sovereign yield at the same maturity \u2014 it is the part of the interest rate swap fixed rate that compensates for bank credit and funding risk above the risk-free government yield."
+  },
+  {
+    "source": "fixed-income/swap-spread",
+    "target": "fixed-income/spread-curve",
+    "label": "single point on",
+    "description": "At each maturity, the swap spread is the most liquid point on the spread curve between the swap curve and the sovereign curve \u2014 together these tenor points trace out the full swap-spread curve used for relative-value analysis."
+  },
+  {
+    "source": "fixed-income/yield-curve",
     "target": "derivatives/rho-greeks",
     "label": "drives",
     "description": "The risk-free rate in the Black-Scholes formula comes from the yield curve \u2014 shifts in the curve directly affect Rho exposure, especially for long-dated options sensitive to the term structure of rates."
   },
   {
-    "source": "financial-maths/yield-curve",
+    "source": "fixed-income/yield-curve",
     "target": "linear-algebra/eigenvalues-and-eigenvectors",
     "label": "analysed via",
     "description": "PCA on the covariance matrix of yield curve changes decomposes movements into eigenvectors (level, slope, curvature) \u2014 typically three factors explain over 95% of all variation in interest rates."
   },
   {
-    "source": "financial-maths/yield-curve",
+    "source": "fixed-income/yield-curve",
     "target": "linear-algebra/systems-of-linear-equations",
     "label": "bootstrapped via",
     "description": "Constructing the yield curve from coupon bond prices requires solving a triangular system of linear equations \u2014 each new maturity adds one equation and one unknown spot rate."
   },
   {
-    "source": "financial-maths/yield-curve-bootstrapping",
+    "source": "fixed-income/yield-curve-bootstrapping",
     "target": "calculus/cubic-spline-interpolation",
     "label": "smoothed by",
     "description": "Cubic spline interpolation is applied between bootstrapped knot points to produce a continuous, smooth yield curve with well-behaved forward rates."
   },
   {
-    "source": "financial-maths/yield-curve-bootstrapping",
+    "source": "fixed-income/yield-curve-bootstrapping",
     "target": "financial-maths/interest-rate-swap",
     "label": "uses as input",
     "description": "Swap rates are the primary input instruments for bootstrapping the long end of the yield curve \u2014 each swap rate provides one equation to solve for the next unknown discount factor."
   },
   {
-    "source": "financial-maths/yield-curve-bootstrapping",
-    "target": "financial-maths/yield-curve",
+    "source": "fixed-income/yield-curve-bootstrapping",
+    "target": "fixed-income/yield-curve",
     "label": "produces",
     "description": "Bootstrapping produces the yield curve that is the foundation for pricing all fixed-income instruments \u2014 the resulting discount factors, zero rates, and forward rates drive bond valuations, swap pricing, and derivatives hedging."
   },
   {
-    "source": "financial-maths/yield-curve-bootstrapping",
-    "target": "financial-maths/zero-rate-curve",
+    "source": "fixed-income/yield-curve-bootstrapping",
+    "target": "fixed-income/zero-rate-curve",
     "label": "constructs",
     "description": "Bootstrapping is the standard method for constructing the zero rate curve from market instruments \u2014 it sequentially solves for discount factors that reprice deposits, futures, and swaps."
   },
   {
-    "source": "financial-maths/z-spread",
-    "target": "financial-maths/option-adjusted-spread",
+    "source": "fixed-income/z-spread",
+    "target": "fixed-income/option-adjusted-spread",
     "label": "extended by",
     "description": "OAS extends the Z-spread framework by additionally modelling embedded options on an interest rate lattice \u2014 the OAS equals the Z-spread minus the option value in spread terms, so the Z-spread is the starting point for OAS computation."
   },
   {
-    "source": "financial-maths/z-spread",
-    "target": "financial-maths/spread-curve",
+    "source": "fixed-income/z-spread",
+    "target": "fixed-income/spread-curve",
     "label": "point on",
     "description": "The Z-spread is a single number summarising a bond's credit premium relative to the zero curve, whilst the spread curve shows how this premium varies by maturity \u2014 the Z-spread is the constant-spread special case of the more general spread curve."
   },
   {
-    "source": "financial-maths/zero-rate-curve",
-    "target": "financial-maths/forward-rate-curve",
+    "source": "fixed-income/zero-rate-curve",
+    "target": "fixed-income/forward-rate-curve",
     "label": "derives",
     "description": "Forward rates between any two maturities are computed directly from the zero rate curve via the no-arbitrage relationship f(T1,T2) = (r(T2)\u00b7T2 \u2212 r(T1)\u00b7T1)/(T2 \u2212 T1), making the zero curve the primary input for bootstrapping the forward curve."
   },
   {
-    "source": "financial-maths/zero-rate-curve",
-    "target": "financial-maths/par-rate-curve",
+    "source": "fixed-income/zero-rate-curve",
+    "target": "fixed-income/par-rate-curve",
     "label": "bootstrapped from",
     "description": "Par rates are the market-observable inputs (coupon bonds priced at par) from which the zero rate curve is extracted by bootstrapping \u2014 stripping the coupon effect one maturity at a time until each zero rate is isolated."
   },
   {
-    "source": "financial-maths/zero-rate-curve",
-    "target": "financial-maths/z-spread",
+    "source": "fixed-income/zero-rate-curve",
+    "target": "fixed-income/z-spread",
     "label": "used to compute",
     "description": "The Z-spread is defined as a constant addition to every point on the zero rate curve that equates the discounted cash flows to the observed bond price \u2014 the zero curve is therefore the benchmark against which all Z-spreads are measured."
   },
@@ -3985,12 +3553,6 @@
   },
   {
     "source": "mathematical-notation/characteristic-function-notation",
-    "target": "derivatives/heston-model",
-    "label": "enables pricing in",
-    "description": "The Heston model has a closed-form characteristic function for log S_T but no closed-form density \u2014 option prices are computed by numerically inverting phi via the Carr-Madan FFT formula, making characteristic function notation essential for practical Heston implementation."
-  },
-  {
-    "source": "mathematical-notation/characteristic-function-notation",
     "target": "probability/moment-generating-function",
     "label": "compared to",
     "description": "Both the MGF E[e^{tX}] and the characteristic function E[e^{iuX}] encode the full distribution, but the characteristic function always exists while the MGF diverges for heavy-tailed distributions \u2014 making phi the preferred tool for Levy process option pricing."
@@ -4000,6 +3562,12 @@
     "target": "probability/probability-density-function",
     "label": "inverts to",
     "description": "The Fourier inversion formula f_X(x) = (1/2pi) int e^{-iux} phi_X(u) du recovers the PDF from the characteristic function \u2014 in option pricing this inversion is performed numerically via FFT to obtain prices across a full strike grid at once."
+  },
+  {
+    "source": "mathematical-notation/characteristic-function-notation",
+    "target": "volatility/heston-model",
+    "label": "enables pricing in",
+    "description": "The Heston model has a closed-form characteristic function for log S_T but no closed-form density \u2014 option prices are computed by numerically inverting phi via the Carr-Madan FFT formula, making characteristic function notation essential for practical Heston implementation."
   },
   {
     "source": "mathematical-notation/conditional-expectation-notation",
@@ -5323,12 +4891,6 @@
   },
   {
     "source": "probability/jensens-inequality",
-    "target": "derivatives/volatility-swap",
-    "label": "explains pricing of",
-    "description": "Jensen's inequality applied to the concave square-root function explains why the fair volatility swap strike is below the square root of the variance swap strike \u2014 E[sigma] < sqrt(E[sigma^2])."
-  },
-  {
-    "source": "probability/jensens-inequality",
     "target": "portfolio-theory/modern-portfolio-theory",
     "label": "underlies",
     "description": "Jensen s inequality explains why diversification works: the portfolio variance (a convex function of weights) is reduced by averaging, and the concavity of utility functions means investors prefer less uncertainty."
@@ -5344,6 +4906,12 @@
     "target": "stochastic-processes/volatility-drag",
     "label": "foundation of",
     "description": "Jensen s inequality for the concave log function gives E[ln X] <= ln E[X], which is the mathematical basis for volatility drag \u2014 randomness always reduces the compound growth rate."
+  },
+  {
+    "source": "probability/jensens-inequality",
+    "target": "volatility/volatility-swap",
+    "label": "explains pricing of",
+    "description": "Jensen's inequality applied to the concave square-root function explains why the fair volatility swap strike is below the square root of the variance swap strike \u2014 E[sigma] < sqrt(E[sigma^2])."
   },
   {
     "source": "probability/joint-pdf-and-marginal-distributions",
@@ -5653,12 +5221,6 @@
   },
   {
     "source": "probability/tail-dependence",
-    "target": "derivatives/correlation-smile",
-    "label": "explains",
-    "description": "Tail dependence \u2014 the tendency for extreme moves to coincide more often than normal correlation implies \u2014 is the statistical phenomenon that produces the correlation smile's upward slope at low strikes."
-  },
-  {
-    "source": "probability/tail-dependence",
     "target": "probability/copulas",
     "label": "distinguishes",
     "description": "The tail dependence coefficient is the key property that distinguishes copula families \u2014 Gaussian copulas have zero tail dependence while Student-t and Clayton copulas have non-zero values, making copula selection a choice about tail behaviour."
@@ -5668,6 +5230,12 @@
     "target": "risk/value-at-risk",
     "label": "critical for",
     "description": "Portfolio VaR in the tails depends on whether assets crash together \u2014 models with zero tail dependence systematically underestimate joint extreme losses, producing dangerously optimistic VaR at high confidence levels."
+  },
+  {
+    "source": "probability/tail-dependence",
+    "target": "volatility/correlation-smile",
+    "label": "explains",
+    "description": "Tail dependence \u2014 the tendency for extreme moves to coincide more often than normal correlation implies \u2014 is the statistical phenomenon that produces the correlation smile's upward slope at low strikes."
   },
   {
     "source": "probability/uniform-distribution",
@@ -5722,24 +5290,6 @@
     "target": "statistics/survivorship-bias",
     "label": "distorted by",
     "description": "Backtests conducted on survivor-only databases are systematically distorted upward, as they exclude the stocks that went bankrupt or were delisted \u2014 precisely the ones that would have caused losses."
-  },
-  {
-    "source": "risk/basis-risk-banking-book",
-    "target": "financial-maths/net-interest-income",
-    "label": "impacts",
-    "description": "Basis risk impacts NII when the reference rates on assets and liabilities diverge \u2014 even if both sides reprice at the same time, a widening spread between reference rates squeezes net interest income."
-  },
-  {
-    "source": "risk/basis-risk-banking-book",
-    "target": "financial-maths/sofr-ibor-transition",
-    "label": "amplified by",
-    "description": "The LIBOR-to-SOFR transition amplified basis risk as banks migrated assets and liabilities to different replacement rates at different speeds, creating new and sometimes unexpected basis exposures."
-  },
-  {
-    "source": "risk/basis-risk-banking-book",
-    "target": "risk/interest-rate-risk-in-the-banking-book",
-    "label": "component of",
-    "description": "Basis risk is one of the four IRRBB sub-risks \u2014 it captures the exposure from imperfect correlation between the reference rates on assets and liabilities, which is invisible to repricing gap and duration gap analysis."
   },
   {
     "source": "risk/coherent-risk-measure",
@@ -5802,18 +5352,6 @@
     "description": "For hedge funds, counterparty risk is heavily concentrated in the prime brokerage relationship \u2014 a prime broker failure can freeze assets, borrows, and margin financing simultaneously."
   },
   {
-    "source": "risk/curvature-risk-charge",
-    "target": "financial-maths/convexity",
-    "label": "quantifies regulatory cost of",
-    "description": "The curvature risk charge is the regulatory capital measure for convexity risk \u2014 just as bond convexity measures the second-order price sensitivity to yield, the curvature charge measures the second-order P&L deviation from the linear delta approximation for options."
-  },
-  {
-    "source": "risk/curvature-risk-charge",
-    "target": "risk/frtb-sensitivity-based-method",
-    "label": "component of",
-    "description": "The curvature risk charge is one of the three components of the FRTB Sensitivity-Based Method \u2014 it captures second-order price sensitivity for options and structured products that is not covered by the linear delta charge."
-  },
-  {
     "source": "risk/drawdown-duration",
     "target": "financial-maths/absolute-return",
     "label": "risk measure for",
@@ -5832,52 +5370,16 @@
     "description": "Maximum drawdown measures the depth of the worst loss while drawdown duration measures how long the recovery takes \u2014 together they capture both the severity and persistence of portfolio losses."
   },
   {
-    "source": "risk/earnings-at-risk",
-    "target": "financial-maths/net-interest-income",
-    "label": "measures risk to",
-    "description": "EaR quantifies the potential decline in NII under adverse rate scenarios \u2014 it is the probabilistic wrapper around NII sensitivity that translates rate risk into an earnings impact figure."
-  },
-  {
-    "source": "risk/earnings-at-risk",
-    "target": "risk/interest-rate-risk-in-the-banking-book",
-    "label": "income metric of",
-    "description": "EaR is the income-based IRRBB metric that complements EVE \u2014 it shows the near-term earnings impact of rate changes, which is what bank boards and equity analysts focus on."
-  },
-  {
-    "source": "risk/earnings-at-risk",
-    "target": "risk/value-at-risk",
-    "label": "analogous to",
-    "description": "EaR is the banking book analogue of VaR \u2014 both express worst-case losses at a confidence level, but VaR applies to mark-to-market P&L while EaR applies to accrual-based net interest income."
-  },
-  {
-    "source": "risk/economic-value-of-equity",
-    "target": "financial-maths/duration-gap",
-    "label": "driven by",
-    "description": "The duration gap is the primary determinant of EVE sensitivity \u2014 the larger the mismatch between asset and liability durations, the more EVE changes for a given rate shock."
-  },
-  {
-    "source": "risk/economic-value-of-equity",
-    "target": "risk/interest-rate-risk-in-the-banking-book",
-    "label": "solvency metric of",
-    "description": "EVE is the present-value (solvency) lens of IRRBB \u2014 it captures how rate changes affect the economic net worth of the banking book, complementing the near-term NII view."
-  },
-  {
-    "source": "risk/economic-value-of-equity",
-    "target": "risk/repricing-risk",
-    "label": "sensitive to",
-    "description": "EVE is affected by repricing mismatches because assets and liabilities with different repricing dates respond differently to rate changes, creating present-value gains or losses."
+    "source": "risk/expected-shortfall",
+    "target": "banking-regulation/frtb-sensitivity-based-method",
+    "label": "underpins IMA in",
+    "description": "Under FRTB's Internal Models Approach, the headline capital metric is 97.5% Expected Shortfall over a stressed period \u2014 the SBM provides a standardised floor whilst IMA-approved desks replace it with their own ES-based model."
   },
   {
     "source": "risk/expected-shortfall",
     "target": "risk/coherent-risk-measure",
     "label": "satisfies",
     "description": "Expected Shortfall is a coherent risk measure because it satisfies subadditivity \u2014 ES(A+B) \u2264 ES(A) + ES(B) \u2014 which VaR does not; this mathematical property is what motivated Basel's FRTB to adopt 97.5% ES as the regulatory capital metric."
-  },
-  {
-    "source": "risk/expected-shortfall",
-    "target": "risk/frtb-sensitivity-based-method",
-    "label": "underpins IMA in",
-    "description": "Under FRTB's Internal Models Approach, the headline capital metric is 97.5% Expected Shortfall over a stressed period \u2014 the SBM provides a standardised floor whilst IMA-approved desks replace it with their own ES-based model."
   },
   {
     "source": "risk/expected-shortfall",
@@ -5922,106 +5424,22 @@
     "description": "Margin calls are the primary trigger of fire sales \u2014 when leveraged investors cannot meet margin demands with cash, they are forced to liquidate positions at whatever price the market will bear."
   },
   {
-    "source": "risk/frtb-sensitivity-based-method",
-    "target": "risk/curvature-risk-charge",
-    "label": "includes",
-    "description": "The FRTB Sensitivity-Based Method has three components \u2014 delta, vega, and curvature charges \u2014 summed to give total SBM capital; the curvature charge captures the second-order (convexity) risk not covered by the delta sensitivity."
-  },
-  {
-    "source": "risk/frtb-sensitivity-based-method",
-    "target": "risk/expected-shortfall",
-    "label": "complements",
-    "description": "The FRTB SBM is the standardised capital charge that all banks must compute, whilst Expected Shortfall is the metric used by the Internal Models Approach \u2014 the two sit alongside each other in the FRTB framework as standardised and model-based capital floors."
-  },
-  {
-    "source": "risk/frtb-sensitivity-based-method",
-    "target": "risk/interest-rate-tenor-vertices",
-    "label": "maps sensitivities to",
-    "description": "The FRTB SBM requires all interest rate delta sensitivities to be mapped to the ten prescribed tenor vertices before aggregation \u2014 these vertices are the buckets used within the GIRR risk class of the sensitivity-based method."
-  },
-  {
-    "source": "risk/interest-rate-risk-in-the-banking-book",
-    "target": "financial-maths/interest-rate-swap",
-    "label": "hedged using",
-    "description": "Interest rate swaps are the primary tool for managing IRRBB \u2014 paying or receiving fixed in a swap alters the duration profile of the banking book, allowing ALM teams to adjust the duration gap without changing the underlying loan and deposit portfolio."
-  },
-  {
-    "source": "risk/interest-rate-risk-in-the-banking-book",
-    "target": "risk/economic-value-of-equity",
-    "label": "measured via",
-    "description": "EVE is one of the two core IRRBB metrics \u2014 it captures the present-value impact of rate changes on the entire banking book, providing the solvency perspective that Basel requires alongside the earnings (NII) view."
-  },
-  {
-    "source": "risk/interest-rate-risk-in-the-banking-book",
-    "target": "risk/repricing-risk",
-    "label": "decomposed into",
-    "description": "Repricing risk is the most fundamental component of IRRBB \u2014 the maturity and repricing mismatches between banking book assets and liabilities are the primary source of interest rate exposure."
-  },
-  {
-    "source": "risk/interest-rate-tenor-vertices",
-    "target": "financial-maths/dv01",
-    "label": "receives sensitivity from",
-    "description": "Under FRTB, each position's DV01 (dollar value of a basis point) is assigned to the nearest prescribed tenor vertex \u2014 the vertex then accumulates the net DV01 from all positions, which becomes the sensitivity input s_k in the capital aggregation formula."
-  },
-  {
-    "source": "risk/interest-rate-tenor-vertices",
-    "target": "risk/frtb-sensitivity-based-method",
-    "label": "defines buckets for",
-    "description": "The ten prescribed tenor vertices (0.25Y to 30Y) are the interest rate buckets used within the FRTB SBM's GIRR risk class \u2014 sensitivities are mapped to these vertices and then aggregated using prescribed correlations to produce the IR delta capital charge."
-  },
-  {
     "source": "risk/key-rate-duration",
-    "target": "financial-maths/modified-duration",
-    "label": "decomposes",
-    "description": "Key rate duration decomposes the single modified duration figure into tenor-specific sensitivities, revealing how interest rate exposure is distributed across the yield curve rather than assuming a parallel shift."
-  },
-  {
-    "source": "risk/key-rate-duration",
-    "target": "risk/interest-rate-risk-in-the-banking-book",
+    "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
     "label": "granular measure of",
     "description": "KRD provides the granular tenor-by-tenor sensitivity profile needed to assess banking book exposure under non-parallel yield curve scenarios prescribed by Basel's IRRBB framework."
   },
   {
     "source": "risk/key-rate-duration",
-    "target": "risk/yield-curve-risk",
+    "target": "banking-regulation/yield-curve-risk",
     "label": "primary tool for",
     "description": "Key rate duration is the primary tool for managing yield curve risk \u2014 by quantifying sensitivity at each tenor point, it enables targeted hedging of steepening, flattening, and twist scenarios."
   },
   {
-    "source": "risk/liquidity-buffer-composition",
-    "target": "risk/economic-value-of-equity",
-    "label": "adds duration to",
-    "description": "Government bonds held in the HQLA buffer add duration to the asset side of the balance sheet, increasing EVE sensitivity to rate rises \u2014 the 2022 UK gilt crisis showed how LCR buffers can themselves become a source of mark-to-market loss."
-  },
-  {
-    "source": "risk/liquidity-buffer-composition",
-    "target": "risk/liquidity-coverage-ratio",
-    "label": "numerator of",
-    "description": "The HQLA stock \u2014 classified into Level 1, 2A, and 2B with haircuts and caps \u2014 forms the numerator of the LCR calculation, determining how much of the bank's liquid assets count toward the regulatory minimum."
-  },
-  {
-    "source": "risk/liquidity-buffer-composition",
-    "target": "risk/liquidity-risk",
-    "label": "mitigates",
-    "description": "The liquidity buffer is the bank's primary defence against short-term funding stress \u2014 its composition and size determine whether the bank can meet obligations without fire-selling illiquid assets."
-  },
-  {
-    "source": "risk/liquidity-coverage-ratio",
-    "target": "financial-maths/asset-liability-management",
-    "label": "constrains",
-    "description": "The LCR requirement forces banks to hold large HQLA buffers that add duration to the asset side, creating an interest rate position that ALM must manage alongside the rest of the banking book."
-  },
-  {
-    "source": "risk/liquidity-coverage-ratio",
-    "target": "financial-maths/non-maturity-deposits",
-    "label": "floors run-off of",
-    "description": "Basel's LCR assigns prescribed run-off rates to different deposit categories, establishing a regulatory floor for how stable deposits can be assumed to be \u2014 this interacts with the behavioural assumptions used in NMD modelling."
-  },
-  {
-    "source": "risk/liquidity-coverage-ratio",
-    "target": "risk/liquidity-risk",
-    "label": "mitigates",
-    "description": "The LCR is the primary regulatory tool for mitigating short-term liquidity risk \u2014 by requiring banks to hold sufficient HQLA to cover 30 days of stressed outflows, it ensures a minimum buffer against funding crises."
+    "source": "risk/key-rate-duration",
+    "target": "fixed-income/modified-duration",
+    "label": "decomposes",
+    "description": "Key rate duration decomposes the single modified duration figure into tenor-specific sensitivities, revealing how interest rate exposure is distributed across the yield curve rather than assuming a parallel shift."
   },
   {
     "source": "risk/liquidity-risk",
@@ -6114,54 +5532,6 @@
     "description": "Monte Carlo VaR simulates thousands of portfolio paths and reads the loss quantile directly from the resulting distribution, avoiding the normality assumption of parametric VaR."
   },
   {
-    "source": "risk/net-stable-funding-ratio",
-    "target": "financial-maths/asset-liability-management",
-    "label": "constrains funding mix of",
-    "description": "The NSFR forces ALM teams to maintain a minimum proportion of stable funding, constraining the maturity transformation strategy and often requiring more expensive long-term debt issuance or retail deposit gathering."
-  },
-  {
-    "source": "risk/net-stable-funding-ratio",
-    "target": "risk/liquidity-coverage-ratio",
-    "label": "complements",
-    "description": "The NSFR addresses structural funding stability over a 1-year horizon, complementing the LCR's 30-day stress focus \u2014 together they form Basel III's twin liquidity standards."
-  },
-  {
-    "source": "risk/net-stable-funding-ratio",
-    "target": "risk/liquidity-risk",
-    "label": "mitigates structural",
-    "description": "The NSFR mitigates structural liquidity risk by requiring stable funding for illiquid assets, preventing the maturity mismatch that caused failures like Northern Rock where long-term mortgages were funded by overnight wholesale markets."
-  },
-  {
-    "source": "risk/non-modellable-risk-factor",
-    "target": "risk/expected-shortfall",
-    "label": "charged via stressed",
-    "description": "NMRFs receive a separate stressed Expected Shortfall capital charge computed from a single worst-case scenario rather than from historical simulation \u2014 this stressed ES is typically far larger than the equivalent IMA charge, reflecting the lack of observable market data."
-  },
-  {
-    "source": "risk/non-modellable-risk-factor",
-    "target": "risk/risk-factor-eligibility-test",
-    "label": "results from failing",
-    "description": "A risk factor is classified as non-modellable precisely when it fails the Risk Factor Eligibility Test \u2014 the NMRF designation is the direct consequence of having fewer than 24 real price observations or a gap exceeding 90 days in the prior 12 months."
-  },
-  {
-    "source": "risk/optionality-risk",
-    "target": "financial-maths/non-maturity-deposits",
-    "label": "driven by",
-    "description": "Non-maturity deposits are a key source of optionality risk \u2014 depositors' behavioural option to withdraw creates an embedded option that shortens liability duration when rates rise."
-  },
-  {
-    "source": "risk/optionality-risk",
-    "target": "risk/economic-value-of-equity",
-    "label": "distorts",
-    "description": "Optionality risk distorts EVE calculations because embedded options create non-linear rate sensitivity \u2014 mortgage prepayment shortens asset duration when rates fall, reducing the EVE gain the bank would otherwise receive."
-  },
-  {
-    "source": "risk/optionality-risk",
-    "target": "risk/interest-rate-risk-in-the-banking-book",
-    "label": "component of",
-    "description": "Optionality risk is one of the four IRRBB sub-risks \u2014 it captures the asymmetric exposure from embedded options in banking products that customers exercise adversely for the bank."
-  },
-  {
     "source": "risk/pnl-attribution",
     "target": "derivatives/delta-gamma-approximation",
     "label": "implemented via",
@@ -6178,36 +5548,6 @@
     "target": "risk/value-at-risk",
     "label": "validates",
     "description": "P&L attribution validates VaR models by comparing predicted risk factor sensitivities against actual P&L outcomes \u2014 persistent unexplained P&L suggests the risk model is missing important factors."
-  },
-  {
-    "source": "risk/repricing-risk",
-    "target": "financial-maths/net-interest-income",
-    "label": "impacts",
-    "description": "Repricing risk directly impacts NII \u2014 when rate-sensitive assets and liabilities reprice at different times, rate movements create gaps that cause NII to rise or fall."
-  },
-  {
-    "source": "risk/repricing-risk",
-    "target": "risk/economic-value-of-equity",
-    "label": "impacts",
-    "description": "Repricing mismatches also affect EVE because assets and liabilities with different repricing dates have different present-value sensitivities to rate changes."
-  },
-  {
-    "source": "risk/repricing-risk",
-    "target": "risk/interest-rate-risk-in-the-banking-book",
-    "label": "component of",
-    "description": "Repricing risk is the most fundamental of the four IRRBB sub-risks (alongside yield curve, basis, and optionality risk) \u2014 it captures the core maturity mismatch exposure in the banking book."
-  },
-  {
-    "source": "risk/risk-factor-eligibility-test",
-    "target": "risk/frtb-sensitivity-based-method",
-    "label": "feeds into",
-    "description": "Modellable risk factors that pass the RFET are included in the Internal Models Approach ES calculation, whilst those that fail are capitalised separately as NMRFs \u2014 the RFET therefore determines which risk factors enter the IMA versus which generate the NMRF add-on alongside the SBM floor."
-  },
-  {
-    "source": "risk/risk-factor-eligibility-test",
-    "target": "risk/non-modellable-risk-factor",
-    "label": "classifies",
-    "description": "The RFET is the gateway test that determines whether a risk factor is modellable or non-modellable \u2014 failing the minimum 24-observation threshold triggers NMRF classification and a separate, more punitive capital treatment."
   },
   {
     "source": "risk/stress-testing",
@@ -6264,22 +5604,328 @@
     "description": "Volatility scaling exploits volatility clustering \u2014 the empirical fact that high volatility persists \u2014 by using current volatility as a predictor of near-future volatility to size positions appropriately."
   },
   {
-    "source": "risk/yield-curve-risk",
-    "target": "financial-maths/yield-curve",
-    "label": "risk from reshaping of",
-    "description": "Yield curve risk is the exposure to non-parallel changes in the yield curve \u2014 steepening, flattening, and twisting \u2014 that affect different tenors of the banking book differently."
+    "source": "short-selling/bear-raid",
+    "target": "short-selling/short-selling",
+    "label": "weaponises",
+    "description": "A bear raid weaponises short selling by using aggressive, coordinated selling to artificially depress a stock price for profit, rather than simply expressing a bearish view."
   },
   {
-    "source": "risk/yield-curve-risk",
-    "target": "risk/interest-rate-risk-in-the-banking-book",
-    "label": "component of",
-    "description": "Yield curve risk is one of the four IRRBB sub-risks \u2014 it captures the exposure to non-parallel rate movements that a simple duration gap (parallel shift) analysis would miss."
+    "source": "short-selling/bear-raid",
+    "target": "short-selling/short-squeeze",
+    "label": "can backfire into",
+    "description": "A bear raid can backfire into a short squeeze if buyers absorb the selling pressure and push the price back up, trapping the raiders in losing short positions that they are forced to cover."
   },
   {
-    "source": "risk/yield-curve-risk",
-    "target": "risk/interest-rate-tenor-vertices",
-    "label": "measured at",
-    "description": "Yield curve risk is measured by computing PV01 sensitivities at each tenor vertex and applying non-parallel shocks \u2014 the tenor vertices are the grid points at which curve reshaping is assessed."
+    "source": "short-selling/cover-the-short",
+    "target": "short-selling/short-selling",
+    "label": "closes",
+    "description": "Covering the short is the exit mechanism for a short sale \u2014 buying back borrowed shares to return them and realise the profit or loss on the position."
+  },
+  {
+    "source": "short-selling/cover-the-short",
+    "target": "short-selling/short-squeeze",
+    "label": "triggers",
+    "description": "Mass covering by short sellers is the direct cause of a short squeeze \u2014 the collective buying pressure from forced or voluntary covering drives the price higher in a self-reinforcing loop."
+  },
+  {
+    "source": "short-selling/days-to-cover",
+    "target": "short-selling/short-interest",
+    "label": "derived from",
+    "description": "Days to cover is calculated by dividing total short interest by average daily volume \u2014 short interest is the raw input that, when normalised by liquidity, yields the actionable squeeze-risk metric."
+  },
+  {
+    "source": "short-selling/days-to-cover",
+    "target": "short-selling/short-selling",
+    "label": "measures pressure of",
+    "description": "Days to cover quantifies the aggregate exit risk for all short sellers in a stock \u2014 a high ratio means shorts collectively hold a position that would take many days of normal volume to unwind, amplifying directional pressure."
+  },
+  {
+    "source": "short-selling/days-to-cover",
+    "target": "short-selling/short-squeeze",
+    "label": "predicts",
+    "description": "A high days-to-cover ratio is the primary quantitative signal for short squeeze risk \u2014 the more days required to cover, the more violent the forced buying when a positive catalyst arrives."
+  },
+  {
+    "source": "short-selling/fail-to-deliver",
+    "target": "short-selling/cover-the-short",
+    "label": "forces",
+    "description": "Regulatory close-out requirements on fails-to-deliver force short sellers to cover their positions by purchasing shares in the open market within a specified timeframe."
+  },
+  {
+    "source": "short-selling/fail-to-deliver",
+    "target": "short-selling/naked-short-selling",
+    "label": "indicates",
+    "description": "Persistent fails-to-deliver are a key indicator of naked short selling, as they reveal that sellers did not have borrowed shares to deliver at settlement."
+  },
+  {
+    "source": "short-selling/fail-to-deliver",
+    "target": "short-selling/securities-lending",
+    "label": "results from failure of",
+    "description": "Fails-to-deliver often result from breakdowns in the securities lending chain \u2014 when a borrow is recalled or cannot be sourced, the short seller cannot deliver the shares at settlement."
+  },
+  {
+    "source": "short-selling/locate-requirement",
+    "target": "short-selling/naked-short-selling",
+    "label": "prevents",
+    "description": "The locate requirement is the regulatory mechanism that prevents naked short selling \u2014 by requiring a confirmed borrow before a short order is accepted, it ensures that every short sale has a real share behind it."
+  },
+  {
+    "source": "short-selling/locate-requirement",
+    "target": "short-selling/securities-lending",
+    "label": "depends on",
+    "description": "Obtaining a locate requires the prime broker to source shares from the securities lending market \u2014 without an active lending pool, locates cannot be granted and short selling capacity collapses."
+  },
+  {
+    "source": "short-selling/locate-requirement",
+    "target": "short-selling/short-selling",
+    "label": "prerequisite for",
+    "description": "Under Regulation SHO, a broker must confirm a locate before executing any short sale \u2014 the locate requirement is the first mandatory step in the short-selling process and sets the capacity constraint for any short strategy."
+  },
+  {
+    "source": "short-selling/locate-requirement",
+    "target": "short-selling/stock-borrow-rate",
+    "label": "determines cost of",
+    "description": "When a locate is obtained for a hard-to-borrow security, the borrow rate charged reflects the scarcity of available shares \u2014 the locate process and the borrow rate are two sides of the same securities lending transaction."
+  },
+  {
+    "source": "short-selling/margin-call",
+    "target": "financial-maths/leverage",
+    "label": "triggered by",
+    "description": "Margin calls arise directly from the use of leverage \u2014 when borrowed funds amplify a losing position, account equity can fall below the maintenance margin threshold, forcing the broker to issue a call for additional collateral."
+  },
+  {
+    "source": "short-selling/margin-call",
+    "target": "short-selling/cover-the-short",
+    "label": "forces",
+    "description": "A margin call on a short position forces the trader to cover by buying back shares, as the broker requires the account to return to the minimum equity threshold."
+  },
+  {
+    "source": "short-selling/margin-call",
+    "target": "short-selling/short-selling",
+    "label": "risk of",
+    "description": "Short sellers face margin calls when the shorted stock rises in price, reducing the equity in their margin account \u2014 because short losses are theoretically unlimited, margin call risk is a key constraint on position sizing."
+  },
+  {
+    "source": "short-selling/margin-call",
+    "target": "short-selling/short-squeeze",
+    "label": "can cause",
+    "description": "Margin calls on short positions force involuntary buying, which pushes prices higher and triggers further margin calls in a feedback loop \u2014 this forced-covering cascade is a key mechanism driving short squeezes."
+  },
+  {
+    "source": "short-selling/margin-lending-rate",
+    "target": "financial-maths/leverage",
+    "label": "cost of",
+    "description": "The margin lending rate is the direct cost of financial leverage \u2014 it determines the hurdle rate that a leveraged portfolio must exceed for the leverage to add value."
+  },
+  {
+    "source": "short-selling/margin-lending-rate",
+    "target": "financial-maths/prime-broker",
+    "label": "set by",
+    "description": "The margin lending rate is set by the prime broker as a benchmark rate plus a spread, and is a key component of the overall cost of the prime brokerage relationship."
+  },
+  {
+    "source": "short-selling/margin-lending-rate",
+    "target": "financial-maths/risk-free-rate",
+    "label": "benchmarked to",
+    "description": "The margin lending rate is typically quoted as the risk-free rate (or a proxy like SOFR) plus a credit spread, making changes in the risk-free rate the primary driver of margin borrowing costs."
+  },
+  {
+    "source": "short-selling/margin-lending-rate",
+    "target": "short-selling/margin-call",
+    "label": "compounds impact of",
+    "description": "A higher margin lending rate increases the carrying cost of leveraged positions, compounding the financial pressure when a margin call forces the trader to either inject capital or liquidate."
+  },
+  {
+    "source": "short-selling/naked-short-selling",
+    "target": "derivatives/no-arbitrage-principle",
+    "label": "violates",
+    "description": "Naked short selling creates synthetic share supply without a genuine borrow, allowing prices to be artificially depressed below no-arbitrage levels \u2014 this breaks the assumption that short selling is limited to available lendable supply."
+  },
+  {
+    "source": "short-selling/naked-short-selling",
+    "target": "short-selling/locate-requirement",
+    "label": "bypasses",
+    "description": "Naked short selling is defined by the absence of a locate \u2014 the seller skips the step of confirming a borrowable share exists, making the locate requirement the direct regulatory counter to this practice."
+  },
+  {
+    "source": "short-selling/naked-short-selling",
+    "target": "short-selling/short-selling",
+    "label": "unregulated variant of",
+    "description": "Naked short selling is short selling without a confirmed borrow, in contrast to covered (standard) short selling where a locate is obtained first \u2014 it shares the same directional payoff but carries additional settlement and regulatory risk."
+  },
+  {
+    "source": "short-selling/regulation-sho",
+    "target": "short-selling/fail-to-deliver",
+    "label": "addresses",
+    "description": "Regulation SHO addresses persistent fails-to-deliver by designating threshold securities and requiring mandatory close-out of open fail positions within 13 settlement days."
+  },
+  {
+    "source": "short-selling/regulation-sho",
+    "target": "short-selling/locate-requirement",
+    "label": "mandates",
+    "description": "Regulation SHO mandates the locate requirement \u2014 broker-dealers must confirm that a security can be borrowed before accepting a short sale order."
+  },
+  {
+    "source": "short-selling/regulation-sho",
+    "target": "short-selling/naked-short-selling",
+    "label": "restricts",
+    "description": "Regulation SHO was specifically designed to restrict naked short selling through locate and close-out requirements that force delivery of borrowed shares."
+  },
+  {
+    "source": "short-selling/regulation-sho",
+    "target": "short-selling/short-sale-constraints",
+    "label": "codifies",
+    "description": "Regulation SHO codifies the major short-sale constraints in US markets, including the locate rule, close-out requirements, and the alternative uptick rule (Rule 201)."
+  },
+  {
+    "source": "short-selling/runaway-short",
+    "target": "short-selling/margin-call",
+    "label": "triggers",
+    "description": "A runaway short rapidly erodes account equity, triggering margin calls that force the trader to either inject capital or have the position forcibly closed at a loss."
+  },
+  {
+    "source": "short-selling/runaway-short",
+    "target": "short-selling/short-selling",
+    "label": "worst case of",
+    "description": "A runaway short is the worst-case outcome of a short sale, where the stock price rises persistently and the short seller faces theoretically unlimited losses."
+  },
+  {
+    "source": "short-selling/runaway-short",
+    "target": "short-selling/short-squeeze",
+    "label": "exacerbated by",
+    "description": "A runaway short is often exacerbated by short squeeze dynamics \u2014 as the price rises and short sellers are forced to cover, their buying pressure accelerates the very price increase causing their losses."
+  },
+  {
+    "source": "short-selling/securities-lending",
+    "target": "risk/margin-requirements",
+    "label": "collateralised by",
+    "description": "Securities lending requires the borrower to post collateral (typically 102\u2013105% of the loan value), and this collateral is governed by the same margin and haircut frameworks used in leveraged trading."
+  },
+  {
+    "source": "short-selling/securities-lending",
+    "target": "short-selling/short-selling",
+    "label": "enables",
+    "description": "Securities lending provides the borrowed shares that short sellers need \u2014 without a functioning lending market, short selling and the price discovery it facilitates would be impossible."
+  },
+  {
+    "source": "short-selling/short-interest",
+    "target": "short-selling/short-selling",
+    "label": "measures",
+    "description": "Short interest quantifies the aggregate volume of short selling in a stock \u2014 it is the primary metric for gauging how many investors are betting against a security."
+  },
+  {
+    "source": "short-selling/short-interest",
+    "target": "short-selling/short-squeeze",
+    "label": "predicts",
+    "description": "Extremely high short interest (days to cover > 5, SI% > 20%) is the key predictor of short squeeze risk \u2014 the more shares sold short, the greater the forced buying pressure if prices rise."
+  },
+  {
+    "source": "short-selling/short-interest",
+    "target": "short-selling/stock-borrow-rate",
+    "label": "drives",
+    "description": "High short interest increases demand for borrowed shares, which pushes up the stock borrow rate \u2014 the two metrics are strongly correlated and together signal the difficulty and cost of maintaining a short position."
+  },
+  {
+    "source": "short-selling/short-ladder-attack",
+    "target": "short-selling/bear-raid",
+    "label": "technique used in",
+    "description": "A short ladder attack is a specific execution technique used within a bear raid \u2014 colluding parties trade back and forth at decreasing prices to create the illusion of selling pressure."
+  },
+  {
+    "source": "short-selling/short-ladder-attack",
+    "target": "short-selling/cover-the-short",
+    "label": "aims to cheapen",
+    "description": "The goal of a short ladder attack is to depress the price so that the manipulators can cover their short positions at an artificially low price, maximising their profit."
+  },
+  {
+    "source": "short-selling/short-ladder-attack",
+    "target": "short-selling/short-selling",
+    "label": "manipulative form of",
+    "description": "A short ladder attack is a manipulative application of short selling that uses wash trades between colluding parties to artificially depress a stock price."
+  },
+  {
+    "source": "short-selling/short-sale-constraints",
+    "target": "derivatives/no-arbitrage-principle",
+    "label": "violates",
+    "description": "Short sale constraints prevent the execution of arbitrage trades that require shorting \u2014 without the ability to short, mispricings can persist because the no-arbitrage condition requires both buying underpriced and selling overpriced securities."
+  },
+  {
+    "source": "short-selling/short-sale-constraints",
+    "target": "short-selling/short-selling",
+    "label": "restricts",
+    "description": "Short sale constraints limit the ability to sell short through uptick rules, bans, and locate requirements \u2014 these restrictions prevent pessimistic investors from expressing negative views and allow overpricing to persist."
+  },
+  {
+    "source": "short-selling/short-sale-constraints",
+    "target": "short-selling/stock-borrow-rate",
+    "label": "drives up",
+    "description": "Constraints on short selling reduce the supply of lendable shares, pushing up the stock borrow rate \u2014 the borrow cost is the market price of the constraint."
+  },
+  {
+    "source": "short-selling/short-selling",
+    "target": "derivatives/put-call-parity",
+    "label": "replicated by",
+    "description": "Put-call parity shows that a short stock position can be synthetically replicated using options \u2014 buying a put and selling a call at the same strike creates an equivalent payoff without borrowing shares."
+  },
+  {
+    "source": "short-selling/short-selling",
+    "target": "financial-maths/hedge-funds",
+    "label": "enables",
+    "description": "Short selling is the fundamental tool that allows hedge funds to profit from overvalued securities and construct market-neutral portfolios \u2014 without it, hedging would be limited to derivatives."
+  },
+  {
+    "source": "short-selling/short-selling",
+    "target": "financial-maths/return-on-investment",
+    "label": "inverts",
+    "description": "Short selling inverts the standard return calculation \u2014 the seller profits when the asset price falls, creating a negative relationship between price movement and portfolio return."
+  },
+  {
+    "source": "short-selling/short-squeeze",
+    "target": "risk/margin-call",
+    "label": "triggers",
+    "description": "Rising prices during a short squeeze erode short sellers' equity, triggering margin calls that force further buying \u2014 this margin-driven feedback loop is the mechanism that makes squeezes so violent."
+  },
+  {
+    "source": "short-selling/short-squeeze",
+    "target": "short-selling/securities-lending",
+    "label": "amplified by",
+    "description": "When lenders recall borrowed shares during a price spike, short sellers must buy back immediately \u2014 securities recalls amplify a squeeze by removing the option to hold the position."
+  },
+  {
+    "source": "short-selling/short-squeeze",
+    "target": "short-selling/short-selling",
+    "label": "risk of",
+    "description": "A short squeeze is the primary tail risk of short selling \u2014 forced covering by short sellers creates a feedback loop that can drive prices far above fundamental value and generate unlimited losses."
+  },
+  {
+    "source": "short-selling/stock-borrow-rate",
+    "target": "short-selling/securities-lending",
+    "label": "priced by",
+    "description": "The stock borrow rate is the price determined by supply and demand in the securities lending market \u2014 it reflects how scarce the stock is to borrow and how many short sellers are competing for available shares."
+  },
+  {
+    "source": "short-selling/stock-borrow-rate",
+    "target": "short-selling/short-selling",
+    "label": "cost of",
+    "description": "The borrow rate is the ongoing cost that makes short selling expensive for hard-to-borrow stocks \u2014 a trade with positive gross alpha can be unprofitable once the lending fee is deducted."
+  },
+  {
+    "source": "short-selling/uptick-rule",
+    "target": "short-selling/bear-raid",
+    "label": "defends against",
+    "description": "The uptick rule was specifically designed to defend against bear raids by preventing short sellers from continuously hitting the bid in a declining market."
+  },
+  {
+    "source": "short-selling/uptick-rule",
+    "target": "short-selling/short-sale-constraints",
+    "label": "type of",
+    "description": "The uptick rule is one of the primary short-sale constraints imposed by regulators \u2014 it restricts the price at which a short sale can be executed, adding a friction cost to short selling during declining markets."
+  },
+  {
+    "source": "short-selling/uptick-rule",
+    "target": "short-selling/short-selling",
+    "label": "constrains",
+    "description": "The uptick rule constrains short selling by requiring that short orders be placed above the last transaction price or current best bid, preventing short sellers from relentlessly selling into a falling market at every downtick."
   },
   {
     "source": "statistics/arch-model",
@@ -6481,12 +6127,6 @@
   },
   {
     "source": "statistics/egarch-model",
-    "target": "derivatives/volatility-smile",
-    "label": "explains",
-    "description": "The leverage effect captured by EGARCH \u2014 negative returns increasing volatility disproportionately \u2014 is a primary driver of the implied volatility skew observed in equity options."
-  },
-  {
-    "source": "statistics/egarch-model",
     "target": "statistics/arch-model",
     "label": "extends",
     "description": "EGARCH extends the ARCH family by modelling the log-variance with an asymmetric response to positive and negative shocks \u2014 capturing the leverage effect that symmetric ARCH and GARCH models miss."
@@ -6496,6 +6136,12 @@
     "target": "statistics/garch-model",
     "label": "asymmetric variant of",
     "description": "EGARCH adds a signed shock term to GARCH, allowing negative returns to increase volatility more than positive returns of the same magnitude \u2014 matching the empirically observed leverage effect in equity markets."
+  },
+  {
+    "source": "statistics/egarch-model",
+    "target": "volatility/volatility-smile",
+    "label": "explains",
+    "description": "The leverage effect captured by EGARCH \u2014 negative returns increasing volatility disproportionately \u2014 is a primary driver of the implied volatility skew observed in equity options."
   },
   {
     "source": "statistics/estimating-parameters",
@@ -6637,12 +6283,6 @@
   },
   {
     "source": "statistics/kurtosis",
-    "target": "derivatives/volatility-smile",
-    "label": "explains",
-    "description": "The volatility smile arises because the market prices in fatter tails than Black-Scholes assumes \u2014 kurtosis quantifies exactly this tail heaviness, and higher excess kurtosis in the risk-neutral distribution produces a more pronounced smile."
-  },
-  {
-    "source": "statistics/kurtosis",
     "target": "probability/normal-distribution",
     "label": "benchmarked against",
     "description": "The normal distribution serves as the reference point for kurtosis \u2014 its kurtosis of exactly 3 (excess kurtosis 0) is the baseline, and deviations from this value indicate heavier or lighter tails than the Gaussian model assumes."
@@ -6652,6 +6292,12 @@
     "target": "risk/value-at-risk",
     "label": "feeds into",
     "description": "High kurtosis means extreme losses occur more frequently than a normal model predicts \u2014 VaR estimates that ignore excess kurtosis systematically understate tail risk, which is why practitioners adjust for fat tails when calibrating loss distributions."
+  },
+  {
+    "source": "statistics/kurtosis",
+    "target": "volatility/volatility-smile",
+    "label": "explains",
+    "description": "The volatility smile arises because the market prices in fatter tails than Black-Scholes assumes \u2014 kurtosis quantifies exactly this tail heaviness, and higher excess kurtosis in the risk-neutral distribution produces a more pronounced smile."
   },
   {
     "source": "statistics/mahalanobis-distance",
@@ -6733,7 +6379,7 @@
   },
   {
     "source": "statistics/principal-component-analysis",
-    "target": "financial-maths/yield-curve",
+    "target": "fixed-income/yield-curve",
     "label": "models",
     "description": "PCA applied to yield curve movements typically reveals that three factors (level, slope, and curvature) explain over 95% of the variance, providing a parsimonious model for interest rate risk."
   },
@@ -6805,12 +6451,6 @@
   },
   {
     "source": "statistics/skewness",
-    "target": "derivatives/implied-volatility",
-    "label": "explains",
-    "description": "Negative skewness in equity returns is the physical-measure counterpart of the implied volatility skew \u2014 the market prices out-of-the-money puts higher because large downward moves are more probable than a symmetric model predicts."
-  },
-  {
-    "source": "statistics/skewness",
     "target": "probability/normal-distribution",
     "label": "absent from",
     "description": "The normal distribution has zero skewness by symmetry \u2014 any observed skewness in return data is direct evidence that the Gaussian assumption is inadequate for tail risk estimation."
@@ -6820,6 +6460,12 @@
     "target": "statistics/statistical-properties-of-returns",
     "label": "characterises",
     "description": "Skewness is one of the key stylised facts of financial returns \u2014 equity indices typically show negative skewness, meaning crash risk is more pronounced than a symmetric distribution would imply."
+  },
+  {
+    "source": "statistics/skewness",
+    "target": "volatility/implied-volatility",
+    "label": "explains",
+    "description": "Negative skewness in equity returns is the physical-measure counterpart of the implied volatility skew \u2014 the market prices out-of-the-money puts higher because large downward moves are more probable than a symmetric model predicts."
   },
   {
     "source": "statistics/square-root-rule",
@@ -6913,18 +6559,6 @@
   },
   {
     "source": "statistics/volatility-clustering",
-    "target": "derivatives/heston-model",
-    "label": "motivates",
-    "description": "The empirical observation that volatility clusters in time is the primary motivation for stochastic volatility models like Heston \u2014 the model's mean-reverting variance process directly captures the persistence of high- and low-volatility regimes."
-  },
-  {
-    "source": "statistics/volatility-clustering",
-    "target": "derivatives/realised-volatility",
-    "label": "shapes dynamics of",
-    "description": "Volatility clustering means realised volatility is autocorrelated \u2014 periods of high realised vol tend to persist, which any practical estimator or trading strategy must account for."
-  },
-  {
-    "source": "statistics/volatility-clustering",
     "target": "risk/value-at-risk",
     "label": "invalidates assumptions of",
     "description": "Volatility clustering means that the constant-variance assumption behind parametric VaR is violated \u2014 during turbulent periods the true conditional volatility is much higher than the unconditional estimate, causing VaR to understate risk precisely when it matters most."
@@ -6946,6 +6580,18 @@
     "target": "statistics/variance-and-standard-deviation",
     "label": "extends",
     "description": "Variance and standard deviation treat volatility as a fixed number, but volatility clustering shows that it changes over time \u2014 motivating conditional variance models like GARCH that update the volatility estimate as new data arrives."
+  },
+  {
+    "source": "statistics/volatility-clustering",
+    "target": "volatility/heston-model",
+    "label": "motivates",
+    "description": "The empirical observation that volatility clusters in time is the primary motivation for stochastic volatility models like Heston \u2014 the model's mean-reverting variance process directly captures the persistence of high- and low-volatility regimes."
+  },
+  {
+    "source": "statistics/volatility-clustering",
+    "target": "volatility/realised-volatility",
+    "label": "shapes dynamics of",
+    "description": "Volatility clustering means realised volatility is autocorrelated \u2014 periods of high realised vol tend to persist, which any practical estimator or trading strategy must account for."
   },
   {
     "source": "stochastic-processes/backward-kolmogorov-equation",
@@ -7345,12 +6991,6 @@
   },
   {
     "source": "stochastic-processes/itos-lemma",
-    "target": "derivatives/heston-model",
-    "label": "applies to",
-    "description": "It\u00f4's lemma is the fundamental tool for differentiating functions of the Heston stochastic processes, enabling the derivation of the model's characteristic function and its pricing PDE."
-  },
-  {
-    "source": "stochastic-processes/itos-lemma",
     "target": "stochastic-processes/geometric-brownian-motion",
     "label": "solves",
     "description": "It\u00f4's Lemma is used to derive the explicit solution for GBM \u2014 applying it to ln(S) converts the stochastic differential equation into a simple integral that gives S(t) in closed form. Applying It\u00f4\u2019s Lemma to ln(S) reveals the \u2212\u00bd\u03c3\u00b2 convexity correction in the drift of log-returns \u2014 this correction is why E[S_T] = S\u2080 e^{\u03bcT} but the median is S\u2080 e^{(\u03bc\u2212\u00bd\u03c3\u00b2)T}, a distinction central to risk management."
@@ -7366,6 +7006,12 @@
     "target": "stochastic-processes/zero-drift-condition",
     "label": "applied in",
     "description": "Ito s lemma is applied to g(S) and the drift terms are set to zero, producing the ODE B g  + (1/2) A^2 g   = 0 that defines the zero-drift condition."
+  },
+  {
+    "source": "stochastic-processes/itos-lemma",
+    "target": "volatility/heston-model",
+    "label": "applies to",
+    "description": "It\u00f4's lemma is the fundamental tool for differentiating functions of the Heston stochastic processes, enabling the derivation of the model's characteristic function and its pricing PDE."
   },
   {
     "source": "stochastic-processes/itos-lemma-worked-examples",
@@ -7441,13 +7087,7 @@
   },
   {
     "source": "stochastic-processes/mean-reversion",
-    "target": "derivatives/volatility-term-structure",
-    "label": "shapes",
-    "description": "Mean reversion in volatility determines the shape of the term structure \u2014 fast mean reversion produces a steeply sloped or inverted curve as short-term vol deviates from the long-run level."
-  },
-  {
-    "source": "stochastic-processes/mean-reversion",
-    "target": "financial-maths/yield-curve",
+    "target": "fixed-income/yield-curve",
     "label": "models rates for",
     "description": "Mean-reverting models like Vasicek and Hull-White are the standard tools for modelling the short rate \u2014 the mean reversion ensures that interest rates stay within realistic bounds and the yield curve can be fitted exactly."
   },
@@ -7480,6 +7120,12 @@
     "target": "stochastic-processes/fokker-planck-steady-state",
     "label": "implies existence of",
     "description": "Mean-reverting processes (like Ornstein-Uhlenbeck) possess a stationary distribution \u2014 the Fokker-Planck steady-state equation provides the analytical form of this long-run density."
+  },
+  {
+    "source": "stochastic-processes/mean-reversion",
+    "target": "volatility/volatility-term-structure",
+    "label": "shapes",
+    "description": "Mean reversion in volatility determines the shape of the term structure \u2014 fast mean reversion produces a steeply sloped or inverted curve as short-term vol deviates from the long-run level."
   },
   {
     "source": "stochastic-processes/milstein-method",
@@ -7768,5 +7414,359 @@
     "target": "stochastic-processes/martingales",
     "label": "constructs",
     "description": "The zero-drift condition finds a transformation g(S) that eliminates the drift, making g(S) a martingale \u2014 a process where today s value is the best forecast of the future."
+  },
+  {
+    "source": "volatility/correlation-smile",
+    "target": "statistics/correlation",
+    "label": "extends",
+    "description": "The correlation smile extends the concept of correlation from a single number to a strike-dependent function, revealing that the market prices in higher co-movement during sell-offs."
+  },
+  {
+    "source": "volatility/correlation-smile",
+    "target": "volatility/volatility-smile",
+    "label": "analogous to",
+    "description": "The correlation smile is the correlation-space analogue of the volatility smile \u2014 just as implied vol varies with strike, implied correlation varies with the moneyness of index options."
+  },
+  {
+    "source": "volatility/correlation-smile",
+    "target": "volatility/volatility-surface",
+    "label": "links index and single-stock",
+    "description": "The correlation smile emerges from the difference between the index volatility surface and the average single-stock volatility surface \u2014 it quantifies how diversification changes across moneyness levels."
+  },
+  {
+    "source": "volatility/heston-model",
+    "target": "derivatives/black-scholes-equation",
+    "label": "extends",
+    "description": "The Heston model generalises Black-Scholes by replacing the constant-volatility assumption with a stochastic variance process \u2014 Black-Scholes is recovered as the special case where the vol of vol is zero. Black\u2013Scholes is recovered as the special case of the Heston model when the vol-of-vol \u03c3_v \u2192 0 and the initial variance equals \u03b8 \u2014 Heston nests BS as a degenerate limit, providing a consistency check on the more general framework."
+  },
+  {
+    "source": "volatility/heston-model",
+    "target": "derivatives/complete-markets",
+    "label": "violates",
+    "description": "The Heston model introduces stochastic volatility as a second source of randomness that cannot be hedged with the stock alone, making the market incomplete and requiring an additional instrument or a market price of volatility risk."
+  },
+  {
+    "source": "volatility/heston-model",
+    "target": "risk/monte-carlo-simulation",
+    "label": "priced via",
+    "description": "Although the Heston model has a semi-analytical solution for European options, exotic and path-dependent derivatives under Heston are typically priced by Monte Carlo simulation of the two correlated SDEs."
+  },
+  {
+    "source": "volatility/heston-model",
+    "target": "stochastic-processes/geometric-brownian-motion",
+    "label": "generalises",
+    "description": "GBM assumes constant volatility, while the Heston model replaces this with a mean-reverting stochastic variance process \u2014 the asset price SDE is augmented with a second coupled SDE for the variance."
+  },
+  {
+    "source": "volatility/heston-model",
+    "target": "stochastic-processes/mean-reversion",
+    "label": "uses",
+    "description": "The Heston model's variance process is a mean-reverting square-root diffusion (CIR process) \u2014 the speed of mean reversion \u03ba and long-run variance \u03b8 control how quickly volatility returns to its equilibrium after a shock."
+  },
+  {
+    "source": "volatility/heston-model",
+    "target": "stochastic-processes/multi-asset-itos-lemma",
+    "label": "uses",
+    "description": "The Heston model involves two correlated stochastic differential equations (price and variance) \u2014 applying multi-asset It\u00f4's lemma is required to derive the Heston PDE from the coupled SDEs."
+  },
+  {
+    "source": "volatility/heston-model",
+    "target": "volatility/implied-volatility",
+    "label": "explains",
+    "description": "The Heston model's stochastic volatility and negative correlation between returns and variance reproduce the implied volatility smile and skew that Black-Scholes' flat volatility assumption cannot capture."
+  },
+  {
+    "source": "volatility/heston-model",
+    "target": "volatility/volatility-surface",
+    "label": "generates",
+    "description": "The Heston model generates a volatility surface from its five parameters \u2014 calibrating Heston to market data means matching its implied surface to the observed one."
+  },
+  {
+    "source": "volatility/heston-model",
+    "target": "volatility/volatility-term-structure",
+    "label": "calibrated to",
+    "description": "Heston's mean-reversion speed and vol-of-vol parameters are calibrated to match the observed volatility term structure \u2014 the term structure pins down the dynamics of variance over time."
+  },
+  {
+    "source": "volatility/implied-volatility",
+    "target": "derivatives/vega-greeks",
+    "label": "quantified by",
+    "description": "Vega translates a change in implied volatility into a change in option price \u2014 it is the conversion factor that links the volatility market to the options market."
+  },
+  {
+    "source": "volatility/implied-volatility",
+    "target": "risk/model-limitations",
+    "label": "reveals",
+    "description": "The volatility smile and skew observed in implied volatility across strikes expose the failure of Black-Scholes' constant-volatility assumption \u2014 the market prices in fat tails and jump risk that the model ignores."
+  },
+  {
+    "source": "volatility/implied-volatility",
+    "target": "volatility/implied-vs-realised-volatility",
+    "label": "compared in",
+    "description": "Implied volatility is one half of the implied-vs-realised comparison \u2014 the forward-looking market expectation whose accuracy is judged against subsequent realised moves."
+  },
+  {
+    "source": "volatility/implied-vs-realised-volatility",
+    "target": "derivatives/delta-hedging",
+    "label": "determines P&L of",
+    "description": "The profit or loss from a delta-hedged option position depends on whether realised volatility exceeds or falls short of the implied volatility at which the option was traded."
+  },
+  {
+    "source": "volatility/implied-vs-realised-volatility",
+    "target": "volatility/variance-risk-premium",
+    "label": "quantified by",
+    "description": "The implied-vs-realised spread is the observable manifestation of the variance risk premium \u2014 the VRP formalises and measures this spread as a tradeable risk factor."
+  },
+  {
+    "source": "volatility/implied-vs-realised-volatility",
+    "target": "volatility/variance-swap",
+    "label": "settled by",
+    "description": "Variance swaps pay the difference between realised and implied variance, making them the purest instrument for monetising the implied-vs-realised spread without path-dependent Greeks."
+  },
+  {
+    "source": "volatility/local-volatility",
+    "target": "derivatives/black-scholes-equation",
+    "label": "generalises",
+    "description": "Local volatility generalises Black-Scholes by replacing the constant volatility parameter with a function sigma(S,t), reducing to Black-Scholes when the local vol surface is flat."
+  },
+  {
+    "source": "volatility/local-volatility",
+    "target": "volatility/heston-model",
+    "label": "complemented by",
+    "description": "Local volatility is complemented by the Heston stochastic volatility model \u2014 local vol gets the smile right today but has wrong dynamics, while Heston captures volatility dynamics but may not fit the smile exactly."
+  },
+  {
+    "source": "volatility/local-volatility",
+    "target": "volatility/volatility-smile",
+    "label": "calibrates to",
+    "description": "The local volatility model is uniquely determined by calibration to the observed volatility smile \u2014 the Dupire equation extracts the local vol surface directly from market option prices."
+  },
+  {
+    "source": "volatility/local-volatility",
+    "target": "volatility/volatility-surface",
+    "label": "calibrated to",
+    "description": "The Dupire local volatility function is uniquely determined by the volatility surface \u2014 it is the deterministic volatility field that exactly reproduces every point on the surface."
+  },
+  {
+    "source": "volatility/realised-volatility",
+    "target": "risk/volatility-scaling",
+    "label": "feeds into",
+    "description": "Volatility scaling uses realised volatility estimates to normalise position sizes or risk exposures, ensuring that portfolio risk remains constant as market conditions change."
+  },
+  {
+    "source": "volatility/realised-volatility",
+    "target": "statistics/ewma-volatility",
+    "label": "estimated by",
+    "description": "EWMA is a weighted estimator of realised volatility that gives greater weight to recent returns, providing a more responsive measure than the simple rolling-window standard deviation."
+  },
+  {
+    "source": "volatility/realised-volatility",
+    "target": "statistics/garch-model",
+    "label": "modelled by",
+    "description": "GARCH models the conditional dynamics of realised volatility, capturing clustering and mean reversion \u2014 features that a simple rolling-window estimator cannot represent."
+  },
+  {
+    "source": "volatility/realised-volatility",
+    "target": "volatility/implied-vs-realised-volatility",
+    "label": "compared in",
+    "description": "Realised volatility is the backward-looking half of the implied-vs-realised comparison \u2014 the actual price variability that determines whether an option buyer or seller profits on a delta-hedged basis."
+  },
+  {
+    "source": "volatility/sabr-model",
+    "target": "derivatives/swaption",
+    "label": "calibrated to",
+    "description": "SABR is calibrated to the swaption volatility cube \u2014 each expiry-tenor pair has its own set of SABR parameters fitted to the market smile across strikes."
+  },
+  {
+    "source": "volatility/sabr-model",
+    "target": "volatility/heston-model",
+    "label": "alternative to",
+    "description": "SABR and Heston are the two dominant stochastic volatility models \u2014 SABR is preferred on rates/FX desks for its analytical tractability, while Heston is more common for equities."
+  },
+  {
+    "source": "volatility/sabr-model",
+    "target": "volatility/local-volatility",
+    "label": "preferred over",
+    "description": "SABR is preferred over local volatility on rates desks because it produces more realistic smile dynamics \u2014 the smile moves with the forward in a way that matches empirical behaviour and produces more stable hedges."
+  },
+  {
+    "source": "volatility/sabr-model",
+    "target": "volatility/volatility-smile",
+    "label": "models",
+    "description": "SABR is the standard model for fitting and interpolating the volatility smile on rates and FX desks \u2014 its four parameters capture the level, skew, and curvature of the smile."
+  },
+  {
+    "source": "volatility/sabr-model",
+    "target": "volatility/volatility-surface",
+    "label": "parameterises",
+    "description": "SABR provides a parsimonious parameterisation of the volatility surface for interest rate and FX options, allowing smooth interpolation and extrapolation from a few calibrated parameters."
+  },
+  {
+    "source": "volatility/variance-risk-premium",
+    "target": "volatility/implied-volatility",
+    "label": "inflates",
+    "description": "The variance risk premium is the reason implied volatility systematically exceeds realised volatility \u2014 the premium is embedded in option prices as an insurance charge."
+  },
+  {
+    "source": "volatility/variance-risk-premium",
+    "target": "volatility/variance-swap",
+    "label": "captured via",
+    "description": "Variance swaps are the purest instrument for harvesting the variance risk premium \u2014 the difference between the swap's fixed strike (implied) and its floating leg (realised) directly isolates the VRP."
+  },
+  {
+    "source": "volatility/variance-risk-premium",
+    "target": "volatility/vix-index",
+    "label": "proxied by",
+    "description": "The VIX squared minus subsequent realised variance is the standard empirical proxy for the variance risk premium, making the VIX the most widely watched VRP indicator."
+  },
+  {
+    "source": "volatility/variance-swap",
+    "target": "volatility/heston-model",
+    "label": "priced under",
+    "description": "The Heston model provides a natural framework for pricing variance swaps, as its characteristic function yields a closed-form expression for the expected realised variance."
+  },
+  {
+    "source": "volatility/variance-swap",
+    "target": "volatility/implied-volatility",
+    "label": "priced from surface of",
+    "description": "The fair strike of a variance swap is determined by integrating over the entire implied volatility surface \u2014 it depends on option prices at all strikes, not just at-the-money volatility."
+  },
+  {
+    "source": "volatility/variance-swap",
+    "target": "volatility/volatility-smile",
+    "label": "encodes information from",
+    "description": "The variance swap strike encodes information from the entire volatility smile \u2014 it is a weighted integral of implied variances across all strikes, making it sensitive to skew and kurtosis."
+  },
+  {
+    "source": "volatility/vix-futures-term-structure",
+    "target": "volatility/variance-risk-premium",
+    "label": "embeds",
+    "description": "The VIX futures term structure embeds the variance risk premium \u2014 contango reflects the cost of insuring against volatility spikes, and the roll yield earned by short-vol positions is a manifestation of this premium."
+  },
+  {
+    "source": "volatility/vix-futures-term-structure",
+    "target": "volatility/vix-index",
+    "label": "extends",
+    "description": "VIX futures extend the spot VIX into a forward curve, showing the market's expectation of implied volatility at future dates plus a risk premium for bearing volatility risk."
+  },
+  {
+    "source": "volatility/vix-futures-term-structure",
+    "target": "volatility/volatility-term-structure",
+    "label": "parallels",
+    "description": "The VIX futures term structure parallels the implied volatility term structure but for forward-starting implied vol \u2014 both curves respond to the same mean-reversion dynamics and risk premia."
+  },
+  {
+    "source": "volatility/vix-index",
+    "target": "volatility/implied-volatility",
+    "label": "index of",
+    "description": "The VIX is a model-free index of implied volatility that incorporates information from all listed SPX option strikes, not just the at-the-money implied vol."
+  },
+  {
+    "source": "volatility/vix-index",
+    "target": "volatility/variance-swap",
+    "label": "derived from same formula as",
+    "description": "The VIX calculation is mathematically equivalent to the fair strike of a 30-day variance swap on the S&P 500 \u2014 both use the same replicating portfolio of out-of-the-money options."
+  },
+  {
+    "source": "volatility/vix-index",
+    "target": "volatility/volatility-surface",
+    "label": "aggregates",
+    "description": "The VIX aggregates the entire strike dimension of the 30-day volatility surface into a single number, weighting each option by 1/K\u00b2 to capture the full smile."
+  },
+  {
+    "source": "volatility/volatility-cone",
+    "target": "statistics/square-root-rule",
+    "label": "shaped by",
+    "description": "The cone's characteristic funnel shape arises from the square-root-of-time rule \u2014 short-window realised vol is more dispersed than long-window vol because extreme readings are more likely over shorter periods."
+  },
+  {
+    "source": "volatility/volatility-cone",
+    "target": "volatility/implied-vs-realised-volatility",
+    "label": "visualises",
+    "description": "Overlaying implied volatility on the realised volatility cone directly visualises the implied-vs-realised comparison across all maturities, making it a practical tool for identifying trading opportunities."
+  },
+  {
+    "source": "volatility/volatility-cone",
+    "target": "volatility/realised-volatility",
+    "label": "contextualises",
+    "description": "The volatility cone plots the historical distribution of realised volatility at each measurement window, providing the benchmark against which current implied volatility is judged rich or cheap."
+  },
+  {
+    "source": "volatility/volatility-smile",
+    "target": "derivatives/black-scholes-equation",
+    "label": "exposes limitation of",
+    "description": "The existence of the smile directly contradicts Black-Scholes' constant-volatility assumption \u2014 if the model were exact, implied volatility would be flat across all strikes."
+  },
+  {
+    "source": "volatility/volatility-smile",
+    "target": "derivatives/vanna-greeks",
+    "label": "explained by",
+    "description": "Vanna captures how Delta shifts when volatility changes \u2014 the correlation between spot and volatility moves (the leverage effect) is a primary driver of the skew component of the volatility smile."
+  },
+  {
+    "source": "volatility/volatility-smile",
+    "target": "derivatives/vega-greeks",
+    "label": "complicates",
+    "description": "The volatility smile means implied volatility varies by strike, so Vega exposure differs across the strike spectrum \u2014 a portfolio can be Vega-neutral in aggregate but still exposed to skew and curvature moves."
+  },
+  {
+    "source": "volatility/volatility-smile",
+    "target": "derivatives/volga-greeks",
+    "label": "explained by",
+    "description": "OTM options have positive Volga, meaning they benefit from volatility convexity \u2014 the premium traders pay for this convexity is a key driver of the volatility smile."
+  },
+  {
+    "source": "volatility/volatility-smile",
+    "target": "risk/model-limitations",
+    "label": "evidences",
+    "description": "The volatility smile is empirical proof that real return distributions have fatter tails and asymmetry compared to the lognormal \u2014 it is one of the most visible model limitations in practice."
+  },
+  {
+    "source": "volatility/volatility-smile",
+    "target": "volatility/heston-model",
+    "label": "reproduced by",
+    "description": "The Heston model's stochastic volatility and correlation between returns and variance generate an implied volatility smile from first principles, providing a theoretically grounded alternative to strike-by-strike fitting."
+  },
+  {
+    "source": "volatility/volatility-smile",
+    "target": "volatility/implied-volatility",
+    "label": "maps across strikes",
+    "description": "The volatility smile is the graph of implied volatility as a function of strike price \u2014 each point on the smile is an implied volatility extracted from a single option's market price via the Black-Scholes formula."
+  },
+  {
+    "source": "volatility/volatility-surface",
+    "target": "volatility/implied-volatility",
+    "label": "maps",
+    "description": "The volatility surface is the complete map of implied volatility across all strikes and maturities, extending a single implied vol quote into a continuous function."
+  },
+  {
+    "source": "volatility/volatility-surface",
+    "target": "volatility/volatility-smile",
+    "label": "contains",
+    "description": "The volatility smile is a single maturity slice of the volatility surface \u2014 the surface generalises the smile by adding the term structure dimension."
+  },
+  {
+    "source": "volatility/volatility-swap",
+    "target": "volatility/realised-volatility",
+    "label": "settles against",
+    "description": "A volatility swap's floating leg is the realised volatility of the underlying over the contract period, making it a direct bet on the level of future realised vol."
+  },
+  {
+    "source": "volatility/volatility-swap",
+    "target": "volatility/variance-swap",
+    "label": "compared with",
+    "description": "Volatility swaps pay linearly in realised vol while variance swaps pay quadratically \u2014 the convexity adjustment between the two captures the vol-of-vol and is a key concept in volatility derivatives."
+  },
+  {
+    "source": "volatility/volatility-term-structure",
+    "target": "volatility/implied-volatility",
+    "label": "organises",
+    "description": "The term structure organises ATM implied volatility by maturity, revealing whether the market expects current volatility conditions to persist or mean-revert."
+  },
+  {
+    "source": "volatility/volatility-term-structure",
+    "target": "volatility/volatility-surface",
+    "label": "is a dimension of",
+    "description": "The volatility term structure is the time axis of the volatility surface \u2014 at each maturity the surface has a smile across strikes, and the ATM slice across maturities forms the term structure."
   }
 ]

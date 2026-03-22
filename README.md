@@ -2,7 +2,7 @@
 
 Bite-sized revision flash cards for Quantitative Finance exams and interviews, designed for accessibility and clarity. Each card covers one concept — definition, key formula, worked example, and its finance application.
 
-442 cards · 10 topics · 1295 concept connections
+442 cards · 14 topics · 1295 concept connections
 
 ## Running the app
 
@@ -17,16 +17,20 @@ On first run the app scans `cards/` and loads `edges.json`, building `graph.db` 
 
 | Topic | Cards | Scope |
 |---|---|---|
+| Banking Regulation | 15 | FRTB, IRRBB, LCR, NSFR, EVE, EaR, Basel capital rules |
 | Calculus | 26 | Differentiation, integration, Taylor series, quadratic techniques |
-| Derivatives | 74 | Options, futures, Greeks, pricing models, risk-neutral theory, volatility surface |
-| Financial Mathematics | 81 | TVM, bonds, compounding, NPV, interest rate models, short selling mechanics |
+| Derivatives | 58 | Options, futures, Greeks, pricing models, risk-neutral theory |
+| Financial Mathematics | 46 | TVM, compounding, NPV, leverage, hedge funds, execution |
+| Fixed Income | 17 | Bonds, yield curves, duration, DV01, credit spreads, swaps |
 | Linear Algebra | 48 | Matrices, vectors, eigenvalues, SVD, decompositions |
 | Mathematical Notation | 24 | Sigma, pi, set theory, logical and summation notation |
 | Portfolio Theory & Asset Pricing | 35 | CAPM, efficient frontier, factor models, performance ratios |
 | Probability | 35 | Distributions, expectation, Bayes, transform methods |
-| Risk | 34 | VaR, CVaR, Monte Carlo, stress testing, IRRBB, FRTB |
+| Risk | 19 | VaR, CVaR, Monte Carlo, stress testing, EVT, drawdowns |
+| Short Selling | 18 | Short mechanics, securities lending, regulation, short squeezes |
 | Statistics | 38 | Regression, hypothesis testing, covariance estimation |
 | Stochastic Processes | 47 | Brownian motion, GBM, Itô's lemma, SDEs, martingales |
+| Volatility | 16 | Implied/realised vol, VIX, vol surface, smile, stochastic vol models |
 
 ## Features
 

@@ -56,16 +56,20 @@ Every card must contain all four metadata fields and all four sections, in this 
 
 | Value | Colour | Directory |
 |---|---|---|
+| `Banking Regulation` | purple | `cards/banking-regulation/` |
 | `Calculus` | amber | `cards/calculus/` |
 | `Derivatives` | blue | `cards/derivatives/` |
 | `Financial Mathematics` | emerald | `cards/financial-maths/` |
+| `Fixed Income` | teal-dark | `cards/fixed-income/` |
 | `Linear Algebra` | violet | `cards/linear-algebra/` |
 | `Mathematical Notation` | orange | `cards/mathematical-notation/` |
 | `Portfolio Theory & Asset Pricing` | teal | `cards/portfolio-theory/` |
 | `Probability` | rose | `cards/probability/` |
 | `Risk` | red | `cards/risk/` |
+| `Short Selling` | pink | `cards/short-selling/` |
 | `Statistics` | cyan | `cards/statistics/` |
 | `Stochastic Processes` | indigo | `cards/stochastic-processes/` |
+| `Volatility` | fuchsia | `cards/volatility/` |
 
 A typo here will create a new topic with the default grey colour. To add a genuinely new topic, add an entry to `TOPIC_COLOURS` in `app/routes.py` at the same time.
 

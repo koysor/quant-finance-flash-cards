@@ -116,13 +116,17 @@ Run manually: `uv run python scripts/validate_urls.py --force`
 
 | Directory | Topic name | Scope |
 |---|---|---|
+| `cards/banking-regulation/` | `Banking Regulation` | FRTB, IRRBB, LCR, NSFR, Basel capital rules |
 | `cards/calculus/` | `Calculus` | Differentiation, integration, Taylor series |
 | `cards/derivatives/` | `Derivatives` | Options, futures, Greeks, pricing |
-| `cards/financial-maths/` | `Financial Mathematics` | TVM, bonds, compounding, NPV |
+| `cards/financial-maths/` | `Financial Mathematics` | TVM, compounding, NPV, leverage, execution |
+| `cards/fixed-income/` | `Fixed Income` | Bonds, yield curves, duration, DV01, credit spreads |
 | `cards/linear-algebra/` | `Linear Algebra` | Matrices, vectors, eigenvalues |
 | `cards/mathematical-notation/` | `Mathematical Notation` | Sigma, pi, set, and logical notation conventions |
 | `cards/portfolio-theory/` | `Portfolio Theory & Asset Pricing` | CAPM, factor models, performance ratios |
 | `cards/probability/` | `Probability` | Distributions, expectation, Bayes |
-| `cards/risk/` | `Risk` | VaR, CVaR, risk measures |
+| `cards/risk/` | `Risk` | VaR, CVaR, Monte Carlo, stress testing |
+| `cards/short-selling/` | `Short Selling` | Short mechanics, securities lending, regulation |
 | `cards/statistics/` | `Statistics` | Descriptive stats, regression, hypothesis testing |
 | `cards/stochastic-processes/` | `Stochastic Processes` | Brownian motion, GBM, Itô's lemma |
+| `cards/volatility/` | `Volatility` | Implied/realised vol, VIX, vol surface, smile |

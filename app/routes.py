@@ -54,16 +54,20 @@ bp = Blueprint("main", __name__)
 # Topic name → hex colour.  Must be kept in sync with the card ``**Topic:**`` fields.
 # The colour is injected into every template via the context processor in __init__.py.
 TOPIC_COLOURS: dict[str, str] = {
+    "Banking Regulation":              "#a855f7",   # purple
     "Calculus":                        "#f59e0b",   # amber
     "Derivatives":                     "#3b82f6",   # blue
     "Financial Mathematics":           "#10b981",   # emerald
+    "Fixed Income":                    "#0d9488",   # teal-dark
     "Linear Algebra":                  "#8b5cf6",   # violet
     "Mathematical Notation":           "#f97316",   # orange
     "Portfolio Theory & Asset Pricing":"#14b8a6",   # teal
     "Probability":                     "#f43f5e",   # rose
     "Risk":                            "#ef4444",   # red
+    "Short Selling":                   "#ec4899",   # pink
     "Statistics":                      "#06b6d4",   # cyan
     "Stochastic Processes":            "#6366f1",   # indigo
+    "Volatility":                      "#d946ef",   # fuchsia
 }
 _DEFAULT_COLOUR = "#4f9ef8"
 
