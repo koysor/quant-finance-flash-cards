@@ -1,7 +1,7 @@
 ---
 name: review-card
 description: Review an existing card for content quality and suggest or apply targeted improvements
-allowed-tools: Read, Edit, Glob
+allowed-tools: Read, Edit, Glob, Grep
 ---
 
 Review and improve the card at: $ARGUMENTS

@@ -1,7 +1,7 @@
 ---
 name: generate-edges
 description: Generate concept relationship edges for a card that has few or no connections
-allowed-tools: Read, Edit, Glob
+allowed-tools: Read, Edit, Glob, Bash
 ---
 
 Generate edges for: $ARGUMENTS

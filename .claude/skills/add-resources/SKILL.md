@@ -1,7 +1,7 @@
 ---
 name: add-resources
 description: Find cards missing from resources.json and add curated website and video links
-allowed-tools: Read, Edit, Glob, Grep, WebSearch
+allowed-tools: Read, Edit, Glob, Grep, Bash, WebSearch, WebFetch
 ---
 
 Find flash cards that have no entry in `resources.json` and add learning resources for each.
@@ -53,6 +53,22 @@ Read the full `resources.json`. For each card, insert a new entry under the card
 
 Preserve 2-space indent and trailing newline. Write back with Edit (or Write if large).
 
-## Step 4 — Report
+## Step 4 — Validate URLs
+
+Run the URL validator to catch broken links:
+
+```bash
+uv run python scripts/validate_urls.py --force
+```
+
+If any URLs fail:
+1. Remove the broken entry from `resources.json`
+2. Search the web for a working replacement from the same source category
+3. Add the replacement and re-run the validator
+4. Repeat until all URLs pass
+
+Do **not** proceed until validation passes with zero failures.
+
+## Step 5 — Report
 
 Print a table of cards processed and the number of resources added per card.

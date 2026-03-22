@@ -1,7 +1,7 @@
 ---
 name: generate-card
 description: Generate a new flash card and its edges from a concept name
-allowed-tools: Read, Write, Glob, Edit, Bash
+allowed-tools: Read, Write, Glob, Edit, Bash, WebFetch, WebSearch
 ---
 
 Generate a flash card for the concept: $ARGUMENTS
@@ -18,7 +18,6 @@ Write the card to `cards/<topic-slug>/<concept-slug>.md` using this exact struct
 # Concept Name
 
 **Topic:** <must exactly match a TOPIC_COLOURS key>
-**Level:** A Level Mathematics
 **Tags:** <3-6 lowercase comma-separated tags relevant to quant finance>
 **Created:** <today's date in YYYY-MM-DD>
 **Author:** <model name, e.g. Claude Opus 4.6>
@@ -67,7 +66,23 @@ Read `resources.json`. Add an entry for the new card with:
 
 Write the updated `resources.json` back, keeping the object sorted by card ID. Preserve 2-space indent formatting and trailing newline.
 
-## Step 5 — Restart the app
+## Step 5 — Validate resource URLs
+
+Run the URL validator against only the new card's resources to catch broken links before they enter the repository:
+
+```bash
+uv run python scripts/validate_urls.py --force
+```
+
+If any URLs fail validation:
+1. Remove the broken entry from `resources.json`
+2. Search the web for a working replacement from the same source category (well-known educational sites for websites, established YouTube channels for videos)
+3. Add the replacement URL and re-run the validator
+4. Repeat until all URLs pass
+
+Do **not** proceed to the next step until validation passes with zero failures.
+
+## Step 6 — Restart the app
 
 Delete `graph.db` and restart the Flask dev server so the new card and edges are loaded:
 
@@ -77,11 +92,11 @@ pkill -f "python run.py" 2>/dev/null; rm -f graph.db; uv run python run.py &
 
 Wait a couple of seconds, then verify the server is running by curling the new card's URL.
 
-## Step 6 — Summary
+## Step 7 — Summary
 
 Report what was created: the card path, and a table of new edges (source → target, label, description).
 
-## Step 7 — Suggest related cards
+## Step 8 — Suggest related cards
 
 Suggest 3-5 related concepts that would make good future flash cards. These should be concepts that:
 - Are closely related to the newly created card
