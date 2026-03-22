@@ -380,6 +380,28 @@
     ],
     "videos": []
   },
+  "derivatives/d1-and-d2-in-black-scholes": {
+    "websites": [
+      {
+        "title": "Investopedia — Black-Scholes Model",
+        "url": "https://www.investopedia.com/terms/b/blackscholes.asp"
+      },
+      {
+        "title": "Wikipedia — Black–Scholes Model: Interpretation",
+        "url": "https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model#Interpretation"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Black-Scholes Formula",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/black-scholes/v/introduction-to-the-black-scholes-formula"
+      },
+      {
+        "title": "MIT OpenCourseWare — Black-Scholes Formula",
+        "url": "https://www.youtube.com/watch?v=D2Jn1VrqjWI"
+      }
+    ]
+  },
   "derivatives/delta-gamma-approximation": {
     "websites": [
       {
@@ -623,6 +645,72 @@
     ],
     "videos": []
   },
+  "derivatives/option-moneyness": {
+    "websites": [
+      {
+        "title": "Investopedia — Moneyness",
+        "url": "https://www.investopedia.com/terms/m/moneyness.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Moneyness",
+        "url": "https://corporatefinanceinstitute.com/resources/derivatives/at-the-money-atm/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — In the Money, At the Money, Out of the Money",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/put-call-options/v/in-the-money-at-the-money-out-of-the-money"
+      },
+      {
+        "title": "CME Group — Understanding Moneyness",
+        "url": "https://www.youtube.com/watch?v=EfmTWu2yn5Q"
+      }
+    ]
+  },
+  "derivatives/option-payoff-diagrams": {
+    "websites": [
+      {
+        "title": "Investopedia — Options Profit Calculator",
+        "url": "https://www.investopedia.com/terms/o/option.asp"
+      },
+      {
+        "title": "Wikipedia — Option Style: Payoffs",
+        "url": "https://en.wikipedia.org/wiki/Option_style#Payoffs"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Payoff Diagram of a Long Position in a Call",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/put-call-options/v/call-payoff-diagram"
+      },
+      {
+        "title": "Khan Academy — Payoff Diagram of a Long Position in a Put",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/put-call-options/v/put-payoff-diagram"
+      }
+    ]
+  },
+  "derivatives/option-premium-decomposition": {
+    "websites": [
+      {
+        "title": "Investopedia — Intrinsic Value and Time Value",
+        "url": "https://www.investopedia.com/terms/i/intrinsicvalue.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Option Premium",
+        "url": "https://corporatefinanceinstitute.com/resources/derivatives/extrinsic-value/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Time Value of Options",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/put-call-options/v/time-value-of-options"
+      },
+      {
+        "title": "tastylive — Intrinsic vs Extrinsic Value",
+        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
+      }
+    ]
+  },
   "derivatives/p-measure-vs-q-measure": {
     "websites": [
       {
@@ -648,6 +736,28 @@
       }
     ],
     "videos": []
+  },
+  "derivatives/protective-put-strategy": {
+    "websites": [
+      {
+        "title": "Investopedia — Protective Put",
+        "url": "https://www.investopedia.com/terms/p/protective-put.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Protective Put",
+        "url": "https://corporatefinanceinstitute.com/resources/derivatives/protective-put/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Protective Puts",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/put-call-options/v/protective-puts"
+      },
+      {
+        "title": "tastylive — Protective Puts Explained",
+        "url": "https://www.youtube.com/watch?v=jnTsQBJHMSk"
+      }
+    ]
   },
   "derivatives/replicating-portfolio": {
     "websites": [
@@ -805,6 +915,28 @@
     ],
     "videos": []
   },
+  "derivatives/time-decay": {
+    "websites": [
+      {
+        "title": "Investopedia — Time Decay",
+        "url": "https://www.investopedia.com/terms/t/timedecay.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Theta",
+        "url": "https://corporatefinanceinstitute.com/resources/derivatives/theta/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Time Value of Options",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/put-call-options/v/time-value-of-options"
+      },
+      {
+        "title": "tastylive — Theta Decay Explained",
+        "url": "https://www.youtube.com/watch?v=kCJcEOYuuII"
+      }
+    ]
+  },
   "derivatives/triangular-arbitrage": {
     "websites": [
       {
@@ -843,6 +975,50 @@
       }
     ],
     "videos": []
+  },
+  "derivatives/value-of-a-call-option": {
+    "websites": [
+      {
+        "title": "Investopedia — Call Option Definition",
+        "url": "https://www.investopedia.com/terms/c/calloption.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Call Option",
+        "url": "https://corporatefinanceinstitute.com/resources/derivatives/call-option/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Call Option as Leverage",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/put-call-options/v/call-option-as-leverage"
+      },
+      {
+        "title": "Khan Academy — American Call Options",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/put-call-options/v/american-call-options"
+      }
+    ]
+  },
+  "derivatives/value-of-a-put-option": {
+    "websites": [
+      {
+        "title": "Investopedia — Put Option Definition",
+        "url": "https://www.investopedia.com/terms/p/putoption.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Put Option",
+        "url": "https://corporatefinanceinstitute.com/resources/derivatives/put-option/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Put Option as Insurance",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/put-call-options/v/put-option-as-insurance"
+      },
+      {
+        "title": "Khan Academy — American Put Options",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/put-call-options/v/american-put-options"
+      }
+    ]
   },
   "derivatives/vega-greeks": {
     "websites": [
@@ -934,6 +1110,28 @@
       }
     ],
     "videos": []
+  },
+  "financial-maths/asset-liability-management": {
+    "websites": [
+      {
+        "title": "Wikipedia — Asset-Liability Management",
+        "url": "https://en.wikipedia.org/wiki/Asset_and_liability_management"
+      },
+      {
+        "title": "Corporate Finance Institute — Asset Liability Management",
+        "url": "https://corporatefinanceinstitute.com/resources/management/asset-and-liability-management-alm/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Investopedia — Asset-Liability Management",
+        "url": "https://www.investopedia.com/terms/a/asset-liabilitymanagement.asp"
+      },
+      {
+        "title": "FDIC — Interest Rate Risk Management",
+        "url": "https://www.fdic.gov/resources/bankers/capital-markets/interest-rate-risk/"
+      }
+    ]
   },
   "financial-maths/bear-raid": {
     "websites": [
@@ -1052,6 +1250,50 @@
     ],
     "videos": []
   },
+  "financial-maths/deposit-beta": {
+    "websites": [
+      {
+        "title": "Investopedia — Deposit Rate",
+        "url": "https://www.investopedia.com/terms/d/deposit-interest-rate.asp"
+      },
+      {
+        "title": "Wikipedia — Interest Rate Pass-Through",
+        "url": "https://en.wikipedia.org/wiki/Interest_rate"
+      }
+    ],
+    "videos": [
+      {
+        "title": "FDIC — Deposit Assumptions in Interest Rate Risk",
+        "url": "https://www.fdic.gov/resources/bankers/capital-markets/interest-rate-risk/"
+      },
+      {
+        "title": "FDIC — Interest Rate Risk Measurement Systems",
+        "url": "https://www.fdic.gov/banker-resource-center/technical-assistance-video-program"
+      }
+    ]
+  },
+  "financial-maths/duration-gap": {
+    "websites": [
+      {
+        "title": "Investopedia — Duration Gap",
+        "url": "https://www.investopedia.com/terms/d/duration-gap.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Duration Gap",
+        "url": "https://corporatefinanceinstitute.com/resources/fixed-income/duration/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Investopedia — Duration Gap",
+        "url": "https://www.investopedia.com/terms/d/duration-gap.asp"
+      },
+      {
+        "title": "FDIC — Managing Interest Rate Risk",
+        "url": "https://www.fdic.gov/resources/bankers/capital-markets/interest-rate-risk/"
+      }
+    ]
+  },
   "financial-maths/factor-investing": {
     "websites": [
       {
@@ -1086,6 +1328,28 @@
       }
     ],
     "videos": []
+  },
+  "financial-maths/funds-transfer-pricing": {
+    "websites": [
+      {
+        "title": "Investopedia — Transfer Pricing",
+        "url": "https://www.investopedia.com/terms/t/transfer-pricing.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Funds Transfer Pricing",
+        "url": "https://corporatefinanceinstitute.com/resources/management/asset-and-liability-management-alm/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Finance Unlocked — Funds Transfer Pricing Part I",
+        "url": "https://financeunlocked.com/videos/funds-transfer-pricing-part-i"
+      },
+      {
+        "title": "Finance Unlocked — Funds Transfer Pricing Part II",
+        "url": "https://financeunlocked.com/videos/funds-transfer-pricing-part-ii"
+      }
+    ]
   },
   "financial-maths/funding-rate": {
     "websites": [
@@ -1231,6 +1495,28 @@
     ],
     "videos": []
   },
+  "financial-maths/matched-maturity-funding": {
+    "websites": [
+      {
+        "title": "Investopedia — Asset-Liability Management",
+        "url": "https://www.investopedia.com/terms/a/asset-liabilitymanagement.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Funds Transfer Pricing",
+        "url": "https://corporatefinanceinstitute.com/resources/management/asset-and-liability-management-alm/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Finance Unlocked — Funds Transfer Pricing Part I",
+        "url": "https://financeunlocked.com/videos/funds-transfer-pricing-part-i"
+      },
+      {
+        "title": "FDIC — Interest Rate Risk Management",
+        "url": "https://www.fdic.gov/resources/bankers/capital-markets/interest-rate-risk/"
+      }
+    ]
+  },
   "financial-maths/market-impact-model": {
     "websites": [
       {
@@ -1270,6 +1556,50 @@
     ],
     "videos": []
   },
+  "financial-maths/net-interest-income": {
+    "websites": [
+      {
+        "title": "Investopedia — Net Interest Income",
+        "url": "https://www.investopedia.com/terms/n/net-interest-income.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Net Interest Margin",
+        "url": "https://corporatefinanceinstitute.com/resources/commercial-lending/net-interest-margin/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Banking: How Banks Make Money",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/money-and-banking/banking-and-money/v/banking-2-a-bank-s-income-statement"
+      },
+      {
+        "title": "Investopedia — Asset-Liability Management",
+        "url": "https://www.investopedia.com/terms/a/asset-liabilitymanagement.asp"
+      }
+    ]
+  },
+  "financial-maths/non-maturity-deposits": {
+    "websites": [
+      {
+        "title": "Wikipedia — Core Deposit",
+        "url": "https://en.wikipedia.org/wiki/Core_banking"
+      },
+      {
+        "title": "Basel Committee — IRRBB Standards (NMD Guidance)",
+        "url": "https://www.bis.org/bcbs/publ/d368.htm"
+      }
+    ],
+    "videos": [
+      {
+        "title": "FDIC — Deposit Assumptions in Interest Rate Risk",
+        "url": "https://www.fdic.gov/resources/bankers/capital-markets/interest-rate-risk/"
+      },
+      {
+        "title": "Investopedia — Asset-Liability Management",
+        "url": "https://www.investopedia.com/terms/a/asset-liabilitymanagement.asp"
+      }
+    ]
+  },
   "financial-maths/optimal-execution": {
     "websites": [
       {
@@ -1308,6 +1638,28 @@
       }
     ],
     "videos": []
+  },
+  "financial-maths/pass-through-rate": {
+    "websites": [
+      {
+        "title": "Wikipedia — Interest Rate Pass-Through",
+        "url": "https://en.wikipedia.org/wiki/Interest_rate"
+      },
+      {
+        "title": "ECB — Transmission of Monetary Policy",
+        "url": "https://www.ecb.europa.eu/mopo/intro/transmission/html/index.en.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Monetary Policy Transmission",
+        "url": "https://www.youtube.com/watch?v=PHe0bXAIuk0"
+      },
+      {
+        "title": "FDIC — Interest Rate Risk Measurement",
+        "url": "https://www.fdic.gov/banker-resource-center/technical-assistance-video-program"
+      }
+    ]
   },
   "financial-maths/pairs-trading": {
     "websites": [
@@ -2005,6 +2357,28 @@
     ],
     "videos": []
   },
+  "mathematical-notation/normal-cdf-and-pdf-notation": {
+    "websites": [
+      {
+        "title": "Wikipedia — Normal Distribution",
+        "url": "https://en.wikipedia.org/wiki/Normal_distribution"
+      },
+      {
+        "title": "Khan Academy — Normal Distribution and the Empirical Rule",
+        "url": "https://www.khanacademy.org/math/statistics-probability/modeling-distributions-of-data/normal-distributions-library/v/introduction-to-the-normal-distribution"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — But What Is the Central Limit Theorem?",
+        "url": "https://www.youtube.com/watch?v=zeJD6dqJ5lo"
+      },
+      {
+        "title": "The Organic Chemistry Tutor — Normal Distribution and Z-Scores",
+        "url": "https://www.youtube.com/watch?v=2tuBREK_mgE"
+      }
+    ]
+  },
   "mathematical-notation/partial-derivative-notation": {
     "websites": [
       {
@@ -2017,6 +2391,28 @@
       }
     ],
     "videos": []
+  },
+  "mathematical-notation/phi-vs-n-notation": {
+    "websites": [
+      {
+        "title": "Wikipedia — Normal Distribution: Notation",
+        "url": "https://en.wikipedia.org/wiki/Normal_distribution#Notation"
+      },
+      {
+        "title": "Investopedia — Normal Distribution",
+        "url": "https://www.investopedia.com/terms/n/normaldistribution.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Normal Distribution Problems: z-score",
+        "url": "https://www.khanacademy.org/math/statistics-probability/modeling-distributions-of-data/z-scores/v/ck12-org-normal-distribution-problems-z-score"
+      },
+      {
+        "title": "3Blue1Brown — But What Is the Central Limit Theorem?",
+        "url": "https://www.youtube.com/watch?v=zeJD6dqJ5lo"
+      }
+    ]
   },
   "mathematical-notation/probability-measure-notation": {
     "websites": [
@@ -2472,6 +2868,28 @@
     ],
     "videos": []
   },
+  "probability/cdf-vs-pdf": {
+    "websites": [
+      {
+        "title": "Khan Academy — Probability Density Functions",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-continuous/v/probability-density-functions"
+      },
+      {
+        "title": "Wikipedia — Probability Density Function",
+        "url": "https://en.wikipedia.org/wiki/Probability_density_function"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — But What Is a Convolution?",
+        "url": "https://www.youtube.com/watch?v=IaSGqQa5O-M"
+      },
+      {
+        "title": "StatQuest — Probability vs Likelihood",
+        "url": "https://www.youtube.com/watch?v=pYxNSUDSFH4"
+      }
+    ]
+  },
   "probability/chi-squared-distribution": {
     "websites": [
       {
@@ -2580,6 +2998,28 @@
       }
     ],
     "videos": []
+  },
+  "probability/joint-pdf-and-marginal-distributions": {
+    "websites": [
+      {
+        "title": "Khan Academy — Jointly Distributed Random Variables",
+        "url": "https://www.khanacademy.org/math/multivariable-calculus/thinking-about-multivariable-function/ways-to-represent-multivariable-functions/a/multivariable-functions"
+      },
+      {
+        "title": "Wikipedia — Joint Probability Distribution",
+        "url": "https://en.wikipedia.org/wiki/Joint_probability_distribution"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Marginal and Conditional Distributions",
+        "url": "https://www.khanacademy.org/math/statistics-probability/analyzing-categorical-data/two-way-tables-for-two-way-tables/v/marginal-distribution-and-conditional-distribution"
+      },
+      {
+        "title": "MIT OpenCourseWare — Joint PDFs",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/joint-pdfs/"
+      }
+    ]
   },
   "probability/lognormal-distribution": {
     "websites": [
@@ -2694,6 +3134,28 @@
     ],
     "videos": []
   },
+  "probability/quantile-function": {
+    "websites": [
+      {
+        "title": "Wikipedia — Quantile Function",
+        "url": "https://en.wikipedia.org/wiki/Quantile_function"
+      },
+      {
+        "title": "Investopedia — Quantile Definition",
+        "url": "https://www.investopedia.com/terms/q/quantile.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Percentile Rank",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/percentile-rankings/v/calculating-percentile"
+      },
+      {
+        "title": "StatQuest — Quantiles and Percentiles",
+        "url": "https://www.youtube.com/watch?v=IFKQLDmRK0Y"
+      }
+    ]
+  },
   "probability/standardised-normal-distribution-function": {
     "websites": [
       {
@@ -2732,6 +3194,28 @@
       }
     ],
     "videos": []
+  },
+  "probability/survival-function": {
+    "websites": [
+      {
+        "title": "Wikipedia — Survival Function",
+        "url": "https://en.wikipedia.org/wiki/Survival_function"
+      },
+      {
+        "title": "Investopedia — Hazard Rate",
+        "url": "https://www.investopedia.com/terms/h/hazardrate.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Survival Analysis",
+        "url": "https://www.youtube.com/watch?v=v1QqpG0rR1k"
+      },
+      {
+        "title": "MIT OpenCourseWare — Probabilistic Systems Analysis",
+        "url": "https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/lecture-21-video/"
+      }
+    ]
   },
   "probability/tail-dependence": {
     "websites": [
@@ -2785,6 +3269,28 @@
     ],
     "videos": []
   },
+  "risk/basis-risk-banking-book": {
+    "websites": [
+      {
+        "title": "Investopedia — Basis Risk",
+        "url": "https://www.investopedia.com/terms/b/basisrisk.asp"
+      },
+      {
+        "title": "Wikipedia — Basis Risk",
+        "url": "https://en.wikipedia.org/wiki/Basis_risk"
+      }
+    ],
+    "videos": [
+      {
+        "title": "FDIC — Types of Interest Rate Risk",
+        "url": "https://www.fdic.gov/resources/bankers/capital-markets/interest-rate-risk/"
+      },
+      {
+        "title": "Basel Committee — Interest Rate Risk in the Banking Book",
+        "url": "https://www.bis.org/bcbs/publ/d368.htm"
+      }
+    ]
+  },
   "risk/coherent-risk-measure": {
     "websites": [
       {
@@ -2837,6 +3343,50 @@
     ],
     "videos": []
   },
+  "risk/earnings-at-risk": {
+    "websites": [
+      {
+        "title": "Investopedia — Earnings at Risk",
+        "url": "https://www.investopedia.com/terms/e/earningsatrisk.asp"
+      },
+      {
+        "title": "Wikipedia — Interest Rate Risk",
+        "url": "https://en.wikipedia.org/wiki/Interest_rate_risk"
+      }
+    ],
+    "videos": [
+      {
+        "title": "FDIC — Interest Rate Risk Measurement and Limits",
+        "url": "https://www.fdic.gov/resources/bankers/capital-markets/interest-rate-risk/"
+      },
+      {
+        "title": "FDIC — Technical Assistance: Interest Rate Risk",
+        "url": "https://www.fdic.gov/banker-resource-center/technical-assistance-video-program"
+      }
+    ]
+  },
+  "risk/economic-value-of-equity": {
+    "websites": [
+      {
+        "title": "Investopedia — Economic Value of Equity (EVE)",
+        "url": "https://www.investopedia.com/terms/e/economicvalueofequity.asp"
+      },
+      {
+        "title": "Wikipedia — Asset-Liability Management",
+        "url": "https://en.wikipedia.org/wiki/Asset_and_liability_management"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Corporate Finance Institute — Economic Value of Equity (EVE)",
+        "url": "https://corporatefinanceinstitute.com/resources/valuation/economic-value-of-equity-eve/"
+      },
+      {
+        "title": "FDIC — Interest Rate Risk Management",
+        "url": "https://www.fdic.gov/resources/bankers/capital-markets/interest-rate-risk/"
+      }
+    ]
+  },
   "risk/extreme-value-theory": {
     "websites": [
       {
@@ -2862,6 +3412,94 @@
       }
     ],
     "videos": []
+  },
+  "risk/interest-rate-risk-in-the-banking-book": {
+    "websites": [
+      {
+        "title": "Wikipedia — Interest Rate Risk in the Banking Book",
+        "url": "https://en.wikipedia.org/wiki/Interest_rate_risk#Banking_book"
+      },
+      {
+        "title": "Basel Committee — Interest Rate Risk in the Banking Book (Standards)",
+        "url": "https://www.bis.org/bcbs/publ/d368.htm"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Finance Unlocked — Interest Rate Risk in the Banking Book",
+        "url": "https://financeunlocked.com/videos/irrbb-1-3-interest-rate-risk-in-the-banking-book-introduction"
+      },
+      {
+        "title": "FDIC — Types of Interest Rate Risk",
+        "url": "https://www.fdic.gov/resources/bankers/capital-markets/interest-rate-risk/"
+      }
+    ]
+  },
+  "risk/key-rate-duration": {
+    "websites": [
+      {
+        "title": "Investopedia — Key Rate Duration",
+        "url": "https://www.investopedia.com/terms/k/keyrateduration.asp"
+      },
+      {
+        "title": "Wikipedia — Key Rate Duration",
+        "url": "https://en.wikipedia.org/wiki/Key_rate_duration"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Corporate Finance Institute — Key Rate Duration",
+        "url": "https://corporatefinanceinstitute.com/resources/fixed-income/key-rate-duration/"
+      },
+      {
+        "title": "AnalystPrep — Key Rate Duration Study Notes",
+        "url": "https://analystprep.com/cfa-level-1-exam/fixed-income/key-rate-duration/"
+      }
+    ]
+  },
+  "risk/liquidity-buffer-composition": {
+    "websites": [
+      {
+        "title": "Investopedia — High-Quality Liquid Assets (HQLA)",
+        "url": "https://www.investopedia.com/terms/h/high-quality-liquid-assets.asp"
+      },
+      {
+        "title": "Wikipedia — Liquidity Coverage Ratio",
+        "url": "https://en.wikipedia.org/wiki/Liquidity_coverage_ratio"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Basel Committee — Basel III: The Liquidity Coverage Ratio",
+        "url": "https://www.bis.org/publ/bcbs238.htm"
+      },
+      {
+        "title": "AnalystPrep — Solvency, Liquidity and Regulation",
+        "url": "https://analystprep.com/study-notes/frm/solvency-liquidity-and-other-regulation-after-the-global-financial-crisis/"
+      }
+    ]
+  },
+  "risk/liquidity-coverage-ratio": {
+    "websites": [
+      {
+        "title": "Investopedia — Liquidity Coverage Ratio",
+        "url": "https://www.investopedia.com/terms/l/liquidity-coverage-ratio.asp"
+      },
+      {
+        "title": "Wikipedia — Liquidity Coverage Ratio",
+        "url": "https://en.wikipedia.org/wiki/Liquidity_coverage_ratio"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Basel Committee — Basel III: The Liquidity Coverage Ratio",
+        "url": "https://www.bis.org/publ/bcbs238.htm"
+      },
+      {
+        "title": "AnalystPrep — Estimating Liquidity Risk",
+        "url": "https://analystprep.com/study-notes/frm/estimating-liquidity-risk/"
+      }
+    ]
   },
   "risk/liquidity-risk": {
     "websites": [
@@ -2937,6 +3575,50 @@
     ],
     "videos": []
   },
+  "risk/net-stable-funding-ratio": {
+    "websites": [
+      {
+        "title": "Investopedia — Net Stable Funding Ratio (NSFR)",
+        "url": "https://www.investopedia.com/terms/n/net-stable-funding-ratio.asp"
+      },
+      {
+        "title": "Wikipedia — Net Stable Funding Ratio",
+        "url": "https://en.wikipedia.org/wiki/Net_stable_funding_ratio"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Finance Unlocked — NSFR Explained",
+        "url": "https://financeunlocked.com/videos/the-net-stable-funding-ratio-nsfr-explained"
+      },
+      {
+        "title": "Basel Committee — Basel III: Net Stable Funding Ratio",
+        "url": "https://www.bis.org/bcbs/publ/d295.htm"
+      }
+    ]
+  },
+  "risk/optionality-risk": {
+    "websites": [
+      {
+        "title": "Investopedia — Prepayment Risk",
+        "url": "https://www.investopedia.com/terms/p/prepaymentrisk.asp"
+      },
+      {
+        "title": "Wikipedia — Embedded Option",
+        "url": "https://en.wikipedia.org/wiki/Embedded_option"
+      }
+    ],
+    "videos": [
+      {
+        "title": "FDIC — Rate Changes and Prepayment Assumptions",
+        "url": "https://www.fdic.gov/resources/bankers/capital-markets/interest-rate-risk/"
+      },
+      {
+        "title": "Basel Committee — Interest Rate Risk in the Banking Book",
+        "url": "https://www.bis.org/bcbs/publ/d368.htm"
+      }
+    ]
+  },
   "risk/pnl-attribution": {
     "websites": [
       {
@@ -2945,6 +3627,28 @@
       }
     ],
     "videos": []
+  },
+  "risk/repricing-risk": {
+    "websites": [
+      {
+        "title": "Investopedia — Repricing Risk",
+        "url": "https://www.investopedia.com/terms/r/repricingrisk.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Gap Analysis",
+        "url": "https://corporatefinanceinstitute.com/resources/accounting/negative-gap/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "FDIC — Types of Interest Rate Risk",
+        "url": "https://www.fdic.gov/resources/bankers/capital-markets/interest-rate-risk/"
+      },
+      {
+        "title": "AnalystPrep — Risk Management for Changing Interest Rates",
+        "url": "https://analystprep.com/study-notes/frm/risk-management-for-changing-interest-rates-asset-liability-management-and-duration-techniques/"
+      }
+    ]
   },
   "risk/stress-testing": {
     "websites": [
@@ -2984,6 +3688,28 @@
       }
     ],
     "videos": []
+  },
+  "risk/yield-curve-risk": {
+    "websites": [
+      {
+        "title": "Investopedia — Yield Curve Risk",
+        "url": "https://www.investopedia.com/terms/y/yieldcurverisk.asp"
+      },
+      {
+        "title": "Wikipedia — Yield Curve",
+        "url": "https://en.wikipedia.org/wiki/Yield_curve"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Introduction to the Yield Curve",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/bonds-tutorial/v/introduction-to-the-yield-curve"
+      },
+      {
+        "title": "Khan Academy — The Yield Curve",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/bonds-tutorial/v/the-yield-curve"
+      }
+    ]
   },
   "statistics/arch-model": {
     "websites": [
@@ -3210,6 +3936,28 @@
       }
     ],
     "videos": []
+  },
+  "statistics/kernel-density-estimation": {
+    "websites": [
+      {
+        "title": "Wikipedia — Kernel Density Estimation",
+        "url": "https://en.wikipedia.org/wiki/Kernel_density_estimation"
+      },
+      {
+        "title": "GeeksforGeeks — Kernel Density Estimation",
+        "url": "https://www.geeksforgeeks.org/machine-learning/kernel-density-estimation/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Kernel Density Estimation",
+        "url": "https://www.youtube.com/watch?v=x5zLaWT5KPs"
+      },
+      {
+        "title": "mathisonian — Interactive Kernel Density Estimation",
+        "url": "https://mathisonian.github.io/kde/"
+      }
+    ]
   },
   "statistics/kurtosis": {
     "websites": [

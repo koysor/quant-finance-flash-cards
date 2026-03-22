@@ -636,6 +636,30 @@
     "description": "Taking the continuous-time limit of the binomial model produces the Black-Scholes PDE — this card shows how the discrete one-step formula converges to the continuous PDE as the time step shrinks to zero."
   },
   {
+    "source": "derivatives/d1-and-d2-in-black-scholes",
+    "target": "derivatives/black-scholes-equation",
+    "label": "arguments of",
+    "description": "d₁ and d₂ are the two arguments fed into the normal CDF in the Black-Scholes formula — understanding what they encode (log-moneyness, drift, and volatility scaling) is essential to interpreting and differentiating the formula."
+  },
+  {
+    "source": "derivatives/d1-and-d2-in-black-scholes",
+    "target": "derivatives/option-moneyness",
+    "label": "standardises",
+    "description": "d₁ and d₂ standardise the option's moneyness by dividing log(S/K) by the volatility-scaled time horizon σ√T, converting moneyness into a z-score suitable for normal CDF evaluation."
+  },
+  {
+    "source": "derivatives/d1-and-d2-in-black-scholes",
+    "target": "mathematical-notation/normal-cdf-and-pdf-notation",
+    "label": "arguments passed to",
+    "description": "d₁ and d₂ are the specific values passed to N(·) and N'(·) in the Black-Scholes formula — this notation card explains how to read the CDF and PDF symbols that appear in the pricing and Greek expressions."
+  },
+  {
+    "source": "derivatives/d1-and-d2-in-black-scholes",
+    "target": "stochastic-processes/volatility-drag",
+    "label": "contains",
+    "description": "The σ²/2 term that distinguishes d₁ from d₂ is the volatility drag from geometric Brownian motion — it reflects the gap between the arithmetic and geometric mean returns of lognormally distributed assets."
+  },
+  {
     "source": "derivatives/delta-gamma-approximation",
     "target": "derivatives/speed-greeks",
     "label": "extended by",
@@ -1110,6 +1134,66 @@
     "description": "In the Delta-Gamma VaR method, the option Greeks are used to approximate the portfolio loss as a polynomial of risk factor changes, allowing for rapid risk calculation without full revaluation."
   },
   {
+    "source": "derivatives/option-moneyness",
+    "target": "derivatives/option-greeks",
+    "label": "determines behaviour of",
+    "description": "Moneyness is the primary driver of an option's Greek profile — deep ITM options have delta near ±1 and minimal gamma, while ATM options have the highest gamma, theta, and vega exposure."
+  },
+  {
+    "source": "derivatives/option-moneyness",
+    "target": "derivatives/option-premium-decomposition",
+    "label": "determines split of",
+    "description": "Moneyness directly determines how the option premium splits between intrinsic and extrinsic value — ITM options carry both, while OTM options are entirely extrinsic."
+  },
+  {
+    "source": "derivatives/option-moneyness",
+    "target": "derivatives/value-of-a-call-option",
+    "label": "classifies",
+    "description": "Moneyness classifies a call as ITM, ATM, or OTM depending on whether the underlying exceeds, equals, or falls below the strike — this classification determines the call's intrinsic value and delta."
+  },
+  {
+    "source": "derivatives/option-moneyness",
+    "target": "derivatives/value-of-a-put-option",
+    "label": "classifies",
+    "description": "Moneyness classifies a put as ITM, ATM, or OTM depending on whether the underlying is below, at, or above the strike — this classification determines the put's intrinsic value and delta."
+  },
+  {
+    "source": "derivatives/option-payoff-diagrams",
+    "target": "derivatives/protective-put-strategy",
+    "label": "visualises",
+    "description": "The protective put payoff diagram is constructed by vertically summing the long stock and long put payoff lines, revealing the characteristic kinked profile with a floor at the strike minus the premium."
+  },
+  {
+    "source": "derivatives/option-payoff-diagrams",
+    "target": "derivatives/value-of-a-call-option",
+    "label": "visualises",
+    "description": "The call payoff diagram plots the hockey-stick function max(S_T - K, 0), making the asymmetric risk-reward of a long call immediately visible."
+  },
+  {
+    "source": "derivatives/option-payoff-diagrams",
+    "target": "derivatives/value-of-a-put-option",
+    "label": "visualises",
+    "description": "The put payoff diagram plots the hockey-stick function max(K - S_T, 0), showing that the put holder profits as the underlying falls below the strike."
+  },
+  {
+    "source": "derivatives/option-premium-decomposition",
+    "target": "derivatives/time-decay",
+    "label": "explains erosion of",
+    "description": "Time decay is the mechanism by which the extrinsic (time value) component of the premium decomposition erodes to zero at expiry — understanding the split is prerequisite to understanding theta."
+  },
+  {
+    "source": "derivatives/option-premium-decomposition",
+    "target": "derivatives/value-of-a-call-option",
+    "label": "decomposes",
+    "description": "The call premium decomposes into intrinsic value max(S - K, 0) plus extrinsic value — this split explains why an ITM call is worth more than its exercise value before expiry."
+  },
+  {
+    "source": "derivatives/option-premium-decomposition",
+    "target": "derivatives/value-of-a-put-option",
+    "label": "decomposes",
+    "description": "The put premium decomposes into intrinsic value max(K - S, 0) plus extrinsic value — for American puts, the early exercise decision hinges on whether the interest on intrinsic value exceeds the extrinsic value lost."
+  },
+  {
     "source": "derivatives/p-measure-vs-q-measure",
     "target": "derivatives/risk-neutral-pricing",
     "label": "explains context of",
@@ -1144,6 +1228,18 @@
     "target": "derivatives/rho-greeks",
     "label": "constrains",
     "description": "Put-call parity forces the difference between call Rho and put Rho to equal KTe^{-rT}, providing a consistency check on any Rho calculation."
+  },
+  {
+    "source": "derivatives/protective-put-strategy",
+    "target": "derivatives/put-call-parity",
+    "label": "equivalent via",
+    "description": "Put-call parity shows that a protective put (long stock + long put) is economically equivalent to a long call plus a risk-free bond — S + P = C + Ke^{-rT}."
+  },
+  {
+    "source": "derivatives/protective-put-strategy",
+    "target": "derivatives/value-of-a-put-option",
+    "label": "uses",
+    "description": "The protective put strategy requires purchasing a put option whose value determines the cost of the downside protection — the put premium is the explicit price of portfolio insurance."
   },
   {
     "source": "derivatives/replicating-portfolio",
@@ -1332,6 +1428,30 @@
     "description": "Theta and Veta are both time-decay measures: Theta captures how the option price decays with time, while Veta captures how Vega (volatility sensitivity) decays with time."
   },
   {
+    "source": "derivatives/time-decay",
+    "target": "derivatives/option-moneyness",
+    "label": "varies with",
+    "description": "Time decay is strongest for ATM options and weakest for deep ITM or OTM options — moneyness determines where the option sits on the theta curve."
+  },
+  {
+    "source": "derivatives/time-decay",
+    "target": "derivatives/theta-greeks",
+    "label": "measured by",
+    "description": "Theta is the Greek that quantifies time decay — it gives the rate at which the option's extrinsic value erodes per unit of time, all else equal."
+  },
+  {
+    "source": "derivatives/time-decay",
+    "target": "derivatives/value-of-a-call-option",
+    "label": "erodes value of",
+    "description": "Time decay reduces the call option's time value component as expiry approaches — the rate of erosion accelerates non-linearly, following an approximate square-root-of-time relationship."
+  },
+  {
+    "source": "derivatives/time-decay",
+    "target": "derivatives/value-of-a-put-option",
+    "label": "erodes value of",
+    "description": "Time decay reduces the put option's time value as expiry nears — for deep ITM puts, theta can occasionally be positive because the interest on the intrinsic value exceeds the time value lost."
+  },
+  {
     "source": "derivatives/triangular-arbitrage",
     "target": "derivatives/no-arbitrage-principle",
     "label": "enforces",
@@ -1372,6 +1492,48 @@
     "target": "derivatives/volatility-smile",
     "label": "encodes information from",
     "description": "The variance swap strike encodes information from the entire volatility smile — it is a weighted integral of implied variances across all strikes, making it sensitive to skew and kurtosis."
+  },
+  {
+    "source": "derivatives/value-of-a-call-option",
+    "target": "derivatives/black-scholes-equation",
+    "label": "priced by",
+    "description": "The Black-Scholes equation provides the closed-form formula for the value of a European call option, expressing the price as a function of the underlying, strike, volatility, rate, and time to expiry."
+  },
+  {
+    "source": "derivatives/value-of-a-call-option",
+    "target": "derivatives/option-greeks",
+    "label": "differentiated to give",
+    "description": "The option Greeks are partial derivatives of the call value with respect to its inputs — Delta, Gamma, Theta, Vega, and Rho each measure how the call price responds to a small change in one parameter."
+  },
+  {
+    "source": "derivatives/value-of-a-call-option",
+    "target": "derivatives/put-call-parity",
+    "label": "linked via",
+    "description": "Put-call parity ties the call value to the put value through the no-arbitrage relation C - P = S - Ke^{-rT}, so knowing one option value immediately determines the other."
+  },
+  {
+    "source": "derivatives/value-of-a-call-option",
+    "target": "derivatives/value-of-a-put-option",
+    "label": "counterpart of",
+    "description": "Call and put values are mirror-image payoffs on the same underlying — calls profit when the asset rises above the strike while puts profit when it falls below, and they are linked exactly by put-call parity."
+  },
+  {
+    "source": "derivatives/value-of-a-put-option",
+    "target": "derivatives/black-scholes-equation",
+    "label": "priced by",
+    "description": "The Black-Scholes equation provides the closed-form formula for the value of a European put option, using the same d1 and d2 terms as the call but with negated normal CDF arguments."
+  },
+  {
+    "source": "derivatives/value-of-a-put-option",
+    "target": "derivatives/option-greeks",
+    "label": "differentiated to give",
+    "description": "The put value's partial derivatives yield the put-specific Greeks — put Delta is negative (N(d1) - 1), while Gamma, Vega, and Rho take corresponding signs reflecting the put's downside exposure."
+  },
+  {
+    "source": "derivatives/value-of-a-put-option",
+    "target": "derivatives/put-call-parity",
+    "label": "linked via",
+    "description": "Put-call parity allows the put value to be derived directly from the call value and vice versa, ensuring no-arbitrage consistency between the two option types."
   },
   {
     "source": "derivatives/vega-greeks",
@@ -1474,6 +1636,24 @@
     "target": "portfolio-theory/sharpe-ratio",
     "label": "measured by",
     "description": "The Sharpe ratio evaluates absolute return strategies by dividing excess return over the risk-free rate by portfolio volatility — it is the standard metric for comparing absolute return managers."
+  },
+  {
+    "source": "financial-maths/asset-liability-management",
+    "target": "financial-maths/duration-gap",
+    "label": "manages",
+    "description": "The duration gap is the primary structural metric that ALM teams monitor and adjust — narrowing or widening the gap via swaps or balance sheet changes is the core operational activity of ALM."
+  },
+  {
+    "source": "financial-maths/asset-liability-management",
+    "target": "financial-maths/net-interest-income",
+    "label": "optimises",
+    "description": "ALM optimises NII by managing the repricing profile of the banking book — the ALM desk decides how much rate risk to take in pursuit of higher net interest margins while staying within risk limits."
+  },
+  {
+    "source": "financial-maths/asset-liability-management",
+    "target": "risk/interest-rate-risk-in-the-banking-book",
+    "label": "manages",
+    "description": "ALM is the operational function responsible for managing IRRBB — it monitors EVE and NII sensitivities, executes hedges, and ensures compliance with regulatory limits."
   },
   {
     "source": "financial-maths/asset-swap-spread",
@@ -1668,6 +1848,42 @@
     "description": "Estimating beta for firms with different capital structures requires the Hamada equation to unlever and relever beta using the debt-to-equity ratio, ensuring like-for-like comparison."
   },
   {
+    "source": "financial-maths/deposit-beta",
+    "target": "financial-maths/non-maturity-deposits",
+    "label": "parameterises",
+    "description": "Deposit beta is the key behavioural parameter that determines how NMD funding costs respond to market rate changes — it drives the effective duration and repricing profile of the entire deposit book."
+  },
+  {
+    "source": "financial-maths/deposit-beta",
+    "target": "financial-maths/pass-through-rate",
+    "label": "formalises",
+    "description": "Deposit beta is the econometric formalisation of the pass-through rate concept — the regression coefficient that quantifies the fraction of policy rate changes transmitted to deposit pricing."
+  },
+  {
+    "source": "financial-maths/deposit-beta",
+    "target": "risk/interest-rate-risk-in-the-banking-book",
+    "label": "critical input to",
+    "description": "Deposit beta assumptions are among the most consequential inputs to IRRBB measurement — an overly low beta understates NII sensitivity and overstates the franchise value of deposits under rate stress."
+  },
+  {
+    "source": "financial-maths/duration-gap",
+    "target": "financial-maths/modified-duration",
+    "label": "built from",
+    "description": "The duration gap is computed from the modified durations of a bank's assets and liabilities — modified duration is the fundamental building block that quantifies each side's interest rate sensitivity."
+  },
+  {
+    "source": "financial-maths/duration-gap",
+    "target": "risk/economic-value-of-equity",
+    "label": "drives sensitivity of",
+    "description": "The duration gap is the primary determinant of EVE sensitivity — a larger gap means a larger EVE change for a given rate shock, which is why ALM teams manage the gap to control EVE risk."
+  },
+  {
+    "source": "financial-maths/duration-gap",
+    "target": "risk/interest-rate-risk-in-the-banking-book",
+    "label": "core metric of",
+    "description": "The duration gap summarises the entire banking book's rate sensitivity in a single number, making it the core structural metric that IRRBB frameworks use to assess long-run balance sheet risk."
+  },
+  {
     "source": "financial-maths/dv01",
     "target": "financial-maths/modified-duration",
     "label": "computed from",
@@ -1750,6 +1966,24 @@
     "target": "statistics/correlation",
     "label": "depends on",
     "description": "The diversification benefit of a fund of funds depends critically on the correlation between underlying funds — if strategies are highly correlated, the FoF provides less risk reduction than expected."
+  },
+  {
+    "source": "financial-maths/funds-transfer-pricing",
+    "target": "financial-maths/asset-liability-management",
+    "label": "enables",
+    "description": "FTP is the mechanism that operationalises ALM at an organisational level — by charging each business unit the matched-maturity cost of funds, it ensures duration and liquidity risk are priced into product decisions."
+  },
+  {
+    "source": "financial-maths/funds-transfer-pricing",
+    "target": "financial-maths/net-interest-income",
+    "label": "decomposes",
+    "description": "FTP splits aggregate NII into a true lending margin, a true deposit spread, and a treasury residual, revealing which business units genuinely contribute to profitability after accounting for funding cost."
+  },
+  {
+    "source": "financial-maths/funds-transfer-pricing",
+    "target": "risk/interest-rate-risk-in-the-banking-book",
+    "label": "centralises",
+    "description": "FTP transfers interest rate risk from originating business units to treasury, centralising IRRBB management and ensuring the ALM desk has a consolidated view of the bank's rate exposure."
   },
   {
     "source": "financial-maths/funding-rate",
@@ -2004,6 +2238,24 @@
     "description": "The margin lending rate is typically quoted as the risk-free rate (or a proxy like SOFR) plus a credit spread, making changes in the risk-free rate the primary driver of margin borrowing costs."
   },
   {
+    "source": "financial-maths/matched-maturity-funding",
+    "target": "financial-maths/duration-gap",
+    "label": "eliminates",
+    "description": "Perfect matched-maturity funding sets the duration gap to zero — every asset is funded by a liability of identical tenor, so no net interest rate exposure remains on the balance sheet."
+  },
+  {
+    "source": "financial-maths/matched-maturity-funding",
+    "target": "financial-maths/funds-transfer-pricing",
+    "label": "foundation of",
+    "description": "The matched-maturity rate is the theoretical benchmark from which FTP is constructed — treasury charges each business unit the rate at which it could fund that product on a fully matched basis."
+  },
+  {
+    "source": "financial-maths/matched-maturity-funding",
+    "target": "financial-maths/net-interest-income",
+    "label": "benchmarks",
+    "description": "Matched-maturity funding establishes the baseline NIM that reflects only credit spread — any NIM above this level represents term premium earned from deliberate maturity mismatch."
+  },
+  {
     "source": "financial-maths/market-impact-model",
     "target": "financial-maths/statistical-arbitrage",
     "label": "constrains",
@@ -2076,6 +2328,42 @@
     "description": "Naked short selling is short selling without a confirmed borrow, in contrast to covered (standard) short selling where a locate is obtained first — it shares the same directional payoff but carries additional settlement and regulatory risk."
   },
   {
+    "source": "financial-maths/net-interest-income",
+    "target": "risk/earnings-at-risk",
+    "label": "measured by",
+    "description": "Earnings at Risk quantifies the potential shortfall in NII under adverse rate scenarios — EaR is the risk metric that converts NII sensitivity into a probabilistic loss measure."
+  },
+  {
+    "source": "financial-maths/net-interest-income",
+    "target": "risk/interest-rate-risk-in-the-banking-book",
+    "label": "earnings lens of",
+    "description": "NII sensitivity is the earnings-based perspective of IRRBB — it captures how rate changes affect the bank's income statement over a 1-2 year horizon, complementing the longer-term EVE view."
+  },
+  {
+    "source": "financial-maths/net-interest-income",
+    "target": "risk/repricing-risk",
+    "label": "exposed to",
+    "description": "NII is directly exposed to repricing risk — when assets and liabilities reprice at different times, rate movements create gaps that squeeze or expand the net interest margin."
+  },
+  {
+    "source": "financial-maths/non-maturity-deposits",
+    "target": "financial-maths/asset-liability-management",
+    "label": "modelled by",
+    "description": "NMD behavioural modelling is one of ALM's most critical tasks — the assumed stability and duration of non-maturity deposits directly determines the bank's measured duration gap and IRRBB exposure."
+  },
+  {
+    "source": "financial-maths/non-maturity-deposits",
+    "target": "risk/interest-rate-risk-in-the-banking-book",
+    "label": "key assumption of",
+    "description": "NMD behavioural maturity is the single most influential modelling assumption in the IRRBB framework — shifting the assumed core deposit duration by one year can change EVE sensitivity by hundreds of millions."
+  },
+  {
+    "source": "financial-maths/non-maturity-deposits",
+    "target": "risk/optionality-risk",
+    "label": "source of",
+    "description": "NMDs carry embedded optionality because depositors can withdraw at any time — this behavioural option is exercised more frequently when rates rise, shortening liability duration adversely for the bank."
+  },
+  {
     "source": "financial-maths/optimal-execution",
     "target": "financial-maths/market-impact-model",
     "label": "built on",
@@ -2134,6 +2422,24 @@
     "target": "financial-maths/yield-curve",
     "label": "constructs",
     "description": "OIS rates at different tenors form the OIS discount curve, which has replaced the LIBOR curve as the standard for discounting collateralised derivatives and constructing the risk-free term structure."
+  },
+  {
+    "source": "financial-maths/pass-through-rate",
+    "target": "financial-maths/net-interest-income",
+    "label": "drives",
+    "description": "The pass-through rate directly determines how much of a market rate change flows to NII — a lower pass-through means the bank retains more of the rate movement as additional net interest income."
+  },
+  {
+    "source": "financial-maths/pass-through-rate",
+    "target": "financial-maths/non-maturity-deposits",
+    "label": "key parameter of",
+    "description": "The pass-through rate is the central behavioural parameter in NMD modelling — it determines how quickly deposit costs adjust to market rates, which in turn drives the effective duration and repricing profile of the deposit book."
+  },
+  {
+    "source": "financial-maths/pass-through-rate",
+    "target": "risk/interest-rate-risk-in-the-banking-book",
+    "label": "critical assumption in",
+    "description": "Pass-through assumptions are among the most consequential inputs to IRRBB measurement — an overly optimistic pass-through rate understates the speed at which funding costs rise, masking the bank's true earnings sensitivity."
   },
   {
     "source": "financial-maths/pairs-trading",
@@ -3648,6 +3954,30 @@
     "description": "The natural numbers N = {1, 2, 3, ...} are a subset of the integers Z — every natural number is an integer, but the integers extend N by including zero and the negative counting numbers."
   },
   {
+    "source": "mathematical-notation/normal-cdf-and-pdf-notation",
+    "target": "derivatives/black-scholes-equation",
+    "label": "notation used in",
+    "description": "The Black-Scholes formula is written entirely in terms of N(d₁) and N(d₂) — recognising these as the standard normal CDF is essential to reading, implementing, and differentiating the formula."
+  },
+  {
+    "source": "mathematical-notation/normal-cdf-and-pdf-notation",
+    "target": "derivatives/option-greeks",
+    "label": "notation used in",
+    "description": "Delta equals N(d₁) for a call, while Gamma, Vega, and Vanna all contain the PDF term N'(d₁) — this notation card explains the CDF and PDF symbols that appear in every closed-form Greek expression."
+  },
+  {
+    "source": "mathematical-notation/normal-cdf-and-pdf-notation",
+    "target": "probability/cumulative-distribution-function",
+    "label": "specific instance of",
+    "description": "N(x) is the CDF of the standard normal distribution — the most important specific CDF in quantitative finance, appearing wherever lognormal asset dynamics lead to closed-form pricing results."
+  },
+  {
+    "source": "mathematical-notation/normal-cdf-and-pdf-notation",
+    "target": "probability/normal-distribution",
+    "label": "notation for",
+    "description": "N(x) and N'(x) are the CDF and PDF of the standard normal distribution N(0,1) — this card explains how to read these symbols that appear throughout options pricing and risk measurement."
+  },
+  {
     "source": "mathematical-notation/partial-derivative-notation",
     "target": "calculus/partial-derivatives",
     "label": "notation for",
@@ -3658,6 +3988,24 @@
     "target": "derivatives/option-greeks",
     "label": "notation for",
     "description": "Every option Greek is a partial derivative written in this notation — Delta (∂V/∂S), Gamma (∂²V/∂S²), Theta (∂V/∂t), Vega (∂V/∂σ), and Rho (∂V/∂r)."
+  },
+  {
+    "source": "mathematical-notation/phi-vs-n-notation",
+    "target": "mathematical-notation/normal-cdf-and-pdf-notation",
+    "label": "clarifies convention of",
+    "description": "This card explains that Φ(x) and N(x) are the same function — the standard normal CDF — resolving the notational confusion that arises when switching between probability and finance textbooks."
+  },
+  {
+    "source": "mathematical-notation/phi-vs-n-notation",
+    "target": "probability/normal-distribution",
+    "label": "notation for",
+    "description": "Both Φ and N are notational conventions for the CDF of the standard normal distribution — this card maps the two traditions to prevent confusion when reading across disciplines."
+  },
+  {
+    "source": "mathematical-notation/phi-vs-n-notation",
+    "target": "probability/z-table",
+    "label": "notation used with",
+    "description": "Z-tables tabulate Φ(z) or N(z) depending on the textbook's convention — recognising the equivalence is essential when reading tables from different sources."
   },
   {
     "source": "mathematical-notation/probability-measure-notation",
@@ -4518,6 +4866,30 @@
     "description": "Monte Carlo pricing engines use Box-Muller (or its polar variant) to generate the millions of standard normal draws required for simulating asset price paths."
   },
   {
+    "source": "probability/cdf-vs-pdf",
+    "target": "mathematical-notation/normal-cdf-and-pdf-notation",
+    "label": "notation explained by",
+    "description": "N(x) and N'(x) in Black-Scholes are the CDF and PDF of the standard normal — this comparison card explains why one gives probabilities directly while the other requires integration."
+  },
+  {
+    "source": "probability/cdf-vs-pdf",
+    "target": "probability/cumulative-distribution-function",
+    "label": "compares",
+    "description": "The CDF card defines F(x) = P(X ≤ x) in detail — this comparison card explains how it contrasts with the PDF and when each is the right tool in quantitative finance."
+  },
+  {
+    "source": "probability/cdf-vs-pdf",
+    "target": "probability/probability-density-function",
+    "label": "compares",
+    "description": "The PDF card defines f(x) and its properties — this comparison card explains the integration-differentiation duality between PDF and CDF and when each appears in finance."
+  },
+  {
+    "source": "probability/cdf-vs-pdf",
+    "target": "probability/inverse-transform-sampling",
+    "label": "foundation of",
+    "description": "Inverse transform sampling relies on the CDF and its inverse to convert uniform random numbers into any target distribution — understanding the CDF-PDF relationship is prerequisite to understanding why this technique works."
+  },
+  {
     "source": "probability/chi-squared-distribution",
     "target": "probability/normal-distribution",
     "label": "built from",
@@ -4702,6 +5074,24 @@
     "target": "stochastic-processes/euler-maruyama-method",
     "label": "input to",
     "description": "Every Euler-Maruyama step requires a draw from N(0,1), which is generated via inverse transform sampling — applying the inverse normal CDF to a uniform random number."
+  },
+  {
+    "source": "probability/joint-pdf-and-marginal-distributions",
+    "target": "probability/cdf-vs-pdf",
+    "label": "extends to multivariate",
+    "description": "The CDF-vs-PDF relationship extends to multiple dimensions — the joint CDF is the integral of the joint PDF, and marginal PDFs are obtained by integrating out the other variables."
+  },
+  {
+    "source": "probability/joint-pdf-and-marginal-distributions",
+    "target": "probability/copulas",
+    "label": "decomposed by",
+    "description": "Sklar's theorem decomposes any joint distribution into its marginals and a copula that captures the dependence structure — understanding the joint PDF is prerequisite to understanding why copulas are needed."
+  },
+  {
+    "source": "probability/joint-pdf-and-marginal-distributions",
+    "target": "statistics/correlation",
+    "label": "parameterised by",
+    "description": "For the bivariate normal, the correlation coefficient ρ fully parameterises the joint PDF given the marginals — but for non-normal joints, ρ alone does not capture the full dependence structure."
   },
   {
     "source": "probability/jensens-inequality",
@@ -4902,6 +5292,24 @@
     "description": "Parametric VaR at confidence level alpha is computed as mu + sigma * Phi_inverse(alpha), so the probit function directly sets the risk threshold."
   },
   {
+    "source": "probability/quantile-function",
+    "target": "probability/cumulative-distribution-function",
+    "label": "inverse of",
+    "description": "The quantile function is the mathematical inverse of the CDF — given a probability p, it returns the value x such that F(x) = p, reversing the direction of the CDF lookup."
+  },
+  {
+    "source": "probability/quantile-function",
+    "target": "probability/inverse-transform-sampling",
+    "label": "powers",
+    "description": "Inverse transform sampling generates random draws by passing uniform variates through the quantile function — Q(U) produces samples from any target distribution."
+  },
+  {
+    "source": "probability/quantile-function",
+    "target": "risk/value-at-risk",
+    "label": "defines",
+    "description": "Value at Risk is defined as a quantile of the loss distribution — VaR at confidence α is the negative of Q(1-α), making the quantile function the mathematical core of VaR computation."
+  },
+  {
     "source": "probability/standardised-normal-distribution-function",
     "target": "derivatives/black-scholes-equation",
     "label": "used in",
@@ -4954,6 +5362,24 @@
     "target": "risk/value-at-risk",
     "label": "improves",
     "description": "Using the t-distribution instead of the normal for VaR calculations produces wider tail quantiles, giving more conservative and realistic loss estimates that account for fat tails in returns."
+  },
+  {
+    "source": "probability/survival-function",
+    "target": "probability/cdf-vs-pdf",
+    "label": "complement of",
+    "description": "The survival function S(x) = 1 - F(x) is the complement of the CDF — understanding the CDF-PDF relationship is prerequisite to understanding why S(x) decays as the CDF accumulates probability."
+  },
+  {
+    "source": "probability/survival-function",
+    "target": "probability/hazard-rate-function",
+    "label": "related via",
+    "description": "The hazard rate equals f(x)/S(x) and the survival function equals exp(-∫h(t)dt) — the two functions are mathematically linked and jointly define the time-to-default dynamics in credit models."
+  },
+  {
+    "source": "probability/survival-function",
+    "target": "probability/mills-ratio",
+    "label": "ratio involving",
+    "description": "Mill's ratio is the survival function divided by the PDF for the normal distribution — it provides a fast asymptotic approximation for the normal survival probability in the tails."
   },
   {
     "source": "probability/tail-dependence",
@@ -5020,6 +5446,24 @@
     "target": "statistics/survivorship-bias",
     "label": "distorted by",
     "description": "Backtests conducted on survivor-only databases are systematically distorted upward, as they exclude the stocks that went bankrupt or were delisted — precisely the ones that would have caused losses."
+  },
+  {
+    "source": "risk/basis-risk-banking-book",
+    "target": "financial-maths/net-interest-income",
+    "label": "impacts",
+    "description": "Basis risk impacts NII when the reference rates on assets and liabilities diverge — even if both sides reprice at the same time, a widening spread between reference rates squeezes net interest income."
+  },
+  {
+    "source": "risk/basis-risk-banking-book",
+    "target": "financial-maths/sofr-ibor-transition",
+    "label": "amplified by",
+    "description": "The LIBOR-to-SOFR transition amplified basis risk as banks migrated assets and liabilities to different replacement rates at different speeds, creating new and sometimes unexpected basis exposures."
+  },
+  {
+    "source": "risk/basis-risk-banking-book",
+    "target": "risk/interest-rate-risk-in-the-banking-book",
+    "label": "component of",
+    "description": "Basis risk is one of the four IRRBB sub-risks — it captures the exposure from imperfect correlation between the reference rates on assets and liabilities, which is invisible to repricing gap and duration gap analysis."
   },
   {
     "source": "risk/coherent-risk-measure",
@@ -5112,6 +5556,42 @@
     "description": "Maximum drawdown measures the depth of the worst loss while drawdown duration measures how long the recovery takes — together they capture both the severity and persistence of portfolio losses."
   },
   {
+    "source": "risk/earnings-at-risk",
+    "target": "financial-maths/net-interest-income",
+    "label": "measures risk to",
+    "description": "EaR quantifies the potential decline in NII under adverse rate scenarios — it is the probabilistic wrapper around NII sensitivity that translates rate risk into an earnings impact figure."
+  },
+  {
+    "source": "risk/earnings-at-risk",
+    "target": "risk/interest-rate-risk-in-the-banking-book",
+    "label": "income metric of",
+    "description": "EaR is the income-based IRRBB metric that complements EVE — it shows the near-term earnings impact of rate changes, which is what bank boards and equity analysts focus on."
+  },
+  {
+    "source": "risk/earnings-at-risk",
+    "target": "risk/value-at-risk",
+    "label": "analogous to",
+    "description": "EaR is the banking book analogue of VaR — both express worst-case losses at a confidence level, but VaR applies to mark-to-market P&L while EaR applies to accrual-based net interest income."
+  },
+  {
+    "source": "risk/economic-value-of-equity",
+    "target": "financial-maths/duration-gap",
+    "label": "driven by",
+    "description": "The duration gap is the primary determinant of EVE sensitivity — the larger the mismatch between asset and liability durations, the more EVE changes for a given rate shock."
+  },
+  {
+    "source": "risk/economic-value-of-equity",
+    "target": "risk/interest-rate-risk-in-the-banking-book",
+    "label": "solvency metric of",
+    "description": "EVE is the present-value (solvency) lens of IRRBB — it captures how rate changes affect the economic net worth of the banking book, complementing the near-term NII view."
+  },
+  {
+    "source": "risk/economic-value-of-equity",
+    "target": "risk/repricing-risk",
+    "label": "sensitive to",
+    "description": "EVE is affected by repricing mismatches because assets and liabilities with different repricing dates respond differently to rate changes, creating present-value gains or losses."
+  },
+  {
     "source": "risk/expected-shortfall",
     "target": "risk/coherent-risk-measure",
     "label": "satisfies",
@@ -5184,6 +5664,24 @@
     "description": "The FRTB SBM requires all interest rate delta sensitivities to be mapped to the ten prescribed tenor vertices before aggregation — these vertices are the buckets used within the GIRR risk class of the sensitivity-based method."
   },
   {
+    "source": "risk/interest-rate-risk-in-the-banking-book",
+    "target": "financial-maths/interest-rate-swap",
+    "label": "hedged using",
+    "description": "Interest rate swaps are the primary tool for managing IRRBB — paying or receiving fixed in a swap alters the duration profile of the banking book, allowing ALM teams to adjust the duration gap without changing the underlying loan and deposit portfolio."
+  },
+  {
+    "source": "risk/interest-rate-risk-in-the-banking-book",
+    "target": "risk/economic-value-of-equity",
+    "label": "measured via",
+    "description": "EVE is one of the two core IRRBB metrics — it captures the present-value impact of rate changes on the entire banking book, providing the solvency perspective that Basel requires alongside the earnings (NII) view."
+  },
+  {
+    "source": "risk/interest-rate-risk-in-the-banking-book",
+    "target": "risk/repricing-risk",
+    "label": "decomposed into",
+    "description": "Repricing risk is the most fundamental component of IRRBB — the maturity and repricing mismatches between banking book assets and liabilities are the primary source of interest rate exposure."
+  },
+  {
     "source": "risk/interest-rate-tenor-vertices",
     "target": "financial-maths/dv01",
     "label": "receives sensitivity from",
@@ -5194,6 +5692,60 @@
     "target": "risk/frtb-sensitivity-based-method",
     "label": "defines buckets for",
     "description": "The ten prescribed tenor vertices (0.25Y to 30Y) are the interest rate buckets used within the FRTB SBM's GIRR risk class — sensitivities are mapped to these vertices and then aggregated using prescribed correlations to produce the IR delta capital charge."
+  },
+  {
+    "source": "risk/key-rate-duration",
+    "target": "financial-maths/modified-duration",
+    "label": "decomposes",
+    "description": "Key rate duration decomposes the single modified duration figure into tenor-specific sensitivities, revealing how interest rate exposure is distributed across the yield curve rather than assuming a parallel shift."
+  },
+  {
+    "source": "risk/key-rate-duration",
+    "target": "risk/interest-rate-risk-in-the-banking-book",
+    "label": "granular measure of",
+    "description": "KRD provides the granular tenor-by-tenor sensitivity profile needed to assess banking book exposure under non-parallel yield curve scenarios prescribed by Basel's IRRBB framework."
+  },
+  {
+    "source": "risk/key-rate-duration",
+    "target": "risk/yield-curve-risk",
+    "label": "primary tool for",
+    "description": "Key rate duration is the primary tool for managing yield curve risk — by quantifying sensitivity at each tenor point, it enables targeted hedging of steepening, flattening, and twist scenarios."
+  },
+  {
+    "source": "risk/liquidity-buffer-composition",
+    "target": "risk/economic-value-of-equity",
+    "label": "adds duration to",
+    "description": "Government bonds held in the HQLA buffer add duration to the asset side of the balance sheet, increasing EVE sensitivity to rate rises — the 2022 UK gilt crisis showed how LCR buffers can themselves become a source of mark-to-market loss."
+  },
+  {
+    "source": "risk/liquidity-buffer-composition",
+    "target": "risk/liquidity-coverage-ratio",
+    "label": "numerator of",
+    "description": "The HQLA stock — classified into Level 1, 2A, and 2B with haircuts and caps — forms the numerator of the LCR calculation, determining how much of the bank's liquid assets count toward the regulatory minimum."
+  },
+  {
+    "source": "risk/liquidity-buffer-composition",
+    "target": "risk/liquidity-risk",
+    "label": "mitigates",
+    "description": "The liquidity buffer is the bank's primary defence against short-term funding stress — its composition and size determine whether the bank can meet obligations without fire-selling illiquid assets."
+  },
+  {
+    "source": "risk/liquidity-coverage-ratio",
+    "target": "financial-maths/asset-liability-management",
+    "label": "constrains",
+    "description": "The LCR requirement forces banks to hold large HQLA buffers that add duration to the asset side, creating an interest rate position that ALM must manage alongside the rest of the banking book."
+  },
+  {
+    "source": "risk/liquidity-coverage-ratio",
+    "target": "financial-maths/non-maturity-deposits",
+    "label": "floors run-off of",
+    "description": "Basel's LCR assigns prescribed run-off rates to different deposit categories, establishing a regulatory floor for how stable deposits can be assumed to be — this interacts with the behavioural assumptions used in NMD modelling."
+  },
+  {
+    "source": "risk/liquidity-coverage-ratio",
+    "target": "risk/liquidity-risk",
+    "label": "mitigates",
+    "description": "The LCR is the primary regulatory tool for mitigating short-term liquidity risk — by requiring banks to hold sufficient HQLA to cover 30 days of stressed outflows, it ensures a minimum buffer against funding crises."
   },
   {
     "source": "risk/liquidity-risk",
@@ -5286,6 +5838,24 @@
     "description": "Monte Carlo VaR simulates thousands of portfolio paths and reads the loss quantile directly from the resulting distribution, avoiding the normality assumption of parametric VaR."
   },
   {
+    "source": "risk/net-stable-funding-ratio",
+    "target": "financial-maths/asset-liability-management",
+    "label": "constrains funding mix of",
+    "description": "The NSFR forces ALM teams to maintain a minimum proportion of stable funding, constraining the maturity transformation strategy and often requiring more expensive long-term debt issuance or retail deposit gathering."
+  },
+  {
+    "source": "risk/net-stable-funding-ratio",
+    "target": "risk/liquidity-coverage-ratio",
+    "label": "complements",
+    "description": "The NSFR addresses structural funding stability over a 1-year horizon, complementing the LCR's 30-day stress focus — together they form Basel III's twin liquidity standards."
+  },
+  {
+    "source": "risk/net-stable-funding-ratio",
+    "target": "risk/liquidity-risk",
+    "label": "mitigates structural",
+    "description": "The NSFR mitigates structural liquidity risk by requiring stable funding for illiquid assets, preventing the maturity mismatch that caused failures like Northern Rock where long-term mortgages were funded by overnight wholesale markets."
+  },
+  {
     "source": "risk/non-modellable-risk-factor",
     "target": "risk/expected-shortfall",
     "label": "charged via stressed",
@@ -5296,6 +5866,24 @@
     "target": "risk/risk-factor-eligibility-test",
     "label": "results from failing",
     "description": "A risk factor is classified as non-modellable precisely when it fails the Risk Factor Eligibility Test — the NMRF designation is the direct consequence of having fewer than 24 real price observations or a gap exceeding 90 days in the prior 12 months."
+  },
+  {
+    "source": "risk/optionality-risk",
+    "target": "financial-maths/non-maturity-deposits",
+    "label": "driven by",
+    "description": "Non-maturity deposits are a key source of optionality risk — depositors' behavioural option to withdraw creates an embedded option that shortens liability duration when rates rise."
+  },
+  {
+    "source": "risk/optionality-risk",
+    "target": "risk/economic-value-of-equity",
+    "label": "distorts",
+    "description": "Optionality risk distorts EVE calculations because embedded options create non-linear rate sensitivity — mortgage prepayment shortens asset duration when rates fall, reducing the EVE gain the bank would otherwise receive."
+  },
+  {
+    "source": "risk/optionality-risk",
+    "target": "risk/interest-rate-risk-in-the-banking-book",
+    "label": "component of",
+    "description": "Optionality risk is one of the four IRRBB sub-risks — it captures the asymmetric exposure from embedded options in banking products that customers exercise adversely for the bank."
   },
   {
     "source": "risk/pnl-attribution",
@@ -5314,6 +5902,24 @@
     "target": "risk/value-at-risk",
     "label": "validates",
     "description": "P&L attribution validates VaR models by comparing predicted risk factor sensitivities against actual P&L outcomes — persistent unexplained P&L suggests the risk model is missing important factors."
+  },
+  {
+    "source": "risk/repricing-risk",
+    "target": "financial-maths/net-interest-income",
+    "label": "impacts",
+    "description": "Repricing risk directly impacts NII — when rate-sensitive assets and liabilities reprice at different times, rate movements create gaps that cause NII to rise or fall."
+  },
+  {
+    "source": "risk/repricing-risk",
+    "target": "risk/economic-value-of-equity",
+    "label": "impacts",
+    "description": "Repricing mismatches also affect EVE because assets and liabilities with different repricing dates have different present-value sensitivities to rate changes."
+  },
+  {
+    "source": "risk/repricing-risk",
+    "target": "risk/interest-rate-risk-in-the-banking-book",
+    "label": "component of",
+    "description": "Repricing risk is the most fundamental of the four IRRBB sub-risks (alongside yield curve, basis, and optionality risk) — it captures the core maturity mismatch exposure in the banking book."
   },
   {
     "source": "risk/risk-factor-eligibility-test",
@@ -5380,6 +5986,24 @@
     "target": "statistics/volatility-clustering",
     "label": "exploits",
     "description": "Volatility scaling exploits volatility clustering — the empirical fact that high volatility persists — by using current volatility as a predictor of near-future volatility to size positions appropriately."
+  },
+  {
+    "source": "risk/yield-curve-risk",
+    "target": "financial-maths/yield-curve",
+    "label": "risk from reshaping of",
+    "description": "Yield curve risk is the exposure to non-parallel changes in the yield curve — steepening, flattening, and twisting — that affect different tenors of the banking book differently."
+  },
+  {
+    "source": "risk/yield-curve-risk",
+    "target": "risk/interest-rate-risk-in-the-banking-book",
+    "label": "component of",
+    "description": "Yield curve risk is one of the four IRRBB sub-risks — it captures the exposure to non-parallel rate movements that a simple duration gap (parallel shift) analysis would miss."
+  },
+  {
+    "source": "risk/yield-curve-risk",
+    "target": "risk/interest-rate-tenor-vertices",
+    "label": "measured at",
+    "description": "Yield curve risk is measured by computing PV01 sensitivities at each tenor vertex and applying non-parallel shocks — the tenor vertices are the grid points at which curve reshaping is assessed."
   },
   {
     "source": "statistics/arch-model",
@@ -5698,6 +6322,24 @@
     "target": "statistics/statistical-properties-of-returns",
     "label": "formalises",
     "description": "The Jarque-Bera test converts the descriptive observation that returns exhibit skewness and excess kurtosis into a formal statistical test with a p-value, quantifying how far the data deviate from normality."
+  },
+  {
+    "source": "statistics/kernel-density-estimation",
+    "target": "probability/cdf-vs-pdf",
+    "label": "estimates",
+    "description": "KDE produces a non-parametric estimate of the PDF — understanding what a PDF is and how it relates to the CDF is prerequisite to interpreting KDE output."
+  },
+  {
+    "source": "statistics/kernel-density-estimation",
+    "target": "probability/normal-distribution",
+    "label": "uses as kernel",
+    "description": "The Gaussian kernel used in KDE is the standard normal PDF — each data point gets a normal bump of width h, and summing all bumps produces the density estimate."
+  },
+  {
+    "source": "statistics/kernel-density-estimation",
+    "target": "statistics/statistical-properties-of-returns",
+    "label": "reveals",
+    "description": "KDE applied to return data reveals the empirical density shape — fat tails, skewness, and multimodality that parametric models would miss — providing a visual diagnostic of the statistical properties of returns."
   },
   {
     "source": "statistics/kalman-filter",
