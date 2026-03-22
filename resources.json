@@ -2,113 +2,94 @@
   "calculus/chain-rule": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Chain Rule",
+        "title": "Khan Academy — Chain Rule",
         "url": "https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-2-new/ab-3-1a/v/chain-rule-introduction"
       },
       {
-        "title": "Paul's Online Math Notes \u2014 Chain Rule",
+        "title": "Paul's Online Math Notes — Chain Rule",
         "url": "https://tutorial.math.lamar.edu/Classes/CalcI/ChainRule.aspx"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Visualising the Chain Rule",
-        "url": "https://www.youtube.com/watch?v=YG15m2VwSjA"
-      },
-      {
-        "title": "Khan Academy \u2014 Chain Rule Introduction",
-        "url": "https://www.youtube.com/watch?v=0T0QrHO56qg"
-      }
-    ]
+    "videos": []
   },
   "calculus/completing-the-square": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Completing the Square",
+        "title": "Khan Academy — Completing the Square",
         "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:completing-the-square/v/solving-quadratic-equations-by-completing-the-square"
       }
     ],
-    "videos": [
-      {
-        "title": "The Organic Chemistry Tutor \u2014 Completing the Square",
-        "url": "https://www.youtube.com/watch?v=xGOQYTo9AKY"
-      },
-      {
-        "title": "Khan Academy \u2014 Completing the Square to Solve Quadratics",
-        "url": "https://www.youtube.com/watch?v=i7idZfS8t8w"
-      }
-    ]
+    "videos": []
   },
   "calculus/convex-function": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Convex Function",
+        "title": "Wikipedia — Convex Function",
         "url": "https://en.wikipedia.org/wiki/Convex_function"
       },
       {
-        "title": "Khan Academy \u2014 Concavity and the Second Derivative",
+        "title": "Khan Academy — Concavity and the Second Derivative",
         "url": "https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-analytical/ab-5-6b/a/concavity-review"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "calculus/cubic-spline-interpolation": {
+    "websites": [
       {
-        "title": "3Blue1Brown \u2014 Convexity in Optimisation",
-        "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w"
+        "title": "Wikipedia — Spline Interpolation",
+        "url": "https://en.wikipedia.org/wiki/Spline_interpolation"
       },
       {
-        "title": "Khan Academy \u2014 Second Derivative Test",
-        "url": "https://www.youtube.com/watch?v=QtXCIxB6kW8"
+        "title": "Paul s Online Math Notes — Interpolation",
+        "url": "https://tutorial.math.lamar.edu/Classes/Alg/Polynomials.aspx"
       }
-    ]
+    ],
+    "videos": []
   },
   "calculus/differentiation-rules": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Differentiation Rules",
+        "title": "Khan Academy — Differentiation Rules",
         "url": "https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-1-new"
       },
       {
-        "title": "Paul's Online Math Notes \u2014 Derivatives",
+        "title": "Paul's Online Math Notes — Derivatives",
         "url": "https://tutorial.math.lamar.edu/Classes/CalcI/DerivativeIntro.aspx"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "calculus/fast-fourier-transform": {
+    "websites": [
       {
-        "title": "3Blue1Brown \u2014 The Essence of Calculus",
-        "url": "https://www.youtube.com/watch?v=WUvTyaaNkzM"
+        "title": "Wikipedia — Fast Fourier Transform",
+        "url": "https://en.wikipedia.org/wiki/Fast_Fourier_transform"
       },
       {
-        "title": "The Organic Chemistry Tutor \u2014 Differentiation Rules",
-        "url": "https://www.youtube.com/watch?v=IvLpN1G1Ncg"
+        "title": "Brilliant — Discrete Fourier Transform",
+        "url": "https://brilliant.org/wiki/discrete-fourier-transform/"
       }
-    ]
+    ],
+    "videos": []
   },
   "calculus/fundamental-theorem-of-calculus": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Fundamental Theorem of Calculus",
+        "title": "Khan Academy — Fundamental Theorem of Calculus",
         "url": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-4/v/fundamental-theorem-of-calculus"
       },
       {
-        "title": "Paul's Online Math Notes \u2014 Fundamental Theorem of Calculus",
+        "title": "Paul's Online Math Notes — Fundamental Theorem of Calculus",
         "url": "https://tutorial.math.lamar.edu/Classes/CalcI/FundThmOfCalc.aspx"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Integration and the Fundamental Theorem",
-        "url": "https://www.youtube.com/watch?v=rfG8ce4nNh0"
-      },
-      {
-        "title": "Khan Academy \u2014 Fundamental Theorem of Calculus",
-        "url": "https://www.youtube.com/watch?v=C7ducZoLKgw"
-      }
-    ]
+    "videos": []
   },
   "calculus/indices-and-index-laws": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Exponent Properties",
+        "title": "Khan Academy — Exponent Properties",
         "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals/x2f8bb11595b61c86:exponent-properties-review/a/exponent-properties-review"
       }
     ],
@@ -117,35 +98,26 @@
   "calculus/initial-and-boundary-conditions": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Boundary Value Problems",
+        "title": "Khan Academy — Boundary Value Problems",
         "url": "https://www.khanacademy.org/math/differential-equations/laplace-transform/laplace-transform-to-solve-a-boundary-value-problem/v/using-the-laplace-transform-to-solve-a-nonhomogeneous-eq"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 But What Is a Partial Differential Equation?",
-        "url": "https://www.youtube.com/watch?v=ly4S0oi3Yz8"
-      }
-    ]
+    "videos": []
   },
   "calculus/integration-rules": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Integration Techniques",
+        "title": "Khan Academy — Integration Techniques",
         "url": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new"
       },
       {
-        "title": "Paul's Online Math Notes \u2014 Integration",
+        "title": "Paul's Online Math Notes — Integration",
         "url": "https://tutorial.math.lamar.edu/Classes/CalcI/IntegralsIntro.aspx"
       }
     ],
     "videos": [
       {
-        "title": "3Blue1Brown \u2014 Integration and the Fundamental Theorem of Calculus",
-        "url": "https://www.youtube.com/watch?v=rfG8ce4nNh0"
-      },
-      {
-        "title": "Khan Academy \u2014 Integration",
+        "title": "Khan Academy — Integration",
         "url": "https://www.khanacademy.org/math/integral-calculus/ic-integration"
       }
     ]
@@ -153,119 +125,95 @@
   "calculus/lemma": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Lemma (mathematics)",
+        "title": "Wikipedia — Lemma (mathematics)",
         "url": "https://en.wikipedia.org/wiki/Lemma_(mathematics)"
       },
       {
-        "title": "Wikipedia \u2014 Lemma (mathematics)",
+        "title": "Wikipedia — Lemma (mathematics)",
         "url": "https://en.wikipedia.org/wiki/Lemma_(mathematics)"
       }
     ],
     "videos": [
       {
-        "title": "3Blue1Brown \u2014 Essence of Calculus Series",
+        "title": "3Blue1Brown — Essence of Calculus Series",
         "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"
-      },
-      {
-        "title": "Khan Academy \u2014 Calculus Concepts",
-        "url": "https://www.youtube.com/watch?v=riXcZT2ICjA"
       }
     ]
   },
   "calculus/logarithmic-and-exponential-functions": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Derivatives of Logarithmic Functions",
+        "title": "Khan Academy — Derivatives of Logarithmic Functions",
         "url": "https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-2-new/ab-3-1b/v/derivative-of-ln-x"
       },
       {
-        "title": "Paul's Online Math Notes \u2014 Derivatives of Exponentials and Logarithms",
+        "title": "Paul's Online Math Notes — Derivatives of Exponentials and Logarithms",
         "url": "https://tutorial.math.lamar.edu/Classes/CalcI/DiffExpLogFcns.aspx"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "calculus/newton-raphson-method": {
+    "websites": [
       {
-        "title": "3Blue1Brown \u2014 What is e and ln(x)?",
-        "url": "https://www.youtube.com/watch?v=m2MIpDrF7Es"
+        "title": "Wikipedia — Newton s Method",
+        "url": "https://en.wikipedia.org/wiki/Newton%27s_method"
       },
       {
-        "title": "Khan Academy \u2014 Derivative of ln(x)",
-        "url": "https://www.youtube.com/watch?v=yUpDRpkUhf4"
+        "title": "Paul s Online Math Notes — Newton s Method",
+        "url": "https://tutorial.math.lamar.edu/Classes/CalcI/NewtonsMethod.aspx"
       }
-    ]
+    ],
+    "videos": []
   },
   "calculus/parabolic-pdes": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Parabolic Partial Differential Equation",
+        "title": "Wikipedia — Parabolic Partial Differential Equation",
         "url": "https://en.wikipedia.org/wiki/Parabolic_partial_differential_equation"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 But What Is a Partial Differential Equation?",
-        "url": "https://www.youtube.com/watch?v=ly4S0oi3Yz8"
-      }
-    ]
+    "videos": []
   },
   "calculus/partial-derivatives": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Partial Derivatives",
+        "title": "Khan Academy — Partial Derivatives",
         "url": "https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/partial-derivative-and-gradient-articles/a/introduction-to-partial-derivatives"
       },
       {
-        "title": "Paul's Online Math Notes \u2014 Partial Derivatives",
+        "title": "Paul's Online Math Notes — Partial Derivatives",
         "url": "https://tutorial.math.lamar.edu/Classes/CalcIII/PartialDerivatives.aspx"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Partial Derivatives and the Gradient",
-        "url": "https://www.youtube.com/watch?v=TEB2z7ZlRAw"
-      },
-      {
-        "title": "Khan Academy \u2014 Partial Derivatives Introduction",
-        "url": "https://www.youtube.com/watch?v=AXqhWeUEtQU"
-      }
-    ]
+    "videos": []
   },
   "calculus/quadratic-formula": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Quadratic Formula",
+        "title": "Khan Academy — Quadratic Formula",
         "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:quadratic-formula-a1/v/using-the-quadratic-formula"
       }
     ],
-    "videos": [
-      {
-        "title": "The Organic Chemistry Tutor \u2014 Quadratic Formula Explained",
-        "url": "https://www.youtube.com/watch?v=IlNAJl36-10"
-      }
-    ]
+    "videos": []
   },
   "calculus/rationalisation-techniques": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Rationalising Denominators",
+        "title": "Khan Academy — Rationalising Denominators",
         "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals/x2f8bb11595b61c86:radicals/v/rationalizing-denominators-of-expressions"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Simplifying Radical Expressions",
-        "url": "https://www.youtube.com/watch?v=BpBh8gvMifs"
-      }
-    ]
+    "videos": []
   },
   "calculus/similarity-solutions": {
     "websites": [
       {
-        "title": "MIT OCW \u2014 Similarity Solutions for Diffusion",
+        "title": "MIT OCW — Similarity Solutions for Diffusion",
         "url": "https://ocw.mit.edu/courses/18-303-linear-partial-differential-equations-fall-2006/pages/lecture-notes/"
       },
       {
-        "title": "Wikipedia \u2014 Self-Similarity in the Diffusion Equation",
+        "title": "Wikipedia — Self-Similarity in the Diffusion Equation",
         "url": "https://en.wikipedia.org/wiki/Similarity_solution"
       }
     ],
@@ -274,114 +222,63 @@
   "calculus/surds": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Simplifying Square Roots",
+        "title": "Khan Academy — Simplifying Square Roots",
         "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals/x2f8bb11595b61c86:simplifying-square-roots/v/simplifying-square-roots-1"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Understanding Square Roots",
-        "url": "https://www.youtube.com/watch?v=mbc3_e5lWw0"
-      }
-    ]
+    "videos": []
   },
   "calculus/taylor-series": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Taylor Series",
+        "title": "Khan Academy — Taylor Series",
         "url": "https://www.khanacademy.org/math/ap-calculus-bc/bc-series-new/bc-10-11/v/taylor-series-at-0-maclaurin-for-e-to-the-x"
       },
       {
-        "title": "Paul's Online Math Notes \u2014 Taylor Series",
+        "title": "Paul's Online Math Notes — Taylor Series",
         "url": "https://tutorial.math.lamar.edu/Classes/CalcII/TaylorSeries.aspx"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Taylor Series",
-        "url": "https://www.youtube.com/watch?v=3d6DsjIBzJ4"
-      }
-    ]
+    "videos": []
   },
   "derivatives/american-option-pricing": {
     "websites": [
       {
-        "title": "Investopedia \u2014 American Option Definition",
+        "title": "Investopedia — American Option Definition",
         "url": "https://www.investopedia.com/terms/a/americanoption.asp"
       },
       {
-        "title": "Wikipedia \u2014 Binomial Options Pricing Model",
+        "title": "Wikipedia — Binomial Options Pricing Model",
         "url": "https://en.wikipedia.org/wiki/Binomial_options_pricing_model"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 American Option Pricing",
-        "url": "https://www.youtube.com/watch?v=VJgHkAqohbU"
-      }
-    ]
+    "videos": []
   },
   "derivatives/american-vs-european-options": {
     "websites": [
       {
-        "title": "Investopedia \u2014 American vs European Options",
+        "title": "Investopedia — American vs European Options",
         "url": "https://www.investopedia.com/articles/optioninvestor/08/american-european-options.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Options Types",
+        "title": "Corporate Finance Institute — Options Types",
         "url": "https://corporatefinanceinstitute.com/resources/derivatives/american-vs-european-vs-bermudan-options/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 European and American Options",
-        "url": "https://www.youtube.com/watch?v=VJgHkAqohbU"
-      }
-    ]
+    "videos": []
   },
   "derivatives/backward-induction": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Binomial Options Pricing Model",
+        "title": "Wikipedia — Binomial Options Pricing Model",
         "url": "https://en.wikipedia.org/wiki/Binomial_options_pricing_model"
       },
       {
-        "title": "Investopedia \u2014 Binomial Option Pricing Model",
+        "title": "Investopedia — Binomial Option Pricing Model",
         "url": "https://www.investopedia.com/terms/b/binomialoptionpricing.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Put-Call Options",
-        "url": "https://www.youtube.com/watch?v=VJgHkAqohbU"
-      },
-      {
-        "title": "Khan Academy \u2014 Option Greeks Overview",
-        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
-      }
-    ]
-  },
-  "derivatives/binomial-option-pricing": {
-    "websites": [
-      {
-        "title": "Investopedia \u2014 Binomial Option Pricing Model",
-        "url": "https://www.investopedia.com/terms/b/binomialoptionpricing.asp"
-      },
-      {
-        "title": "Wikipedia \u2014 Binomial Options Pricing Model",
-        "url": "https://en.wikipedia.org/wiki/Binomial_options_pricing_model"
-      }
-    ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Risk-Neutral Pricing",
-        "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
-      },
-      {
-        "title": "Khan Academy \u2014 Put-Call Options",
-        "url": "https://www.youtube.com/watch?v=VJgHkAqohbU"
-      }
-    ]
+    "videos": []
   },
   "derivatives/binary-option": {
     "websites": [
@@ -396,32 +293,40 @@
     ],
     "videos": []
   },
+  "derivatives/binomial-option-pricing": {
+    "websites": [
+      {
+        "title": "Investopedia — Binomial Option Pricing Model",
+        "url": "https://www.investopedia.com/terms/b/binomialoptionpricing.asp"
+      },
+      {
+        "title": "Wikipedia — Binomial Options Pricing Model",
+        "url": "https://en.wikipedia.org/wiki/Binomial_options_pricing_model"
+      }
+    ],
+    "videos": []
+  },
   "derivatives/black-scholes-equation": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Black-Scholes Model",
+        "title": "Investopedia — Black-Scholes Model",
         "url": "https://www.investopedia.com/terms/b/blackscholes.asp"
       },
       {
-        "title": "Wikipedia \u2014 Black\u2013Scholes Model",
+        "title": "Wikipedia — Black–Scholes Model",
         "url": "https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Black-Scholes Formula",
-        "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
-      }
-    ]
+    "videos": []
   },
   "derivatives/cash-and-carry-arbitrage": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Cash-and-Carry Arbitrage",
+        "title": "Investopedia — Cash-and-Carry Arbitrage",
         "url": "https://www.investopedia.com/terms/c/cash-and-carry-arbitrage.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Forward Price",
+        "title": "Corporate Finance Institute — Forward Price",
         "url": "https://corporatefinanceinstitute.com/resources/derivatives/forward-price/"
       }
     ],
@@ -430,127 +335,85 @@
   "derivatives/charm-greeks": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Greeks (finance): Charm",
+        "title": "Wikipedia — Greeks (finance): Charm",
         "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Charm"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Option Greeks",
+        "title": "Corporate Finance Institute — Option Greeks",
         "url": "https://corporatefinanceinstitute.com/resources/derivatives/option-greeks/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Option Greeks Overview",
-        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
-      }
-    ]
+    "videos": []
   },
   "derivatives/colour-greeks": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Greeks (finance): Color",
+        "title": "Wikipedia — Greeks (finance): Color",
         "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Color"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Option Greeks",
+        "title": "Corporate Finance Institute — Option Greeks",
         "url": "https://corporatefinanceinstitute.com/resources/derivatives/option-greeks/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Option Greeks Overview",
-        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
-      }
-    ]
+    "videos": []
   },
   "derivatives/complete-markets": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Complete Market",
+        "title": "Wikipedia — Complete Market",
         "url": "https://en.wikipedia.org/wiki/Complete_market"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Risk-Neutral Pricing",
-        "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
-      },
-      {
-        "title": "Khan Academy \u2014 Arbitrage Basics",
-        "url": "https://www.youtube.com/watch?v=AuCH7fHZsZ4"
-      }
-    ]
+    "videos": []
   },
   "derivatives/continuous-time-limit": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Binomial Options Pricing Model",
+        "title": "Wikipedia — Binomial Options Pricing Model",
         "url": "https://en.wikipedia.org/wiki/Binomial_options_pricing_model"
       },
       {
-        "title": "Investopedia \u2014 Binomial Option Pricing Model",
+        "title": "Investopedia — Binomial Option Pricing Model",
         "url": "https://www.investopedia.com/terms/b/binomialoptionpricing.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Risk-Neutral Pricing",
-        "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
-      },
-      {
-        "title": "3Blue1Brown \u2014 Taylor Series",
-        "url": "https://www.youtube.com/watch?v=3d6DsjIBzJ4"
-      }
-    ]
+    "videos": []
   },
   "derivatives/delta-gamma-approximation": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Delta-Gamma Hedging",
+        "title": "Investopedia — Delta-Gamma Hedging",
         "url": "https://www.investopedia.com/terms/d/deltagamma-hedging.asp"
       },
       {
-        "title": "Wikipedia \u2014 Taylor Series",
+        "title": "Wikipedia — Taylor Series",
         "url": "https://en.wikipedia.org/wiki/Taylor_series"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Taylor Series",
-        "url": "https://www.youtube.com/watch?v=3d6DsjIBzJ4"
-      },
-      {
-        "title": "MIT OpenCourseWare \u2014 Taylor Approximation",
-        "url": "https://www.youtube.com/watch?v=3d6DsjIBzJ4"
-      }
-    ]
+    "videos": []
   },
   "derivatives/delta-greeks": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Delta",
+        "title": "Investopedia — Delta",
         "url": "https://www.investopedia.com/terms/d/delta.asp"
       },
       {
-        "title": "Wikipedia \u2014 Greeks (finance): Delta",
+        "title": "Wikipedia — Greeks (finance): Delta",
         "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Delta"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Option Greeks: Delta",
-        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
-      }
-    ]
+    "videos": []
   },
   "derivatives/delta-hedging": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Delta Hedging",
+        "title": "Investopedia — Delta Hedging",
         "url": "https://www.investopedia.com/terms/d/deltahedging.asp"
       },
       {
-        "title": "Wikipedia \u2014 Delta Neutral",
+        "title": "Wikipedia — Delta Neutral",
         "url": "https://en.wikipedia.org/wiki/Delta_neutral"
       }
     ],
@@ -559,47 +422,37 @@
   "derivatives/early-exercise-decision": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Early Exercise",
+        "title": "Investopedia — Early Exercise",
         "url": "https://www.investopedia.com/terms/e/earlyexercise.asp"
       },
       {
-        "title": "Wikipedia \u2014 Optimal Stopping",
+        "title": "Wikipedia — Optimal Stopping",
         "url": "https://en.wikipedia.org/wiki/Optimal_stopping"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 When to Exercise an Option",
-        "url": "https://www.youtube.com/watch?v=VJgHkAqohbU"
-      }
-    ]
+    "videos": []
   },
   "derivatives/european-option-pricing": {
     "websites": [
       {
-        "title": "Investopedia \u2014 European Option",
+        "title": "Investopedia — European Option",
         "url": "https://www.investopedia.com/terms/e/europeanoption.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 European Option Pricing",
+        "title": "Corporate Finance Institute — European Option Pricing",
         "url": "https://corporatefinanceinstitute.com/resources/derivatives/european-option/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 European Option Pricing",
-        "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
-      }
-    ]
+    "videos": []
   },
   "derivatives/fundamental-theorems-of-asset-pricing": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Fundamental Theorem of Asset Pricing",
+        "title": "Wikipedia — Fundamental Theorem of Asset Pricing",
         "url": "https://en.wikipedia.org/wiki/Fundamental_theorem_of_asset_pricing"
       },
       {
-        "title": "Wikipedia \u2014 Complete Market",
+        "title": "Wikipedia — Complete Market",
         "url": "https://en.wikipedia.org/wiki/Complete_market"
       }
     ],
@@ -608,29 +461,37 @@
   "derivatives/gamma-greeks": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Gamma",
+        "title": "Investopedia — Gamma",
         "url": "https://www.investopedia.com/terms/g/gamma.asp"
       },
       {
-        "title": "Wikipedia \u2014 Greeks (finance): Gamma",
+        "title": "Wikipedia — Greeks (finance): Gamma",
         "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Gamma"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "derivatives/greeks-by-finite-difference": {
+    "websites": [
       {
-        "title": "Khan Academy \u2014 Option Greeks Overview",
-        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
+        "title": "Wikipedia — Finite Difference Methods for Option Pricing",
+        "url": "https://en.wikipedia.org/wiki/Finite_difference_methods_for_option_pricing"
+      },
+      {
+        "title": "Wikipedia — Numerical Differentiation",
+        "url": "https://en.wikipedia.org/wiki/Numerical_differentiation"
       }
-    ]
+    ],
+    "videos": []
   },
   "derivatives/heston-model": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Heston Model",
+        "title": "Wikipedia — Heston Model",
         "url": "https://en.wikipedia.org/wiki/Heston_model"
       },
       {
-        "title": "Investopedia \u2014 Stochastic Volatility",
+        "title": "Investopedia — Stochastic Volatility",
         "url": "https://www.investopedia.com/terms/s/stochastic-volatility.asp"
       }
     ],
@@ -639,29 +500,24 @@
   "derivatives/implied-volatility": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Implied Volatility",
+        "title": "Investopedia — Implied Volatility",
         "url": "https://www.investopedia.com/terms/i/iv.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Implied Volatility",
+        "title": "Corporate Finance Institute — Implied Volatility",
         "url": "https://corporatefinanceinstitute.com/resources/derivatives/implied-volatility/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Implied Volatility",
-        "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
-      }
-    ]
+    "videos": []
   },
   "derivatives/law-of-one-price": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Law of One Price",
+        "title": "Investopedia — Law of One Price",
         "url": "https://www.investopedia.com/terms/l/law-one-price.asp"
       },
       {
-        "title": "Wikipedia \u2014 Law of One Price",
+        "title": "Wikipedia — Law of One Price",
         "url": "https://en.wikipedia.org/wiki/Law_of_one_price"
       }
     ],
@@ -680,10 +536,23 @@
     ],
     "videos": []
   },
+  "derivatives/local-volatility": {
+    "websites": [
+      {
+        "title": "Wikipedia — Local Volatility",
+        "url": "https://en.wikipedia.org/wiki/Local_volatility"
+      },
+      {
+        "title": "Investopedia — Local Volatility",
+        "url": "https://www.investopedia.com/terms/l/localvolatility.asp"
+      }
+    ],
+    "videos": []
+  },
   "derivatives/market-price-of-risk": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Sharpe Ratio",
+        "title": "Investopedia — Sharpe Ratio",
         "url": "https://www.investopedia.com/terms/s/sharperatio.asp"
       }
     ],
@@ -692,29 +561,24 @@
   "derivatives/martingale-test": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Monte Carlo Methods in Finance",
+        "title": "Wikipedia — Monte Carlo Methods in Finance",
         "url": "https://en.wikipedia.org/wiki/Monte_Carlo_methods_in_finance"
       },
       {
-        "title": "Wikipedia \u2014 Martingale (Probability Theory)",
+        "title": "Wikipedia — Martingale (Probability Theory)",
         "url": "https://en.wikipedia.org/wiki/Martingale_(probability_theory)"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 Monte Carlo Methods",
-        "url": "https://www.youtube.com/watch?v=OgO1gpXSUzU"
-      }
-    ]
+    "videos": []
   },
   "derivatives/martingales-in-quantitative-finance": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Martingale (Probability Theory)",
+        "title": "Wikipedia — Martingale (Probability Theory)",
         "url": "https://en.wikipedia.org/wiki/Martingale_(probability_theory)"
       },
       {
-        "title": "Wikipedia \u2014 Risk-Neutral Measure",
+        "title": "Wikipedia — Risk-Neutral Measure",
         "url": "https://en.wikipedia.org/wiki/Risk-neutral_measure"
       }
     ],
@@ -723,33 +587,24 @@
   "derivatives/no-arbitrage-principle": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Arbitrage",
+        "title": "Investopedia — Arbitrage",
         "url": "https://www.investopedia.com/terms/a/arbitrage.asp"
       },
       {
-        "title": "Wikipedia \u2014 Fundamental Theorem of Asset Pricing",
+        "title": "Wikipedia — Fundamental Theorem of Asset Pricing",
         "url": "https://en.wikipedia.org/wiki/Fundamental_theorem_of_asset_pricing"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Arbitrage Basics",
-        "url": "https://www.youtube.com/watch?v=AuCH7fHZsZ4"
-      },
-      {
-        "title": "Khan Academy \u2014 Risk-Neutral Pricing",
-        "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
-      }
-    ]
+    "videos": []
   },
   "derivatives/numeraire-change": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Num\u00e9raire",
+        "title": "Wikipedia — Numéraire",
         "url": "https://en.wikipedia.org/wiki/Num%C3%A9raire"
       },
       {
-        "title": "Wikipedia \u2014 Forward Measure",
+        "title": "Wikipedia — Forward Measure",
         "url": "https://en.wikipedia.org/wiki/Forward_measure"
       }
     ],
@@ -758,33 +613,24 @@
   "derivatives/option-greeks": {
     "websites": [
       {
-        "title": "Investopedia \u2014 The Greeks",
+        "title": "Investopedia — The Greeks",
         "url": "https://www.investopedia.com/terms/g/greeks.asp"
       },
       {
-        "title": "Wikipedia \u2014 Greeks (finance)",
+        "title": "Wikipedia — Greeks (finance)",
         "url": "https://en.wikipedia.org/wiki/Greeks_(finance)"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Option Greeks Overview",
-        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
-      },
-      {
-        "title": "tastylive \u2014 Greeks Made Simple",
-        "url": "https://www.youtube.com/watch?v=kCJcEOYuuII"
-      }
-    ]
+    "videos": []
   },
   "derivatives/p-measure-vs-q-measure": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Risk-Neutral Measure",
+        "title": "Wikipedia — Risk-Neutral Measure",
         "url": "https://en.wikipedia.org/wiki/Risk-neutral_measure"
       },
       {
-        "title": "Investopedia \u2014 Risk-Neutral Probabilities",
+        "title": "Investopedia — Risk-Neutral Probabilities",
         "url": "https://www.investopedia.com/terms/r/risk-neutral-measures.asp"
       }
     ],
@@ -793,29 +639,24 @@
   "derivatives/put-call-parity": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Put-Call Parity",
+        "title": "Investopedia — Put-Call Parity",
         "url": "https://www.investopedia.com/terms/p/putcallparity.asp"
       },
       {
-        "title": "Wikipedia \u2014 Put\u2013Call Parity",
+        "title": "Wikipedia — Put–Call Parity",
         "url": "https://en.wikipedia.org/wiki/Put%E2%80%93call_parity"
       }
     ],
-    "videos": [
-      {
-        "title": "The Organic Chemistry Tutor \u2014 Put-Call Parity Explained",
-        "url": "https://www.youtube.com/watch?v=VJgHkAqohbU"
-      }
-    ]
+    "videos": []
   },
   "derivatives/replicating-portfolio": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Replicating Portfolio",
+        "title": "Investopedia — Replicating Portfolio",
         "url": "https://www.investopedia.com/terms/r/replicating-portfolio.asp"
       },
       {
-        "title": "Wikipedia \u2014 Replicating Portfolio",
+        "title": "Wikipedia — Replicating Portfolio",
         "url": "https://en.wikipedia.org/wiki/Replicating_portfolio"
       }
     ],
@@ -824,29 +665,24 @@
   "derivatives/rho-greeks": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Rho",
+        "title": "Investopedia — Rho",
         "url": "https://www.investopedia.com/terms/r/rho.asp"
       },
       {
-        "title": "Wikipedia \u2014 Greeks (finance): Rho",
+        "title": "Wikipedia — Greeks (finance): Rho",
         "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Rho"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Option Greeks Overview",
-        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
-      }
-    ]
+    "videos": []
   },
   "derivatives/risk-arbitrage": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Risk Arbitrage",
+        "title": "Investopedia — Risk Arbitrage",
         "url": "https://www.investopedia.com/terms/r/riskarbitrage.asp"
       },
       {
-        "title": "Wikipedia \u2014 Merger Arbitrage",
+        "title": "Wikipedia — Merger Arbitrage",
         "url": "https://en.wikipedia.org/wiki/Merger_arbitrage"
       }
     ],
@@ -855,29 +691,24 @@
   "derivatives/risk-neutral-pricing": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Risk-Neutral Measures",
+        "title": "Investopedia — Risk-Neutral Measures",
         "url": "https://www.investopedia.com/terms/r/risk-neutral-measures.asp"
       },
       {
-        "title": "Wikipedia \u2014 Risk-Neutral Measure",
+        "title": "Wikipedia — Risk-Neutral Measure",
         "url": "https://en.wikipedia.org/wiki/Risk-neutral_measure"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Risk-Neutral Valuation",
-        "url": "https://www.youtube.com/watch?v=pr-u4LCFYEY"
-      }
-    ]
+    "videos": []
   },
   "derivatives/risk-premium": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Risk Premium",
+        "title": "Investopedia — Risk Premium",
         "url": "https://www.investopedia.com/terms/r/riskpremium.asp"
       },
       {
-        "title": "Wikipedia \u2014 Equity Premium Puzzle",
+        "title": "Wikipedia — Equity Premium Puzzle",
         "url": "https://en.wikipedia.org/wiki/Equity_premium_puzzle"
       }
     ],
@@ -886,30 +717,51 @@
   "derivatives/riskless-arbitrage": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Arbitrage",
+        "title": "Investopedia — Arbitrage",
         "url": "https://www.investopedia.com/terms/a/arbitrage.asp"
       },
       {
-        "title": "Wikipedia \u2014 Arbitrage",
+        "title": "Wikipedia — Arbitrage",
         "url": "https://en.wikipedia.org/wiki/Arbitrage"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "derivatives/sabr-model": {
+    "websites": [
       {
-        "title": "Khan Academy \u2014 Arbitrage Basics",
-        "url": "https://www.youtube.com/watch?v=AuCH7fHZsZ4"
+        "title": "Wikipedia — SABR Volatility Model",
+        "url": "https://en.wikipedia.org/wiki/SABR_volatility_model"
+      },
+      {
+        "title": "Investopedia — Stochastic Volatility",
+        "url": "https://www.investopedia.com/terms/s/stochastic-volatility.asp"
       }
-    ]
+    ],
+    "videos": []
   },
   "derivatives/snell-envelope": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Snell Envelope",
+        "title": "Wikipedia — Snell Envelope",
         "url": "https://en.wikipedia.org/wiki/Snell_envelope"
       },
       {
-        "title": "Wikipedia \u2014 Optimal Stopping",
+        "title": "Wikipedia — Optimal Stopping",
         "url": "https://en.wikipedia.org/wiki/Optimal_stopping"
+      }
+    ],
+    "videos": []
+  },
+  "derivatives/speed-greeks": {
+    "websites": [
+      {
+        "title": "Wikipedia — Greeks (finance): Speed",
+        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Speed"
+      },
+      {
+        "title": "Corporate Finance Institute — Option Greeks",
+        "url": "https://corporatefinanceinstitute.com/resources/derivatives/option-greeks/"
       }
     ],
     "videos": []
@@ -925,56 +777,33 @@
         "url": "https://en.wikipedia.org/wiki/Statistical_arbitrage"
       }
     ],
-    "videos": [
-      {
-        "title": "QuantConnect — Pairs Trading Strategy",
-        "url": "https://www.youtube.com/watch?v=JTucMRYMOyY"
-      },
-      {
-        "title": "Quantopian — Introduction to Pairs Trading",
-        "url": "https://www.youtube.com/watch?v=g-qvFjvyqcs"
-      }
-    ]
+    "videos": []
   },
-  "derivatives/speed-greeks": {
+  "derivatives/swaption": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Greeks (finance): Speed",
-        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Speed"
+        "title": "Investopedia — Swaption",
+        "url": "https://www.investopedia.com/terms/s/swaption.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Option Greeks",
-        "url": "https://corporatefinanceinstitute.com/resources/derivatives/option-greeks/"
+        "title": "Wikipedia — Swaption",
+        "url": "https://en.wikipedia.org/wiki/Swaption"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Option Greeks Overview",
-        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
-      }
-    ]
+    "videos": []
   },
   "derivatives/theta-greeks": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Theta",
+        "title": "Investopedia — Theta",
         "url": "https://www.investopedia.com/terms/t/theta.asp"
       },
       {
-        "title": "Wikipedia \u2014 Greeks (finance): Theta",
+        "title": "Wikipedia — Greeks (finance): Theta",
         "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Theta"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Option Greeks Overview",
-        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
-      },
-      {
-        "title": "tastylive \u2014 Understanding Theta",
-        "url": "https://www.youtube.com/watch?v=7PM4rNDr4oI"
-      }
-    ]
+    "videos": []
   },
   "derivatives/triangular-arbitrage": {
     "websites": [
@@ -992,65 +821,63 @@
   "derivatives/vanna-greeks": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Greeks (finance): Vanna",
+        "title": "Wikipedia — Greeks (finance): Vanna",
         "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Vanna"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Option Greeks",
+        "title": "Corporate Finance Institute — Option Greeks",
         "url": "https://corporatefinanceinstitute.com/resources/derivatives/option-greeks/"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "derivatives/variance-swap": {
+    "websites": [
       {
-        "title": "Khan Academy \u2014 Option Greeks Overview",
-        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
+        "title": "Wikipedia — Variance Swap",
+        "url": "https://en.wikipedia.org/wiki/Variance_swap"
+      },
+      {
+        "title": "Investopedia — Variance Swap",
+        "url": "https://www.investopedia.com/terms/v/varianceswap.asp"
       }
-    ]
+    ],
+    "videos": []
   },
   "derivatives/vega-greeks": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Vega",
+        "title": "Investopedia — Vega",
         "url": "https://www.investopedia.com/terms/v/vega.asp"
       },
       {
-        "title": "Wikipedia \u2014 Greeks (finance): Vega",
+        "title": "Wikipedia — Greeks (finance): Vega",
         "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Vega"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Option Greeks Overview",
-        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
-      }
-    ]
+    "videos": []
   },
   "derivatives/veta-greeks": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Greeks (finance): Veta",
+        "title": "Wikipedia — Greeks (finance): Veta",
         "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Veta"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Option Greeks",
+        "title": "Corporate Finance Institute — Option Greeks",
         "url": "https://corporatefinanceinstitute.com/resources/derivatives/option-greeks/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Option Greeks Overview",
-        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
-      }
-    ]
+    "videos": []
   },
   "derivatives/volatility-smile": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Volatility Smile",
+        "title": "Investopedia — Volatility Smile",
         "url": "https://www.investopedia.com/terms/v/volatilitysmile.asp"
       },
       {
-        "title": "Wikipedia \u2014 Volatility Smile",
+        "title": "Wikipedia — Volatility Smile",
         "url": "https://en.wikipedia.org/wiki/Volatility_smile"
       }
     ],
@@ -1059,65 +886,76 @@
   "derivatives/volga-greeks": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Greeks (finance): Vomma",
+        "title": "Wikipedia — Greeks (finance): Vomma",
         "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Vomma"
       },
       {
-        "title": "Investopedia \u2014 Vomma",
+        "title": "Investopedia — Vomma",
         "url": "https://www.investopedia.com/terms/v/vomma.asp"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "derivatives/xva": {
+    "websites": [
       {
-        "title": "Khan Academy \u2014 Option Greeks Overview",
-        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
+        "title": "Wikipedia — XVA",
+        "url": "https://en.wikipedia.org/wiki/XVA"
+      },
+      {
+        "title": "Investopedia — Credit Valuation Adjustment",
+        "url": "https://www.investopedia.com/terms/c/credit-valuation-adjustment.asp"
       }
-    ]
+    ],
+    "videos": []
   },
   "derivatives/zomma-greeks": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Greeks (finance): Zomma",
+        "title": "Wikipedia — Greeks (finance): Zomma",
         "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Zomma"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Option Greeks",
+        "title": "Corporate Finance Institute — Option Greeks",
         "url": "https://corporatefinanceinstitute.com/resources/derivatives/option-greeks/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Option Greeks Overview",
-        "url": "https://www.youtube.com/watch?v=GxmIvvROge4"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/absolute-return": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Absolute Return",
+        "title": "Investopedia — Absolute Return",
         "url": "https://www.investopedia.com/terms/a/absolutereturn.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Absolute Return",
+        "title": "Corporate Finance Institute — Absolute Return",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/absolute-return/"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "financial-maths/bear-raid": {
+    "websites": [
       {
-        "title": "Khan Academy \u2014 Return on Investment",
-        "url": "https://www.youtube.com/watch?v=RuPMsK0mQC8"
+        "title": "Investopedia — Bear Raid",
+        "url": "https://www.investopedia.com/terms/b/bearraid.asp"
+      },
+      {
+        "title": "Wikipedia — Bear Raid",
+        "url": "https://en.wikipedia.org/wiki/Bear_raid"
       }
-    ]
+    ],
+    "videos": []
   },
   "financial-maths/benchmark-index": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Benchmark",
+        "title": "Investopedia — Benchmark",
         "url": "https://www.investopedia.com/terms/b/benchmark.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Benchmark",
+        "title": "Corporate Finance Institute — Benchmark",
         "url": "https://corporatefinanceinstitute.com/resources/valuation/benchmark/"
       }
     ],
@@ -1126,12 +964,25 @@
   "financial-maths/beta-hedging": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Beta Hedging",
+        "title": "Investopedia — Beta Hedging",
         "url": "https://www.investopedia.com/terms/b/beta.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Portfolio Beta",
+        "title": "Corporate Finance Institute — Portfolio Beta",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/portfolio-beta/"
+      }
+    ],
+    "videos": []
+  },
+  "financial-maths/bid-ask-spread": {
+    "websites": [
+      {
+        "title": "Investopedia — Bid-Ask Spread",
+        "url": "https://www.investopedia.com/terms/b/bid-askspread.asp"
+      },
+      {
+        "title": "Wikipedia — Bid-Ask Spread",
+        "url": "https://en.wikipedia.org/wiki/Bid%E2%80%93ask_spread"
       }
     ],
     "videos": []
@@ -1139,11 +990,11 @@
   "financial-maths/central-counterparty": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Central Counterparty Clearing House",
+        "title": "Investopedia — Central Counterparty Clearing House",
         "url": "https://www.investopedia.com/terms/c/ccph.asp"
       },
       {
-        "title": "Wikipedia \u2014 Central Counterparty Clearing",
+        "title": "Wikipedia — Central Counterparty Clearing",
         "url": "https://en.wikipedia.org/wiki/Central_counterparty_clearing"
       }
     ],
@@ -1152,12 +1003,25 @@
   "financial-maths/collateral-management": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Collateral Management",
+        "title": "Investopedia — Collateral Management",
         "url": "https://www.investopedia.com/terms/c/collateral.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Collateral",
+        "title": "Corporate Finance Institute — Collateral",
         "url": "https://corporatefinanceinstitute.com/resources/commercial-lending/collateral/"
+      }
+    ],
+    "videos": []
+  },
+  "financial-maths/cover-the-short": {
+    "websites": [
+      {
+        "title": "Investopedia — Buy to Cover",
+        "url": "https://www.investopedia.com/terms/b/buytocover.asp"
+      },
+      {
+        "title": "Investopedia — Short Covering",
+        "url": "https://www.investopedia.com/terms/s/shortcovering.asp"
       }
     ],
     "videos": []
@@ -1165,11 +1029,11 @@
   "financial-maths/days-to-cover": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Days to Cover",
+        "title": "Investopedia — Days to Cover",
         "url": "https://www.investopedia.com/terms/d/daystocover.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Short Interest Ratio",
+        "title": "Corporate Finance Institute — Short Interest Ratio",
         "url": "https://corporatefinanceinstitute.com/resources/equities/short-interest-ratio/"
       }
     ],
@@ -1178,11 +1042,11 @@
   "financial-maths/debt-to-equity-ratio": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Debt-to-Equity Ratio",
+        "title": "Investopedia — Debt-to-Equity Ratio",
         "url": "https://www.investopedia.com/terms/d/debtequityratio.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 D/E Ratio",
+        "title": "Corporate Finance Institute — D/E Ratio",
         "url": "https://corporatefinanceinstitute.com/resources/accounting/debt-to-equity-ratio/"
       }
     ],
@@ -1191,33 +1055,33 @@
   "financial-maths/factor-investing": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Factor Investing",
+        "title": "Investopedia — Factor Investing",
         "url": "https://www.investopedia.com/terms/f/factor-investing.asp"
       },
       {
-        "title": "Wikipedia \u2014 Factor Investing",
+        "title": "Wikipedia — Factor Investing",
         "url": "https://en.wikipedia.org/wiki/Factor_investing"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "financial-maths/fail-to-deliver": {
+    "websites": [
       {
-        "title": "Patrick Boyle \u2014 Factor Investing Explained",
-        "url": "https://www.youtube.com/watch?v=ViTnIebSzj4"
-      },
-      {
-        "title": "Ben Felix \u2014 Factor Investing for Beginners",
-        "url": "https://www.youtube.com/watch?v=jKWbW7Wgm0w"
+        "title": "Investopedia — Failure to Deliver",
+        "url": "https://www.investopedia.com/terms/f/failuretodeliver.asp"
       }
-    ]
+    ],
+    "videos": []
   },
   "financial-maths/fund-of-funds": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Fund of Funds",
+        "title": "Investopedia — Fund of Funds",
         "url": "https://www.investopedia.com/terms/f/fundsoffunds.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Fund of Funds",
+        "title": "Corporate Finance Institute — Fund of Funds",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/fund-of-funds/"
       }
     ],
@@ -1226,7 +1090,7 @@
   "financial-maths/funding-rate": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Cost of Carry",
+        "title": "Investopedia — Cost of Carry",
         "url": "https://www.investopedia.com/terms/c/costofcarry.asp"
       }
     ],
@@ -1235,11 +1099,11 @@
   "financial-maths/haircut": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Haircut (Finance)",
+        "title": "Investopedia — Haircut (Finance)",
         "url": "https://www.investopedia.com/terms/h/haircut.asp"
       },
       {
-        "title": "Wikipedia \u2014 Haircut (Finance)",
+        "title": "Wikipedia — Haircut (Finance)",
         "url": "https://en.wikipedia.org/wiki/Haircut_(finance)"
       }
     ],
@@ -1248,11 +1112,11 @@
   "financial-maths/hedge-funds": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Hedge Fund",
+        "title": "Investopedia — Hedge Fund",
         "url": "https://www.investopedia.com/terms/h/hedgefund.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Hedge Fund",
+        "title": "Corporate Finance Institute — Hedge Fund",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/hedge-fund/"
       }
     ],
@@ -1261,29 +1125,24 @@
   "financial-maths/kelly-criterion": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Kelly Criterion",
+        "title": "Investopedia — Kelly Criterion",
         "url": "https://www.investopedia.com/articles/trading/04/091504.asp"
       },
       {
-        "title": "Wikipedia \u2014 Kelly Criterion",
+        "title": "Wikipedia — Kelly Criterion",
         "url": "https://en.wikipedia.org/wiki/Kelly_criterion"
       }
     ],
-    "videos": [
-      {
-        "title": "Zedstatistics \u2014 The Kelly Criterion Explained",
-        "url": "https://www.youtube.com/watch?v=_FuuYSM7yOo"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/leverage": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Financial Leverage",
+        "title": "Investopedia — Financial Leverage",
         "url": "https://www.investopedia.com/terms/l/leverage.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Leverage",
+        "title": "Corporate Finance Institute — Leverage",
         "url": "https://corporatefinanceinstitute.com/resources/accounting/leverage/"
       }
     ],
@@ -1292,8 +1151,34 @@
   "financial-maths/libor-ois-spread": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 TED Spread (related concept)",
+        "title": "Wikipedia — TED Spread (related concept)",
         "url": "https://en.wikipedia.org/wiki/TED_spread"
+      }
+    ],
+    "videos": []
+  },
+  "financial-maths/limit-order-book": {
+    "websites": [
+      {
+        "title": "Investopedia — Order Book",
+        "url": "https://www.investopedia.com/terms/o/order-book.asp"
+      },
+      {
+        "title": "Wikipedia — Order Book",
+        "url": "https://en.wikipedia.org/wiki/Order_book_(trading)"
+      }
+    ],
+    "videos": []
+  },
+  "financial-maths/liquidity": {
+    "websites": [
+      {
+        "title": "Investopedia — Liquidity",
+        "url": "https://www.investopedia.com/terms/l/liquidity.asp"
+      },
+      {
+        "title": "Wikipedia — Market Liquidity",
+        "url": "https://en.wikipedia.org/wiki/Market_liquidity"
       }
     ],
     "videos": []
@@ -1301,11 +1186,11 @@
   "financial-maths/locate-requirement": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Short Selling",
+        "title": "Investopedia — Short Selling",
         "url": "https://www.investopedia.com/terms/s/shortselling.asp"
       },
       {
-        "title": "Investopedia \u2014 Regulation SHO",
+        "title": "Investopedia — Regulation SHO",
         "url": "https://www.investopedia.com/terms/r/regsho.asp"
       }
     ],
@@ -1314,7 +1199,7 @@
   "financial-maths/long-short-equity": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Long-Short Equity",
+        "title": "Investopedia — Long-Short Equity",
         "url": "https://www.investopedia.com/terms/l/long-shortequity.asp"
       }
     ],
@@ -1323,12 +1208,25 @@
   "financial-maths/margin-call": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Margin Call",
+        "title": "Investopedia — Margin Call",
         "url": "https://www.investopedia.com/terms/m/margincall.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Margin Call",
+        "title": "Corporate Finance Institute — Margin Call",
         "url": "https://corporatefinanceinstitute.com/resources/equities/margin-call/"
+      }
+    ],
+    "videos": []
+  },
+  "financial-maths/margin-lending-rate": {
+    "websites": [
+      {
+        "title": "Investopedia — Margin Interest Rates",
+        "url": "https://www.investopedia.com/terms/m/margin_loan_availability.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Margin Trading",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/margin-trading/"
       }
     ],
     "videos": []
@@ -1336,11 +1234,11 @@
   "financial-maths/market-impact-model": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Market Impact",
+        "title": "Wikipedia — Market Impact",
         "url": "https://en.wikipedia.org/wiki/Market_impact"
       },
       {
-        "title": "Investopedia \u2014 Implementation Shortfall",
+        "title": "Investopedia — Implementation Shortfall",
         "url": "https://www.investopedia.com/terms/i/implementation-shortfall.asp"
       }
     ],
@@ -1349,11 +1247,11 @@
   "financial-maths/market-neutral-strategy": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Market Neutral Strategy",
+        "title": "Investopedia — Market Neutral Strategy",
         "url": "https://www.investopedia.com/terms/m/marketneutral.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Market Neutral",
+        "title": "Corporate Finance Institute — Market Neutral",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/market-neutral/"
       }
     ],
@@ -1362,12 +1260,38 @@
   "financial-maths/naked-short-selling": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Naked Short Selling",
+        "title": "Investopedia — Naked Short Selling",
         "url": "https://www.investopedia.com/terms/n/nakedshorting.asp"
       },
       {
-        "title": "Investopedia \u2014 Regulation SHO",
+        "title": "Investopedia — Regulation SHO",
         "url": "https://www.investopedia.com/terms/r/regsho.asp"
+      }
+    ],
+    "videos": []
+  },
+  "financial-maths/optimal-execution": {
+    "websites": [
+      {
+        "title": "Wikipedia — Algorithmic Trading",
+        "url": "https://en.wikipedia.org/wiki/Algorithmic_trading"
+      },
+      {
+        "title": "Investopedia — Implementation Shortfall",
+        "url": "https://www.investopedia.com/terms/i/implementation-shortfall.asp"
+      }
+    ],
+    "videos": []
+  },
+  "financial-maths/order-flow-imbalance": {
+    "websites": [
+      {
+        "title": "Wikipedia — Order Flow",
+        "url": "https://en.wikipedia.org/wiki/Order_flow_trading"
+      },
+      {
+        "title": "Investopedia — Order Flow",
+        "url": "https://www.investopedia.com/terms/o/orderflow.asp"
       }
     ],
     "videos": []
@@ -1375,11 +1299,11 @@
   "financial-maths/overnight-index-swap": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Overnight Index Swap",
+        "title": "Investopedia — Overnight Index Swap",
         "url": "https://www.investopedia.com/terms/o/overnightindexswap.asp"
       },
       {
-        "title": "Wikipedia \u2014 Overnight Indexed Swap",
+        "title": "Wikipedia — Overnight Indexed Swap",
         "url": "https://en.wikipedia.org/wiki/Overnight_indexed_swap"
       }
     ],
@@ -1388,12 +1312,34 @@
   "financial-maths/pairs-trading": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Pairs Trading",
+        "title": "Investopedia — Pairs Trading",
         "url": "https://www.investopedia.com/terms/p/pairstrade.asp"
       },
       {
-        "title": "Wikipedia \u2014 Pairs Trade",
+        "title": "Wikipedia — Pairs Trade",
         "url": "https://en.wikipedia.org/wiki/Pairs_trade"
+      }
+    ],
+    "videos": []
+  },
+  "financial-maths/prime-broker": {
+    "websites": [
+      {
+        "title": "Investopedia — Prime Brokerage",
+        "url": "https://www.investopedia.com/terms/p/primebrokerage.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Prime Broker",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/prime-brokerage/"
+      }
+    ],
+    "videos": []
+  },
+  "financial-maths/regulation-sho": {
+    "websites": [
+      {
+        "title": "Investopedia — Regulation SHO",
+        "url": "https://www.investopedia.com/terms/r/regsho.asp"
       }
     ],
     "videos": []
@@ -1401,11 +1347,11 @@
   "financial-maths/relative-return": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Relative Return",
+        "title": "Investopedia — Relative Return",
         "url": "https://www.investopedia.com/terms/r/relativereturn.asp"
       },
       {
-        "title": "Investopedia \u2014 Tracking Error",
+        "title": "Investopedia — Tracking Error",
         "url": "https://www.investopedia.com/terms/t/trackingerror.asp"
       }
     ],
@@ -1414,11 +1360,11 @@
   "financial-maths/repo-agreement": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Repurchase Agreement (Repo)",
+        "title": "Investopedia — Repurchase Agreement (Repo)",
         "url": "https://www.investopedia.com/terms/r/repurchaseagreement.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Repo Agreement",
+        "title": "Corporate Finance Institute — Repo Agreement",
         "url": "https://corporatefinanceinstitute.com/resources/fixed-income/repurchase-agreement-repo/"
       }
     ],
@@ -1427,7 +1373,7 @@
   "financial-maths/return-on-equity": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Return on Equity (ROE)",
+        "title": "Investopedia — Return on Equity (ROE)",
         "url": "https://www.investopedia.com/terms/r/returnonequity.asp"
       }
     ],
@@ -1436,11 +1382,11 @@
   "financial-maths/return-on-investment": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Return on Investment (ROI)",
+        "title": "Investopedia — Return on Investment (ROI)",
         "url": "https://www.investopedia.com/terms/r/returnoninvestment.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Return on Investment",
+        "title": "Corporate Finance Institute — Return on Investment",
         "url": "https://corporatefinanceinstitute.com/resources/financial-modeling/return-on-investment-roi/"
       }
     ],
@@ -1449,47 +1395,63 @@
   "financial-maths/reverse-repo": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Reverse Repurchase Agreement",
+        "title": "Investopedia — Reverse Repurchase Agreement",
         "url": "https://www.investopedia.com/terms/r/reverserepurchaseagreement.asp"
       },
       {
-        "title": "Federal Reserve Bank of New York \u2014 Reverse Repo Facility",
+        "title": "Federal Reserve Bank of New York — Reverse Repo Facility",
         "url": "https://www.newyorkfed.org/markets/rrp_faq"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "financial-maths/risk-free-rate": {
+    "websites": [
       {
-        "title": "Heresy Financial \u2014 The Reverse Repo Facility Explained",
-        "url": "https://www.youtube.com/watch?v=O0fSPO7AW7k"
+        "title": "Investopedia — Risk-Free Rate of Return",
+        "url": "https://www.investopedia.com/terms/r/risk-freerate.asp"
+      },
+      {
+        "title": "Wikipedia — Risk-Free Interest Rate",
+        "url": "https://en.wikipedia.org/wiki/Risk-free_interest_rate"
       }
-    ]
+    ],
+    "videos": []
   },
   "financial-maths/riskless-arbitrage": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Arbitrage",
+        "title": "Investopedia — Arbitrage",
         "url": "https://www.investopedia.com/terms/a/arbitrage.asp"
       },
       {
-        "title": "Wikipedia \u2014 Arbitrage",
+        "title": "Wikipedia — Arbitrage",
         "url": "https://en.wikipedia.org/wiki/Arbitrage"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "financial-maths/runaway-short": {
+    "websites": [
       {
-        "title": "Khan Academy \u2014 Arbitrage Basics",
-        "url": "https://www.youtube.com/watch?v=AuCH7fHZsZ4"
+        "title": "Investopedia — Short Selling Risks",
+        "url": "https://www.investopedia.com/articles/investing/100913/basics-short-selling.asp"
+      },
+      {
+        "title": "Wikipedia — Short Selling",
+        "url": "https://en.wikipedia.org/wiki/Short_(finance)"
       }
-    ]
+    ],
+    "videos": []
   },
   "financial-maths/securities-lending": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Securities Lending",
+        "title": "Investopedia — Securities Lending",
         "url": "https://www.investopedia.com/terms/s/securitieslending.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Securities Lending",
+        "title": "Corporate Finance Institute — Securities Lending",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/securities-lending/"
       }
     ],
@@ -1498,12 +1460,25 @@
   "financial-maths/short-interest": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Short Interest",
+        "title": "Investopedia — Short Interest",
         "url": "https://www.investopedia.com/terms/s/shortinterest.asp"
       },
       {
-        "title": "Wikipedia \u2014 Short Interest Ratio",
+        "title": "Wikipedia — Short Interest Ratio",
         "url": "https://en.wikipedia.org/wiki/Short_interest_ratio"
+      }
+    ],
+    "videos": []
+  },
+  "financial-maths/short-ladder-attack": {
+    "websites": [
+      {
+        "title": "Investopedia — Short and Distort",
+        "url": "https://www.investopedia.com/terms/s/shortanddistort.asp"
+      },
+      {
+        "title": "Wikipedia — Market Manipulation",
+        "url": "https://en.wikipedia.org/wiki/Market_manipulation"
       }
     ],
     "videos": []
@@ -1511,29 +1486,24 @@
   "financial-maths/short-sale-constraints": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Short Sale Rule",
+        "title": "Investopedia — Short Sale Rule",
         "url": "https://www.investopedia.com/terms/s/shortsalerule.asp"
       },
       {
-        "title": "Wikipedia \u2014 Short Selling Regulation",
+        "title": "Wikipedia — Short Selling Regulation",
         "url": "https://en.wikipedia.org/wiki/Short_(finance)#Regulation"
       }
     ],
-    "videos": [
-      {
-        "title": "Patrick Boyle \u2014 Short Selling Bans: Do They Work?",
-        "url": "https://www.youtube.com/watch?v=7PM4rNDr4oI"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/short-selling": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Short Selling",
+        "title": "Investopedia — Short Selling",
         "url": "https://www.investopedia.com/terms/s/shortselling.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Short Selling",
+        "title": "Corporate Finance Institute — Short Selling",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/short-selling/"
       }
     ],
@@ -1542,11 +1512,11 @@
   "financial-maths/short-squeeze": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Short Squeeze",
+        "title": "Investopedia — Short Squeeze",
         "url": "https://www.investopedia.com/terms/s/shortsqueeze.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Short Squeeze",
+        "title": "Corporate Finance Institute — Short Squeeze",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/short-squeeze/"
       }
     ],
@@ -1555,11 +1525,11 @@
   "financial-maths/statistical-arbitrage": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Statistical Arbitrage",
+        "title": "Investopedia — Statistical Arbitrage",
         "url": "https://www.investopedia.com/terms/s/statisticalarbitrage.asp"
       },
       {
-        "title": "Wikipedia \u2014 Statistical Arbitrage",
+        "title": "Wikipedia — Statistical Arbitrage",
         "url": "https://en.wikipedia.org/wiki/Statistical_arbitrage"
       }
     ],
@@ -1568,11 +1538,11 @@
   "financial-maths/stock-borrow-rate": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Stock Loan Fee",
+        "title": "Investopedia — Stock Loan Fee",
         "url": "https://www.investopedia.com/terms/s/stock-loan-fee.asp"
       },
       {
-        "title": "Wikipedia \u2014 Securities Lending",
+        "title": "Wikipedia — Securities Lending",
         "url": "https://en.wikipedia.org/wiki/Securities_lending"
       }
     ],
@@ -1581,29 +1551,24 @@
   "financial-maths/time-value-of-money": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Time Value of Money",
+        "title": "Investopedia — Time Value of Money",
         "url": "https://www.investopedia.com/terms/t/timevalueofmoney.asp"
       },
       {
-        "title": "Khan Academy \u2014 Time Value of Money",
+        "title": "Khan Academy — Time Value of Money",
         "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/interest-tutorial"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Time Value of Money",
-        "url": "https://www.youtube.com/watch?v=733mgqrzNKs"
-      }
-    ]
+    "videos": []
   },
   "financial-maths/triangular-arbitrage": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Triangular Arbitrage",
+        "title": "Investopedia — Triangular Arbitrage",
         "url": "https://www.investopedia.com/terms/t/triangulararbitrage.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Triangular Arbitrage Guide",
+        "title": "Corporate Finance Institute — Triangular Arbitrage Guide",
         "url": "https://corporatefinanceinstitute.com/resources/foreign-exchange/triangular-arbitrage/"
       }
     ],
@@ -1612,12 +1577,25 @@
   "financial-maths/uptick-rule": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Uptick Rule",
+        "title": "Investopedia — Uptick Rule",
         "url": "https://www.investopedia.com/terms/u/uptickrule.asp"
       },
       {
-        "title": "Wikipedia \u2014 Uptick Rule",
+        "title": "Wikipedia — Uptick Rule",
         "url": "https://en.wikipedia.org/wiki/Uptick_rule"
+      }
+    ],
+    "videos": []
+  },
+  "financial-maths/vwap": {
+    "websites": [
+      {
+        "title": "Investopedia — VWAP",
+        "url": "https://www.investopedia.com/terms/v/vwap.asp"
+      },
+      {
+        "title": "Wikipedia — Volume-Weighted Average Price",
+        "url": "https://en.wikipedia.org/wiki/Volume-weighted_average_price"
       }
     ],
     "videos": []
@@ -1625,12 +1603,25 @@
   "financial-maths/yield-curve": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Yield Curve",
+        "title": "Investopedia — Yield Curve",
         "url": "https://www.investopedia.com/terms/y/yieldcurve.asp"
       },
       {
-        "title": "Wikipedia \u2014 Yield Curve",
+        "title": "Wikipedia — Yield Curve",
         "url": "https://en.wikipedia.org/wiki/Yield_curve"
+      }
+    ],
+    "videos": []
+  },
+  "financial-maths/yield-curve-bootstrapping": {
+    "websites": [
+      {
+        "title": "Investopedia — Bootstrapping",
+        "url": "https://www.investopedia.com/terms/b/bootstrapping.asp"
+      },
+      {
+        "title": "Wikipedia — Bootstrapping (Finance)",
+        "url": "https://en.wikipedia.org/wiki/Bootstrapping_(finance)"
       }
     ],
     "videos": []
@@ -1638,51 +1629,37 @@
   "linear-algebra/applications-of-linear-algebra": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Linear Algebra",
+        "title": "Wikipedia — Linear Algebra",
         "url": "https://en.wikipedia.org/wiki/Linear_algebra"
       },
       {
-        "title": "Investopedia \u2014 Modern Portfolio Theory",
+        "title": "Investopedia — Modern Portfolio Theory",
         "url": "https://www.investopedia.com/terms/m/modernportfoliotheory.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Essence of Linear Algebra",
-        "url": "https://www.youtube.com/watch?v=fNk_zzaMoSs"
-      },
-      {
-        "title": "MIT OpenCourseWare \u2014 Linear Algebra (Gilbert Strang)",
-        "url": "https://www.youtube.com/watch?v=ZK3O402wf1c"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/cholesky-decomposition": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Cholesky Decomposition",
+        "title": "Wikipedia — Cholesky Decomposition",
         "url": "https://en.wikipedia.org/wiki/Cholesky_decomposition"
       },
       {
-        "title": "Wikipedia \u2014 Cholesky Decomposition",
+        "title": "Wikipedia — Cholesky Decomposition",
         "url": "https://en.wikipedia.org/wiki/Cholesky_decomposition"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 Positive Definite Matrices",
-        "url": "https://www.youtube.com/watch?v=umt6BB1nJ4w"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/condition-number": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Condition Number",
+        "title": "Wikipedia — Condition Number",
         "url": "https://en.wikipedia.org/wiki/Condition_number"
       },
       {
-        "title": "MathWorld \u2014 Condition Number",
+        "title": "MathWorld — Condition Number",
         "url": "https://mathworld.wolfram.com/ConditionNumber.html"
       }
     ],
@@ -1691,69 +1668,46 @@
   "linear-algebra/covariance-matrix": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Covariance Matrix",
+        "title": "Wikipedia — Covariance Matrix",
         "url": "https://en.wikipedia.org/wiki/Covariance_matrix"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Covariance Matrix Explained",
-        "url": "https://www.youtube.com/watch?v=152tSYtiQbw"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/determinant": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Determinant",
+        "title": "Khan Academy — Determinant",
         "url": "https://www.khanacademy.org/math/linear-algebra/matrix-transformations/determinant-depth/v/linear-algebra-determinant-when-row-multiplied-by-scalar"
       },
       {
-        "title": "Math is Fun \u2014 Determinant of a Matrix",
+        "title": "Math is Fun — Determinant of a Matrix",
         "url": "https://www.mathsisfun.com/algebra/matrix-determinant.html"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 The Determinant",
-        "url": "https://www.youtube.com/watch?v=Ip3X9LOh2dk"
-      },
-      {
-        "title": "The Organic Chemistry Tutor \u2014 Determinants",
-        "url": "https://www.youtube.com/watch?v=H9BWRYJNIv4"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/dot-product-and-norms": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Dot Product",
+        "title": "Khan Academy — Dot Product",
         "url": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/dot-cross-products/v/vector-dot-product-and-vector-length"
       },
       {
-        "title": "Wikipedia \u2014 Dot Product",
+        "title": "Wikipedia — Dot Product",
         "url": "https://en.wikipedia.org/wiki/Dot_product"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Dot Products and Duality",
-        "url": "https://www.youtube.com/watch?v=LyGKycYT2v0"
-      },
-      {
-        "title": "Khan Academy \u2014 Vector Dot Product and Length",
-        "url": "https://www.youtube.com/watch?v=WNuIhXo39_k"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/eigenvalue-clipping": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Marchenko\u2013Pastur Distribution",
+        "title": "Wikipedia — Marchenko–Pastur Distribution",
         "url": "https://en.wikipedia.org/wiki/Marchenko%E2%80%93Pastur_distribution"
       },
       {
-        "title": "Wikipedia \u2014 Random Matrix Theory",
+        "title": "Wikipedia — Random Matrix Theory",
         "url": "https://en.wikipedia.org/wiki/Random_matrix"
       }
     ],
@@ -1762,123 +1716,82 @@
   "linear-algebra/eigenvalues-and-eigenvectors": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Eigenvalues and Eigenvectors",
+        "title": "Khan Academy — Eigenvalues and Eigenvectors",
         "url": "https://www.khanacademy.org/math/linear-algebra/alternate-bases/eigen-everything/v/linear-algebra-introduction-to-eigenvalues-and-eigenvectors"
       },
       {
-        "title": "Wikipedia \u2014 Eigenvalues and Eigenvectors",
+        "title": "Wikipedia — Eigenvalues and Eigenvectors",
         "url": "https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Eigenvectors and Eigenvalues",
-        "url": "https://www.youtube.com/watch?v=PFDu9oVAE-g"
-      },
-      {
-        "title": "The Organic Chemistry Tutor \u2014 Eigenvalues and Eigenvectors",
-        "url": "https://www.youtube.com/watch?v=TQvxWaQnrqI"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/linear-transformations": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Linear Map",
+        "title": "Wikipedia — Linear Map",
         "url": "https://en.wikipedia.org/wiki/Linear_map"
       },
       {
-        "title": "Khan Academy \u2014 Linear Transformations",
+        "title": "Khan Academy — Linear Transformations",
         "url": "https://www.khanacademy.org/math/linear-algebra/matrix-transformations/linear-transformations/v/linear-transformations"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Linear Transformations and Matrices",
-        "url": "https://www.youtube.com/watch?v=kYB8IZa5AuE"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/matrix-inverse": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Matrix Inverse",
+        "title": "Khan Academy — Matrix Inverse",
         "url": "https://www.khanacademy.org/math/algebra-home/alg-matrices/alg-intro-to-matrix-inverses/v/inverse-matrix-part-1"
       },
       {
-        "title": "Math is Fun \u2014 Inverse of a Matrix",
+        "title": "Math is Fun — Inverse of a Matrix",
         "url": "https://www.mathsisfun.com/algebra/matrix-inverse.html"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Inverse Matrices",
-        "url": "https://www.youtube.com/watch?v=uQhTuRlWMxw"
-      },
-      {
-        "title": "The Organic Chemistry Tutor \u2014 Inverse of a Matrix",
-        "url": "https://www.youtube.com/watch?v=AMLUikdDQGk"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/matrix-multiplication": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Matrix Multiplication",
+        "title": "Khan Academy — Matrix Multiplication",
         "url": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:matrices/x9e81a4f98389efdf:multiplying-matrices-by-matrices/v/matrix-multiplication-intro"
       },
       {
-        "title": "Math is Fun \u2014 How to Multiply Matrices",
+        "title": "Math is Fun — How to Multiply Matrices",
         "url": "https://www.mathsisfun.com/algebra/matrix-multiplying.html"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Matrix Multiplication as Composition",
-        "url": "https://www.youtube.com/watch?v=XkY2DOUCWMU"
-      },
-      {
-        "title": "The Organic Chemistry Tutor \u2014 Matrix Multiplication",
-        "url": "https://www.youtube.com/watch?v=vzt9c7iWPxs"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/matrix-norms": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Matrix Norm",
+        "title": "Wikipedia — Matrix Norm",
         "url": "https://en.wikipedia.org/wiki/Matrix_norm"
       },
       {
-        "title": "MathWorld \u2014 Matrix Norm",
+        "title": "MathWorld — Matrix Norm",
         "url": "https://mathworld.wolfram.com/MatrixNorm.html"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 Norms of Vectors and Matrices",
-        "url": "https://www.youtube.com/watch?v=NcPUI7aPFhA"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/positive-definite-matrices": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Definite Matrix",
+        "title": "Wikipedia — Definite Matrix",
         "url": "https://en.wikipedia.org/wiki/Definite_matrix"
       },
       {
-        "title": "MIT OpenCourseWare \u2014 Positive Definite Matrices",
+        "title": "MIT OpenCourseWare — Positive Definite Matrices",
         "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/"
       }
     ],
     "videos": [
       {
-        "title": "MIT OpenCourseWare \u2014 Positive Definite Matrices and Minima",
-        "url": "https://www.youtube.com/watch?v=umt6BB1nJ4w"
-      },
-      {
-        "title": "3Blue1Brown \u2014 Essence of Linear Algebra",
+        "title": "3Blue1Brown — Essence of Linear Algebra",
         "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"
       }
     ]
@@ -1886,143 +1799,89 @@
   "linear-algebra/rank": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Matrix Rank",
+        "title": "Khan Academy — Matrix Rank",
         "url": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/null-column-space/v/dimension-of-the-column-space-or-rank"
       },
       {
-        "title": "Wikipedia \u2014 Rank (Linear Algebra)",
+        "title": "Wikipedia — Rank (Linear Algebra)",
         "url": "https://en.wikipedia.org/wiki/Rank_(linear_algebra)"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Nonsquare Matrices and Rank",
-        "url": "https://www.youtube.com/watch?v=v8VSDg_WQlA"
-      },
-      {
-        "title": "MIT OpenCourseWare \u2014 Column Space and Rank",
-        "url": "https://www.youtube.com/watch?v=yjBerM5jWsc"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/singular-value-decomposition": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Singular Value Decomposition",
+        "title": "Wikipedia — Singular Value Decomposition",
         "url": "https://en.wikipedia.org/wiki/Singular_value_decomposition"
       },
       {
-        "title": "Brilliant \u2014 Singular Value Decomposition",
+        "title": "Brilliant — Singular Value Decomposition",
         "url": "https://brilliant.org/wiki/singular-value-decomposition/"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 SVD Visualised",
-        "url": "https://www.youtube.com/watch?v=vSczTbgc8Rc"
-      },
-      {
-        "title": "Steve Brunton \u2014 SVD Overview",
-        "url": "https://www.youtube.com/watch?v=nbBvuuNVfco"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/spectral-decomposition": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Eigendecomposition of a Matrix",
+        "title": "Wikipedia — Eigendecomposition of a Matrix",
         "url": "https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix"
       },
       {
-        "title": "Brilliant \u2014 Spectral Theorem",
+        "title": "Brilliant — Spectral Theorem",
         "url": "https://brilliant.org/wiki/spectral-theorem/"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Eigenvectors and Eigenvalues",
-        "url": "https://www.youtube.com/watch?v=PFDu9oVAE-g"
-      },
-      {
-        "title": "MIT OpenCourseWare \u2014 Symmetric Matrices and Positive Definiteness",
-        "url": "https://www.youtube.com/watch?v=umt6BB1nJ4w"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/systems-of-linear-equations": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Systems of Linear Equations",
+        "title": "Khan Academy — Systems of Linear Equations",
         "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:systems-of-equations"
       },
       {
-        "title": "Math is Fun \u2014 Systems of Linear Equations",
+        "title": "Math is Fun — Systems of Linear Equations",
         "url": "https://www.mathsisfun.com/algebra/systems-linear-equations.html"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Linear Systems and Gaussian Elimination",
-        "url": "https://www.youtube.com/watch?v=fNk_zzaMoSs"
-      },
-      {
-        "title": "The Organic Chemistry Tutor \u2014 Systems of Linear Equations",
-        "url": "https://www.youtube.com/watch?v=eYSASx8_nyg"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/trace": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Trace (Linear Algebra)",
+        "title": "Wikipedia — Trace (Linear Algebra)",
         "url": "https://en.wikipedia.org/wiki/Trace_(linear_algebra)"
       },
       {
-        "title": "MathWorld \u2014 Matrix Trace",
+        "title": "MathWorld — Matrix Trace",
         "url": "https://mathworld.wolfram.com/MatrixTrace.html"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 Properties of Determinants (includes trace)",
-        "url": "https://www.youtube.com/watch?v=srxexLishgY"
-      },
-      {
-        "title": "Khan Academy \u2014 Linear Algebra",
-        "url": "https://www.youtube.com/watch?v=xyAuNHPsq-g"
-      }
-    ]
+    "videos": []
   },
   "linear-algebra/transpose-and-symmetric-matrices": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Transpose of a Matrix",
+        "title": "Khan Academy — Transpose of a Matrix",
         "url": "https://www.khanacademy.org/math/linear-algebra/matrix-transformations/matrix-transpose/v/linear-algebra-transpose-of-a-matrix"
       },
       {
-        "title": "Wikipedia \u2014 Symmetric Matrix",
+        "title": "Wikipedia — Symmetric Matrix",
         "url": "https://en.wikipedia.org/wiki/Symmetric_matrix"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 Symmetric Matrices",
-        "url": "https://www.youtube.com/watch?v=ZTNniGvY5IQ"
-      },
-      {
-        "title": "The Organic Chemistry Tutor \u2014 Matrix Transpose",
-        "url": "https://www.youtube.com/watch?v=TZrKrNVhbjI"
-      }
-    ]
+    "videos": []
   },
   "mathematical-notation/characteristic-function-notation": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Characteristic Function (Probability Theory)",
+        "title": "Wikipedia — Characteristic Function (Probability Theory)",
         "url": "https://en.wikipedia.org/wiki/Characteristic_function_(probability_theory)"
       },
       {
-        "title": "Wikipedia \u2014 Carr-Madan Option Pricing Formula",
+        "title": "Wikipedia — Carr-Madan Option Pricing Formula",
         "url": "https://en.wikipedia.org/wiki/Carr%E2%80%93Madan_formula"
       }
     ],
@@ -2031,79 +1890,55 @@
   "mathematical-notation/conditional-expectation-notation": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Conditional Expectation",
+        "title": "Wikipedia — Conditional Expectation",
         "url": "https://en.wikipedia.org/wiki/Conditional_expectation"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Conditional Probability and Expectation",
-        "url": "https://www.youtube.com/watch?v=ibINrxJLvlM"
-      }
-    ]
+    "videos": []
   },
   "mathematical-notation/convergence-notation": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Convergence of Random Variables",
+        "title": "Wikipedia — Convergence of Random Variables",
         "url": "https://en.wikipedia.org/wiki/Convergence_of_random_variables"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Central Limit Theorem",
-        "url": "https://www.youtube.com/watch?v=YAlJCEDH2uY"
-      }
-    ]
+    "videos": []
   },
   "mathematical-notation/differential-notation": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Differential (Mathematics)",
+        "title": "Wikipedia — Differential (Mathematics)",
         "url": "https://en.wikipedia.org/wiki/Differential_(mathematics)"
       },
       {
-        "title": "Paul's Online Math Notes \u2014 Differentials",
+        "title": "Paul's Online Math Notes — Differentials",
         "url": "https://tutorial.math.lamar.edu/Classes/CalcI/Differentials.aspx"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 What does d/dx actually mean?",
-        "url": "https://www.youtube.com/watch?v=CfW845LNObM"
-      }
-    ]
+    "videos": []
   },
   "mathematical-notation/expectation-and-variance-notation": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Expected Value",
+        "title": "Khan Academy — Expected Value",
         "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/mean-var-standard-deviation/a/expected-value-and-standard-deviation"
       },
       {
-        "title": "Wikipedia \u2014 Expected Value",
+        "title": "Wikipedia — Expected Value",
         "url": "https://en.wikipedia.org/wiki/Expected_value"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Expected Values",
-        "url": "https://www.youtube.com/watch?v=KLs_7b7SKi4"
-      },
-      {
-        "title": "Khan Academy \u2014 Variance and Standard Deviation",
-        "url": "https://www.youtube.com/watch?v=E4HAYd0QnRc"
-      }
-    ]
+    "videos": []
   },
   "mathematical-notation/filtration-and-sigma-algebra-notation": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Filtration (Probability Theory)",
+        "title": "Wikipedia — Filtration (Probability Theory)",
         "url": "https://en.wikipedia.org/wiki/Filtration_(probability_theory)"
       },
       {
-        "title": "Wikipedia \u2014 Sigma-Algebra",
+        "title": "Wikipedia — Sigma-Algebra",
         "url": "https://en.wikipedia.org/wiki/Sigma-algebra"
       }
     ],
@@ -2112,91 +1947,59 @@
   "mathematical-notation/functional-derivative-notation": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Functional Derivative",
+        "title": "Wikipedia — Functional Derivative",
         "url": "https://en.wikipedia.org/wiki/Functional_derivative"
       },
       {
-        "title": "Wikipedia \u2014 Hamilton-Jacobi-Bellman Equation",
+        "title": "Wikipedia — Hamilton-Jacobi-Bellman Equation",
         "url": "https://en.wikipedia.org/wiki/Hamilton%E2%80%93Jacobi%E2%80%93Bellman_equation"
       }
     ],
-    "videos": [
-      {
-        "title": "Steve Brunton \u2014 Calculus of Variations",
-        "url": "https://www.youtube.com/watch?v=VCHFCXgYdvY"
-      }
-    ]
+    "videos": []
   },
   "mathematical-notation/integral-notation": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Introduction to Integrals",
+        "title": "Khan Academy — Introduction to Integrals",
         "url": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-1/a/integration-overview"
       },
       {
-        "title": "Paul's Online Math Notes \u2014 Integrals",
+        "title": "Paul's Online Math Notes — Integrals",
         "url": "https://tutorial.math.lamar.edu/Classes/CalcI/DefnOfDefiniteIntegral.aspx"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Integration and the Fundamental Theorem",
-        "url": "https://www.youtube.com/watch?v=rfG8ce4nNh0"
-      },
-      {
-        "title": "Khan Academy \u2014 Definite Integral Notation",
-        "url": "https://www.youtube.com/watch?v=0RdI3-8G4Fs"
-      }
-    ]
+    "videos": []
   },
   "mathematical-notation/law-and-distribution-notation": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Convergence of Random Variables",
+        "title": "Wikipedia — Convergence of Random Variables",
         "url": "https://en.wikipedia.org/wiki/Convergence_of_random_variables"
       },
       {
-        "title": "Wikipedia \u2014 Probability Distribution",
+        "title": "Wikipedia — Probability Distribution",
         "url": "https://en.wikipedia.org/wiki/Probability_distribution"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Probability Distributions",
-        "url": "https://www.youtube.com/watch?v=oI3hZJqXJuc"
-      },
-      {
-        "title": "Khan Academy \u2014 Central Limit Theorem",
-        "url": "https://www.youtube.com/watch?v=JNm3M9cqWyc"
-      }
-    ]
+    "videos": []
   },
   "mathematical-notation/limit-notation": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Limits Introduction",
+        "title": "Khan Academy — Limits Introduction",
         "url": "https://www.khanacademy.org/math/ap-calculus-ab/ab-limits-new/ab-1-2/a/limits-intro"
       },
       {
-        "title": "Paul's Online Math Notes \u2014 The Definition of the Limit",
+        "title": "Paul's Online Math Notes — The Definition of the Limit",
         "url": "https://tutorial.math.lamar.edu/Classes/CalcI/DefnOfLimit.aspx"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Limits",
-        "url": "https://www.youtube.com/watch?v=kfF40MiS7zA"
-      },
-      {
-        "title": "Khan Academy \u2014 Limits and Continuity",
-        "url": "https://www.youtube.com/watch?v=riXcZT2ICjA"
-      }
-    ]
+    "videos": []
   },
   "mathematical-notation/martingale-notation": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Martingale (Probability Theory)",
+        "title": "Wikipedia — Martingale (Probability Theory)",
         "url": "https://en.wikipedia.org/wiki/Martingale_(probability_theory)"
       }
     ],
@@ -2205,70 +2008,64 @@
   "mathematical-notation/partial-derivative-notation": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Partial Derivatives",
+        "title": "Khan Academy — Partial Derivatives",
         "url": "https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/partial-derivative-and-gradient-articles/a/introduction-to-partial-derivatives"
       },
       {
-        "title": "Paul's Online Math Notes \u2014 Partial Derivatives",
+        "title": "Paul's Online Math Notes — Partial Derivatives",
         "url": "https://tutorial.math.lamar.edu/Classes/CalcIII/PartialDerivatives.aspx"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Gradient and Partial Derivatives",
-        "url": "https://www.youtube.com/watch?v=TEB2z7ZlRAw"
-      },
-      {
-        "title": "Khan Academy \u2014 Partial Derivative Notation",
-        "url": "https://www.youtube.com/watch?v=dfvnCHqzK54"
-      }
-    ]
+    "videos": []
   },
   "mathematical-notation/probability-measure-notation": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Probability Space",
+        "title": "Wikipedia — Probability Space",
         "url": "https://en.wikipedia.org/wiki/Probability_space"
       },
       {
-        "title": "Wikipedia \u2014 Filtration (Probability Theory)",
+        "title": "Wikipedia — Filtration (Probability Theory)",
         "url": "https://en.wikipedia.org/wiki/Filtration_(probability_theory)"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 Probability Spaces",
-        "url": "https://www.youtube.com/watch?v=mUxg3j_h5GM"
-      }
-    ]
+    "videos": []
   },
   "mathematical-notation/stochastic-integral-notation": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Ito Calculus",
+        "title": "Wikipedia — Ito Calculus",
         "url": "https://en.wikipedia.org/wiki/It%C3%B4_calculus"
       },
       {
-        "title": "Wikipedia \u2014 Stratonovich Integral",
+        "title": "Wikipedia — Stratonovich Integral",
         "url": "https://en.wikipedia.org/wiki/Stratonovich_integral"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 Stochastic Calculus and Finance",
-        "url": "https://www.youtube.com/watch?v=Z5yRMMVUC5w"
-      }
-    ]
+    "videos": []
   },
   "portfolio-theory/alpha-and-beta": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Alpha",
+        "title": "Investopedia — Alpha",
         "url": "https://www.investopedia.com/terms/a/alpha.asp"
       },
       {
-        "title": "Investopedia \u2014 Beta",
+        "title": "Investopedia — Beta",
         "url": "https://www.investopedia.com/terms/b/beta.asp"
+      }
+    ],
+    "videos": []
+  },
+  "portfolio-theory/alpha-decay": {
+    "websites": [
+      {
+        "title": "Wikipedia — Alpha (Finance)",
+        "url": "https://en.wikipedia.org/wiki/Alpha_(finance)"
+      },
+      {
+        "title": "Investopedia — Alpha",
+        "url": "https://www.investopedia.com/terms/a/alpha.asp"
       }
     ],
     "videos": []
@@ -2276,11 +2073,11 @@
   "portfolio-theory/arbitrage-pricing-theory": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Arbitrage Pricing Theory (APT)",
+        "title": "Investopedia — Arbitrage Pricing Theory (APT)",
         "url": "https://www.investopedia.com/terms/a/apt.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Arbitrage Pricing Theory",
+        "title": "Corporate Finance Institute — Arbitrage Pricing Theory",
         "url": "https://corporatefinanceinstitute.com/resources/valuation/arbitrage-pricing-theory-apt/"
       }
     ],
@@ -2289,11 +2086,11 @@
   "portfolio-theory/black-litterman-model": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Black\u2013Litterman Model",
+        "title": "Wikipedia — Black–Litterman Model",
         "url": "https://en.wikipedia.org/wiki/Black%E2%80%93Litterman_model"
       },
       {
-        "title": "Investopedia \u2014 Black-Litterman Model",
+        "title": "Investopedia — Black-Litterman Model",
         "url": "https://www.investopedia.com/terms/b/black-litterman_model.asp"
       }
     ],
@@ -2302,11 +2099,11 @@
   "portfolio-theory/calmar-ratio": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Calmar Ratio",
+        "title": "Investopedia — Calmar Ratio",
         "url": "https://www.investopedia.com/terms/c/calmarratio.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Calmar Ratio",
+        "title": "Corporate Finance Institute — Calmar Ratio",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/risk-management/calmar-ratio/"
       }
     ],
@@ -2315,7 +2112,7 @@
   "portfolio-theory/capital-asset-pricing-model": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Capital Asset Pricing Model (CAPM)",
+        "title": "Investopedia — Capital Asset Pricing Model (CAPM)",
         "url": "https://www.investopedia.com/terms/c/capm.asp"
       }
     ],
@@ -2324,8 +2121,47 @@
   "portfolio-theory/capital-market-line": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Capital Market Line",
+        "title": "Investopedia — Capital Market Line",
         "url": "https://www.investopedia.com/terms/c/cml.asp"
+      }
+    ],
+    "videos": []
+  },
+  "portfolio-theory/carhart-four-factor-model": {
+    "websites": [
+      {
+        "title": "Investopedia — Carhart Four-Factor Model",
+        "url": "https://www.investopedia.com/terms/c/caraborefactormodel.asp"
+      },
+      {
+        "title": "Wikipedia — Carhart Four-Factor Model",
+        "url": "https://en.wikipedia.org/wiki/Carhart_four-factor_model"
+      }
+    ],
+    "videos": []
+  },
+  "portfolio-theory/cross-sectional-vs-time-series-momentum": {
+    "websites": [
+      {
+        "title": "AQR — Time Series Momentum",
+        "url": "https://www.aqr.com/insights/research/journal-article/time-series-momentum"
+      },
+      {
+        "title": "Wikipedia — Momentum Investing",
+        "url": "https://en.wikipedia.org/wiki/Momentum_investing"
+      }
+    ],
+    "videos": []
+  },
+  "portfolio-theory/diversification": {
+    "websites": [
+      {
+        "title": "Investopedia — Diversification",
+        "url": "https://www.investopedia.com/terms/d/diversification.asp"
+      },
+      {
+        "title": "Wikipedia — Diversification (Finance)",
+        "url": "https://en.wikipedia.org/wiki/Diversification_(finance)"
       }
     ],
     "videos": []
@@ -2333,11 +2169,11 @@
   "portfolio-theory/efficient-frontier": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Efficient Frontier",
+        "title": "Investopedia — Efficient Frontier",
         "url": "https://www.investopedia.com/terms/e/efficientfrontier.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Efficient Frontier",
+        "title": "Corporate Finance Institute — Efficient Frontier",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/efficient-frontier/"
       }
     ],
@@ -2346,29 +2182,28 @@
   "portfolio-theory/fama-french-three-factor-model": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Fama and French Three-Factor Model",
+        "title": "Investopedia — Fama and French Three-Factor Model",
         "url": "https://www.investopedia.com/terms/f/famaandfrenchthreefactormodel.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Fama-French Three-Factor Model",
+        "title": "Corporate Finance Institute — Fama-French Three-Factor Model",
         "url": "https://corporatefinanceinstitute.com/resources/valuation/fama-french-three-factor-model/"
       }
     ],
-    "videos": [
-      {
-        "title": "Patrick Boyle \u2014 Factor Investing Explained",
-        "url": "https://www.youtube.com/watch?v=ViTnIebSzj4"
-      }
-    ]
+    "videos": []
+  },
+  "portfolio-theory/fundamental-law-of-active-management": {
+    "websites": [],
+    "videos": []
   },
   "portfolio-theory/information-ratio": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Information Ratio",
+        "title": "Investopedia — Information Ratio",
         "url": "https://www.investopedia.com/terms/i/informationratio.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Information Ratio",
+        "title": "Corporate Finance Institute — Information Ratio",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/information-ratio/"
       }
     ],
@@ -2377,8 +2212,21 @@
   "portfolio-theory/jensens-alpha": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Jensen's Alpha",
+        "title": "Investopedia — Jensen's Alpha",
         "url": "https://www.investopedia.com/terms/j/jensensmeasure.asp"
+      }
+    ],
+    "videos": []
+  },
+  "portfolio-theory/mean-reversion-strategy": {
+    "websites": [
+      {
+        "title": "Investopedia — Mean Reversion",
+        "url": "https://www.investopedia.com/terms/m/meanreversion.asp"
+      },
+      {
+        "title": "Wikipedia — Mean Reversion (Finance)",
+        "url": "https://en.wikipedia.org/wiki/Mean_reversion_(finance)"
       }
     ],
     "videos": []
@@ -2386,7 +2234,7 @@
   "portfolio-theory/minimum-variance-portfolio": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Modern Portfolio Theory (Minimum Variance)",
+        "title": "Wikipedia — Modern Portfolio Theory (Minimum Variance)",
         "url": "https://en.wikipedia.org/wiki/Modern_portfolio_theory#The_minimum_variance_portfolio"
       }
     ],
@@ -2395,26 +2243,69 @@
   "portfolio-theory/modern-portfolio-theory": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Modern Portfolio Theory",
+        "title": "Investopedia — Modern Portfolio Theory",
         "url": "https://www.investopedia.com/terms/m/modernportfoliotheory.asp"
       },
       {
-        "title": "Wikipedia \u2014 Modern Portfolio Theory",
+        "title": "Wikipedia — Modern Portfolio Theory",
         "url": "https://en.wikipedia.org/wiki/Modern_portfolio_theory"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "portfolio-theory/momentum-crash": {
+    "websites": [
       {
-        "title": "MIT OpenCourseWare \u2014 Portfolio Theory",
-        "url": "https://www.youtube.com/watch?v=8TJQhQ2GZ0Y"
+        "title": "AQR — Momentum Crashes",
+        "url": "https://www.aqr.com/insights/research/working-paper/momentum-crashes"
+      },
+      {
+        "title": "Wikipedia — Momentum Investing",
+        "url": "https://en.wikipedia.org/wiki/Momentum_investing"
       }
-    ]
+    ],
+    "videos": []
+  },
+  "portfolio-theory/momentum-strategy": {
+    "websites": [
+      {
+        "title": "Investopedia — Momentum Investing",
+        "url": "https://www.investopedia.com/terms/m/momentum_investing.asp"
+      },
+      {
+        "title": "Wikipedia — Momentum Investing",
+        "url": "https://en.wikipedia.org/wiki/Momentum_investing"
+      }
+    ],
+    "videos": []
   },
   "portfolio-theory/omega-ratio": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Omega Ratio",
+        "title": "Wikipedia — Omega Ratio",
         "url": "https://en.wikipedia.org/wiki/Omega_ratio"
+      }
+    ],
+    "videos": []
+  },
+  "portfolio-theory/portfolio-manager": {
+    "websites": [
+      {
+        "title": "Investopedia — Portfolio Manager",
+        "url": "https://www.investopedia.com/terms/p/portfoliomanager.asp"
+      }
+    ],
+    "videos": []
+  },
+  "portfolio-theory/rebalancing": {
+    "websites": [
+      {
+        "title": "Investopedia — Rebalancing",
+        "url": "https://www.investopedia.com/terms/r/rebalancing.asp"
+      },
+      {
+        "title": "Wikipedia — Rebalancing Investments",
+        "url": "https://en.wikipedia.org/wiki/Rebalancing_investments"
       }
     ],
     "videos": []
@@ -2422,21 +2313,16 @@
   "portfolio-theory/resampled-efficient-frontier": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Resampled Efficient Frontier",
+        "title": "Wikipedia — Resampled Efficient Frontier",
         "url": "https://en.wikipedia.org/wiki/Resampled_efficient_frontier"
       }
     ],
-    "videos": [
-      {
-        "title": "ritvikmath \u2014 Bootstrap Methods in Finance",
-        "url": "https://www.youtube.com/watch?v=N4ZQQqyIf6k"
-      }
-    ]
+    "videos": []
   },
   "portfolio-theory/risk-budgeting": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Risk Parity (Risk Budgeting section)",
+        "title": "Wikipedia — Risk Parity (Risk Budgeting section)",
         "url": "https://en.wikipedia.org/wiki/Risk_parity"
       }
     ],
@@ -2445,29 +2331,24 @@
   "portfolio-theory/risk-parity": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Risk Parity",
+        "title": "Investopedia — Risk Parity",
         "url": "https://www.investopedia.com/terms/r/risk-parity.asp"
       },
       {
-        "title": "Wikipedia \u2014 Risk Parity",
+        "title": "Wikipedia — Risk Parity",
         "url": "https://en.wikipedia.org/wiki/Risk_parity"
       }
     ],
-    "videos": [
-      {
-        "title": "Bridgewater \u2014 All Weather Principles",
-        "url": "https://www.youtube.com/watch?v=Nu4lHaSh7D4"
-      }
-    ]
+    "videos": []
   },
   "portfolio-theory/security-market-line": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Security Market Line (SML)",
+        "title": "Investopedia — Security Market Line (SML)",
         "url": "https://www.investopedia.com/terms/s/sml.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Security Market Line",
+        "title": "Corporate Finance Institute — Security Market Line",
         "url": "https://corporatefinanceinstitute.com/resources/valuation/security-market-line-sml/"
       }
     ],
@@ -2476,11 +2357,11 @@
   "portfolio-theory/sharpe-ratio": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Sharpe Ratio",
+        "title": "Investopedia — Sharpe Ratio",
         "url": "https://www.investopedia.com/terms/s/sharperatio.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Sharpe Ratio",
+        "title": "Corporate Finance Institute — Sharpe Ratio",
         "url": "https://corporatefinanceinstitute.com/resources/risk-management/sharpe-ratio/"
       }
     ],
@@ -2489,11 +2370,11 @@
   "portfolio-theory/sortino-ratio": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Sortino Ratio",
+        "title": "Investopedia — Sortino Ratio",
         "url": "https://www.investopedia.com/terms/s/sortinoratio.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Sortino Ratio",
+        "title": "Corporate Finance Institute — Sortino Ratio",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/risk-management/sortino-ratio-2/"
       }
     ],
@@ -2502,7 +2383,7 @@
   "portfolio-theory/sterling-ratio": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Sterling Ratio",
+        "title": "Wikipedia — Sterling Ratio",
         "url": "https://en.wikipedia.org/wiki/Sterling_ratio"
       }
     ],
@@ -2511,12 +2392,25 @@
   "portfolio-theory/tracking-error": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Tracking Error",
+        "title": "Investopedia — Tracking Error",
         "url": "https://www.investopedia.com/terms/t/trackingerror.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Tracking Error",
+        "title": "Corporate Finance Institute — Tracking Error",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/portfolio-management/tracking-error/"
+      }
+    ],
+    "videos": []
+  },
+  "portfolio-theory/transaction-cost-analysis": {
+    "websites": [
+      {
+        "title": "Investopedia — Transaction Costs",
+        "url": "https://www.investopedia.com/terms/t/transactioncosts.asp"
+      },
+      {
+        "title": "Wikipedia — Transaction Cost Analysis",
+        "url": "https://en.wikipedia.org/wiki/Transaction_cost_analysis"
       }
     ],
     "videos": []
@@ -2524,11 +2418,11 @@
   "portfolio-theory/treynor-ratio": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Treynor Ratio",
+        "title": "Investopedia — Treynor Ratio",
         "url": "https://www.investopedia.com/terms/t/treynorratio.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Treynor Ratio",
+        "title": "Corporate Finance Institute — Treynor Ratio",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/risk-management/treynor-ratio/"
       }
     ],
@@ -2537,65 +2431,42 @@
   "portfolio-theory/two-fund-separation-theorem": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Mutual Fund Separation Theorem",
+        "title": "Wikipedia — Mutual Fund Separation Theorem",
         "url": "https://en.wikipedia.org/wiki/Mutual_fund_separation_theorem"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 Capital Market Line and Separation",
-        "url": "https://www.youtube.com/watch?v=8TJQhQ2GZ0Y"
-      }
-    ]
+    "videos": []
   },
   "probability/bayes-theorem": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Bayes' Theorem",
+        "title": "Khan Academy — Bayes' Theorem",
         "url": "https://www.khanacademy.org/math/ap-statistics/probability-ap/stats-conditional-probability/v/bayes-theorem-visualized"
       },
       {
-        "title": "Brilliant \u2014 Bayes' Theorem",
+        "title": "Brilliant — Bayes' Theorem",
         "url": "https://brilliant.org/wiki/bayes-theorem/"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Bayes' Theorem",
-        "url": "https://www.youtube.com/watch?v=HZGCoVF3YvM"
-      },
-      {
-        "title": "StatQuest \u2014 Bayes' Theorem",
-        "url": "https://www.youtube.com/watch?v=9wCnvr7Xw4E"
-      }
-    ]
+    "videos": []
   },
   "probability/binomial-distribution": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Binomial Distribution",
+        "title": "Khan Academy — Binomial Distribution",
         "url": "https://www.khanacademy.org/math/ap-statistics/random-variables-ap/binomial-random-variable/v/binomial-distribution"
       },
       {
-        "title": "Brilliant \u2014 Binomial Distribution",
+        "title": "Brilliant — Binomial Distribution",
         "url": "https://brilliant.org/wiki/binomial-distribution/"
       }
     ],
-    "videos": [
-      {
-        "title": "The Organic Chemistry Tutor \u2014 Binomial Distribution",
-        "url": "https://www.youtube.com/watch?v=WWv0RUxDfbs"
-      },
-      {
-        "title": "StatQuest \u2014 Binomial Distribution",
-        "url": "https://www.youtube.com/watch?v=8idr1WZ1A7Q"
-      }
-    ]
+    "videos": []
   },
   "probability/box-muller-transform": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Box\u2013Muller Transform",
+        "title": "Wikipedia — Box–Muller Transform",
         "url": "https://en.wikipedia.org/wiki/Box%E2%80%93Muller_transform"
       }
     ],
@@ -2604,33 +2475,24 @@
   "probability/chi-squared-distribution": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Chi-Squared Distribution",
+        "title": "Khan Academy — Chi-Squared Distribution",
         "url": "https://www.khanacademy.org/math/statistics-probability/inference-categorical-data-chi-square-tests"
       },
       {
-        "title": "Wikipedia \u2014 Chi-Squared Distribution",
+        "title": "Wikipedia — Chi-Squared Distribution",
         "url": "https://en.wikipedia.org/wiki/Chi-squared_distribution"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Chi-Square Distribution",
-        "url": "https://www.youtube.com/watch?v=dXB3cUGnaxQ"
-      },
-      {
-        "title": "The Organic Chemistry Tutor \u2014 Chi-Square Distribution",
-        "url": "https://www.youtube.com/watch?v=2QeDRsxSF9M"
-      }
-    ]
+    "videos": []
   },
   "probability/copulas": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Copula (Probability Theory)",
+        "title": "Wikipedia — Copula (Probability Theory)",
         "url": "https://en.wikipedia.org/wiki/Copula_(probability_theory)"
       },
       {
-        "title": "Investopedia \u2014 Copula",
+        "title": "Investopedia — Copula",
         "url": "https://www.investopedia.com/terms/c/copula.asp"
       }
     ],
@@ -2639,141 +2501,94 @@
   "probability/cornish-fisher-expansion": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Cornish\u2013Fisher Expansion",
+        "title": "Wikipedia — Cornish–Fisher Expansion",
         "url": "https://en.wikipedia.org/wiki/Cornish%E2%80%93Fisher_expansion"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Skewness and Kurtosis Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=xi0vhXFPegw"
-      },
-      {
-        "title": "Khan Academy \u2014 Skewness and Kurtosis",
-        "url": "https://www.youtube.com/watch?v=HnMGKsupF8Q"
-      }
-    ]
+    "videos": []
   },
   "probability/cumulative-distribution-function": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Cumulative Distribution Function",
+        "title": "Khan Academy — Cumulative Distribution Function",
         "url": "https://www.khanacademy.org/math/ap-statistics/density-curves-normal-distribution-ap/stats-normal-distributions/v/ck12-org-normal-distribution-problems-qualitative-sense-of-normal-distributions"
       },
       {
-        "title": "Wikipedia \u2014 Cumulative Distribution Function",
+        "title": "Wikipedia — Cumulative Distribution Function",
         "url": "https://en.wikipedia.org/wiki/Cumulative_distribution_function"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 CDF Explained",
-        "url": "https://www.youtube.com/watch?v=Fvi9A_tEmXQ"
-      },
-      {
-        "title": "The Organic Chemistry Tutor \u2014 CDF and PDF",
-        "url": "https://www.youtube.com/watch?v=YXLVjCKVP7U"
-      }
-    ]
+    "videos": []
   },
   "probability/error-function": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Error Function",
+        "title": "Wikipedia — Error Function",
         "url": "https://en.wikipedia.org/wiki/Error_function"
       },
       {
-        "title": "Brilliant \u2014 Error Function",
+        "title": "Brilliant — Error Function",
         "url": "https://brilliant.org/wiki/error-function/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Normal Distribution and the Empirical Rule",
-        "url": "https://www.youtube.com/watch?v=xgQhefFOXrM"
-      }
-    ]
+    "videos": []
   },
   "probability/expected-value": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Expected Value",
+        "title": "Khan Academy — Expected Value",
         "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/mean-var-standard-deviation-random/v/expected-value-of-a-discrete-random-variable"
       },
       {
-        "title": "Brilliant \u2014 Expected Value",
+        "title": "Brilliant — Expected Value",
         "url": "https://brilliant.org/wiki/expected-value/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Expected Value",
-        "url": "https://www.youtube.com/watch?v=j__Kredt7vY"
-      },
-      {
-        "title": "The Organic Chemistry Tutor \u2014 Expected Value",
-        "url": "https://www.youtube.com/watch?v=KLs_7b7SKi4"
-      }
-    ]
+    "videos": []
   },
   "probability/exponential-distribution": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Exponential Distribution",
+        "title": "Wikipedia — Exponential Distribution",
         "url": "https://en.wikipedia.org/wiki/Exponential_distribution"
       },
       {
-        "title": "Brilliant \u2014 Exponential Distribution",
+        "title": "Brilliant — Exponential Distribution",
         "url": "https://brilliant.org/wiki/exponential-distribution/"
       }
     ],
-    "videos": [
-      {
-        "title": "The Organic Chemistry Tutor \u2014 Exponential Distribution",
-        "url": "https://www.youtube.com/watch?v=2kg1O0j1J9c"
-      }
-    ]
+    "videos": []
   },
   "probability/fat-tailed-distributions": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Heavy-Tailed Distribution",
+        "title": "Wikipedia — Heavy-Tailed Distribution",
         "url": "https://en.wikipedia.org/wiki/Heavy-tailed_distribution"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Kurtosis and Fat Tails",
-        "url": "https://www.youtube.com/watch?v=ISaVvSO_3Sg"
-      }
-    ]
+    "videos": []
   },
   "probability/hazard-rate-function": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Failure Rate (Hazard Function)",
+        "title": "Wikipedia — Failure Rate (Hazard Function)",
         "url": "https://en.wikipedia.org/wiki/Failure_rate"
       },
       {
-        "title": "Investopedia \u2014 Credit Default Swap (CDS)",
+        "title": "Investopedia — Credit Default Swap (CDS)",
         "url": "https://www.investopedia.com/terms/c/creditdefaultswap.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Survival Analysis Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=v1QqpG0rR1k"
-      }
-    ]
+    "videos": []
   },
   "probability/lognormal-distribution": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Log-Normal Distribution",
+        "title": "Wikipedia — Log-Normal Distribution",
         "url": "https://en.wikipedia.org/wiki/Log-normal_distribution"
       },
       {
-        "title": "Investopedia \u2014 Lognormal Distribution",
+        "title": "Investopedia — Lognormal Distribution",
         "url": "https://www.investopedia.com/terms/l/log-normal-distribution.asp"
       }
     ],
@@ -2782,25 +2597,20 @@
   "probability/mills-ratio": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Mills Ratio",
+        "title": "Wikipedia — Mills Ratio",
         "url": "https://en.wikipedia.org/wiki/Mills_ratio"
       },
       {
-        "title": "Wolfram MathWorld \u2014 Mills Ratio",
+        "title": "Wolfram MathWorld — Mills Ratio",
         "url": "https://mathworld.wolfram.com/MillsRatio.html"
       }
     ],
-    "videos": [
-      {
-        "title": "The Organic Chemistry Tutor \u2014 Normal Distribution and Z-scores",
-        "url": "https://www.youtube.com/watch?v=dOr0NKyD31Q"
-      }
-    ]
+    "videos": []
   },
   "probability/moment-generating-function": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Moment-Generating Function",
+        "title": "Wikipedia — Moment-Generating Function",
         "url": "https://en.wikipedia.org/wiki/Moment-generating_function"
       }
     ],
@@ -2809,197 +2619,128 @@
   "probability/multivariate-normal-distribution": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Multivariate Normal Distribution",
+        "title": "Wikipedia — Multivariate Normal Distribution",
         "url": "https://en.wikipedia.org/wiki/Multivariate_normal_distribution"
       },
       {
-        "title": "Brilliant \u2014 Multivariate Gaussian Distribution",
+        "title": "Brilliant — Multivariate Gaussian Distribution",
         "url": "https://brilliant.org/wiki/multivariate-normal-distribution/"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Multivariate Normal Distribution",
-        "url": "https://www.youtube.com/watch?v=eho8xH3E6mE"
-      },
-      {
-        "title": "ritvikmath \u2014 Multivariate Gaussian",
-        "url": "https://www.youtube.com/watch?v=d4_96ZWu3Vk"
-      }
-    ]
+    "videos": []
   },
   "probability/normal-distribution": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Normal Distribution",
+        "title": "Khan Academy — Normal Distribution",
         "url": "https://www.khanacademy.org/math/statistics-probability/modeling-distributions-of-data/normal-distributions-library/v/ck12-org-normal-distribution-problems-qualitative-sense-of-normal-distributions"
       },
       {
-        "title": "Math is Fun \u2014 Normal Distribution",
+        "title": "Math is Fun — Normal Distribution",
         "url": "https://www.mathsisfun.com/data/standard-normal-distribution.html"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Why Normal Distributions Are Normal",
-        "url": "https://www.youtube.com/watch?v=zeJD6dqJ5lo"
-      },
-      {
-        "title": "StatQuest \u2014 Normal Distribution",
-        "url": "https://www.youtube.com/watch?v=rzFX5NWojp0"
-      }
-    ]
+    "videos": []
   },
   "probability/poisson-distribution": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Poisson Distribution",
+        "title": "Khan Academy — Poisson Distribution",
         "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/poisson-distribution/v/poisson-process-1"
       },
       {
-        "title": "Brilliant \u2014 Poisson Distribution",
+        "title": "Brilliant — Poisson Distribution",
         "url": "https://brilliant.org/wiki/poisson-distribution/"
       }
     ],
-    "videos": [
-      {
-        "title": "The Organic Chemistry Tutor \u2014 Poisson Distribution",
-        "url": "https://www.youtube.com/watch?v=jmqZG6roVqU"
-      },
-      {
-        "title": "StatQuest \u2014 Poisson Distribution",
-        "url": "https://www.youtube.com/watch?v=cPOChr_kuQs"
-      }
-    ]
+    "videos": []
   },
   "probability/probability-density-function": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Probability Density Functions",
+        "title": "Khan Academy — Probability Density Functions",
         "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-continuous/v/probability-density-functions"
       },
       {
-        "title": "Wikipedia \u2014 Probability Density Function",
+        "title": "Wikipedia — Probability Density Function",
         "url": "https://en.wikipedia.org/wiki/Probability_density_function"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Probability Density Functions",
-        "url": "https://www.youtube.com/watch?v=ZA4JkHKZM50"
-      },
-      {
-        "title": "The Organic Chemistry Tutor \u2014 PDF Explained",
-        "url": "https://www.youtube.com/watch?v=YXLVjCKVP7U"
-      }
-    ]
+    "videos": []
   },
   "probability/probability-integral-transform": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Probability Integral Transform",
+        "title": "Wikipedia — Probability Integral Transform",
         "url": "https://en.wikipedia.org/wiki/Probability_integral_transform"
       },
       {
-        "title": "Brilliant \u2014 Inverse Transform Sampling",
+        "title": "Brilliant — Inverse Transform Sampling",
         "url": "https://brilliant.org/wiki/inverse-transform-sampling/"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 Simulation and Random Variables",
-        "url": "https://www.youtube.com/watch?v=nt63k3bfXS0"
-      }
-    ]
+    "videos": []
   },
   "probability/probit-function": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Probit",
+        "title": "Wikipedia — Probit",
         "url": "https://en.wikipedia.org/wiki/Probit"
       },
       {
-        "title": "Investopedia \u2014 Z-Score: Definition and How to Calculate",
+        "title": "Investopedia — Z-Score: Definition and How to Calculate",
         "url": "https://www.investopedia.com/terms/z/zscore.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Z-scores and Percentiles",
-        "url": "https://www.youtube.com/watch?v=uAxyI_XfqXk"
-      }
-    ]
+    "videos": []
   },
   "probability/standardised-normal-distribution-function": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Normal Distribution (Cumulative Distribution Function)",
+        "title": "Wikipedia — Normal Distribution (Cumulative Distribution Function)",
         "url": "https://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function"
       },
       {
-        "title": "Khan Academy \u2014 Normal Distribution and Z-scores",
+        "title": "Khan Academy — Normal Distribution and Z-scores",
         "url": "https://www.khanacademy.org/math/statistics-probability/modeling-distributions-of-data/z-scores/v/ck12-org-normal-distribution-problems-z-score"
       }
     ],
-    "videos": [
-      {
-        "title": "The Organic Chemistry Tutor \u2014 Standard Normal Distribution Tables",
-        "url": "https://www.youtube.com/watch?v=dOr0NKyD31Q"
-      }
-    ]
+    "videos": []
   },
   "probability/standardised-normal-variable": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Z-scores Introduction",
+        "title": "Khan Academy — Z-scores Introduction",
         "url": "https://www.khanacademy.org/math/statistics-probability/modeling-distributions-of-data/z-scores/v/ck12-org-normal-distribution-problems-z-score"
       },
       {
-        "title": "Wikipedia \u2014 Standard Score",
+        "title": "Wikipedia — Standard Score",
         "url": "https://en.wikipedia.org/wiki/Standard_score"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 The Normal Distribution, Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=rzFX5NWojp0"
-      },
-      {
-        "title": "The Organic Chemistry Tutor \u2014 Z-scores and Standard Normal Distribution",
-        "url": "https://www.youtube.com/watch?v=dOr0NKyD31Q"
-      }
-    ]
+    "videos": []
   },
   "probability/students-t-distribution": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Student's t-Distribution",
+        "title": "Khan Academy — Student's t-Distribution",
         "url": "https://www.khanacademy.org/math/ap-statistics/estimating-confidence-ap/one-sample-t-interval-mean/v/small-sample-hypothesis-test"
       },
       {
-        "title": "Wikipedia \u2014 Student's t-Distribution",
+        "title": "Wikipedia — Student's t-Distribution",
         "url": "https://en.wikipedia.org/wiki/Student%27s_t-distribution"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Student's t-Distribution",
-        "url": "https://www.youtube.com/watch?v=32CuxWdOlow"
-      },
-      {
-        "title": "Khan Academy \u2014 t-Distribution Explained",
-        "url": "https://www.youtube.com/watch?v=Uv6nGIgZMVw"
-      }
-    ]
+    "videos": []
   },
   "probability/tail-dependence": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Tail Dependence",
+        "title": "Wikipedia — Tail Dependence",
         "url": "https://en.wikipedia.org/wiki/Tail_dependence"
       },
       {
-        "title": "Investopedia \u2014 Tail Risk",
+        "title": "Investopedia — Tail Risk",
         "url": "https://www.investopedia.com/terms/t/tailrisk.asp"
       }
     ],
@@ -3008,47 +2749,50 @@
   "probability/uniform-distribution": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Continuous Uniform Distribution",
+        "title": "Wikipedia — Continuous Uniform Distribution",
         "url": "https://en.wikipedia.org/wiki/Continuous_uniform_distribution"
       },
       {
-        "title": "Wikipedia \u2014 Continuous Uniform Distribution",
+        "title": "Wikipedia — Continuous Uniform Distribution",
         "url": "https://en.wikipedia.org/wiki/Continuous_uniform_distribution"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Uniform Distribution",
-        "url": "https://www.youtube.com/watch?v=Fvi9A_tEmXQ"
-      }
-    ]
+    "videos": []
   },
   "probability/z-table": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Z-table for Proportion Below",
+        "title": "Khan Academy — Z-table for Proportion Below",
         "url": "https://www.khanacademy.org/math/statistics-probability/modeling-distributions-of-data/z-scores/v/ck12-org-normal-distribution-problems-z-score"
       },
       {
-        "title": "Wikipedia \u2014 Standard Normal Table",
+        "title": "Wikipedia — Standard Normal Table",
         "url": "https://en.wikipedia.org/wiki/Standard_normal_table"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "risk/backtesting": {
+    "websites": [
       {
-        "title": "The Organic Chemistry Tutor \u2014 How to Use the Z-Table",
-        "url": "https://www.youtube.com/watch?v=dOr0NKyD31Q"
+        "title": "Investopedia — Backtesting",
+        "url": "https://www.investopedia.com/terms/b/backtesting.asp"
+      },
+      {
+        "title": "Wikipedia — Backtesting",
+        "url": "https://en.wikipedia.org/wiki/Backtesting"
       }
-    ]
+    ],
+    "videos": []
   },
   "risk/coherent-risk-measure": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Coherent Risk Measure",
+        "title": "Wikipedia — Coherent Risk Measure",
         "url": "https://en.wikipedia.org/wiki/Coherent_risk_measure"
       },
       {
-        "title": "Investopedia \u2014 Expected Shortfall (CVaR)",
+        "title": "Investopedia — Expected Shortfall (CVaR)",
         "url": "https://www.investopedia.com/terms/c/conditional_value_at_risk.asp"
       }
     ],
@@ -3057,12 +2801,25 @@
   "risk/counterparty-credit-risk": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Counterparty Risk",
+        "title": "Investopedia — Counterparty Risk",
         "url": "https://www.investopedia.com/terms/c/counterpartyrisk.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Credit Valuation Adjustment (CVA)",
+        "title": "Corporate Finance Institute — Credit Valuation Adjustment (CVA)",
         "url": "https://corporatefinanceinstitute.com/resources/derivatives/credit-valuation-adjustment-cva/"
+      }
+    ],
+    "videos": []
+  },
+  "risk/counterparty-risk": {
+    "websites": [
+      {
+        "title": "Investopedia — Counterparty Risk",
+        "url": "https://www.investopedia.com/terms/c/counterpartyrisk.asp"
+      },
+      {
+        "title": "Wikipedia — Credit Valuation Adjustment",
+        "url": "https://en.wikipedia.org/wiki/Credit_valuation_adjustment"
       }
     ],
     "videos": []
@@ -3070,11 +2827,11 @@
   "risk/drawdown-duration": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Drawdown Duration",
+        "title": "Investopedia — Drawdown Duration",
         "url": "https://www.investopedia.com/terms/d/drawdown.asp"
       },
       {
-        "title": "Wikipedia \u2014 Drawdown (Economics)",
+        "title": "Wikipedia — Drawdown (Economics)",
         "url": "https://en.wikipedia.org/wiki/Drawdown_(economics)"
       }
     ],
@@ -3083,11 +2840,11 @@
   "risk/extreme-value-theory": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Extreme Value Theory",
+        "title": "Wikipedia — Extreme Value Theory",
         "url": "https://en.wikipedia.org/wiki/Extreme_value_theory"
       },
       {
-        "title": "Investopedia \u2014 Tail Risk",
+        "title": "Investopedia — Tail Risk",
         "url": "https://www.investopedia.com/terms/t/tailrisk.asp"
       }
     ],
@@ -3096,11 +2853,11 @@
   "risk/fire-sale": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Fire Sale",
+        "title": "Investopedia — Fire Sale",
         "url": "https://www.investopedia.com/terms/f/firesale.asp"
       },
       {
-        "title": "Wikipedia \u2014 Fire Sale (Finance)",
+        "title": "Wikipedia — Fire Sale (Finance)",
         "url": "https://en.wikipedia.org/wiki/Fire_sale"
       }
     ],
@@ -3109,7 +2866,7 @@
   "risk/liquidity-risk": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Liquidity Risk",
+        "title": "Investopedia — Liquidity Risk",
         "url": "https://www.investopedia.com/terms/l/liquidityrisk.asp"
       }
     ],
@@ -3118,11 +2875,11 @@
   "risk/margin-call": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Margin Call",
+        "title": "Investopedia — Margin Call",
         "url": "https://www.investopedia.com/terms/m/margincall.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Margin Call",
+        "title": "Corporate Finance Institute — Margin Call",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/margin-call/"
       }
     ],
@@ -3131,11 +2888,11 @@
   "risk/margin-requirements": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Margin Requirements",
+        "title": "Investopedia — Margin Requirements",
         "url": "https://www.investopedia.com/terms/m/maintenancemargin.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Initial Margin",
+        "title": "Corporate Finance Institute — Initial Margin",
         "url": "https://corporatefinanceinstitute.com/resources/derivatives/initial-margin/"
       }
     ],
@@ -3144,11 +2901,11 @@
   "risk/maximum-drawdown": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Maximum Drawdown",
+        "title": "Investopedia — Maximum Drawdown",
         "url": "https://www.investopedia.com/terms/m/maximum-drawdown-mdd.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Maximum Drawdown",
+        "title": "Corporate Finance Institute — Maximum Drawdown",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/risk-management/maximum-drawdown/"
       }
     ],
@@ -3157,52 +2914,73 @@
   "risk/model-limitations": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Model Risk",
+        "title": "Investopedia — Model Risk",
         "url": "https://www.investopedia.com/terms/m/modelrisk.asp"
       },
       {
-        "title": "Wikipedia \u2014 Model Risk",
+        "title": "Wikipedia — Model Risk",
         "url": "https://en.wikipedia.org/wiki/Model_risk"
       }
     ],
-    "videos": [
-      {
-        "title": "Patrick Boyle \u2014 When Models Fail",
-        "url": "https://www.youtube.com/watch?v=A5w-dEgIU1M"
-      }
-    ]
+    "videos": []
   },
   "risk/monte-carlo-simulation": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Monte Carlo Simulation",
+        "title": "Investopedia — Monte Carlo Simulation",
         "url": "https://www.investopedia.com/terms/m/montecarlosimulation.asp"
       },
       {
-        "title": "Wikipedia \u2014 Monte Carlo Method",
+        "title": "Wikipedia — Monte Carlo Method",
         "url": "https://en.wikipedia.org/wiki/Monte_Carlo_method"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "risk/pnl-attribution": {
+    "websites": [
       {
-        "title": "MIT OpenCourseWare \u2014 Monte Carlo Simulation",
-        "url": "https://www.youtube.com/watch?v=OgO1gpXSUzU"
+        "title": "Investopedia — Attribution Analysis",
+        "url": "https://www.investopedia.com/terms/a/attribution-analysis.asp"
+      }
+    ],
+    "videos": []
+  },
+  "risk/stress-testing": {
+    "websites": [
+      {
+        "title": "Investopedia — Stress Testing",
+        "url": "https://www.investopedia.com/terms/s/stresstesting.asp"
       },
       {
-        "title": "3Blue1Brown \u2014 Simulating Randomness",
-        "url": "https://www.youtube.com/watch?v=7ESK5SaP-bc"
+        "title": "Wikipedia — Stress Testing (Financial)",
+        "url": "https://en.wikipedia.org/wiki/Stress_test_(financial)"
       }
-    ]
+    ],
+    "videos": []
   },
   "risk/value-at-risk": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Value at Risk (VaR)",
+        "title": "Investopedia — Value at Risk (VaR)",
         "url": "https://www.investopedia.com/terms/v/var.asp"
       },
       {
-        "title": "Wikipedia \u2014 Value at Risk",
+        "title": "Wikipedia — Value at Risk",
         "url": "https://en.wikipedia.org/wiki/Value_at_risk"
+      }
+    ],
+    "videos": []
+  },
+  "risk/volatility-scaling": {
+    "websites": [
+      {
+        "title": "AQR — Volatility-Managed Portfolios",
+        "url": "https://www.aqr.com/insights/research/journal-article/volatility-managed-portfolios"
+      },
+      {
+        "title": "Investopedia — Volatility Targeting",
+        "url": "https://www.investopedia.com/terms/v/volatility.asp"
       }
     ],
     "videos": []
@@ -3210,11 +2988,11 @@
   "statistics/arch-model": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 ARCH Model",
+        "title": "Wikipedia — ARCH Model",
         "url": "https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity"
       },
       {
-        "title": "Investopedia \u2014 ARCH Models",
+        "title": "Investopedia — ARCH Models",
         "url": "https://www.investopedia.com/terms/a/autoregressive-conditional-heteroskedasticity.asp"
       }
     ],
@@ -3223,7 +3001,7 @@
   "statistics/augmented-dickey-fuller-test": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Augmented Dickey\u2013Fuller Test",
+        "title": "Wikipedia — Augmented Dickey–Fuller Test",
         "url": "https://en.wikipedia.org/wiki/Augmented_Dickey%E2%80%93Fuller_test"
       }
     ],
@@ -3232,33 +3010,24 @@
   "statistics/autocorrelation": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Autocorrelation",
+        "title": "Wikipedia — Autocorrelation",
         "url": "https://en.wikipedia.org/wiki/Autocorrelation"
       },
       {
-        "title": "Investopedia \u2014 Autocorrelation",
+        "title": "Investopedia — Autocorrelation",
         "url": "https://www.investopedia.com/terms/a/autocorrelation.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Autocorrelation Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=ZjaBn93YPWo"
-      },
-      {
-        "title": "Khan Academy \u2014 Autocorrelation and Partial Autocorrelation",
-        "url": "https://www.youtube.com/watch?v=DeORzP0go5I"
-      }
-    ]
+    "videos": []
   },
   "statistics/beta-estimation": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Beta: Definition and How to Calculate",
+        "title": "Investopedia — Beta: Definition and How to Calculate",
         "url": "https://www.investopedia.com/terms/b/beta.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Beta in Finance",
+        "title": "Corporate Finance Institute — Beta in Finance",
         "url": "https://corporatefinanceinstitute.com/resources/valuation/what-is-beta-guide/"
       }
     ],
@@ -3267,25 +3036,20 @@
   "statistics/central-limit-theorem": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Central Limit Theorem",
+        "title": "Khan Academy — Central Limit Theorem",
         "url": "https://www.khanacademy.org/math/ap-statistics/sampling-distribution-ap/what-is-sampling-distribution/v/central-limit-theorem"
       },
       {
-        "title": "Wikipedia \u2014 Central Limit Theorem",
+        "title": "Wikipedia — Central Limit Theorem",
         "url": "https://en.wikipedia.org/wiki/Central_limit_theorem"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 But What Is the Central Limit Theorem?",
-        "url": "https://www.youtube.com/watch?v=zeJD6dqJ5lo"
-      }
-    ]
+    "videos": []
   },
   "statistics/cointegration": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Cointegration",
+        "title": "Wikipedia — Cointegration",
         "url": "https://en.wikipedia.org/wiki/Cointegration"
       }
     ],
@@ -3294,77 +3058,63 @@
   "statistics/confidence-intervals": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Confidence Intervals",
+        "title": "Khan Academy — Confidence Intervals",
         "url": "https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample"
       },
       {
-        "title": "Wikipedia \u2014 Confidence Interval",
+        "title": "Wikipedia — Confidence Interval",
         "url": "https://en.wikipedia.org/wiki/Confidence_interval"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Confidence Intervals",
-        "url": "https://www.youtube.com/watch?v=TqOeMYtOc1w"
-      },
-      {
-        "title": "Khan Academy \u2014 Confidence Interval for a Mean",
-        "url": "https://www.youtube.com/watch?v=hlM7zdf7zwU"
-      }
-    ]
+    "videos": []
   },
   "statistics/correlation": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Correlation Coefficient",
+        "title": "Khan Academy — Correlation Coefficient",
         "url": "https://www.khanacademy.org/math/ap-statistics/bivariate-data-ap/correlation-coefficient-r/v/correlation-coefficient-intuition-examples"
       },
       {
-        "title": "Investopedia \u2014 Correlation",
+        "title": "Investopedia — Correlation",
         "url": "https://www.investopedia.com/terms/c/correlation.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Pearson Correlation",
-        "url": "https://www.youtube.com/watch?v=xZ_z8KWkhXE"
-      },
-      {
-        "title": "Khan Academy \u2014 Correlation and Causality",
-        "url": "https://www.youtube.com/watch?v=-Y-M9aD_ccQ"
-      }
-    ]
+    "videos": []
   },
   "statistics/covariance": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Covariance",
+        "title": "Khan Academy — Covariance",
         "url": "https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/more-on-regression/v/covariance-and-the-regression-line"
       },
       {
-        "title": "Investopedia \u2014 Covariance",
+        "title": "Investopedia — Covariance",
         "url": "https://www.investopedia.com/terms/c/covariance.asp"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "statistics/data-snooping-bias": {
+    "websites": [
       {
-        "title": "StatQuest \u2014 Covariance Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=qtaqvPAeEJY"
+        "title": "Wikipedia — Data Dredging",
+        "url": "https://en.wikipedia.org/wiki/Data_dredging"
       },
       {
-        "title": "Khan Academy \u2014 Covariance and the Regression Line",
-        "url": "https://www.youtube.com/watch?v=xGbpuFNR1ME"
+        "title": "Investopedia — Data Snooping Bias",
+        "url": "https://www.investopedia.com/terms/d/data-snooping-bias.asp"
       }
-    ]
+    ],
+    "videos": []
   },
   "statistics/egarch-model": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 EGARCH",
+        "title": "Wikipedia — EGARCH",
         "url": "https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity#EGARCH"
       },
       {
-        "title": "Investopedia \u2014 GARCH Models (EGARCH Variant)",
+        "title": "Investopedia — GARCH Models (EGARCH Variant)",
         "url": "https://www.investopedia.com/terms/g/garch.asp"
       }
     ],
@@ -3373,65 +3123,50 @@
   "statistics/estimating-parameters": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Estimating Parameters",
+        "title": "Khan Academy — Estimating Parameters",
         "url": "https://www.khanacademy.org/math/ap-statistics/estimating-confidence-ap"
       },
       {
-        "title": "Wikipedia \u2014 Estimation Theory",
+        "title": "Wikipedia — Estimation Theory",
         "url": "https://en.wikipedia.org/wiki/Estimation_theory"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Maximum Likelihood Estimation",
-        "url": "https://www.youtube.com/watch?v=XepXtl9YKwc"
-      }
-    ]
+    "videos": []
   },
   "statistics/ewma-volatility": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Exponentially Weighted Moving Average",
+        "title": "Investopedia — Exponentially Weighted Moving Average",
         "url": "https://www.investopedia.com/articles/07/ewma.asp"
       },
       {
-        "title": "Wikipedia \u2014 EWMA Chart",
+        "title": "Wikipedia — EWMA Chart",
         "url": "https://en.wikipedia.org/wiki/EWMA_chart"
       }
     ],
-    "videos": [
-      {
-        "title": "ritvikmath \u2014 Exponential Smoothing",
-        "url": "https://www.youtube.com/watch?v=k_HN0wOKDd0"
-      }
-    ]
+    "videos": []
   },
   "statistics/factor-models": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Factor Analysis",
+        "title": "Wikipedia — Factor Analysis",
         "url": "https://en.wikipedia.org/wiki/Factor_analysis"
       },
       {
-        "title": "Investopedia \u2014 Factor Models",
+        "title": "Investopedia — Factor Models",
         "url": "https://www.investopedia.com/terms/m/multifactor-model.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "Ben Felix \u2014 Factor Investing",
-        "url": "https://www.youtube.com/watch?v=jKWbW7Wgm0w"
-      }
-    ]
+    "videos": []
   },
   "statistics/garch-model": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 GARCH",
+        "title": "Wikipedia — GARCH",
         "url": "https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity#GARCH"
       },
       {
-        "title": "Investopedia \u2014 GARCH Process",
+        "title": "Investopedia — GARCH Process",
         "url": "https://www.investopedia.com/terms/g/garch.asp"
       }
     ],
@@ -3440,131 +3175,111 @@
   "statistics/hypothesis-testing": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Hypothesis Testing",
+        "title": "Khan Academy — Hypothesis Testing",
         "url": "https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample"
       },
       {
-        "title": "Investopedia \u2014 Hypothesis Testing",
+        "title": "Investopedia — Hypothesis Testing",
         "url": "https://www.investopedia.com/terms/h/hypothesistesting.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Hypothesis Testing and p-values",
-        "url": "https://www.youtube.com/watch?v=0oc49DyA3hU"
-      },
-      {
-        "title": "Khan Academy \u2014 Idea Behind Hypothesis Testing",
-        "url": "https://www.youtube.com/watch?v=-FtlH4svqx4"
-      }
-    ]
+    "videos": []
   },
   "statistics/jarque-bera-test": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Jarque-Bera Test",
+        "title": "Wikipedia — Jarque-Bera Test",
         "url": "https://en.wikipedia.org/wiki/Jarque%E2%80%93Bera_test"
       },
       {
-        "title": "Investopedia \u2014 Kurtosis",
+        "title": "Investopedia — Kurtosis",
         "url": "https://www.investopedia.com/terms/k/kurtosis.asp"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "statistics/kalman-filter": {
+    "websites": [
       {
-        "title": "Khan Academy \u2014 Normality Tests and Skewness",
-        "url": "https://www.youtube.com/watch?v=uhxtUt_-GyM"
+        "title": "Wikipedia — Kalman Filter",
+        "url": "https://en.wikipedia.org/wiki/Kalman_filter"
+      },
+      {
+        "title": "Investopedia — Kalman Filter in Finance",
+        "url": "https://www.investopedia.com/terms/k/kalmanfilter.asp"
       }
-    ]
+    ],
+    "videos": []
   },
   "statistics/kurtosis": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Kurtosis",
+        "title": "Investopedia — Kurtosis",
         "url": "https://www.investopedia.com/terms/k/kurtosis.asp"
       },
       {
-        "title": "Wikipedia \u2014 Kurtosis",
+        "title": "Wikipedia — Kurtosis",
         "url": "https://en.wikipedia.org/wiki/Kurtosis"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Comparing Distributions with Dot Plots",
-        "url": "https://www.youtube.com/watch?v=HMkllhBI91Y"
-      }
-    ]
+    "videos": []
   },
   "statistics/mahalanobis-distance": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Mahalanobis Distance",
+        "title": "Wikipedia — Mahalanobis Distance",
         "url": "https://en.wikipedia.org/wiki/Mahalanobis_distance"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Mahalanobis Distance, Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=3IdvoI8O9hU"
-      },
-      {
-        "title": "Normalized Nerd \u2014 Mahalanobis Distance Explained",
-        "url": "https://www.youtube.com/watch?v=spNpfmWZBmg"
-      }
-    ]
+    "videos": []
   },
   "statistics/multiple-testing-correction": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Multiple Comparisons Problem",
+        "title": "Wikipedia — Multiple Comparisons Problem",
         "url": "https://en.wikipedia.org/wiki/Multiple_comparisons_problem"
       },
       {
-        "title": "Investopedia \u2014 Data Mining and Backtesting Pitfalls",
+        "title": "Investopedia — Data Mining and Backtesting Pitfalls",
         "url": "https://www.investopedia.com/terms/d/datamining.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 False Discovery Rates",
-        "url": "https://www.youtube.com/watch?v=K8LQSvtjcEo"
-      },
-      {
-        "title": "StatQuest \u2014 Multiple Testing Correction",
-        "url": "https://www.youtube.com/watch?v=rZKa4tW2NKs"
-      }
-    ]
+    "videos": []
   },
   "statistics/ordinary-least-squares-regression": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Ordinary Least Squares",
+        "title": "Wikipedia — Ordinary Least Squares",
         "url": "https://en.wikipedia.org/wiki/Ordinary_least_squares"
       },
       {
-        "title": "Khan Academy \u2014 Linear Regression",
+        "title": "Khan Academy — Linear Regression",
         "url": "https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/more-on-regression/v/regression-line-example"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "statistics/overfitting": {
+    "websites": [
       {
-        "title": "StatQuest \u2014 Linear Regression Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=nk2CQITm_eo"
+        "title": "Investopedia — Overfitting",
+        "url": "https://www.investopedia.com/terms/o/overfitting.asp"
       },
       {
-        "title": "Khan Academy \u2014 Least Squares Regression",
-        "url": "https://www.youtube.com/watch?v=GAmzwIkGFgE"
+        "title": "Wikipedia — Overfitting",
+        "url": "https://en.wikipedia.org/wiki/Overfitting"
       }
-    ]
+    ],
+    "videos": []
   },
   "statistics/portfolio-variance": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Portfolio Variance",
+        "title": "Investopedia — Portfolio Variance",
         "url": "https://www.investopedia.com/terms/p/portfolio-variance.asp"
       },
       {
-        "title": "Corporate Finance Institute \u2014 Portfolio Variance",
+        "title": "Corporate Finance Institute — Portfolio Variance",
         "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/portfolio-variance/"
       }
     ],
@@ -3573,57 +3288,47 @@
   "statistics/principal-component-analysis": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Principal Component Analysis",
+        "title": "Wikipedia — Principal Component Analysis",
         "url": "https://en.wikipedia.org/wiki/Principal_component_analysis"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 PCA Step-by-Step",
-        "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ"
-      }
-    ]
+    "videos": []
   },
   "statistics/qq-plot": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Q\u2013Q Plot",
+        "title": "Wikipedia — Q–Q Plot",
         "url": "https://en.wikipedia.org/wiki/Q%E2%80%93Q_plot"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "statistics/regime-switching": {
+    "websites": [
       {
-        "title": "StatQuest \u2014 Quantile-Quantile Plots (QQ plots), Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=okjYjClSjOg"
+        "title": "Wikipedia — Hidden Markov Model",
+        "url": "https://en.wikipedia.org/wiki/Hidden_Markov_model"
       }
-    ]
+    ],
+    "videos": []
   },
   "statistics/scaling-mean-with-time": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Random Walk",
+        "title": "Wikipedia — Random Walk",
         "url": "https://en.wikipedia.org/wiki/Random_walk"
       },
       {
-        "title": "Investopedia \u2014 Annualised Return",
+        "title": "Investopedia — Annualised Return",
         "url": "https://www.investopedia.com/terms/a/annualized-total-return.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Expected Value and Variance",
-        "url": "https://www.youtube.com/watch?v=j__Kredt7vY"
-      },
-      {
-        "title": "MIT OpenCourseWare \u2014 Random Walks and Diffusion",
-        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
-      }
-    ]
+    "videos": []
   },
   "statistics/shrinkage-estimators": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Shrinkage Estimator",
+        "title": "Wikipedia — Shrinkage Estimator",
         "url": "https://en.wikipedia.org/wiki/Shrinkage_(statistics)"
       }
     ],
@@ -3632,135 +3337,102 @@
   "statistics/skewness": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Skewness",
+        "title": "Wikipedia — Skewness",
         "url": "https://en.wikipedia.org/wiki/Skewness"
       },
       {
-        "title": "Investopedia \u2014 Skewness",
+        "title": "Investopedia — Skewness",
         "url": "https://www.investopedia.com/terms/s/skewness.asp"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Skewness and Kurtosis",
-        "url": "https://www.youtube.com/watch?v=XSSRrVMOqlQ"
-      },
-      {
-        "title": "Khan Academy \u2014 Mean, Median and Skew",
-        "url": "https://www.youtube.com/watch?v=GrynkZB3E7M"
-      }
-    ]
+    "videos": []
   },
   "statistics/square-root-rule": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Volatility and the Square Root of Time",
+        "title": "Wikipedia — Volatility and the Square Root of Time",
         "url": "https://en.wikipedia.org/wiki/Volatility_(finance)"
       },
       {
-        "title": "Wikipedia \u2014 Volatility (finance)",
+        "title": "Wikipedia — Volatility (finance)",
         "url": "https://en.wikipedia.org/wiki/Volatility_(finance)"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Variance of Sum of Random Variables",
-        "url": "https://www.youtube.com/watch?v=j__Kredt7vY"
-      }
-    ]
+    "videos": []
   },
   "statistics/statistical-properties-of-returns": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Statistical Properties of Returns",
+        "title": "Investopedia — Statistical Properties of Returns",
         "url": "https://www.investopedia.com/terms/h/historicalvolatility.asp"
       },
       {
-        "title": "Wikipedia \u2014 Financial Returns",
+        "title": "Wikipedia — Financial Returns",
         "url": "https://en.wikipedia.org/wiki/Rate_of_return"
       }
     ],
-    "videos": [
+    "videos": []
+  },
+  "statistics/survivorship-bias": {
+    "websites": [
       {
-        "title": "Khan Academy \u2014 Describing Distributions",
-        "url": "https://www.youtube.com/watch?v=uhxtUt_-GyM"
+        "title": "Investopedia — Survivorship Bias",
+        "url": "https://www.investopedia.com/terms/s/survivorshipbias.asp"
+      },
+      {
+        "title": "Wikipedia — Survivorship Bias",
+        "url": "https://en.wikipedia.org/wiki/Survivorship_bias"
       }
-    ]
+    ],
+    "videos": []
   },
   "statistics/t-test": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 One-Sample t-Test",
+        "title": "Khan Academy — One-Sample t-Test",
         "url": "https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample/tests-about-a-mean/v/one-sample-t-test"
       },
       {
-        "title": "Wikipedia \u2014 Student\u2019s t-Test",
+        "title": "Wikipedia — Student’s t-Test",
         "url": "https://en.wikipedia.org/wiki/Student%27s_t-test"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 t-Tests Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=0Pd3dc1GcHc"
-      },
-      {
-        "title": "Khan Academy \u2014 Hypothesis Test for a Mean",
-        "url": "https://www.youtube.com/watch?v=D2sMsmL0ScQ"
-      }
-    ]
+    "videos": []
   },
   "statistics/type-i-and-type-ii-error": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Type I and Type II Errors",
+        "title": "Khan Academy — Type I and Type II Errors",
         "url": "https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample/error-probabilities-and-power/a/introduction-to-type-i-and-type-ii-errors"
       },
       {
-        "title": "Wikipedia \u2014 Type I and Type II Errors",
+        "title": "Wikipedia — Type I and Type II Errors",
         "url": "https://en.wikipedia.org/wiki/Type_I_and_type_II_errors"
       }
     ],
-    "videos": [
-      {
-        "title": "StatQuest \u2014 Type I and Type II Errors",
-        "url": "https://www.youtube.com/watch?v=Hdbbx7DIweQ"
-      },
-      {
-        "title": "Khan Academy \u2014 Type I Errors",
-        "url": "https://www.youtube.com/watch?v=EowIec7Y8HM"
-      }
-    ]
+    "videos": []
   },
   "statistics/variance-and-standard-deviation": {
     "websites": [
       {
-        "title": "Khan Academy \u2014 Variance and Standard Deviation",
+        "title": "Khan Academy — Variance and Standard Deviation",
         "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-population/v/range-variance-and-standard-deviation-as-measures-of-dispersion"
       },
       {
-        "title": "Math is Fun \u2014 Standard Deviation and Variance",
+        "title": "Math is Fun — Standard Deviation and Variance",
         "url": "https://www.mathsisfun.com/data/standard-deviation.html"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Variance and Standard Deviation",
-        "url": "https://www.youtube.com/watch?v=E4HAYd0QnRc"
-      },
-      {
-        "title": "StatQuest \u2014 Standard Deviation",
-        "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY"
-      }
-    ]
+    "videos": []
   },
   "statistics/volatility-clustering": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Volatility Clustering",
+        "title": "Investopedia — Volatility Clustering",
         "url": "https://www.investopedia.com/terms/v/volatility.asp"
       },
       {
-        "title": "Wikipedia \u2014 Volatility Clustering",
+        "title": "Wikipedia — Volatility Clustering",
         "url": "https://en.wikipedia.org/wiki/Volatility_clustering"
       }
     ],
@@ -3769,11 +3441,11 @@
   "stochastic-processes/backward-kolmogorov-equation": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Kolmogorov Backward Equations",
+        "title": "Wikipedia — Kolmogorov Backward Equations",
         "url": "https://en.wikipedia.org/wiki/Kolmogorov_backward_equations_(diffusion)"
       },
       {
-        "title": "QuantStart \u2014 Deriving the Black-Scholes Equation",
+        "title": "QuantStart — Deriving the Black-Scholes Equation",
         "url": "https://www.quantstart.com/articles/Deriving-the-Black-Scholes-Equation/"
       }
     ],
@@ -3782,117 +3454,76 @@
   "stochastic-processes/brownian-motion": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Brownian Motion",
+        "title": "Wikipedia — Brownian Motion",
         "url": "https://en.wikipedia.org/wiki/Brownian_motion"
       },
       {
-        "title": "Brilliant \u2014 Brownian Motion",
+        "title": "Brilliant — Brownian Motion",
         "url": "https://brilliant.org/wiki/brownian-motion/"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 Random Walks",
-        "url": "https://www.youtube.com/watch?v=7ESK5SaP-bc"
-      },
-      {
-        "title": "MIT OpenCourseWare \u2014 Brownian Motion",
-        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/diffusion-coefficient": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Diffusion Process",
+        "title": "Wikipedia — Diffusion Process",
         "url": "https://en.wikipedia.org/wiki/Diffusion_process"
       },
       {
-        "title": "Wikipedia \u2014 It\u00f4 Diffusion",
+        "title": "Wikipedia — Itô Diffusion",
         "url": "https://en.wikipedia.org/wiki/It%C3%B4_diffusion"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 Drift and Diffusion",
-        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
-      },
-      {
-        "title": "Steve Brunton \u2014 Stochastic Differential Equations",
-        "url": "https://www.youtube.com/watch?v=qdbkvD4N-us"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/discrete-random-walk": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Random Walk",
+        "title": "Wikipedia — Random Walk",
         "url": "https://en.wikipedia.org/wiki/Random_walk"
       },
       {
-        "title": "Brilliant \u2014 Random Walks",
+        "title": "Brilliant — Random Walks",
         "url": "https://brilliant.org/wiki/random-walks/"
       }
     ],
-    "videos": [
-      {
-        "title": "Khan Academy \u2014 Random Walks",
-        "url": "https://www.youtube.com/watch?v=stgYW6M5o4k"
-      },
-      {
-        "title": "Numberphile \u2014 Random Walks",
-        "url": "https://www.youtube.com/watch?v=iH2kATv49rc"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/drift-and-volatility": {
     "websites": [
       {
-        "title": "Investopedia \u2014 Volatility",
+        "title": "Investopedia — Volatility",
         "url": "https://www.investopedia.com/terms/v/volatility.asp"
       },
       {
-        "title": "Wikipedia \u2014 Geometric Brownian Motion",
+        "title": "Wikipedia — Geometric Brownian Motion",
         "url": "https://en.wikipedia.org/wiki/Geometric_Brownian_motion"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 Drift and Diffusion",
-        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/drift-coefficient": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Stochastic Differential Equation",
+        "title": "Wikipedia — Stochastic Differential Equation",
         "url": "https://en.wikipedia.org/wiki/Stochastic_differential_equation"
       },
       {
-        "title": "Wikipedia \u2014 Girsanov Theorem",
+        "title": "Wikipedia — Girsanov Theorem",
         "url": "https://en.wikipedia.org/wiki/Girsanov_theorem"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 Drift and Diffusion",
-        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
-      },
-      {
-        "title": "Steve Brunton \u2014 Stochastic Differential Equations",
-        "url": "https://www.youtube.com/watch?v=qdbkvD4N-us"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/equivalent-probability-measures": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Absolute Continuity",
+        "title": "Wikipedia — Absolute Continuity",
         "url": "https://en.wikipedia.org/wiki/Absolute_continuity#Absolute_continuity_of_measures"
       },
       {
-        "title": "Wikipedia \u2014 Fundamental Theorem of Asset Pricing",
+        "title": "Wikipedia — Fundamental Theorem of Asset Pricing",
         "url": "https://en.wikipedia.org/wiki/Fundamental_theorem_of_asset_pricing"
       }
     ],
@@ -3901,7 +3532,7 @@
   "stochastic-processes/exponential-martingale": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Dol\u00e9ans-Dade Exponential",
+        "title": "Wikipedia — Doléans-Dade Exponential",
         "url": "https://en.wikipedia.org/wiki/Dol%C3%A9ans-Dade_exponential"
       }
     ],
@@ -3910,83 +3541,59 @@
   "stochastic-processes/feynman-kac-formula": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Feynman\u2013Kac Formula",
+        "title": "Wikipedia — Feynman–Kac Formula",
         "url": "https://en.wikipedia.org/wiki/Feynman%E2%80%93Kac_formula"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 Stochastic Calculus and PDEs",
-        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/fokker-planck-equation": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Fokker-Planck Equation",
+        "title": "Wikipedia — Fokker-Planck Equation",
         "url": "https://en.wikipedia.org/wiki/Fokker%E2%80%93Planck_equation"
       },
       {
-        "title": "Wikipedia \u2014 Kolmogorov Forward Equation",
+        "title": "Wikipedia — Kolmogorov Forward Equation",
         "url": "https://en.wikipedia.org/wiki/Kolmogorov_equations"
       }
     ],
-    "videos": [
-      {
-        "title": "Steve Brunton \u2014 Fokker-Planck Equation",
-        "url": "https://www.youtube.com/watch?v=8idr1WZ1A7Q"
-      },
-      {
-        "title": "MIT OpenCourseWare \u2014 Diffusion and the Fokker-Planck Equation",
-        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/gaussian-transition-density": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Heat Kernel",
+        "title": "Wikipedia — Heat Kernel",
         "url": "https://en.wikipedia.org/wiki/Heat_kernel"
       },
       {
-        "title": "Wikipedia \u2014 Transition Rate Matrix (Continuous-Time Markov Processes)",
+        "title": "Wikipedia — Transition Rate Matrix (Continuous-Time Markov Processes)",
         "url": "https://en.wikipedia.org/wiki/Continuous-time_Markov_chain#Transition_rate_matrix"
       }
     ],
-    "videos": [
-      {
-        "title": "Steve Brunton \u2014 Diffusion Equation and Fundamental Solutions",
-        "url": "https://www.youtube.com/watch?v=a3V0BJLIo_c"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/geometric-brownian-motion": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Geometric Brownian Motion",
+        "title": "Wikipedia — Geometric Brownian Motion",
         "url": "https://en.wikipedia.org/wiki/Geometric_Brownian_motion"
       },
       {
-        "title": "Wikipedia \u2014 Geometric Brownian Motion",
+        "title": "Wikipedia — Geometric Brownian Motion",
         "url": "https://en.wikipedia.org/wiki/Geometric_Brownian_motion"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 Stochastic Processes in Finance",
-        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/girsanov-theorem": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Girsanov Theorem",
+        "title": "Wikipedia — Girsanov Theorem",
         "url": "https://en.wikipedia.org/wiki/Girsanov_theorem"
       },
       {
-        "title": "Investopedia \u2014 Risk-Neutral Measure",
+        "title": "Investopedia — Risk-Neutral Measure",
         "url": "https://www.investopedia.com/terms/r/risk-neutral-measures.asp"
       }
     ],
@@ -3995,11 +3602,11 @@
   "stochastic-processes/growth-vs-volatility-timescales": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Geometric Brownian Motion",
+        "title": "Wikipedia — Geometric Brownian Motion",
         "url": "https://en.wikipedia.org/wiki/Geometric_Brownian_motion"
       },
       {
-        "title": "Investopedia \u2014 Volatility Drag",
+        "title": "Investopedia — Volatility Drag",
         "url": "https://www.investopedia.com/terms/v/volatility.asp"
       }
     ],
@@ -4008,11 +3615,11 @@
   "stochastic-processes/ito-integral": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 It\u00f4 Calculus",
+        "title": "Wikipedia — Itô Calculus",
         "url": "https://en.wikipedia.org/wiki/It%C3%B4_calculus"
       },
       {
-        "title": "Wikipedia \u2014 It\u00f4 Integral",
+        "title": "Wikipedia — Itô Integral",
         "url": "https://en.wikipedia.org/wiki/It%C3%B4_calculus#Integration_with_respect_to_stochastic_processes"
       }
     ],
@@ -4021,11 +3628,11 @@
   "stochastic-processes/ito-isometry": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 It\u00f4 Isometry",
+        "title": "Wikipedia — Itô Isometry",
         "url": "https://en.wikipedia.org/wiki/It%C3%B4_isometry"
       },
       {
-        "title": "Wikipedia \u2014 Stochastic Integral Properties",
+        "title": "Wikipedia — Stochastic Integral Properties",
         "url": "https://en.wikipedia.org/wiki/It%C3%B4_calculus#Properties"
       }
     ],
@@ -4034,11 +3641,11 @@
   "stochastic-processes/ito-product-rule": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 It\u00f4\u2019s Lemma: Product Rule",
+        "title": "Wikipedia — Itô’s Lemma: Product Rule",
         "url": "https://en.wikipedia.org/wiki/It%C3%B4%27s_lemma"
       },
       {
-        "title": "Wikipedia \u2014 Quadratic Variation",
+        "title": "Wikipedia — Quadratic Variation",
         "url": "https://en.wikipedia.org/wiki/Quadratic_variation"
       }
     ],
@@ -4047,25 +3654,20 @@
   "stochastic-processes/itos-lemma": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 It\u00f4's Lemma",
+        "title": "Wikipedia — Itô's Lemma",
         "url": "https://en.wikipedia.org/wiki/It%C3%B4%27s_lemma"
       },
       {
-        "title": "Wikipedia \u2014 It\u00f4's Lemma",
+        "title": "Wikipedia — Itô's Lemma",
         "url": "https://en.wikipedia.org/wiki/It%C3%B4%27s_lemma"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 It\u00f4 Calculus",
-        "url": "https://www.youtube.com/watch?v=Z5yRMMVUC5w"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/levys-characterisation": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Brownian Motion: Characterisations",
+        "title": "Wikipedia — Brownian Motion: Characterisations",
         "url": "https://en.wikipedia.org/wiki/Brownian_motion#Characterizations_of_Brownian_motion"
       }
     ],
@@ -4074,33 +3676,24 @@
   "stochastic-processes/markov-property": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Markov Property",
+        "title": "Wikipedia — Markov Property",
         "url": "https://en.wikipedia.org/wiki/Markov_property"
       },
       {
-        "title": "Brilliant \u2014 Markov Chains",
+        "title": "Brilliant — Markov Chains",
         "url": "https://brilliant.org/wiki/markov-chains/"
       }
     ],
-    "videos": [
-      {
-        "title": "3Blue1Brown \u2014 But what is a Markov Chain?",
-        "url": "https://www.youtube.com/watch?v=i3AkTO9HLXo"
-      },
-      {
-        "title": "StatQuest \u2014 Markov Chains Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=i3AkTO9HLXo"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/martingale-representation-theorem": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Martingale Representation Theorem",
+        "title": "Wikipedia — Martingale Representation Theorem",
         "url": "https://en.wikipedia.org/wiki/Martingale_representation_theorem"
       },
       {
-        "title": "Wikipedia \u2014 Complete Market",
+        "title": "Wikipedia — Complete Market",
         "url": "https://en.wikipedia.org/wiki/Complete_market"
       }
     ],
@@ -4109,33 +3702,24 @@
   "stochastic-processes/martingales": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Martingale (probability theory)",
+        "title": "Wikipedia — Martingale (probability theory)",
         "url": "https://en.wikipedia.org/wiki/Martingale_(probability_theory)"
       },
       {
-        "title": "Wikipedia \u2014 Martingale (probability theory)",
+        "title": "Wikipedia — Martingale (probability theory)",
         "url": "https://en.wikipedia.org/wiki/Martingale_(probability_theory)"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 Martingale Theory",
-        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
-      },
-      {
-        "title": "Numberphile \u2014 The Martingale Strategy",
-        "url": "https://www.youtube.com/watch?v=zTsRGQj6VT4"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/mean-reversion": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Ornstein\u2013Uhlenbeck Process",
+        "title": "Wikipedia — Ornstein–Uhlenbeck Process",
         "url": "https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process"
       },
       {
-        "title": "Investopedia \u2014 Mean Reversion",
+        "title": "Investopedia — Mean Reversion",
         "url": "https://www.investopedia.com/terms/m/meanreversion.asp"
       }
     ],
@@ -4144,11 +3728,11 @@
   "stochastic-processes/novikov-condition": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Novikov\u2019s Condition",
+        "title": "Wikipedia — Novikov’s Condition",
         "url": "https://en.wikipedia.org/wiki/Novikov%27s_condition"
       },
       {
-        "title": "Wikipedia \u2014 Local Martingale",
+        "title": "Wikipedia — Local Martingale",
         "url": "https://en.wikipedia.org/wiki/Local_martingale"
       }
     ],
@@ -4157,7 +3741,7 @@
   "stochastic-processes/optional-stopping-theorem": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Optional Stopping Theorem",
+        "title": "Wikipedia — Optional Stopping Theorem",
         "url": "https://en.wikipedia.org/wiki/Optional_stopping_theorem"
       }
     ],
@@ -4166,25 +3750,20 @@
   "stochastic-processes/ornstein-uhlenbeck-process": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Ornstein\u2013Uhlenbeck Process",
+        "title": "Wikipedia — Ornstein–Uhlenbeck Process",
         "url": "https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 Mean Reverting Processes",
-        "url": "https://www.youtube.com/watch?v=PPl-7_RL0Ko"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/radon-nikodym-derivative": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Radon\u2013Nikodym Theorem",
+        "title": "Wikipedia — Radon–Nikodym Theorem",
         "url": "https://en.wikipedia.org/wiki/Radon%E2%80%93Nikodym_theorem"
       },
       {
-        "title": "Wikipedia \u2014 Change of Measure",
+        "title": "Wikipedia — Change of Measure",
         "url": "https://en.wikipedia.org/wiki/Girsanov_theorem#Statement"
       }
     ],
@@ -4193,33 +3772,24 @@
   "stochastic-processes/stochastic-differential-equation": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Stochastic Differential Equation",
+        "title": "Wikipedia — Stochastic Differential Equation",
         "url": "https://en.wikipedia.org/wiki/Stochastic_differential_equation"
       },
       {
-        "title": "Wikipedia \u2014 Stochastic Differential Equation",
+        "title": "Wikipedia — Stochastic Differential Equation",
         "url": "https://en.wikipedia.org/wiki/Stochastic_differential_equation"
       }
     ],
-    "videos": [
-      {
-        "title": "MIT OpenCourseWare \u2014 Stochastic Differential Equations",
-        "url": "https://www.youtube.com/watch?v=Z5yRMMVUC5w"
-      },
-      {
-        "title": "Steve Brunton \u2014 Stochastic Differential Equations",
-        "url": "https://www.youtube.com/watch?v=qdbkvD4N-us"
-      }
-    ]
+    "videos": []
   },
   "stochastic-processes/submartingales-and-supermartingales": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Martingale: Submartingales and Supermartingales",
+        "title": "Wikipedia — Martingale: Submartingales and Supermartingales",
         "url": "https://en.wikipedia.org/wiki/Martingale_(probability_theory)#Submartingales,_supermartingales,_and_relationship_to_harmonic_functions"
       },
       {
-        "title": "Wikipedia \u2014 Doob\u2019s Martingale Inequality",
+        "title": "Wikipedia — Doob’s Martingale Inequality",
         "url": "https://en.wikipedia.org/wiki/Doob%27s_martingale_inequality"
       }
     ],
@@ -4228,7 +3798,7 @@
   "stochastic-processes/tower-property": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Law of Total Expectation",
+        "title": "Wikipedia — Law of Total Expectation",
         "url": "https://en.wikipedia.org/wiki/Law_of_total_expectation"
       }
     ],
@@ -4237,7 +3807,7 @@
   "stochastic-processes/transition-probability-density": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Transition Rate Matrix and Transition Densities",
+        "title": "Wikipedia — Transition Rate Matrix and Transition Densities",
         "url": "https://en.wikipedia.org/wiki/Kolmogorov_equations"
       }
     ],
@@ -4246,7 +3816,7 @@
   "stochastic-processes/trinomial-random-walk": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Trinomial Tree",
+        "title": "Wikipedia — Trinomial Tree",
         "url": "https://en.wikipedia.org/wiki/Trinomial_tree"
       }
     ],
@@ -4255,11 +3825,11 @@
   "stochastic-processes/vasicek-model": {
     "websites": [
       {
-        "title": "Wikipedia \u2014 Vasicek Model",
+        "title": "Wikipedia — Vasicek Model",
         "url": "https://en.wikipedia.org/wiki/Vasicek_model"
       },
       {
-        "title": "Investopedia \u2014 Vasicek Interest Rate Model",
+        "title": "Investopedia — Vasicek Interest Rate Model",
         "url": "https://www.investopedia.com/terms/v/vasicek-model.asp"
       }
     ],
