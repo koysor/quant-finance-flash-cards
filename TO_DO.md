@@ -35,7 +35,7 @@
 | Alexander, CO 2001 Market Models. John Wiley & Sons | No |
 | American Stock Exchange | No |
 | American exercise | No |
-| American option | No |
+| American option | Yes |
 | American options | No |
 | Amram, M & Kulatilaka, N 1999 Real Options. Harvard Business School Press | No |
 | Analysts | No |
@@ -87,7 +87,7 @@
 | Bernstein PL 1998 Against the Gods. John Wiley & Sons | No |
 | Berrahoui, M 2004 Pricing CMS spread options and digital CMS spread options with a | No |
 | Bhamra, HS 2000 Imitation in ﬁnancial markets. Int. J. Theor. Appl. Fin. | No |
-| Black | No |
+| Black | Yes |
 | Black & Karasinski model | No |
 | Black F 1976 The pricing of commodity contracts. Journal of Financial Economics | No |
 | Black, Derman & Toy (BDT) model | No |
@@ -184,7 +184,7 @@
 | Davis, MHA, Panas, VG & Zariphopoulou, T 1993 European option pricing with | No |
 | December 2002, January 2003) | No |
 | Demeterﬁ, K, Derman, E, Kamal, M & Zou, J 1999 Everything you ever wanted to know | No |
-| Derivatives | No |
+| Derivatives | Yes |
 | Derivatives Week (June) | No |
 | Derivatives. (Konishi, A & Dattatreya, RE eds) Irwin | No |
 | Derivatives. John Wiley & Sons | No |
@@ -257,7 +257,7 @@
 | European exercise | No |
 | European government | No |
 | European government bonds | No |
-| European option | No |
+| European option | Yes |
 | Exposure 5 www.netexposure.co.uk | No |
 | Extreme Value Theory | Yes |
 | FLEX (FLexible EXchange-traded options) | No |
@@ -268,8 +268,8 @@
 | Farrell, JL Jr 1997 Portfolio Management. McGraw-Hill | No |
 | Faure sequence | No |
 | Fibonacci series | No |
-| Fin. | No |
-| Finance | No |
+| Fin. | Yes |
+| Finance | Yes |
 | Finance (S. Zenios ed) | No |
 | Finance 6 (3) | No |
 | Financial Economics | No |
@@ -284,13 +284,13 @@
 | Fouque, JP, Papanicolaou, G & Sircar, KR 2000 Mean-reverting stochastic volatility. | No |
 | Fouque, JP, Papanicolaou, G, Sircar, KR & Solna, K 2004 Timing the smile. Wilmott | No |
 | Fourier series method | No |
-| Fourier transform | No |
+| Fourier transform | Yes |
 | Frank function | No |
 | Frechét distribution | No |
 | Frechét-Hoeffding upper bound function | No |
 | Frey, R & Stremme, A 1995 Market volatility and feedback effects from dynamic hedging. | No |
 | Frontiers in Derivatives (Konishi, A and Dattatreya, R eds) | No |
-| GARCH model | No |
+| GARCH model | Yes |
 | GARCH see (Generalized Autoregressive | No |
 | Gabillon, J 1995 Analyzing the forward curve. In Managing Energy Risk. Financial | No |
 | Gann charts | No |
@@ -397,7 +397,7 @@
 | Jäckel, P 2002 Monte Carlo Methods in Finance. John Wiley & Sons | No |
 | Jäckel, P 2003 Mind the cap. Wilmott magazine (September) | No |
 | Jefferies, S 1999 Hedging equity and interest rate derivatives in the presence of | No |
-| Jensen’s inequality | No |
+| Jensen’s inequality | Yes |
 | John Wiley & Sons | No |
 | Johnson, HE 1983 An analytical approximation to the American put price. Journal of | No |
 | Johnson, HE 1987 Options on the maximum or minimum of several assets. Journal of | No |
@@ -416,7 +416,7 @@
 | Journal of Mathematics in Business and Industry | No |
 | Journal of Theoretical and Applied Finance 1 (2) | No |
 | Kaplanis, C 1986 Options, taxes and ex-dividend day behaviour. Journal of Finance | No |
-| Kelly criterion | No |
+| Kelly criterion | Yes |
 | Kelly, FP, Howison, SD & Wilmott, P (eds) 1995 Mathematical Models in Finance. | No |
 | Kelly, JL 1956 A new interpretation of information rate. Bell Systems Tech. J. | No |
 | Kemna, AGZ & Vorst, ACF 1990 A pricing method for options based upon average asset | No |
@@ -497,7 +497,7 @@
 | Margrabe, W 1978 The value of an option to exchange one asset for another. Journal of | No |
 | Markov chains | No |
 | Markov process | No |
-| Markov property | No |
+| Markov property | Yes |
 | Markowitz model | No |
 | Markowitz, H 1959 Portfolio Selection: Efﬁcient diversiﬁcation of investment. John Wiley | No |
 | Martingale approach | No |
@@ -532,7 +532,7 @@
 | Models. John Wiley & Sons | No |
 | Mohamed, B 1994 Simulation of transaction costs and optimal rehedging. Applied | No |
 | Money and Finance | No |
-| Monte Carlo | No |
+| Monte Carlo | Yes |
 | Monte Carlo methods | No |
 | Monte Carlo simulation | Yes |
 | Moody’s | No |
@@ -552,7 +552,7 @@
 | Neuberger, A 1994 The log contract: a new instrument to hedge volatility. Journal of | No |
 | New Directions in Mathematical Finance. (Wilmott, P & Rasmussen, H eds) John Wiley & | No |
 | New York Mercantile Exchange (NYMEX) | No |
-| Newton–Raphson | No |
+| Newton–Raphson | Yes |
 | Niederreiter, H 1992 Random Number Generation and Quasi-Monte Carlo Methods. SIAM | No |
 | Nielson, JA & Sandmann, K 1996 The pricing of Asian options under stochastic interest | No |
 | Ninomiya, S & Tezuka, S 1996 Toward real-time pricing of complex ﬁnancial derivatives. | No |
@@ -596,7 +596,7 @@
 | Pilopović, D 1998 Energy Risk. McGraw-Hill | No |
 | Platinum | No |
 | Platinum (crash) hedge | No |
-| Poisson process | No |
+| Poisson process | Yes |
 | Political Economy | No |
 | Porter, DP & Smith, VL 1994 Stock market bubbles in the laboratory. Applied | No |
 | Portfolio Management | No |
@@ -706,7 +706,7 @@
 | Topper, J 2005 Financial Engineering with Finite Elements. John Wiley & Sons | No |
 | Trans. A | No |
 | Traub, JF & Wozniakowski, H 1994 Breaking intractability. Scientiﬁc American | No |
-| Treynor ratio | No |
+| Treynor ratio | Yes |
 | Trigeorgis, L 1998 Real Options. MIT Press | No |
 | Turnbull, SM & Wakeman, LM 1991 A quick algorithm for pricing European average | No |
 | UK bond market | No |
@@ -721,8 +721,8 @@
 | University of Cambridge | No |
 | VIX volatility | No |
 | VIX volatility index | No |
-| Value at Risk (VaR) | No |
-| Vasicek model | No |
+| Value at Risk (VaR) | Yes |
+| Vasicek model | Yes |
 | Vasicek, OA 1977 An equilibrium characterization of the term structure. Journal of | No |
 | Vose, D 1997 Quantitative Risk Analysis: A guide to Monte Carlo simulation modelling. | No |
 | Wall Street Journal Europe | No |
@@ -783,7 +783,7 @@
 | advantages | No |
 | alternative models of the short-term interest rate. Journal of Finance | No |
 | amortization | No |
-| analysis | No |
+| analysis | Yes |
 | analysis and ﬁnite-difference solutions. Advances in Futures and Options Research | No |
 | analysis. OCIAM Working Paper | No |
 | and Quantitative Analysis | No |
@@ -798,8 +798,8 @@
 | applications. In Risk Management and Financial Derivatives: A Guide to the Mathematics | No |
 | approach. Review of Financial Studies | No |
 | approximating | No |
-| approximation | No |
-| arbitrage | No |
+| approximation | Yes |
+| arbitrage | Yes |
 | arbitrage proﬁts | No |
 | arithmetic random walk | No |
 | arithmetic variables | No |
@@ -831,7 +831,7 @@
 | basic diffusion equation | No |
 | basis functions | No |
 | basis rate swap | No |
-| basis risk | No |
+| basis risk | Yes |
 | basis swap | No |
 | basket equity swap | No |
 | basket of stocks | No |
@@ -843,13 +843,13 @@
 | before expiry | No |
 | behavior | No |
 | benchmarks | No |
-| beta | No |
+| beta | Yes |
 | betting, sports | No |
 | bibliography | No |
 | bilinear interpolation | No |
 | bills | No |
 | binaries | No |
-| binary | No |
+| binary | Yes |
 | binary call | No |
 | binary call option | No |
 | binary options (binaries) | No |
@@ -868,8 +868,8 @@
 | bond yields and stock prices since 1856. National Bureau of Economic Research, New | No |
 | bonds | No |
 | bonds vs. | No |
-| bootstrapping | No |
-| boundary conditions | No |
+| bootstrapping | Yes |
+| boundary conditions | Yes |
 | boundary/ﬁnal conditions | No |
 | bounded cap or ﬂoor | No |
 | bull spread | No |
@@ -878,11 +878,11 @@
 | calculation time | No |
 | calculator | No |
 | calendar spread | No |
-| calibration | No |
+| calibration | Yes |
 | calibration and some extensions. Wilmott magazine (July) | No |
-| call | No |
+| call | Yes |
 | call and conversion. Journal of Finance | No |
-| call option | No |
+| call option | Yes |
 | call option value | No |
 | call option values output | No |
 | call provision | No |
@@ -890,9 +890,9 @@
 | callable | No |
 | callable bonds | No |
 | callable swaps | No |
-| cap | No |
+| cap | Yes |
 | cap/ﬂoor parity | No |
-| capital market line | No |
+| capital market line | Yes |
 | caplet | No |
 | caption | No |
 | captions and swaptions | No |
@@ -918,10 +918,10 @@
 | clearing houses | No |
 | close-to-close measure | No |
 | coherence | No |
-| cointegration | No |
+| cointegration | Yes |
 | collar | No |
 | collateralized debt obligations (CDO) | No |
-| combination | No |
+| combination | Yes |
 | combining market microstructure and option | No |
 | commodities | No |
 | commodity futures | No |
@@ -935,7 +935,7 @@
 | compound option | No |
 | compounds in | No |
 | computation. Oxford Financial Press www.oxfordfinancial.co.uk | No |
-| conditional expectation | No |
+| conditional expectation | Yes |
 | condor | No |
 | constant maturity swap | No |
 | constant volatility | No |
@@ -959,11 +959,11 @@
 | convergence of explicit method | No |
 | convertible (CBs) | No |
 | convertible bonds (CBs) | No |
-| convexity | No |
+| convexity | Yes |
 | convexity adjustment | No |
 | convexity of option | No |
 | conﬁdence interval | No |
-| copulas | No |
+| copulas | Yes |
 | correlation | Yes |
 | correlation matrix | No |
 | correlation time series | No |
@@ -973,11 +973,11 @@
 | costs. Philosophical Transactions of the Royal Society A | No |
 | costs: an asymptotic analysis. Applied Mathematical Finance | No |
 | costs: general diffusion limits. To appear in Annals of Applied Probability 8 (3) | No |
-| counterparty risk | No |
+| counterparty risk | Yes |
 | coupon | No |
 | coupon-bearing | No |
 | coupon-bearing bond | No |
-| covariance matrix | No |
+| covariance matrix | Yes |
 | crash (Platinum) hedging | No |
 | crash coefﬁcient | No |
 | crash delta | No |
@@ -1001,23 +1001,23 @@
 | de la Vega, J 1688 Confusión de Confusiones. Republished by John Wiley & Sons | No |
 | decision features | No |
 | decision risk | No |
-| default | No |
+| default | Yes |
 | default, hedging | No |
 | default, modeling risk of | No |
 | delivery and settlement | No |
 | delivery price | No |
 | delivery rate | No |
-| delta | No |
+| delta | Yes |
 | delta approximation | No |
 | delta hedging | Yes |
 | delta of | No |
 | delta-neutral position | No |
-| delta/gamma approximation | No |
+| delta/gamma approximation | Yes |
 | dependent variable | No |
 | derivation | No |
 | derivation of formulae for calls, puts | No |
 | derivative prices, factors affecting | No |
-| derivatives | No |
+| derivatives | Yes |
 | derivatives theory | No |
 | detachment point | No |
 | deterministic volatility | No |
@@ -1025,9 +1025,9 @@
 | deﬁnition | No |
 | difference equation | No |
 | different types | No |
-| differential equations | No |
+| differential equations | Yes |
 | differential equations in ﬁnance. In Quantitative Methods, Super Computers and AI in | No |
-| differentiation | No |
+| differentiation | Yes |
 | differentiation using | No |
 | differentiation, Taylor series | No |
 | diffusion equation | No |
@@ -1063,9 +1063,9 @@
 | down-and-in put | No |
 | down-and-out call option | No |
 | down-and-out put | No |
-| drift | No |
+| drift | Yes |
 | drift rate | No |
-| duration | No |
+| duration | Yes |
 | dynamic | No |
 | dynamic hedging | No |
 | d’Halluin, Y, Pooley, D & Forsyth, P 2004 No fear of jumps. Wilmott magazine | No |
@@ -1085,20 +1085,20 @@
 | equity basis swap | No |
 | equity swaps | No |
 | error as function of underlying using | No |
-| estimating | No |
+| estimating | Yes |
 | estimation and testing. Econometrica | No |
 | evidence for exchange rates. The Review of Futures Markets | No |
 | ex (deﬁnition) | No |
-| examples | No |
+| examples | Yes |
 | exchange option | No |
 | exchange rate | No |
 | exercise in | No |
 | exercise of option | No |
 | exercise price | No |
-| expansion | No |
-| expectation | No |
+| expansion | Yes |
+| expectation | Yes |
 | expectations | No |
-| expected | No |
+| expected | Yes |
 | expected asset price | No |
 | expected ex-dividend stock price decline. Journal of Financial Economics | No |
 | expected future volatility | No |
@@ -1112,7 +1112,7 @@
 | explicit method/European calls, puts | No |
 | explicit method/path-dependent options | No |
 | explicit ﬁnite-difference method | No |
-| exponential function | No |
+| exponential function | Yes |
 | exponential weighted moving average | No |
 | extended Vasicek model | No |
 | extended Vasicek model of | No |
@@ -1129,7 +1129,7 @@
 | for portfolio | No |
 | for single asset | No |
 | foreign exchange (Forex; FX) | No |
-| formula | No |
+| formula | Yes |
 | formula for | No |
 | formula for binary call | No |
 | formula for binary put | No |
@@ -1139,7 +1139,7 @@
 | formulae from | No |
 | forward contract | No |
 | forward difference | No |
-| forward price | No |
+| forward price | Yes |
 | forward rate agreement (FRA) | No |
 | forward rate equation | No |
 | forward rates | No |
@@ -1147,8 +1147,8 @@
 | frown | No |
 | functional form of coefﬁcients | No |
 | fundamental analysis | No |
-| futures | No |
-| gamma | No |
+| futures | Yes |
+| gamma | Yes |
 | gamma hedging | No |
 | gamma of | No |
 | gapping | No |
@@ -1160,23 +1160,23 @@
 | geometric random walk | No |
 | gilts | No |
 | going short | No |
-| greeks | No |
+| greeks | Yes |
 | grids | No |
 | growth rate | No |
-| hazard rate | No |
+| hazard rate | Yes |
 | head and shoulders | No |
 | heat equations | No |
 | hedge with | No |
 | hedged | No |
-| hedging | No |
+| hedging | Yes |
 | hedging in the Black–Scholes model. Financial Analysts Journal | No |
 | high-frequency data in the ﬁrst INFFC. Proceedings of the First International Nonlinear | No |
 | higher dimensions | No |
 | historical (realized) volatility | No |
 | historical perspective | No |
 | horse race betting | No |
-| imitation | No |
-| implied | No |
+| imitation | Yes |
+| implied | Yes |
 | implied correlation | No |
 | implied forward rate | No |
 | implied risk of default | No |
@@ -1200,7 +1200,7 @@
 | index futures | No |
 | index-linked | No |
 | index-linked bonds | No |
-| indices | No |
+| indices | Yes |
 | indifference curves | No |
 | initial conditions | No |
 | initial margin | No |
@@ -1209,19 +1209,19 @@
 | instantaneous risk of default a | No |
 | insurance companies. In: Interacting Stochastic Systems (Deuschel, JD & Greven, A eds) | No |
 | intensity of Poisson process | No |
-| interest | No |
+| interest | Yes |
 | interest rate products | No |
-| interest rate swap | No |
+| interest rate swap | Yes |
 | interest rates | No |
 | internal rate of return (IRR) | No |
 | international bond markets | No |
-| interpolation | No |
+| interpolation | Yes |
 | interpretation | No |
 | intrinsic value | No |
 | inﬂation-proof | No |
 | inﬂation-proof bonds | No |
 | jump condition | No |
-| jump diffusion | No |
+| jump diffusion | Yes |
 | kappa | No |
 | key cross currency rates | No |
 | knock-in | No |
@@ -1230,7 +1230,7 @@
 | knock-out option see barrier option | No |
 | known dividends. Journal of Financial Economics | No |
 | least-squares approach. Rev. Fin. Studies | No |
-| leverage | No |
+| leverage | Yes |
 | linear or non-linear | No |
 | linear parabolic partial differential equation | No |
 | local truncation error | No |
@@ -1261,9 +1261,9 @@
 | magazine, 8 (11) 59–63 (December) | No |
 | maintenance margin | No |
 | management. Wilmott magazine (December) | No |
-| margin | No |
+| margin | Yes |
 | margin account | No |
-| margin call | No |
+| margin call | Yes |
 | margin calls and margin hedging | No |
 | margin delta | No |
 | margin gamma | No |
@@ -1271,7 +1271,7 @@
 | margin modelling | No |
 | margin theta | No |
 | margin, deﬁnition | No |
-| marginal distributions | No |
+| marginal distributions | Yes |
 | marginal effect of asset | No |
 | mark-to-market | No |
 | mark-to-model | No |
@@ -1281,8 +1281,8 @@
 | market microstructure modeling | No |
 | market portfolio | No |
 | market practice | No |
-| market price | No |
-| market price of risk | No |
+| market price | Yes |
+| market price of risk | Yes |
 | market research when a ﬁrm is learning: option pricing and optimal ﬁltering. MFG | No |
 | market. Phil. Trans. A | No |
 | market. Working Paper, University of Bonn, Department of Statistics | No |
@@ -1296,7 +1296,7 @@
 | maturity of contract | No |
 | maximization. Wilmott Associates Working Paper | No |
 | maximum likelihood estimation | No |
-| mean | No |
+| mean | Yes |
 | mean square limit | No |
 | mean-reverting random walk | No |
 | mean-reverting stochastic volatility environment. Asia-Paciﬁc Finanacial Markets | No |
@@ -1333,7 +1333,7 @@
 | multidimensional lognormal random walks | No |
 | multidimensional quadrature. Mathematics of Computation | No |
 | multidimensional version | No |
-| no arbitrage | No |
+| no arbitrage | Yes |
 | no arbitrage in | No |
 | no dividends | No |
 | no-arbitrage principle | Yes |
@@ -1356,7 +1356,7 @@
 | of Operations Research | No |
 | of asset price change | No |
 | of interest rates using the method of moments. Sloan School of Management, MIT | No |
-| of money | No |
+| of money | Yes |
 | of neural network and GARCH methods. Working Paper, Sussex University | No |
 | of options | No |
 | on a spreadsheet | No |
@@ -1368,14 +1368,14 @@
 | one-touch volatility | No |
 | one-way ﬂoaters | No |
 | open interest | No |
-| option | No |
+| option | Yes |
 | option classiﬁcation | No |
 | option price vs. volatiity | No |
 | option pricing with transaction costs. Mathematical Finance | No |
 | option strategy | No |
 | option value | No |
 | option. Proceedings of the 7th European Conference on Mathematics in Industry | No |
-| options | No |
+| options | Yes |
 | options on dividend-paying equities | No |
 | options on equities | No |
 | options. Int. J. Theor. Appl. Fin. | No |
@@ -1398,45 +1398,45 @@
 | paper, Universität Kaiserslautern | No |
 | par swap | No |
 | parallel shifts in yield curve | No |
-| parameters | No |
+| parameters | Yes |
 | parameters, calculation of | No |
 | parametrization. MFG Working Paper, Oxford University | No |
-| partial differential equation | No |
+| partial differential equation | Yes |
 | partial differential equations of the heat conduction type. Proceedings of the Cambridge | No |
 | path dependence | No |
 | path dependence in | No |
 | path differential equations | No |
 | paw swap | No |
 | payer swaption | No |
-| payoff diagram | No |
+| payoff diagram | Yes |
 | payoff function | No |
 | peaks over threshold | No |
 | performance measure | No |
 | perpetual warrants | No |
 | plotting | No |
 | point and ﬁgure charts | No |
-| portfolio | No |
+| portfolio | Yes |
 | portfolio management | No |
 | portfolio of risky bonds | No |
 | portfolio optimization | No |
 | portfolio optimization and Platinum hedge | No |
-| portfolio theory | No |
+| portfolio theory | Yes |
 | portfolio when hedging with implied volatility | No |
 | portfolios | No |
 | positive homogeneity | No |
 | positive recovery | No |
 | power method | No |
-| premium | No |
+| premium | Yes |
 | presence of large transaction costs. Applied Mathematical Finance | No |
 | present value | No |
 | present valuing | No |
-| price | No |
+| price | Yes |
 | price models. Applied Mathematical Finance 6 (3) | No |
 | price time series | No |
 | price. Journal of the Australian Mathematical Society | No |
 | price/yield relationship | No |
 | prices. Journal of Financial Economics | No |
-| pricing | No |
+| pricing | Yes |
 | pricing barriers in | No |
 | pricing caps and ﬂoors | No |
 | pricing derivatives | No |
@@ -1444,12 +1444,12 @@
 | pricing of American options. European Journal of Applied Mathematics | No |
 | pricing via | No |
 | pricing. Risk magazine 1 (1) | No |
-| principal | No |
+| principal | Yes |
 | principal component analysis in | No |
 | principal components analysis | No |
 | probability density function | Yes |
 | procedures and the valuation of its debt. IMA Journal of Applied Mathematics | No |
-| process | No |
+| process | Yes |
 | product function | No |
 | program of study | No |
 | programming | No |
@@ -1460,8 +1460,8 @@
 | proﬁt/loss | No |
 | pull to par | No |
 | pure jump process. Advances in Futures and Options Research | No |
-| put | No |
-| put option | No |
+| put | Yes |
+| put option | Yes |
 | put option value | No |
 | put option values | No |
 | put spread | No |
@@ -1473,7 +1473,7 @@
 | quantitative analysis | No |
 | quasi-random sequences | No |
 | rainbow options | No |
-| random walk | No |
+| random walk | Yes |
 | range notes | No |
 | range-based estimation of volatility | No |
 | ratchets | No |
@@ -1487,7 +1487,7 @@
 | reason for | No |
 | reasons against | No |
 | reasons for | No |
-| rebalancing | No |
+| rebalancing | Yes |
 | rebate | No |
 | receiver swaption | No |
 | recursive stratiﬁed sampling | No |
@@ -1497,22 +1497,22 @@
 | relative strength index | No |
 | repeated hitting | No |
 | replication | No |
-| repo | No |
+| repo | Yes |
 | repo rate | No |
 | resetting of barrier | No |
 | resistance | No |
-| return | No |
+| return | Yes |
 | return. Journal of Business 53 (1) | No |
 | returns.Journal of Finance | No |
-| reverse repo | No |
+| reverse repo | Yes |
 | reverse ﬂoater | No |
 | reward | No |
 | reﬂection principle | No |
 | reﬂex cap/ﬂoor | No |
-| rho | No |
+| rho | Yes |
 | rho of | No |
 | rings of Saturn effect | No |
-| risk | No |
+| risk | Yes |
 | risk neutrality | No |
 | risk preferences | No |
 | risk reversal | No |
@@ -1533,7 +1533,7 @@
 | roll-up options | No |
 | rolling cap/ﬂoor | No |
 | roulette | No |
-| rules | No |
+| rules | Yes |
 | saucer (rounding) tops and bottoms | No |
 | securities. D.Phil. thesis, Oxford University | No |
 | see also Monte Carlo simulation | No |
@@ -1545,9 +1545,9 @@
 | sensitivity to dividend yield | No |
 | sensitivity to interest rate | No |
 | sensitivity to smiles and skews | No |
-| series | No |
+| series | Yes |
 | series solution | No |
-| share | No |
+| share | Yes |
 | share price | No |
 | shareholders | No |
 | short position | No |
@@ -1563,10 +1563,10 @@
 | skews | No |
 | slippage | No |
 | slope of option value | No |
-| smile | No |
+| smile | Yes |
 | smile. Wilmott magazine 63–69 (May) | No |
 | soft barrier option | No |
-| solution | No |
+| solution | Yes |
 | solving | No |
 | speculation | No |
 | speculation vs. | No |
@@ -1580,13 +1580,13 @@
 | spot price | No |
 | spot rate proess | No |
 | spot-forward parity | No |
-| spread | No |
+| spread | Yes |
 | spread options | No |
 | spreads | No |
 | spreads. Financial Analysts Journal 52–64 (Spring) | No |
 | spreads. Review of Financial Studies | No |
 | spreadsheet implementation | No |
-| standard deviation | No |
+| standard deviation | Yes |
 | standardized Normal random variable | No |
 | static | No |
 | static hedging | No |
@@ -1602,16 +1602,16 @@
 | stochastic rates | No |
 | stochastic risk of default | No |
 | stochastic variables | No |
-| stochastic volatility | No |
+| stochastic volatility | Yes |
 | stochastic volatility and mean-variance | No |
 | stochastic volatility. Wilmott magazine 64–77 (September) | No |
-| stock | No |
+| stock | Yes |
 | stock splits | No |
 | straddle | No |
 | strangle | No |
 | strategies. Applied Mathematical Finance 4 (1) | No |
 | stratiﬁed sampling | No |
-| strike price | No |
+| strike price | Yes |
 | strong | No |
 | sub-additivity | No |
 | support | No |
@@ -1633,21 +1633,21 @@
 | the pricing of contingent claims: a synthesis. Journal of Financial and Quantitative | No |
 | the underlying price. Applied Mathematical Finance | No |
 | theoretical price | No |
-| theory | No |
-| theta | No |
+| theory | Yes |
+| theta | Yes |
 | theta of | No |
-| time decay | No |
+| time decay | Yes |
 | time dependence | No |
 | time steps | No |
-| time to expiry | No |
+| time to expiry | Yes |
 | time using | No |
 | time using ﬁnite-difference scheme | No |
-| time value | No |
+| time value | Yes |
 | time-dependent intensity | No |
 | time-dependent interest rate | No |
 | time-periodic behavior | No |
 | time-varying volatility | No |
-| timescales | No |
+| timescales | Yes |
 | tracking, index | No |
 | trading game | No |
 | traditional close-to-close measure | No |
@@ -1685,7 +1685,7 @@
 | using random numbers | No |
 | utility function | No |
 | utility, Black-Scholes equation | No |
-| value | No |
+| value | Yes |
 | value, with different volatilities | No |
 | values. Journal of Banking and Finance 14 113–129 (March) | No |
 | values. Journal of Finance | No |
@@ -1695,13 +1695,13 @@
 | vanilla options | No |
 | vanilla put option | No |
 | variables | No |
-| variance | No |
+| variance | Yes |
 | variance of United Kingdom inﬂation. Econometrica | No |
 | variance of proﬁt after | No |
-| vega | No |
+| vega | Yes |
 | vega of | No |
 | via relative-entropy minimization. Applied Mathematical Finance | No |
-| volatility | No |
+| volatility | Yes |
 | volatility arbitrage and optimal portfolios. Wilmott magazine 64–79 (November) | No |
 | volatility choice | No |
 | volatility estimation | No |
@@ -1728,7 +1728,7 @@
 | writer of options | No |
 | writing of options | No |
 | www.netexposure.co.uk | No |
-| yield | No |
+| yield | Yes |
 | yield analysis | No |
 | yield curve | Yes |
 | yield curve ﬁtting | No |
@@ -1741,7 +1741,7 @@
 | Øksendal, B 1992 Stochastic Differential Equations. Springer-Verlag | No |
 | ﬁctitious point | No |
 | ﬁnal conditions | No |
-| ﬁnite-difference methods | No |
+| ﬁnite-difference methods | Yes |
 | ﬁnite-difference methods (continued) | No |
 | ﬁnite-difference scheme | No |
 | ﬁniteness of Brownian motion | No |
@@ -1758,14 +1758,14 @@
 | ﬂoating rate bonds | No |
 | ﬂoating strike lookback call | No |
 | ﬂoating strike lookback put | No |
-| ﬂoor | No |
+| ﬂoor | Yes |
 | ﬂoortion | No |
 
 ## Suggested New Cards
 
-| Term | Description |
+| Term | Yes |
 |---|---|
 | Covered Interest Arbitrage | Explores arbitrage involving interest rate differentials and forward contracts. |
 | Cross-Currency Swap | How institutions swap principal and interest in different currencies. |
-| Law of One Price | A foundational concept for all arbitrage-based pricing models. |
+| Law of One Price | Yes |
 | Market Microstructure | How bid-ask spreads and liquidity impact the execution of arbitrage trades. |

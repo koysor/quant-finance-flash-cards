@@ -149,7 +149,7 @@ No build step. All third-party JS/CSS is CDN:
 
 ## Key Design Decisions
 
-**Six committed sources of truth, one disposable cache.** `cards/**/*.md` owns card content; `edges.json` owns relationships (labels + plain-English descriptions); `resources.json` owns per-card learning resources (websites and videos, keyed by card ID); `notation.json` owns LaTeX symbol definitions; `key-terms.json` owns plain-text equation variable definitions (e.g. `dW`, `S`). `graph.db` is derived from all of these and is gitignored — delete it and restart to rebuild completely.
+**Five committed sources of truth, one disposable cache.** `cards/**/*.md` owns card content; `edges.json` owns relationships (labels + plain-English descriptions); `resources.json` owns per-card learning resources (websites and videos, keyed by card ID); `notation.json` owns LaTeX symbol definitions; `key-terms.json` owns plain-text equation variable definitions (e.g. `dW`, `S`). `graph.db` is derived from all of these and is gitignored — delete it and restart to rebuild completely.
 
 **Card IDs from file paths.** Renaming or moving a card file changes its ID. The cascade delete removes the orphaned edges from the DB, and the next mutation (add/remove link) writes the updated state back to `edges.json`. If you rename a card with important edges, update `edges.json` manually before committing.
 

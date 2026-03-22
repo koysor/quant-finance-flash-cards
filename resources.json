@@ -500,6 +500,19 @@
     ],
     "videos": []
   },
+  "computational-finance/numerical-greeks-by-finite-difference": {
+    "websites": [
+      {
+        "title": "Wikipedia — Finite Difference Methods for Option Pricing",
+        "url": "https://en.wikipedia.org/wiki/Finite_difference_methods_for_option_pricing"
+      },
+      {
+        "title": "Investopedia — Option Sensitivity Measures (The Greeks)",
+        "url": "https://www.investopedia.com/terms/g/greeks.asp"
+      }
+    ],
+    "videos": []
+  },
   "computational-finance/numpy-vectorisation": {
     "websites": [
       {
@@ -1703,12 +1716,12 @@
     ],
     "videos": [
       {
-        "title": "Finance Unlocked — Funds Transfer Pricing Part I",
-        "url": "https://financeunlocked.com/videos/funds-transfer-pricing-part-i"
+        "title": "Finance Unlocked — Funds Transfer Pricing and Term Liquidity Premium",
+        "url": "https://financeunlocked.com/video/funds-transfer-pricing-and-term-liquidity-premium/614"
       },
       {
-        "title": "Finance Unlocked — Funds Transfer Pricing Part II",
-        "url": "https://financeunlocked.com/videos/funds-transfer-pricing-part-ii"
+        "title": "Finance Unlocked — Funds Transfer Pricing Regimes",
+        "url": "https://financeunlocked.com/video/funds-transfer-pricing-regimes/615"
       }
     ]
   },
@@ -1847,8 +1860,8 @@
     ],
     "videos": [
       {
-        "title": "Finance Unlocked — Funds Transfer Pricing Part I",
-        "url": "https://financeunlocked.com/videos/funds-transfer-pricing-part-i"
+        "title": "Finance Unlocked — Funds Transfer Pricing and Term Liquidity Premium",
+        "url": "https://financeunlocked.com/video/funds-transfer-pricing-and-term-liquidity-premium/614"
       },
       {
         "title": "FDIC — Interest Rate Risk Management",

@@ -58,6 +58,7 @@ Every card must contain all four metadata fields and all four sections, in this 
 |---|---|---|
 | `Banking Regulation` | purple | `cards/banking-regulation/` |
 | `Calculus` | amber | `cards/calculus/` |
+| `Computational Finance` | lime | `cards/computational-finance/` |
 | `Derivatives` | blue | `cards/derivatives/` |
 | `Financial Mathematics` | emerald | `cards/financial-maths/` |
 | `Fixed Income` | teal-dark | `cards/fixed-income/` |

@@ -726,6 +726,24 @@
     "description": "The vectorised time-stepping scheme is the Euler-Maruyama discretisation applied to the log-price process — the exp(·) wrapper converts the additive increments back to multiplicative GBM steps."
   },
   {
+    "source": "computational-finance/numerical-greeks-by-finite-difference",
+    "target": "derivatives/delta-gamma-approximation",
+    "label": "computes inputs for",
+    "description": "The delta-gamma approximation uses delta and gamma to estimate P&L for a small move in the underlying — numerical finite differences are the universal method for computing those delta and gamma values when no closed-form expression exists."
+  },
+  {
+    "source": "computational-finance/numerical-greeks-by-finite-difference",
+    "target": "derivatives/greeks-by-finite-difference",
+    "label": "implements",
+    "description": "This card provides the Python implementation of the finite-difference Greek formulas — the central-difference delta and gamma approximations — turning the mathematical definitions into executable code."
+  },
+  {
+    "source": "computational-finance/numerical-greeks-by-finite-difference",
+    "target": "derivatives/option-greeks",
+    "label": "numerically computes",
+    "description": "Option Greeks are partial derivatives of the option price with respect to model inputs — numerical finite differences approximate these derivatives by bumping each input and measuring the price change, bypassing the need for analytical formulae."
+  },
+  {
     "source": "computational-finance/numpy-vectorisation",
     "target": "risk/monte-carlo-simulation",
     "label": "accelerates",

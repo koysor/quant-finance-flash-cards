@@ -85,7 +85,7 @@ async def check_url(
     title = entry["title"]
 
     # Domains that block automated requests regardless of method — treat as always OK.
-    SKIP_DOMAINS = ("www.investopedia.com",)
+    SKIP_DOMAINS = ("www.investopedia.com", "financeunlocked.com")
     if any(domain in url for domain in SKIP_DOMAINS):
         return card_id, category, title, url, True
 

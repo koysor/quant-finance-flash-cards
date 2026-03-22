@@ -85,7 +85,7 @@ Cards are stored in `cards/<topic>/<slug>.md`. They MUST follow a strict format 
 - **Topic Identity:** Topics must match keys in `app/routes.py::TOPIC_COLOURS`.
 - **Do not** add a `**Level:**` field — it is not a recognised metadata field.
 
-Topics (10): `Calculus`, `Derivatives`, `Financial Mathematics`, `Linear Algebra`, `Mathematical Notation`, `Portfolio Theory & Asset Pricing`, `Probability`, `Risk`, `Statistics`, `Stochastic Processes`.
+Topics (15): `Banking Regulation`, `Calculus`, `Computational Finance`, `Derivatives`, `Financial Mathematics`, `Fixed Income`, `Linear Algebra`, `Mathematical Notation`, `Portfolio Theory & Asset Pricing`, `Probability`, `Risk`, `Short Selling`, `Statistics`, `Stochastic Processes`, `Volatility`.
 
 ### Database and Loading
 - **Card IDs:** Derived from file paths (e.g., `derivatives/black-scholes-equation`).
