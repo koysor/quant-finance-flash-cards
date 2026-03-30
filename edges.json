@@ -697,15 +697,15 @@
   },
   {
     "source": "computational-finance/black-scholes-in-python",
-    "target": "derivatives/option-greeks",
-    "label": "extends to",
-    "description": "The vectorised Black-Scholes implementation naturally extends to computing Greeks — delta is computed analytically via N(d₁), and other Greeks follow from the same d₁/d₂ building blocks or by finite difference on the pricing function."
-  },
-  {
-    "source": "computational-finance/black-scholes-in-python",
     "target": "derivatives/delta-greeks",
     "label": "computes",
     "description": "The Python implementation computes delta as norm.cdf(d₁) for calls and norm.cdf(d₁) − 1 for puts — the Example section demonstrates this across a grid of spot prices, showing how delta varies from deep out-of-the-money to deep in-the-money."
+  },
+  {
+    "source": "computational-finance/black-scholes-in-python",
+    "target": "derivatives/option-greeks",
+    "label": "extends to",
+    "description": "The vectorised Black-Scholes implementation naturally extends to computing Greeks — delta is computed analytically via N(d₁), and other Greeks follow from the same d₁/d₂ building blocks or by finite difference on the pricing function."
   },
   {
     "source": "computational-finance/monte-carlo-simulation-in-python",
@@ -715,15 +715,15 @@
   },
   {
     "source": "computational-finance/monte-carlo-simulation-in-python",
-    "target": "stochastic-processes/geometric-brownian-motion",
-    "label": "simulates",
-    "description": "The Python simulation discretises the GBM SDE into log-normal increments — each column of the random matrix is one realisation of the geometric Brownian motion path from t=0 to T."
-  },
-  {
-    "source": "computational-finance/monte-carlo-simulation-in-python",
     "target": "stochastic-processes/euler-maruyama-method",
     "label": "applies",
     "description": "The vectorised time-stepping scheme is the Euler-Maruyama discretisation applied to the log-price process — the exp(·) wrapper converts the additive increments back to multiplicative GBM steps."
+  },
+  {
+    "source": "computational-finance/monte-carlo-simulation-in-python",
+    "target": "stochastic-processes/geometric-brownian-motion",
+    "label": "simulates",
+    "description": "The Python simulation discretises the GBM SDE into log-normal increments — each column of the random matrix is one realisation of the geometric Brownian motion path from t=0 to T."
   },
   {
     "source": "computational-finance/numerical-greeks-by-finite-difference",
@@ -762,24 +762,6 @@
     "description": "Simulating GBM paths requires generating correlated normal increments and computing cumulative products — vectorised NumPy expresses the entire path generation as array operations on random draws, avoiding per-step Python loops."
   },
   {
-    "source": "computational-finance/scipy-optimisation-for-calibration",
-    "target": "derivatives/black-scholes-equation",
-    "label": "calibrates",
-    "description": "SciPy root-finding (brentq) is the standard numerical method for inverting the Black-Scholes formula to extract implied volatility from observed option prices — the most common calibration task in derivatives."
-  },
-  {
-    "source": "computational-finance/scipy-optimisation-for-calibration",
-    "target": "volatility/implied-volatility",
-    "label": "computes",
-    "description": "Implied volatility cannot be solved analytically from the Black-Scholes formula — SciPy root-finding algorithms (brentq, newton) numerically invert the pricing equation to recover the market-implied vol from each observed option price."
-  },
-  {
-    "source": "computational-finance/scipy-optimisation-for-calibration",
-    "target": "volatility/volatility-surface",
-    "label": "fits",
-    "description": "Calibrating a stochastic volatility model (Heston, SABR) to the observed volatility surface requires minimising the pricing error across many strikes and expiries simultaneously — SciPy minimize orchestrates this multi-parameter optimisation."
-  },
-  {
     "source": "computational-finance/pandas-financial-time-series",
     "target": "statistics/ewma-volatility",
     "label": "implements",
@@ -799,6 +781,12 @@
   },
   {
     "source": "computational-finance/portfolio-optimisation-in-python",
+    "target": "linear-algebra/positive-definite-matrices",
+    "label": "requires",
+    "description": "The covariance matrix passed to the portfolio optimiser must be positive semi-definite for the quadratic objective to be convex and the minimum-variance solution to exist — if the sample covariance is not PSD (due to missing data or numerical issues), the optimiser may fail or produce nonsensical weights."
+  },
+  {
+    "source": "computational-finance/portfolio-optimisation-in-python",
     "target": "portfolio-theory/efficient-frontier",
     "label": "implements",
     "description": "Portfolio optimisation in Python traces the efficient frontier computationally by repeatedly solving the constrained minimisation at a grid of target returns — the numerical counterpart to Markowitz's analytical frontier."
@@ -808,12 +796,6 @@
     "target": "portfolio-theory/modern-portfolio-theory",
     "label": "implements",
     "description": "SciPy's constrained optimiser is the practical tool for implementing Markowitz mean-variance optimisation — it finds the optimal asset weights that modern portfolio theory defines analytically but which require numerical methods for real-world portfolios with many assets and constraints."
-  },
-  {
-    "source": "computational-finance/portfolio-optimisation-in-python",
-    "target": "linear-algebra/positive-definite-matrices",
-    "label": "requires",
-    "description": "The covariance matrix passed to the portfolio optimiser must be positive semi-definite for the quadratic objective to be convex and the minimum-variance solution to exist — if the sample covariance is not PSD (due to missing data or numerical issues), the optimiser may fail or produce nonsensical weights."
   },
   {
     "source": "computational-finance/random-number-generation",
@@ -832,6 +814,24 @@
     "target": "stochastic-processes/correlated-brownian-motions",
     "label": "implements numerically",
     "description": "Random number generation with Cholesky-correlated normal draws is the numerical implementation of correlated Brownian motions — each column of the transformed random matrix represents a discrete approximation to a correlated Wiener process."
+  },
+  {
+    "source": "computational-finance/scipy-optimisation-for-calibration",
+    "target": "derivatives/black-scholes-equation",
+    "label": "calibrates",
+    "description": "SciPy root-finding (brentq) is the standard numerical method for inverting the Black-Scholes formula to extract implied volatility from observed option prices — the most common calibration task in derivatives."
+  },
+  {
+    "source": "computational-finance/scipy-optimisation-for-calibration",
+    "target": "volatility/implied-volatility",
+    "label": "computes",
+    "description": "Implied volatility cannot be solved analytically from the Black-Scholes formula — SciPy root-finding algorithms (brentq, newton) numerically invert the pricing equation to recover the market-implied vol from each observed option price."
+  },
+  {
+    "source": "computational-finance/scipy-optimisation-for-calibration",
+    "target": "volatility/volatility-surface",
+    "label": "fits",
+    "description": "Calibrating a stochastic volatility model (Heston, SABR) to the observed volatility surface requires minimising the pricing error across many strikes and expiries simultaneously — SciPy minimize orchestrates this multi-parameter optimisation."
   },
   {
     "source": "derivatives/american-option-pricing",
@@ -1009,6 +1009,12 @@
   },
   {
     "source": "derivatives/cash-and-carry-arbitrage",
+    "target": "derivatives/spot-price",
+    "label": "exploits mispricing of",
+    "description": "Cash-and-carry arbitrage exploits a mispricing between the spot price and the forward price — the strategy buys at spot and sells forward, locking in a riskless profit whenever the basis exceeds the cost of carry."
+  },
+  {
+    "source": "derivatives/cash-and-carry-arbitrage",
     "target": "financial-maths/time-value-of-money",
     "label": "applies",
     "description": "The fair forward price F* = S₀e^(rT) is derived directly from the time value of money — carrying the spot asset to expiry costs exactly the compounded risk-free interest on the purchase price."
@@ -1048,6 +1054,30 @@
     "target": "derivatives/black-scholes-equation",
     "label": "derives",
     "description": "Taking the continuous-time limit of the binomial model produces the Black-Scholes PDE — this card shows how the discrete one-step formula converges to the continuous PDE as the time step shrinks to zero."
+  },
+  {
+    "source": "derivatives/cost-of-carry-markets",
+    "target": "derivatives/cash-and-carry-arbitrage",
+    "label": "enforced by",
+    "description": "Cash-and-carry arbitrage is the enforcement mechanism of the cost-of-carry relationship — when the forward price deviates from the theoretical carry price, arbitrageurs buy spot and sell the forward (or vice versa) to restore equilibrium."
+  },
+  {
+    "source": "derivatives/cost-of-carry-markets",
+    "target": "derivatives/forward-price",
+    "label": "generalises",
+    "description": "The cost-of-carry model generalises the forward price formula by explicitly incorporating storage costs and convenience yield alongside financing costs, making it applicable to commodities and physical assets beyond simple financial forwards."
+  },
+  {
+    "source": "derivatives/cost-of-carry-markets",
+    "target": "derivatives/no-arbitrage-principle",
+    "label": "derived from",
+    "description": "The cost-of-carry pricing formula is a direct application of the no-arbitrage principle — if the forward price differed from spot plus net carry costs, a riskless profit would be available, violating no-arbitrage."
+  },
+  {
+    "source": "derivatives/cost-of-carry-markets",
+    "target": "financial-maths/funding-rate",
+    "label": "includes",
+    "description": "The funding rate is the financing component of cost-of-carry — the interest paid to borrow cash (or received on collateral) is the dominant carry cost for financial assets and directly enters the forward pricing formula."
   },
   {
     "source": "derivatives/d1-and-d2-in-black-scholes",
@@ -1204,6 +1234,12 @@
     "target": "derivatives/risk-neutral-pricing",
     "label": "foundation of",
     "description": "The forward price equals the risk-neutral expected spot price, making it the simplest example of risk-neutral pricing — understanding forwards builds intuition for the Q-measure approach to more complex derivatives."
+  },
+  {
+    "source": "derivatives/forward-price",
+    "target": "derivatives/spot-price",
+    "label": "derived from",
+    "description": "The forward price is derived from the spot price via the cost-of-carry formula — it equals the spot price compounded at the risk-free rate, so the spot is the fundamental anchor of forward pricing."
   },
   {
     "source": "derivatives/forward-price",
@@ -1782,6 +1818,18 @@
     "description": "The backward induction that constructs the Snell envelope uses the tower property at each step — the continuation value Eᵠ[U_{t+1} | ℱ_t] nests expectations consistently across time steps."
   },
   {
+    "source": "derivatives/spot-price",
+    "target": "derivatives/no-arbitrage-principle",
+    "label": "enforced by",
+    "description": "The relationship between the spot price and derivative prices is enforced by no-arbitrage — any deviation from the cost-of-carry link between spot and forward prices creates a riskless profit opportunity that market participants quickly eliminate."
+  },
+  {
+    "source": "derivatives/spot-price",
+    "target": "derivatives/underlying-price",
+    "label": "synonym of",
+    "description": "The spot price and underlying price are synonymous in most derivatives contexts — both refer to the current market price of the asset on which a derivative is written, though spot price emphasises immediate delivery versus forward delivery."
+  },
+  {
     "source": "derivatives/statistical-arbitrage",
     "target": "derivatives/risk-arbitrage",
     "label": "contrasts with",
@@ -2146,6 +2194,12 @@
     "target": "risk/counterparty-credit-risk",
     "label": "mitigates",
     "description": "By interposing itself between buyer and seller, the CCP replaces bilateral counterparty credit risk with a single, well-capitalised counterparty — this mutualisation of default risk is the primary purpose of central clearing."
+  },
+  {
+    "source": "financial-maths/central-counterparty",
+    "target": "risk/initial-margin",
+    "label": "requires",
+    "description": "CCPs require initial margin from all clearing members as the first layer of their default waterfall — IM sizing is the primary mechanism through which a CCP protects itself and its members against a participant default."
   },
   {
     "source": "financial-maths/central-counterparty",
@@ -3096,6 +3150,54 @@
     "description": "Applying the hat matrix H = X(X'X)^{-1}X' to a vector is made efficient by associativity — evaluating right-to-left avoids forming the n x n matrix H explicitly, reducing cost from O(n^2) to O(np)."
   },
   {
+    "source": "linear-algebra/augmented-matrix",
+    "target": "linear-algebra/gaussian-elimination",
+    "label": "input to",
+    "description": "The augmented matrix [A | b] is the starting object for Gaussian elimination — forward elimination operates on this combined matrix so that row operations transform the coefficients and constants in lockstep."
+  },
+  {
+    "source": "linear-algebra/augmented-matrix",
+    "target": "linear-algebra/rank",
+    "label": "determines solvability via",
+    "description": "Comparing rank(A) with rank([A | b]) is the Rouché–Capelli test for consistency — in calibration problems this check reveals whether a set of market constraints has a solution before any numerical work begins."
+  },
+  {
+    "source": "linear-algebra/augmented-matrix",
+    "target": "linear-algebra/row-reduction",
+    "label": "transformed by",
+    "description": "Row reduction is applied directly to the augmented matrix to reach echelon form — the augmented column ensures that the constants track every row operation, preserving the equivalence of the original system."
+  },
+  {
+    "source": "linear-algebra/augmented-matrix",
+    "target": "linear-algebra/systems-of-linear-equations",
+    "label": "encodes",
+    "description": "The augmented matrix is the compact matrix representation of a system Ax = b — it packages coefficients and constants into a single object so that the entire system can be manipulated with matrix operations."
+  },
+  {
+    "source": "linear-algebra/back-substitution",
+    "target": "linear-algebra/gaussian-elimination",
+    "label": "completes",
+    "description": "Back substitution is the second phase of Gaussian elimination — forward elimination reduces the system to upper triangular form at O(n³) cost, and back substitution then solves it at O(n²) cost."
+  },
+  {
+    "source": "linear-algebra/back-substitution",
+    "target": "linear-algebra/lu-decomposition",
+    "label": "used within",
+    "description": "After LU factorisation, the system Ax = b is solved by forward substitution on Ly = b followed by back substitution on Ux = y — the two triangular solves are the payoff of the factorisation."
+  },
+  {
+    "source": "linear-algebra/back-substitution",
+    "target": "linear-algebra/systems-of-linear-equations",
+    "label": "solves",
+    "description": "Back substitution is the final step that extracts the solution vector from a triangular system — it converts the reduced system into explicit numerical answers for each unknown."
+  },
+  {
+    "source": "linear-algebra/back-substitution",
+    "target": "linear-algebra/upper-triangular-matrix",
+    "label": "operates on",
+    "description": "Back substitution requires its coefficient matrix to be upper triangular — the zero entries below the diagonal are what allow each variable to be solved sequentially from the bottom row upward."
+  },
+  {
     "source": "linear-algebra/basis-vectors",
     "target": "linear-algebra/change-of-basis",
     "label": "enables",
@@ -3112,6 +3214,30 @@
     "target": "linear-algebra/span-and-linear-independence",
     "label": "combines",
     "description": "A basis is a set that is simultaneously linearly independent and spanning — it is the minimal spanning set and the maximal independent set, combining both concepts into the most efficient description of a subspace."
+  },
+  {
+    "source": "linear-algebra/block-matrices",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "structures",
+    "description": "Multi-asset covariance matrices are naturally block-structured by asset class — block-diagonal approximations reduce parameter count and speed up portfolio optimisation, while the Schur complement of a block gives the conditional covariance."
+  },
+  {
+    "source": "linear-algebra/block-matrices",
+    "target": "linear-algebra/determinant",
+    "label": "simplifies computation of",
+    "description": "The determinant of a block-diagonal or block-triangular matrix factors into the product of the determinants of the diagonal blocks, turning one large determinant into several smaller ones."
+  },
+  {
+    "source": "linear-algebra/block-matrices",
+    "target": "linear-algebra/matrix-inverse",
+    "label": "simplifies computation of",
+    "description": "A block-diagonal matrix can be inverted block by block, and the Schur complement formula gives the inverse of a general 2×2 block partition — both reduce a large inversion to smaller, cheaper operations."
+  },
+  {
+    "source": "linear-algebra/block-matrices",
+    "target": "linear-algebra/matrix-multiplication",
+    "label": "extends",
+    "description": "Block multiplication follows the same row-by-column rule as scalar matrix multiplication but with sub-matrices in place of scalars — each entry of the result block is a sum of matrix products rather than a sum of scalar products."
   },
   {
     "source": "linear-algebra/change-of-basis",
@@ -3246,6 +3372,30 @@
     "description": "Portfolio variance is wᵀΣw — the covariance matrix encodes every pairwise asset interaction, making it the single object that determines the entire efficient frontier in Markowitz optimisation."
   },
   {
+    "source": "linear-algebra/cramers-rule",
+    "target": "linear-algebra/cofactor",
+    "label": "uses",
+    "description": "The determinants in Cramer's Rule are typically evaluated via cofactor expansion — each replacement matrix determinant is a sum of signed cofactors, making cofactor computation the mechanical step behind the closed-form solution."
+  },
+  {
+    "source": "linear-algebra/cramers-rule",
+    "target": "linear-algebra/determinant",
+    "label": "relies on",
+    "description": "Cramer's Rule expresses each unknown as a ratio of determinants — the denominator is det(A) and each numerator is the determinant of A with one column replaced, so determinant computation is the core operation."
+  },
+  {
+    "source": "linear-algebra/cramers-rule",
+    "target": "linear-algebra/matrix-inverse",
+    "label": "alternative to",
+    "description": "Both Cramer's Rule and the matrix inverse solve Ax = b, but Cramer's Rule avoids explicitly computing A^{-1} — for small systems it gives a direct closed-form expression for each variable, whereas matrix inversion computes all columns of A^{-1} at once."
+  },
+  {
+    "source": "linear-algebra/cramers-rule",
+    "target": "linear-algebra/systems-of-linear-equations",
+    "label": "solves",
+    "description": "Cramer's Rule provides a determinant-based closed-form solution for systems of linear equations with a unique solution — it is most practical for 2x2 and 3x3 systems arising in hedging and replication problems."
+  },
+  {
     "source": "linear-algebra/determinant",
     "target": "linear-algebra/matrix-inverse",
     "label": "gates",
@@ -3256,6 +3406,12 @@
     "target": "linear-algebra/eigenvalues-and-eigenvectors",
     "label": "requires",
     "description": "Diagonalisation requires n linearly independent eigenvectors to form the change-of-basis matrix P — if a matrix lacks enough eigenvectors it is not diagonalisable and more general decompositions such as the Jordan form are needed."
+  },
+  {
+    "source": "linear-algebra/diagonalisation",
+    "target": "linear-algebra/matrix-exponential",
+    "label": "enables computation of",
+    "description": "Diagonalisation enables efficient computation of the matrix exponential — if A = PDP^{-1}, then e^A = P e^D P^{-1}, reducing the infinite series to exponentials of individual eigenvalues."
   },
   {
     "source": "linear-algebra/diagonalisation",
@@ -3307,6 +3463,12 @@
   },
   {
     "source": "linear-algebra/eigenvalues-and-eigenvectors",
+    "target": "linear-algebra/matrix-exponential",
+    "label": "foundation of",
+    "description": "Eigenvalues and eigenvectors are the foundation of the matrix exponential for diagonalisable matrices — each eigenvalue lambda_i maps to e^{lambda_i} on the diagonal, so the spectrum of A fully determines e^A."
+  },
+  {
+    "source": "linear-algebra/eigenvalues-and-eigenvectors",
     "target": "linear-algebra/transpose-and-symmetric-matrices",
     "label": "simplified by",
     "description": "Symmetric matrices guarantee real eigenvalues and orthogonal eigenvectors — this is why covariance matrices, which are always symmetric, admit clean PCA decompositions with interpretable risk factors."
@@ -3316,6 +3478,78 @@
     "target": "statistics/variance-and-standard-deviation",
     "label": "decomposes",
     "description": "Each eigenvalue of the covariance matrix represents the variance explained by its corresponding eigenvector — the total variance is the sum of all eigenvalues, partitioning risk across independent factors."
+  },
+  {
+    "source": "linear-algebra/elementary-matrices",
+    "target": "linear-algebra/gaussian-elimination",
+    "label": "encodes operations of",
+    "description": "Each step of Gaussian elimination corresponds to left-multiplication by an elementary matrix — elementary matrices formalise the row operations that Gaussian elimination performs, turning an algorithmic procedure into a matrix product."
+  },
+  {
+    "source": "linear-algebra/elementary-matrices",
+    "target": "linear-algebra/identity-matrix",
+    "label": "derived from",
+    "description": "Every elementary matrix is obtained by applying a single row operation to the identity matrix — the identity is the starting point, and each elementary matrix differs from it by exactly one operation."
+  },
+  {
+    "source": "linear-algebra/elementary-matrices",
+    "target": "linear-algebra/lu-decomposition",
+    "label": "building block of",
+    "description": "The L factor in LU decomposition is the product of inverted elementary matrices from Gaussian elimination — understanding elementary matrices explains where L comes from and why it is lower triangular."
+  },
+  {
+    "source": "linear-algebra/elementary-matrices",
+    "target": "linear-algebra/row-reduction",
+    "label": "matrix form of",
+    "description": "Row reduction applies a sequence of elementary row operations to a matrix — each operation is captured by an elementary matrix, so the entire reduction is equivalent to left-multiplying by a chain of elementary matrices."
+  },
+  {
+    "source": "linear-algebra/forward-elimination",
+    "target": "linear-algebra/gaussian-elimination",
+    "label": "first phase of",
+    "description": "Forward elimination is the first of the two phases of Gaussian elimination — it performs the row operations that reduce the augmented matrix to upper triangular form, after which back substitution completes the solve."
+  },
+  {
+    "source": "linear-algebra/forward-elimination",
+    "target": "linear-algebra/lu-decomposition",
+    "label": "recorded by",
+    "description": "LU decomposition records the result of forward elimination in matrix form — the multipliers used to zero out sub-diagonal entries become the entries of L, and the reduced matrix becomes U, so the expensive O(n^3) work is cached for reuse."
+  },
+  {
+    "source": "linear-algebra/forward-elimination",
+    "target": "linear-algebra/row-reduction",
+    "label": "applies",
+    "description": "Forward elimination applies elementary row operations — specifically subtracting a multiple of one row from another — to systematically produce zeros below each pivot, which is row reduction directed toward upper triangular form."
+  },
+  {
+    "source": "linear-algebra/forward-elimination",
+    "target": "linear-algebra/upper-triangular-matrix",
+    "label": "produces",
+    "description": "The output of forward elimination is an upper triangular matrix — every entry below the diagonal has been zeroed by the row operations, creating the pivot staircase that enables back substitution."
+  },
+  {
+    "source": "linear-algebra/free-variables",
+    "target": "linear-algebra/gaussian-elimination",
+    "label": "identified by",
+    "description": "Gaussian elimination reduces the coefficient matrix to echelon form, at which point columns without pivots correspond to free variables — the elimination procedure is the standard method for discovering which parameters are unconstrained."
+  },
+  {
+    "source": "linear-algebra/free-variables",
+    "target": "linear-algebra/null-space",
+    "label": "parameterises",
+    "description": "Each free variable contributes one basis vector to the null space — the number of free variables equals the nullity, so free variables are the concrete coordinates that parameterise the abstract null-space directions."
+  },
+  {
+    "source": "linear-algebra/free-variables",
+    "target": "linear-algebra/rank",
+    "label": "counted from",
+    "description": "The number of free variables equals n minus the rank of the coefficient matrix — rank tells you how many variables are determined by the system, and the remainder are free to vary."
+  },
+  {
+    "source": "linear-algebra/free-variables",
+    "target": "linear-algebra/systems-of-linear-equations",
+    "label": "arises in",
+    "description": "Free variables appear when a system of linear equations is underdetermined — they represent the degrees of freedom in the solution set, which in finance correspond to unconstrained model parameters or redundant hedging instruments."
   },
   {
     "source": "linear-algebra/gaussian-elimination",
@@ -3352,6 +3586,30 @@
     "target": "linear-algebra/singular-value-decomposition",
     "label": "related to",
     "description": "SVD produces orthonormal bases (the columns of U and V) whose existence is guaranteed by the same orthogonalisation principle that underlies Gram-Schmidt."
+  },
+  {
+    "source": "linear-algebra/homogeneous-systems",
+    "target": "derivatives/no-arbitrage-principle",
+    "label": "foundation of",
+    "description": "The no-arbitrage condition can be framed as requiring that a homogeneous system of payoff equations has only the trivial solution — a non-trivial solution would represent an arbitrage portfolio with zero cost and non-negative payoff."
+  },
+  {
+    "source": "linear-algebra/homogeneous-systems",
+    "target": "linear-algebra/null-space",
+    "label": "defines",
+    "description": "The solution set of the homogeneous system Ax = 0 is precisely the null space of A — every property of homogeneous systems (dimension of solutions, existence of non-trivial solutions) is a property of the null space."
+  },
+  {
+    "source": "linear-algebra/homogeneous-systems",
+    "target": "linear-algebra/rank",
+    "label": "determined by",
+    "description": "The rank of A determines whether the homogeneous system Ax = 0 has non-trivial solutions: by the rank-nullity theorem, a non-trivial null space exists exactly when the rank is less than the number of columns."
+  },
+  {
+    "source": "linear-algebra/homogeneous-systems",
+    "target": "linear-algebra/systems-of-linear-equations",
+    "label": "special case of",
+    "description": "A homogeneous system is the special case of Ax = b where b = 0 — its solution set forms a subspace (the null space), unlike the general case where solutions form an affine subspace."
   },
   {
     "source": "linear-algebra/identity-matrix",
@@ -3472,6 +3730,18 @@
     "target": "linear-algebra/matrix-subtraction",
     "label": "related to",
     "description": "Matrix subtraction is defined as the addition of the negated matrix, so the two operations share identical dimension requirements and element-wise structure — together they form the additive arithmetic of matrices."
+  },
+  {
+    "source": "linear-algebra/matrix-exponential",
+    "target": "calculus/taylor-series",
+    "label": "matrix generalisation of",
+    "description": "The matrix exponential is the matrix generalisation of the Taylor series for the scalar exponential — it replaces the scalar variable x with a square matrix A in the power series sum A^k / k!."
+  },
+  {
+    "source": "linear-algebra/matrix-exponential",
+    "target": "stochastic-processes/ornstein-uhlenbeck-process",
+    "label": "solves",
+    "description": "The matrix exponential solves the deterministic part of the Ornstein-Uhlenbeck process — in multi-factor mean-reversion models, e^{-Kt} governs the decay of the state vector towards its long-run mean."
   },
   {
     "source": "linear-algebra/matrix-inverse",
@@ -3636,6 +3906,102 @@
     "description": "The residual vector (I - P)y is orthogonal to the column space of X by construction — the projection matrix P splits any vector into orthogonal components, with fitted values and residuals perpendicular to each other."
   },
   {
+    "source": "linear-algebra/outer-product",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "constructs",
+    "description": "The sample covariance matrix is a sum of outer products of centred return vectors — each rank-1 term r_t r_t^T captures one observation's contribution to the total covariance structure."
+  },
+  {
+    "source": "linear-algebra/outer-product",
+    "target": "linear-algebra/dot-product-and-norms",
+    "label": "complement of",
+    "description": "The outer product uv^T produces a matrix while the inner (dot) product u·v produces a scalar — together they are the two fundamental ways to combine two vectors, and the trace of the outer product equals the inner product."
+  },
+  {
+    "source": "linear-algebra/outer-product",
+    "target": "linear-algebra/matrix-multiplication",
+    "label": "special case of",
+    "description": "The outer product uv^T is the matrix product of an m×1 column vector with a 1×n row vector — it is the simplest non-trivial matrix multiplication and the building block from which all matrix products can be decomposed."
+  },
+  {
+    "source": "linear-algebra/outer-product",
+    "target": "linear-algebra/rank",
+    "label": "illustrates",
+    "description": "The outer product of two non-zero vectors always produces a rank-1 matrix — it is the canonical example of a rank-1 matrix and demonstrates that rank measures the number of independent rows or columns."
+  },
+  {
+    "source": "linear-algebra/pivot",
+    "target": "linear-algebra/pivoting-strategies",
+    "label": "managed by",
+    "description": "Pivoting strategies (partial and complete) are algorithms for choosing the best pivot element at each elimination step — they exist specifically to avoid zero or near-zero pivots that would cause division errors or numerical instability."
+  },
+  {
+    "source": "linear-algebra/pivot",
+    "target": "linear-algebra/rank",
+    "label": "counts to give",
+    "description": "The number of pivots after row reduction equals the rank of the matrix — each pivot represents one linearly independent row, so counting pivots is the standard method for determining rank."
+  },
+  {
+    "source": "linear-algebra/pivot",
+    "target": "linear-algebra/reduced-row-echelon-form",
+    "label": "defines structure of",
+    "description": "In reduced row echelon form every pivot is normalised to 1 and is the sole non-zero entry in its column — the pivot positions completely determine the staircase pattern that distinguishes pivot variables from free variables."
+  },
+  {
+    "source": "linear-algebra/pivot",
+    "target": "linear-algebra/row-reduction",
+    "label": "guides",
+    "description": "Each step of row reduction is driven by the current pivot — it is the element used to eliminate all other entries in its column, and the position of pivots determines the order and scope of elimination operations."
+  },
+  {
+    "source": "linear-algebra/pivot-column",
+    "target": "linear-algebra/column-space",
+    "label": "spans",
+    "description": "The pivot columns of the original matrix form a basis for its column space — they are the linearly independent columns that span the range, while non-pivot columns are redundant linear combinations of them."
+  },
+  {
+    "source": "linear-algebra/pivot-column",
+    "target": "linear-algebra/null-space",
+    "label": "complements",
+    "description": "Each free (non-pivot) column contributes one dimension to the null space — the number of free columns equals the nullity, and the null-space basis vectors encode how free variables parameterise the solution set."
+  },
+  {
+    "source": "linear-algebra/pivot-column",
+    "target": "linear-algebra/rank",
+    "label": "determines",
+    "description": "The number of pivot columns equals the rank of the matrix — counting pivots after row reduction is the most direct way to establish rank and thereby determine whether a linear system has a unique solution."
+  },
+  {
+    "source": "linear-algebra/pivot-column",
+    "target": "linear-algebra/row-reduction",
+    "label": "identified by",
+    "description": "Pivot columns are revealed by row reduction to echelon form — the algorithm places a leading entry in each pivot column, separating the independent columns from the free ones."
+  },
+  {
+    "source": "linear-algebra/pivoting-strategies",
+    "target": "linear-algebra/condition-number",
+    "label": "mitigates effects of",
+    "description": "Pivoting strategies are most critical when the condition number is large — an ill-conditioned system amplifies rounding errors during elimination, and partial pivoting prevents the growth factor from compounding those errors into meaningless results."
+  },
+  {
+    "source": "linear-algebra/pivoting-strategies",
+    "target": "linear-algebra/gaussian-elimination",
+    "label": "stabilises",
+    "description": "Pivoting is the numerical safeguard applied during Gaussian elimination — without it, a zero or near-zero pivot causes division blow-up, so partial pivoting swaps the largest available entry into the pivot position at each step."
+  },
+  {
+    "source": "linear-algebra/pivoting-strategies",
+    "target": "linear-algebra/lu-decomposition",
+    "label": "modifies",
+    "description": "With partial pivoting the LU factorisation becomes PA = LU, where the permutation matrix P records the row swaps — this is the form actually computed by production libraries like LAPACK and NumPy."
+  },
+  {
+    "source": "linear-algebra/pivoting-strategies",
+    "target": "linear-algebra/row-reduction",
+    "label": "enhances",
+    "description": "Row reduction without pivoting can propagate catastrophic rounding errors when small pivots appear — pivoting strategies reorder the rows so that each elimination step uses the most numerically favourable pivot available."
+  },
+  {
     "source": "linear-algebra/positive-definite-matrices",
     "target": "linear-algebra/cholesky-decomposition",
     "label": "required for",
@@ -3714,6 +4080,30 @@
     "description": "The rank of the coefficient matrix determines whether a linear system has a unique solution (full rank), infinitely many solutions, or no solution — it is the central diagnostic for solvability."
   },
   {
+    "source": "linear-algebra/reduced-row-echelon-form",
+    "target": "linear-algebra/gaussian-elimination",
+    "label": "extends",
+    "description": "RREF is the result of continuing Gaussian elimination with back-elimination (Gauss-Jordan) until every pivot column contains a single 1 — it removes the need for back substitution and reads off the solution directly."
+  },
+  {
+    "source": "linear-algebra/reduced-row-echelon-form",
+    "target": "linear-algebra/rank",
+    "label": "determines",
+    "description": "The number of pivot positions in RREF equals the rank of the matrix — RREF makes rank visible by inspection, which in finance tells you how many independent risk factors drive a portfolio."
+  },
+  {
+    "source": "linear-algebra/reduced-row-echelon-form",
+    "target": "linear-algebra/row-reduction",
+    "label": "canonical form of",
+    "description": "RREF is the unique canonical form that row reduction converges to — while echelon form can vary depending on the sequence of operations, the RREF of any matrix is unique."
+  },
+  {
+    "source": "linear-algebra/reduced-row-echelon-form",
+    "target": "linear-algebra/systems-of-linear-equations",
+    "label": "classifies solutions of",
+    "description": "RREF separates pivot variables from free variables, revealing whether a linear system has a unique solution, infinitely many solutions, or no solution — essential when calibrating models with more parameters than market constraints."
+  },
+  {
     "source": "linear-algebra/row-reduction",
     "target": "linear-algebra/determinant",
     "label": "computes",
@@ -3730,6 +4120,54 @@
     "target": "linear-algebra/systems-of-linear-equations",
     "label": "used in",
     "description": "Row reduction on the augmented matrix [A | b] transforms a linear system into echelon form, revealing whether it has a unique solution, infinitely many solutions, or no solution — critical when checking whether a set of pricing constraints is consistent."
+  },
+  {
+    "source": "linear-algebra/row-space",
+    "target": "linear-algebra/column-space",
+    "label": "dual of",
+    "description": "The row space of A is the column space of the transpose — together they form two of the four fundamental subspaces, and both have dimension equal to rank(A), linking the row and column perspectives of a matrix."
+  },
+  {
+    "source": "linear-algebra/row-space",
+    "target": "linear-algebra/null-space",
+    "label": "orthogonal complement of",
+    "description": "The row space and null space are orthogonal complements in R^n — every vector decomposes uniquely into a row-space component (systematic risk) and a null-space component (factor-neutral direction), which is the geometric basis of factor model hedging."
+  },
+  {
+    "source": "linear-algebra/row-space",
+    "target": "linear-algebra/rank",
+    "label": "dimension equals",
+    "description": "The dimension of the row space equals the rank of the matrix — rank measures the number of independent rows, which determines the number of independent risk factors in a factor loading matrix."
+  },
+  {
+    "source": "linear-algebra/row-space",
+    "target": "linear-algebra/row-reduction",
+    "label": "preserved by",
+    "description": "Row reduction preserves the row space while simplifying it to echelon form — the non-zero rows of the reduced matrix form a basis for the row space, making row reduction the standard method for finding it."
+  },
+  {
+    "source": "linear-algebra/similar-matrices",
+    "target": "linear-algebra/change-of-basis",
+    "label": "expressed via",
+    "description": "Similarity B = P⁻¹AP is the algebraic form of a change of basis — P translates between two coordinate systems, and similar matrices are exactly those that represent the same transformation in different bases."
+  },
+  {
+    "source": "linear-algebra/similar-matrices",
+    "target": "linear-algebra/diagonalisation",
+    "label": "foundation of",
+    "description": "Diagonalisation is the special case of similarity where B is diagonal — saying A is diagonalisable means it is similar to the diagonal matrix of its eigenvalues, which underpins spectral decomposition and PCA."
+  },
+  {
+    "source": "linear-algebra/similar-matrices",
+    "target": "linear-algebra/eigenvalues-and-eigenvectors",
+    "label": "preserves",
+    "description": "Similar matrices share the same eigenvalues because they have identical characteristic polynomials — this invariance is why eigenvalues characterise a linear transformation independently of the chosen basis."
+  },
+  {
+    "source": "linear-algebra/similar-matrices",
+    "target": "linear-algebra/trace",
+    "label": "preserves",
+    "description": "The trace is invariant under similarity because tr(P⁻¹AP) = tr(A) — this makes the trace a basis-independent summary statistic, equal to the sum of eigenvalues regardless of representation."
   },
   {
     "source": "linear-algebra/singular-value-decomposition",
@@ -5742,6 +6180,24 @@
     "description": "Margin calls are the primary trigger of fire sales — when leveraged investors cannot meet margin demands with cash, they are forced to liquidate positions at whatever price the market will bear."
   },
   {
+    "source": "risk/initial-margin",
+    "target": "risk/counterparty-credit-risk",
+    "label": "mitigates",
+    "description": "Initial margin directly mitigates counterparty credit risk by ensuring that collateral is available to cover potential losses during the close-out period if a counterparty defaults, reducing the expected exposure that feeds into CVA calculations."
+  },
+  {
+    "source": "risk/initial-margin",
+    "target": "risk/margin-requirements",
+    "label": "specialises",
+    "description": "Initial margin is the specific upfront collateral component of the broader margin requirements framework — while margin requirements encompass both initial and maintenance margin, the IM card focuses on the ISDA SIMM calculation methodology and the bilateral posting regime under uncleared margin rules."
+  },
+  {
+    "source": "risk/initial-margin",
+    "target": "risk/value-at-risk",
+    "label": "calibrated by",
+    "description": "Initial margin levels are calibrated using VaR or expected shortfall at a high confidence level over the margin period of risk — the same quantile-based loss estimation that underpins market risk capital charges is used to size the collateral buffer."
+  },
+  {
     "source": "risk/key-rate-duration",
     "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
     "label": "granular measure of",
@@ -5814,6 +6270,12 @@
     "description": "Exchanges and clearing houses set initial margin levels to cover potential losses at a high confidence level (typically 99% VaR over the margin period of risk), making VaR the quantitative backbone of margin policy."
   },
   {
+    "source": "risk/margin-requirements",
+    "target": "risk/variation-margin",
+    "label": "specifies",
+    "description": "Margin requirements specify the rules governing variation margin — including the frequency of settlement, eligible collateral, and the mark-to-market methodology used to calculate daily payment obligations."
+  },
+  {
     "source": "risk/maximum-drawdown",
     "target": "financial-maths/absolute-return",
     "label": "risk measure for",
@@ -5884,6 +6346,24 @@
     "target": "risk/value-at-risk",
     "label": "complements",
     "description": "Stress testing complements VaR by evaluating portfolio losses under extreme scenarios that VaR — which focuses on a specific confidence level under normal conditions — may not capture."
+  },
+  {
+    "source": "risk/variation-margin",
+    "target": "financial-maths/central-counterparty",
+    "label": "settled through",
+    "description": "Variation margin is settled daily through the central counterparty, which collects cash from losing clearing members and pays it to gaining members, ensuring that mark-to-market exposure never accumulates."
+  },
+  {
+    "source": "risk/variation-margin",
+    "target": "financial-maths/collateral-management",
+    "label": "component of",
+    "description": "Variation margin is the daily settlement component of collateral management — it ensures that the collateral held against a derivatives position tracks the current mark-to-market value rather than the value at trade inception."
+  },
+  {
+    "source": "risk/variation-margin",
+    "target": "risk/margin-call",
+    "label": "prevents",
+    "description": "Daily variation margin settlement prevents large margin calls from building up by continuously realising gains and losses in cash, so that the outstanding exposure at any point is limited to at most one day’s market movement."
   },
   {
     "source": "risk/value-at-risk",
@@ -8194,5 +8674,29 @@
     "target": "volatility/volatility-surface",
     "label": "is a dimension of",
     "description": "The volatility term structure is the time axis of the volatility surface — at each maturity the surface has a smile across strikes, and the ATM slice across maturities forms the term structure."
+  },
+  {
+    "source": "financial-maths/order-flow-imbalance",
+    "target": "financial-maths/price-discovery-markets",
+    "label": "drives",
+    "description": "Order flow imbalance drives price discovery by revealing the net direction of informed and uninformed trading pressure — persistent imbalance signals that new information is being incorporated into the market price."
+  },
+  {
+    "source": "financial-maths/price-discovery-markets",
+    "target": "financial-maths/bid-ask-spread",
+    "label": "reflected in",
+    "description": "The bid-ask spread reflects the cost and speed of price discovery — wider spreads indicate higher adverse selection risk, meaning market makers face greater uncertainty about the true price and charge more for providing immediacy."
+  },
+  {
+    "source": "financial-maths/price-discovery-markets",
+    "target": "financial-maths/limit-order-book",
+    "label": "occurs through",
+    "description": "Price discovery occurs through the limit order book as the continuous arrival and cancellation of orders at different price levels reveals traders' private valuations and gradually moves the market towards the equilibrium price."
+  },
+  {
+    "source": "financial-maths/price-discovery-markets",
+    "target": "financial-maths/liquidity",
+    "label": "requires",
+    "description": "Price discovery requires liquidity — without sufficient depth and participation on both sides of the market, prices cannot efficiently aggregate information and may diverge from fundamental value for extended periods."
   }
 ]

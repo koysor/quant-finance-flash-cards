@@ -487,19 +487,6 @@
     ],
     "videos": []
   },
-  "computational-finance/scipy-optimisation-for-calibration": {
-    "websites": [
-      {
-        "title": "SciPy Documentation — scipy.optimize.minimize",
-        "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html"
-      },
-      {
-        "title": "SciPy Documentation — scipy.optimize.brentq",
-        "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.brentq.html"
-      }
-    ],
-    "videos": []
-  },
   "computational-finance/numerical-greeks-by-finite-difference": {
     "websites": [
       {
@@ -561,6 +548,19 @@
       {
         "title": "NumPy Documentation — Random Sampling",
         "url": "https://numpy.org/doc/stable/reference/random/index.html"
+      }
+    ],
+    "videos": []
+  },
+  "computational-finance/scipy-optimisation-for-calibration": {
+    "websites": [
+      {
+        "title": "SciPy Documentation — scipy.optimize.minimize",
+        "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html"
+      },
+      {
+        "title": "SciPy Documentation — scipy.optimize.brentq",
+        "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.brentq.html"
       }
     ],
     "videos": []
@@ -716,6 +716,28 @@
       }
     ],
     "videos": []
+  },
+  "derivatives/cost-of-carry-markets": {
+    "websites": [
+      {
+        "title": "Investopedia — Cost of Carry",
+        "url": "https://www.investopedia.com/terms/c/costofcarry.asp"
+      },
+      {
+        "title": "Wikipedia — Cost of Carry",
+        "url": "https://en.wikipedia.org/wiki/Cost_of_carry"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Forward and Futures Contracts",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/forward-futures-contracts/v/forward-contract-introduction"
+      },
+      {
+        "title": "Investopedia — Contango and Backwardation Explained",
+        "url": "https://www.investopedia.com/terms/c/contango.asp"
+      }
+    ]
   },
   "derivatives/d1-and-d2-in-black-scholes": {
     "websites": [
@@ -1230,6 +1252,28 @@
       }
     ],
     "videos": []
+  },
+  "derivatives/spot-price": {
+    "websites": [
+      {
+        "title": "Investopedia — Spot Price",
+        "url": "https://www.investopedia.com/terms/s/spotprice.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Spot Price",
+        "url": "https://corporatefinanceinstitute.com/resources/derivatives/spot-price/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Forward and Futures Contracts",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/forward-futures-intro/v/forward-contract-introduction"
+      },
+      {
+        "title": "Investopedia — Spot Price vs. Futures Price",
+        "url": "https://www.investopedia.com/ask/answers/difference-between-futures-and-spot-prices/"
+      }
+    ]
   },
   "derivatives/statistical-arbitrage": {
     "websites": [
@@ -2178,6 +2222,72 @@
     ],
     "videos": []
   },
+  "linear-algebra/augmented-matrix": {
+    "websites": [
+      {
+        "title": "Khan Academy — Augmented Matrix",
+        "url": "https://www.khanacademy.org/math/algebra-home/alg-matrices/alg-representing-systems-with-matrices/v/representing-a-linear-system-as-a-matrix-equation"
+      },
+      {
+        "title": "Wikipedia — Augmented Matrix",
+        "url": "https://en.wikipedia.org/wiki/Augmented_matrix"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Solving Linear Systems with Augmented Matrices",
+        "url": "https://www.khanacademy.org/math/algebra-home/alg-matrices/alg-representing-systems-with-matrices/v/solving-a-system-of-linear-equations-with-augmented-matrix"
+      },
+      {
+        "title": "The Organic Chemistry Tutor — Augmented Matrices",
+        "url": "https://www.youtube.com/watch?v=AUqeb9Z3y3k"
+      }
+    ]
+  },
+  "linear-algebra/back-substitution": {
+    "websites": [
+      {
+        "title": "Wikipedia — Triangular Matrix (Back Substitution)",
+        "url": "https://en.wikipedia.org/wiki/Triangular_matrix#Forward_and_back_substitution"
+      },
+      {
+        "title": "Khan Academy — Solving a System Using Back Substitution",
+        "url": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:eq/x2ec2f6f830c9fb89:tri-sys/v/solving-triangular-systems"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Inverse Matrices, Column Space and Null Space",
+        "url": "https://www.youtube.com/watch?v=uQhTuRlWMxw"
+      },
+      {
+        "title": "Professor Leonard — Back Substitution and Gaussian Elimination",
+        "url": "https://www.youtube.com/watch?v=eDb6iugi6Uk"
+      }
+    ]
+  },
+  "linear-algebra/block-matrices": {
+    "websites": [
+      {
+        "title": "Wikipedia — Block Matrix",
+        "url": "https://en.wikipedia.org/wiki/Block_matrix"
+      },
+      {
+        "title": "Wikipedia — Schur Complement",
+        "url": "https://en.wikipedia.org/wiki/Schur_complement"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Block Matrices and Subspaces",
+        "url": "https://www.youtube.com/watch?v=lUUte2o2Sn8"
+      },
+      {
+        "title": "3Blue1Brown — Essence of Linear Algebra",
+        "url": "https://www.youtube.com/watch?v=fNk_zzaMoSs"
+      }
+    ]
+  },
   "linear-algebra/cholesky-decomposition": {
     "websites": [
       {
@@ -2212,6 +2322,28 @@
       }
     ],
     "videos": []
+  },
+  "linear-algebra/cramers-rule": {
+    "websites": [
+      {
+        "title": "Wikipedia — Cramer's Rule",
+        "url": "https://en.wikipedia.org/wiki/Cramer%27s_rule"
+      },
+      {
+        "title": "MathWorld — Cramer's Rule",
+        "url": "https://mathworld.wolfram.com/CramersRule.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Cramer's Rule, Geometrically",
+        "url": "https://www.youtube.com/watch?v=jBsC34PxzoM"
+      },
+      {
+        "title": "Khan Academy — Cramer's Rule for 2x2 Systems",
+        "url": "https://www.youtube.com/watch?v=AUqeb9Z3y3k"
+      }
+    ]
   },
   "linear-algebra/determinant": {
     "websites": [
@@ -2265,6 +2397,94 @@
     ],
     "videos": []
   },
+  "linear-algebra/elementary-matrices": {
+    "websites": [
+      {
+        "title": "Wikipedia — Elementary Matrix",
+        "url": "https://en.wikipedia.org/wiki/Elementary_matrix"
+      },
+      {
+        "title": "Khan Academy — Inverse of Elementary Matrices",
+        "url": "https://www.khanacademy.org/math/linear-algebra/matrix-transformations/inverse-transformations/v/linear-algebra-deriving-a-method-for-determining-inverses"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Inverse Matrices, Column Space and Null Space",
+        "url": "https://www.youtube.com/watch?v=uQhTuRlWMxw"
+      },
+      {
+        "title": "MIT OpenCourseWare — Elimination Matrices",
+        "url": "https://www.youtube.com/watch?v=QVKj3LADCnA"
+      }
+    ]
+  },
+  "linear-algebra/forward-elimination": {
+    "websites": [
+      {
+        "title": "Wikipedia — Gaussian Elimination",
+        "url": "https://en.wikipedia.org/wiki/Gaussian_elimination"
+      },
+      {
+        "title": "MathWorld — Gaussian Elimination",
+        "url": "https://mathworld.wolfram.com/GaussianElimination.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Nonsquare Matrices as Transformations Between Dimensions",
+        "url": "https://www.youtube.com/watch?v=v8VSDg_WQlA"
+      },
+      {
+        "title": "Professor Leonard — Gaussian Elimination and Row Echelon Form",
+        "url": "https://www.youtube.com/watch?v=L0CmbneYETs"
+      }
+    ]
+  },
+  "linear-algebra/free-variables": {
+    "websites": [
+      {
+        "title": "Khan Academy — Free Variables and Pivot Variables",
+        "url": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/null-column-space/v/null-space-2-calculating-the-null-space-of-a-matrix"
+      },
+      {
+        "title": "Wikipedia — Free and Bound Variables (Linear Algebra Context)",
+        "url": "https://en.wikipedia.org/wiki/Free_variables_and_bound_variables"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Inverse Matrices, Column Space and Null Space",
+        "url": "https://www.youtube.com/watch?v=uQhTuRlWMxw"
+      },
+      {
+        "title": "Khan Academy — Null Space 2: Calculating the Null Space of a Matrix",
+        "url": "https://www.youtube.com/watch?v=qvyboGryeA8"
+      }
+    ]
+  },
+  "linear-algebra/homogeneous-systems": {
+    "websites": [
+      {
+        "title": "Khan Academy — Null Space and Homogeneous Systems",
+        "url": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/null-column-space/v/null-space-2-calculating-the-null-space-of-a-matrix"
+      },
+      {
+        "title": "Wikipedia — System of Linear Equations (Homogeneous Systems)",
+        "url": "https://en.wikipedia.org/wiki/System_of_linear_equations#Homogeneous_systems"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Null Space (Essence of Linear Algebra)",
+        "url": "https://www.youtube.com/watch?v=uQhTuRlWMxw"
+      },
+      {
+        "title": "MIT OpenCourseWare — Solving Ax = 0: Pivot Variables, Special Solutions",
+        "url": "https://www.youtube.com/watch?v=VqP2tREMvt0"
+      }
+    ]
+  },
   "linear-algebra/linear-transformations": {
     "websites": [
       {
@@ -2277,6 +2497,28 @@
       }
     ],
     "videos": []
+  },
+  "linear-algebra/matrix-exponential": {
+    "websites": [
+      {
+        "title": "Wikipedia — Matrix Exponential",
+        "url": "https://en.wikipedia.org/wiki/Matrix_exponential"
+      },
+      {
+        "title": "Wolfram MathWorld — Matrix Exponential",
+        "url": "https://mathworld.wolfram.com/MatrixExponential.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — How (and why) to raise e to the power of a matrix",
+        "url": "https://www.youtube.com/watch?v=O85OWBJ2ayo"
+      },
+      {
+        "title": "MIT OpenCourseWare — Matrix Exponentials",
+        "url": "https://www.youtube.com/watch?v=IZqwi0wJovM"
+      }
+    ]
   },
   "linear-algebra/matrix-inverse": {
     "websites": [
@@ -2317,6 +2559,94 @@
     ],
     "videos": []
   },
+  "linear-algebra/outer-product": {
+    "websites": [
+      {
+        "title": "Wikipedia — Outer Product",
+        "url": "https://en.wikipedia.org/wiki/Outer_product"
+      },
+      {
+        "title": "Investopedia — Covariance Matrix in Finance",
+        "url": "https://www.investopedia.com/terms/c/covariancematrix.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Essence of Linear Algebra",
+        "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"
+      },
+      {
+        "title": "Khan Academy — Vectors and Matrix Multiplication",
+        "url": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces"
+      }
+    ]
+  },
+  "linear-algebra/pivot": {
+    "websites": [
+      {
+        "title": "Wikipedia — Pivot Element",
+        "url": "https://en.wikipedia.org/wiki/Pivot_element"
+      },
+      {
+        "title": "Khan Academy — Row Echelon Form and Pivots",
+        "url": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/matrices-elimination/v/matrices-reduced-row-echelon-form-2"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Pivot Entries and Pivot Columns",
+        "url": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/matrices-elimination/v/matrices-reduced-row-echelon-form-3"
+      },
+      {
+        "title": "The Organic Chemistry Tutor — Row Echelon Form and Pivots",
+        "url": "https://www.youtube.com/watch?v=AUqeb9Z3y3k"
+      }
+    ]
+  },
+  "linear-algebra/pivot-column": {
+    "websites": [
+      {
+        "title": "Khan Academy — Pivot Entries and Pivot Columns",
+        "url": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/null-column-space/v/null-space-2-calculating-the-null-space-of-a-matrix"
+      },
+      {
+        "title": "Wikipedia — Pivot Element",
+        "url": "https://en.wikipedia.org/wiki/Pivot_element"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Essence of Linear Algebra",
+        "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"
+      },
+      {
+        "title": "Professor Leonard — Solving Systems with Row Reduction",
+        "url": "https://www.youtube.com/watch?v=L0CmbneYETs"
+      }
+    ]
+  },
+  "linear-algebra/pivoting-strategies": {
+    "websites": [
+      {
+        "title": "Wikipedia — Pivot Element",
+        "url": "https://en.wikipedia.org/wiki/Pivot_element"
+      },
+      {
+        "title": "LibreTexts — Partial Pivoting",
+        "url": "https://math.libretexts.org/Bookshelves/Linear_Algebra"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Professor Leonard — Gaussian Elimination with Partial Pivoting",
+        "url": "https://www.youtube.com/watch?v=2j5Ic2V7wq4"
+      },
+      {
+        "title": "Steve Brunton — Numerical Linear Algebra (LU Decomposition)",
+        "url": "https://www.youtube.com/watch?v=m3EojSAgIao"
+      }
+    ]
+  },
   "linear-algebra/positive-definite-matrices": {
     "websites": [
       {
@@ -2347,6 +2677,72 @@
       }
     ],
     "videos": []
+  },
+  "linear-algebra/reduced-row-echelon-form": {
+    "websites": [
+      {
+        "title": "Khan Academy — Reduced Row Echelon Form",
+        "url": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/matrices-elimination/v/reduced-row-echelon-form"
+      },
+      {
+        "title": "Wikipedia — Row Echelon Form",
+        "url": "https://en.wikipedia.org/wiki/Row_echelon_form"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Inverse Matrices, Column Space and Null Space",
+        "url": "https://www.youtube.com/watch?v=uQhTuRlWMxw"
+      },
+      {
+        "title": "Khan Academy — Reduced Row Echelon Form",
+        "url": "https://www.youtube.com/watch?v=lP1DGtZ8Wys"
+      }
+    ]
+  },
+  "linear-algebra/row-space": {
+    "websites": [
+      {
+        "title": "Khan Academy — Row Space and Column Space",
+        "url": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/null-column-space/v/row-space-and-column-space"
+      },
+      {
+        "title": "Wikipedia — Row and Column Spaces",
+        "url": "https://en.wikipedia.org/wiki/Row_and_column_spaces"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Linear Algebra: Column Space and Null Space",
+        "url": "https://www.youtube.com/watch?v=uQhTuRlWMxw"
+      },
+      {
+        "title": "MIT OpenCourseWare — Column Space and Nullspace",
+        "url": "https://www.youtube.com/watch?v=8o5Cmfpeo6g"
+      }
+    ]
+  },
+  "linear-algebra/similar-matrices": {
+    "websites": [
+      {
+        "title": "Wikipedia — Matrix Similarity",
+        "url": "https://en.wikipedia.org/wiki/Matrix_similarity"
+      },
+      {
+        "title": "MathWorld — Similar Matrices",
+        "url": "https://mathworld.wolfram.com/SimilarMatrices.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Change of Basis",
+        "url": "https://www.youtube.com/watch?v=P2LTAUO1TdA"
+      },
+      {
+        "title": "MIT OpenCourseWare — Similar Matrices",
+        "url": "https://www.youtube.com/watch?v=TSdXJw83kyA"
+      }
+    ]
   },
   "linear-algebra/singular-value-decomposition": {
     "websites": [
@@ -3556,6 +3952,28 @@
     ],
     "videos": []
   },
+  "risk/initial-margin": {
+    "websites": [
+      {
+        "title": "Investopedia — Initial Margin",
+        "url": "https://www.investopedia.com/terms/i/initialmargin.asp"
+      },
+      {
+        "title": "ISDA — ISDA SIMM",
+        "url": "https://www.isda.org/category/margin/isda-simm/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Futures Margin Mechanics",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/forward-futures-contracts/v/futures-margin-mechanics"
+      },
+      {
+        "title": "Khan Academy — Verifying Hedge with Futures Margin Mechanics",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/forward-futures-contracts/v/verifying-hedge-with-futures-margin-mechanics"
+      }
+    ]
+  },
   "risk/key-rate-duration": {
     "websites": [
       {
@@ -3683,6 +4101,19 @@
       {
         "title": "Wikipedia — Value at Risk",
         "url": "https://en.wikipedia.org/wiki/Value_at_risk"
+      }
+    ],
+    "videos": []
+  },
+  "risk/variation-margin": {
+    "websites": [
+      {
+        "title": "Investopedia — Variation Margin",
+        "url": "https://www.investopedia.com/terms/v/variationmargin.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Variation Margin",
+        "url": "https://corporatefinanceinstitute.com/resources/derivatives/variation-margin/"
       }
     ],
     "videos": []
@@ -5080,5 +5511,27 @@
       }
     ],
     "videos": []
+  },
+  "financial-maths/price-discovery-markets": {
+    "websites": [
+      {
+        "title": "Investopedia — Price Discovery",
+        "url": "https://www.investopedia.com/terms/p/pricediscovery.asp"
+      },
+      {
+        "title": "Wikipedia — Price Discovery",
+        "url": "https://en.wikipedia.org/wiki/Price_discovery"
+      }
+    ],
+    "videos": [
+      {
+        "title": "IG — What Is Price Discovery and How Does It Work?",
+        "url": "https://www.ig.com/en/trading-strategies/what-is-price-discovery-and-how-does-it-work--190605"
+      },
+      {
+        "title": "Britannica Money — What Is Price Discovery?",
+        "url": "https://www.britannica.com/money/price-discovery"
+      }
+    ]
   }
 }
