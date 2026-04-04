@@ -887,6 +887,19 @@
     ],
     "videos": []
   },
+  "derivatives/gamma-scalping": {
+    "websites": [
+      {
+        "title": "Investopedia — Gamma Hedging",
+        "url": "https://www.investopedia.com/terms/g/gamma-hedging.asp"
+      },
+      {
+        "title": "Wikipedia — Greeks (Finance) — Gamma",
+        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)#Gamma"
+      }
+    ],
+    "videos": []
+  },
   "derivatives/greeks-by-finite-difference": {
     "websites": [
       {
@@ -896,6 +909,19 @@
       {
         "title": "Wikipedia — Numerical Differentiation",
         "url": "https://en.wikipedia.org/wiki/Numerical_differentiation"
+      }
+    ],
+    "videos": []
+  },
+  "derivatives/greeks-portfolio-management": {
+    "websites": [
+      {
+        "title": "Investopedia — Option Greeks",
+        "url": "https://www.investopedia.com/terms/g/greeks.asp"
+      },
+      {
+        "title": "Wikipedia — Greeks (Finance)",
+        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)"
       }
     ],
     "videos": []
@@ -921,6 +947,19 @@
         "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/forward-futures-intro/v/hedging-by-shorting-futures"
       }
     ]
+  },
+  "derivatives/hedging-error": {
+    "websites": [
+      {
+        "title": "Wikipedia — Delta Hedging",
+        "url": "https://en.wikipedia.org/wiki/Delta_neutral"
+      },
+      {
+        "title": "Investopedia — Delta Hedging",
+        "url": "https://www.investopedia.com/terms/d/deltahedging.asp"
+      }
+    ],
+    "videos": []
   },
   "derivatives/law-of-one-price": {
     "websites": [
@@ -1079,6 +1118,19 @@
       }
     ]
   },
+  "derivatives/option-replication": {
+    "websites": [
+      {
+        "title": "Investopedia — Replicating Portfolio",
+        "url": "https://www.investopedia.com/terms/r/replicating-portfolio.asp"
+      },
+      {
+        "title": "Wikipedia — Replicating Portfolio",
+        "url": "https://en.wikipedia.org/wiki/Replicating_portfolio"
+      }
+    ],
+    "videos": []
+  },
   "derivatives/option-premium-decomposition": {
     "websites": [
       {
@@ -1227,6 +1279,19 @@
     ],
     "videos": []
   },
+  "derivatives/self-financing-portfolio": {
+    "websites": [
+      {
+        "title": "Wikipedia — Self-Financing Portfolio",
+        "url": "https://en.wikipedia.org/wiki/Self-financing_portfolio"
+      },
+      {
+        "title": "Investopedia — Replicating Portfolio",
+        "url": "https://www.investopedia.com/terms/r/replicating-portfolio.asp"
+      }
+    ],
+    "videos": []
+  },
   "derivatives/snell-envelope": {
     "websites": [
       {
@@ -1309,6 +1374,19 @@
         "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/black-scholes/v/introduction-to-the-black-scholes-formula"
       }
     ]
+  },
+  "derivatives/synthetic-position": {
+    "websites": [
+      {
+        "title": "Investopedia — Synthetic Position",
+        "url": "https://www.investopedia.com/terms/s/synthetic.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Synthetic Options",
+        "url": "https://corporatefinanceinstitute.com/resources/derivatives/synthetic-options/"
+      }
+    ],
+    "videos": []
   },
   "derivatives/swaption": {
     "websites": [
@@ -1516,6 +1594,19 @@
     ],
     "videos": []
   },
+  "derivatives/vega-hedging": {
+    "websites": [
+      {
+        "title": "Investopedia — Vega Neutral",
+        "url": "https://www.investopedia.com/terms/v/vega-neutral.asp"
+      },
+      {
+        "title": "Wikipedia — Greeks (Finance)",
+        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)"
+      }
+    ],
+    "videos": []
+  },
   "derivatives/volga-greeks": {
     "websites": [
       {
@@ -1711,6 +1802,19 @@
         "url": "https://www.fdic.gov/resources/bankers/capital-markets/interest-rate-risk/"
       }
     ]
+  },
+  "financial-maths/event-driven-strategy": {
+    "websites": [
+      {
+        "title": "Investopedia — Event-Driven Strategy",
+        "url": "https://www.investopedia.com/terms/e/eventdriven.asp"
+      },
+      {
+        "title": "Wikipedia — Event-Driven Investing",
+        "url": "https://en.wikipedia.org/wiki/Event-driven_investing"
+      }
+    ],
+    "videos": []
   },
   "financial-maths/factor-investing": {
     "websites": [
@@ -2044,6 +2148,19 @@
     ],
     "videos": []
   },
+  "financial-maths/relative-value-strategy": {
+    "websites": [
+      {
+        "title": "Investopedia — Relative Value",
+        "url": "https://www.investopedia.com/terms/r/relative-value.asp"
+      },
+      {
+        "title": "Wikipedia — Relative Value (Economics)",
+        "url": "https://en.wikipedia.org/wiki/Relative_value_(economics)"
+      }
+    ],
+    "videos": []
+  },
   "financial-maths/repo-agreement": {
     "websites": [
       {
@@ -2166,6 +2283,19 @@
       {
         "title": "Wikipedia — Volume-Weighted Average Price",
         "url": "https://en.wikipedia.org/wiki/Volume-weighted_average_price"
+      }
+    ],
+    "videos": []
+  },
+  "fixed-income/convergence-trading": {
+    "websites": [
+      {
+        "title": "Investopedia — Convergence Trade",
+        "url": "https://www.investopedia.com/terms/c/convergence.asp"
+      },
+      {
+        "title": "Investopedia — On-the-Run Treasuries",
+        "url": "https://www.investopedia.com/terms/o/on-the-runtreasuries.asp"
       }
     ],
     "videos": []
@@ -2485,6 +2615,28 @@
       }
     ]
   },
+  "linear-algebra/linear-independence": {
+    "websites": [
+      {
+        "title": "Khan Academy — Linear Independence",
+        "url": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/linear-independence/v/linear-algebra-introduction-to-linear-independence"
+      },
+      {
+        "title": "Wikipedia — Linear Independence",
+        "url": "https://en.wikipedia.org/wiki/Linear_independence"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Linear Combinations, Span, and Basis Vectors",
+        "url": "https://www.youtube.com/watch?v=k7RM-ot2NWY"
+      },
+      {
+        "title": "Khan Academy — Introduction to Linear Independence",
+        "url": "https://www.youtube.com/watch?v=CrV1xCWdY-g"
+      }
+    ]
+  },
   "linear-algebra/linear-transformations": {
     "websites": [
       {
@@ -2756,6 +2908,28 @@
       }
     ],
     "videos": []
+  },
+  "linear-algebra/span-of-a-set-of-vectors": {
+    "websites": [
+      {
+        "title": "Khan Academy — Linear Combinations and Span",
+        "url": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/linear-combinations/v/linear-combinations-and-span"
+      },
+      {
+        "title": "Wikipedia — Linear Span",
+        "url": "https://en.wikipedia.org/wiki/Linear_span"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Linear Combinations, Span, and Basis Vectors",
+        "url": "https://www.youtube.com/watch?v=k7RM-ot2NWY"
+      },
+      {
+        "title": "Khan Academy — Linear Combinations and Span",
+        "url": "https://www.youtube.com/watch?v=Qm_OS-8COwU"
+      }
+    ]
   },
   "linear-algebra/spectral-decomposition": {
     "websites": [
@@ -3119,6 +3293,19 @@
     ],
     "videos": []
   },
+  "portfolio-theory/contrarian-investor": {
+    "websites": [
+      {
+        "title": "Investopedia — Contrarian Investing",
+        "url": "https://www.investopedia.com/terms/c/contrarian.asp"
+      },
+      {
+        "title": "Corporate Finance Institute — Contrarian Investing",
+        "url": "https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/contrarian/"
+      }
+    ],
+    "videos": []
+  },
   "portfolio-theory/cross-sectional-vs-time-series-momentum": {
     "websites": [
       {
@@ -3206,6 +3393,19 @@
       {
         "title": "Wikipedia — Mean Reversion (Finance)",
         "url": "https://en.wikipedia.org/wiki/Mean_reversion_(finance)"
+      }
+    ],
+    "videos": []
+  },
+  "portfolio-theory/momentum-investor": {
+    "websites": [
+      {
+        "title": "Investopedia — Momentum Investing",
+        "url": "https://www.investopedia.com/terms/m/momentum_investing.asp"
+      },
+      {
+        "title": "Wikipedia — Momentum Investing",
+        "url": "https://en.wikipedia.org/wiki/Momentum_investing"
       }
     ],
     "videos": []
@@ -4105,6 +4305,19 @@
     ],
     "videos": []
   },
+  "risk/tail-risk-hedging": {
+    "websites": [
+      {
+        "title": "Investopedia — Tail Risk",
+        "url": "https://www.investopedia.com/terms/t/tailrisk.asp"
+      },
+      {
+        "title": "Wikipedia — Tail Risk",
+        "url": "https://en.wikipedia.org/wiki/Tail_risk"
+      }
+    ],
+    "videos": []
+  },
   "risk/variation-margin": {
     "websites": [
       {
@@ -4540,6 +4753,19 @@
       {
         "title": "Investopedia — GARCH Process",
         "url": "https://www.investopedia.com/terms/g/garch.asp"
+      }
+    ],
+    "videos": []
+  },
+  "statistics/garch-volatility-forecasting": {
+    "websites": [
+      {
+        "title": "Investopedia — GARCH Process",
+        "url": "https://www.investopedia.com/terms/g/garch.asp"
+      },
+      {
+        "title": "Wikipedia — Volatility Forecasting",
+        "url": "https://en.wikipedia.org/wiki/Volatility_(finance)#Forecasting"
       }
     ],
     "videos": []
@@ -5294,6 +5520,19 @@
     ],
     "videos": []
   },
+  "volatility/dispersion-trading": {
+    "websites": [
+      {
+        "title": "Investopedia — Dispersion Trading",
+        "url": "https://www.investopedia.com/terms/d/dispersion.asp"
+      },
+      {
+        "title": "Wikipedia — Correlation Trading",
+        "url": "https://en.wikipedia.org/wiki/Correlation_trading"
+      }
+    ],
+    "videos": []
+  },
   "volatility/heston-model": {
     "websites": [
       {
@@ -5346,6 +5585,19 @@
     ],
     "videos": []
   },
+  "volatility/long-volatility": {
+    "websites": [
+      {
+        "title": "Investopedia — Long Straddle Strategy",
+        "url": "https://www.investopedia.com/terms/l/longstraddle.asp"
+      },
+      {
+        "title": "Wikipedia — Volatility (Finance)",
+        "url": "https://en.wikipedia.org/wiki/Volatility_(finance)"
+      }
+    ],
+    "videos": []
+  },
   "volatility/realised-volatility": {
     "websites": [
       {
@@ -5373,6 +5625,19 @@
       {
         "title": "Investopedia — Stochastic Volatility",
         "url": "https://www.investopedia.com/terms/s/stochastic-volatility.asp"
+      }
+    ],
+    "videos": []
+  },
+  "volatility/short-volatility": {
+    "websites": [
+      {
+        "title": "Investopedia — Short Straddle Strategy",
+        "url": "https://www.investopedia.com/terms/s/shortstraddle.asp"
+      },
+      {
+        "title": "Wikipedia — Volatility (Finance)",
+        "url": "https://en.wikipedia.org/wiki/Volatility_(finance)"
       }
     ],
     "videos": []
@@ -5412,6 +5677,19 @@
       {
         "title": "Investopedia — Variance Swap",
         "url": "https://www.investopedia.com/terms/v/varianceswap.asp"
+      }
+    ],
+    "videos": []
+  },
+  "volatility/volatility-arbitrage": {
+    "websites": [
+      {
+        "title": "Investopedia — Volatility Arbitrage",
+        "url": "https://www.investopedia.com/terms/v/volatility-arbitrage.asp"
+      },
+      {
+        "title": "Wikipedia — Volatility Arbitrage",
+        "url": "https://en.wikipedia.org/wiki/Volatility_arbitrage"
       }
     ],
     "videos": []
@@ -5456,6 +5734,19 @@
       {
         "title": "Corporate Finance Institute — Volatility Trading Tools",
         "url": "https://corporatefinanceinstitute.com/resources/derivatives/implied-volatility/"
+      }
+    ],
+    "videos": []
+  },
+  "volatility/volatility-risk-premium-strategies": {
+    "websites": [
+      {
+        "title": "Investopedia — Volatility Risk Premium",
+        "url": "https://www.investopedia.com/terms/v/volatility-risk-premium.asp"
+      },
+      {
+        "title": "Wikipedia — Variance Risk Premium",
+        "url": "https://en.wikipedia.org/wiki/Variance_risk_premium"
       }
     ],
     "videos": []

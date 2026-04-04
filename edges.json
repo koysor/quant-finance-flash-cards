@@ -1308,6 +1308,30 @@
     "description": "Zomma is the derivative of Gamma with respect to implied volatility — it measures how the curvature of the option price shifts when volatility changes."
   },
   {
+    "source": "derivatives/gamma-scalping",
+    "target": "derivatives/delta-hedging",
+    "label": "extends",
+    "description": "Gamma scalping extends delta hedging from a risk-neutralisation technique into a profit-generating strategy — by repeatedly rebalancing the delta hedge, the trader monetises gamma into realised P&L that accumulates with each large move in the underlying."
+  },
+  {
+    "source": "derivatives/gamma-scalping",
+    "target": "derivatives/gamma-greeks",
+    "label": "monetises",
+    "description": "Gamma scalping monetises the gamma of a long option position — the gamma value determines the dollar profit from each rehedge, making it the key Greek that drives the strategy's profitability."
+  },
+  {
+    "source": "derivatives/gamma-scalping",
+    "target": "volatility/long-volatility",
+    "label": "implements",
+    "description": "Gamma scalping is the primary practical implementation of a long volatility position — buying options and delta-hedging isolates the volatility bet, profiting when realised volatility exceeds the implied volatility paid."
+  },
+  {
+    "source": "derivatives/gamma-scalping",
+    "target": "volatility/volatility-arbitrage",
+    "label": "execution method of",
+    "description": "Gamma scalping is the execution method for volatility arbitrage — the trader expresses a view that realised volatility will differ from implied by buying or selling options and delta-hedging to isolate the volatility component."
+  },
+  {
     "source": "derivatives/greeks-by-finite-difference",
     "target": "calculus/differentiation-rules",
     "label": "numerical form of",
@@ -1326,6 +1350,30 @@
     "description": "Greeks computed by finite difference feed directly into P&L attribution — the bumped sensitivities are multiplied by actual market moves to explain the daily P&L."
   },
   {
+    "source": "derivatives/greeks-portfolio-management",
+    "target": "derivatives/delta-hedging",
+    "label": "orchestrates",
+    "description": "Greeks portfolio management orchestrates delta hedging at the book level — rather than hedging each option individually, the desk computes the net portfolio delta and hedges the aggregate, reducing transaction costs."
+  },
+  {
+    "source": "derivatives/greeks-portfolio-management",
+    "target": "derivatives/hedging-error",
+    "label": "monitors",
+    "description": "Greeks portfolio management monitors hedging error across the book — by tracking the residual Greeks after hedging, the desk can estimate the expected P&L variance from discrete rebalancing and prioritise which exposures to hedge first."
+  },
+  {
+    "source": "derivatives/greeks-portfolio-management",
+    "target": "derivatives/option-greeks",
+    "label": "aggregates",
+    "description": "Greeks portfolio management aggregates individual option Greeks into portfolio-level sensitivities — the position-weighted sum of deltas, gammas, vegas, and thetas determines the book's response to market moves."
+  },
+  {
+    "source": "derivatives/greeks-portfolio-management",
+    "target": "derivatives/vega-hedging",
+    "label": "coordinates",
+    "description": "Greeks portfolio management coordinates vega hedging across the book — net vega is decomposed by expiry bucket and strike region to identify where volatility exposure is concentrated and which instruments to use for hedging."
+  },
+  {
     "source": "derivatives/hedge-ratio",
     "target": "derivatives/delta-hedging",
     "label": "applied in",
@@ -1336,6 +1384,30 @@
     "target": "statistics/correlation",
     "label": "uses",
     "description": "The minimum-variance hedge ratio h* = rho * sigma_S / sigma_F depends directly on the correlation between spot and futures price changes — low correlation means the hedge is less effective and the optimal ratio deviates further from one."
+  },
+  {
+    "source": "derivatives/hedging-error",
+    "target": "derivatives/delta-hedging",
+    "label": "residual risk of",
+    "description": "Hedging error is the residual risk that remains when delta hedging is performed discretely rather than continuously — each rebalancing interval accumulates a small P&L error proportional to gamma and the squared price move."
+  },
+  {
+    "source": "derivatives/hedging-error",
+    "target": "derivatives/gamma-greeks",
+    "label": "driven by",
+    "description": "Hedging error is driven by gamma — high-gamma positions (near-the-money, near-expiry options) produce the largest rebalancing errors because the delta changes rapidly between hedge adjustments."
+  },
+  {
+    "source": "derivatives/hedging-error",
+    "target": "derivatives/gamma-scalping",
+    "label": "determines profitability of",
+    "description": "The profitability of gamma scalping depends on keeping hedging error low enough that the gamma profits from discrete rebalancing are not eroded by the noise from imperfect hedge timing."
+  },
+  {
+    "source": "derivatives/hedging-error",
+    "target": "derivatives/option-replication",
+    "label": "imperfection of",
+    "description": "Hedging error quantifies the imperfection of option replication in practice — theoretical continuous replication has zero error, but discrete rebalancing introduces stochastic P&L deviations that scale inversely with the square root of rebalancing frequency."
   },
   {
     "source": "derivatives/law-of-one-price",
@@ -1632,6 +1704,30 @@
     "description": "The put payoff diagram plots the hockey-stick function max(K - S_T, 0), showing that the put holder profits as the underlying falls below the strike."
   },
   {
+    "source": "derivatives/option-replication",
+    "target": "derivatives/black-scholes-equation",
+    "label": "derives",
+    "description": "Option replication derives the Black–Scholes equation — the requirement that a continuously rebalanced portfolio of stock and bonds perfectly replicates the option payoff, combined with Itô's lemma, yields the Black–Scholes PDE without any assumptions about the stock's expected return."
+  },
+  {
+    "source": "derivatives/option-replication",
+    "target": "derivatives/complete-markets",
+    "label": "requires",
+    "description": "Option replication requires market completeness — the number of independent tradeable instruments must equal the number of future states so that every contingent claim can be perfectly replicated with zero residual risk."
+  },
+  {
+    "source": "derivatives/option-replication",
+    "target": "derivatives/delta-hedging",
+    "label": "foundation of",
+    "description": "Option replication is the theoretical foundation of delta hedging — the delta hedge ratio is precisely the number of shares in the replicating portfolio, and continuous rebalancing of this hedge is what makes the replication self-financing."
+  },
+  {
+    "source": "derivatives/option-replication",
+    "target": "derivatives/no-arbitrage-principle",
+    "label": "enforced by",
+    "description": "The replicating portfolio must trade at the same price as the option because the no-arbitrage principle forbids two portfolios with identical payoffs in every state from having different prices."
+  },
+  {
     "source": "derivatives/option-premium-decomposition",
     "target": "derivatives/time-decay",
     "label": "explains erosion of",
@@ -1800,6 +1896,24 @@
     "description": "Risk-neutral pricing is mathematically valid only in an arbitrage-free market — the existence of a risk-neutral measure is equivalent to the assumption that no riskless arbitrage opportunities exist."
   },
   {
+    "source": "derivatives/self-financing-portfolio",
+    "target": "derivatives/delta-hedging",
+    "label": "constraint on",
+    "description": "The self-financing condition constrains delta hedging — when the hedge ratio changes, the cost of buying or selling shares must be funded entirely from the existing portfolio, not from external cash injections."
+  },
+  {
+    "source": "derivatives/self-financing-portfolio",
+    "target": "derivatives/hedging-error",
+    "label": "violated in practice causing",
+    "description": "Transaction costs and bid-ask spreads effectively violate the self-financing condition — each rebalancing trade leaks a small amount of value, contributing to hedging error that accumulates over the option's life."
+  },
+  {
+    "source": "derivatives/self-financing-portfolio",
+    "target": "derivatives/option-replication",
+    "label": "required by",
+    "description": "The self-financing condition is required for option replication to produce a unique no-arbitrage price — if the replicating portfolio could draw on external funds, the cost of replication would depend on the path of the underlying rather than being fixed at inception."
+  },
+  {
     "source": "derivatives/snell-envelope",
     "target": "derivatives/binomial-option-pricing",
     "label": "implemented via",
@@ -1870,6 +1984,24 @@
     "target": "derivatives/underlying-price",
     "label": "compared with",
     "description": "The strike price and underlying price are the two values whose comparison determines an option's intrinsic value and moneyness — the payoff at expiration is simply the difference max(S-K, 0) or max(K-S, 0)."
+  },
+  {
+    "source": "derivatives/synthetic-position",
+    "target": "derivatives/option-replication",
+    "label": "practical application of",
+    "description": "Synthetic positions are the most direct practical application of option replication — constructing a synthetic call from stock plus put, or a synthetic stock from call minus put, demonstrates that replication works in both directions."
+  },
+  {
+    "source": "derivatives/synthetic-position",
+    "target": "derivatives/put-call-parity",
+    "label": "derived from",
+    "description": "Every synthetic position is derived by rearranging put-call parity — the identity C - P = S - Ke^{-rT} can be solved for any one component in terms of the other three, yielding a synthetic version of the missing instrument."
+  },
+  {
+    "source": "derivatives/synthetic-position",
+    "target": "short-selling/short-selling",
+    "label": "alternative to",
+    "description": "A synthetic short (short call + long put) provides an alternative to physical short selling — it achieves the same economic exposure without borrowing shares, avoiding locate requirements and stock-lending fees."
   },
   {
     "source": "derivatives/swaption",
@@ -2076,6 +2208,30 @@
     "description": "Volga is the derivative of Vega with respect to implied volatility — it measures how Vega itself changes as volatility moves, capturing the curvature of the option price in volatility space."
   },
   {
+    "source": "derivatives/vega-hedging",
+    "target": "derivatives/delta-hedging",
+    "label": "complements",
+    "description": "Vega hedging complements delta hedging — delta hedging removes directional risk from the underlying price, while vega hedging removes the separate risk from changes in implied volatility, and both are needed for a fully hedged options book."
+  },
+  {
+    "source": "derivatives/vega-hedging",
+    "target": "derivatives/vega-greeks",
+    "label": "applies",
+    "description": "Vega hedging applies the vega Greek at the portfolio level — individual option vegas are aggregated and neutralised using offsetting positions, extending the single-option sensitivity measure into a practical risk management technique."
+  },
+  {
+    "source": "derivatives/vega-hedging",
+    "target": "volatility/long-volatility",
+    "label": "neutralises",
+    "description": "Vega hedging neutralises long volatility exposure by adding offsetting short-vega positions, converting a directional volatility bet into a hedged book that is insensitive to parallel shifts in implied volatility."
+  },
+  {
+    "source": "derivatives/vega-hedging",
+    "target": "volatility/volatility-surface",
+    "label": "manages risk across",
+    "description": "Vega hedging must account for the full volatility surface — aggregate vega neutrality does not protect against tilts or twists in the surface, requiring bucket-level hedging across strikes and expiries."
+  },
+  {
     "source": "derivatives/xva",
     "target": "financial-maths/central-counterparty",
     "label": "mitigated by clearing at",
@@ -2278,6 +2434,24 @@
     "target": "fixed-income/modified-duration",
     "label": "built from",
     "description": "The duration gap is computed from the modified durations of a bank's assets and liabilities — modified duration is the fundamental building block that quantifies each side's interest rate sensitivity."
+  },
+  {
+    "source": "financial-maths/event-driven-strategy",
+    "target": "derivatives/risk-arbitrage",
+    "label": "encompasses",
+    "description": "Event driven strategies encompass risk arbitrage (merger arbitrage) as their most common sub-strategy — merger arb provides the clearest example of trading a binary corporate event with a defined timeline and quantifiable spread."
+  },
+  {
+    "source": "financial-maths/event-driven-strategy",
+    "target": "financial-maths/hedge-funds",
+    "label": "style of",
+    "description": "Event driven is one of the four major hedge fund strategy styles — dedicated event driven funds typically account for 10–15% of industry assets, specialising in mergers, restructurings, and special situations."
+  },
+  {
+    "source": "financial-maths/event-driven-strategy",
+    "target": "financial-maths/relative-value-strategy",
+    "label": "contrasts with",
+    "description": "Event driven strategies are anchored to specific corporate catalysts with defined timelines, while relative value strategies rely on statistical convergence of spreads without a specific triggering event."
   },
   {
     "source": "financial-maths/factor-investing",
@@ -2718,6 +2892,24 @@
     "description": "Tracking error is the standard deviation of relative returns — it measures how consistently a portfolio follows or deviates from its benchmark over time."
   },
   {
+    "source": "financial-maths/relative-value-strategy",
+    "target": "financial-maths/pairs-trading",
+    "label": "implemented via",
+    "description": "Pairs trading is the simplest implementation of a relative value strategy — it identifies two cointegrated stocks, trades the spread when it deviates from the historical mean, and profits from convergence."
+  },
+  {
+    "source": "financial-maths/relative-value-strategy",
+    "target": "financial-maths/statistical-arbitrage",
+    "label": "generalises",
+    "description": "Relative value generalises statistical arbitrage from equity pairs to any asset class — the same principle of trading mispriced spreads applies to yield curves, volatility surfaces, and cross-asset relationships."
+  },
+  {
+    "source": "financial-maths/relative-value-strategy",
+    "target": "volatility/dispersion-trading",
+    "label": "includes",
+    "description": "Dispersion trading is a relative value strategy in the volatility space — it trades the spread between index implied volatility and single-stock implied volatilities, profiting when implied correlation converges towards realised."
+  },
+  {
     "source": "financial-maths/repo-agreement",
     "target": "financial-maths/funding-rate",
     "label": "determines",
@@ -2908,6 +3100,24 @@
     "target": "fixed-income/option-adjusted-spread",
     "label": "related to",
     "description": "OAS calculation requires an interest rate model to value embedded options on a lattice — the curvature of the price–yield relationship (convexity) determines how much option value is stripped out of the Z-spread to arrive at the OAS."
+  },
+  {
+    "source": "fixed-income/convergence-trading",
+    "target": "financial-maths/relative-value-strategy",
+    "label": "classic example of",
+    "description": "Convergence trading is the classic fixed-income example of a relative value strategy — the on-the-run/off-the-run spread is one of the most well-known relative value trades, exploiting the liquidity premium that systematically overprices the most recently issued bond."
+  },
+  {
+    "source": "fixed-income/convergence-trading",
+    "target": "fixed-income/dv01",
+    "label": "sized using",
+    "description": "Convergence trades are sized using DV01 to ensure the long and short legs have equal interest rate sensitivity — a DV01-neutral position isolates the spread and removes exposure to parallel shifts in the yield curve."
+  },
+  {
+    "source": "fixed-income/convergence-trading",
+    "target": "fixed-income/yield-curve",
+    "label": "trades along",
+    "description": "Convergence trading operates along the yield curve by exploiting pricing differences between bonds of similar maturity — the spread between on-the-run and off-the-run issues at each point on the curve reflects the liquidity premium that the trade seeks to capture."
   },
   {
     "source": "fixed-income/credit-default-swap",
@@ -3211,9 +3421,15 @@
   },
   {
     "source": "linear-algebra/basis-vectors",
-    "target": "linear-algebra/span-and-linear-independence",
-    "label": "combines",
-    "description": "A basis is a set that is simultaneously linearly independent and spanning — it is the minimal spanning set and the maximal independent set, combining both concepts into the most efficient description of a subspace."
+    "target": "linear-algebra/linear-independence",
+    "label": "requires",
+    "description": "A basis must be linearly independent — removing redundant vectors from a spanning set until only independent ones remain yields a basis, the most efficient description of a subspace."
+  },
+  {
+    "source": "linear-algebra/basis-vectors",
+    "target": "linear-algebra/span-of-a-set-of-vectors",
+    "label": "requires",
+    "description": "A basis must span the subspace — every vector in the subspace can be written as a linear combination of the basis vectors, making span the completeness condition for a basis."
   },
   {
     "source": "linear-algebra/block-matrices",
@@ -3661,9 +3877,9 @@
   },
   {
     "source": "linear-algebra/linear-combinations",
-    "target": "linear-algebra/span-and-linear-independence",
+    "target": "linear-algebra/span-of-a-set-of-vectors",
     "label": "defines",
-    "description": "The span of a set of vectors is exactly the set of all their linear combinations — span and linear combination are inseparable concepts, with linear independence determining whether each vector adds a genuinely new direction."
+    "description": "The span of a set of vectors is exactly the set of all their linear combinations — forming every possible weighted sum of the vectors traces out the subspace they span."
   },
   {
     "source": "linear-algebra/linear-transformations",
@@ -4188,16 +4404,28 @@
     "description": "The rank of a matrix equals the number of non-zero singular values — SVD provides the most numerically stable way to determine rank in practice."
   },
   {
-    "source": "linear-algebra/span-and-linear-independence",
+    "source": "linear-algebra/linear-independence",
     "target": "linear-algebra/rank",
     "label": "determines",
     "description": "The rank of a matrix equals the maximum number of linearly independent columns — linear independence is the criterion that determines how many genuinely distinct directions the matrix spans."
   },
   {
-    "source": "linear-algebra/span-and-linear-independence",
+    "source": "linear-algebra/linear-independence",
+    "target": "linear-algebra/span-of-a-set-of-vectors",
+    "label": "constrains",
+    "description": "Linear independence determines how efficiently a set of vectors spans a subspace — dependent vectors are redundant and do not enlarge the span, so the dimension of the span equals the number of independent vectors."
+  },
+  {
+    "source": "linear-algebra/span-of-a-set-of-vectors",
+    "target": "linear-algebra/column-space",
+    "label": "specialises to",
+    "description": "The column space of a matrix is the span of its column vectors — it defines exactly which output vectors are reachable via the linear transformation represented by that matrix."
+  },
+  {
+    "source": "linear-algebra/span-of-a-set-of-vectors",
     "target": "linear-algebra/vector-spaces-and-subspaces",
     "label": "defines",
-    "description": "A basis for a subspace is a set of linearly independent vectors that spans it — span and linear independence together define the dimension and structure of any vector subspace encountered in factor modelling."
+    "description": "The span of any set of vectors is always a subspace — span is the primary mechanism for constructing and describing subspaces within a larger vector space."
   },
   {
     "source": "linear-algebra/spectral-decomposition",
@@ -4824,6 +5052,24 @@
     "description": "The slope of the CML is the Sharpe ratio of the tangency portfolio — the maximum attainable Sharpe ratio among all portfolios of risky assets."
   },
   {
+    "source": "portfolio-theory/contrarian-investor",
+    "target": "portfolio-theory/mean-reversion-strategy",
+    "label": "employs",
+    "description": "Contrarian investors employ mean reversion strategies as their primary quantitative tool — buying past losers and selling past winners is the systematic implementation of the contrarian belief that markets overreact."
+  },
+  {
+    "source": "portfolio-theory/contrarian-investor",
+    "target": "portfolio-theory/momentum-investor",
+    "label": "opposite of",
+    "description": "Contrarian and momentum investors take diametrically opposed positions — contrarians buy what momentum investors sell, and the relative profitability of each approach depends on the time horizon and market regime."
+  },
+  {
+    "source": "portfolio-theory/contrarian-investor",
+    "target": "portfolio-theory/momentum-crash",
+    "label": "profits during",
+    "description": "Contrarian investors profit during momentum crashes — when past losers snap back violently during market recoveries, the contrarian long position in losers generates large gains at precisely the moment momentum portfolios suffer catastrophic losses."
+  },
+  {
     "source": "portfolio-theory/carhart-four-factor-model",
     "target": "financial-maths/factor-investing",
     "label": "framework for",
@@ -4984,6 +5230,24 @@
     "target": "statistics/autocorrelation",
     "label": "detected via",
     "description": "Negative autocorrelation in returns at short horizons is the statistical signature that mean reversion strategies exploit — it indicates that positive returns tend to be followed by negative ones and vice versa."
+  },
+  {
+    "source": "portfolio-theory/momentum-investor",
+    "target": "portfolio-theory/contrarian-investor",
+    "label": "opposite of",
+    "description": "Momentum and contrarian investors are mirror images — momentum investors buy recent winners expecting continuation, while contrarian investors buy recent losers expecting reversal, and the two approaches dominate at different time horizons."
+  },
+  {
+    "source": "portfolio-theory/momentum-investor",
+    "target": "portfolio-theory/momentum-crash",
+    "label": "exposed to",
+    "description": "Momentum investors are acutely exposed to momentum crashes — during sharp market reversals, the winners they hold collapse while the losers they are short rally violently, producing catastrophic drawdowns."
+  },
+  {
+    "source": "portfolio-theory/momentum-investor",
+    "target": "portfolio-theory/momentum-strategy",
+    "label": "follows",
+    "description": "Momentum investors follow the momentum strategy as their systematic framework — the quantitative signals (relative strength, WML factor) formalise the investor's belief that recent price trends will persist."
   },
   {
     "source": "portfolio-theory/minimum-variance-portfolio",
@@ -6348,6 +6612,30 @@
     "description": "Stress testing complements VaR by evaluating portfolio losses under extreme scenarios that VaR — which focuses on a specific confidence level under normal conditions — may not capture."
   },
   {
+    "source": "risk/tail-risk-hedging",
+    "target": "probability/fat-tailed-distributions",
+    "label": "motivated by",
+    "description": "Tail risk hedging is motivated by the empirical observation that financial returns have fat tails — extreme events occur far more frequently than the normal distribution predicts, making unhedged left-tail exposure a significant portfolio risk."
+  },
+  {
+    "source": "risk/tail-risk-hedging",
+    "target": "risk/value-at-risk",
+    "label": "protects beyond",
+    "description": "Tail risk hedges protect against losses beyond what VaR captures — VaR quantifies the threshold of extreme loss at a given confidence level, but tail hedges provide actual payoffs when losses exceed that threshold."
+  },
+  {
+    "source": "risk/tail-risk-hedging",
+    "target": "volatility/long-volatility",
+    "label": "form of",
+    "description": "Tail risk hedging is a form of long volatility positioning — protective puts and VIX calls have positive vega and convex payoffs, profiting from the volatility spikes that accompany market crashes."
+  },
+  {
+    "source": "risk/tail-risk-hedging",
+    "target": "volatility/variance-risk-premium",
+    "label": "pays",
+    "description": "Tail risk hedges pay the variance risk premium — the cost of protection exceeds the expected actuarial payoff because implied volatility embeds a fear premium, making tail hedging a negative-expected-value trade that is nevertheless valuable for portfolio construction."
+  },
+  {
     "source": "risk/variation-margin",
     "target": "financial-maths/central-counterparty",
     "label": "settled through",
@@ -6988,6 +7276,30 @@
     "target": "statistics/volatility-clustering",
     "label": "models",
     "description": "GARCH is the standard parametric model for volatility clustering — the α and β coefficients directly capture how past shocks and past variance feed into today's conditional variance."
+  },
+  {
+    "source": "statistics/garch-volatility-forecasting",
+    "target": "risk/value-at-risk",
+    "label": "feeds into",
+    "description": "GARCH volatility forecasts feed directly into VaR computation — the multi-step cumulative variance forecast provides the volatility input for parametric VaR at arbitrary horizons, adapting the risk estimate to current market conditions."
+  },
+  {
+    "source": "statistics/garch-volatility-forecasting",
+    "target": "statistics/garch-model",
+    "label": "extends",
+    "description": "GARCH volatility forecasting extends the GARCH model from a descriptive tool into a predictive one — iterating the variance equation forward produces a term structure of expected volatility that mean-reverts towards the unconditional level."
+  },
+  {
+    "source": "statistics/garch-volatility-forecasting",
+    "target": "volatility/realised-volatility",
+    "label": "predicts",
+    "description": "GARCH volatility forecasts predict future realised volatility — the quality of these predictions is evaluated by comparing the forecast variance against subsequently observed squared returns or realised variance."
+  },
+  {
+    "source": "statistics/garch-volatility-forecasting",
+    "target": "volatility/volatility-arbitrage",
+    "label": "provides signal for",
+    "description": "GARCH volatility forecasts provide the key signal for volatility arbitrage — by predicting future realised volatility more accurately than the market's implied estimate, the trader can identify options that are over- or under-priced relative to expected future moves."
   },
   {
     "source": "statistics/hypothesis-testing",
@@ -8316,6 +8628,24 @@
     "description": "The correlation smile emerges from the difference between the index volatility surface and the average single-stock volatility surface — it quantifies how diversification changes across moneyness levels."
   },
   {
+    "source": "volatility/dispersion-trading",
+    "target": "volatility/correlation-smile",
+    "label": "exploits",
+    "description": "Dispersion trading exploits the correlation smile — the implied correlation premium that makes index options systematically more expensive relative to single-stock options is the primary source of dispersion trading profits."
+  },
+  {
+    "source": "volatility/dispersion-trading",
+    "target": "volatility/short-volatility",
+    "label": "form of",
+    "description": "Dispersion trading is a relative-value form of short volatility on the index leg — the trader sells index variance (short vol) and buys single-stock variance (long vol), netting out to a short correlation position."
+  },
+  {
+    "source": "volatility/dispersion-trading",
+    "target": "volatility/variance-swap",
+    "label": "implemented via",
+    "description": "Dispersion trades are commonly implemented using variance swaps — selling index variance and buying single-stock variance provides a cleaner correlation exposure than using options, which carry residual delta and vega risks."
+  },
+  {
     "source": "volatility/heston-model",
     "target": "derivatives/black-scholes-equation",
     "label": "extends",
@@ -8430,6 +8760,30 @@
     "description": "The Dupire local volatility function is uniquely determined by the volatility surface — it is the deterministic volatility field that exactly reproduces every point on the surface."
   },
   {
+    "source": "volatility/long-volatility",
+    "target": "derivatives/option-greeks",
+    "label": "measured by",
+    "description": "Long volatility exposure is quantified through the option Greeks — positive vega confirms the position profits from rising implied volatility, while positive gamma generates realised P&L from large underlying moves."
+  },
+  {
+    "source": "volatility/long-volatility",
+    "target": "volatility/short-volatility",
+    "label": "opposite of",
+    "description": "Long and short volatility are mirror-image positions — long volatility pays theta to receive convexity and crisis payoffs, while short volatility collects theta but bears concave tail risk."
+  },
+  {
+    "source": "volatility/long-volatility",
+    "target": "volatility/variance-risk-premium",
+    "label": "pays",
+    "description": "The variance risk premium is the cost of being long volatility — implied volatility systematically exceeds realised on average, so long volatility positions bleed premium in calm markets as the price of tail risk protection."
+  },
+  {
+    "source": "volatility/long-volatility",
+    "target": "volatility/variance-swap",
+    "label": "implemented via",
+    "description": "Variance swaps are one of the cleanest instruments for expressing a long volatility view — buying variance delivers a pure bet that realised volatility will exceed the strike, without the path-dependency of delta-hedged options."
+  },
+  {
     "source": "volatility/realised-volatility",
     "target": "risk/volatility-scaling",
     "label": "feeds into",
@@ -8508,6 +8862,30 @@
     "description": "Stochastic volatility models were developed specifically to explain the volatility smile — the correlation between asset returns and volatility shocks generates the strike-dependent implied volatility pattern that constant-volatility models cannot produce."
   },
   {
+    "source": "volatility/short-volatility",
+    "target": "derivatives/option-greeks",
+    "label": "measured by",
+    "description": "Short volatility exposure is quantified through the option Greeks — negative vega confirms the position loses when implied volatility rises, while negative gamma means large underlying moves generate realised losses."
+  },
+  {
+    "source": "volatility/short-volatility",
+    "target": "volatility/long-volatility",
+    "label": "opposite of",
+    "description": "Short volatility is the mirror image of long volatility — it collects premium (positive theta) in exchange for bearing convex losses during volatility spikes, earning steady income that is periodically wiped out by tail events."
+  },
+  {
+    "source": "volatility/short-volatility",
+    "target": "volatility/variance-risk-premium",
+    "label": "harvests",
+    "description": "The variance risk premium is the economic rationale for short volatility strategies — because implied volatility persistently exceeds realised, selling volatility captures this spread as compensation for bearing crash risk."
+  },
+  {
+    "source": "volatility/short-volatility",
+    "target": "volatility/vix-index",
+    "label": "referenced to",
+    "description": "The VIX index is the benchmark for short volatility strategies — selling VIX futures or options is one of the most liquid ways to express a short volatility view, and VIX levels indicate the premium available to volatility sellers."
+  },
+  {
     "source": "volatility/variance-risk-premium",
     "target": "volatility/implied-volatility",
     "label": "inflates",
@@ -8542,6 +8920,24 @@
     "target": "volatility/volatility-smile",
     "label": "encodes information from",
     "description": "The variance swap strike encodes information from the entire volatility smile — it is a weighted integral of implied variances across all strikes, making it sensitive to skew and kurtosis."
+  },
+  {
+    "source": "volatility/volatility-arbitrage",
+    "target": "derivatives/delta-hedging",
+    "label": "requires",
+    "description": "Volatility arbitrage requires continuous delta hedging to isolate the volatility bet — without removing directional exposure, the P&L would be dominated by the underlying's price movement rather than the volatility mispricing."
+  },
+  {
+    "source": "volatility/volatility-arbitrage",
+    "target": "volatility/implied-vs-realised-volatility",
+    "label": "trades the gap in",
+    "description": "Volatility arbitrage directly trades the gap between implied and realised volatility — the strategy's entire edge comes from forecasting which direction and by how much realised volatility will deviate from the market's implied estimate."
+  },
+  {
+    "source": "volatility/volatility-arbitrage",
+    "target": "volatility/variance-risk-premium",
+    "label": "exploits or pays",
+    "description": "Volatility arbitrage either exploits or pays the variance risk premium depending on direction — short vol arb harvests the premium by selling overpriced implied vol, while long vol arb pays it when betting on volatility spikes."
   },
   {
     "source": "volatility/vix-futures-term-structure",
@@ -8596,6 +8992,24 @@
     "target": "volatility/realised-volatility",
     "label": "contextualises",
     "description": "The volatility cone plots the historical distribution of realised volatility at each measurement window, providing the benchmark against which current implied volatility is judged rich or cheap."
+  },
+  {
+    "source": "volatility/volatility-risk-premium-strategies",
+    "target": "volatility/short-volatility",
+    "label": "implements",
+    "description": "VRP strategies are the systematic implementation of short volatility — they formalise the process of selling options or variance to harvest the persistent gap between implied and realised volatility."
+  },
+  {
+    "source": "volatility/volatility-risk-premium-strategies",
+    "target": "volatility/variance-risk-premium",
+    "label": "harvests",
+    "description": "VRP strategies are designed specifically to harvest the variance risk premium — their expected return comes from the empirical regularity that implied volatility exceeds realised volatility on average."
+  },
+  {
+    "source": "volatility/volatility-risk-premium-strategies",
+    "target": "volatility/volatility-arbitrage",
+    "label": "related to",
+    "description": "VRP strategies are related to volatility arbitrage but differ in that they systematically sell volatility to capture the average premium, whereas vol arb takes directional views on individual mispricings based on forecasting models."
   },
   {
     "source": "volatility/volatility-smile",
