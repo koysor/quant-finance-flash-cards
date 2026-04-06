@@ -1,7 +1,9 @@
 # Differentiation Rules
 
 **Topic:** Calculus
-**Tags:** calculus, differentiation, derivatives
+**Tags:** calculus, differentiation, power-rule, chain-rule, product-rule, quotient-rule
+**Created:** 2026-04-05
+**Author:** Claude Sonnet 4.6
 
 ---
 

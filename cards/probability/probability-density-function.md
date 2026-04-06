@@ -2,6 +2,8 @@
 
 **Topic:** Probability
 **Tags:** distributions, probability, continuous, density, integration
+**Created:** 2026-04-05
+**Author:** Claude Sonnet 4.6
 
 ---
 

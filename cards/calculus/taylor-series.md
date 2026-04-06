@@ -1,7 +1,9 @@
 # Taylor Series
 
 **Topic:** Calculus
-**Tags:** calculus, Taylor series, approximation
+**Tags:** calculus, taylor series, approximation, derivatives, greeks, sensitivity
+**Created:** 2026-04-05
+**Author:** Claude Sonnet 4.6
 
 ---
 
