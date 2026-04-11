@@ -351,6 +351,24 @@
       }
     ]
   },
+  "calculus/composite-functions": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Function composition",
+        "url": "https://en.wikipedia.org/wiki/Function_composition"
+      },
+      {
+        "title": "Khan Academy \u2014 Composing functions",
+        "url": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:transformations/x2ec2f6f830c9fb89:composing/a/composing-functions"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Introduction to function composition",
+        "url": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:transformations/x2ec2f6f830c9fb89:composing/v/function-composition"
+      }
+    ]
+  },
   "calculus/constant-of-integration": {
     "websites": [
       {
@@ -521,11 +539,47 @@
       }
     ]
   },
+  "calculus/disproof-by-counterexample": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Counterexample",
+        "url": "https://en.wikipedia.org/wiki/Counterexample"
+      },
+      {
+        "title": "Wikipedia \u2014 Mathematical proof",
+        "url": "https://en.wikipedia.org/wiki/Mathematical_proof"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Mathematical reasoning",
+        "url": "https://www.khanacademy.org/math/algebra-home/alg-intro-to-algebra/alg-intro-to-variables/v/what-is-a-variable"
+      }
+    ]
+  },
   "calculus/division-of-complex-numbers": {
     "websites": [
       {
         "title": "Khan Academy \u2014 Dividing Complex Numbers",
         "url": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:complex/x9e81a4f98389efdf:complex-div/v/dividing-complex-numbers"
+      }
+    ]
+  },
+  "calculus/domain-and-range": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Domain of a function",
+        "url": "https://en.wikipedia.org/wiki/Domain_of_a_function"
+      },
+      {
+        "title": "Khan Academy \u2014 Domain and range",
+        "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:functions/x2f8bb11595b61c86:domain-range-of-a-function/a/domain-and-range-review"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Domain and range from graphs",
+        "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:functions/x2f8bb11595b61c86:domain-range-of-a-function/v/domain-and-range-from-graphs"
       }
     ]
   },
@@ -663,6 +717,24 @@
       }
     ]
   },
+  "calculus/graph-transformations": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Geometric transformation",
+        "url": "https://en.wikipedia.org/wiki/Geometric_transformation"
+      },
+      {
+        "title": "Khan Academy \u2014 Transforming functions",
+        "url": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:transformations/x2ec2f6f830c9fb89:graph-funcs-alg/a/shifting-functions-intro"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Transforming functions",
+        "url": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:transformations/x2ec2f6f830c9fb89:graph-funcs-alg/v/shifting-functions-introduction"
+      }
+    ]
+  },
   "calculus/higher-derivatives": {
     "websites": [
       {
@@ -784,6 +856,24 @@
       {
         "title": "Khan Academy \u2014 Exponent Properties",
         "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals/x2f8bb11595b61c86:exponent-properties-review/a/exponent-properties-review"
+      }
+    ]
+  },
+  "calculus/inequalities": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Inequality (mathematics)",
+        "url": "https://en.wikipedia.org/wiki/Inequality_(mathematics)"
+      },
+      {
+        "title": "Khan Academy \u2014 Solving inequalities",
+        "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:inequalities-systems-graphs/x2f8bb11595b61c86:solving-inequalities/a/inequalities-review"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 One-step inequalities",
+        "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:inequalities-systems-graphs/x2f8bb11595b61c86:solving-inequalities/v/solving-inequalities"
       }
     ]
   },
@@ -1261,6 +1351,24 @@
       }
     ]
   },
+  "calculus/polynomial-long-division": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Polynomial long division",
+        "url": "https://en.wikipedia.org/wiki/Polynomial_long_division"
+      },
+      {
+        "title": "Khan Academy \u2014 Dividing polynomials",
+        "url": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:poly-div/x2ec2f6f830c9fb89:poly-long-div/a/dividing-polynomials-long-division"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Polynomial division",
+        "url": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:poly-div/x2ec2f6f830c9fb89:poly-long-div/v/polynomial-division"
+      }
+    ]
+  },
   "calculus/product-rule": {
     "websites": [
       {
@@ -1270,6 +1378,42 @@
       {
         "title": "Paul's Online Math Notes \u2014 Product and Quotient Rule",
         "url": "https://tutorial.math.lamar.edu/Classes/CalcI/ProductQuotientRule.aspx"
+      }
+    ]
+  },
+  "calculus/proof-by-contradiction": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Proof by contradiction",
+        "url": "https://en.wikipedia.org/wiki/Proof_by_contradiction"
+      },
+      {
+        "title": "Khan Academy \u2014 Proof: \u221a2 is irrational",
+        "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals/x2f8bb11595b61c86:proofs-concerning-irrational-numbers/a/proof-that-square-root-of-2-is-irrational"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Proof by contradiction",
+        "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals/x2f8bb11595b61c86:proofs-concerning-irrational-numbers/v/proof-that-square-root-of-2-is-irrational"
+      }
+    ]
+  },
+  "calculus/proportionality": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Proportionality (mathematics)",
+        "url": "https://en.wikipedia.org/wiki/Proportionality_(mathematics)"
+      },
+      {
+        "title": "Khan Academy \u2014 Proportional relationships",
+        "url": "https://www.khanacademy.org/math/cc-seventh-grade-math/cc-7th-ratio-proportion/cc-7th-proportional-rel/a/proportional-relationships-review"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Direct and inverse variation",
+        "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:direct-and-inverse-variation/x2f8bb11595b61c86:direct-inverse-variation/v/direct-and-inverse-variation"
       }
     ]
   },
@@ -1309,11 +1453,47 @@
       }
     ]
   },
+  "calculus/recurrence-relations": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Recurrence relation",
+        "url": "https://en.wikipedia.org/wiki/Recurrence_relation"
+      },
+      {
+        "title": "Khan Academy \u2014 Recursive sequences",
+        "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:sequences/x2f8bb11595b61c86:constructing-arithmetic-sequences/a/recursive-and-explicit-formulas-for-arithmetic-sequences"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Recursive sequences",
+        "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:sequences/x2f8bb11595b61c86:constructing-arithmetic-sequences/v/recursive-formulas-for-arithmetic-sequences"
+      }
+    ]
+  },
   "calculus/reduction-formula": {
     "websites": [
       {
         "title": "Reduction Formulas \u2014 Paul's Online Math Notes",
         "url": "https://tutorial.math.lamar.edu/Classes/CalcII/ReductionFormula.aspx"
+      }
+    ]
+  },
+  "calculus/remainder-theorem": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Polynomial remainder theorem",
+        "url": "https://en.wikipedia.org/wiki/Polynomial_remainder_theorem"
+      },
+      {
+        "title": "Khan Academy \u2014 Remainder theorem",
+        "url": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:poly-div/x2ec2f6f830c9fb89:remainder-theorem/a/remainder-theorem"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Remainder theorem",
+        "url": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:poly-div/x2ec2f6f830c9fb89:remainder-theorem/v/polynomial-remainder-theorem"
       }
     ]
   },
@@ -5059,6 +5239,24 @@
       }
     ]
   },
+  "statistics/chi-squared-test": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Chi-squared test",
+        "url": "https://en.wikipedia.org/wiki/Chi-squared_test"
+      },
+      {
+        "title": "Khan Academy \u2014 Chi-square tests",
+        "url": "https://www.khanacademy.org/math/statistics-probability/inference-categorical-data-chi-square-tests/chi-square-goodness-of-fit-tests/a/chi-square-tests-for-goodness-of-fit"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Chi-square goodness-of-fit test",
+        "url": "https://www.khanacademy.org/math/statistics-probability/inference-categorical-data-chi-square-tests/chi-square-goodness-of-fit-tests/v/pearson-s-chi-square-test-goodness-of-fit"
+      }
+    ]
+  },
   "statistics/cointegration": {
     "websites": [
       {
@@ -5291,6 +5489,24 @@
       }
     ]
   },
+  "statistics/likelihood-ratio-test": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Likelihood-ratio test",
+        "url": "https://en.wikipedia.org/wiki/Likelihood-ratio_test"
+      },
+      {
+        "title": "Wikipedia \u2014 Wilks' theorem",
+        "url": "https://en.wikipedia.org/wiki/Wilks%27_theorem"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest \u2014 Maximum likelihood",
+        "url": "https://www.youtube.com/watch?v=XepXtl9YKwc"
+      }
+    ]
+  },
   "statistics/linear-data-coding": {
     "websites": [
       {
@@ -5318,11 +5534,47 @@
     ],
     "videos": []
   },
+  "statistics/mann-whitney-u-test": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Mann-Whitney U test",
+        "url": "https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test"
+      },
+      {
+        "title": "Wikipedia \u2014 Wilcoxon rank-sum test",
+        "url": "https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest \u2014 Wilcoxon rank-sum test",
+        "url": "https://www.youtube.com/watch?v=TqCg2tb4wJ0"
+      }
+    ]
+  },
   "statistics/multiple-testing-correction": {
     "websites": [
       {
         "title": "Investopedia \u2014 Data Mining and Backtesting Pitfalls",
         "url": "https://www.investopedia.com/terms/d/datamining.asp"
+      }
+    ]
+  },
+  "statistics/one-tailed-and-two-tailed-tests": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 One- and two-tailed tests",
+        "url": "https://en.wikipedia.org/wiki/One-_and_two-tailed_tests"
+      },
+      {
+        "title": "Khan Academy \u2014 One-tailed and two-tailed tests",
+        "url": "https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample/more-significance-testing-videos/v/one-tailed-and-two-tailed-tests"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 One-tailed vs two-tailed",
+        "url": "https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample/more-significance-testing-videos/v/one-tailed-and-two-tailed-tests"
       }
     ]
   },
@@ -5357,6 +5609,42 @@
       {
         "title": "Investopedia \u2014 Overfitting",
         "url": "https://www.investopedia.com/terms/o/overfitting.asp"
+      }
+    ]
+  },
+  "statistics/p-value": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 p-value",
+        "url": "https://en.wikipedia.org/wiki/P-value"
+      },
+      {
+        "title": "Khan Academy \u2014 p-values and significance tests",
+        "url": "https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample/idea-of-significance-tests/a/p-values-and-significance-tests"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Hypothesis testing and p-values",
+        "url": "https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample/idea-of-significance-tests/v/hypothesis-testing-and-p-values"
+      }
+    ]
+  },
+  "statistics/paired-t-test": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Paired difference test",
+        "url": "https://en.wikipedia.org/wiki/Paired_difference_test"
+      },
+      {
+        "title": "Khan Academy \u2014 Paired t-tests",
+        "url": "https://www.khanacademy.org/math/statistics-probability/significance-tests-two-samples/paired-tests/a/paired-t-test-review"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Paired t-test",
+        "url": "https://www.khanacademy.org/math/statistics-probability/significance-tests-two-samples/paired-tests/v/paired-t-test"
       }
     ]
   },
@@ -5411,6 +5699,24 @@
       }
     ],
     "videos": []
+  },
+  "statistics/sample-size-determination": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Sample size determination",
+        "url": "https://en.wikipedia.org/wiki/Sample_size_determination"
+      },
+      {
+        "title": "Khan Academy \u2014 Sample size",
+        "url": "https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample/estimating-population-proportion/a/sample-size-for-estimating-proportions"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Sample size for estimating a mean",
+        "url": "https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample/old-confidence-intervals-videos/v/small-sample-size-confidence-intervals"
+      }
+    ]
   },
   "statistics/scaling-mean-with-time": {
     "websites": [
@@ -5468,6 +5774,24 @@
     ],
     "videos": []
   },
+  "statistics/statistical-power": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Statistical power",
+        "url": "https://en.wikipedia.org/wiki/Power_(statistics)"
+      },
+      {
+        "title": "Khan Academy \u2014 Introduction to power",
+        "url": "https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample/error-probabilities-and-power/a/introduction-to-power-in-significance-tests"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Power of a significance test",
+        "url": "https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample/error-probabilities-and-power/v/power-of-a-significance-test"
+      }
+    ]
+  },
   "statistics/statistical-properties-of-returns": {
     "websites": [
       {
@@ -5510,6 +5834,24 @@
       }
     ]
   },
+  "statistics/two-sample-t-test": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Welch's t-test",
+        "url": "https://en.wikipedia.org/wiki/Welch%27s_t-test"
+      },
+      {
+        "title": "Khan Academy \u2014 Two-sample t-test for difference of means",
+        "url": "https://www.khanacademy.org/math/statistics-probability/significance-tests-two-samples/two-sample-t-test-for-difference-of-means/a/two-sample-t-test-review"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Two-sample t-test",
+        "url": "https://www.khanacademy.org/math/statistics-probability/significance-tests-two-samples/two-sample-t-test-for-difference-of-means/v/two-sample-t-test-for-difference-of-means"
+      }
+    ]
+  },
   "statistics/type-i-and-type-ii-error": {
     "websites": [
       {
@@ -5535,6 +5877,24 @@
       {
         "title": "Investopedia \u2014 Volatility Clustering",
         "url": "https://www.investopedia.com/terms/v/volatility.asp"
+      }
+    ]
+  },
+  "statistics/wilcoxon-signed-rank-test": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Wilcoxon signed-rank test",
+        "url": "https://en.wikipedia.org/wiki/Wilcoxon_signed-rank_test"
+      },
+      {
+        "title": "Wikipedia \u2014 Non-parametric statistics",
+        "url": "https://en.wikipedia.org/wiki/Nonparametric_statistics"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest \u2014 Wilcoxon signed-rank test",
+        "url": "https://www.youtube.com/watch?v=TqCg2tb4wJ0"
       }
     ]
   },

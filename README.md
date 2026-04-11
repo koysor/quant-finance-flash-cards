@@ -2,7 +2,7 @@
 
 Bite-sized revision flash cards for Quantitative Finance exams and interviews, designed for accessibility and clarity. Each card covers one concept — definition, key formula, worked example, and its finance application.
 
-691 cards · 15 topics · 1993 concept connections
+711 cards · 15 topics · 2056 concept connections
 
 ## Running the app
 
@@ -18,7 +18,7 @@ On first run the app scans `cards/` and loads `edges.json`, building `graph.db` 
 | Topic | Cards | Scope |
 |---|---|---|
 | Banking Regulation | 15 | FRTB, IRRBB, LCR, NSFR, EVE, EaR, Basel capital rules |
-| Calculus | 144 | Differentiation, integration, Taylor series, quadratic techniques, A Level pure maths |
+| Calculus | 154 | Differentiation, integration, Taylor series, quadratic techniques, A Level pure maths |
 | Computational Finance | 15 | Numerical methods, finite differences, FFT, simulation |
 | Derivatives | 75 | Options, futures, Greeks, pricing models, risk-neutral theory |
 | Financial Mathematics | 49 | TVM, compounding, NPV, leverage, hedge funds, execution |
@@ -29,7 +29,7 @@ On first run the app scans `cards/` and loads `edges.json`, building `graph.db` 
 | Probability | 62 | Distributions, expectation, Bayes, transform methods |
 | Risk | 22 | VaR, CVaR, Monte Carlo, stress testing, EVT, drawdowns |
 | Short Selling | 18 | Short mechanics, securities lending, regulation, short squeezes |
-| Statistics | 49 | Regression, hypothesis testing, covariance estimation |
+| Statistics | 59 | Regression, hypothesis testing, covariance estimation |
 | Stochastic Processes | 52 | Brownian motion, GBM, Itô's lemma, SDEs, martingales |
 | Volatility | 22 | Implied/realised vol, VIX, vol surface, smile, stochastic vol models |
 

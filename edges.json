@@ -534,6 +534,24 @@
     "description": "The Heston model's semi-analytic pricing formula is derived by inverting the characteristic function of log(S_T) via numerical integration in the complex plane \u2014 complex exponentials are the core computational tool for this Fourier-based approach."
   },
   {
+    "source": "calculus/composite-functions",
+    "target": "calculus/chain-rule",
+    "label": "differentiated by",
+    "description": "The chain rule is the differentiation rule for composite functions: (f\u2218g)'(x) = f'(g(x))\u00b7g'(x), making composite functions the fundamental motivation for the chain rule."
+  },
+  {
+    "source": "calculus/composite-functions",
+    "target": "calculus/domain-and-range",
+    "label": "domain determined by",
+    "description": "The domain of a composite function f\u2218g requires that x is in the domain of g AND g(x) is in the domain of f, making domain analysis essential for valid composition."
+  },
+  {
+    "source": "calculus/composite-functions",
+    "target": "calculus/inverse-functions",
+    "label": "undone by",
+    "description": "The inverse function f\u207b\u00b9 satisfies f\u207b\u00b9\u2218f = identity, so composing a function with its inverse undoes the transformation \u2014 the defining property of the inverse."
+  },
+  {
     "source": "calculus/constant-of-integration",
     "target": "calculus/indefinite-integral",
     "label": "part of",
@@ -828,6 +846,18 @@
     "description": "The discriminant is the decisive test for whether a quadratic has real roots: positive for two real roots, zero for a repeated real root, negative for no real roots."
   },
   {
+    "source": "calculus/disproof-by-counterexample",
+    "target": "calculus/proof-by-contradiction",
+    "label": "contrasted with",
+    "description": "Disproof by counterexample refutes a universal claim with one specific failing instance; proof by contradiction refutes an assumption by deriving a general logical impossibility."
+  },
+  {
+    "source": "calculus/disproof-by-counterexample",
+    "target": "calculus/proof-by-induction",
+    "label": "negates",
+    "description": "Proof by induction establishes a universal statement; disproof by counterexample destroys it \u2014 finding even one n for which an induction conjecture fails means the conjecture cannot be proved by induction."
+  },
+  {
     "source": "calculus/division-of-complex-numbers",
     "target": "calculus/complex-conjugate",
     "label": "uses",
@@ -850,6 +880,24 @@
     "target": "mathematical-notation/complex-plane-notation",
     "label": "relies on",
     "description": "Performing complex division requires fluency with modulus |z| and argument arg(z) notation \u2014 the polar form r\u2081/r\u2082 e^{i(\u03b8\u2081\u2212\u03b8\u2082)} is the most transparent representation of the operation and is expressed entirely in complex-plane notation."
+  },
+  {
+    "source": "calculus/domain-and-range",
+    "target": "calculus/composite-functions",
+    "label": "constrains",
+    "description": "Valid composition requires the range of the inner function to be a subset of the domain of the outer function, so domain and range analysis is prerequisite to forming composites."
+  },
+  {
+    "source": "calculus/domain-and-range",
+    "target": "calculus/inverse-functions",
+    "label": "swapped by",
+    "description": "The domain and range of a function are swapped when forming its inverse: the domain of f\u207b\u00b9 is the range of f and vice versa."
+  },
+  {
+    "source": "calculus/domain-and-range",
+    "target": "calculus/logarithmic-and-exponential-functions",
+    "label": "restricts",
+    "description": "The logarithm function ln(x) has domain (0,\u221e) and range (-\u221e,\u221e), while the exponential has domain (-\u221e,\u221e) and range (0,\u221e) \u2014 they are mutual inverses with swapped domains and ranges."
   },
   {
     "source": "calculus/double-integration",
@@ -1128,6 +1176,24 @@
     "description": "The Taylor series of 1/(1-x) is exactly the geometric series \u2014 the Taylor expansion is a power series and for rational functions reduces directly to the geometric sum formula."
   },
   {
+    "source": "calculus/graph-transformations",
+    "target": "calculus/functions-and-roots",
+    "label": "applied to",
+    "description": "Graph transformations are applied to base functions (sine, exponential, polynomial) to produce new functions with shifted, stretched, or reflected graphs."
+  },
+  {
+    "source": "calculus/graph-transformations",
+    "target": "calculus/inverse-functions",
+    "label": "related to reflection in",
+    "description": "The graph of an inverse function f\u207b\u00b9 is the reflection of f in the line y = x, making reflection a specific graph transformation that converts a function to its inverse."
+  },
+  {
+    "source": "calculus/graph-transformations",
+    "target": "statistics/linear-data-coding",
+    "label": "algebraic form of",
+    "description": "Linear data coding y = ax + b is the algebraic counterpart of a vertical stretch by a and vertical translation by b, connecting statistical data transformation to geometric function transformation."
+  },
+  {
     "source": "calculus/higher-derivatives",
     "target": "calculus/differentiation",
     "label": "extends",
@@ -1306,6 +1372,24 @@
     "target": "calculus/surds",
     "label": "generalises",
     "description": "Surds are roots written as fractional exponents; index laws provide the rules for manipulating these fractional powers."
+  },
+  {
+    "source": "calculus/inequalities",
+    "target": "calculus/discriminant",
+    "label": "classified by",
+    "description": "The discriminant determines whether a quadratic inequality has solutions: a positive discriminant gives two roots bounding the solution region, zero gives a single boundary point, and negative means the quadratic never crosses the axis."
+  },
+  {
+    "source": "calculus/inequalities",
+    "target": "calculus/modulus-function",
+    "label": "solved using",
+    "description": "Modulus inequalities |f(x)| < a are solved by squaring both sides or using the equivalent double inequality -a < f(x) < a, connecting modulus and inequality techniques."
+  },
+  {
+    "source": "calculus/inequalities",
+    "target": "calculus/quadratic-equation",
+    "label": "extends",
+    "description": "Quadratic inequalities are solved by finding the roots of the corresponding quadratic equation, then using a sign table or sketch to identify the solution intervals."
   },
   {
     "source": "calculus/infinite-series",
@@ -2130,6 +2214,24 @@
     "description": "The Fourier transform kernel e^{-i\u03c9x} is a complex exponential in polar form with unit modulus \u2014 the decomposition of a function into frequencies is geometrically the projection onto the unit circle, so polar arithmetic is the natural language for working with Fourier integrals."
   },
   {
+    "source": "calculus/polynomial-long-division",
+    "target": "calculus/asymptotic",
+    "label": "reveals",
+    "description": "The quotient from dividing a rational function gives the oblique or horizontal asymptote \u2014 the polynomial part that the function approaches as x \u2192 \u00b1\u221e."
+  },
+  {
+    "source": "calculus/polynomial-long-division",
+    "target": "calculus/partial-fractions",
+    "label": "prerequisite for",
+    "description": "When the degree of the numerator exceeds that of the denominator in a rational function, polynomial long division must be applied first before partial fraction decomposition."
+  },
+  {
+    "source": "calculus/polynomial-long-division",
+    "target": "calculus/remainder-theorem",
+    "label": "confirmed by",
+    "description": "The remainder from polynomial long division equals f(a) by the remainder theorem \u2014 a quick way to verify the long division has been performed correctly."
+  },
+  {
     "source": "calculus/product-rule",
     "target": "calculus/chain-rule",
     "label": "combined with",
@@ -2152,6 +2254,42 @@
     "target": "derivatives/option-greeks",
     "label": "used to derive",
     "description": "Delta, the first derivative of the option price with respect to the underlying, is obtained by applying the product rule to S\u00b7N(d\u2081) in the Black-Scholes call formula \u2014 without the product rule the Delta expression cannot be correctly derived."
+  },
+  {
+    "source": "calculus/proof-by-contradiction",
+    "target": "calculus/disproof-by-counterexample",
+    "label": "contrasted with",
+    "description": "Proof by contradiction proves a statement true by deriving a contradiction from its negation; disproof by counterexample proves a statement false by finding one specific failing case \u2014 opposite logical directions."
+  },
+  {
+    "source": "calculus/proof-by-contradiction",
+    "target": "calculus/proof-by-induction",
+    "label": "alternative to",
+    "description": "Proof by contradiction and proof by induction are the two main proof strategies in A Level mathematics: induction proves statements about all positive integers, contradiction proves existence and impossibility results."
+  },
+  {
+    "source": "calculus/proof-by-contradiction",
+    "target": "mathematical-notation/irrational-numbers",
+    "label": "proves irrationality of",
+    "description": "The irrationality of \u221a2, \u03c0, and e are all established by proof by contradiction \u2014 assuming rationality leads to a logical contradiction, proving the numbers cannot be expressed as p/q."
+  },
+  {
+    "source": "calculus/proportionality",
+    "target": "calculus/polynomial-functions",
+    "label": "power law case of",
+    "description": "Power-law proportionality y = kx\u207f is a monomial (single-term polynomial), linking proportionality to polynomial functions at the special case of one term."
+  },
+  {
+    "source": "calculus/proportionality",
+    "target": "probability/pareto-distribution",
+    "label": "describes tail of",
+    "description": "The Pareto tail P(X > x) = (x_m/x)^\u03b1 is a power-law proportionality P \u221d x^{-\u03b1}, making proportionality the algebraic language for describing Pareto-distributed loss severities."
+  },
+  {
+    "source": "calculus/proportionality",
+    "target": "statistics/square-root-rule",
+    "label": "expressed as",
+    "description": "The square-root time rule \u03c3_T = \u03c3\u221aT is a direct proportionality with n = 1/2, so volatility scaling with horizon is a power-law proportional relationship."
   },
   {
     "source": "calculus/quadratic-formula",
@@ -2226,6 +2364,30 @@
     "description": "Rationalising expressions containing \u03c3\u221aT is a routine step when deriving and simplifying Black-Scholes Greeks and closed-form option pricing results."
   },
   {
+    "source": "calculus/recurrence-relations",
+    "target": "calculus/arithmetic-series",
+    "label": "generates",
+    "description": "An arithmetic sequence is defined by the first-order linear recurrence u_{n+1} = u_n + d, making recurrence relations the recursive definition that arithmetic series satisfy."
+  },
+  {
+    "source": "calculus/recurrence-relations",
+    "target": "calculus/convergence",
+    "label": "analysed via",
+    "description": "Whether a recurrence relation converges to a fixed point is determined by the convergence condition |f'(L)| < 1 at the fixed point, linking difference equations to limit analysis."
+  },
+  {
+    "source": "calculus/recurrence-relations",
+    "target": "calculus/geometric-series",
+    "label": "generates",
+    "description": "A geometric sequence is defined by the recurrence u_{n+1} = r\u00b7u_n, so geometric series are a special case of first-order linear recurrence relations with zero constant term."
+  },
+  {
+    "source": "calculus/recurrence-relations",
+    "target": "statistics/garch-model",
+    "label": "structure of",
+    "description": "GARCH is a recurrence relation for conditional variance \u03c3\u00b2_{t+1} = \u03c9 + \u03b1\u03b5\u00b2_t + \u03b2\u03c3\u00b2_t \u2014 the fixed-point convergence condition \u03b1+\u03b2 < 1 ensures stationarity and mean-reversion of volatility."
+  },
+  {
     "source": "calculus/reducing-pde-to-heat-equation",
     "target": "calculus/parabolic-pdes",
     "label": "technique for",
@@ -2266,6 +2428,24 @@
     "target": "statistics/jarque-bera-test",
     "label": "supports computation of",
     "description": "The Jarque-Bera test statistic involves skewness and kurtosis, whose population values under normality follow chi-squared distributions; evaluating the exact moments of these distributions uses the gamma reduction formula, connecting recursive integration to goodness-of-fit testing in finance."
+  },
+  {
+    "source": "calculus/remainder-theorem",
+    "target": "calculus/factor-theorem",
+    "label": "generalises",
+    "description": "The factor theorem is the special case of the remainder theorem where the remainder is zero \u2014 if f(a) = 0 then (x-a) is a factor, making the remainder theorem the more general result."
+  },
+  {
+    "source": "calculus/remainder-theorem",
+    "target": "calculus/polynomial-functions",
+    "label": "evaluates",
+    "description": "The remainder theorem evaluates the polynomial at a specific point as a by-product of division, connecting polynomial evaluation to the algebraic structure of polynomial divisibility."
+  },
+  {
+    "source": "calculus/remainder-theorem",
+    "target": "calculus/polynomial-long-division",
+    "label": "provides shortcut for",
+    "description": "The remainder theorem gives the remainder f(a) without performing polynomial long division, making it a quick check that can confirm or replace the full division algorithm."
   },
   {
     "source": "calculus/repeated-factor",
@@ -9804,6 +9984,30 @@
     "description": "The CLT guarantees that sample means are approximately normal for large n, which justifies constructing confidence intervals and hypothesis tests for estimated drift and volatility using normal quantiles."
   },
   {
+    "source": "statistics/chi-squared-test",
+    "target": "probability/chi-squared-distribution",
+    "label": "uses",
+    "description": "The chi-squared test statistic follows a chi-squared distribution under H\u2080, with degrees of freedom determined by the number of categories minus estimated parameters."
+  },
+  {
+    "source": "statistics/chi-squared-test",
+    "target": "probability/multinomial-distribution",
+    "label": "tests fit of",
+    "description": "The chi-squared goodness-of-fit test formally tests whether observed counts are consistent with a specified multinomial distribution, making the multinomial the underlying probability model."
+  },
+  {
+    "source": "statistics/chi-squared-test",
+    "target": "statistics/hypothesis-testing",
+    "label": "applies",
+    "description": "The chi-squared test follows the standard hypothesis testing framework with H\u2080 (good fit or independence) and H\u2081 (poor fit or association), using critical values from the chi-squared distribution."
+  },
+  {
+    "source": "statistics/chi-squared-test",
+    "target": "statistics/t-test",
+    "label": "categorical analogue of",
+    "description": "The chi-squared test does for categorical data what the t-test does for continuous data \u2014 tests whether observed distributions differ from expectations or between groups."
+  },
+  {
     "source": "statistics/cointegration",
     "target": "financial-maths/pairs-trading",
     "label": "validates",
@@ -10164,6 +10368,30 @@
     "description": "The volatility smile arises because the market prices in fatter tails than Black-Scholes assumes \u2014 kurtosis quantifies exactly this tail heaviness, and higher excess kurtosis in the risk-neutral distribution produces a more pronounced smile."
   },
   {
+    "source": "statistics/likelihood-ratio-test",
+    "target": "probability/chi-squared-distribution",
+    "label": "asymptotically follows",
+    "description": "By Wilks' theorem, twice the log-likelihood ratio converges to a chi-squared distribution under H\u2080, with degrees of freedom equal to the number of constrained parameters."
+  },
+  {
+    "source": "statistics/likelihood-ratio-test",
+    "target": "statistics/chi-squared-test",
+    "label": "related to",
+    "description": "The chi-squared goodness-of-fit test is a special case of the likelihood ratio test applied to multinomial data, connecting the two approaches through the same asymptotic chi-squared theory."
+  },
+  {
+    "source": "statistics/likelihood-ratio-test",
+    "target": "statistics/garch-model",
+    "label": "used to validate",
+    "description": "The LRT is used to test GARCH model specifications \u2014 comparing ARCH(1) vs GARCH(1,1), or symmetric vs asymmetric GARCH \u2014 by testing whether additional parameters significantly improve the log-likelihood."
+  },
+  {
+    "source": "statistics/likelihood-ratio-test",
+    "target": "statistics/hypothesis-testing",
+    "label": "most powerful form of",
+    "description": "The Neyman-Pearson lemma establishes that the likelihood ratio test is the most powerful test for simple hypotheses, making it the theoretical gold standard against which other tests are compared."
+  },
+  {
     "source": "statistics/linear-data-coding",
     "target": "statistics/correlation",
     "label": "preserves",
@@ -10200,6 +10428,18 @@
     "description": "The Mahalanobis distance is the multivariate generalisation of the z-score \u2014 it measures how many standard deviations a vector lies from the mean, accounting for correlations."
   },
   {
+    "source": "statistics/mann-whitney-u-test",
+    "target": "statistics/two-sample-t-test",
+    "label": "non-parametric alternative to",
+    "description": "The Mann-Whitney U test replaces the two-sample t-test when normality cannot be assumed, ranking all observations jointly and testing whether the two rank-sum distributions are consistent with equal underlying distributions."
+  },
+  {
+    "source": "statistics/mann-whitney-u-test",
+    "target": "statistics/wilcoxon-signed-rank-test",
+    "label": "two-sample version of",
+    "description": "Mann-Whitney handles two independent samples while Wilcoxon signed-rank handles one sample or paired data \u2014 together they cover the non-parametric equivalents of the one- and two-sample t-tests."
+  },
+  {
     "source": "statistics/multiple-testing-correction",
     "target": "statistics/estimating-parameters",
     "label": "constrains",
@@ -10216,6 +10456,30 @@
     "target": "statistics/type-i-and-type-ii-error",
     "label": "controls",
     "description": "Multiple testing corrections directly control the aggregate Type I error rate when many tests are performed \u2014 Bonferroni controls the family-wise error rate while Benjamini\u2013Hochberg controls the false discovery rate."
+  },
+  {
+    "source": "statistics/one-tailed-and-two-tailed-tests",
+    "target": "statistics/critical-region",
+    "label": "locates",
+    "description": "The tail choice determines where the critical region sits: one-tailed tests place the entire rejection region in one tail, two-tailed tests split it symmetrically between both."
+  },
+  {
+    "source": "statistics/one-tailed-and-two-tailed-tests",
+    "target": "statistics/hypothesis-testing",
+    "label": "refines",
+    "description": "One- and two-tailed tests are the two forms of hypothesis test, distinguished by whether the alternative hypothesis has a direction, making them the operational refinement of the general hypothesis testing framework."
+  },
+  {
+    "source": "statistics/one-tailed-and-two-tailed-tests",
+    "target": "statistics/p-value",
+    "label": "determines calculation of",
+    "description": "The p-value formula differs between one- and two-tailed tests \u2014 two-tailed doubles the one-tail probability \u2014 so specifying the tail is required before the p-value can be computed."
+  },
+  {
+    "source": "statistics/one-tailed-and-two-tailed-tests",
+    "target": "statistics/statistical-power",
+    "label": "affects",
+    "description": "One-tailed tests have higher power than two-tailed tests in the specified direction because the full significance level \u03b1 is allocated to one tail, lowering the critical value."
   },
   {
     "source": "statistics/ordinary-least-squares-regression",
@@ -10264,6 +10528,48 @@
     "target": "statistics/hypothesis-testing",
     "label": "undermines",
     "description": "Overfitting undermines hypothesis testing by producing artificially low p-values in sample \u2014 the model has memorised the data rather than discovered a genuine relationship, so standard significance tests are unreliable."
+  },
+  {
+    "source": "statistics/p-value",
+    "target": "statistics/hypothesis-testing",
+    "label": "is output of",
+    "description": "The p-value is the primary output of a hypothesis test \u2014 it quantifies the probability of the observed data under H\u2080 and is compared to \u03b1 to make the reject/fail-to-reject decision."
+  },
+  {
+    "source": "statistics/p-value",
+    "target": "statistics/multiple-testing-correction",
+    "label": "inflated by",
+    "description": "Running multiple tests inflates the probability of observing small p-values by chance \u2014 multiple testing corrections (Bonferroni, FDR) adjust individual p-value thresholds to control the overall error rate."
+  },
+  {
+    "source": "statistics/p-value",
+    "target": "statistics/statistical-power",
+    "label": "complementary to",
+    "description": "Statistical power measures the probability of a small p-value when H\u2080 is false \u2014 the p-value and power are complementary: a small p-value is meaningful only if the test had sufficient power to detect the true effect."
+  },
+  {
+    "source": "statistics/p-value",
+    "target": "statistics/type-i-and-type-ii-error",
+    "label": "controls Type I error via",
+    "description": "Rejecting H\u2080 when p < \u03b1 controls the Type I error rate at \u03b1 in the long run \u2014 but only if the significance threshold is pre-specified, not chosen after seeing the p-value."
+  },
+  {
+    "source": "statistics/paired-t-test",
+    "target": "statistics/t-test",
+    "label": "variant of",
+    "description": "The paired t-test is equivalent to a one-sample t-test on the differences, reducing a two-sample comparison to a one-sample problem by working with paired differences."
+  },
+  {
+    "source": "statistics/paired-t-test",
+    "target": "statistics/two-sample-t-test",
+    "label": "more powerful than (when correlated)",
+    "description": "When observations are positively correlated within pairs, the paired t-test has higher power than the independent two-sample t-test because pairing removes between-pair variance from the error term."
+  },
+  {
+    "source": "statistics/paired-t-test",
+    "target": "statistics/wilcoxon-signed-rank-test",
+    "label": "parametric version of",
+    "description": "The Wilcoxon signed-rank test is the non-parametric alternative to the paired t-test, used when the differences are not normally distributed \u2014 important for skewed or heavy-tailed return differences."
   },
   {
     "source": "statistics/portfolio-variance",
@@ -10356,6 +10662,24 @@
     "description": "The regularisation strength \u03bb has no closed-form optimal value and must be selected empirically using cross-validation \u2014 the two techniques are inseparable in practice."
   },
   {
+    "source": "statistics/sample-size-determination",
+    "target": "probability/variance-reduction-techniques",
+    "label": "reduced by",
+    "description": "Variance reduction techniques (antithetic variates, control variates) reduce the effective variance \u03c3\u00b2, allowing the same precision or power to be achieved with a smaller sample."
+  },
+  {
+    "source": "statistics/sample-size-determination",
+    "target": "statistics/confidence-intervals",
+    "label": "related via margin of error",
+    "description": "The sample size needed for a confidence interval of specified width follows the same formula as the power calculation, linking the two main frequentist objectives of precision and power."
+  },
+  {
+    "source": "statistics/sample-size-determination",
+    "target": "statistics/statistical-power",
+    "label": "derived from",
+    "description": "Sample size is calculated by inverting the power formula \u2014 specifying the desired power, effect size, and \u03b1 gives the minimum n needed to achieve that power."
+  },
+  {
     "source": "statistics/scaling-mean-with-time",
     "target": "stochastic-processes/growth-vs-volatility-timescales",
     "label": "contrasted in",
@@ -10422,6 +10746,24 @@
     "description": "Because volatility grows as \u221at while drift grows as t, the signal-to-noise ratio improves with horizon length \u2014 the square-root rule is the quantitative reason why short-term forecasting is so difficult."
   },
   {
+    "source": "statistics/statistical-power",
+    "target": "statistics/hypothesis-testing",
+    "label": "measures sensitivity of",
+    "description": "Power quantifies how sensitive a hypothesis test is to the true effect \u2014 a low-power test may consistently fail to reject H\u2080 even when H\u2081 is true, producing misleading non-significant results."
+  },
+  {
+    "source": "statistics/statistical-power",
+    "target": "statistics/sample-size-determination",
+    "label": "determines",
+    "description": "Power analysis translates a desired power level, significance level, and effect size into the minimum sample size required \u2014 the core calculation in study design."
+  },
+  {
+    "source": "statistics/statistical-power",
+    "target": "statistics/type-i-and-type-ii-error",
+    "label": "complement of",
+    "description": "Power = 1 - \u03b2, where \u03b2 is the Type II error rate, so power and Type II error are directly complementary \u2014 increasing one decreases the other for fixed sample size."
+  },
+  {
     "source": "statistics/statistical-properties-of-returns",
     "target": "risk/extreme-value-theory",
     "label": "motivates",
@@ -10474,6 +10816,24 @@
     "target": "statistics/variance-and-standard-deviation",
     "label": "requires",
     "description": "The t-test uses the sample standard deviation as an estimate of the unknown population standard deviation \u2014 this substitution is what introduces the extra uncertainty captured by the t-distribution rather than the normal."
+  },
+  {
+    "source": "statistics/two-sample-t-test",
+    "target": "statistics/mann-whitney-u-test",
+    "label": "parametric alternative to",
+    "description": "The Mann-Whitney U test is the non-parametric alternative to the two-sample t-test, used when normality cannot be assumed \u2014 particularly relevant for fat-tailed financial return distributions."
+  },
+  {
+    "source": "statistics/two-sample-t-test",
+    "target": "statistics/t-test",
+    "label": "generalises",
+    "description": "The two-sample t-test extends the one-sample t-test to compare two independent group means, requiring a pooled or Welch standard error to account for two sources of variability."
+  },
+  {
+    "source": "statistics/two-sample-t-test",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "requires pooling of",
+    "description": "The pooled t-test combines the two sample variances into a single pooled estimate, weighting by degrees of freedom \u2014 valid only when population variances are equal."
   },
   {
     "source": "statistics/type-i-and-type-ii-error",
@@ -10552,6 +10912,24 @@
     "target": "volatility/realised-volatility",
     "label": "shapes dynamics of",
     "description": "Volatility clustering means realised volatility is autocorrelated \u2014 periods of high realised vol tend to persist, which any practical estimator or trading strategy must account for."
+  },
+  {
+    "source": "statistics/wilcoxon-signed-rank-test",
+    "target": "statistics/mann-whitney-u-test",
+    "label": "one-sample version of",
+    "description": "The Wilcoxon signed-rank test handles one-sample or paired data; the Mann-Whitney U test handles two independent samples \u2014 together they are the non-parametric alternatives to the full t-test family."
+  },
+  {
+    "source": "statistics/wilcoxon-signed-rank-test",
+    "target": "statistics/paired-t-test",
+    "label": "non-parametric alternative to",
+    "description": "The Wilcoxon signed-rank test replaces the paired t-test when normality of differences cannot be assumed, using ranks of absolute differences rather than the raw differences themselves."
+  },
+  {
+    "source": "statistics/wilcoxon-signed-rank-test",
+    "target": "statistics/spearmans-rank-correlation",
+    "label": "shares rank-based approach with",
+    "description": "Both Wilcoxon and Spearman tests replace raw values with ranks to achieve robustness to outliers and non-normality \u2014 they are the two main rank-based inference tools in non-parametric statistics."
   },
   {
     "source": "stochastic-processes/backward-kolmogorov-equation",
