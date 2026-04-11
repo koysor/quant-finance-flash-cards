@@ -4776,6 +4776,28 @@
       }
     ]
   },
+  "probability/central-moments": {
+    "websites": [
+      {
+        "title": "Central Moment — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Central_moment"
+      },
+      {
+        "title": "Moments of a Distribution — Investopedia",
+        "url": "https://www.investopedia.com/terms/s/skewness.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Moments and MGFs — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
+      },
+      {
+        "title": "Skewness and Kurtosis — StatQuest",
+        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+      }
+    ]
+  },
   "probability/chi-squared-distribution": {
     "websites": [
       {
@@ -4784,11 +4806,55 @@
       }
     ]
   },
+  "probability/cokurtosis": {
+    "websites": [
+      {
+        "title": "Cokurtosis — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cokurtosis"
+      },
+      {
+        "title": "Fat Tails and Tail Risk — Investopedia",
+        "url": "https://www.investopedia.com/terms/t/tailrisk.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Tail Risk and Kurtosis — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/"
+      },
+      {
+        "title": "Kurtosis in Finance — StatQuest",
+        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+      }
+    ]
+  },
   "probability/combinations": {
     "websites": [
       {
         "title": "Khan Academy — Combinations",
         "url": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:prob-comb/x9e81a4f98389efdf:combinations/a/combination-formula"
+      }
+    ]
+  },
+  "probability/continuous-random-variable": {
+    "websites": [
+      {
+        "title": "Continuous Random Variable — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Probability_distribution#Continuous_probability_distribution"
+      },
+      {
+        "title": "Continuous Random Variables — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-continuous/a/continuous-random-variables-review"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Continuous Random Variables — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library"
+      },
+      {
+        "title": "Continuous Distributions — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
       }
     ]
   },
@@ -4808,6 +4874,28 @@
       }
     ],
     "videos": []
+  },
+  "probability/coskewness": {
+    "websites": [
+      {
+        "title": "Coskewness — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Coskewness"
+      },
+      {
+        "title": "Higher Moments in Portfolio Theory — Investopedia",
+        "url": "https://www.investopedia.com/terms/s/skewness.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Higher Moments and Portfolio Risk — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/"
+      },
+      {
+        "title": "Skewness in Portfolio Returns — StatQuest",
+        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+      }
+    ]
   },
   "probability/cumulative-distribution-function": {
     "websites": [
@@ -4840,6 +4928,28 @@
       {
         "title": "Brilliant — Error Function",
         "url": "https://brilliant.org/wiki/error-function/"
+      }
+    ]
+  },
+  "probability/excess-kurtosis": {
+    "websites": [
+      {
+        "title": "Kurtosis — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Kurtosis"
+      },
+      {
+        "title": "Excess Kurtosis — Investopedia",
+        "url": "https://www.investopedia.com/terms/e/excesskurtosis.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Kurtosis and Fat Tails — StatQuest",
+        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+      },
+      {
+        "title": "Kurtosis Explained — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
       }
     ]
   },
@@ -5014,6 +5124,50 @@
       }
     ]
   },
+  "probability/independent-events": {
+    "websites": [
+      {
+        "title": "Independence (Probability) — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Independence_(probability_theory)"
+      },
+      {
+        "title": "Independent Events — Khan Academy",
+        "url": "https://www.khanacademy.org/math/ap-statistics/probability-ap/probability-multiplication-rule/a/multiplication-rule-independent-events"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Independent vs Dependent Events — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/probability-library"
+      },
+      {
+        "title": "Independence in Probability — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
+      }
+    ]
+  },
+  "probability/inverse-cumulative-distribution-function": {
+    "websites": [
+      {
+        "title": "Quantile Function — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Quantile_function"
+      },
+      {
+        "title": "Inverse CDF — Investopedia",
+        "url": "https://www.investopedia.com/terms/q/quantile.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Quantiles and Percentiles — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/percentiles/a/percentiles-review"
+      },
+      {
+        "title": "Inverse Transform Sampling — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
+      }
+    ]
+  },
   "probability/joint-pdf-and-marginal-distributions": {
     "websites": [
       {
@@ -5072,6 +5226,28 @@
       }
     ]
   },
+  "probability/leptokurtic": {
+    "websites": [
+      {
+        "title": "Leptokurtic — Investopedia",
+        "url": "https://www.investopedia.com/terms/l/leptokurtic.asp"
+      },
+      {
+        "title": "Kurtosis — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Kurtosis"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Kurtosis and Fat Tails — StatQuest",
+        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+      },
+      {
+        "title": "Fat Tails in Finance — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
+      }
+    ]
+  },
   "probability/logistic-distribution": {
     "websites": [
       {
@@ -5095,6 +5271,28 @@
       {
         "title": "Investopedia — Lognormal Distribution",
         "url": "https://www.investopedia.com/terms/l/log-normal-distribution.asp"
+      }
+    ]
+  },
+  "probability/mesokurtic": {
+    "websites": [
+      {
+        "title": "Mesokurtic — Investopedia",
+        "url": "https://www.investopedia.com/terms/m/mesokurtic.asp"
+      },
+      {
+        "title": "Kurtosis — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Kurtosis"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Kurtosis and Distribution Shape — StatQuest",
+        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+      },
+      {
+        "title": "Normal Distribution Shape — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/modeling-distributions-of-data/normal-distributions-library/a/normal-distributions-review"
       }
     ]
   },
@@ -5177,6 +5375,28 @@
       }
     ]
   },
+  "probability/negatively-skewed-distribution": {
+    "websites": [
+      {
+        "title": "Skewness — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Skewness"
+      },
+      {
+        "title": "Negative Skewness — Investopedia",
+        "url": "https://www.investopedia.com/terms/s/skewness.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Skewness — StatQuest",
+        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+      },
+      {
+        "title": "Skewed Distributions — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
+      }
+    ]
+  },
   "probability/normal-approximation-to-binomial": {
     "websites": [
       {
@@ -5247,6 +5467,28 @@
       }
     ]
   },
+  "probability/platykurtic": {
+    "websites": [
+      {
+        "title": "Platykurtic — Investopedia",
+        "url": "https://www.investopedia.com/terms/p/platykurtic.asp"
+      },
+      {
+        "title": "Kurtosis — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Kurtosis"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Kurtosis Explained — StatQuest",
+        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+      },
+      {
+        "title": "Distribution Shape — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
+      }
+    ]
+  },
   "probability/poisson-distribution": {
     "websites": [
       {
@@ -5256,6 +5498,28 @@
       {
         "title": "Brilliant — Poisson Distribution",
         "url": "https://brilliant.org/wiki/poisson-distribution/"
+      }
+    ]
+  },
+  "probability/positively-skewed-distribution": {
+    "websites": [
+      {
+        "title": "Skewness — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Skewness"
+      },
+      {
+        "title": "Positive Skewness — Investopedia",
+        "url": "https://www.investopedia.com/terms/s/skewness.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Skewness — StatQuest",
+        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+      },
+      {
+        "title": "Skewed Distributions — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
       }
     ]
   },
@@ -5316,6 +5580,28 @@
       {
         "title": "Khan Academy — Percentile Rank",
         "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/percentile-rankings/v/calculating-percentile"
+      }
+    ]
+  },
+  "probability/random-variable": {
+    "websites": [
+      {
+        "title": "Random Variable — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Random_variable"
+      },
+      {
+        "title": "Random Variables — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Random Variables — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library"
+      },
+      {
+        "title": "Introduction to Probability — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
       }
     ]
   },
@@ -5380,6 +5666,28 @@
       {
         "title": "Khan Academy — Monte Carlo simulation",
         "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-continuous/v/random-variable-discrete-and-continuous"
+      }
+    ]
+  },
+  "probability/unconditional-probability": {
+    "websites": [
+      {
+        "title": "Marginal Probability — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Marginal_distribution"
+      },
+      {
+        "title": "Law of Total Probability — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Law_of_total_probability"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Total Probability and Bayes' Theorem — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/probability-library"
+      },
+      {
+        "title": "Bayes' Theorem — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
       }
     ]
   },
