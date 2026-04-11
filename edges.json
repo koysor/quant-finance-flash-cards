@@ -8520,6 +8520,24 @@
     "description": "The Cauchy distribution is Student-t with 1 degree of freedom — the extreme heavy-tail case where no moments exist, illustrating how t-distributions approach normality as degrees of freedom increase."
   },
   {
+    "source": "probability/chebyshevs-inequality",
+    "target": "probability/expectation-and-variance",
+    "label": "requires",
+    "description": "Chebyshev's inequality only needs finite mean and variance to produce a tail probability bound — expectation and variance are the two inputs that drive the inequality."
+  },
+  {
+    "source": "probability/chebyshevs-inequality",
+    "target": "probability/leptokurtic",
+    "label": "motivates",
+    "description": "Fat-tailed (leptokurtic) return distributions make normal-based tail probabilities dangerously small — Chebyshev's distribution-free bound provides a safer worst-case estimate when kurtosis is high."
+  },
+  {
+    "source": "probability/chebyshevs-inequality",
+    "target": "risk/value-at-risk",
+    "label": "distribution-free bound for",
+    "description": "VaR estimates a specific tail quantile assuming a distribution; Chebyshev's inequality provides a distribution-free upper bound on tail probability that is always valid, making it a theoretical backstop when the distributional assumption is uncertain."
+  },
+  {
     "source": "probability/cdf-vs-pdf",
     "target": "mathematical-notation/normal-cdf-and-pdf-notation",
     "label": "notation explained by",
@@ -8788,6 +8806,24 @@
     "target": "statistics/variance-and-standard-deviation",
     "label": "connects to",
     "description": "The variance formula and standard deviation definition are shared between probability theory and descriptive statistics — this card presents them in the probabilistic (population) sense while the statistics card covers the sample estimators."
+  },
+  {
+    "source": "probability/covariance",
+    "target": "portfolio-theory/correlation-cases",
+    "label": "drives",
+    "description": "Covariance (normalised to correlation) is the input that determines which of the three qualitatively different portfolio risk regimes applies — perfect positive, perfect negative, or intermediate — giving rise to the full opportunity set."
+  },
+  {
+    "source": "probability/covariance",
+    "target": "probability/expectation-and-variance",
+    "label": "extends",
+    "description": "Covariance generalises variance to two variables — Var(X) = Cov(X,X) — and is the key term that makes portfolio variance non-linear in weights."
+  },
+  {
+    "source": "probability/covariance",
+    "target": "statistics/correlation",
+    "label": "normalised to",
+    "description": "Dividing covariance by the product of standard deviations yields the Pearson correlation coefficient, which is the scale-free version used in portfolio construction and factor models."
   },
   {
     "source": "probability/exponential-distribution",
@@ -9112,6 +9148,24 @@
     "target": "statistics/central-limit-theorem",
     "label": "extended by",
     "description": "The CLT extends the LLN by characterising the distribution of the convergence error — where the LLN says the sample mean converges to μ, the CLT says the standardised error $\\sqrt{n}(\\bar{X}_n - \\mu)/\\sigma$ converges to a standard normal distribution."
+  },
+  {
+    "source": "probability/law-of-iterated-expectations",
+    "target": "derivatives/binomial-option-pricing",
+    "label": "underpins",
+    "description": "Backward induction in a binomial tree is a direct application of the tower property — each node's price equals the discounted expected value of the next period's prices, which chains across all time steps by iterated conditioning on the filtration."
+  },
+  {
+    "source": "probability/law-of-iterated-expectations",
+    "target": "probability/conditional-probability",
+    "label": "builds on",
+    "description": "The law of iterated expectations requires conditional expectation E[X|Y] as its building block — understanding how conditioning changes the distribution of X given Y is the prerequisite concept."
+  },
+  {
+    "source": "probability/law-of-iterated-expectations",
+    "target": "stochastic-processes/martingales",
+    "label": "characterises",
+    "description": "The martingale property — that today's price equals the conditional expectation of tomorrow's discounted price — is preserved across multiple time periods precisely because of the tower property of iterated expectations."
   },
   {
     "source": "probability/leptokurtic",

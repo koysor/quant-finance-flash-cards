@@ -4768,6 +4768,28 @@
       }
     ]
   },
+  "probability/chebyshevs-inequality": {
+    "websites": [
+      {
+        "title": "Wikipedia — Chebyshev's Inequality",
+        "url": "https://en.wikipedia.org/wiki/Chebyshev%27s_inequality"
+      },
+      {
+        "title": "Khan Academy — Chebyshev's Inequality",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-population/a/chebyshevs-inequality"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Standard Deviation",
+        "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY"
+      },
+      {
+        "title": "Khan Academy — Variance and Standard Deviation",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-population/v/population-standard-deviation"
+      }
+    ]
+  },
   "probability/cdf-vs-pdf": {
     "websites": [
       {
@@ -4874,6 +4896,28 @@
       }
     ],
     "videos": []
+  },
+  "probability/covariance": {
+    "websites": [
+      {
+        "title": "Khan Academy — Covariance and the Regression Line",
+        "url": "https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/more-on-regression/v/covariance-and-the-regression-line"
+      },
+      {
+        "title": "Wikipedia — Covariance",
+        "url": "https://en.wikipedia.org/wiki/Covariance"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Covariance, Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=qtaqvPAeEJY"
+      },
+      {
+        "title": "Khan Academy — Covariance and the Regression Line",
+        "url": "https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/more-on-regression/v/covariance-and-the-regression-line"
+      }
+    ]
   },
   "probability/coskewness": {
     "websites": [
@@ -5245,6 +5289,28 @@
       {
         "title": "Law of Large Numbers and the Central Limit Theorem — MIT OpenCourseWare",
         "url": "https://en.wikipedia.org/wiki/Law_of_large_numbers"
+      }
+    ]
+  },
+  "probability/law-of-iterated-expectations": {
+    "websites": [
+      {
+        "title": "Wikipedia — Law of Total Expectation",
+        "url": "https://en.wikipedia.org/wiki/Law_of_total_expectation"
+      },
+      {
+        "title": "Wikipedia — Conditional Expectation",
+        "url": "https://en.wikipedia.org/wiki/Conditional_expectation"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Conditional Probability",
+        "url": "https://www.khanacademy.org/math/statistics-probability/probability-library/conditional-probability-independence/v/conditional-probability-and-combinations"
+      },
+      {
+        "title": "StatQuest — Conditional Probabilities",
+        "url": "https://www.youtube.com/watch?v=_IgyaD7vOOA"
       }
     ]
   },
