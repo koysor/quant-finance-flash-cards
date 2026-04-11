@@ -4897,6 +4897,28 @@
     ],
     "videos": []
   },
+  "probability/correlation-coefficient": {
+    "websites": [
+      {
+        "title": "Wikipedia — Pearson Correlation Coefficient",
+        "url": "https://en.wikipedia.org/wiki/Pearson_correlation_coefficient"
+      },
+      {
+        "title": "Khan Academy — Correlation Coefficients",
+        "url": "https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/scatterplots-and-correlation/a/correlation-coefficient-review"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Pearson's Correlation, Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=xZ_z8KWkhXE"
+      },
+      {
+        "title": "Khan Academy — Calculating Correlation Coefficient",
+        "url": "https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/scatterplots-and-correlation/v/calculating-correlation-coefficient-r"
+      }
+    ]
+  },
   "probability/covariance": {
     "websites": [
       {

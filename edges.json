@@ -8826,6 +8826,30 @@
     "description": "Dividing covariance by the product of standard deviations yields the Pearson correlation coefficient, which is the scale-free version used in portfolio construction and factor models."
   },
   {
+    "source": "probability/correlation-coefficient",
+    "target": "portfolio-theory/correlation-cases",
+    "label": "parametrises",
+    "description": "The three qualitatively distinct portfolio risk outcomes — diversification, perfect hedging, additive risk — correspond exactly to ρ between −1 and +1, making correlation the key parameter in the opportunity set analysis."
+  },
+  {
+    "source": "probability/correlation-coefficient",
+    "target": "probability/covariance",
+    "label": "normalises",
+    "description": "Correlation is covariance divided by the product of standard deviations — it strips out the scale so that the strength of linear dependence can be compared across asset pairs with different volatilities."
+  },
+  {
+    "source": "probability/correlation-coefficient",
+    "target": "probability/copulas",
+    "label": "limitation motivates",
+    "description": "Pearson correlation only captures linear dependence and fails to describe tail dependence — this limitation motivates copulas, which model the full joint dependence structure independently of marginal distributions."
+  },
+  {
+    "source": "probability/correlation-coefficient",
+    "target": "statistics/correlation",
+    "label": "probabilistic form of",
+    "description": "The statistics card covers sample (Pearson) correlation estimated from data; this card presents the population definition in terms of expectations and variances of random variables."
+  },
+  {
     "source": "probability/exponential-distribution",
     "target": "financial-maths/time-value-of-money",
     "label": "mirrors",
