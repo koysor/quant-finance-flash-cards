@@ -3545,6 +3545,28 @@
     ],
     "videos": []
   },
+  "mathematical-notation/complement-notation": {
+    "websites": [
+      {
+        "title": "Complement (Set Theory) — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Complement_(set_theory)"
+      },
+      {
+        "title": "Complement Rule — Khan Academy",
+        "url": "https://www.khanacademy.org/math/ap-statistics/probability-ap/probability-the-addition-rule/a/probability-of-a-complement"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Complement of an Event — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/probability-library"
+      },
+      {
+        "title": "De Morgan's Laws — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
+      }
+    ]
+  },
   "mathematical-notation/conditional-expectation-notation": {
     "websites": [
       {
@@ -3553,6 +3575,28 @@
       }
     ],
     "videos": []
+  },
+  "mathematical-notation/conditional-probability-notation": {
+    "websites": [
+      {
+        "title": "Conditional Probability — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Conditional_probability"
+      },
+      {
+        "title": "Conditional Probability — Khan Academy",
+        "url": "https://www.khanacademy.org/math/ap-statistics/probability-ap/probability-multiplication-rule/a/conditional-probability-using-two-way-tables"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Conditional Probability — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/probability-library"
+      },
+      {
+        "title": "Bayes' Theorem and Conditional Probability — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
+      }
+    ]
   },
   "mathematical-notation/convergence-notation": {
     "websites": [
@@ -3605,11 +3649,55 @@
     ],
     "videos": []
   },
+  "mathematical-notation/iid-notation": {
+    "websites": [
+      {
+        "title": "Independent and Identically Distributed — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables"
+      },
+      {
+        "title": "Random Sample — Statistics LibreTexts",
+        "url": "https://stats.libretexts.org/Bookshelves/Probability_Theory/Probability_Mathematical_Statistics_and_Stochastic_Processes_(Siegrist)/06%3A_Random_Samples"
+      }
+    ],
+    "videos": [
+      {
+        "title": "i.i.d. Random Variables — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
+      },
+      {
+        "title": "Random Samples and i.i.d. — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library"
+      }
+    ]
+  },
   "mathematical-notation/imaginary-unit": {
     "websites": [
       {
         "title": "Khan Academy — Intro to the Imaginary Numbers",
         "url": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:complex/x2ec2f6f830c9fb89:imaginary/a/intro-to-the-imaginary-numbers"
+      }
+    ]
+  },
+  "mathematical-notation/independence-notation": {
+    "websites": [
+      {
+        "title": "Independence (Probability) — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Independence_(probability_theory)"
+      },
+      {
+        "title": "Independent Events — Investopedia",
+        "url": "https://www.investopedia.com/terms/i/independent-events.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Independent Events — Khan Academy",
+        "url": "https://www.khanacademy.org/math/ap-statistics/probability-ap/probability-multiplication-rule/a/multiplication-rule-independent-events"
+      },
+      {
+        "title": "Conditional Independence — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
       }
     ]
   },
@@ -3622,6 +3710,50 @@
       {
         "title": "Paul's Online Math Notes — Integrals",
         "url": "https://tutorial.math.lamar.edu/Classes/CalcI/DefnOfDefiniteIntegral.aspx"
+      }
+    ]
+  },
+  "mathematical-notation/intersection-notation": {
+    "websites": [
+      {
+        "title": "Intersection (Set Theory) — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Intersection_(set_theory)"
+      },
+      {
+        "title": "Probability of Joint Events — Khan Academy",
+        "url": "https://www.khanacademy.org/math/ap-statistics/probability-ap/addition-rule-probability/a/addition-rule-for-probability"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Intersection of Events — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/probability-library"
+      },
+      {
+        "title": "Set Operations in Probability — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
+      }
+    ]
+  },
+  "mathematical-notation/joint-distribution-notation": {
+    "websites": [
+      {
+        "title": "Joint Probability Distribution — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Joint_probability_distribution"
+      },
+      {
+        "title": "Joint, Marginal, and Conditional Distributions — Statistics LibreTexts",
+        "url": "https://en.wikipedia.org/wiki/Joint_probability_distribution"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Joint Distributions — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
+      },
+      {
+        "title": "Marginal Distributions — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library"
       }
     ]
   },
@@ -3659,6 +3791,28 @@
     ],
     "videos": []
   },
+  "mathematical-notation/moment-notation": {
+    "websites": [
+      {
+        "title": "Moment (Mathematics) — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Moment_(mathematics)"
+      },
+      {
+        "title": "Statistical Moments — Investopedia",
+        "url": "https://www.investopedia.com/terms/s/skewness.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Moments of a Distribution — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
+      },
+      {
+        "title": "Central Moments and Standardised Moments — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Central_moment"
+      }
+    ]
+  },
   "mathematical-notation/normal-cdf-and-pdf-notation": {
     "websites": [
       {
@@ -3672,6 +3826,28 @@
       {
         "title": "Paul's Online Math Notes — Higher Order Differential Equations",
         "url": "https://tutorial.math.lamar.edu/Classes/DE/HOHomogeneousDE.aspx"
+      }
+    ]
+  },
+  "mathematical-notation/order-statistics-notation": {
+    "websites": [
+      {
+        "title": "Order Statistics — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Order_statistic"
+      },
+      {
+        "title": "Order Statistics — Statistics LibreTexts",
+        "url": "https://en.wikipedia.org/wiki/Order_statistic"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Order Statistics — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
+      },
+      {
+        "title": "Quantiles and Order Statistics — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/percentiles/a/percentiles-review"
       }
     ]
   },
@@ -3701,6 +3877,28 @@
       }
     ]
   },
+  "mathematical-notation/pmf-notation": {
+    "websites": [
+      {
+        "title": "Probability Mass Function — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Probability_mass_function"
+      },
+      {
+        "title": "Probability Mass Function — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-discrete/a/random-variables-discrete-review"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Discrete Random Variables and PMFs — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library"
+      },
+      {
+        "title": "PMF vs PDF — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
+      }
+    ]
+  },
   "mathematical-notation/probability-measure-notation": {
     "websites": [
       {
@@ -3714,6 +3912,50 @@
     ],
     "videos": []
   },
+  "mathematical-notation/random-variable-notation": {
+    "websites": [
+      {
+        "title": "Random Variable — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Random_variable"
+      },
+      {
+        "title": "Random Variables — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-discrete/a/random-variables-discrete-review"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Random Variables — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library"
+      },
+      {
+        "title": "Introduction to Random Variables — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
+      }
+    ]
+  },
+  "mathematical-notation/skewness-kurtosis-notation": {
+    "websites": [
+      {
+        "title": "Skewness — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Skewness"
+      },
+      {
+        "title": "Kurtosis — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Kurtosis"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Skewness and Kurtosis — StatQuest",
+        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+      },
+      {
+        "title": "Skewness — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
+      }
+    ]
+  },
   "mathematical-notation/stochastic-integral-notation": {
     "websites": [
       {
@@ -3726,6 +3968,28 @@
       }
     ],
     "videos": []
+  },
+  "mathematical-notation/union-notation": {
+    "websites": [
+      {
+        "title": "Union (Set Theory) — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Union_(set_theory)"
+      },
+      {
+        "title": "Addition Rule for Probability — Khan Academy",
+        "url": "https://www.khanacademy.org/math/ap-statistics/probability-ap/addition-rule-probability/a/addition-rule-for-probability"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Union of Events and Inclusion-Exclusion — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/probability-library"
+      },
+      {
+        "title": "Probability of a Union — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
+      }
+    ]
   },
   "portfolio-theory/alpha-and-beta": {
     "websites": [

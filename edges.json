@@ -6786,6 +6786,18 @@
     "description": "The Heston model has a closed-form characteristic function for log S_T but no closed-form density — option prices are computed by numerically inverting phi via the Carr-Madan FFT formula, making characteristic function notation essential for practical Heston implementation."
   },
   {
+    "source": "mathematical-notation/complement-notation",
+    "target": "mathematical-notation/set-notation",
+    "label": "detailed in",
+    "description": "The complement symbol Aᶜ is one of the three fundamental set operations alongside union and intersection — the complement card focuses on its probabilistic applications including De Morgan's laws and survival probability calculations."
+  },
+  {
+    "source": "mathematical-notation/complement-notation",
+    "target": "probability/survival-function",
+    "label": "defines",
+    "description": "The survival function S(t) = P(T > t) = 1 − F(t) = P({T ≤ t}ᶜ) is the probability of the complement of the event {T ≤ t} — complement notation is the natural language for expressing survival probabilities as 1 minus a CDF."
+  },
+  {
     "source": "mathematical-notation/conditional-expectation-notation",
     "target": "stochastic-processes/martingales",
     "label": "notation for",
@@ -6796,6 +6808,18 @@
     "target": "stochastic-processes/tower-property",
     "label": "notation for",
     "description": "The tower property E[E[X | ℱ_t] | ℱ_s] = E[X | ℱ_s] is expressed entirely in conditional expectation notation — understanding the nesting of bars and filtrations is essential to reading and applying it."
+  },
+  {
+    "source": "mathematical-notation/conditional-probability-notation",
+    "target": "probability/bayes-theorem",
+    "label": "notation for",
+    "description": "Bayes' theorem P(A|B) = P(B|A)P(A)/P(B) is expressed entirely in conditional probability notation — both the prior P(A) and the likelihood P(B|A) use the | symbol to encode knowledge about the conditioning event."
+  },
+  {
+    "source": "mathematical-notation/conditional-probability-notation",
+    "target": "probability/conditional-probability",
+    "label": "notation for",
+    "description": "The conditional probability card explains the concept; the conditional probability notation card focuses on the symbolic conventions P(A|B), f_{X|Y}(x|y), and how the vertical bar is used consistently across discrete and continuous settings."
   },
   {
     "source": "mathematical-notation/convergence-notation",
@@ -6906,6 +6930,18 @@
     "description": "The hat notation θ̂ denotes an estimator of the parameter θ, while x̄ denotes the sample mean — the hat-bar-tilde card covers the typographic conventions that distinguish estimates from true values in statistical notation."
   },
   {
+    "source": "mathematical-notation/iid-notation",
+    "target": "probability/law-of-large-numbers",
+    "label": "required by",
+    "description": "The LLN states that the sample mean of an i.i.d. sequence converges to the population mean — without the independence and identical distribution assumptions encoded in the i.i.d. notation, the convergence guarantee does not hold."
+  },
+  {
+    "source": "mathematical-notation/iid-notation",
+    "target": "statistics/central-limit-theorem",
+    "label": "required by",
+    "description": "The CLT states that the sample mean of n i.i.d. variables with finite variance converges in distribution to a normal — the i.i.d. assumption expressed by X_i ~iid F is the core hypothesis of the theorem."
+  },
+  {
     "source": "mathematical-notation/imaginary-unit",
     "target": "calculus/complex-numbers",
     "label": "foundation of",
@@ -6928,6 +6964,18 @@
     "target": "mathematical-notation/complex-plane-notation",
     "label": "defines axis of",
     "description": "The imaginary unit i defines the vertical (imaginary) axis of the complex plane — every point bi on this axis is a real multiple of i, and the full Argand diagram only makes sense once i is established as an independent direction orthogonal to the real line."
+  },
+  {
+    "source": "mathematical-notation/independence-notation",
+    "target": "mathematical-notation/joint-distribution-notation",
+    "label": "test via",
+    "description": "Independence X ⊥⊥ Y is equivalent to the factorisation condition f_{X,Y}(x,y) = f_X(x)f_Y(y), so reading joint distribution notation is necessary to verify or state independence conditions formally."
+  },
+  {
+    "source": "mathematical-notation/independence-notation",
+    "target": "probability/copulas",
+    "label": "violated by",
+    "description": "Copulas model the dependence structure between random variables precisely because X ⊥⊥ Y rarely holds for financial assets — the copula captures how the joint distribution deviates from the product of marginals that independence would require."
   },
   {
     "source": "mathematical-notation/indicator-function-notation",
@@ -6972,10 +7020,34 @@
     "description": "The notational shift from ∫f(x)dx to ∫g(t)dW_t signals the transition from ordinary to stochastic integration — recognising dW versus dt is essential for applying the correct calculus rules."
   },
   {
+    "source": "mathematical-notation/intersection-notation",
+    "target": "mathematical-notation/set-notation",
+    "label": "detailed in",
+    "description": "The intersection symbol ∩ is introduced in set notation alongside union and complement — the intersection card goes deeper on the probability rules (multiplication rule, inclusion-exclusion) that apply specifically to event intersections."
+  },
+  {
+    "source": "mathematical-notation/intersection-notation",
+    "target": "probability/conditional-probability",
+    "label": "defines via",
+    "description": "Conditional probability P(A|B) = P(A∩B)/P(B) is defined using the intersection — the event A∩B (both A and B occur) is the numerator, making the intersection symbol central to the notation of conditional probability."
+  },
+  {
     "source": "mathematical-notation/irrational-numbers",
     "target": "mathematical-notation/rational-numbers",
     "label": "complement of",
     "description": "Irrational numbers are the real numbers that cannot be expressed as a ratio of integers — together with the rationals they partition the real line, and the distinction matters when discussing the density of rational approximations to continuous prices."
+  },
+  {
+    "source": "mathematical-notation/joint-distribution-notation",
+    "target": "mathematical-notation/independence-notation",
+    "label": "encodes",
+    "description": "Independence X ⊥⊥ Y is characterised through the joint distribution notation as the factorisation f_{X,Y}(x,y) = f_X(x)f_Y(y) — joint distribution notation is the language in which independence conditions are formally stated."
+  },
+  {
+    "source": "mathematical-notation/joint-distribution-notation",
+    "target": "probability/joint-pdf-and-marginal-distributions",
+    "label": "notation for",
+    "description": "The joint PDF and marginal distributions card explains the concepts; the joint distribution notation card provides the symbolic vocabulary f_{X,Y}, f_X, f_{X|Y} needed to read and write those relationships compactly."
   },
   {
     "source": "mathematical-notation/law-and-distribution-notation",
@@ -7056,6 +7128,18 @@
     "description": "Matrix-vector notation distinguishes row vectors (w^T, a 1×n array) from column vectors (w, an n×1 array) using the transpose symbol — consistent use of this convention prevents the most common dimension errors in portfolio calculations."
   },
   {
+    "source": "mathematical-notation/moment-notation",
+    "target": "mathematical-notation/skewness-kurtosis-notation",
+    "label": "defines",
+    "description": "Skewness and excess kurtosis are the standardised 3rd and 4th central moments — the moment notation card establishes the general framework μ_k = E[(X−μ)^k] from which these specific statistics are derived."
+  },
+  {
+    "source": "mathematical-notation/moment-notation",
+    "target": "probability/moment-generating-function",
+    "label": "generated by",
+    "description": "The moment generating function M_X(t) = E[e^{tX}] encodes all moments of X in a single function — differentiating k times at t=0 recovers the k-th raw moment μ'_k = E[X^k]."
+  },
+  {
     "source": "mathematical-notation/natural-numbers",
     "target": "mathematical-notation/integer-numbers",
     "label": "subset of",
@@ -7134,6 +7218,18 @@
     "description": "European option pricing formulas C = S·N(d₁) − K·e^(−rT)·N(d₂) use the standard notation defined in the option notation card — fluency with the symbols is prerequisite for reading any option pricing text."
   },
   {
+    "source": "mathematical-notation/order-statistics-notation",
+    "target": "probability/generalised-extreme-value-distribution",
+    "label": "foundation of",
+    "description": "Extreme value theory studies the distributional behaviour of the maximum order statistic X_{(n)} as n → ∞ — the GEV distribution is the limiting distribution of the maximum, making order statistics notation the starting language for all EVT results."
+  },
+  {
+    "source": "mathematical-notation/order-statistics-notation",
+    "target": "risk/value-at-risk",
+    "label": "computes historical",
+    "description": "Historical simulation VaR is a specific order statistic of the empirical loss distribution — the (1−α)n-th order statistic X_{((1−α)n)} of n simulated losses gives the empirical α-quantile, which is the historical VaR estimate."
+  },
+  {
     "source": "mathematical-notation/partial-derivative-notation",
     "target": "calculus/partial-derivatives",
     "label": "notation for",
@@ -7162,6 +7258,18 @@
     "target": "probability/z-table",
     "label": "notation used with",
     "description": "Z-tables tabulate Φ(z) or N(z) depending on the textbook's convention — recognising the equivalence is essential when reading tables from different sources."
+  },
+  {
+    "source": "mathematical-notation/pmf-notation",
+    "target": "probability/binomial-distribution",
+    "label": "example of",
+    "description": "The binomial distribution is one of the most important discrete distributions in finance — its probability mass function p(k) = C(n,k)p^k(1-p)^{n-k} is a canonical example of PMF notation applied to option pricing via the binomial tree."
+  },
+  {
+    "source": "mathematical-notation/pmf-notation",
+    "target": "probability/probability-density-function",
+    "label": "discrete counterpart of",
+    "description": "The PMF p_X(k) = P(X=k) is the discrete analogue of the PDF f_X(x) — the key contrast is that PMF values are true probabilities while PDF values are densities that must be integrated to give probabilities."
   },
   {
     "source": "mathematical-notation/probability-measure-notation",
@@ -7224,6 +7332,18 @@
     "description": "The Radon-Nikodym derivative dQ/dP is the mathematical object that converts the real-world measure P to the risk-neutral measure Q — its notation expresses the density that weights each scenario differently under the two measures."
   },
   {
+    "source": "mathematical-notation/random-variable-notation",
+    "target": "mathematical-notation/probability-measure-notation",
+    "label": "defined within",
+    "description": "A random variable X: Ω → ℝ is formally defined on the probability space (Ω, ℱ, ℙ) — it maps outcomes from the sample space to real numbers, so the probability measure notation card provides the foundation on which random variable notation rests."
+  },
+  {
+    "source": "mathematical-notation/random-variable-notation",
+    "target": "probability/probability-density-function",
+    "label": "described by",
+    "description": "A continuous random variable is characterised by its PDF f_X(x), which describes the relative likelihood of each realisation x — the PDF notation and the random variable notation are complementary descriptions of the same object."
+  },
+  {
     "source": "mathematical-notation/rational-numbers",
     "target": "mathematical-notation/irrational-numbers",
     "label": "complement of",
@@ -7258,6 +7378,18 @@
     "target": "probability/probability-density-function",
     "label": "notation for",
     "description": "Probability is defined on sets of outcomes within the sample space Ω — the PDF assigns density to events (measurable sets), and expressions like P(X ∈ A) = ∫_A f(x) dx require set notation to specify the domain of integration."
+  },
+  {
+    "source": "mathematical-notation/skewness-kurtosis-notation",
+    "target": "probability/fat-tailed-distributions",
+    "label": "quantifies",
+    "description": "Excess kurtosis γ_2 − 3 > 0 is the formal measure of fat-tailedness — a positive excess kurtosis means more probability mass in the tails and at the peak than a normal distribution, precisely characterising the fat tails that equity returns exhibit."
+  },
+  {
+    "source": "mathematical-notation/skewness-kurtosis-notation",
+    "target": "statistics/jarque-bera-test",
+    "label": "tested by",
+    "description": "The Jarque-Bera test for normality uses the skewness γ_1 and excess kurtosis (γ_2 − 3) directly in its test statistic JB = (n/6)(γ_1² + (γ_2−3)²/4), making skewness and kurtosis notation the inputs to this standard diagnostic."
   },
   {
     "source": "mathematical-notation/stochastic-integral-notation",
@@ -7312,6 +7444,18 @@
     "target": "stochastic-processes/stochastic-differential-equation",
     "label": "used in",
     "description": "SDEs use time subscript notation X_t to denote the value of process X at time t — the notation card explains the subscript convention that distinguishes a process (a family of random variables) from a single random variable."
+  },
+  {
+    "source": "mathematical-notation/union-notation",
+    "target": "mathematical-notation/set-notation",
+    "label": "detailed in",
+    "description": "The union symbol ∪ is one of the core set operations introduced in set notation — the union card extends that coverage with the inclusion-exclusion formula and the union bound used in portfolio risk calculations."
+  },
+  {
+    "source": "mathematical-notation/union-notation",
+    "target": "probability/bayes-theorem",
+    "label": "used by",
+    "description": "The law of total probability P(B) = Σ P(B|A_i)P(A_i) decomposes P(B) by partitioning Ω into disjoint events whose union is Ω — union notation appears in describing the partition and the countable additivity axiom underlying the formula."
   },
   {
     "source": "portfolio-theory/active-share",
