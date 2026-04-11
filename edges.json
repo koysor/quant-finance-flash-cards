@@ -10608,6 +10608,18 @@
     "description": "The OLS beta estimator divides the covariance of asset and market returns by the market variance — this normalisation converts a covariance into a unitless sensitivity measure."
   },
   {
+    "source": "statistics/bessels-correction",
+    "target": "statistics/sample-variance",
+    "label": "defines",
+    "description": "Bessel's correction is the reason sample variance divides by n-1 rather than n — it is the mathematical justification for the formula that makes the sample variance an unbiased estimator."
+  },
+  {
+    "source": "statistics/bessels-correction",
+    "target": "statistics/unbiased-estimator",
+    "label": "illustrates",
+    "description": "The n-1 correction is the canonical worked example of bias correction — it shows concretely how losing one degree of freedom by estimating the mean from the same data introduces bias, and how to remove it."
+  },
+  {
     "source": "statistics/box-plots",
     "target": "statistics/outlier-detection",
     "label": "visualises",
@@ -10714,6 +10726,18 @@
     "target": "statistics/variance-and-standard-deviation",
     "label": "requires",
     "description": "The width of a confidence interval is directly proportional to the standard deviation — higher variability in the data produces wider intervals and less precise estimates of the population parameter."
+  },
+  {
+    "source": "statistics/consistent-estimator",
+    "target": "statistics/maximum-likelihood-estimation",
+    "label": "property of",
+    "description": "MLE estimators are consistent under standard regularity conditions — they converge to the true parameter as sample size grows, even when biased for finite samples (e.g. MLE variance uses 1/n)."
+  },
+  {
+    "source": "statistics/consistent-estimator",
+    "target": "statistics/unbiased-estimator",
+    "label": "distinct from",
+    "description": "Consistency and unbiasedness are independent properties — an estimator can be unbiased but inconsistent, or biased but consistent; the MLE variance estimator is the canonical example of the latter."
   },
   {
     "source": "statistics/correlation",
@@ -11112,6 +11136,24 @@
     "description": "Mann-Whitney handles two independent samples while Wilcoxon signed-rank handles one sample or paired data — together they cover the non-parametric equivalents of the one- and two-sample t-tests."
   },
   {
+    "source": "statistics/maximum-likelihood-estimation",
+    "target": "statistics/consistent-estimator",
+    "label": "achieves",
+    "description": "Under standard regularity conditions MLE estimators are consistent — they converge to the true parameters as n grows — making MLE the default estimation framework when the distributional form is known."
+  },
+  {
+    "source": "statistics/maximum-likelihood-estimation",
+    "target": "statistics/unbiased-estimator",
+    "label": "not always",
+    "description": "The MLE for variance uses 1/n and is therefore biased downward — MLE prioritises consistency and efficiency over unbiasedness, illustrating that the two properties are distinct goals."
+  },
+  {
+    "source": "statistics/maximum-likelihood-estimation",
+    "target": "volatility/realised-volatility",
+    "label": "estimates",
+    "description": "Fitting a distribution to realised volatility data — to calibrate models for VaR, option pricing, or risk management — uses MLE to find the parameter values most consistent with observed returns."
+  },
+  {
     "source": "statistics/multiple-testing-correction",
     "target": "statistics/estimating-parameters",
     "label": "constrains",
@@ -11256,6 +11298,30 @@
     "description": "Portfolio variance depends on pairwise covariances between all assets — the cross-terms 2w₁w₂Cov(R₁,R₂) are what make diversification reduce total risk below the weighted sum of individual risks."
   },
   {
+    "source": "statistics/population-mean",
+    "target": "statistics/sample-mean",
+    "label": "estimated by",
+    "description": "The sample mean is the standard unbiased estimator of the population mean — it is the observable quantity we compute from data to approximate the unobservable true expected return."
+  },
+  {
+    "source": "statistics/population-mean",
+    "target": "statistics/unbiased-estimator",
+    "label": "target of",
+    "description": "The population mean is the parameter that the sample mean is designed to estimate without bias — it illustrates the general estimation problem of recovering an unobservable population quantity from a finite sample."
+  },
+  {
+    "source": "statistics/population-variance",
+    "target": "statistics/population-mean",
+    "label": "defined using",
+    "description": "The population variance is defined as the expected squared deviation from the population mean — μ must be known or assumed to compute σ²."
+  },
+  {
+    "source": "statistics/population-variance",
+    "target": "statistics/sample-variance",
+    "label": "estimated by",
+    "description": "The sample variance with n-1 denominator is the standard unbiased estimator of the population variance — the parameter that drives VaR, tracking error, and all volatility-based risk measures."
+  },
+  {
     "source": "statistics/principal-component-analysis",
     "target": "fixed-income/yield-curve",
     "label": "models",
@@ -11350,6 +11416,30 @@
     "target": "statistics/statistical-power",
     "label": "derived from",
     "description": "Sample size is calculated by inverting the power formula — specifying the desired power, effect size, and α gives the minimum n needed to achieve that power."
+  },
+  {
+    "source": "statistics/sample-mean",
+    "target": "statistics/population-mean",
+    "label": "estimates",
+    "description": "The sample mean is the unbiased, consistent estimator of the unobservable population mean — the fundamental relationship between what we can compute and what we want to know."
+  },
+  {
+    "source": "statistics/sample-mean",
+    "target": "statistics/unbiased-estimator",
+    "label": "example of",
+    "description": "The sample mean is the simplest unbiased estimator: E[X̄] = μ exactly, for any sample size and any distribution with finite mean."
+  },
+  {
+    "source": "statistics/sample-variance",
+    "target": "statistics/bessels-correction",
+    "label": "applies",
+    "description": "The sample variance formula uses n-1 in the denominator — the direct application of Bessel's correction to ensure the estimator is unbiased for the population variance."
+  },
+  {
+    "source": "statistics/sample-variance",
+    "target": "statistics/population-variance",
+    "label": "estimates",
+    "description": "Sample variance with n-1 denominator is the standard unbiased estimator of population variance — the fundamental link between observable dispersion in a dataset and the true theoretical variance."
   },
   {
     "source": "statistics/scaling-mean-with-time",

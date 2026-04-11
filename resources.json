@@ -5070,8 +5070,8 @@
         "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/mean-var-standard-deviation-random/v/expected-value-of-a-discrete-random-variable"
       },
       {
-        "title": "StatQuest — Variance and Standard Deviation",
-        "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY"
+        "title": "Khan Academy — Variance of a Discrete Random Variable",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/mean-var-standard-deviation-random/v/variance-and-standard-deviation-of-a-discrete-random-variable"
       }
     ]
   },
@@ -6313,6 +6313,28 @@
       }
     ]
   },
+  "statistics/bessels-correction": {
+    "websites": [
+      {
+        "title": "Wikipedia — Bessel's Correction",
+        "url": "https://en.wikipedia.org/wiki/Bessel%27s_correction"
+      },
+      {
+        "title": "Khan Academy — Sample Variance",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-sample/v/sample-variance"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Bias and Variance",
+        "url": "https://www.youtube.com/watch?v=EuBBz3bI-aA"
+      },
+      {
+        "title": "Khan Academy — Why Divide by n-1 for Sample Variance",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-sample/v/review-and-intuition-why-we-divide-by-n-1-for-the-unbiased-sample-variance"
+      }
+    ]
+  },
   "statistics/box-plots": {
     "websites": [
       {
@@ -6371,6 +6393,28 @@
       {
         "title": "Khan Academy — Confidence Intervals",
         "url": "https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample"
+      }
+    ]
+  },
+  "statistics/consistent-estimator": {
+    "websites": [
+      {
+        "title": "Wikipedia — Consistent Estimator",
+        "url": "https://en.wikipedia.org/wiki/Consistent_estimator"
+      },
+      {
+        "title": "Investopedia — Consistency",
+        "url": "https://www.investopedia.com/terms/c/consistency.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Bias and Variance",
+        "url": "https://www.youtube.com/watch?v=EuBBz3bI-aA"
+      },
+      {
+        "title": "Khan Academy — Unbiased Estimators",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-sample/a/population-and-sample-standard-deviation-review"
       }
     ]
   },
@@ -6652,6 +6696,28 @@
       }
     ]
   },
+  "statistics/maximum-likelihood-estimation": {
+    "websites": [
+      {
+        "title": "Wikipedia — Maximum Likelihood Estimation",
+        "url": "https://en.wikipedia.org/wiki/Maximum_likelihood_estimation"
+      },
+      {
+        "title": "Brilliant — Maximum Likelihood Estimation",
+        "url": "https://brilliant.org/wiki/maximum-likelihood-estimation-mle/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Maximum Likelihood, Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=XepXtl9YKwc"
+      },
+      {
+        "title": "Wikipedia — Maximum Likelihood Estimation",
+        "url": "https://en.wikipedia.org/wiki/Maximum_likelihood_estimation"
+      }
+    ]
+  },
   "statistics/multiple-testing-correction": {
     "websites": [
       {
@@ -6760,6 +6826,50 @@
       }
     ]
   },
+  "statistics/population-mean": {
+    "websites": [
+      {
+        "title": "Khan Academy — Population and Sample Mean",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/mean-median-basics/a/mean-as-the-balancing-point"
+      },
+      {
+        "title": "Wikipedia — Mean",
+        "url": "https://en.wikipedia.org/wiki/Mean"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Statistics Intro: Mean, Median and Mode",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/mean-median-basics/v/statistics-intro-mean-median-and-mode"
+      },
+      {
+        "title": "StatQuest — Mean and Standard Deviation, Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY"
+      }
+    ]
+  },
+  "statistics/population-variance": {
+    "websites": [
+      {
+        "title": "Khan Academy — Population Variance",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-population/v/variance-of-a-population"
+      },
+      {
+        "title": "Wikipedia — Variance",
+        "url": "https://en.wikipedia.org/wiki/Variance"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Population Variance",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-population/v/variance-of-a-population"
+      },
+      {
+        "title": "StatQuest — Mean and Standard Deviation, Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY"
+      }
+    ]
+  },
   "statistics/principal-component-analysis": {
     "websites": [
       {
@@ -6815,6 +6925,50 @@
       {
         "title": "Khan Academy — Sample size for estimating a mean",
         "url": "https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample/old-confidence-intervals-videos/v/small-sample-size-confidence-intervals"
+      }
+    ]
+  },
+  "statistics/sample-mean": {
+    "websites": [
+      {
+        "title": "Khan Academy — Sample Mean",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/mean-median-basics/v/mean-as-the-balancing-point"
+      },
+      {
+        "title": "Wikipedia — Sample Mean",
+        "url": "https://en.wikipedia.org/wiki/Sample_mean_and_covariance"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Sampling Distribution of the Sample Mean",
+        "url": "https://www.khanacademy.org/math/statistics-probability/sampling-distributions-library/sample-means/v/central-limit-theorem"
+      },
+      {
+        "title": "StatQuest — Mean and Standard Deviation, Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY"
+      }
+    ]
+  },
+  "statistics/sample-variance": {
+    "websites": [
+      {
+        "title": "Khan Academy — Sample Variance",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-sample/v/sample-variance"
+      },
+      {
+        "title": "Wikipedia — Variance — Sample Variance",
+        "url": "https://en.wikipedia.org/wiki/Variance#Sample_variance"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Why Divide by n-1 for Sample Variance",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-sample/v/review-and-intuition-why-we-divide-by-n-1-for-the-unbiased-sample-variance"
+      },
+      {
+        "title": "StatQuest — Bias and Variance",
+        "url": "https://www.youtube.com/watch?v=EuBBz3bI-aA"
       }
     ]
   },
