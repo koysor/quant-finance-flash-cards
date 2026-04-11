@@ -5275,6 +5275,28 @@
       }
     ]
   },
+  "probability/probability-mass-function": {
+    "websites": [
+      {
+        "title": "Probability Mass Function — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Probability_mass_function"
+      },
+      {
+        "title": "Probability Mass Functions — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-discrete/a/random-variables-discrete-review"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Discrete Random Variables and PMFs — Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library"
+      },
+      {
+        "title": "Introduction to Probability — MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
+      }
+    ]
+  },
   "probability/probit-function": {
     "websites": [
       {

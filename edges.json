@@ -7272,6 +7272,12 @@
     "description": "The PMF p_X(k) = P(X=k) is the discrete analogue of the PDF f_X(x) — the key contrast is that PMF values are true probabilities while PDF values are densities that must be integrated to give probabilities."
   },
   {
+    "source": "mathematical-notation/pmf-notation",
+    "target": "probability/probability-mass-function",
+    "label": "notation for",
+    "description": "The PMF notation card establishes the symbolic convention p_X(k) = P(X=k); the probability mass function card provides the conceptual framework — properties, CDF relationship, and finance applications — that the notation describes."
+  },
+  {
     "source": "mathematical-notation/probability-measure-notation",
     "target": "derivatives/p-measure-vs-q-measure",
     "label": "notation for",
@@ -9280,6 +9286,30 @@
     "target": "probability/inverse-transform-sampling",
     "label": "foundation of",
     "description": "Inverse transform sampling is the direct application of the PIT in reverse: passing U ~ Uniform(0,1) through F_inverse generates draws from any target distribution."
+  },
+  {
+    "source": "probability/probability-mass-function",
+    "target": "probability/binomial-distribution",
+    "label": "illustrated by",
+    "description": "The binomial distribution is one of the most important PMFs in quantitative finance — its mass function p(k) = C(n,k)p^k(1-p)^{n-k} directly gives the probability of each terminal node in a binomial option pricing tree, making it the canonical example of a PMF applied to derivative pricing."
+  },
+  {
+    "source": "probability/probability-mass-function",
+    "target": "probability/cumulative-distribution-function",
+    "label": "summed to form",
+    "description": "The CDF of a discrete random variable is obtained by summing the PMF: F_X(x) = Σ_{k ≤ x} p_X(k) — the CDF is therefore a step function that jumps at each support point by the amount p_X(k), fully determined by the PMF."
+  },
+  {
+    "source": "probability/probability-mass-function",
+    "target": "probability/discrete-random-variables",
+    "label": "characterises",
+    "description": "A discrete random variable is completely characterised by its PMF — knowing p_X(k) for all k in the support determines every probability, expectation, variance, and higher moment of the distribution."
+  },
+  {
+    "source": "probability/probability-mass-function",
+    "target": "probability/probability-density-function",
+    "label": "discrete counterpart of",
+    "description": "The PMF p_X(k) = P(X=k) is the discrete analogue of the PDF f_X(x) — both describe a distribution completely, but the PMF gives true point probabilities while the PDF gives a density requiring integration, reflecting the fundamental difference between discrete and continuous random variables."
   },
   {
     "source": "probability/probit-function",
