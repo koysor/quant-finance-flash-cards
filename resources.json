@@ -4919,6 +4919,28 @@
       }
     ]
   },
+  "probability/correlation-breakdown": {
+    "websites": [
+      {
+        "title": "Wikipedia — Correlation and Dependence",
+        "url": "https://en.wikipedia.org/wiki/Correlation"
+      },
+      {
+        "title": "Investopedia — Correlation",
+        "url": "https://www.investopedia.com/terms/c/correlation.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Pearson's Correlation, Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=xZ_z8KWkhXE"
+      },
+      {
+        "title": "Khan Academy — Correlation Coefficients",
+        "url": "https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/scatterplots-and-correlation/v/calculating-correlation-coefficient-r"
+      }
+    ]
+  },
   "probability/covariance": {
     "websites": [
       {

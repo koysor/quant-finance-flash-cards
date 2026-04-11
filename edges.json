@@ -8850,6 +8850,24 @@
     "description": "The statistics card covers sample (Pearson) correlation estimated from data; this card presents the population definition in terms of expectations and variances of random variables."
   },
   {
+    "source": "probability/correlation-breakdown",
+    "target": "probability/correlation-coefficient",
+    "label": "failure mode of",
+    "description": "Correlation breakdown is what happens when the Pearson correlation coefficient, assumed constant in Markowitz, spikes towards +1 during crises — it is the empirical violation of the static correlation assumption."
+  },
+  {
+    "source": "probability/correlation-breakdown",
+    "target": "probability/copulas",
+    "label": "motivates",
+    "description": "The failure of linear correlation to capture crisis-period joint tail behaviour motivates copulas, which model dependence structure separately from marginals and can represent asymmetric tail dependence."
+  },
+  {
+    "source": "probability/correlation-breakdown",
+    "target": "probability/tail-dependence",
+    "label": "explained by",
+    "description": "Correlation breakdown is the realised consequence of positive tail dependence — assets that have high upper and lower tail dependence will see their linear correlation spike when extreme joint moves occur simultaneously."
+  },
+  {
     "source": "probability/exponential-distribution",
     "target": "financial-maths/time-value-of-money",
     "label": "mirrors",
