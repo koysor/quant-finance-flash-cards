@@ -8766,6 +8766,30 @@
     "description": "The LLN provides the formal guarantee that a sample mean converges to the expected value — it transforms the abstract definition of expectation into a practically computable quantity via repeated sampling."
   },
   {
+    "source": "probability/expectation-and-variance",
+    "target": "probability/central-moments",
+    "label": "introduces",
+    "description": "Expectation and variance are the first and second central moments — understanding them is the prerequisite for higher-order moments such as skewness (third) and kurtosis (fourth) used in advanced portfolio analysis."
+  },
+  {
+    "source": "probability/expectation-and-variance",
+    "target": "probability/expected-value",
+    "label": "generalises",
+    "description": "The expectation-and-variance card extends the single-variable expected value to multivariate settings via linearity of expectation and the covariance decomposition of portfolio variance."
+  },
+  {
+    "source": "probability/expectation-and-variance",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "foundation of",
+    "description": "Markowitz mean-variance optimisation is built entirely on the linearity of expectation for returns and the covariance decomposition of portfolio variance — both derived directly from the properties on this card."
+  },
+  {
+    "source": "probability/expectation-and-variance",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "connects to",
+    "description": "The variance formula and standard deviation definition are shared between probability theory and descriptive statistics — this card presents them in the probabilistic (population) sense while the statistics card covers the sample estimators."
+  },
+  {
     "source": "probability/exponential-distribution",
     "target": "financial-maths/time-value-of-money",
     "label": "mirrors",

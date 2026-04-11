@@ -4965,6 +4965,28 @@
       }
     ]
   },
+  "probability/expectation-and-variance": {
+    "websites": [
+      {
+        "title": "Khan Academy — Variance and Standard Deviation of a Discrete Random Variable",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/mean-var-standard-deviation-random/a/variance-and-standard-deviation-of-a-discrete-random-variable"
+      },
+      {
+        "title": "Wikipedia — Variance",
+        "url": "https://en.wikipedia.org/wiki/Variance"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Mean and Variance of Random Variables",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/mean-var-standard-deviation-random/v/expected-value-of-a-discrete-random-variable"
+      },
+      {
+        "title": "StatQuest — Variance and Standard Deviation",
+        "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY"
+      }
+    ]
+  },
   "probability/exponential-distribution": {
     "websites": [
       {
