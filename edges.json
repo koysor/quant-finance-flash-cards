@@ -7362,6 +7362,30 @@
     "description": "A probability density function is a function f: R → [0,∞) — the real number line is the natural domain of the PDF for continuous random variables such as asset returns, log-prices, and interest rates."
   },
   {
+    "source": "mathematical-notation/sample-space-notation",
+    "target": "mathematical-notation/probability-measure-notation",
+    "label": "component of",
+    "description": "The sample space Ω is the first component of the probability space triple (Ω, ℱ, ℙ) — you cannot define a probability measure without first specifying the set of all possible outcomes that the measure assigns probabilities to."
+  },
+  {
+    "source": "mathematical-notation/sample-space-notation",
+    "target": "mathematical-notation/random-variable-notation",
+    "label": "domain of",
+    "description": "A random variable X: Ω → ℝ is a function whose domain is the sample space — every realisation X(ω) is the value the random variable takes at a specific outcome ω ∈ Ω."
+  },
+  {
+    "source": "mathematical-notation/sample-space-notation",
+    "target": "mathematical-notation/set-notation",
+    "label": "described using",
+    "description": "Events are subsets of the sample space, so set operations (∩, ∪, complement) on subsets of Ω directly correspond to combining or negating probabilistic events — set notation is the language for manipulating sample space events."
+  },
+  {
+    "source": "mathematical-notation/sample-space-notation",
+    "target": "probability/conditional-probability",
+    "label": "partitioned by",
+    "description": "The law of total probability partitions Ω into disjoint events A_i whose union is Ω, then expresses P(B) as a weighted sum over the partition — understanding the sample space as the universal set makes the partition argument geometrically clear."
+  },
+  {
     "source": "mathematical-notation/set-notation",
     "target": "mathematical-notation/logical-quantifiers",
     "label": "foundation of",
