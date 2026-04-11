@@ -6960,6 +6960,28 @@
       }
     ]
   },
+  "statistics/unbiased-estimator": {
+    "websites": [
+      {
+        "title": "Wikipedia — Bias of an Estimator",
+        "url": "https://en.wikipedia.org/wiki/Bias_of_an_estimator"
+      },
+      {
+        "title": "Khan Academy — Unbiased Estimators",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-sample/a/population-and-sample-standard-deviation-review"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Bias and Variance",
+        "url": "https://www.youtube.com/watch?v=EuBBz3bI-aA"
+      },
+      {
+        "title": "Khan Academy — Sample Variance",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-sample/v/sample-variance"
+      }
+    ]
+  },
   "statistics/variance-and-standard-deviation": {
     "websites": [
       {

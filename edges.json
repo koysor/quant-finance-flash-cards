@@ -11520,6 +11520,24 @@
     "description": "The precision of estimated parameters (drift and volatility) determines the power of hypothesis tests — noisy estimates widen confidence intervals and increase the probability of Type II errors when testing whether a strategy has genuine alpha."
   },
   {
+    "source": "statistics/unbiased-estimator",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "applied to",
+    "description": "The sample covariance matrix uses n-1 in the denominator for the same reason as the scalar sample variance — Bessel's correction ensures the estimator is unbiased, which matters for Markowitz optimisation inputs."
+  },
+  {
+    "source": "statistics/unbiased-estimator",
+    "target": "statistics/shrinkage-estimators",
+    "label": "traded off against",
+    "description": "Shrinkage deliberately introduces bias into covariance matrix or mean estimates in exchange for lower variance, accepting a worse bias-variance trade-off than unbiased OLS when the number of assets is large relative to the sample."
+  },
+  {
+    "source": "statistics/unbiased-estimator",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "illustrated by",
+    "description": "The sample variance with n-1 denominator is the canonical illustration of an unbiased estimator — it corrects the downward bias introduced by using the sample mean instead of the unknown population mean."
+  },
+  {
     "source": "statistics/variance-and-standard-deviation",
     "target": "statistics/autocorrelation",
     "label": "extended by",
