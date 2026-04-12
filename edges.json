@@ -10518,6 +10518,30 @@
     "description": "Portfolio parametric VaR extends single-asset VaR by replacing the individual volatility with the portfolio volatility sqrt(x'\u03a3x), which captures pairwise correlations between assets via the covariance matrix."
   },
   {
+    "source": "risk/risk-definition",
+    "target": "risk/expected-shortfall",
+    "label": "measured by",
+    "description": "Expected Shortfall operationalises the economic capital goal of risk measurement by averaging losses beyond the VaR threshold, capturing the severity of tail events rather than just their probability."
+  },
+  {
+    "source": "risk/risk-definition",
+    "target": "risk/financial-risk-taxonomy",
+    "label": "classified by",
+    "description": "The taxonomy of market, credit, operational, and liquidity risk is the standard framework for decomposing the broad definition of financial risk into measurable, manageable categories."
+  },
+  {
+    "source": "risk/risk-definition",
+    "target": "risk/london-whale-case-study",
+    "label": "illustrated by",
+    "description": "The London Whale episode illustrates the gap between regulatory risk measurement and economic reality \u2014 reported VaR fell while true downside risk grew, exposing the distinction between risk as a number and risk as uncertainty."
+  },
+  {
+    "source": "risk/risk-definition",
+    "target": "risk/value-at-risk",
+    "label": "quantified by",
+    "description": "VaR is the primary regulatory metric for downside risk measurement, translating the abstract definition of financial risk into a concrete loss threshold at a specified confidence level."
+  },
+  {
     "source": "risk/stress-testing",
     "target": "derivatives/option-greeks",
     "label": "uses sensitivities from",

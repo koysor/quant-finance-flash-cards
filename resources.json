@@ -6466,6 +6466,28 @@
       }
     ]
   },
+  "risk/risk-definition": {
+    "websites": [
+      {
+        "title": "Financial Risk \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Financial_risk"
+      },
+      {
+        "title": "Risk Management \u2014 Investopedia",
+        "url": "https://www.investopedia.com/terms/r/riskmanagement.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Introduction to Risk \u2014 MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "Value at Risk Explained \u2014 Khan Academy",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities"
+      }
+    ]
+  },
   "risk/stress-testing": {
     "websites": [
       {
