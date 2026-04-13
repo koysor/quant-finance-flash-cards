@@ -1,5 +1,41 @@
 [
   {
+    "source": "banking-regulation/backtesting-var",
+    "target": "banking-regulation/frtb-sensitivity-based-method",
+    "label": "determines access to",
+    "description": "Under FRTB, failure of the P&L attribution test (a form of backtesting comparing HPL to RTPL) forces a trading desk off the Internal Model Approach and onto the more capital-intensive Standardised Approach."
+  },
+  {
+    "source": "banking-regulation/backtesting-var",
+    "target": "risk/value-at-risk",
+    "label": "validates",
+    "description": "VaR backtesting is the mandatory regulatory process of checking whether a bank's VaR model produces exception rates consistent with its stated confidence level \u2014 a model producing too many exceptions must be recalibrated or replaced."
+  },
+  {
+    "source": "banking-regulation/basel-iii-three-pillars",
+    "target": "banking-regulation/capital-ratios-cet1",
+    "label": "mandates via pillar 1",
+    "description": "Pillar 1 of Basel III sets the quantitative minimum capital ratios \u2014 including the 4.5% CET1 and 8% Total Capital floors \u2014 that all banks must maintain against their Risk-Weighted Assets."
+  },
+  {
+    "source": "banking-regulation/basel-iii-three-pillars",
+    "target": "banking-regulation/risk-weighted-assets",
+    "label": "computed using",
+    "description": "All Pillar 1 capital ratios are expressed as a fraction of Risk-Weighted Assets, making the methodology for calculating RWA central to the Basel III framework."
+  },
+  {
+    "source": "banking-regulation/basel-iv-output-floor",
+    "target": "banking-regulation/irb-approach",
+    "label": "constrains capital benefit of",
+    "description": "The Basel IV output floor limits how much capital reduction a bank can achieve through IRB modelling, preventing the gaming of risk weights that led to RWA variability across banks using identical exposures."
+  },
+  {
+    "source": "banking-regulation/basel-iv-output-floor",
+    "target": "banking-regulation/risk-weighted-assets",
+    "label": "floors IRB component of",
+    "description": "The output floor applies to total RWA: IRB-calculated RWA cannot fall below 72.5% of the Standardised RWA for the same portfolio, ensuring that internal models cannot reduce the denominator of capital ratios below a minimum regulatory level."
+  },
+  {
     "source": "banking-regulation/basis-risk-banking-book",
     "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
     "label": "component of",
@@ -18,6 +54,138 @@
     "description": "The LIBOR-to-SOFR transition amplified basis risk as banks migrated assets and liabilities to different replacement rates at different speeds, creating new and sometimes unexpected basis exposures."
   },
   {
+    "source": "banking-regulation/capital-ratios-cet1",
+    "target": "banking-regulation/leverage-ratio",
+    "label": "complemented by",
+    "description": "The leverage ratio is a non-risk-based backstop to the CET1 ratio \u2014 while the CET1 ratio can be gamed by concentrating in low-risk-weighted assets, the leverage ratio prevents excessive balance-sheet expansion regardless of asset quality."
+  },
+  {
+    "source": "banking-regulation/capital-ratios-cet1",
+    "target": "banking-regulation/risk-weighted-assets",
+    "label": "denominator is",
+    "description": "CET1, Tier 1, and Total Capital ratios all use Risk-Weighted Assets as the denominator \u2014 a reduction in RWA density directly improves every capital ratio without any change in the amount of capital held."
+  },
+  {
+    "source": "banking-regulation/ccp-loss-waterfall",
+    "target": "banking-regulation/margin-period-of-risk",
+    "label": "sized to cover",
+    "description": "Each layer of the CCP loss waterfall must be large enough to cover the losses that could accumulate over the margin period of risk \u2014 the time between the last VM call and full close-out of the defaulter's positions."
+  },
+  {
+    "source": "banking-regulation/ccp-loss-waterfall",
+    "target": "financial-maths/central-counterparty",
+    "label": "defines resilience of",
+    "description": "The CCP loss waterfall defines the specific sequence of financial resources a CCP uses when a member defaults, providing the concrete mechanics behind the CCP's role as guarantor of the financial system."
+  },
+  {
+    "source": "banking-regulation/ccp-loss-waterfall",
+    "target": "risk/initial-margin",
+    "label": "first draws on",
+    "description": "The defaulting member's initial margin is the first layer consumed in the CCP loss waterfall \u2014 it is pre-positioned precisely to cover close-out losses during the margin period of risk without touching mutualised resources."
+  },
+  {
+    "source": "banking-regulation/clearing-economics",
+    "target": "banking-regulation/credit-value-adjustment-cva",
+    "label": "replaced by CCP in",
+    "description": "CCP clearing eliminates bilateral CVA capital because the CCP takes on the counterparty risk with its default fund and loss waterfall; the CVA cost is a key reason bilateral trading is more expensive than cleared trading."
+  },
+  {
+    "source": "banking-regulation/clearing-economics",
+    "target": "banking-regulation/sa-ccr-framework",
+    "label": "compared under",
+    "description": "SA-CCR is the method for calculating bilateral RWA on OTC derivatives; the clearing economics comparison requires quantifying the SA-CCR capital cost on the bilateral side versus the CCP IM and default fund contribution on the cleared side."
+  },
+  {
+    "source": "banking-regulation/clearing-economics",
+    "target": "banking-regulation/uncleared-margin-rules",
+    "label": "cost driver within",
+    "description": "UMR IM obligations on bilateral trades are a key component of clearing economics: for firms in UMR scope, the bilateral IM cost often exceeds CCP IM due to the absence of multilateral netting, making clearing the economically dominant choice."
+  },
+  {
+    "source": "banking-regulation/clearing-economics",
+    "target": "financial-maths/central-counterparty",
+    "label": "compares bilateral against",
+    "description": "The clearing economics framework explicitly compares the total cost of bilateral OTC trading against routing through a CCP, with multilateral netting at the CCP being the primary source of IM savings that drive clearing efficiency."
+  },
+  {
+    "source": "banking-regulation/close-out-netting",
+    "target": "banking-regulation/credit-value-adjustment-cva",
+    "label": "reduces exposure input to",
+    "description": "Close-out netting reduces the expected exposure profile used to compute CVA \u2014 by collapsing gross bilateral exposures into a single net figure, it lowers EE at each future time point and hence the CVA charge on the portfolio."
+  },
+  {
+    "source": "banking-regulation/close-out-netting",
+    "target": "banking-regulation/sa-ccr-framework",
+    "label": "reduces RC in",
+    "description": "SA-CCR's Replacement Cost is calculated on a netting-set basis \u2014 close-out netting is the legal foundation that allows offsetting trades within a netting set to reduce the RC component of EAD."
+  },
+  {
+    "source": "banking-regulation/close-out-valuation",
+    "target": "banking-regulation/close-out-netting",
+    "label": "follows from",
+    "description": "Close-out netting determines the scope of trades that are terminated and aggregated on default; close-out valuation then determines the monetary amount of the resulting net claim, using the Close-Out Amount methodology under the 2002 ISDA Master Agreement."
+  },
+  {
+    "source": "banking-regulation/close-out-valuation",
+    "target": "banking-regulation/credit-value-adjustment-cva",
+    "label": "affects uncertainty in",
+    "description": "CVA models assume the close-out amount equals the mark-to-market value at default, but in practice close-out valuation involves discretion and potential litigation; this valuation uncertainty is an underappreciated component of actual credit loss that standard CVA calculations ignore."
+  },
+  {
+    "source": "banking-regulation/close-out-valuation",
+    "target": "banking-regulation/margin-period-of-risk",
+    "label": "executed during",
+    "description": "The margin period of risk covers the time between the last successful margin call and the completion of close-out; close-out valuation determines the final settlement amount at the end of this period, making the MPoR duration a key driver of valuation uncertainty."
+  },
+  {
+    "source": "banking-regulation/collateral-transformation",
+    "target": "banking-regulation/clearing-economics",
+    "label": "enables participation in",
+    "description": "Firms holding only ineligible assets can participate in CCP clearing by transforming collateral into eligible form; the cost of transformation must be included in the clearing economics comparison to correctly assess whether clearing is cheaper than bilateral trading."
+  },
+  {
+    "source": "banking-regulation/collateral-transformation",
+    "target": "banking-regulation/margin-haircuts",
+    "label": "motivated by",
+    "description": "High regulatory haircuts on equities and lower-rated bonds make them costly to post directly as margin; collateral transformation converts these assets into low-haircut HQLA (typically government bonds or cash) to reduce the effective cost of meeting margin requirements."
+  },
+  {
+    "source": "banking-regulation/collateral-transformation",
+    "target": "financial-maths/collateral-management",
+    "label": "operationalised through",
+    "description": "Collateral transformation is implemented via repo and securities lending agreements managed within the collateral management function; the prime broker or custodian intermediates the swap of ineligible assets for HQLA on a term or rolling basis."
+  },
+  {
+    "source": "banking-regulation/collateral-transformation",
+    "target": "risk/funding-liquidity-risk",
+    "label": "creates chains amplifying",
+    "description": "Collateral transformation chains \u2014 where the same underlying asset underpins multiple margin agreements simultaneously \u2014 amplify funding liquidity risk: a sharp fall in the underlying can trigger simultaneous unwinding of the chain, causing correlated margin calls across multiple counterparties."
+  },
+  {
+    "source": "banking-regulation/credit-loss-distribution",
+    "target": "banking-regulation/vasicek-model-asrf",
+    "label": "modelled by",
+    "description": "The Vasicek ASRF model generates the credit portfolio loss distribution by conditioning on a single economic factor \u2014 the skewed, fat-tailed shape of the resulting distribution is what makes credit risk fundamentally different from market risk."
+  },
+  {
+    "source": "banking-regulation/credit-loss-distribution",
+    "target": "risk/economic-capital",
+    "label": "determines capital from",
+    "description": "Economic capital is the difference between the tail quantile of the credit loss distribution (at 99.9%) and the expected loss \u2014 the further right the tail extends, the larger the capital buffer required."
+  },
+  {
+    "source": "banking-regulation/credit-value-adjustment-cva",
+    "target": "banking-regulation/expected-loss",
+    "label": "analogous to",
+    "description": "CVA applies the same EL = PD \u00d7 LGD \u00d7 EAD logic to derivative counterparty risk as the credit portfolio EL framework applies to loans \u2014 both compute a present-value credit cost from default probability, severity, and exposure."
+  },
+  {
+    "source": "banking-regulation/credit-value-adjustment-cva",
+    "target": "risk/counterparty-credit-risk",
+    "label": "prices",
+    "description": "CVA is the market-value cost of bearing counterparty credit risk \u2014 it turns the abstract concept of counterparty risk into a concrete P&L charge that is marked to market daily as CDS spreads and exposure profiles move."
+  },
+  {
     "source": "banking-regulation/curvature-risk-charge",
     "target": "banking-regulation/frtb-sensitivity-based-method",
     "label": "component of",
@@ -28,6 +196,60 @@
     "target": "fixed-income/convexity",
     "label": "quantifies regulatory cost of",
     "description": "The curvature risk charge is the regulatory capital measure for convexity risk \u2014 just as bond convexity measures the second-order price sensitivity to yield, the curvature charge measures the second-order P&L deviation from the linear delta approximation for options."
+  },
+  {
+    "source": "banking-regulation/cva-desk-hedging",
+    "target": "banking-regulation/credit-value-adjustment-cva",
+    "label": "hedges",
+    "description": "The CVA desk operationalises CVA management: it buys the CVA charge from trading desks at trade inception and hedges the resulting aggregate exposure using CDS and market risk instruments, centralising counterparty credit risk management across the bank."
+  },
+  {
+    "source": "banking-regulation/cva-desk-hedging",
+    "target": "banking-regulation/frtb-overview",
+    "label": "subject to",
+    "description": "Under FRTB, the CVA desk must satisfy desk-level P&L attribution and backtesting requirements; failure of the PLA test forces the CVA desk to the Standardised Approach, significantly increasing CVA capital and reducing the value of the internal model."
+  },
+  {
+    "source": "banking-regulation/cva-desk-hedging",
+    "target": "banking-regulation/wrong-way-risk",
+    "label": "difficult to hedge under",
+    "description": "When wrong-way risk is present, the exposure profile is correlated with the counterparty's credit spread; this cross-gamma between the credit hedge and the market risk hedge creates P&L that standard CVA hedging frameworks cannot cleanly offset."
+  },
+  {
+    "source": "banking-regulation/default-risk-charge",
+    "target": "banking-regulation/credit-value-adjustment-cva",
+    "label": "distinct from",
+    "description": "CVA charges for the expected loss from counterparty default in the banking book; DRC charges for jump-to-default in trading book credit positions \u2014 the two frameworks apply to different balance sheet locations and use different methodologies."
+  },
+  {
+    "source": "banking-regulation/default-risk-charge",
+    "target": "banking-regulation/frtb-overview",
+    "label": "component of",
+    "description": "The Default Risk Charge is one of three components of FRTB Standardised Approach capital alongside the Sensitivity-Based Method and RRAO, capturing jump-to-default risk that gradual spread sensitivities cannot."
+  },
+  {
+    "source": "banking-regulation/default-risk-charge",
+    "target": "banking-regulation/frtb-sensitivity-based-method",
+    "label": "supplements",
+    "description": "The SBM captures gradual credit spread moves via delta/vega/curvature sensitivities, while DRC separately capitalises the discrete jump-to-default event; both are required under FRTB SA and IMA."
+  },
+  {
+    "source": "banking-regulation/dva",
+    "target": "banking-regulation/credit-value-adjustment-cva",
+    "label": "mirror of",
+    "description": "DVA is the symmetric counterpart to CVA: where CVA charges for counterparty default, DVA credits the bank's own default probability, and together they form bilateral CVA."
+  },
+  {
+    "source": "banking-regulation/dva",
+    "target": "banking-regulation/wrong-way-risk",
+    "label": "interacts with",
+    "description": "When wrong-way risk is present, CVA is inflated for the bank's position; DVA applies the same correlation logic in reverse, affecting how the bank's own credit co-moves with the exposure it owes to counterparties."
+  },
+  {
+    "source": "banking-regulation/dva",
+    "target": "derivatives/xva",
+    "label": "component of",
+    "description": "DVA is one of the XVA family of valuation adjustments, contributing to the bilateral CVA framework alongside CVA, FVA, KVA, and MVA in the total cost of an OTC derivative."
   },
   {
     "source": "banking-regulation/earnings-at-risk",
@@ -66,6 +288,54 @@
     "description": "The duration gap is the primary determinant of EVE sensitivity \u2014 the larger the mismatch between asset and liability durations, the more EVE changes for a given rate shock."
   },
   {
+    "source": "banking-regulation/expected-exposure",
+    "target": "banking-regulation/credit-value-adjustment-cva",
+    "label": "primary input to",
+    "description": "CVA is computed as the sum over future dates of EE(t) \u00d7 PD(t) \u00d7 (1-R) \u00d7 discount factor \u2014 expected exposure at each point in time is the single most important input driving the size of the CVA charge."
+  },
+  {
+    "source": "banking-regulation/expected-exposure",
+    "target": "banking-regulation/potential-future-exposure",
+    "label": "mean of distribution modelled by",
+    "description": "EE is the mean of the positive-value distribution at each future date, while PFE is the high quantile of the same distribution \u2014 both summarise the same Monte Carlo simulation of future portfolio values from different perspectives."
+  },
+  {
+    "source": "banking-regulation/expected-loss",
+    "target": "banking-regulation/vasicek-model-asrf",
+    "label": "subtracted in",
+    "description": "The Basel IRB capital formula computes unexpected loss as the conditional default rate at the 99.9% confidence level minus the expected (unconditional) default rate \u2014 EL is subtracted because it is already covered by provisions."
+  },
+  {
+    "source": "banking-regulation/expected-loss",
+    "target": "risk/economic-capital",
+    "label": "contrasted with",
+    "description": "Economic capital covers unexpected losses beyond EL \u2014 the distinction between EL (priced into loan rates and covered by provisions) and UL (covered by capital) is the conceptual foundation of the Basel credit risk framework."
+  },
+  {
+    "source": "banking-regulation/frtb-overview",
+    "target": "banking-regulation/backtesting-var",
+    "label": "incorporates desk-level",
+    "description": "FRTB requires each trading desk to pass both a backtesting test (\u226412 exceptions at 99% over 250 days) and a P&L attribution test to qualify for the Internal Models Approach \u2014 failure of either test forces the desk to the more conservative Standardised Approach."
+  },
+  {
+    "source": "banking-regulation/frtb-overview",
+    "target": "banking-regulation/frtb-sensitivity-based-method",
+    "label": "standardised approach within",
+    "description": "The Sensitivity-Based Method is the standardised capital charge component of FRTB \u2014 it is the mandatory fallback for desks that fail the IMA P&L attribution test, and is also run alongside IMA to set the floor on internally modelled capital."
+  },
+  {
+    "source": "banking-regulation/frtb-overview",
+    "target": "banking-regulation/non-modellable-risk-factor",
+    "label": "introduces capital charge for",
+    "description": "FRTB introduced the concept of non-modellable risk factors \u2014 risk factors that do not meet the real-price observation requirements \u2014 and requires a separate Stress Scenario capital charge for each NMRF, preventing banks from omitting illiquid risk factors from their models."
+  },
+  {
+    "source": "banking-regulation/frtb-overview",
+    "target": "banking-regulation/stressed-var",
+    "label": "replaces",
+    "description": "FRTB replaces the Basel 2.5 dual VaR+SVaR framework with a single stressed Expected Shortfall calibrated directly to stressed conditions, eliminating the discontinuity between the current VaR window and the separately identified stress period."
+  },
+  {
     "source": "banking-regulation/frtb-sensitivity-based-method",
     "target": "banking-regulation/curvature-risk-charge",
     "label": "includes",
@@ -82,6 +352,42 @@
     "target": "risk/expected-shortfall",
     "label": "complements",
     "description": "The FRTB SBM is the standardised capital charge that all banks must compute, whilst Expected Shortfall is the metric used by the Internal Models Approach \u2014 the two sit alongside each other in the FRTB framework as standardised and model-based capital floors."
+  },
+  {
+    "source": "banking-regulation/fva",
+    "target": "banking-regulation/clearing-economics",
+    "label": "eliminated by",
+    "description": "FVA arises because uncollateralised bilateral trades create a funding gap between the hedge and the client leg; CCP clearing with daily cash variation margin closes this gap and eliminates the FVA cost."
+  },
+  {
+    "source": "banking-regulation/fva",
+    "target": "banking-regulation/netting-set-csa",
+    "label": "determined by",
+    "description": "The CSA terms in a netting set \u2014 specifically whether variation margin is exchanged \u2014 determine whether FVA applies: a zero-threshold CSA eliminates FVA, while an uncollateralised CSA generates the full funding exposure."
+  },
+  {
+    "source": "banking-regulation/fva",
+    "target": "derivatives/xva",
+    "label": "component of",
+    "description": "FVA is part of the XVA family, representing the funding dimension of derivative valuation adjustments; it interacts with MVA (margin funding cost) and KVA (capital cost) in the full XVA framework."
+  },
+  {
+    "source": "banking-regulation/gsib-surcharge",
+    "target": "banking-regulation/basel-iii-three-pillars",
+    "label": "extends",
+    "description": "The G-SIB surcharge is an additional Pillar 1 capital buffer layered on top of Basel III's minimum capital requirements; it represents the macroprudential dimension of Basel III, targeting systemic risk that the standard risk-weighted framework does not capture."
+  },
+  {
+    "source": "banking-regulation/gsib-surcharge",
+    "target": "banking-regulation/capital-ratios-cet1",
+    "label": "adds to",
+    "description": "The G-SIB surcharge is expressed as a percentage of RWA in CET1 terms, adding directly to the minimum CET1 ratio; a bank in the 2.0% bucket must hold the 4.5% minimum plus the 2.5% capital conservation buffer plus the 2.0% G-SIB surcharge \u2014 totalling 9.0% CET1."
+  },
+  {
+    "source": "banking-regulation/gsib-surcharge",
+    "target": "banking-regulation/leverage-ratio",
+    "label": "complements",
+    "description": "The leverage ratio and G-SIB surcharge address different dimensions of systemic risk: the leverage ratio caps absolute balance sheet size regardless of risk weights, while the G-SIB surcharge penalises interconnectedness and complexity beyond just size."
   },
   {
     "source": "banking-regulation/interest-rate-risk-in-the-banking-book",
@@ -112,6 +418,54 @@
     "target": "fixed-income/dv01",
     "label": "receives sensitivity from",
     "description": "Under FRTB, each position's DV01 (dollar value of a basis point) is assigned to the nearest prescribed tenor vertex \u2014 the vertex then accumulates the net DV01 from all positions, which becomes the sensitivity input s_k in the capital aggregation formula."
+  },
+  {
+    "source": "banking-regulation/irb-approach",
+    "target": "banking-regulation/basel-iv-output-floor",
+    "label": "constrained by",
+    "description": "The output floor limits the capital benefit banks can obtain from IRB models by requiring that IRB RWA cannot fall below 72.5% of the Standardised Approach equivalent, capping the competitive advantage of IRB approval."
+  },
+  {
+    "source": "banking-regulation/irb-approach",
+    "target": "banking-regulation/expected-loss",
+    "label": "deducts EL from capital",
+    "description": "The IRB capital formula computes unexpected loss as the difference between the 99.9% conditional loss and the expected loss \u2014 EL is covered by provisions and subtracted from the capital requirement to avoid double-counting."
+  },
+  {
+    "source": "banking-regulation/irb-approach",
+    "target": "banking-regulation/vasicek-model-asrf",
+    "label": "uses formula from",
+    "description": "The IRB risk weight formula is a direct application of the Vasicek ASRF model evaluated at the 99.9% confidence level \u2014 the ASRF's conditional default rate becomes the IRB capital requirement after subtracting expected loss."
+  },
+  {
+    "source": "banking-regulation/isda-simm",
+    "target": "banking-regulation/margin-period-of-risk",
+    "label": "calibrated to",
+    "description": "ISDA SIMM is calibrated to produce an IM large enough to cover potential losses over the 10-day bilateral MPoR at a 99% confidence level \u2014 the MPoR is the time horizon that determines how large the risk weights in SIMM must be."
+  },
+  {
+    "source": "banking-regulation/isda-simm",
+    "target": "risk/initial-margin",
+    "label": "computes",
+    "description": "ISDA SIMM is the standard industry model for computing initial margin for non-centrally cleared derivatives \u2014 it translates portfolio sensitivities into an IM amount that both counterparties independently verify using the same formula."
+  },
+  {
+    "source": "banking-regulation/leverage-ratio",
+    "target": "banking-regulation/basel-iii-three-pillars",
+    "label": "pillar 1 component of",
+    "description": "The leverage ratio is one of the three Pillar 1 metrics introduced by Basel III alongside the risk-based capital ratios \u2014 it provides a non-risk-based backstop constraint that binds independently of the RWA-based ratios."
+  },
+  {
+    "source": "banking-regulation/liquidity-adjusted-var",
+    "target": "banking-regulation/liquidity-coverage-ratio",
+    "label": "related to",
+    "description": "Both LVaR and LCR address liquidity risk but from different angles \u2014 LVaR quantifies the market cost of exiting a position, while LCR ensures the bank holds enough liquid assets to survive a 30-day funding stress without forced selling."
+  },
+  {
+    "source": "banking-regulation/liquidity-adjusted-var",
+    "target": "risk/value-at-risk",
+    "label": "extends",
+    "description": "LVaR extends standard VaR by adding the cost of liquidating a position at the bid-ask spread, recognising that in stress scenarios the act of selling widens spreads and the liquidity cost can be a material fraction of the pure market risk loss."
   },
   {
     "source": "banking-regulation/liquidity-buffer-composition",
@@ -150,6 +504,66 @@
     "description": "The LCR is the primary regulatory tool for mitigating short-term liquidity risk \u2014 by requiring banks to hold sufficient HQLA to cover 30 days of stressed outflows, it ensures a minimum buffer against funding crises."
   },
   {
+    "source": "banking-regulation/margin-haircuts",
+    "target": "banking-regulation/isda-simm",
+    "label": "applied after",
+    "description": "ISDA SIMM calculates the gross IM requirement based on portfolio sensitivities; regulatory haircuts are then applied to the non-cash collateral posted to meet that IM, determining the effective collateral value."
+  },
+  {
+    "source": "banking-regulation/margin-haircuts",
+    "target": "banking-regulation/uncleared-margin-rules",
+    "label": "applied within",
+    "description": "UMR mandates both the quantum of IM (via SIMM or schedule) and the eligible collateral; regulatory haircuts determine the credit value of non-cash assets posted under UMR, driving collateral optimisation decisions."
+  },
+  {
+    "source": "banking-regulation/margin-haircuts",
+    "target": "financial-maths/haircut",
+    "label": "extends",
+    "description": "The general concept of a collateral haircut in repo and securities lending is extended in the regulatory margin context to cover derivatives collateral, with standardised supervisory schedules prescribed by Basel and UMR rules."
+  },
+  {
+    "source": "banking-regulation/margin-haircuts",
+    "target": "risk/initial-margin",
+    "label": "reduces effective value of",
+    "description": "When non-cash collateral is posted as initial margin, regulatory haircuts are applied to the market value to give an adjusted collateral credit, so a firm must post more nominal collateral than the raw IM requirement to fully satisfy its obligation."
+  },
+  {
+    "source": "banking-regulation/margin-period-of-risk",
+    "target": "banking-regulation/isda-simm",
+    "label": "calibrates horizon of",
+    "description": "The 10-day bilateral MPoR is the time horizon over which ISDA SIMM calibrates its initial margin \u2014 risk weights are set so that SIMM covers the potential portfolio loss over this close-out window at the required confidence level."
+  },
+  {
+    "source": "banking-regulation/margin-period-of-risk",
+    "target": "financial-maths/central-counterparty",
+    "label": "shorter at",
+    "description": "Centrally cleared portfolios benefit from a shorter MPoR (2\u20135 days vs 10 days bilateral) because CCPs operate pre-agreed auction procedures and standardised contracts that allow much faster close-out than bilateral OTC defaults."
+  },
+  {
+    "source": "banking-regulation/mva",
+    "target": "banking-regulation/fva",
+    "label": "analogous to",
+    "description": "MVA is the initial margin analogue of FVA: where FVA captures the funding cost of the uncollateralised exposure profile, MVA captures the funding cost of posting segregated initial margin that cannot be rehypothecated."
+  },
+  {
+    "source": "banking-regulation/mva",
+    "target": "banking-regulation/isda-simm",
+    "label": "computed from",
+    "description": "MVA requires projecting the SIMM IM at each future date along the trade's life; this means simulating forward sensitivities (delta, vega) under SIMM's risk factor framework, making MVA computationally more intensive than standard EPE simulation."
+  },
+  {
+    "source": "banking-regulation/mva",
+    "target": "banking-regulation/uncleared-margin-rules",
+    "label": "arises from",
+    "description": "UMR mandated bilateral IM exchange for firms above AANA thresholds; this created a new funding cost for bilateral trades that had not previously been margined, making MVA a material pricing component for Phase 5 and 6 firms from 2021 onwards."
+  },
+  {
+    "source": "banking-regulation/mva",
+    "target": "derivatives/xva",
+    "label": "component of",
+    "description": "MVA is the most recently introduced member of the XVA family, joining CVA, DVA, FVA, and KVA to represent the full cost of holding a derivative through its life \u2014 the IM funding component captures a cost that became material only with mandatory clearing and UMR."
+  },
+  {
     "source": "banking-regulation/net-stable-funding-ratio",
     "target": "banking-regulation/liquidity-coverage-ratio",
     "label": "complements",
@@ -168,6 +582,24 @@
     "description": "The NSFR mitigates structural liquidity risk by requiring stable funding for illiquid assets, preventing the maturity mismatch that caused failures like Northern Rock where long-term mortgages were funded by overnight wholesale markets."
   },
   {
+    "source": "banking-regulation/netting-set-csa",
+    "target": "banking-regulation/close-out-netting",
+    "label": "defines scope of",
+    "description": "The netting set is the legal entity that defines which trades are subject to close-out netting \u2014 only trades within the same netting set (governed by the same ISDA Master Agreement) can be netted against each other upon default."
+  },
+  {
+    "source": "banking-regulation/netting-set-csa",
+    "target": "banking-regulation/sa-ccr-framework",
+    "label": "unit of calculation for",
+    "description": "SA-CCR computes Replacement Cost and the PFE add-on at the netting set level \u2014 the CSA terms (threshold, MTA, and whether IM is exchanged) directly determine the RC calculation and the multiplier applied to the add-on."
+  },
+  {
+    "source": "banking-regulation/netting-set-csa",
+    "target": "banking-regulation/uncleared-margin-rules",
+    "label": "amended by",
+    "description": "UMR required covered counterparties to negotiate new CSA terms mandating zero-threshold IM exchange, independent IM segregation, and prohibition on IM rehypothecation \u2014 representing a fundamental change to standard bilateral CSA arrangements."
+  },
+  {
     "source": "banking-regulation/non-modellable-risk-factor",
     "target": "banking-regulation/risk-factor-eligibility-test",
     "label": "results from failing",
@@ -178,6 +610,18 @@
     "target": "risk/expected-shortfall",
     "label": "charged via stressed",
     "description": "NMRFs receive a separate stressed Expected Shortfall capital charge computed from a single worst-case scenario rather than from historical simulation \u2014 this stressed ES is typically far larger than the equivalent IMA charge, reflecting the lack of observable market data."
+  },
+  {
+    "source": "banking-regulation/operational-risk-capital",
+    "target": "banking-regulation/basel-iii-three-pillars",
+    "label": "pillar 1 component of",
+    "description": "Operational risk capital is one of the three Pillar 1 minimum capital components alongside credit risk and market risk \u2014 together they determine the total RWA and hence the minimum capital ratios a bank must maintain."
+  },
+  {
+    "source": "banking-regulation/operational-risk-capital",
+    "target": "banking-regulation/risk-weighted-assets",
+    "label": "contributes to",
+    "description": "Operational risk RWA under the SMA adds directly to the total RWA denominator of all capital ratios \u2014 for large banks with significant operational losses, op risk RWA can represent 10\u201320% of total RWA."
   },
   {
     "source": "banking-regulation/optionality-risk",
@@ -196,6 +640,30 @@
     "target": "financial-maths/non-maturity-deposits",
     "label": "driven by",
     "description": "Non-maturity deposits are a key source of optionality risk \u2014 depositors' behavioural option to withdraw creates an embedded option that shortens liability duration when rates rise."
+  },
+  {
+    "source": "banking-regulation/portfolio-compression",
+    "target": "banking-regulation/leverage-ratio",
+    "label": "reduces exposure in",
+    "description": "Portfolio compression reduces gross notional outstanding, which feeds directly into the Total Exposure Measure of the leverage ratio \u2014 banks use compression cycles to bring their leverage ratio back above the 3% minimum without raising capital."
+  },
+  {
+    "source": "banking-regulation/portfolio-compression",
+    "target": "banking-regulation/sa-ccr-framework",
+    "label": "reduces EAD in",
+    "description": "Compressing offsetting trades within a netting set reduces the add-on component of SA-CCR EAD, since a smaller gross notional in each asset class bucket translates directly into a lower aggregate add-on figure."
+  },
+  {
+    "source": "banking-regulation/potential-future-exposure",
+    "target": "banking-regulation/expected-exposure",
+    "label": "tail complement to",
+    "description": "PFE and EE summarise the same distribution of future portfolio values \u2014 EE gives the mean positive exposure used for CVA pricing, while PFE gives the high-confidence tail used for credit limit management and capital calculation."
+  },
+  {
+    "source": "banking-regulation/potential-future-exposure",
+    "target": "banking-regulation/sa-ccr-framework",
+    "label": "approximated by add-on in",
+    "description": "SA-CCR's PFE add-on is a supervisory approximation to the Monte Carlo PFE \u2014 it uses asset-class-specific supervisory factors applied to adjusted notionals as a simplified proxy for the simulated PFE profile."
   },
   {
     "source": "banking-regulation/repricing-risk",
@@ -226,6 +694,102 @@
     "target": "banking-regulation/non-modellable-risk-factor",
     "label": "classifies",
     "description": "The RFET is the gateway test that determines whether a risk factor is modellable or non-modellable \u2014 failing the minimum 24-observation threshold triggers NMRF classification and a separate, more punitive capital treatment."
+  },
+  {
+    "source": "banking-regulation/risk-weighted-assets",
+    "target": "banking-regulation/capital-ratios-cet1",
+    "label": "denominates",
+    "description": "RWA is the denominator of all Basel capital ratios \u2014 the methodology used to calculate RWA (Standardised vs. IRB) determines how much capital a bank must hold, making RWA methodology one of the most commercially significant regulatory choices a bank makes."
+  },
+  {
+    "source": "banking-regulation/risk-weighted-assets",
+    "target": "banking-regulation/vasicek-model-asrf",
+    "label": "calculated using",
+    "description": "Under the Advanced IRB approach, credit risk RWA for each exposure is derived from the Vasicek ASRF capital formula, which translates PD, LGD, and asset correlation into a conditional loss estimate at the 99.9% confidence level."
+  },
+  {
+    "source": "banking-regulation/sa-ccr-framework",
+    "target": "banking-regulation/expected-loss",
+    "label": "produces EAD for",
+    "description": "The EAD produced by SA-CCR feeds directly into the expected loss calculation EL = PD \u00d7 LGD \u00d7 EAD for OTC derivative counterparties \u2014 SA-CCR converts the complex profile of a derivatives portfolio into the single EAD figure needed by the credit risk framework."
+  },
+  {
+    "source": "banking-regulation/sa-ccr-framework",
+    "target": "banking-regulation/leverage-ratio",
+    "label": "computes derivatives component of",
+    "description": "For the leverage ratio's Total Exposure Measure, the derivative exposure of each netting set is calculated using the SA-CCR formula (RC + PFE add-on, without the 1.4 alpha multiplier), directly linking the two measures."
+  },
+  {
+    "source": "banking-regulation/span-methodology",
+    "target": "banking-regulation/isda-simm",
+    "label": "exchange-traded counterpart to",
+    "description": "SPAN and SIMM both calculate initial margin but for different markets \u2014 SPAN uses scenario-based risk arrays for exchange-traded futures and options, while SIMM uses sensitivity-based aggregation for bilateral OTC derivatives."
+  },
+  {
+    "source": "banking-regulation/span-methodology",
+    "target": "risk/initial-margin",
+    "label": "computes for exchange-traded",
+    "description": "SPAN is the dominant methodology CCPs use to compute initial margin requirements for exchange-traded futures and options portfolios, applying the same 'largest scenario loss' principle that IM is designed to cover."
+  },
+  {
+    "source": "banking-regulation/stressed-var",
+    "target": "banking-regulation/backtesting-var",
+    "label": "complemented by",
+    "description": "Standard VaR is backtested against actual P&L to validate the model, while SVaR does not require backtesting \u2014 together they form the dual-VaR market risk capital framework under Basel 2.5, with SVaR anchoring capital to stressed conditions."
+  },
+  {
+    "source": "banking-regulation/stressed-var",
+    "target": "risk/value-at-risk",
+    "label": "stress-calibrated version of",
+    "description": "Stressed VaR is calculated using the same VaR model and confidence level (99%, 10-day) as standard VaR, but calibrated to a 12-month historical stress window rather than recent data \u2014 making SVaR a counter-cyclical supplement to standard VaR."
+  },
+  {
+    "source": "banking-regulation/uncleared-margin-rules",
+    "target": "banking-regulation/isda-simm",
+    "label": "mandates use of",
+    "description": "UMR requires covered entities to exchange initial margin, with ISDA SIMM as the industry standard for calculating the IM amount \u2014 the regulatory mandate for IM exchange is what drove SIMM from a theoretical proposal to universal industry adoption."
+  },
+  {
+    "source": "banking-regulation/uncleared-margin-rules",
+    "target": "banking-regulation/netting-set-csa",
+    "label": "requires amendment to",
+    "description": "UMR requires covered firms to negotiate new or amended CSAs (Credit Support Annexes) that mandate zero-threshold IM exchange, specify IM segregation at an independent custodian, and prohibit rehypothecation of IM collateral."
+  },
+  {
+    "source": "banking-regulation/uncleared-margin-rules",
+    "target": "risk/initial-margin",
+    "label": "mandates bilateral exchange of",
+    "description": "UMR extended the initial margin requirement \u2014 previously confined to centrally cleared trades \u2014 to non-cleared OTC derivatives between large financial firms, requiring IM to be exchanged bilaterally and held at independent custodians."
+  },
+  {
+    "source": "banking-regulation/vasicek-model-asrf",
+    "target": "banking-regulation/expected-loss",
+    "label": "uses as input",
+    "description": "The Vasicek ASRF formula takes PD (the expected default rate) as an input and computes the conditional default rate in a severe economic scenario \u2014 capital is then the difference between the conditional and unconditional loss, i.e., the unexpected loss."
+  },
+  {
+    "source": "banking-regulation/vasicek-model-asrf",
+    "target": "probability/normal-distribution",
+    "label": "derived from",
+    "description": "The Vasicek conditional default rate formula is derived by assuming asset returns follow a bivariate normal distribution, allowing the worst-case conditional default probability to be expressed as a closed-form function of the normal CDF."
+  },
+  {
+    "source": "banking-regulation/wrong-way-risk",
+    "target": "banking-regulation/credit-value-adjustment-cva",
+    "label": "inflates",
+    "description": "Wrong-way risk causes CVA to be larger than the standard formula predicts because the conditional expected exposure given default exceeds the unconditional EE \u2014 the alpha multiplier in SA-CCR approximates this WWR add-on at the portfolio level."
+  },
+  {
+    "source": "banking-regulation/wrong-way-risk",
+    "target": "banking-regulation/expected-exposure",
+    "label": "increases above",
+    "description": "Under wrong-way risk, the conditional expected exposure at the time of default exceeds the unconditional EE profile \u2014 the correlation between market value and default probability means the counterparty defaults precisely when the exposure is highest."
+  },
+  {
+    "source": "banking-regulation/wrong-way-risk",
+    "target": "banking-regulation/sa-ccr-framework",
+    "label": "approximated in",
+    "description": "The 1.4 alpha multiplier in SA-CCR is calibrated partly to account for wrong-way risk in an average portfolio \u2014 for portfolios with specific wrong-way risk, regulators require additional capital beyond the standard SA-CCR formula."
   },
   {
     "source": "banking-regulation/yield-curve-risk",
@@ -10170,6 +10734,30 @@
     "description": "Maximum drawdown measures the depth of the worst loss while drawdown duration measures how long the recovery takes \u2014 together they capture both the severity and persistence of portfolio losses."
   },
   {
+    "source": "risk/economic-capital",
+    "target": "portfolio-theory/sharpe-ratio",
+    "label": "generalised by RAROC",
+    "description": "RAROC is the capital-allocation analogue of the Sharpe ratio \u2014 where Sharpe divides excess return by volatility, RAROC divides risk-adjusted profit by economic capital, letting bank management compare desks across different risk types on a single return-on-capital basis."
+  },
+  {
+    "source": "risk/economic-capital",
+    "target": "risk/expected-shortfall",
+    "label": "extended by",
+    "description": "Expected Shortfall improves on the VaR-based EC formula by replacing the single quantile with the average of all losses beyond the threshold, producing a more conservative and coherent capital figure that penalises fatter tails more heavily."
+  },
+  {
+    "source": "risk/economic-capital",
+    "target": "risk/financial-risk-taxonomy",
+    "label": "spans",
+    "description": "A bank's total economic capital aggregates contributions from market risk, credit risk, and operational risk \u2014 the financial risk taxonomy defines the categories that each have their own loss distribution feeding into the firm-wide EC calculation."
+  },
+  {
+    "source": "risk/economic-capital",
+    "target": "risk/value-at-risk",
+    "label": "computed from",
+    "description": "Economic capital is defined as VaR at a very high solvency confidence level (99.9%) minus expected loss \u2014 VaR provides the worst-case loss threshold that the capital buffer must cover to keep the bank solvent with 99.9% probability over a one-year horizon."
+  },
+  {
     "source": "risk/expected-shortfall",
     "target": "banking-regulation/frtb-sensitivity-based-method",
     "label": "underpins IMA in",
@@ -10246,6 +10834,30 @@
     "target": "risk/margin-call",
     "label": "caused by",
     "description": "Margin calls are the primary trigger of fire sales \u2014 when leveraged investors cannot meet margin demands with cash, they are forced to liquidate positions at whatever price the market will bear."
+  },
+  {
+    "source": "risk/funding-liquidity-risk",
+    "target": "banking-regulation/liquidity-coverage-ratio",
+    "label": "measured by",
+    "description": "The LCR is the primary regulatory measure of 30-day funding liquidity resilience \u2014 requiring a bank to hold sufficient HQLA to cover net cash outflows under stress directly addresses the risk of short-term funding evaporating."
+  },
+  {
+    "source": "risk/funding-liquidity-risk",
+    "target": "financial-maths/repo-agreement",
+    "label": "exposed via",
+    "description": "Repos are the most common short-term funding instrument, so funding liquidity risk materialises when counterparties refuse to roll them over or demand higher haircuts, leaving a firm unable to finance its asset positions."
+  },
+  {
+    "source": "risk/funding-liquidity-risk",
+    "target": "risk/fire-sale",
+    "label": "triggers",
+    "description": "When a firm cannot roll over its short-term funding it is forced to liquidate assets rapidly into thin markets, turning a funding liquidity crisis into a fire sale that depresses prices and spreads losses across the system."
+  },
+  {
+    "source": "risk/funding-liquidity-risk",
+    "target": "risk/liquidity-risk",
+    "label": "component of",
+    "description": "Funding liquidity risk is one of the two sub-categories of liquidity risk \u2014 the other being market liquidity risk \u2014 and while the two are analytically distinct, they interact in crises through the Brunnermeier\u2013Pedersen liquidity spiral."
   },
   {
     "source": "risk/historical-simulation-var",
@@ -10516,6 +11128,30 @@
     "target": "risk/value-at-risk",
     "label": "extends to multi-asset",
     "description": "Portfolio parametric VaR extends single-asset VaR by replacing the individual volatility with the portfolio volatility sqrt(x'\u03a3x), which captures pairwise correlations between assets via the covariance matrix."
+  },
+  {
+    "source": "risk/risk-appetite-framework",
+    "target": "risk/expected-shortfall",
+    "label": "uses as limit metric",
+    "description": "Risk appetite frameworks set firm-wide and desk-level Expected Shortfall limits alongside VaR limits, as ES is a coherent risk measure that captures tail severity and is mandated under FRTB for internal models."
+  },
+  {
+    "source": "risk/risk-appetite-framework",
+    "target": "risk/financial-risk-taxonomy",
+    "label": "structured around",
+    "description": "A risk appetite framework allocates risk budget across the standard taxonomy of market, credit, liquidity, and operational risk, requiring separate appetite statements and quantitative limits for each risk type."
+  },
+  {
+    "source": "risk/risk-appetite-framework",
+    "target": "risk/maximum-drawdown",
+    "label": "incorporates stop-loss via",
+    "description": "Desk-level stop-loss triggers within a risk appetite framework are calibrated to maximum drawdown thresholds, suspending new risk-taking when cumulative losses exceed the board-approved limit."
+  },
+  {
+    "source": "risk/risk-appetite-framework",
+    "target": "risk/value-at-risk",
+    "label": "cascades limits through",
+    "description": "VaR is the primary metric used to cascade board-level risk appetite down to business-line and trading-desk limits, with utilisation ratios and breach thresholds driving the escalation ladder."
   },
   {
     "source": "risk/risk-definition",
@@ -11010,6 +11646,54 @@
     "description": "Volatility clustering \u2014 whereby large moves tend to follow large moves \u2014 violates the i.i.d. assumption that underpins the CLT convergence rate, causing the return distribution to remain fat-tailed for longer than theory predicts."
   },
   {
+    "source": "statistics/arch-framework",
+    "target": "statistics/arch-model",
+    "label": "generalises",
+    "description": "The General ARCH Framework is the meta-structure of which ARCH(q) is the simplest specific instance \u2014 the framework separates the six modelling choices that must be made for any ARCH-family model."
+  },
+  {
+    "source": "statistics/arch-framework",
+    "target": "statistics/fat-tailed-garch-distributions",
+    "label": "distributional choice in",
+    "description": "Choosing Student-t or GED instead of Normal for the innovation D is one of the three key decisions within the General ARCH Framework \u2014 the distributional component determines how much probability the model assigns to large standardised shocks."
+  },
+  {
+    "source": "statistics/arch-framework",
+    "target": "statistics/garch-model",
+    "label": "instantiated by",
+    "description": "GARCH(1,1) is the most widely used specific implementation of the General ARCH Framework \u2014 it specifies a constant mean, a geometric weighted average of past squared shocks for h_t, and a Normal or Student-t innovation distribution."
+  },
+  {
+    "source": "statistics/arch-framework",
+    "target": "statistics/mle-arch-models",
+    "label": "estimated via",
+    "description": "The parameter vector theta, which is the sixth component of the General ARCH Framework, is estimated by maximising the conditional log-likelihood using the ARCH-specific recursive MLE procedure."
+  },
+  {
+    "source": "statistics/arch-m-model",
+    "target": "portfolio-theory/capital-asset-pricing-model",
+    "label": "dynamic extension of",
+    "description": "ARCH-M formalises the CAPM risk-return intuition in a time-varying setting \u2014 the risk premium parameter \u03bb is the empirical counterpart to the CAPM market price of risk, linking conditional volatility to expected returns period by period."
+  },
+  {
+    "source": "statistics/arch-m-model",
+    "target": "statistics/arch-model",
+    "label": "extends",
+    "description": "ARCH-M extends the ARCH family by feeding conditional volatility into the mean equation \u2014 adding a risk premium term \u03bb\u221ah_t so that expected returns rise and fall with time-varying conditional risk."
+  },
+  {
+    "source": "statistics/arch-m-model",
+    "target": "statistics/garch-model",
+    "label": "mean extension of",
+    "description": "ARCH-M uses any GARCH-family variance equation for h_t and augments it with a mean equation that includes \u221ah_t \u2014 combining GARCH's flexible variance dynamics with a time-varying risk premium in expected returns."
+  },
+  {
+    "source": "statistics/arch-m-model",
+    "target": "statistics/gjr-garch-model",
+    "label": "combined with",
+    "description": "Pairing ARCH-M's mean equation with the GJR-GARCH variance equation captures both the risk-return trade-off (\u03bb parameter) and the leverage effect (\u03b3 parameter) \u2014 the standard specification when modelling asymmetric conditional volatility with a time-varying risk premium."
+  },
+  {
     "source": "statistics/arch-model",
     "target": "statistics/garch-model",
     "label": "generalised by",
@@ -11382,6 +12066,30 @@
     "description": "Statistical factor models use PCA to extract the dominant eigenvectors of the covariance matrix as factors \u2014 the eigenvalues determine how many factors to retain."
   },
   {
+    "source": "statistics/fat-tailed-garch-distributions",
+    "target": "probability/students-t-distribution",
+    "label": "uses as innovation",
+    "description": "The Student-t GARCH model replaces the Gaussian innovation with a Student-t distribution, using its degrees-of-freedom parameter \u03bd to capture the excess kurtosis that remains in standardised GARCH residuals."
+  },
+  {
+    "source": "statistics/fat-tailed-garch-distributions",
+    "target": "statistics/garch-model",
+    "label": "extends",
+    "description": "Fat-tailed GARCH distributions extend the standard GARCH framework by replacing the normal innovation assumption with a Student-t or GED distribution, capturing the residual excess kurtosis in standardised residuals that plain GARCH cannot eliminate."
+  },
+  {
+    "source": "statistics/fat-tailed-garch-distributions",
+    "target": "statistics/kurtosis",
+    "label": "quantifies via",
+    "description": "The kurtosis formula for the Student-t innovation \u2014 3 + 6/(\u03bd \u2212 4) for \u03bd > 4 \u2014 provides the key diagnostic: it shows how much heavier the tails are relative to normal and why a lower \u03bd produces more extreme tail events."
+  },
+  {
+    "source": "statistics/fat-tailed-garch-distributions",
+    "target": "statistics/likelihood-ratio-test",
+    "label": "validated by",
+    "description": "The LR test of \u03b6 = 0 (normality) versus \u03b6 > 0 (Student-t tails) is the standard model selection tool \u2014 an LR statistic of 257 for S&P 100 data provides overwhelming statistical evidence that fat-tailed innovations are required."
+  },
+  {
     "source": "statistics/frequency-density",
     "target": "probability/probability-density-function",
     "label": "discrete analogue of",
@@ -11394,6 +12102,30 @@
     "description": "Accumulating frequency density across class widths gives cumulative frequency, linking the histogram to the ogive in the same way the PDF integrates to give the CDF."
   },
   {
+    "source": "statistics/garch-acf-squared-returns",
+    "target": "statistics/arch-model",
+    "label": "diagnosed by",
+    "description": "The ARCH-LM test checks for autocorrelation in squared returns \u2014 significant positive autocorrelation confirms ARCH effects and justifies fitting an ARCH or GARCH model to the return series."
+  },
+  {
+    "source": "statistics/garch-acf-squared-returns",
+    "target": "statistics/autocorrelation",
+    "label": "applies to",
+    "description": "The ACF of squared returns is the key diagnostic tool for detecting ARCH effects \u2014 unlike raw return ACFs which are near zero, squared return ACFs are positive and slowly decaying under GARCH dynamics."
+  },
+  {
+    "source": "statistics/garch-acf-squared-returns",
+    "target": "statistics/garch-model",
+    "label": "is implied by",
+    "description": "GARCH(1,1) analytically implies that squared return autocorrelations decay geometrically at rate alpha+beta \u2014 the ACF formula rho_tau = C*(alpha+beta)^tau is a direct consequence of the GARCH variance equation."
+  },
+  {
+    "source": "statistics/garch-acf-squared-returns",
+    "target": "statistics/volatility-clustering",
+    "label": "is the empirical signature of",
+    "description": "Slow geometric decay in the squared return ACF is the statistical fingerprint of volatility clustering \u2014 it confirms that large moves cluster in time, providing empirical evidence that volatility is time-varying rather than constant."
+  },
+  {
     "source": "statistics/garch-model",
     "target": "risk/value-at-risk",
     "label": "improves",
@@ -11404,6 +12136,24 @@
     "target": "statistics/volatility-clustering",
     "label": "models",
     "description": "GARCH is the standard parametric model for volatility clustering \u2014 the \u03b1 and \u03b2 coefficients directly capture how past shocks and past variance feed into today's conditional variance."
+  },
+  {
+    "source": "statistics/garch-variance-half-life",
+    "target": "risk/value-at-risk",
+    "label": "informs duration of elevated",
+    "description": "The variance half-life tells risk managers how long elevated VaR should remain in force after a volatility shock \u2014 for typical equity GARCH estimates the half-life is 50\u201375 days, implying VaR limits should not snap back immediately after a market dislocation."
+  },
+  {
+    "source": "statistics/garch-variance-half-life",
+    "target": "statistics/garch-model",
+    "label": "derived from",
+    "description": "The variance half-life formula H = -ln2/ln(alpha+beta) is derived directly from the mean-reverting structure of GARCH(1,1), where alpha+beta is the persistence parameter that controls how quickly variance shocks decay."
+  },
+  {
+    "source": "statistics/garch-variance-half-life",
+    "target": "statistics/garch-volatility-forecasting",
+    "label": "summarises persistence of",
+    "description": "The half-life compresses the multi-step GARCH forecast formula into a single interpretable number \u2014 the number of periods before the gap between current variance and long-run variance halves."
   },
   {
     "source": "statistics/garch-volatility-forecasting",
@@ -11512,6 +12262,30 @@
     "target": "statistics/type-i-and-type-ii-error",
     "label": "quantified by",
     "description": "Type I and Type II errors are the two ways a hypothesis test can go wrong \u2014 the significance level \u03b1 controls the Type I rate, while power analysis addresses the Type II rate, making them the core performance metrics of any test."
+  },
+  {
+    "source": "statistics/index-volatility-asymmetry",
+    "target": "probability/correlation-breakdown",
+    "label": "explained by",
+    "description": "Correlation amplification is the primary mechanism behind index volatility asymmetry \u2014 when markets fall, cross-firm correlations spike, inflating the covariance terms in portfolio variance well beyond the sum of individual firm effects."
+  },
+  {
+    "source": "statistics/index-volatility-asymmetry",
+    "target": "statistics/gjr-garch-model",
+    "label": "evidenced by",
+    "description": "GJR-GARCH fitted to equity index returns shows a markedly larger asymmetry parameter \u03b3 than the same model fitted to individual constituent firms, revealing that the index-level leverage effect is a collective phenomenon driven by correlation dynamics."
+  },
+  {
+    "source": "statistics/index-volatility-asymmetry",
+    "target": "statistics/leverage-effect",
+    "label": "extends",
+    "description": "Index volatility asymmetry extends the single-stock leverage effect by showing that the classical D/E ratio explanation is insufficient at the index level \u2014 rising cross-firm correlations in downturns amplify index variance far beyond the sum of individual leverage effects."
+  },
+  {
+    "source": "statistics/index-volatility-asymmetry",
+    "target": "statistics/portfolio-variance",
+    "label": "analysed via",
+    "description": "The portfolio variance formula makes the correlation amplification channel explicit \u2014 the cross terms \u03a3w_iw_j\u03c3_i\u03c3_j\u03c1_ij grow when \u03c1 rises, showing why index variance surges in a sell-off even when individual firm volatilities change modestly."
   },
   {
     "source": "statistics/interpolation-and-extrapolation",
@@ -11782,6 +12556,24 @@
     "target": "volatility/realised-volatility",
     "label": "estimates",
     "description": "Fitting a distribution to realised volatility data \u2014 to calibrate models for VaR, option pricing, or risk management \u2014 uses MLE to find the parameter values most consistent with observed returns."
+  },
+  {
+    "source": "statistics/mle-arch-models",
+    "target": "statistics/fat-tailed-garch-distributions",
+    "label": "extended by",
+    "description": "Switching from Normal to Student-t in ARCH MLE only replaces the Gaussian density in the log-likelihood with the t-density; the recursive variance computation is identical, so fat-tailed ARCH estimation is almost as straightforward as Gaussian."
+  },
+  {
+    "source": "statistics/mle-arch-models",
+    "target": "statistics/garch-model",
+    "label": "estimates parameters of",
+    "description": "MLE for ARCH models is the standard method for fitting GARCH(1,1) parameters \u2014 the log-likelihood is evaluated recursively for each trial parameter vector and maximised numerically using gradient-based methods."
+  },
+  {
+    "source": "statistics/mle-arch-models",
+    "target": "statistics/maximum-likelihood-estimation",
+    "label": "applies to ARCH via",
+    "description": "MLE for ARCH models applies the general MLE principle to time-series data by conditioning each observation's likelihood contribution on the recursively computed conditional variance h_t, rather than treating observations as i.i.d."
   },
   {
     "source": "statistics/multiple-testing-correction",
@@ -13674,6 +14466,42 @@
     "description": "The volatility cone plots the historical distribution of realised volatility at each measurement window, providing the benchmark against which current implied volatility is judged rich or cheap."
   },
   {
+    "source": "volatility/volatility-definitions",
+    "target": "statistics/arch-model",
+    "label": "defines conditional vol via",
+    "description": "The ARCH model is the canonical realisation of conditional volatility \u2014 it formalises the idea that variance at time t is predictable from past squared residuals, giving a precise meaning to the conditional-volatility entry in the five-definitions taxonomy."
+  },
+  {
+    "source": "volatility/volatility-definitions",
+    "target": "statistics/garch-model",
+    "label": "extended by",
+    "description": "GARCH(1,1) extends ARCH by adding a lagged variance term, making it the workhorse model for conditional volatility forecasting \u2014 the most widely used concrete form of the conditional-volatility definition."
+  },
+  {
+    "source": "volatility/volatility-definitions",
+    "target": "stochastic-processes/geometric-brownian-motion",
+    "label": "originates parameter vol from",
+    "description": "GBM is the source of the parameter-volatility definition \u2014 the constant diffusion coefficient sigma in dS/S = mu dt + sigma dW is what Black-Scholes and related models treat as THE volatility of the asset."
+  },
+  {
+    "source": "volatility/volatility-definitions",
+    "target": "volatility/implied-volatility",
+    "label": "contrasts with",
+    "description": "Implied volatility is the market-derived entry in the five-definitions taxonomy \u2014 it is extracted by inverting the Black-Scholes formula and reflects the collective expectation and risk premium embedded in option prices, not a statistical estimate from returns."
+  },
+  {
+    "source": "volatility/volatility-definitions",
+    "target": "volatility/realised-volatility",
+    "label": "contrasts with",
+    "description": "Realised volatility is the ex-post, model-free entry in the five-definitions taxonomy \u2014 it is computed directly from historical log-returns and requires no model assumption, making it the benchmark against which all other volatility measures are compared."
+  },
+  {
+    "source": "volatility/volatility-definitions",
+    "target": "volatility/stochastic-volatility-models",
+    "label": "motivates",
+    "description": "The stochastic-volatility definition \u2014 where sigma itself follows a diffusion with its own random shock \u2014 directly motivates the class of stochastic vol models (Heston, SABR) that replace the GBM constant sigma with a latent, evolving process."
+  },
+  {
     "source": "volatility/volatility-risk-premium-strategies",
     "target": "volatility/short-volatility",
     "label": "implements",
@@ -13768,5 +14596,23 @@
     "target": "volatility/volatility-surface",
     "label": "is a dimension of",
     "description": "The volatility term structure is the time axis of the volatility surface \u2014 at each maturity the surface has a smile across strikes, and the ATM slice across maturities forms the term structure."
+  },
+  {
+    "source": "volatility/why-volatility-changes",
+    "target": "statistics/gjr-garch-model",
+    "label": "motivates",
+    "description": "The leverage effect and correlation amplification documented in why-volatility-changes are precisely the asymmetric dynamics that GJR-GARCH was designed to capture by allowing negative shocks to have a larger impact on conditional variance than positive shocks."
+  },
+  {
+    "source": "volatility/why-volatility-changes",
+    "target": "statistics/index-volatility-asymmetry",
+    "label": "explains mechanism of",
+    "description": "Why-volatility-changes establishes correlation amplification as the primary driver of excess index asymmetry \u2014 the observation that index-level GJR asymmetry parameters far exceed the weighted average of firm-level parameters."
+  },
+  {
+    "source": "volatility/why-volatility-changes",
+    "target": "statistics/volatility-clustering",
+    "label": "causes",
+    "description": "The crisis shocks, leverage effect, and information flow dynamics described in why-volatility-changes are the economic mechanisms that produce the statistical phenomenon of volatility clustering observed in return time series."
   }
 ]

@@ -1,4 +1,70 @@
 {
+  "banking-regulation/backtesting-var": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 VaR Backtesting",
+        "url": "https://www.investopedia.com/terms/b/backtesting.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Backtesting",
+        "url": "https://en.wikipedia.org/wiki/Backtesting"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bank for International Settlements \u2014 Supervisory framework for use of backtesting",
+        "url": "https://www.bis.org/publ/work22.htm"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/basel-iii-three-pillars": {
+    "websites": [
+      {
+        "title": "Bank for International Settlements \u2014 Basel III",
+        "url": "https://www.bis.org/bcbs/basel3.htm"
+      },
+      {
+        "title": "Investopedia \u2014 Basel III",
+        "url": "https://www.investopedia.com/terms/b/basell-iii.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "BIS \u2014 Basel III: A global regulatory framework",
+        "url": "https://www.bis.org/publ/bcbs189.htm"
+      },
+      {
+        "title": "Wikipedia \u2014 Basel III",
+        "url": "https://en.wikipedia.org/wiki/Basel_III"
+      }
+    ]
+  },
+  "banking-regulation/basel-iv-output-floor": {
+    "websites": [
+      {
+        "title": "BIS \u2014 Basel III: Finalising post-crisis reforms",
+        "url": "https://www.bis.org/bcbs/publ/d424.htm"
+      },
+      {
+        "title": "Investopedia \u2014 Basel IV",
+        "url": "https://www.investopedia.com/terms/b/basel-iv.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Wikipedia \u2014 Basel IV",
+        "url": "https://en.wikipedia.org/wiki/Basel_IV"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
   "banking-regulation/basis-risk-banking-book": {
     "websites": [
       {
@@ -14,6 +80,248 @@
       {
         "title": "Basel Committee \u2014 Interest Rate Risk in the Banking Book",
         "url": "https://www.bis.org/bcbs/publ/d368.htm"
+      }
+    ]
+  },
+  "banking-regulation/capital-ratios-cet1": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Common Equity Tier 1 (CET1)",
+        "url": "https://www.investopedia.com/terms/c/common-equity-tier-1-cet1.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Basel III",
+        "url": "https://en.wikipedia.org/wiki/Basel_III"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bank for International Settlements \u2014 Definition of capital in Basel III",
+        "url": "https://www.bis.org/publ/bcbs189.htm"
+      },
+      {
+        "title": "Investopedia \u2014 Capital Adequacy Ratio",
+        "url": "https://www.investopedia.com/terms/c/capitaladequacyratio.asp"
+      }
+    ]
+  },
+  "banking-regulation/ccp-loss-waterfall": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Central counterparty clearing house",
+        "url": "https://en.wikipedia.org/wiki/Central_counterparty_clearing_house"
+      },
+      {
+        "title": "Bank for International Settlements \u2014 CCP resilience",
+        "url": "https://www.bis.org/cpmi/publ/d163.htm"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Investopedia \u2014 Central Counterparty Clearing House",
+        "url": "https://www.investopedia.com/terms/c/clearinghouse.asp"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/clearing-economics": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Central Counterparty Clearing House (CCP)",
+        "url": "https://www.investopedia.com/terms/c/ccp.asp"
+      },
+      {
+        "title": "BIS \u2014 Central clearing: trends and current issues",
+        "url": "https://www.bis.org/publ/qtrpdf/r_qt1612g.htm"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering and Risk Management",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "Investopedia \u2014 How Central Counterparty Clearing Works",
+        "url": "https://www.investopedia.com/articles/investing/042915/understanding-derivatives-central-clearing.asp"
+      }
+    ]
+  },
+  "banking-regulation/close-out-netting": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Netting (finance)",
+        "url": "https://en.wikipedia.org/wiki/Netting"
+      },
+      {
+        "title": "Investopedia \u2014 Netting",
+        "url": "https://www.investopedia.com/terms/n/netting.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "ISDA \u2014 Close-out Netting",
+        "url": "https://www.isda.org/a/GFVDE/close-out-netting.pdf"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/close-out-valuation": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 ISDA Master Agreement",
+        "url": "https://www.investopedia.com/terms/i/isda-master-agreement.asp"
+      },
+      {
+        "title": "Investopedia \u2014 Close-Out Netting",
+        "url": "https://www.investopedia.com/terms/c/closeout-netting.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Finance Theory I",
+        "url": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/"
+      },
+      {
+        "title": "Investopedia \u2014 Credit Default Swaps Explained",
+        "url": "https://www.investopedia.com/terms/c/creditdefaultswap.asp"
+      }
+    ]
+  },
+  "banking-regulation/collateral-transformation": {
+    "websites": [
+      {
+        "title": "BIS \u2014 Asset encumbrance, financial reform and the demand for collateral assets",
+        "url": "https://www.bis.org/publ/work515.htm"
+      },
+      {
+        "title": "Investopedia \u2014 Collateral Definition",
+        "url": "https://www.investopedia.com/terms/c/collateral.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Fixed Income Analysis",
+        "url": "https://ocw.mit.edu/courses/15-433-investments-spring-2003/"
+      },
+      {
+        "title": "Investopedia \u2014 Repo Agreement Explained",
+        "url": "https://www.investopedia.com/terms/r/repurchaseagreement.asp"
+      }
+    ]
+  },
+  "banking-regulation/credit-loss-distribution": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Credit risk",
+        "url": "https://en.wikipedia.org/wiki/Credit_risk"
+      },
+      {
+        "title": "Investopedia \u2014 Credit Risk",
+        "url": "https://www.investopedia.com/terms/c/creditrisk.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bank for International Settlements \u2014 Credit risk modelling",
+        "url": "https://www.bis.org/publ/work49.htm"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/credit-value-adjustment-cva": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Credit Valuation Adjustment",
+        "url": "https://www.investopedia.com/terms/c/credit-valuation-adjustment.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Credit valuation adjustment",
+        "url": "https://en.wikipedia.org/wiki/Credit_valuation_adjustment"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bank for International Settlements \u2014 CVA capital charge",
+        "url": "https://www.bis.org/bcbs/publ/d325.htm"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/cva-desk-hedging": {
+    "websites": [
+      {
+        "title": "BIS \u2014 Credit valuation adjustment and wrong-way risk",
+        "url": "https://www.bis.org/publ/work421.htm"
+      },
+      {
+        "title": "Investopedia \u2014 Credit Valuation Adjustment (CVA)",
+        "url": "https://www.investopedia.com/terms/c/credit-valuation-adjustment.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Advanced Fixed Income Derivatives",
+        "url": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/"
+      },
+      {
+        "title": "Investopedia \u2014 Credit Default Swap (CDS) Explained",
+        "url": "https://www.investopedia.com/terms/c/creditdefaultswap.asp"
+      }
+    ]
+  },
+  "banking-regulation/default-risk-charge": {
+    "websites": [
+      {
+        "title": "BIS \u2014 Minimum capital requirements for market risk (FRTB)",
+        "url": "https://www.bis.org/bcbs/publ/d457.htm"
+      },
+      {
+        "title": "Investopedia \u2014 Fundamental Review of the Trading Book (FRTB)",
+        "url": "https://www.investopedia.com/terms/f/fundamental-review-of-the-trading-book-frtb.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Finance Theory",
+        "url": "https://ocw.mit.edu/courses/15-414-financial-management-summer-2003/"
+      },
+      {
+        "title": "Investopedia Academy \u2014 Risk Management",
+        "url": "https://www.investopedia.com/terms/d/defaultrisk.asp"
+      }
+    ]
+  },
+  "banking-regulation/dva": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Debit Valuation Adjustment (DVA)",
+        "url": "https://www.investopedia.com/terms/d/debit-valuation-adjustment.asp"
+      },
+      {
+        "title": "BIS \u2014 CVA and DVA in OTC derivatives",
+        "url": "https://www.bis.org/publ/work421.htm"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Fixed Income Securities",
+        "url": "https://ocw.mit.edu/courses/15-433-investments-spring-2003/"
+      },
+      {
+        "title": "Investopedia \u2014 Credit Valuation Adjustment Overview",
+        "url": "https://www.investopedia.com/terms/c/credit-valuation-adjustment.asp"
       }
     ]
   },
@@ -53,6 +361,116 @@
       }
     ]
   },
+  "banking-regulation/expected-exposure": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Credit valuation adjustment",
+        "url": "https://en.wikipedia.org/wiki/Credit_valuation_adjustment"
+      },
+      {
+        "title": "Investopedia \u2014 Expected Exposure",
+        "url": "https://www.investopedia.com/terms/e/exposure.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "BIS \u2014 Counterparty credit risk",
+        "url": "https://www.bis.org/bcbs/publ/d325.htm"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/expected-loss": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Expected Loss",
+        "url": "https://www.investopedia.com/terms/e/expected-loss.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Expected loss",
+        "url": "https://en.wikipedia.org/wiki/Expected_loss"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Investopedia \u2014 Loss Given Default (LGD)",
+        "url": "https://www.investopedia.com/terms/l/lossgivendefault.asp"
+      },
+      {
+        "title": "Investopedia \u2014 Probability of Default",
+        "url": "https://www.investopedia.com/terms/d/defaultprobability.asp"
+      }
+    ]
+  },
+  "banking-regulation/frtb-overview": {
+    "websites": [
+      {
+        "title": "BIS \u2014 Minimum capital requirements for market risk",
+        "url": "https://www.bis.org/bcbs/publ/d457.htm"
+      },
+      {
+        "title": "Wikipedia \u2014 Fundamental Review of the Trading Book",
+        "url": "https://en.wikipedia.org/wiki/Fundamental_Review_of_the_Trading_Book"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Investopedia \u2014 Fundamental Review of the Trading Book",
+        "url": "https://www.investopedia.com/terms/f/fundamental-review-of-the-trading-book-frtb.asp"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/fva": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Funding Valuation Adjustment (FVA)",
+        "url": "https://www.investopedia.com/terms/f/fva.asp"
+      },
+      {
+        "title": "BIS \u2014 Funding Valuation Adjustments",
+        "url": "https://www.bis.org/publ/work526.htm"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Advanced Topics in Finance",
+        "url": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/"
+      },
+      {
+        "title": "Investopedia \u2014 XVA Explained",
+        "url": "https://www.investopedia.com/terms/x/xva.asp"
+      }
+    ]
+  },
+  "banking-regulation/gsib-surcharge": {
+    "websites": [
+      {
+        "title": "BIS \u2014 Global systemically important banks: updated assessment methodology",
+        "url": "https://www.bis.org/bcbs/publ/d545.htm"
+      },
+      {
+        "title": "Investopedia \u2014 Systemically Important Financial Institution (SIFI)",
+        "url": "https://www.investopedia.com/terms/s/systemically-important-financial-institution-sifi.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Finance Theory I",
+        "url": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/"
+      },
+      {
+        "title": "Investopedia \u2014 Too Big to Fail",
+        "url": "https://www.investopedia.com/terms/t/too-big-to-fail.asp"
+      }
+    ]
+  },
   "banking-regulation/interest-rate-risk-in-the-banking-book": {
     "websites": [
       {
@@ -68,6 +486,94 @@
       {
         "title": "FDIC \u2014 Types of Interest Rate Risk",
         "url": "https://www.fdic.gov/resources/bankers/capital-markets/interest-rate-risk/"
+      }
+    ]
+  },
+  "banking-regulation/irb-approach": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Internal ratings-based approach",
+        "url": "https://en.wikipedia.org/wiki/Internal_ratings-based_approach_(credit_risk)"
+      },
+      {
+        "title": "Investopedia \u2014 Internal Ratings-Based Approach",
+        "url": "https://www.investopedia.com/terms/i/internal-ratings-based-irb-approach.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "BIS \u2014 IRB risk weight functions",
+        "url": "https://www.bis.org/bcbs/irbriskweight.htm"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/isda-simm": {
+    "websites": [
+      {
+        "title": "ISDA \u2014 ISDA SIMM",
+        "url": "https://www.isda.org/2016/06/07/isda-simm-methodology/"
+      },
+      {
+        "title": "ISDA \u2014 Margin",
+        "url": "https://www.isda.org/category/margin/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Investopedia \u2014 Initial Margin",
+        "url": "https://www.investopedia.com/terms/i/initialmargin.asp"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/leverage-ratio": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Leverage Ratio",
+        "url": "https://www.investopedia.com/terms/l/leverageratio.asp"
+      },
+      {
+        "title": "BIS \u2014 Basel III leverage ratio framework",
+        "url": "https://www.bis.org/bcbs/publ/d295.htm"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bank for International Settlements \u2014 Basel III leverage ratio framework",
+        "url": "https://www.bis.org/bcbs/publ/d295.htm"
+      },
+      {
+        "title": "Investopedia \u2014 Tier 1 Capital",
+        "url": "https://www.investopedia.com/terms/t/tier1capital.asp"
+      }
+    ]
+  },
+  "banking-regulation/liquidity-adjusted-var": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Liquidity-Adjusted Value at Risk",
+        "url": "https://www.investopedia.com/terms/l/liquidity-adjusted-return-on-capital-laroc.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Value at risk",
+        "url": "https://en.wikipedia.org/wiki/Value_at_risk"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bank for International Settlements \u2014 Market liquidity and funding liquidity",
+        "url": "https://www.bis.org/publ/work256.htm"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
       }
     ]
   },
@@ -107,6 +613,72 @@
       }
     ]
   },
+  "banking-regulation/margin-haircuts": {
+    "websites": [
+      {
+        "title": "BIS \u2014 Haircut floors for non-centrally cleared securities financing transactions",
+        "url": "https://www.bis.org/bcbs/publ/d589.htm"
+      },
+      {
+        "title": "Investopedia \u2014 Haircut Definition",
+        "url": "https://www.investopedia.com/terms/h/haircut.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Finance Theory I",
+        "url": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/"
+      },
+      {
+        "title": "Investopedia \u2014 Collateral Management Overview",
+        "url": "https://www.investopedia.com/terms/c/collateral.asp"
+      }
+    ]
+  },
+  "banking-regulation/margin-period-of-risk": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Margin (finance)",
+        "url": "https://en.wikipedia.org/wiki/Margin_(finance)"
+      },
+      {
+        "title": "Investopedia \u2014 Margin Call",
+        "url": "https://www.investopedia.com/terms/m/margincall.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "BIS \u2014 Margin requirements for non-centrally cleared derivatives",
+        "url": "https://www.bis.org/bcbs/publ/d317.htm"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/mva": {
+    "websites": [
+      {
+        "title": "BIS \u2014 Margin requirements for non-centrally cleared derivatives",
+        "url": "https://www.bis.org/bcbs/publ/d317.htm"
+      },
+      {
+        "title": "Investopedia \u2014 Margin Valuation Adjustment (MVA)",
+        "url": "https://www.investopedia.com/terms/m/mva.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Finance Theory I",
+        "url": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/"
+      },
+      {
+        "title": "Investopedia \u2014 XVA Explained",
+        "url": "https://www.investopedia.com/terms/x/xva.asp"
+      }
+    ]
+  },
   "banking-regulation/net-stable-funding-ratio": {
     "websites": [
       {
@@ -125,6 +697,50 @@
       }
     ]
   },
+  "banking-regulation/netting-set-csa": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 ISDA Master Agreement",
+        "url": "https://en.wikipedia.org/wiki/ISDA_Master_Agreement"
+      },
+      {
+        "title": "Investopedia \u2014 Credit Support Annex",
+        "url": "https://www.investopedia.com/terms/c/creditsupportannex.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "ISDA \u2014 About ISDA",
+        "url": "https://www.isda.org/about-isda/"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/operational-risk-capital": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Operational risk",
+        "url": "https://en.wikipedia.org/wiki/Operational_risk"
+      },
+      {
+        "title": "Investopedia \u2014 Operational Risk",
+        "url": "https://www.investopedia.com/terms/o/operational_risk.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "BIS \u2014 Standardised Measurement Approach for operational risk",
+        "url": "https://www.bis.org/bcbs/publ/d355.htm"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
   "banking-regulation/optionality-risk": {
     "websites": [
       {
@@ -140,6 +756,50 @@
       {
         "title": "Basel Committee \u2014 Interest Rate Risk in the Banking Book",
         "url": "https://www.bis.org/bcbs/publ/d368.htm"
+      }
+    ]
+  },
+  "banking-regulation/portfolio-compression": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Trade compression",
+        "url": "https://en.wikipedia.org/wiki/Trade_compression"
+      },
+      {
+        "title": "Investopedia \u2014 Notional Value",
+        "url": "https://www.investopedia.com/terms/n/notionalvalue.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "BIS \u2014 OTC derivatives statistics",
+        "url": "https://www.bis.org/statistics/derstats.htm"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/potential-future-exposure": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Potential Future Exposure",
+        "url": "https://www.investopedia.com/terms/p/potentialfutureexposure.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Potential future exposure",
+        "url": "https://en.wikipedia.org/wiki/Potential_future_exposure"
+      }
+    ],
+    "videos": [
+      {
+        "title": "BIS \u2014 SA-CCR framework",
+        "url": "https://www.bis.org/publ/bcbs279.htm"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
       }
     ]
   },
@@ -162,6 +822,160 @@
       {
         "title": "AnalystPrep \u2014 Risk Management for Changing Interest Rates",
         "url": "https://analystprep.com/study-notes/frm/risk-management-for-changing-interest-rates-asset-liability-management-and-duration-techniques/"
+      }
+    ]
+  },
+  "banking-regulation/risk-weighted-assets": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Risk-Weighted Assets",
+        "url": "https://www.investopedia.com/terms/r/riskweightedassets.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Risk-weighted asset",
+        "url": "https://en.wikipedia.org/wiki/Risk-weighted_asset"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bank for International Settlements \u2014 Basel III: Finalising post-crisis reforms",
+        "url": "https://www.bis.org/bcbs/publ/d424.htm"
+      },
+      {
+        "title": "Investopedia \u2014 Internal Ratings-Based Approach",
+        "url": "https://www.investopedia.com/terms/i/internal-ratings-based-irb-approach.asp"
+      }
+    ]
+  },
+  "banking-regulation/sa-ccr-framework": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Counterparty credit risk",
+        "url": "https://en.wikipedia.org/wiki/Counterparty_credit_risk"
+      },
+      {
+        "title": "Investopedia \u2014 Exposure at Default",
+        "url": "https://www.investopedia.com/terms/e/exposure_at_default.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "BIS \u2014 The standardised approach for measuring CCR exposures",
+        "url": "https://www.bis.org/publ/bcbs279.htm"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/span-methodology": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 CME SPAN",
+        "url": "https://en.wikipedia.org/wiki/CME_SPAN"
+      },
+      {
+        "title": "Investopedia \u2014 Initial Margin",
+        "url": "https://www.investopedia.com/terms/i/initialmargin.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "CME Group \u2014 SPAN Methodology",
+        "url": "https://www.cmegroup.com/clearing/risk-management/span-methodology.html"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/stressed-var": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Stressed Value-at-Risk (SVaR)",
+        "url": "https://www.investopedia.com/terms/s/stressed-value-at-risk-svar.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Value at risk",
+        "url": "https://en.wikipedia.org/wiki/Value_at_risk"
+      }
+    ],
+    "videos": [
+      {
+        "title": "BIS \u2014 Revisions to the Basel II market risk framework (Basel 2.5)",
+        "url": "https://www.bis.org/publ/bcbs193.htm"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/uncleared-margin-rules": {
+    "websites": [
+      {
+        "title": "BIS \u2014 Margin requirements for non-centrally cleared derivatives",
+        "url": "https://www.bis.org/bcbs/publ/d317.htm"
+      },
+      {
+        "title": "Investopedia \u2014 Uncleared Margin Rules",
+        "url": "https://www.investopedia.com/terms/u/uncleared-margin-rules.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "ISDA \u2014 ISDA SIMM Methodology",
+        "url": "https://www.isda.org/2016/06/07/isda-simm-methodology/"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/vasicek-model-asrf": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Vasicek model (credit)",
+        "url": "https://en.wikipedia.org/wiki/Vasicek_model#Credit_risk"
+      },
+      {
+        "title": "Investopedia \u2014 Internal Ratings-Based Approach",
+        "url": "https://www.investopedia.com/terms/i/internal-ratings-based-irb-approach.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bank for International Settlements \u2014 An Explanatory Note on the Basel IRB Risk Weight Functions",
+        "url": "https://www.bis.org/bcbs/irbriskweight.htm"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/wrong-way-risk": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Counterparty credit risk",
+        "url": "https://en.wikipedia.org/wiki/Counterparty_credit_risk"
+      },
+      {
+        "title": "Investopedia \u2014 Wrong-Way Risk",
+        "url": "https://www.investopedia.com/terms/w/wrong-way-risk.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "BIS \u2014 Counterparty credit risk: wrong-way risk",
+        "url": "https://www.bis.org/bcbs/publ/d325.htm"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Financial Engineering",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
       }
     ]
   },
@@ -3455,7 +4269,7 @@
       },
       {
         "title": "StatQuest \u2014 Linear Regression and the OLS Normal Equations",
-        "url": "https://www.youtube.com/watch?v=PaFPbb66DxQ"
+        "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/"
       }
     ]
   },
@@ -4102,7 +4916,7 @@
     "videos": [
       {
         "title": "Skewness and Kurtosis \u2014 StatQuest",
-        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
       },
       {
         "title": "Skewness \u2014 Khan Academy",
@@ -4970,7 +5784,7 @@
       },
       {
         "title": "Skewness and Kurtosis \u2014 StatQuest",
-        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
       }
     ]
   },
@@ -4988,7 +5802,7 @@
     "videos": [
       {
         "title": "StatQuest \u2014 Standard Deviation",
-        "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY"
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/mean-median-basics/v/statistics-intro-mean-median-and-mode"
       },
       {
         "title": "Khan Academy \u2014 Variance and Standard Deviation",
@@ -5022,7 +5836,7 @@
       },
       {
         "title": "Kurtosis in Finance \u2014 StatQuest",
-        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
       }
     ]
   },
@@ -5087,7 +5901,7 @@
     "videos": [
       {
         "title": "StatQuest \u2014 Pearson's Correlation, Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=xZ_z8KWkhXE"
+        "url": "https://www.khanacademy.org/math/ap-statistics/bivariate-data-ap/correlation-coefficient-r/v/correlation-coefficient-intuition-examples"
       },
       {
         "title": "Khan Academy \u2014 Correlation Coefficients",
@@ -5109,7 +5923,7 @@
     "videos": [
       {
         "title": "StatQuest \u2014 Pearson's Correlation, Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=xZ_z8KWkhXE"
+        "url": "https://www.khanacademy.org/math/ap-statistics/bivariate-data-ap/correlation-coefficient-r/v/correlation-coefficient-intuition-examples"
       },
       {
         "title": "Khan Academy \u2014 Calculating Correlation Coefficient",
@@ -5135,7 +5949,7 @@
       },
       {
         "title": "Skewness in Portfolio Returns \u2014 StatQuest",
-        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
       }
     ]
   },
@@ -5153,7 +5967,7 @@
     "videos": [
       {
         "title": "StatQuest \u2014 Covariance, Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=qtaqvPAeEJY"
+        "url": "https://www.khanacademy.org/math/ap-statistics/bivariate-data-ap/correlation-coefficient-r/v/covariance-and-the-regression-line"
       },
       {
         "title": "Khan Academy \u2014 Covariance and the Regression Line",
@@ -5213,7 +6027,7 @@
       },
       {
         "title": "Probability of Events \u2014 The Organic Chemistry Tutor",
-        "url": "https://www.youtube.com/watch?v=KzfWUEJjG18"
+        "url": "https://www.khanacademy.org/math/statistics-probability/probability-library/basic-theoretical-probability/v/basic-probability"
       }
     ]
   },
@@ -5231,7 +6045,7 @@
     "videos": [
       {
         "title": "Kurtosis and Fat Tails \u2014 StatQuest",
-        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
       },
       {
         "title": "Kurtosis Explained \u2014 Khan Academy",
@@ -5530,7 +6344,7 @@
       },
       {
         "title": "StatQuest \u2014 Conditional Probabilities",
-        "url": "https://www.youtube.com/watch?v=_IgyaD7vOOA"
+        "url": "https://www.khanacademy.org/math/statistics-probability/probability-library/conditional-probability-independence/v/conditional-probability-and-combinations"
       }
     ]
   },
@@ -5570,7 +6384,7 @@
     "videos": [
       {
         "title": "Kurtosis and Fat Tails \u2014 StatQuest",
-        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
       },
       {
         "title": "Fat Tails in Finance \u2014 Khan Academy",
@@ -5618,7 +6432,7 @@
     "videos": [
       {
         "title": "Kurtosis and Distribution Shape \u2014 StatQuest",
-        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
       },
       {
         "title": "Normal Distribution Shape \u2014 Khan Academy",
@@ -5719,7 +6533,7 @@
     "videos": [
       {
         "title": "Skewness \u2014 StatQuest",
-        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
       },
       {
         "title": "Skewed Distributions \u2014 Khan Academy",
@@ -5806,8 +6620,8 @@
         "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
       },
       {
-        "title": "Law of Total Probability \u2014 The Organic Chemistry Tutor",
-        "url": "https://www.youtube.com/watch?v=SkidyDQuupA"
+        "title": "Khan Academy \u2014 Law of Total Probability",
+        "url": "https://www.khanacademy.org/math/statistics-probability/probability-library/basic-theoretical-probability/v/basic-probability"
       }
     ]
   },
@@ -5832,12 +6646,12 @@
     ],
     "videos": [
       {
-        "title": "Kurtosis Explained \u2014 StatQuest",
-        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+        "title": "Kurtosis \u2014 Khan Academy",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
       },
       {
-        "title": "Distribution Shape \u2014 Khan Academy",
-        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
+        "title": "MIT OpenCourseWare \u2014 Introduction to Probability",
+        "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
       }
     ]
   },
@@ -5867,7 +6681,7 @@
     "videos": [
       {
         "title": "Skewness \u2014 StatQuest",
-        "url": "https://www.youtube.com/watch?v=52d7ha-GdV8"
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
       },
       {
         "title": "Skewed Distributions \u2014 Khan Academy",
@@ -5996,8 +6810,8 @@
         "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/"
       },
       {
-        "title": "Probability Space \u2014 The Organic Chemistry Tutor",
-        "url": "https://www.youtube.com/watch?v=SkidyDQuupA"
+        "title": "Khan Academy \u2014 Basic Probability",
+        "url": "https://www.khanacademy.org/math/statistics-probability/probability-library/basic-theoretical-probability/v/basic-probability"
       }
     ]
   },
@@ -6210,6 +7024,28 @@
       }
     ]
   },
+  "risk/economic-capital": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Economic Capital",
+        "url": "https://www.investopedia.com/terms/e/economic-capital.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Risk-adjusted return on capital",
+        "url": "https://en.wikipedia.org/wiki/Risk-adjusted_return_on_capital"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Finance Theory I (15.401)",
+        "url": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/"
+      }
+    ]
+  },
   "risk/extreme-value-theory": {
     "websites": [
       {
@@ -6245,6 +7081,28 @@
       {
         "title": "Investopedia \u2014 Fire Sale",
         "url": "https://www.investopedia.com/terms/f/firesale.asp"
+      }
+    ]
+  },
+  "risk/funding-liquidity-risk": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Funding Liquidity",
+        "url": "https://www.investopedia.com/terms/f/funding-liquidity.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Liquidity Risk",
+        "url": "https://en.wikipedia.org/wiki/Liquidity_risk"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Banking and Money: What is Money?",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/money-and-banking/banking-and-money/v/banking-1"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
       }
     ]
   },
@@ -6463,6 +7321,28 @@
       {
         "title": "Khan Academy \u2014 Portfolio Variance",
         "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/investment-vehicles-tutorial/hedge-funds/v/hedge-fund-strategies-long-short-1"
+      }
+    ]
+  },
+  "risk/risk-appetite-framework": {
+    "websites": [
+      {
+        "title": "Risk Appetite \u2014 Investopedia",
+        "url": "https://www.investopedia.com/terms/r/risk-appetite.asp"
+      },
+      {
+        "title": "Risk Appetite Framework \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Risk_appetite"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Finance Theory I \u2014 MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/"
+      },
+      {
+        "title": "Value at Risk Explained \u2014 Khan Academy",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities"
       }
     ]
   },
@@ -6760,6 +7640,50 @@
       }
     ]
   },
+  "statistics/arch-framework": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Autoregressive conditional heteroskedasticity",
+        "url": "https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity"
+      },
+      {
+        "title": "Investopedia \u2014 GARCH Process",
+        "url": "https://www.investopedia.com/terms/g/garch.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Time Series Analysis (14.384)",
+        "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/"
+      },
+      {
+        "title": "Kevin Sheppard \u2014 Volatility Modelling (Oxford Lecture Notes)",
+        "url": "https://www.kevinsheppard.com/teaching/mfe/notes/"
+      }
+    ]
+  },
+  "statistics/arch-m-model": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 ARCH Models",
+        "url": "https://www.investopedia.com/terms/a/autoregressive-conditional-heteroskedasticity.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Autoregressive Conditional Heteroskedasticity (ARCH-M section)",
+        "url": "https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OCW \u2014 Topics in Mathematics with Applications in Finance",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "MIT OCW \u2014 Statistics for Applications (18.650)",
+        "url": "https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/"
+      }
+    ]
+  },
   "statistics/arch-model": {
     "websites": [
       {
@@ -6799,7 +7723,7 @@
     "videos": [
       {
         "title": "StatQuest \u2014 Bias and Variance",
-        "url": "https://www.youtube.com/watch?v=EuBBz3bI-aA"
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-sample/v/review-and-intuition-why-we-divide-by-n-1-for-the-unbiased-sample-variance"
       },
       {
         "title": "Khan Academy \u2014 Why Divide by n-1 for Sample Variance",
@@ -6894,7 +7818,7 @@
     "videos": [
       {
         "title": "StatQuest \u2014 Bias and Variance",
-        "url": "https://www.youtube.com/watch?v=EuBBz3bI-aA"
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-sample/v/review-and-intuition-why-we-divide-by-n-1-for-the-unbiased-sample-variance"
       },
       {
         "title": "Khan Academy \u2014 Unbiased Estimators",
@@ -7015,6 +7939,24 @@
       }
     ]
   },
+  "statistics/fat-tailed-garch-distributions": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Autoregressive conditional heteroskedasticity (GARCH)",
+        "url": "https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity"
+      },
+      {
+        "title": "Investopedia \u2014 Fat Tail",
+        "url": "https://www.investopedia.com/terms/f/fat-tail.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Time Series Analysis",
+        "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/"
+      }
+    ]
+  },
   "statistics/frequency-density": {
     "websites": [
       {
@@ -7033,11 +7975,51 @@
       }
     ]
   },
+  "statistics/garch-acf-squared-returns": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Autoregressive conditional heteroskedasticity",
+        "url": "https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity"
+      },
+      {
+        "title": "Investopedia \u2014 GARCH Process",
+        "url": "https://www.investopedia.com/terms/g/garch.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Ben Lambert \u2014 Autocorrelation (YouTube)",
+        "url": "https://www.youtube.com/watch?v=ZjaBn93YPWo"
+      }
+    ]
+  },
   "statistics/garch-model": {
     "websites": [
       {
         "title": "Investopedia \u2014 GARCH Process",
         "url": "https://www.investopedia.com/terms/g/garch.asp"
+      }
+    ]
+  },
+  "statistics/garch-variance-half-life": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 GARCH Process",
+        "url": "https://www.investopedia.com/terms/g/garch.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 GARCH",
+        "url": "https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity#GARCH"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Time Series Analysis (14.384)",
+        "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/"
+      },
+      {
+        "title": "Kevin Sheppard \u2014 Volatility Modelling (Oxford Lecture Notes)",
+        "url": "https://www.kevinsheppard.com/teaching/mfe/notes/"
       }
     ]
   },
@@ -7325,12 +8307,34 @@
     ],
     "videos": [
       {
-        "title": "StatQuest \u2014 Maximum Likelihood, Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=XepXtl9YKwc"
+        "title": "MIT OpenCourseWare \u2014 Statistics for Applications",
+        "url": "https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/"
       },
       {
         "title": "Wikipedia \u2014 Maximum Likelihood Estimation",
         "url": "https://en.wikipedia.org/wiki/Maximum_likelihood_estimation"
+      }
+    ]
+  },
+  "statistics/mle-arch-models": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Maximum likelihood estimation",
+        "url": "https://en.wikipedia.org/wiki/Maximum_likelihood_estimation"
+      },
+      {
+        "title": "Investopedia \u2014 Maximum Likelihood Estimation",
+        "url": "https://www.investopedia.com/terms/m/maximum-likelihood-estimation.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest \u2014 Maximum Likelihood, Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=XepXtl9YKwc"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Time Series Analysis (14.384)",
+        "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/"
       }
     ]
   },
@@ -7448,7 +8452,7 @@
       },
       {
         "title": "StatQuest \u2014 Mean and Standard Deviation, Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY"
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/mean-median-basics/v/statistics-intro-mean-median-and-mode"
       }
     ]
   },
@@ -7470,7 +8474,7 @@
       },
       {
         "title": "StatQuest \u2014 Mean and Standard Deviation, Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY"
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/mean-median-basics/v/statistics-intro-mean-median-and-mode"
       }
     ]
   },
@@ -7544,7 +8548,7 @@
       },
       {
         "title": "StatQuest \u2014 Mean and Standard Deviation, Clearly Explained",
-        "url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY"
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/mean-median-basics/v/statistics-intro-mean-median-and-mode"
       }
     ]
   },
@@ -7584,7 +8588,7 @@
       },
       {
         "title": "StatQuest \u2014 Bias and Variance",
-        "url": "https://www.youtube.com/watch?v=EuBBz3bI-aA"
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-sample/v/review-and-intuition-why-we-divide-by-n-1-for-the-unbiased-sample-variance"
       }
     ]
   },
@@ -7766,7 +8770,7 @@
     "videos": [
       {
         "title": "StatQuest \u2014 Bias and Variance",
-        "url": "https://www.youtube.com/watch?v=EuBBz3bI-aA"
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-sample/v/review-and-intuition-why-we-divide-by-n-1-for-the-unbiased-sample-variance"
       },
       {
         "title": "Khan Academy \u2014 Sample Variance",
@@ -8386,6 +9390,28 @@
       }
     ]
   },
+  "volatility/volatility-definitions": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Volatility (finance)",
+        "url": "https://en.wikipedia.org/wiki/Volatility_(finance)"
+      },
+      {
+        "title": "Investopedia \u2014 Types of Volatility",
+        "url": "https://www.investopedia.com/terms/v/volatility.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Implied vs Realised Volatility (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/pages/lecture-notes/"
+      },
+      {
+        "title": "Investopedia \u2014 What Is Implied Volatility?",
+        "url": "https://www.investopedia.com/ask/answers/062415/whats-difference-between-implied-and-historical-volatility.asp"
+      }
+    ]
+  },
   "volatility/volatility-risk-premium-strategies": {
     "websites": [
       {
@@ -8423,6 +9449,28 @@
       {
         "title": "Investopedia \u2014 Volatility Term Structure",
         "url": "https://www.investopedia.com/terms/v/volatility-term-structure.asp"
+      }
+    ]
+  },
+  "volatility/why-volatility-changes": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Volatility",
+        "url": "https://www.investopedia.com/terms/v/volatility.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Volatility clustering",
+        "url": "https://en.wikipedia.org/wiki/Volatility_clustering"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Variance and Standard Deviation",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-population/v/variance-of-a-population"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Time Series Analysis (14.384)",
+        "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/"
       }
     ]
   }
