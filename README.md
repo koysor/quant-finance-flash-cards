@@ -2,7 +2,7 @@
 
 Bite-sized revision flash cards for Quantitative Finance exams and interviews, designed for accessibility and clarity. Each card covers one concept — definition, key formula, worked example, and its finance application.
 
-711 cards · 15 topics · 2056 concept connections
+882 cards · 15 topics · 2568 concept connections
 
 ## Running the app
 
@@ -17,21 +17,21 @@ On first run the app scans `cards/` and loads `edges.json`, building `graph.db` 
 
 | Topic | Cards | Scope |
 |---|---|---|
-| Banking Regulation | 15 | FRTB, IRRBB, LCR, NSFR, EVE, EaR, Basel capital rules |
-| Calculus | 154 | Differentiation, integration, Taylor series, quadratic techniques, A Level pure maths |
-| Computational Finance | 15 | Numerical methods, finite differences, FFT, simulation |
-| Derivatives | 75 | Options, futures, Greeks, pricing models, risk-neutral theory |
+| Banking Regulation | 52 | FRTB, IRRBB, LCR, NSFR, EVE, EaR, Basel capital rules |
+| Calculus | 159 | Differentiation, integration, Taylor series, quadratic techniques, A Level pure maths |
+| Computational Finance | 42 | Numerical methods, finite differences, FFT, simulation, ML algorithms |
+| Derivatives | 76 | Options, futures, Greeks, pricing models, risk-neutral theory |
 | Financial Mathematics | 49 | TVM, compounding, NPV, leverage, hedge funds, execution |
 | Fixed Income | 18 | Bonds, yield curves, duration, DV01, credit spreads, swaps |
-| Linear Algebra | 67 | Matrices, vectors, eigenvalues, SVD, decompositions |
-| Mathematical Notation | 44 | Sigma, pi, set theory, logical and summation notation |
-| Portfolio Theory & Asset Pricing | 37 | CAPM, efficient frontier, factor models, performance ratios |
-| Probability | 62 | Distributions, expectation, Bayes, transform methods |
-| Risk | 22 | VaR, CVaR, Monte Carlo, stress testing, EVT, drawdowns |
+| Linear Algebra | 68 | Matrices, vectors, eigenvalues, SVD, decompositions |
+| Mathematical Notation | 57 | Sigma, pi, set theory, logical and summation notation |
+| Portfolio Theory & Asset Pricing | 54 | CAPM, efficient frontier, factor models, performance ratios |
+| Probability | 90 | Distributions, expectation, Bayes, transform methods |
+| Risk | 33 | VaR, CVaR, Monte Carlo, stress testing, EVT, drawdowns |
 | Short Selling | 18 | Short mechanics, securities lending, regulation, short squeezes |
-| Statistics | 59 | Regression, hypothesis testing, covariance estimation |
-| Stochastic Processes | 52 | Brownian motion, GBM, Itô's lemma, SDEs, martingales |
-| Volatility | 22 | Implied/realised vol, VIX, vol surface, smile, stochastic vol models |
+| Statistics | 84 | Regression, hypothesis testing, covariance estimation |
+| Stochastic Processes | 53 | Brownian motion, GBM, Itô's lemma, SDEs, martingales |
+| Volatility | 24 | Implied/realised vol, VIX, vol surface, smile, stochastic vol models |
 
 ## Features
 
