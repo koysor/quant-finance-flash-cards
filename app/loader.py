@@ -223,7 +223,7 @@ def _parse_card(
             raise ValueError(f"Missing '{field}' in {path}")
         return m.group(1).strip()
 
-    card_id = path.relative_to(CARDS_DIR.parent / "cards").with_suffix("").as_posix()
+    card_id = path.relative_to(CARDS_DIR).with_suffix("").as_posix()
     name    = _require(TITLE_RE, "title (#)")
     topic   = _require(TOPIC_RE, "**Topic:**")
     tags    = _require(TAGS_RE,  "**Tags:**")
@@ -231,10 +231,13 @@ def _parse_card(
     # Normalise tags: strip whitespace around each comma-separated value.
     tags = ",".join(t.strip() for t in tags.split(","))
 
+    # Compute stat once; reuse for both created_date and file_mtime.
+    stat = path.stat()
+
     # Derive the creation date from the file's modification time so that the
     # /recent page reflects actual changes rather than an optional metadata field.
     created_date = datetime.datetime.fromtimestamp(
-        path.stat().st_mtime
+        stat.st_mtime
     ).isoformat(sep=" ", timespec="seconds")
 
     m_author = AUTHOR_RE.search(text)
@@ -257,7 +260,7 @@ def _parse_card(
         "html_content": html_content,
         "notation":     json.dumps(notation),
         "key_terms":    json.dumps(key_terms),
-        "file_mtime":   path.stat().st_mtime,
+        "file_mtime":   stat.st_mtime,
     }
 
 
@@ -294,7 +297,7 @@ def load_all_cards(
     loaded = 0
 
     for path in paths:
-        card_id       = path.relative_to(CARDS_DIR.parent / "cards").with_suffix("").as_posix()
+        card_id       = path.relative_to(CARDS_DIR).with_suffix("").as_posix()
         current_mtime = path.stat().st_mtime
         stored_mtime  = get_stored_mtime(card_id)
 
@@ -307,7 +310,7 @@ def load_all_cards(
 
     # Remove database rows for cards whose source files have been deleted.
     live_ids = {
-        p.relative_to(CARDS_DIR.parent / "cards").with_suffix("").as_posix()
+        p.relative_to(CARDS_DIR).with_suffix("").as_posix()
         for p in paths
     }
     stale = get_all_card_ids() - live_ids

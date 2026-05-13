@@ -13,6 +13,22 @@ uv run python run.py         # http://127.0.0.1:5000
 
 On first run the app scans `cards/` and loads `edges.json`, building `graph.db` automatically. Adding or editing a card takes effect on the next server restart.
 
+After cloning, install the git pre-commit hooks so URL validation and README stats run automatically:
+
+```bash
+bash scripts/install_hooks.sh
+```
+
+## Environment variables
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `SECRET_KEY` | Random (changes on restart) | Flask session signing key. Set a stable value in production to keep sessions valid across restarts. |
+| `PORT` | `5000` | Port for the development server. |
+| `DEBUG` | `true` | Enable Flask debug mode and the interactive reloader. Set to `false` in production. |
+
+A `.env.example` file is provided as a template.
+
 ## Topics
 
 | Topic | Cards | Scope |
@@ -81,6 +97,24 @@ graph.db        Runtime only — gitignored, fully regenerable
 ```
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for a full explanation of how the layers fit together.
+
+## Scripts & git hooks
+
+| Script | Purpose |
+|---|---|
+| `scripts/validate_urls.py` | Validates every URL in `resources.json` with async HEAD requests. Runs automatically on commit when `resources.json` is staged. Run manually with `uv run python scripts/validate_urls.py --force`. |
+| `scripts/update_readme_stats.py` | Recounts cards, topics, and edges, then updates the stats line in `README.md`. Runs automatically on commit when `cards/` or `edges.json` is staged. |
+| `scripts/install_hooks.sh` | Installs the pre-commit hook into `.git/hooks/`. Run once after cloning: `bash scripts/install_hooks.sh`. |
+
+## Troubleshooting
+
+**`ValueError` on startup** — a card file has missing or misspelt metadata (e.g. `**Topic:**` not found). The error message shows which file is broken. Fix the card and restart.
+
+**`graph.db` corrupted or out of sync** — delete `graph.db` and restart the server. The database is a disposable cache rebuilt entirely from the Markdown files and JSON sources.
+
+**Card edits not showing up** — the Flask reloader watches `.py` files only, not `.md` files. After editing a card, save any `.py` file (or restart with `Ctrl-C` / `uv run python run.py`).
+
+**New topic not appearing in the correct colour** — add an entry to `TOPIC_COLOURS` in `app/routes.py` before creating cards in that topic. A missing entry falls back to a neutral grey and creates an orphan in the graph legend.
 
 ## Note
 

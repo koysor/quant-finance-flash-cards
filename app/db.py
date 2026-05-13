@@ -35,10 +35,10 @@ CREATE TABLE IF NOT EXISTS cards (
     topic        TEXT NOT NULL,
     tags         TEXT NOT NULL,
     html_content TEXT NOT NULL,
-        created_date TEXT NOT NULL DEFAULT '',
-        author       TEXT NOT NULL DEFAULT '',
-            file_mtime   REAL NOT NULL
-        );
+    created_date TEXT NOT NULL DEFAULT '',
+    author       TEXT NOT NULL DEFAULT '',
+    file_mtime   REAL NOT NULL
+);
 CREATE TABLE IF NOT EXISTS edges (
     id          INTEGER PRIMARY KEY AUTOINCREMENT,
     source_id   TEXT NOT NULL REFERENCES cards(id) ON DELETE CASCADE,
@@ -50,6 +50,7 @@ CREATE TABLE IF NOT EXISTS edges (
 
 CREATE INDEX IF NOT EXISTS idx_edges_source ON edges(source_id);
 CREATE INDEX IF NOT EXISTS idx_edges_target ON edges(target_id);
+CREATE INDEX IF NOT EXISTS idx_cards_topic  ON cards(topic);
 """
 
 
@@ -246,6 +247,9 @@ def get_cards_by_date_range(
 
     Columns returned: ``id``, ``name``, ``topic``, ``tags``, ``created_date``, ``author``.
     """
+    if order not in ("ASC", "DESC"):
+        raise ValueError(f"Invalid order direction: {order!r}. Must be 'ASC' or 'DESC'.")
+
     query = "SELECT id, name, topic, tags, created_date, author FROM cards WHERE 1=1"
     params = []
 
@@ -277,9 +281,11 @@ def find_cards_by_slug(slug: str) -> list[sqlite3.Row]:
 
     Columns returned: ``id``, ``name``, ``topic``.
     """
+    safe_slug = slug.replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_")
     with get_db() as conn:
         return conn.execute(
-            "SELECT id, name, topic FROM cards WHERE id LIKE ?", (f"%/{slug}",)
+            "SELECT id, name, topic FROM cards WHERE id LIKE ? ESCAPE '\\'",
+            (f"%/{safe_slug}",),
         ).fetchall()
 
 

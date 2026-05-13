@@ -69,7 +69,7 @@ async def check_youtube_availability(session, url):
                 return True
                 
             return True # Assume OK if no error markers found
-    except:
+    except Exception:
         return False
 
 

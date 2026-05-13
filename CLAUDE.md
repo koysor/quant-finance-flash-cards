@@ -1,5 +1,7 @@
 # CLAUDE.md
 
+> This file contains Claude Code–specific instructions. An equivalent file for Gemini exists as `GEMINI.md`. Both cover the same project but are tailored to their respective AI assistants.
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Environment

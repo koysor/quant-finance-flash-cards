@@ -1134,6 +1134,24 @@
     "description": "Every indefinite integral produced by the standard integration rules carries an additive constant C — the constant of integration is the unavoidable companion to any antiderivative, reminding the user that the result is a family of functions, not a single one."
   },
   {
+    "source": "calculus/continuous-mathematics",
+    "target": "calculus/differential-equations",
+    "label": "relies on",
+    "description": "Differential equations are the core tool of continuous mathematics applied to derivatives pricing; the Black-Scholes equation is a second-order PDE whose derivation and solution require limits, smooth functions, and integration by parts."
+  },
+  {
+    "source": "calculus/continuous-mathematics",
+    "target": "derivatives/continuous-time-limit",
+    "label": "formalised by",
+    "description": "The continuous-time limit is the mathematical bridge where discrete lattice models pass into continuous mathematics: as the binomial tree step size shrinks to zero, the discrete pricing recursion converges to the Black-Scholes PDE."
+  },
+  {
+    "source": "calculus/continuous-mathematics",
+    "target": "probability/continuous-random-variable",
+    "label": "describes",
+    "description": "Continuous random variables are the probabilistic objects of continuous mathematics; their probability density functions and moment-generating functions underpin the log-normal stock price model central to Black-Scholes."
+  },
+  {
     "source": "calculus/convergence",
     "target": "calculus/geometric-series",
     "label": "exemplified by",
@@ -1252,6 +1270,24 @@
     "target": "probability/cumulative-distribution-function",
     "label": "defines",
     "description": "The CDF is a definite integral of the probability density from minus infinity to x — every quantile, probability, and option delta is ultimately a definite integral evaluated at specific limits."
+  },
+  {
+    "source": "calculus/difference-equations",
+    "target": "calculus/differential-equations",
+    "label": "discrete analogue of",
+    "description": "A difference equation is the step-by-step, discrete-time counterpart of a differential equation — as the time step shrinks to zero, the recurrence relation converges to the corresponding ODE, which is why mortgage amortisation schedules and bond pricing recursions share the same structural form as continuous-time interest-rate models."
+  },
+  {
+    "source": "calculus/difference-equations",
+    "target": "derivatives/binomial-option-pricing",
+    "label": "implemented via",
+    "description": "Each backward-induction step of the binomial option pricing tree is a first-order linear difference equation in the option value — pricing a multi-step tree is simply solving a recurrence relation backwards from the terminal payoff to the present."
+  },
+  {
+    "source": "calculus/difference-equations",
+    "target": "financial-maths/time-value-of-money",
+    "label": "applied in",
+    "description": "Compounding and discounting are difference equations: V_{n+1} = (1+r) V_n and B_{n+1} = (1+r) B_n - P (mortgage amortisation) are both first-order recurrences whose solutions give the future value formula and the outstanding-balance schedule directly."
   },
   {
     "source": "calculus/differential-equations",
@@ -1390,6 +1426,30 @@
     "target": "derivatives/option-greeks",
     "label": "applied in",
     "description": "The Greeks are partial derivatives of the option price with respect to its inputs — computing Delta, Gamma, Theta, and Vega requires direct application of the chain rule, product rule, and differentiation of the normal CDF."
+  },
+  {
+    "source": "calculus/discrete-mathematics",
+    "target": "calculus/continuous-mathematics",
+    "label": "contrasts with",
+    "description": "Discrete and continuous mathematics are the two complementary frameworks in quantitative finance: discrete for binomial trees, difference equations, and Monte Carlo steps; continuous for stochastic calculus, PDEs, and Brownian motion."
+  },
+  {
+    "source": "calculus/discrete-mathematics",
+    "target": "calculus/difference-equations",
+    "label": "uses",
+    "description": "Difference equations are the signature computational tool of discrete mathematics in finance, modelling bond amortisation, recursive option pricing on lattices, and discrete compounding schedules."
+  },
+  {
+    "source": "calculus/discrete-mathematics",
+    "target": "probability/discrete-random-variables",
+    "label": "describes",
+    "description": "Discrete random variables are the probabilistic objects of discrete mathematics; their mass functions and combinatorial weights directly underpin the risk-neutral binomial option pricing formula."
+  },
+  {
+    "source": "calculus/discrete-mathematics",
+    "target": "stochastic-processes/discrete-random-walk",
+    "label": "underlies",
+    "description": "The discrete random walk is the canonical discrete-mathematics model of asset prices, using integer up/down steps and combinatorial path counts as the finite-structure precursor to continuous Brownian motion."
   },
   {
     "source": "calculus/discriminant",
@@ -2221,6 +2281,18 @@
   },
   {
     "source": "calculus/lagrange-multipliers",
+    "target": "computational-finance/cost-function-minimisation",
+    "label": "extends to constrained",
+    "description": "Lagrange multipliers extend unconstrained cost function minimisation to problems with equality constraints, which arise naturally in portfolio optimisation (target-return constraint) and model calibration (no-arbitrage constraints)."
+  },
+  {
+    "source": "calculus/lagrange-multipliers",
+    "target": "computational-finance/svm-dual-formulation",
+    "label": "derives",
+    "description": "The SVM dual formulation is derived by applying Lagrange multipliers to the primal constrained optimisation problem, converting the primal min-over-w into a dual max-over-alpha that depends only on inner products between training points."
+  },
+  {
+    "source": "calculus/lagrange-multipliers",
     "target": "portfolio-theory/modern-portfolio-theory",
     "label": "solves",
     "description": "The mean-variance optimisation problem at the heart of Modern Portfolio Theory — minimise w'Σw subject to w'μ = μ* and w'1 = 1 — is solved analytically using Lagrange multipliers, with the optimal weights w* = -(1/2)Σ⁻¹(λμ + γ1)."
@@ -2502,6 +2574,30 @@
     "description": "The multi-asset Ito's lemma applies the multivariate chain rule to stochastic functions of several correlated underlyings — the total-derivative structure dV = sum_i (partial V / partial S_i) dS_i is exactly the multivariate calculus total derivative extended to the stochastic setting."
   },
   {
+    "source": "calculus/navier-stokes-equation",
+    "target": "calculus/continuous-mathematics",
+    "label": "belongs to",
+    "description": "The Navier-Stokes equations are a prime example of continuous mathematics: they require smooth vector fields, limits, and vector calculus, the same analytical toolkit on which stochastic calculus and PDE-based derivatives pricing are built."
+  },
+  {
+    "source": "calculus/navier-stokes-equation",
+    "target": "calculus/differential-equations",
+    "label": "instance of",
+    "description": "The Navier-Stokes equations are a canonical system of nonlinear PDEs in applied mathematics, studied using the same analytical and numerical techniques — separation of variables, finite differences, eigenfunction expansions — that underpin ODE and PDE methods in derivatives pricing."
+  },
+  {
+    "source": "calculus/navier-stokes-equation",
+    "target": "derivatives/black-scholes-equation",
+    "label": "analogous to",
+    "description": "The viscous diffusion term in Navier-Stokes and the diffusion term in the Black-Scholes PDE share the same second-order parabolic structure; via a change of variables Black-Scholes reduces to the classical heat equation, a connection physicists from fluid dynamics immediately recognised when entering quantitative finance."
+  },
+  {
+    "source": "calculus/navier-stokes-equation",
+    "target": "stochastic-processes/fokker-planck-equation",
+    "label": "structurally similar to",
+    "description": "The Fokker-Planck equation governing probability density evolution in finance has the same second-order parabolic structure as the diffusion (viscosity) terms in Navier-Stokes, and both are solved using analogous numerical PDE methods."
+  },
+  {
     "source": "calculus/newton-quotient",
     "target": "calculus/differentiation",
     "label": "defines",
@@ -2536,6 +2632,24 @@
     "target": "volatility/implied-volatility",
     "label": "solves for",
     "description": "Newton-Raphson is the standard algorithm for computing implied volatility — it iteratively inverts the Black-Scholes formula using vega as the derivative to converge on the volatility matching the observed option price."
+  },
+  {
+    "source": "calculus/newtons-first-law-of-motion",
+    "target": "calculus/differential-equations",
+    "label": "expressed via",
+    "description": "Newton's First Law is encoded as a differential equation: the condition d²x/dt² = 0 (zero acceleration) underpins the study of particle dynamics, which in finance maps onto the constant-drift models that precede stochastic generalisations."
+  },
+  {
+    "source": "calculus/newtons-first-law-of-motion",
+    "target": "portfolio-theory/contrarian-investor",
+    "label": "contrasts with",
+    "description": "A contrarian investor acts as the external force that Newton's First Law requires to reverse a trend: by trading against recent price direction they supply the shock that overcomes market inertia and pushes prices back toward fair value."
+  },
+  {
+    "source": "calculus/newtons-first-law-of-motion",
+    "target": "portfolio-theory/momentum-strategy",
+    "label": "physical analogy for",
+    "description": "Newton's First Law is the physical analogue of price momentum: assets in motion (trending) remain in motion unless acted upon by an external shock, the same inertia logic that Jegadeesh and Titman formalised in cross-sectional momentum strategies."
   },
   {
     "source": "calculus/nth-derivative",
@@ -3144,6 +3258,24 @@
     "description": "The reverse chain rule is integration by substitution carried out mentally — when the substitution u = g(x) is obvious, the du = g'(x) dx step is performed by inspection rather than written out explicitly."
   },
   {
+    "source": "calculus/reynolds-number",
+    "target": "calculus/navier-stokes-equation",
+    "label": "characterises",
+    "description": "The Reynolds number is the key dimensionless parameter governing which regime of the Navier-Stokes equations applies: low Re gives laminar flow (linear, analytically tractable), high Re gives turbulence (nonlinear, chaotic)."
+  },
+  {
+    "source": "calculus/reynolds-number",
+    "target": "statistics/volatility-clustering",
+    "label": "motivates analogy for",
+    "description": "The turbulent regime identified by a high Reynolds number produces the chaotic velocity fluctuations that inspired multifractal models of financial returns, where volatility clustering is the financial manifestation of turbulent intermittency."
+  },
+  {
+    "source": "calculus/reynolds-number",
+    "target": "stochastic-processes/regime-switching-models",
+    "label": "analogous to",
+    "description": "Regime-switching models are the financial analogue of the Reynolds number: just as a critical Re separates laminar from turbulent flow, a hidden Markov state variable separates low-volatility orderly markets from high-volatility chaotic ones."
+  },
+  {
     "source": "calculus/richardson-extrapolation",
     "target": "calculus/big-o-notation",
     "label": "relies on",
@@ -3444,10 +3576,40 @@
     "description": "Adam adds per-parameter momentum and adaptive scaling to vanilla SGD, addressing two key failure modes: slow convergence due to uniform learning rates and sensitivity to noisy gradients in sparse or high-variance feature directions."
   },
   {
+    "source": "computational-finance/analytic-vs-numeric-solution",
+    "target": "computational-finance/monte-carlo-simulation-in-python",
+    "label": "contrasted with",
+    "description": "Monte Carlo is the canonical numerical alternative to closed-form pricing: where Black-Scholes gives an exact answer in microseconds, Monte Carlo approximates the same price by averaging millions of simulated payoffs — a trade-off of speed and exactness for generality."
+  },
+  {
+    "source": "computational-finance/analytic-vs-numeric-solution",
+    "target": "computational-finance/numerical-greeks-by-finite-difference",
+    "label": "motivates",
+    "description": "Understanding when analytic solutions are unavailable clarifies why finite-difference Greeks are necessary: for exotic products priced by Monte Carlo or PDE solvers, no closed-form sensitivity formula exists and bumping methods become the only option."
+  },
+  {
+    "source": "computational-finance/analytic-vs-numeric-solution",
+    "target": "derivatives/black-scholes-equation",
+    "label": "exemplified by",
+    "description": "The Black-Scholes formula is the most important analytic solution in finance — a single closed-form expression that gives the exact European option price under GBM assumptions, against which all numerical methods are benchmarked."
+  },
+  {
+    "source": "computational-finance/analytic-vs-numeric-solution",
+    "target": "stochastic-processes/euler-maruyama-method",
+    "label": "contrasted with",
+    "description": "Euler-Maruyama is a classic numerical scheme: it approximates the continuous SDE path by finite time steps, introducing discretisation error that vanishes as the step size shrinks — the opposite of an analytic solution that is exact by construction."
+  },
+  {
     "source": "computational-finance/attention-mechanism",
     "target": "computational-finance/activation-functions",
     "label": "uses",
     "description": "The attention weights are produced by the softmax activation applied to scaled dot-product similarity scores — the same softmax function used in neural network output layers for multi-class classification."
+  },
+  {
+    "source": "computational-finance/attention-mechanism",
+    "target": "computational-finance/natural-language-processing",
+    "label": "powers modern",
+    "description": "The attention mechanism is the core building block of transformer models (BERT, FinBERT, GPT) that have displaced TF-IDF and recurrent approaches as the state-of-the-art for financial NLP tasks such as earnings sentiment analysis."
   },
   {
     "source": "computational-finance/attention-mechanism",
@@ -3466,6 +3628,30 @@
     "target": "linear-algebra/dot-product-and-norms",
     "label": "computed via",
     "description": "Attention scores are dot products between query and key vectors, scaled by the square root of the key dimension to prevent large magnitudes saturating the softmax — making the dot product the core arithmetic operation of modern language models."
+  },
+  {
+    "source": "computational-finance/automatic-differentiation",
+    "target": "computational-finance/backpropagation",
+    "label": "generalises",
+    "description": "Backpropagation in neural networks is reverse-mode automatic differentiation applied to a neural loss function; the same chain-rule machinery that trains deep learning models is used in AAD to compute XVA and SIMM sensitivities across entire bank portfolios."
+  },
+  {
+    "source": "computational-finance/automatic-differentiation",
+    "target": "computational-finance/monte-carlo-greeks",
+    "label": "superior alternative to",
+    "description": "Adjoint automatic differentiation computes all Monte Carlo Greeks in a single backward pass at the cost of one forward simulation, replacing pathwise and likelihood-ratio estimators with exact, machine-precision sensitivities at no additional sampling cost."
+  },
+  {
+    "source": "computational-finance/automatic-differentiation",
+    "target": "derivatives/option-greeks",
+    "label": "computes",
+    "description": "AAD can differentiate any option pricing code — Monte Carlo, PDE, or analytic — with respect to all market inputs simultaneously in a single backward pass, producing the full Greek vector without repeated re-pricing or finite-difference perturbations."
+  },
+  {
+    "source": "computational-finance/backpropagation",
+    "target": "computational-finance/lstm",
+    "label": "trains via BPTT",
+    "description": "LSTMs are trained using backpropagation through time (BPTT), the temporal extension of standard backpropagation that unrolls the network across timesteps and computes gradients through the gate operations."
   },
   {
     "source": "computational-finance/batch-normalisation",
@@ -3490,6 +3676,24 @@
     "target": "computational-finance/stochastic-gradient-descent",
     "label": "interacts with",
     "description": "Batch normalisation statistics are computed per mini-batch during SGD training, meaning the normalisation itself is stochastic — this introduces regularisation noise similar to dropout and helps the network generalise beyond the training distribution."
+  },
+  {
+    "source": "computational-finance/best-matching-unit",
+    "target": "computational-finance/distance-metrics",
+    "label": "computed via",
+    "description": "Finding the BMU requires computing the Euclidean distance from the input to every prototype vector; the choice of distance metric (Euclidean, Manhattan, cosine) determines which prototype 'wins' and therefore how the SOM organises financial regime clusters."
+  },
+  {
+    "source": "computational-finance/best-matching-unit",
+    "target": "computational-finance/k-nearest-neighbours",
+    "label": "generalised by",
+    "description": "KNN generalises the BMU concept from finding the single nearest prototype to finding the k nearest training points, using the same distance minimisation operation to classify new observations in credit scoring and fraud detection."
+  },
+  {
+    "source": "computational-finance/best-matching-unit",
+    "target": "computational-finance/representative-vectors",
+    "label": "selects from",
+    "description": "The BMU search selects the most relevant representative vector (prototype) for a given input, linking the abstract concept of vector representation to the concrete operation of finding the nearest analogue in historical financial data."
   },
   {
     "source": "computational-finance/bias-variance-trade-off",
@@ -3528,6 +3732,24 @@
     "description": "The vectorised Black-Scholes implementation naturally extends to computing Greeks — delta is computed analytically via N(d₁), and other Greeks follow from the same d₁/d₂ building blocks or by finite difference on the pricing function."
   },
   {
+    "source": "computational-finance/carr-madan-fft-pricing",
+    "target": "computational-finance/scipy-integrate-option-pricing",
+    "label": "faster alternative to",
+    "description": "Carr-Madan FFT pricing replaces repeated scipy.integrate.quad calls (one per strike) with a single FFT pass across all strikes simultaneously, reducing calibration time from seconds to milliseconds and making real-time volatility surface fitting feasible."
+  },
+  {
+    "source": "computational-finance/carr-madan-fft-pricing",
+    "target": "computational-finance/scipy-interpolate-volatility-surface",
+    "label": "feeds into",
+    "description": "The Carr-Madan FFT outputs option prices at a fixed log-strike grid; scipy.interpolate then re-interpolates those prices to the exact market strikes and expiries needed for calibration, combining the speed of FFT with the flexibility of spline interpolation."
+  },
+  {
+    "source": "computational-finance/carr-madan-fft-pricing",
+    "target": "volatility/heston-model",
+    "label": "prices under",
+    "description": "The Heston model's characteristic function is the standard input to the Carr-Madan algorithm — Heston calibration was one of the original motivating applications, and the FFT approach makes it fast enough for live market-making."
+  },
+  {
     "source": "computational-finance/confusion-matrix",
     "target": "computational-finance/logistic-regression",
     "label": "evaluates",
@@ -3544,6 +3766,72 @@
     "target": "risk/value-at-risk",
     "label": "analogous to backtesting of",
     "description": "VaR backtesting counts exceptions (losses exceeding the model threshold) in the same spirit as a confusion matrix counts misclassifications — both assess how well a model's predicted boundary matches realised outcomes."
+  },
+  {
+    "source": "computational-finance/cost-function-minimisation",
+    "target": "computational-finance/cost-functions",
+    "label": "operates on",
+    "description": "Cost function minimisation is the process that acts on a cost function to find optimal parameters; the choice of cost function (MSE, cross-entropy) determines the statistical assumptions, while the minimisation procedure finds the parameters that satisfy them."
+  },
+  {
+    "source": "computational-finance/cost-function-minimisation",
+    "target": "computational-finance/gradient-descent",
+    "label": "implemented via",
+    "description": "Gradient descent is the standard numerical implementation of cost function minimisation when no closed-form solution exists, iteratively stepping in the direction of steepest descent until the gradient is approximately zero."
+  },
+  {
+    "source": "computational-finance/cost-function-minimisation",
+    "target": "computational-finance/normal-equations",
+    "label": "analytical route via",
+    "description": "The normal equations are the closed-form analytical solution to the OLS cost function minimisation problem, obtained by setting the gradient of MSE to zero and solving the resulting linear system — valid whenever the Gram matrix is invertible."
+  },
+  {
+    "source": "computational-finance/cost-function-minimisation",
+    "target": "computational-finance/entropy-minimisation",
+    "label": "specialises to",
+    "description": "Cross-entropy loss is a specific instance of the general cost function minimisation framework: the gradient is computed, stationarity conditions are checked, and gradient descent drives the classifier to a low-loss solution — entropy minimisation is cost function minimisation applied to probabilistic classifiers."
+  },
+  {
+    "source": "computational-finance/cost-functions",
+    "target": "computational-finance/gradient-descent",
+    "label": "minimised via",
+    "description": "Gradient descent is the standard algorithm for minimising a cost function during model training — the gradient of the cost with respect to the parameters determines the direction and magnitude of each parameter update."
+  },
+  {
+    "source": "computational-finance/cost-functions",
+    "target": "computational-finance/log-loss",
+    "label": "instantiated as for classification",
+    "description": "Cross-entropy (log-loss) is the cost function used for binary classification tasks such as default probability modelling — it is the negative log-likelihood under a Bernoulli distribution and is convex with respect to the model parameters."
+  },
+  {
+    "source": "computational-finance/cost-functions",
+    "target": "computational-finance/maximum-likelihood-estimation",
+    "label": "unified by",
+    "description": "Both MSE and cross-entropy are negative log-likelihoods under their respective distributional assumptions — the cost-function framework is therefore a special case of MLE, giving calibrated parameters a sound statistical interpretation."
+  },
+  {
+    "source": "computational-finance/cost-functions",
+    "target": "computational-finance/mean-squared-error",
+    "label": "instantiated as for regression",
+    "description": "MSE is the cost function used for regression tasks such as calibrating a stochastic volatility model to market prices — minimising MSE is equivalent to MLE under a Gaussian error model, and it is convex and differentiable everywhere."
+  },
+  {
+    "source": "computational-finance/cpp-in-quantitative-finance",
+    "target": "computational-finance/automatic-differentiation",
+    "label": "used to implement",
+    "description": "Production adjoint automatic differentiation libraries for XVA sensitivity computation — such as Adept and XAD — are implemented in C++ to deliver the throughput required for daily whole-book Greeks on large derivatives portfolios."
+  },
+  {
+    "source": "computational-finance/cpp-in-quantitative-finance",
+    "target": "computational-finance/monte-carlo-simulation-in-python",
+    "label": "outperforms for production",
+    "description": "C++ Monte Carlo implementations run 50–100× faster than equivalent Python code due to compiled native execution, SIMD vectorisation, and OpenMP parallelism, making C++ the language of choice for production risk engines with tight SLA requirements."
+  },
+  {
+    "source": "computational-finance/cpp-in-quantitative-finance",
+    "target": "financial-maths/high-frequency-trading",
+    "label": "enables",
+    "description": "Sub-microsecond execution latency in HFT strategies requires C++: its compiled execution, zero-overhead abstractions, and direct memory control allow the full order-generation loop to complete within the sub-microsecond window that HFT demands."
   },
   {
     "source": "computational-finance/curse-of-dimensionality",
@@ -3655,6 +3943,12 @@
   },
   {
     "source": "computational-finance/entropy",
+    "target": "computational-finance/information-theory",
+    "label": "central concept of",
+    "description": "Shannon entropy is the foundational measure of information theory — the average information content of a probability distribution — from which all other information-theoretic quantities (KL divergence, mutual information, cross-entropy) are derived."
+  },
+  {
+    "source": "computational-finance/entropy",
     "target": "computational-finance/machine-learning",
     "label": "information measure for",
     "description": "Shannon entropy is a foundational information-theoretic quantity used across machine learning for measuring class impurity, constructing decision tree splits, and defining cross-entropy loss functions for classification models."
@@ -3664,6 +3958,24 @@
     "target": "probability/bayes-theorem",
     "label": "complementary to",
     "description": "Entropy quantifies uncertainty before observing data; Bayes' theorem quantifies how that uncertainty is updated by evidence — together they form the basis of information-theoretic and probabilistic approaches to classification."
+  },
+  {
+    "source": "computational-finance/entropy-minimisation",
+    "target": "computational-finance/decision-trees",
+    "label": "guides splits in",
+    "description": "At each node, a decision tree selects the feature that minimises conditional entropy of the target — entropy minimisation is the criterion that converts an abstract information-theoretic principle into a concrete splitting rule for classification trees used in credit scoring and default prediction."
+  },
+  {
+    "source": "computational-finance/entropy-minimisation",
+    "target": "computational-finance/entropy",
+    "label": "minimises",
+    "description": "Entropy minimisation takes Shannon entropy as its objective and seeks parameter choices or portfolio weights that drive it towards zero (maximum certainty); the entropy card defines the quantity being minimised."
+  },
+  {
+    "source": "computational-finance/entropy-minimisation",
+    "target": "computational-finance/information-theory",
+    "label": "implements via KL divergence",
+    "description": "Cross-entropy loss minimisation is equivalent to minimising KL divergence between predicted and true distributions — entropy minimisation is the practical training algorithm that implements the KL divergence concept from information theory in ML classifiers used for default probability estimation."
   },
   {
     "source": "computational-finance/feature-engineering",
@@ -3688,6 +4000,30 @@
     "target": "statistics/correlation",
     "label": "uses for selection",
     "description": "Correlation analysis is the standard tool for identifying and removing redundant features during feature selection — high pairwise correlation between features indicates multicollinearity that can destabilise model coefficients."
+  },
+  {
+    "source": "computational-finance/feature-vector",
+    "target": "computational-finance/curse-of-dimensionality",
+    "label": "affected by",
+    "description": "As the dimensionality of a feature vector grows, the volume of the feature space expands exponentially and distances between vectors become increasingly uniform, making nearest-neighbour and density-based models unreliable unless dimensionality is controlled."
+  },
+  {
+    "source": "computational-finance/feature-vector",
+    "target": "computational-finance/distance-metrics",
+    "label": "measured by",
+    "description": "Distance metrics operate on pairs of feature vectors — Euclidean and Manhattan distances measure how far apart two observations are in feature space, which is only meaningful when all features are normalised to comparable scales."
+  },
+  {
+    "source": "computational-finance/feature-vector",
+    "target": "computational-finance/feature-engineering",
+    "label": "produced by",
+    "description": "Feature engineering is the process that constructs and selects the individual elements assembled into a feature vector — the quality of the engineering determines how much signal the vector carries for downstream models."
+  },
+  {
+    "source": "computational-finance/feature-vector",
+    "target": "computational-finance/k-nearest-neighbours",
+    "label": "input to",
+    "description": "KNN classifies a new observation by finding the K training feature vectors closest to it in feature space; without a well-constructed and normalised feature vector, distance comparisons are meaningless and classification accuracy collapses."
   },
   {
     "source": "computational-finance/generalisation-gap",
@@ -3798,6 +4134,30 @@
     "description": "The gradient of the MSE cost function is written compactly as (2/N)X^T(Xθ−y) using matrix-vector multiplication — the inner product structure of this expression is why the gradient points along the residual vector projected onto the feature space."
   },
   {
+    "source": "computational-finance/hard-margin-svm",
+    "target": "computational-finance/kernel-trick",
+    "label": "extended by",
+    "description": "The kernel trick extends the hard-margin SVM from linear to non-linear classification by replacing dot products with kernel evaluations, enabling SVMs to separate classes that are not linearly separable in the original feature space."
+  },
+  {
+    "source": "computational-finance/hard-margin-svm",
+    "target": "computational-finance/soft-margin-svm",
+    "label": "generalised by",
+    "description": "The soft-margin SVM generalises the hard-margin formulation by introducing slack variables, allowing margin violations and making the algorithm applicable to the noisy, overlapping data typical in financial classification tasks."
+  },
+  {
+    "source": "computational-finance/hard-margin-svm",
+    "target": "computational-finance/support-vector-machines",
+    "label": "theoretical basis of",
+    "description": "The hard-margin formulation provides the theoretical foundation of SVMs — maximising the geometric margin is shown to be equivalent to L2 regularisation, explaining why SVMs generalise well in high-dimensional financial feature spaces."
+  },
+  {
+    "source": "computational-finance/hard-margin-svm",
+    "target": "computational-finance/svm-dual-formulation",
+    "label": "solved via",
+    "description": "The hard-margin SVM primal problem is equivalently solved through its dual formulation, which exposes the sparsity structure (only support vectors matter) and enables the kernel trick by expressing everything as dot products."
+  },
+  {
     "source": "computational-finance/hyperparameter-tuning",
     "target": "computational-finance/bias-variance-trade-off",
     "label": "controls via",
@@ -3820,6 +4180,54 @@
     "target": "computational-finance/machine-learning",
     "label": "required step in",
     "description": "Hyperparameter tuning is a mandatory stage in any ML pipeline — without it, default settings may produce a model that is severely overfit or underfit, and reported performance metrics will not reflect genuine out-of-sample predictive power."
+  },
+  {
+    "source": "computational-finance/hyperplane",
+    "target": "computational-finance/hard-margin-svm",
+    "label": "defines boundary for",
+    "description": "The hard-margin SVM finds the optimal hyperplane — the single linear decision boundary that maximises the margin between two classes in the feature space."
+  },
+  {
+    "source": "computational-finance/hyperplane",
+    "target": "computational-finance/support-vector-machines",
+    "label": "decision boundary of",
+    "description": "The hyperplane is the central geometric object in SVMs: the entire SVM training procedure is focused on finding the hyperplane that best separates classes with maximum margin."
+  },
+  {
+    "source": "computational-finance/information-gain",
+    "target": "computational-finance/decision-trees",
+    "label": "drives splits in",
+    "description": "Information gain is the splitting criterion used by ID3 and C4.5 decision trees: at each node the feature with maximum IG is chosen, translating the abstract entropy minimisation principle into a concrete greedy tree-building algorithm for credit and default classification."
+  },
+  {
+    "source": "computational-finance/information-gain",
+    "target": "computational-finance/entropy",
+    "label": "measures reduction in",
+    "description": "Information gain is defined as the difference between pre-split entropy and post-split conditional entropy — it quantifies how much of the original uncertainty is eliminated by conditioning on a feature, making Shannon entropy the foundational quantity it operates on."
+  },
+  {
+    "source": "computational-finance/information-gain",
+    "target": "computational-finance/entropy-minimisation",
+    "label": "implements",
+    "description": "Maximising information gain at each decision tree split is mathematically equivalent to minimising conditional entropy — information gain is the operational decision rule that converts the entropy minimisation objective into a practical feature selection algorithm."
+  },
+  {
+    "source": "computational-finance/information-theory",
+    "target": "computational-finance/decision-trees",
+    "label": "drives splitting in",
+    "description": "Decision tree splitting criteria (information gain, Gini impurity) are direct applications of information theory: each split is chosen to maximise the reduction in Shannon entropy of the target variable, extracting the most predictive signal at each node."
+  },
+  {
+    "source": "computational-finance/information-theory",
+    "target": "computational-finance/log-loss",
+    "label": "motivates",
+    "description": "Cross-entropy loss (log-loss) is the information-theoretic measure of how many extra bits are needed to encode outcomes using a predicted distribution rather than the true one, directly derived from KL divergence between the true and predicted label distributions."
+  },
+  {
+    "source": "computational-finance/information-theory",
+    "target": "computational-finance/naive-bayes-classifier",
+    "label": "underpins",
+    "description": "Naive Bayes is the classifier that maximises the information-theoretic likelihood under a conditional independence assumption; its log-probability scores are mutual information estimates between each feature and the class label."
   },
   {
     "source": "computational-finance/k-means-clustering",
@@ -3858,6 +4266,48 @@
     "description": "KNN is a lazy supervised learning algorithm: unlike parametric models it stores all training data and defers all computation to prediction time, making it simple and interpretable but expensive for large datasets."
   },
   {
+    "source": "computational-finance/kernel-trick",
+    "target": "computational-finance/hyperplane",
+    "label": "lifts to higher-dim",
+    "description": "The kernel trick implicitly maps data into a higher-dimensional feature space where a linear hyperplane can separate classes that were non-linearly entangled in the original space, making the hyperplane concept apply to non-linear problems."
+  },
+  {
+    "source": "computational-finance/kernel-trick",
+    "target": "computational-finance/soft-margin-svm",
+    "label": "combined with",
+    "description": "In practice the kernel trick is always paired with the soft-margin SVM: the kernel handles non-linearity while the soft margin handles noise and overlap, together forming the standard SVM used in financial classification tasks."
+  },
+  {
+    "source": "computational-finance/kernel-trick",
+    "target": "computational-finance/support-vector-machines",
+    "label": "enables non-linear",
+    "description": "The kernel trick is what makes SVMs practically useful for financial data: without it the SVM is limited to linear decision boundaries, but with it the same framework handles the curved, non-linear boundaries typical in credit risk and fraud detection."
+  },
+  {
+    "source": "computational-finance/kernel-trick",
+    "target": "computational-finance/svm-dual-formulation",
+    "label": "enabled by",
+    "description": "The kernel trick is made possible by the dual formulation: because the dual expresses data only as dot products, these can be replaced by any kernel function to implicitly map data into a higher-dimensional feature space."
+  },
+  {
+    "source": "computational-finance/kullback-leibler-divergence",
+    "target": "computational-finance/entropy-minimisation",
+    "label": "minimised by",
+    "description": "Minimising cross-entropy loss during ML classifier training is equivalent to minimising KL divergence between the true and predicted label distributions — KL divergence is the theoretical quantity that cross-entropy training implicitly optimises."
+  },
+  {
+    "source": "computational-finance/kullback-leibler-divergence",
+    "target": "computational-finance/information-theory",
+    "label": "central concept of",
+    "description": "KL divergence is the primary measure of distributional distance in information theory: it quantifies the extra bits needed to encode data from one distribution using a code optimised for another, underpinning mutual information, cross-entropy, and the information bottleneck."
+  },
+  {
+    "source": "computational-finance/kullback-leibler-divergence",
+    "target": "probability/normal-distribution",
+    "label": "measured between",
+    "description": "The KL divergence between two Gaussian distributions has a closed-form expression involving the ratio of variances and the squared difference of means — commonly used in finance to quantify how much a model's assumed return distribution diverges from observed market data."
+  },
+  {
     "source": "computational-finance/learning-rate",
     "target": "computational-finance/bias-variance-trade-off",
     "label": "influences via overfitting",
@@ -3874,6 +4324,24 @@
     "target": "computational-finance/neural-networks",
     "label": "critical hyperparameter for",
     "description": "Neural network training via backpropagation applies gradient descent at every layer, making the learning rate the most consequential hyperparameter — adaptive methods such as Adam and RMSProp were developed specifically to tune it per-parameter automatically."
+  },
+  {
+    "source": "computational-finance/linear-discriminant-analysis",
+    "target": "computational-finance/hyperplane",
+    "label": "defines boundary as",
+    "description": "LDA produces a linear decision boundary — a hyperplane perpendicular to the discriminant direction w — that separates classes by their covariance structure, making it a covariance-aware alternative to the margin-maximising SVM hyperplane."
+  },
+  {
+    "source": "computational-finance/linear-discriminant-analysis",
+    "target": "computational-finance/logistic-regression",
+    "label": "alternative to",
+    "description": "LDA and logistic regression both produce linear decision boundaries for binary classification in credit scoring, but LDA models class-conditional densities explicitly while logistic regression models the posterior probability directly — LDA is optimal when the equal-covariance assumption holds."
+  },
+  {
+    "source": "computational-finance/linear-discriminant-analysis",
+    "target": "computational-finance/support-vector-machines",
+    "label": "simpler alternative to",
+    "description": "LDA and SVMs both draw linear decision boundaries for credit classification, but LDA uses the covariance structure and class means rather than margin maximisation, making it interpretable, fast to fit, and theoretically optimal under Gaussian class-conditional distributions."
   },
   {
     "source": "computational-finance/linear-regression",
@@ -3928,6 +4396,18 @@
     "target": "probability/bayes-theorem",
     "label": "derived from",
     "description": "Log-loss arises naturally from Bayes' theorem: it is the negative log of the posterior probability of the correct class label, penalising confident wrong predictions by an amount proportional to the log of the predicted probability."
+  },
+  {
+    "source": "computational-finance/lstm",
+    "target": "computational-finance/activation-functions",
+    "label": "gated by",
+    "description": "Each LSTM gate (forget, input, output) applies the sigmoid activation to produce values between 0 and 1 that control information flow, while the cell state update uses tanh — making activation function choice central to LSTM behaviour."
+  },
+  {
+    "source": "computational-finance/lstm",
+    "target": "computational-finance/neural-networks",
+    "label": "extends",
+    "description": "LSTM extends the feedforward neural network architecture by introducing a recurrent hidden state and gating mechanism, allowing the network to model sequential financial data such as return series or order-flow streams."
   },
   {
     "source": "computational-finance/machine-learning",
@@ -3996,6 +4476,24 @@
     "description": "OLS beta estimation minimises the MSE cost function analytically — the resulting beta coefficients are the slope values that produce the smallest average squared residual between model predictions and realised returns."
   },
   {
+    "source": "computational-finance/monte-carlo-greeks",
+    "target": "computational-finance/scipy-integrate-option-pricing",
+    "label": "complements",
+    "description": "For characteristic-function models, scipy.integrate prices the option analytically and Greeks follow by differentiating the formula; Monte Carlo Greeks are preferred for path-dependent exotics where no analytic price or Greek formula is available."
+  },
+  {
+    "source": "computational-finance/monte-carlo-greeks",
+    "target": "derivatives/option-greeks",
+    "label": "estimates",
+    "description": "Monte Carlo Greeks are the simulation-based alternative to analytic Greek formulas — essential for complex path-dependent products (Asian, barrier, basket options) where closed-form Greeks do not exist."
+  },
+  {
+    "source": "computational-finance/monte-carlo-greeks",
+    "target": "risk/monte-carlo-simulation",
+    "label": "extends",
+    "description": "Monte Carlo Greeks extend standard Monte Carlo simulation from pricing to sensitivity computation, using the same set of simulated paths to estimate delta, vega, and gamma without additional simulation runs."
+  },
+  {
     "source": "computational-finance/monte-carlo-simulation-in-python",
     "target": "risk/monte-carlo-simulation",
     "label": "implements",
@@ -4014,6 +4512,24 @@
     "description": "The Python simulation discretises the GBM SDE into log-normal increments — each column of the random matrix is one realisation of the geometric Brownian motion path from t=0 to T."
   },
   {
+    "source": "computational-finance/multilevel-monte-carlo",
+    "target": "computational-finance/monte-carlo-greeks",
+    "label": "pairs with",
+    "description": "MLMC reduces the cost of achieving a target accuracy in option prices, while Monte Carlo Greeks methods reduce the cost of computing sensitivities from those paths — combining both gives efficient pricing and hedging for path-dependent exotics."
+  },
+  {
+    "source": "computational-finance/multilevel-monte-carlo",
+    "target": "risk/monte-carlo-simulation",
+    "label": "improves efficiency of",
+    "description": "MLMC reduces the computational cost of Monte Carlo simulation from O(ε⁻³) to O(ε⁻²) for a given root-mean-square error ε by combining many cheap coarse-grid paths with progressively fewer expensive fine-grid correction samples."
+  },
+  {
+    "source": "computational-finance/multilevel-monte-carlo",
+    "target": "stochastic-processes/euler-maruyama-method",
+    "label": "built on",
+    "description": "Each level of MLMC uses the Euler-Maruyama discretisation of the underlying SDE at a different time-step size; the coupled coarse-fine path pairs that drive variance reduction rely on Euler-Maruyama applied to the same Brownian increments at two resolutions."
+  },
+  {
     "source": "computational-finance/naive-bayes-classifier",
     "target": "computational-finance/machine-learning",
     "label": "type of supervised",
@@ -4030,6 +4546,24 @@
     "target": "probability/bayes-theorem",
     "label": "applies",
     "description": "Naive Bayes applies Bayes' theorem to classification by computing the posterior probability of each class given the observed features, combining a class prior with the product of class-conditional likelihoods under the independence assumption."
+  },
+  {
+    "source": "computational-finance/natural-language-processing",
+    "target": "computational-finance/feature-engineering",
+    "label": "requires text",
+    "description": "NLP pipelines convert raw text (earnings transcripts, news) into numerical feature vectors — via TF-IDF, word embeddings, or sentiment scores — before any ML model can process them, making feature engineering a prerequisite step."
+  },
+  {
+    "source": "computational-finance/natural-language-processing",
+    "target": "computational-finance/naive-bayes-classifier",
+    "label": "baseline uses",
+    "description": "Naive Bayes is a standard baseline classifier for NLP text classification tasks such as earnings sentiment or news event labelling, valued for its speed and interpretability before more complex models are tested."
+  },
+  {
+    "source": "computational-finance/natural-language-processing",
+    "target": "computational-finance/representative-vectors",
+    "label": "produces via embedding",
+    "description": "NLP pipelines produce representative vectors (embeddings) for words and documents, converting discrete financial text into dense numeric vectors that capture semantic relationships and can be fed into downstream ML models."
   },
   {
     "source": "computational-finance/normal-equations",
@@ -4152,6 +4686,42 @@
     "description": "PCR and Ridge regression both address multicollinearity in OLS, but by different mechanisms: PCR discards low-variance directions entirely, while Ridge shrinks all directions proportionally — PCR is preferable when a small number of factors drive most of the variation."
   },
   {
+    "source": "computational-finance/probability-calibration",
+    "target": "computational-finance/entropy-minimisation",
+    "label": "validated by",
+    "description": "A classifier trained with cross-entropy loss will be well-calibrated in the limit of sufficient data, because entropy minimisation penalises overconfident wrong predictions; calibration checks verify that this theoretical guarantee holds on finite, potentially shifted test data."
+  },
+  {
+    "source": "computational-finance/probability-calibration",
+    "target": "computational-finance/logistic-regression",
+    "label": "inherently achieved by",
+    "description": "Logistic regression trained with cross-entropy loss produces calibrated probabilities by construction (under the assumed model), making it a natural baseline against which calibration-corrected tree or neural network models are compared."
+  },
+  {
+    "source": "computational-finance/probability-calibration",
+    "target": "computational-finance/roc-curve-and-auc",
+    "label": "complements",
+    "description": "AUC measures discrimination — whether the model correctly ranks borrowers by default risk — whilst calibration measures accuracy of the probability values themselves; a model can have high AUC and poor calibration, requiring post-hoc calibration before its scores can be used as PD estimates."
+  },
+  {
+    "source": "computational-finance/pytorch",
+    "target": "computational-finance/automatic-differentiation",
+    "label": "uses",
+    "description": "PyTorch's autograd system records tensor operations at runtime and applies reverse-mode automatic differentiation to compute exact gradients, enabling both neural network training and sensitivity analysis of differentiable pricing models without finite-difference approximation."
+  },
+  {
+    "source": "computational-finance/pytorch",
+    "target": "computational-finance/backpropagation",
+    "label": "implements",
+    "description": "PyTorch builds a dynamic computation graph during the forward pass and traverses it in reverse during loss.backward(), implementing backpropagation automatically for any differentiable architecture without the user specifying individual derivative rules."
+  },
+  {
+    "source": "computational-finance/pytorch",
+    "target": "computational-finance/neural-networks",
+    "label": "implements",
+    "description": "PyTorch's nn.Module provides the building blocks for neural networks — layers, activations, loss functions — while its autograd engine handles gradient computation, making it the dominant research framework for deep learning applications in quantitative finance."
+  },
+  {
     "source": "computational-finance/random-forests",
     "target": "computational-finance/decision-trees",
     "label": "aggregates",
@@ -4168,6 +4738,12 @@
     "target": "statistics/cross-validation",
     "label": "validated via OOB error analogous to",
     "description": "The out-of-bag error provides a free cross-validation estimate for random forests — each tree is evaluated on the ~37% of data excluded from its bootstrap sample, avoiding the look-ahead bias risk of standard k-fold CV on financial time series."
+  },
+  {
+    "source": "computational-finance/random-number-generation",
+    "target": "computational-finance/random-representative-vector",
+    "label": "seeds",
+    "description": "Random number generation provides the uniform or Gaussian samples used to initialise SOM weight vectors and k-means centroids; the quality of the random seed (and the random seed value itself) directly affects whether the algorithm finds a good regime partition."
   },
   {
     "source": "computational-finance/random-number-generation",
@@ -4188,6 +4764,54 @@
     "description": "Random number generation with Cholesky-correlated normal draws is the numerical implementation of correlated Brownian motions — each column of the transformed random matrix represents a discrete approximation to a correlated Wiener process."
   },
   {
+    "source": "computational-finance/random-representative-vector",
+    "target": "computational-finance/best-matching-unit",
+    "label": "starting point for",
+    "description": "The random representative vector is the initial state before the first BMU search; each competitive learning iteration computes the BMU relative to the current (initially random) weight vectors and then updates them, gradually replacing random initialisation with data-driven prototypes."
+  },
+  {
+    "source": "computational-finance/random-representative-vector",
+    "target": "computational-finance/k-means-clustering",
+    "label": "initialises",
+    "description": "K-means clustering begins by placing K random representative vectors (centroids) in the feature space; the choice of initialisation method — pure random, Forgy, or k-means++ — strongly affects convergence speed and the quality of the final cluster partition."
+  },
+  {
+    "source": "computational-finance/random-representative-vector",
+    "target": "computational-finance/self-organizing-maps",
+    "label": "initialises nodes of",
+    "description": "SOM training starts by assigning random representative vectors to every node on the grid; the subsequent competitive learning process (BMU search and neighbourhood updates) transforms these random initial vectors into a topology-preserving map of the financial data."
+  },
+  {
+    "source": "computational-finance/regression-methods",
+    "target": "computational-finance/linear-regression",
+    "label": "includes",
+    "description": "Linear regression is the foundational member of the regression family — it estimates factor loadings via OLS and is the entry point for understanding all regularised and generalised regression variants used in quantitative finance."
+  },
+  {
+    "source": "computational-finance/regression-methods",
+    "target": "computational-finance/logistic-regression",
+    "label": "includes",
+    "description": "Logistic regression extends the regression framework to binary targets by applying the sigmoid function, making it the standard regression method for credit default prediction and directional equity signal classification."
+  },
+  {
+    "source": "computational-finance/regression-methods",
+    "target": "computational-finance/principal-component-regression",
+    "label": "includes",
+    "description": "Principal component regression combines PCA dimensionality reduction with linear regression, making it the preferred regression method when the raw factor set is large and highly collinear, as in macro factor models."
+  },
+  {
+    "source": "computational-finance/regression-methods",
+    "target": "statistics/ordinary-least-squares-regression",
+    "label": "grounded in",
+    "description": "OLS is the statistical foundation of all regression methods — its properties (unbiasedness, minimum variance under Gauss-Markov conditions) define the benchmark that regularised and generalised regressions trade off against."
+  },
+  {
+    "source": "computational-finance/regression-methods",
+    "target": "statistics/regularisation",
+    "label": "extended by",
+    "description": "Regularisation transforms OLS into ridge or lasso regression by adding a penalty on coefficient magnitude, which is essential in quant finance when the number of candidate factors approaches or exceeds the number of observations."
+  },
+  {
     "source": "computational-finance/reinforcement-learning",
     "target": "computational-finance/gradient-descent",
     "label": "trains Q-networks via",
@@ -4204,6 +4828,24 @@
     "target": "probability/expected-value",
     "label": "maximises discounted",
     "description": "The RL objective — maximising expected discounted cumulative reward — is a direct application of the expected value operator to a geometric series of future rewards, with the discount factor γ controlling the present value of future payoffs."
+  },
+  {
+    "source": "computational-finance/representative-vectors",
+    "target": "computational-finance/k-means-clustering",
+    "label": "clustered by",
+    "description": "K-means clustering groups representative vectors by proximity, producing cluster centroids that are themselves representative vectors — one per regime or category — enabling classification of new observations by nearest-centroid assignment."
+  },
+  {
+    "source": "computational-finance/representative-vectors",
+    "target": "computational-finance/self-organizing-maps",
+    "label": "organised by",
+    "description": "Self-Organizing Maps learn a grid of representative (prototype) vectors arranged so that topologically close nodes represent similar inputs, providing a two-dimensional map of the embedding space useful for regime visualisation."
+  },
+  {
+    "source": "computational-finance/representative-vectors",
+    "target": "linear-algebra/dot-product-and-norms",
+    "label": "compared via cosine",
+    "description": "Cosine similarity between representative vectors is computed as the normalised dot product, quantifying how alike two embedded objects are — the same geometric operation as computing correlation between return series."
   },
   {
     "source": "computational-finance/roc-curve-and-auc",
@@ -4230,6 +4872,84 @@
     "description": "AUC has a probabilistic interpretation as the expected value of the indicator that a randomly drawn positive is scored higher than a randomly drawn negative — connecting the geometric area under the curve to a concrete probability statement."
   },
   {
+    "source": "computational-finance/scikit-learn",
+    "target": "computational-finance/hyperparameter-tuning",
+    "label": "automates",
+    "description": "Scikit-Learn's GridSearchCV and RandomizedSearchCV wrap any estimator in a K-fold cross-validation loop, automating the search over candidate hyperparameter grids to find the model configuration that generalises best on held-out financial data."
+  },
+  {
+    "source": "computational-finance/scikit-learn",
+    "target": "computational-finance/random-forests",
+    "label": "implements",
+    "description": "Scikit-Learn's RandomForestClassifier and RandomForestRegressor are the standard implementations quant teams use directly for alpha signal generation, regime detection, and credit scoring."
+  },
+  {
+    "source": "computational-finance/scikit-learn",
+    "target": "computational-finance/supervised-learning",
+    "label": "implements",
+    "description": "Scikit-Learn provides a consistent fit/predict interface for supervised learning algorithms — logistic regression, SVMs, gradient boosting — enabling quants to benchmark multiple models on the same feature matrix with minimal boilerplate."
+  },
+  {
+    "source": "computational-finance/scikit-learn-api",
+    "target": "computational-finance/bias-variance-trade-off",
+    "label": "managed through",
+    "description": "Scikit-Learn's regularisation hyperparameters (Ridge/Lasso alpha, tree depth, n_estimators) directly control the bias-variance trade-off, and GridSearchCV automates finding the value that minimises generalisation error on held-out financial data."
+  },
+  {
+    "source": "computational-finance/scikit-learn-api",
+    "target": "computational-finance/generalisation-gap",
+    "label": "diagnoses via",
+    "description": "TimeSeriesSplit and Pipeline in the Scikit-Learn API are the two key tools for obtaining unbiased cross-validated scores; without them, the generalisation gap is systematically underestimated due to temporal data leakage in financial time series."
+  },
+  {
+    "source": "computational-finance/scikit-learn-api",
+    "target": "computational-finance/hyperparameter-tuning",
+    "label": "implements via GridSearchCV",
+    "description": "Scikit-Learn's GridSearchCV and RandomizedSearchCV are the standard implementations of hyperparameter tuning, wrapping any Pipeline in a cross-validation loop to select the model configuration that generalises best on unseen financial data."
+  },
+  {
+    "source": "computational-finance/scikit-learn-api",
+    "target": "computational-finance/scikit-learn",
+    "label": "details API of",
+    "description": "The Scikit-Learn API card catalogues the specific classes, modules, and design patterns that implement the conceptual overview given in the Scikit-Learn card, providing a practical reference for the fit/predict interface and most-used estimators."
+  },
+  {
+    "source": "computational-finance/scipy-integrate-option-pricing",
+    "target": "computational-finance/scipy-optimisation-for-calibration",
+    "label": "complements",
+    "description": "scipy.integrate evaluates the characteristic-function integrals that produce model prices, while scipy.optimize then minimises the error between those model prices and market quotes — the two modules work in tandem for Heston and SABR calibration."
+  },
+  {
+    "source": "computational-finance/scipy-integrate-option-pricing",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "implements",
+    "description": "The Gil-Pelaez inversion formula computed by scipy.integrate is the numerical implementation of risk-neutral pricing under characteristic-function models — it converts the model's risk-neutral moment generating function into an option price."
+  },
+  {
+    "source": "computational-finance/scipy-integrate-option-pricing",
+    "target": "volatility/heston-model",
+    "label": "used to price under",
+    "description": "The Heston stochastic volatility model has no closed-form option price integral; scipy.integrate.quad evaluates the Gil-Pelaez characteristic-function integrals numerically to produce call and put prices from Heston parameters."
+  },
+  {
+    "source": "computational-finance/scipy-interpolate-volatility-surface",
+    "target": "calculus/cubic-spline-interpolation",
+    "label": "implements",
+    "description": "scipy.interpolate's CubicSpline and RectBivariateSpline classes are the production implementations of the cubic spline mathematics — they enforce C² continuity across knot points, producing the smooth curves required for arbitrage-free vol interpolation."
+  },
+  {
+    "source": "computational-finance/scipy-interpolate-volatility-surface",
+    "target": "computational-finance/scipy-optimisation-for-calibration",
+    "label": "feeds into",
+    "description": "Interpolated volatility surface values produced by scipy.interpolate serve as the target market prices in the scipy.optimize calibration objective — the spline surface must be queried at model-evaluation strikes before the minimisation can proceed."
+  },
+  {
+    "source": "computational-finance/scipy-interpolate-volatility-surface",
+    "target": "volatility/volatility-surface",
+    "label": "constructs",
+    "description": "scipy.interpolate's RectBivariateSpline turns sparse market implied-vol quotes at traded strikes and expiries into a smooth, continuously queryable volatility surface used for exotic option pricing and risk management."
+  },
+  {
     "source": "computational-finance/scipy-optimisation-for-calibration",
     "target": "derivatives/black-scholes-equation",
     "label": "calibrates",
@@ -4246,6 +4966,48 @@
     "target": "volatility/volatility-surface",
     "label": "fits",
     "description": "Calibrating a stochastic volatility model (Heston, SABR) to the observed volatility surface requires minimising the pricing error across many strikes and expiries simultaneously — SciPy minimize orchestrates this multi-parameter optimisation."
+  },
+  {
+    "source": "computational-finance/scipy-stats-for-finance",
+    "target": "computational-finance/scipy-optimisation-for-calibration",
+    "label": "pairs with",
+    "description": "scipy.stats provides the distribution objects (norm, t, lognormal) whose parameters scipy.optimize calibrates to market data — the two modules together implement maximum-likelihood estimation and risk-neutral model fitting workflows."
+  },
+  {
+    "source": "computational-finance/scipy-stats-for-finance",
+    "target": "risk/value-at-risk",
+    "label": "computes",
+    "description": "scipy.stats.t.ppf and scipy.stats.norm.ppf implement the quantile functions used to compute parametric VaR under Student-t and normal assumptions — a single function call replaces numerical root-finding of the loss distribution."
+  },
+  {
+    "source": "computational-finance/scipy-stats-for-finance",
+    "target": "statistics/jarque-bera-test",
+    "label": "implements",
+    "description": "scipy.stats.jarque_bera is the standard one-line implementation of the Jarque-Bera normality test used to validate whether financial return residuals are approximately normal before applying models that assume Gaussian errors."
+  },
+  {
+    "source": "computational-finance/second-order-cone-programming",
+    "target": "computational-finance/hyperplane",
+    "label": "generalises",
+    "description": "Linear programming constraints define half-spaces bounded by hyperplanes; SOCP adds second-order cone constraints that are curved convex boundaries — a strict generalisation that captures the norm-ball uncertainty sets needed for robust optimisation."
+  },
+  {
+    "source": "computational-finance/second-order-cone-programming",
+    "target": "linear-algebra/cholesky-decomposition",
+    "label": "uses",
+    "description": "Quadratic constraints in SOCP are reformulated via the Cholesky factor of the positive-definite matrix — converting $\\mathbf{x}^\\top\\mathbf{Q}\\mathbf{x} \\leq t$ into the cone constraint $\\|\\mathbf{L}^\\top\\mathbf{x}\\|_2 \\leq \\sqrt{t}$ where $\\mathbf{Q} = \\mathbf{L}\\mathbf{L}^\\top$."
+  },
+  {
+    "source": "computational-finance/second-order-cone-programming",
+    "target": "portfolio-theory/robust-optimisation",
+    "label": "solves",
+    "description": "Robust mean-variance optimisation reduces to an SOCP when the worst-case return deduction is expressed as a second-order cone constraint — SOCP is the computational engine that makes robust portfolio construction tractable at institutional scale."
+  },
+  {
+    "source": "computational-finance/self-organizing-maps",
+    "target": "computational-finance/best-matching-unit",
+    "label": "uses at each step",
+    "description": "Every iteration of SOM training begins by finding the BMU for the current input; only the BMU and its topological neighbours have their weight vectors updated, so the BMU selection drives both the learning dynamics and the final map structure."
   },
   {
     "source": "computational-finance/self-organizing-maps",
@@ -4272,6 +5034,36 @@
     "description": "PCA finds linear principal components via eigendecomposition; SOMs achieve non-linear dimensionality reduction without requiring eigenvectors, making them suitable when the data manifold is curved rather than planar."
   },
   {
+    "source": "computational-finance/semidefinite-programming",
+    "target": "computational-finance/second-order-cone-programming",
+    "label": "generalises",
+    "description": "SDP is strictly more expressive than SOCP: every SOCP can be reformulated as an SDP by lifting the cone constraint into a linear matrix inequality, but SDP additionally handles matrix variables constrained to be positive semidefinite — the structure needed for covariance estimation."
+  },
+  {
+    "source": "computational-finance/semidefinite-programming",
+    "target": "linear-algebra/eigenvalue-clipping",
+    "label": "solved analytically by",
+    "description": "The nearest-PSD-matrix SDP (minimising Frobenius distance subject to positive semidefiniteness) has the analytic solution of eigenvalue clipping — setting negative eigenvalues to zero — making it the fastest SDP in practice for correlation matrix repair."
+  },
+  {
+    "source": "computational-finance/semidefinite-programming",
+    "target": "linear-algebra/positive-definite-matrices",
+    "label": "enforces",
+    "description": "The positive-semidefinite constraint $\\mathbf{X} \\succeq 0$ is the defining feature of SDP — it directly enforces that the matrix variable remains a valid covariance matrix (non-negative eigenvalues) throughout optimisation, which linear or quadratic programming cannot guarantee."
+  },
+  {
+    "source": "computational-finance/soft-margin-svm",
+    "target": "computational-finance/bias-variance-trade-off",
+    "label": "controlled by C via",
+    "description": "The penalty parameter C in the soft-margin SVM directly controls the bias-variance trade-off: large C reduces bias but increases variance (near hard margin), while small C increases bias but reduces variance — the same trade-off that governs all regularised classifiers."
+  },
+  {
+    "source": "computational-finance/soft-margin-svm",
+    "target": "computational-finance/support-vector-machines",
+    "label": "practical form of",
+    "description": "The soft-margin SVM is the form of SVM actually used in quantitative finance applications (credit scoring, fraud detection), since real financial data is never perfectly linearly separable as required by the hard-margin variant."
+  },
+  {
     "source": "computational-finance/stochastic-gradient-descent",
     "target": "computational-finance/adam-optimiser",
     "label": "improved by",
@@ -4294,6 +5086,36 @@
     "target": "computational-finance/neural-networks",
     "label": "trains",
     "description": "Mini-batch SGD combined with backpropagation is the standard training procedure for all deep neural networks — the stochastic nature of gradient estimation is what makes training networks with millions of parameters computationally tractable."
+  },
+  {
+    "source": "computational-finance/supervised-learning",
+    "target": "computational-finance/bias-variance-trade-off",
+    "label": "governed by",
+    "description": "Every supervised learning model faces the bias-variance trade-off: a model with too few parameters underfits (high bias, misses signal), while one with too many overfits the training labels (high variance, fails to generalise to new data)."
+  },
+  {
+    "source": "computational-finance/supervised-learning",
+    "target": "computational-finance/linear-regression",
+    "label": "implemented via",
+    "description": "Linear regression is the foundational supervised regression algorithm — given a labelled dataset of continuous targets (e.g. asset returns), it learns weights by minimising squared prediction error and is the building block of factor models in quantitative finance."
+  },
+  {
+    "source": "computational-finance/supervised-learning",
+    "target": "computational-finance/logistic-regression",
+    "label": "implemented via",
+    "description": "Logistic regression is a canonical supervised classification algorithm: it takes labelled binary outcomes (e.g. default/no default) and learns input-output weights by minimising log-loss, making it the standard supervised learning model for credit scoring under IFRS 9."
+  },
+  {
+    "source": "computational-finance/supervised-learning",
+    "target": "computational-finance/machine-learning",
+    "label": "paradigm within",
+    "description": "Supervised learning is the dominant paradigm of machine learning in quantitative finance — by requiring labelled historical outcomes it contrasts with unsupervised learning (pattern discovery without labels) and reinforcement learning (reward-driven sequential decision-making)."
+  },
+  {
+    "source": "computational-finance/supervised-learning",
+    "target": "computational-finance/unsupervised-learning",
+    "label": "contrasts with",
+    "description": "Supervised learning requires labelled historical outcomes (e.g. default/no-default, future return) whereas unsupervised learning finds latent structure without labels — the choice between them in quantitative finance is determined by whether a well-defined target variable exists and can be reliably measured historically."
   },
   {
     "source": "computational-finance/support-vector-machines",
@@ -4320,6 +5142,60 @@
     "description": "The SVM margin width is inversely proportional to the norm of the weight vector ‖w‖, and the kernel trick replaces inner products in feature space with a kernel function — both constructions depend fundamentally on the dot product and vector norms."
   },
   {
+    "source": "computational-finance/svm-dual-formulation",
+    "target": "computational-finance/support-vector-machines",
+    "label": "solves",
+    "description": "The dual formulation is the standard algorithmic route for training SVMs in practice: quadratic programming solvers operate on the dual, and the resulting sparse set of support vectors defines the final classifier."
+  },
+  {
+    "source": "computational-finance/tensorflow",
+    "target": "computational-finance/backpropagation",
+    "label": "implements",
+    "description": "TensorFlow's GradientTape records forward-pass operations and applies reverse-mode automatic differentiation to compute gradients, implementing backpropagation through any differentiable tf.Tensor computation for training neural networks in finance."
+  },
+  {
+    "source": "computational-finance/tensorflow",
+    "target": "computational-finance/lstm",
+    "label": "implements",
+    "description": "TensorFlow/Keras provides a built-in LSTM layer (tf.keras.layers.LSTM) that is the standard implementation used in quantitative finance for sequence modelling tasks such as return forecasting and regime detection."
+  },
+  {
+    "source": "computational-finance/tensorflow",
+    "target": "computational-finance/neural-networks",
+    "label": "implements",
+    "description": "TensorFlow's Keras API provides a high-level interface for constructing and training neural networks, with XLA compilation optimising static computation graphs for production deployment in finance systems requiring sub-millisecond inference latency."
+  },
+  {
+    "source": "computational-finance/tensorflow",
+    "target": "computational-finance/pytorch",
+    "label": "alternative to",
+    "description": "TensorFlow and PyTorch serve the same deep learning workloads; PyTorch dominates quant research due to its dynamic graph and debugging ergonomics, while TensorFlow Serving and TFLite make TensorFlow more common in production finance deployments."
+  },
+  {
+    "source": "computational-finance/training-data",
+    "target": "computational-finance/bias-variance-trade-off",
+    "label": "determines",
+    "description": "The size and quality of the training set directly set the bias-variance operating point: too little data forces models towards high bias (underfitting), while noisy or mislabelled data inflates variance and degrades out-of-sample performance."
+  },
+  {
+    "source": "computational-finance/training-data",
+    "target": "computational-finance/feature-engineering",
+    "label": "preprocessed by",
+    "description": "Feature engineering transforms raw market data into the numeric inputs that enter the training set — choices such as normalisation window, lag structure, and signal construction determine both what the model can learn and whether look-ahead bias is introduced."
+  },
+  {
+    "source": "computational-finance/training-data",
+    "target": "computational-finance/generalisation-gap",
+    "label": "produces",
+    "description": "The generalisation gap is measured by comparing loss on the training set against loss on the held-out test set; a large gap signals that the model has memorised noise in the training data rather than learned a transferable signal."
+  },
+  {
+    "source": "computational-finance/training-data",
+    "target": "statistics/walk-forward-analysis",
+    "label": "evaluated by",
+    "description": "Walk-forward analysis repeatedly re-trains the model on an expanding or rolling training window and evaluates it on the immediately following period, replicating live deployment conditions and exposing look-ahead bias that a single static train/test split would conceal."
+  },
+  {
     "source": "computational-finance/transfer-learning",
     "target": "computational-finance/attention-mechanism",
     "label": "applied via",
@@ -4333,9 +5209,63 @@
   },
   {
     "source": "computational-finance/transfer-learning",
+    "target": "computational-finance/natural-language-processing",
+    "label": "applied to",
+    "description": "Transfer learning with pre-trained language models (FinBERT, BloombergGPT) is the dominant approach in modern financial NLP, allowing models trained on vast text corpora to be fine-tuned on small labelled financial datasets."
+  },
+  {
+    "source": "computational-finance/transfer-learning",
     "target": "computational-finance/neural-networks",
     "label": "reuses weights from",
     "description": "Transfer learning starts from a neural network whose weights have been optimised on a large source dataset, inheriting the low-level feature detectors learned from abundant data before adapting to the target task with limited labels."
+  },
+  {
+    "source": "computational-finance/underfitting",
+    "target": "computational-finance/bias-variance-trade-off",
+    "label": "is the high-bias regime of",
+    "description": "Underfitting is one pole of the bias-variance trade-off: when model complexity is too low, bias dominates and both training and test error are simultaneously high, regardless of how much data is available."
+  },
+  {
+    "source": "computational-finance/underfitting",
+    "target": "computational-finance/generalisation-gap",
+    "label": "produces near-zero",
+    "description": "An underfitted model exhibits a near-zero generalisation gap because both training and test errors are similarly high — unlike overfitting where the gap is large, underfitting signals the model cannot represent the data-generating process at all."
+  },
+  {
+    "source": "computational-finance/underfitting",
+    "target": "computational-finance/hyperparameter-tuning",
+    "label": "diagnosed and addressed via",
+    "description": "Hyperparameter tuning identifies underfitting through cross-validation: if training and validation errors both remain high across all configurations, the model class must be expanded — not regularised further — to reduce bias."
+  },
+  {
+    "source": "computational-finance/underfitting",
+    "target": "computational-finance/linear-regression",
+    "label": "common cause in finance",
+    "description": "Applying linear regression to inherently non-linear financial relationships — such as the convex price-yield curve of a bond or regime-switching equity returns — is a textbook case of underfitting, where the rigid functional form cannot approximate the true pattern."
+  },
+  {
+    "source": "computational-finance/unsupervised-learning",
+    "target": "computational-finance/k-means-clustering",
+    "label": "includes",
+    "description": "K-Means clustering is the canonical unsupervised partitioning algorithm — understanding it concretely illustrates the general unsupervised objective of minimising within-group variation without any external labels."
+  },
+  {
+    "source": "computational-finance/unsupervised-learning",
+    "target": "computational-finance/machine-learning",
+    "label": "subfield of",
+    "description": "Unsupervised learning is a major subfield of machine learning distinguished by the absence of labelled outputs — it complements the supervised paradigm (which dominates credit scoring and return prediction) by discovering latent structure when target variables are unavailable."
+  },
+  {
+    "source": "computational-finance/unsupervised-learning",
+    "target": "computational-finance/principal-component-regression",
+    "label": "provides basis for",
+    "description": "Principal Component Analysis — the dimensionality reduction step in PCR — is itself an unsupervised technique; unsupervised-learning provides the conceptual framing for why PCA operates on the unlabelled feature matrix rather than the target variable."
+  },
+  {
+    "source": "computational-finance/unsupervised-learning",
+    "target": "computational-finance/self-organizing-maps",
+    "label": "includes",
+    "description": "Self-Organizing Maps are a non-linear unsupervised technique that extends clustering by preserving the topological structure of the original feature space, making them especially useful for visualising the landscape of market regimes."
   },
   {
     "source": "derivatives/american-option-pricing",
@@ -5224,6 +6154,30 @@
     "target": "derivatives/value-of-a-put-option",
     "label": "decomposes",
     "description": "The put premium decomposes into intrinsic value max(K - S, 0) plus extrinsic value — for American puts, the early exercise decision hinges on whether the interest on intrinsic value exceeds the extrinsic value lost."
+  },
+  {
+    "source": "derivatives/option-pricing-theory",
+    "target": "derivatives/black-scholes-equation",
+    "label": "produces",
+    "description": "The Black-Scholes equation is the PDE derived from option pricing theory's replication argument; solving it with European option boundary conditions yields the closed-form Black-Scholes formula for call and put prices."
+  },
+  {
+    "source": "derivatives/option-pricing-theory",
+    "target": "derivatives/no-arbitrage-principle",
+    "label": "founded on",
+    "description": "The entire option pricing framework rests on the no-arbitrage principle: because any mispriced option can be replicated and exploited, the only sustainable price is the cost of the replicating portfolio."
+  },
+  {
+    "source": "derivatives/option-pricing-theory",
+    "target": "derivatives/replicating-portfolio",
+    "label": "uses",
+    "description": "A replicating portfolio — a dynamic combination of the underlying and a bond — is the constructive proof behind option pricing theory; its cost at initiation equals the fair option price by no-arbitrage."
+  },
+  {
+    "source": "derivatives/option-pricing-theory",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "formalised by",
+    "description": "Risk-neutral pricing is the mathematical language of option pricing theory: by changing to the risk-neutral measure, option values can be computed as discounted expectations without specifying the real-world drift of the underlying."
   },
   {
     "source": "derivatives/option-replication",
@@ -6118,6 +7072,30 @@
     "target": "risk/value-at-risk",
     "label": "managed via",
     "description": "Hedge funds use Value at Risk to quantify downside exposure and set position limits — regulators and prime brokers also use VaR to monitor leverage and counterparty risk."
+  },
+  {
+    "source": "financial-maths/high-frequency-trading",
+    "target": "financial-maths/bid-ask-spread",
+    "label": "captures",
+    "description": "Market-making HFT strategies earn profit by posting both bid and ask quotes simultaneously, capturing the bid-ask spread on each round-trip trade while managing inventory risk and minimising adverse selection from informed order flow."
+  },
+  {
+    "source": "financial-maths/high-frequency-trading",
+    "target": "financial-maths/limit-order-book",
+    "label": "exploits",
+    "description": "HFT strategies read the limit order book at microsecond frequency to detect order flow imbalance, queue position shifts, and hidden liquidity, using these microstructure signals to predict imminent price moves before slower participants can react."
+  },
+  {
+    "source": "financial-maths/high-frequency-trading",
+    "target": "financial-maths/market-impact-model",
+    "label": "motivates",
+    "description": "HFT market-making strategies must quantify and minimise adverse market impact to remain profitable; impact models determine optimal quote sizes, refresh rates, and inventory limits by pricing the cost of each posted or executed order."
+  },
+  {
+    "source": "financial-maths/high-frequency-trading",
+    "target": "financial-maths/order-flow-imbalance",
+    "label": "uses as signal",
+    "description": "Order flow imbalance is a primary predictive signal in HFT: when buy pressure significantly exceeds sell pressure in the limit order book, the midprice tends to rise within milliseconds, giving HFT firms a short-horizon directional edge."
   },
   {
     "source": "financial-maths/kelly-criterion",
@@ -7159,6 +8137,12 @@
   },
   {
     "source": "linear-algebra/covariance-matrix",
+    "target": "computational-finance/linear-discriminant-analysis",
+    "label": "parameterises",
+    "description": "The shared covariance matrix is the central quantity in LDA: inverting it gives the Mahalanobis-distance metric that accounts for feature correlations when computing class membership scores, ensuring correlated financial features are handled correctly."
+  },
+  {
+    "source": "linear-algebra/covariance-matrix",
     "target": "linear-algebra/positive-definite-matrices",
     "label": "must satisfy",
     "description": "A valid covariance matrix must be positive semi-definite to guarantee non-negative portfolio variance — when estimation error violates this property, the optimiser produces nonsensical infinite-leverage solutions."
@@ -7474,6 +8458,24 @@
     "target": "linear-algebra/span-of-a-set-of-vectors",
     "label": "constrains",
     "description": "Linear independence determines how efficiently a set of vectors spans a subspace — dependent vectors are redundant and do not enlarge the span, so the dimension of the span equals the number of independent vectors."
+  },
+  {
+    "source": "linear-algebra/linear-relationships-multiple-dimensions",
+    "target": "computational-finance/normal-equations",
+    "label": "solved by",
+    "description": "The normal equations $(\\mathbf{X}^\top\\mathbf{X})\\hat{\boldsymbol{\beta}} = \\mathbf{X}^\top\\mathbf{y}$ are the analytic solution that projects data onto the hyperplane defined by a linear relationship in multiple dimensions, minimising the sum of squared residuals."
+  },
+  {
+    "source": "linear-algebra/linear-relationships-multiple-dimensions",
+    "target": "computational-finance/regression-methods",
+    "label": "formalised in",
+    "description": "Regression methods — OLS, Ridge, Lasso — are the statistical procedures for estimating the coefficient vector $\\boldsymbol{\\beta}$ in a linear relationship across multiple dimensions, translating the geometric hyperplane concept into practical factor model estimation."
+  },
+  {
+    "source": "linear-algebra/linear-relationships-multiple-dimensions",
+    "target": "linear-algebra/linear-transformations",
+    "label": "generalised by",
+    "description": "A linear transformation $T(\\mathbf{x}) = \\mathbf{A}\\mathbf{x}$ is the general matrix-level statement of a linear relationship in multiple dimensions — the design matrix $\\mathbf{X}$ in regression is precisely a linear transformation mapping the coefficient vector $\boldsymbol{\beta}$ into the prediction space."
   },
   {
     "source": "linear-algebra/linear-transformations",
@@ -8964,6 +9966,24 @@
     "description": "Alpha decay must be traded off against transaction costs — executing faster captures more alpha but incurs higher market impact, and the optimal speed balances the marginal alpha saved against the marginal cost incurred."
   },
   {
+    "source": "portfolio-theory/ambiguity-aversion",
+    "target": "portfolio-theory/black-litterman-model",
+    "label": "motivates",
+    "description": "Black-Litterman's shrinkage of portfolio weights towards the market-cap benchmark can be interpreted as an ambiguity-averse response: when expected returns are Knightian-uncertain, the maxmin-optimal strategy tilts toward the diversified reference portfolio."
+  },
+  {
+    "source": "portfolio-theory/ambiguity-aversion",
+    "target": "portfolio-theory/efficient-markets-hypothesis",
+    "label": "challenges",
+    "description": "Ambiguity aversion provides a rational explanation for anomalies that EMH cannot account for — investors rationally demand excess returns as compensation for unquantifiable uncertainty, producing persistent premia that are not arbitrageable in the Ellsberg sense."
+  },
+  {
+    "source": "portfolio-theory/ambiguity-aversion",
+    "target": "risk/knightian-uncertainty",
+    "label": "behavioural response to",
+    "description": "Ambiguity aversion is the observed behavioural preference for measurable risk over Knightian uncertainty — the Ellsberg paradox demonstrates that investors demand a premium specifically for the unmeasurable uncertainty that Knightian uncertainty formalises."
+  },
+  {
     "source": "portfolio-theory/arbitrage-pricing-theory",
     "target": "derivatives/no-arbitrage-principle",
     "label": "derived from",
@@ -9228,6 +10248,54 @@
     "description": "Each point on the efficient frontier is a portfolio that minimises variance for its target return — the portfolio variance formula is the objective function solved at every point along the curve."
   },
   {
+    "source": "portfolio-theory/efficient-markets-hypothesis",
+    "target": "derivatives/no-arbitrage-principle",
+    "label": "consistent with",
+    "description": "Market efficiency and no-arbitrage are closely related: in an efficient market, risk-adjusted arbitrage opportunities are eliminated instantly, which is the same condition used to derive fair derivative prices via replication."
+  },
+  {
+    "source": "portfolio-theory/efficient-markets-hypothesis",
+    "target": "portfolio-theory/capital-asset-pricing-model",
+    "label": "assumed by",
+    "description": "CAPM assumes markets are semi-strong efficient — that prices already reflect public information — so systematic risk (beta) is the only source of excess expected return; without EMH the security market line relationship breaks down."
+  },
+  {
+    "source": "portfolio-theory/efficient-markets-hypothesis",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "motivates",
+    "description": "If markets are efficient and active management cannot systematically outperform, the rational response is to hold the market portfolio — the cornerstone of modern portfolio theory and the foundation of passive index investing."
+  },
+  {
+    "source": "portfolio-theory/efficient-markets-hypothesis",
+    "target": "statistics/autocorrelation",
+    "label": "implies zero",
+    "description": "The weak form of EMH implies that return autocorrelation should be zero at all lags — any detectable pattern in past prices would be instantly arbitraged away; finding significant autocorrelation is therefore evidence against market efficiency."
+  },
+  {
+    "source": "portfolio-theory/expected-portfolio-return",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "return input to",
+    "description": "The expected portfolio return μ_p = wᵀμ is one of the two inputs (alongside portfolio variance) that define a portfolio's position in mean-variance space — estimating it accurately is the central challenge in applying Markowitz optimisation."
+  },
+  {
+    "source": "portfolio-theory/expected-portfolio-return",
+    "target": "portfolio-theory/portfolio-weights",
+    "label": "linear function of",
+    "description": "Expected portfolio return is a linear function of the weight vector — each weight w_i scales asset i's contribution proportionally, which is why the return constraint in the Markowitz problem is a hyperplane rather than a curved surface."
+  },
+  {
+    "source": "portfolio-theory/expected-portfolio-return",
+    "target": "portfolio-theory/reverse-optimisation",
+    "label": "inferred by",
+    "description": "Reverse optimisation provides an alternative to estimating expected returns from historical data — it backs out the implied μ from observed market weights, yielding more stable return estimates for use in portfolio construction."
+  },
+  {
+    "source": "portfolio-theory/expected-portfolio-return",
+    "target": "statistics/sample-mean",
+    "label": "estimated using",
+    "description": "In practice, the expected return vector μ is estimated from historical data using the sample mean of each asset's return series — the noisiness of this estimator is the main source of instability in mean-variance optimal portfolios."
+  },
+  {
     "source": "portfolio-theory/factor-zoo",
     "target": "portfolio-theory/arbitrage-pricing-theory",
     "label": "empirical realisation of",
@@ -9324,6 +10392,30 @@
     "description": "The single-index model explicitly separates return into a systematic component β_i r_M (market exposure) and an idiosyncratic residual ε_i, providing the operational decomposition that CAPM predicts in theory."
   },
   {
+    "source": "portfolio-theory/market-anomalies",
+    "target": "portfolio-theory/efficient-markets-hypothesis",
+    "label": "challenges",
+    "description": "Each documented market anomaly is a potential violation of EMH; the debate over whether anomalies reflect genuine mispricing or undiscovered risk factors is the central empirical battleground in modern asset pricing."
+  },
+  {
+    "source": "portfolio-theory/market-anomalies",
+    "target": "portfolio-theory/factor-zoo",
+    "label": "gives rise to",
+    "description": "The proliferation of market anomalies in academic literature has produced the 'factor zoo' — hundreds of proposed risk factors — raising serious concerns about multiple-comparison bias and the reproducibility of anomaly findings."
+  },
+  {
+    "source": "portfolio-theory/market-anomalies",
+    "target": "portfolio-theory/fama-french-three-factor-model",
+    "label": "partially explained by",
+    "description": "The Fama-French three-factor model was constructed specifically to explain the size and value anomalies; many anomalies that appeared significant in CAPM regressions became insignificant once size and value were controlled for."
+  },
+  {
+    "source": "portfolio-theory/market-anomalies",
+    "target": "portfolio-theory/momentum-strategy",
+    "label": "includes",
+    "description": "Momentum — the tendency for recent winners to continue outperforming recent losers over 3–12 months — is one of the most robust and widely-traded market anomalies, surviving across asset classes and geographies."
+  },
+  {
     "source": "portfolio-theory/market-portfolio",
     "target": "portfolio-theory/capital-asset-pricing-model",
     "label": "central object of",
@@ -9348,6 +10440,48 @@
     "description": "In CAPM equilibrium, homogeneous beliefs force all investors to the same tangency portfolio; market clearing then requires that the tangency portfolio holds every asset in market-cap proportions, making it identical to the market portfolio."
   },
   {
+    "source": "portfolio-theory/markowitz-bullet",
+    "target": "portfolio-theory/efficient-frontier",
+    "label": "upper boundary of",
+    "description": "The efficient frontier is the upper portion of the Markowitz Bullet — the set of portfolios that offer the highest expected return for each level of risk; rational investors only choose portfolios on this upper boundary."
+  },
+  {
+    "source": "portfolio-theory/markowitz-bullet",
+    "target": "portfolio-theory/minimum-variance-portfolio",
+    "label": "leftmost point of",
+    "description": "The minimum-variance portfolio sits at the leftmost tip of the Markowitz Bullet, representing the single portfolio with the lowest achievable variance; it is the boundary between the efficient and inefficient halves of the bullet."
+  },
+  {
+    "source": "portfolio-theory/markowitz-bullet",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "visualises",
+    "description": "The Markowitz Bullet is the geometric representation of Modern Portfolio Theory's core result — that combining imperfectly correlated assets allows investors to reach risk-return combinations unavailable from any single asset."
+  },
+  {
+    "source": "portfolio-theory/markowitz-bullet",
+    "target": "statistics/correlation",
+    "label": "shape determined by",
+    "description": "The degree of leftward bow in the Markowitz Bullet is entirely determined by the pairwise correlations between assets — lower correlation bows the bullet further left, quantifying the incremental diversification benefit of adding a less-correlated asset."
+  },
+  {
+    "source": "portfolio-theory/maximum-entropy-portfolio",
+    "target": "computational-finance/entropy",
+    "label": "applies",
+    "description": "Shannon entropy is the information-theoretic measure that the maximum entropy portfolio maximises over its weight distribution — the same quantity used to measure impurity in decision trees is repurposed here as a diversification metric for portfolio weights."
+  },
+  {
+    "source": "portfolio-theory/maximum-entropy-portfolio",
+    "target": "portfolio-theory/minimum-variance-portfolio",
+    "label": "contrasts with",
+    "description": "The minimum variance portfolio minimises risk given a covariance estimate and is sensitive to estimation error; the maximum entropy portfolio ignores covariance entirely and minimises assumptions — the two represent opposite ends of the model-dependence spectrum."
+  },
+  {
+    "source": "portfolio-theory/maximum-entropy-portfolio",
+    "target": "portfolio-theory/risk-parity",
+    "label": "related to",
+    "description": "Both maximum entropy and risk parity portfolios reject return forecasts and focus on structural diversification — maximum entropy maximises the entropy of weights while risk parity equalises risk contributions, and the two coincide when all assets have equal volatility."
+  },
+  {
     "source": "portfolio-theory/mean-reversion-strategy",
     "target": "financial-maths/pairs-trading",
     "label": "foundation of",
@@ -9364,6 +10498,30 @@
     "target": "statistics/autocorrelation",
     "label": "detected via",
     "description": "Negative autocorrelation in returns at short horizons is the statistical signature that mean reversion strategies exploit — it indicates that positive returns tend to be followed by negative ones and vice versa."
+  },
+  {
+    "source": "portfolio-theory/mean-variance-utility-function",
+    "target": "portfolio-theory/black-litterman-model",
+    "label": "calibrates prior in",
+    "description": "Black-Litterman derives equilibrium expected returns by assuming the market portfolio maximises mean-variance utility at a market-implied λ — this reverse-optimisation step uses the utility function to back out the implicit return expectations embedded in market weights."
+  },
+  {
+    "source": "portfolio-theory/mean-variance-utility-function",
+    "target": "portfolio-theory/capital-market-line",
+    "label": "determines position on",
+    "description": "Every investor with mean-variance utility chooses a point on the Capital Market Line; the risk-aversion coefficient λ determines how far along the CML they sit — higher λ moves them towards the risk-free asset, lower λ towards (or beyond) the tangency portfolio."
+  },
+  {
+    "source": "portfolio-theory/mean-variance-utility-function",
+    "target": "portfolio-theory/efficient-frontier",
+    "label": "selects point on",
+    "description": "The mean-variance utility function does not just identify the efficient frontier — it selects the single optimal portfolio on it: the point where the investor's indifference curve is tangent to the frontier, determined by their risk-aversion coefficient λ."
+  },
+  {
+    "source": "portfolio-theory/mean-variance-utility-function",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "preference foundation of",
+    "description": "Modern Portfolio Theory's mean-variance optimisation is formally justified by the mean-variance utility function — without a utility representation, the choice to minimise variance for a given return is an arbitrary rule rather than a consequence of rational preferences."
   },
   {
     "source": "portfolio-theory/minimum-variance-portfolio",
@@ -9498,6 +10656,30 @@
     "description": "The Omega ratio captures fat-tail effects that the Sharpe ratio ignores — a strategy with positive skew and thin left tails will have a much higher Omega ratio than one with negative skew and fat left tails, even if their Sharpe ratios are similar."
   },
   {
+    "source": "portfolio-theory/optimal-portfolio-on-efficient-frontier",
+    "target": "portfolio-theory/efficient-frontier",
+    "label": "selected point on",
+    "description": "The optimal portfolio is a single point on the efficient frontier — the one where the investor's indifference curve is tangent to the frontier, determined by their risk-aversion coefficient λ."
+  },
+  {
+    "source": "portfolio-theory/optimal-portfolio-on-efficient-frontier",
+    "target": "portfolio-theory/mean-variance-utility-function",
+    "label": "maximises",
+    "description": "Finding the optimal portfolio on the efficient frontier is equivalent to maximising the mean-variance utility function U = μ − (λ/2)σ² subject to the portfolio lying on the frontier — the tangency condition is the first-order optimality condition."
+  },
+  {
+    "source": "portfolio-theory/optimal-portfolio-on-efficient-frontier",
+    "target": "portfolio-theory/two-fund-separation-theorem",
+    "label": "simplified by",
+    "description": "The two-fund separation theorem reduces finding the optimal frontier portfolio to a single scalar choice: every investor holds the same tangency portfolio mixed with the risk-free asset, with the blend ratio determined entirely by their risk-aversion coefficient λ."
+  },
+  {
+    "source": "portfolio-theory/optimal-portfolio-on-efficient-frontier",
+    "target": "portfolio-theory/utility-function",
+    "label": "geometric solution of",
+    "description": "The optimal frontier portfolio is the geometric realisation of expected utility maximisation — the indifference curves of the utility function are superimposed on the feasible set, and the optimal portfolio is where the highest curve just touches the frontier."
+  },
+  {
     "source": "portfolio-theory/portfolio-manager",
     "target": "portfolio-theory/carhart-four-factor-model",
     "label": "evaluated by",
@@ -9534,6 +10716,30 @@
     "description": "The Sharpe ratio is one of the primary metrics used to assess a portfolio manager s risk-adjusted performance, measuring excess return per unit of total volatility."
   },
   {
+    "source": "portfolio-theory/portfolio-turnover",
+    "target": "portfolio-theory/alpha-decay",
+    "label": "trades off against",
+    "description": "Alpha decay and turnover represent opposite pressures on rebalancing frequency — fast-decaying signals demand high turnover to capture fresh alpha, while high turnover destroys value through costs, so the optimal frequency balances the two."
+  },
+  {
+    "source": "portfolio-theory/portfolio-turnover",
+    "target": "portfolio-theory/information-ratio",
+    "label": "net of costs affects",
+    "description": "The information ratio is measured on net returns, so high portfolio turnover reduces the IR directly by adding cost drag — strategies with high gross IR but extreme turnover may deliver a poor net IR in practice."
+  },
+  {
+    "source": "portfolio-theory/portfolio-turnover",
+    "target": "portfolio-theory/rebalancing",
+    "label": "quantifies cost of",
+    "description": "Every rebalancing event generates turnover — portfolio turnover is the metric that converts rebalancing frequency and magnitude into a concrete cost drag, allowing portfolio managers to optimise how often they rebalance."
+  },
+  {
+    "source": "portfolio-theory/portfolio-turnover",
+    "target": "portfolio-theory/transaction-cost-analysis",
+    "label": "feeds into",
+    "description": "Turnover is the volume input to transaction cost analysis — TCA multiplies turnover by per-unit execution costs to estimate total annual drag, making turnover control a first-order concern in live strategy implementation."
+  },
+  {
     "source": "portfolio-theory/portfolio-weights",
     "target": "portfolio-theory/modern-portfolio-theory",
     "label": "inputs to",
@@ -9544,6 +10750,42 @@
     "target": "portfolio-theory/two-risky-opportunity-set",
     "label": "basis of",
     "description": "The portfolio weight vector is the fundamental input to the two-asset opportunity set — every point on the hyperbola corresponds to a specific choice of weights satisfying the budget constraint."
+  },
+  {
+    "source": "portfolio-theory/quadratic-utility-function",
+    "target": "portfolio-theory/mean-variance-utility-function",
+    "label": "equivalent to",
+    "description": "Maximising quadratic expected utility E[W − (b/2)W²] is algebraically equivalent to maximising the mean-variance objective μ − (λ/2)σ² — both reduce to the same optimal weight vector, confirming that mean-variance optimisation is exact under quadratic preferences."
+  },
+  {
+    "source": "portfolio-theory/quadratic-utility-function",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "exact justification for",
+    "description": "Quadratic utility is one of two conditions (the other being normal returns) under which mean-variance optimisation is provably consistent with expected utility maximisation — making it the direct theoretical foundation of the entire Markowitz framework."
+  },
+  {
+    "source": "portfolio-theory/quadratic-utility-function",
+    "target": "portfolio-theory/utility-function",
+    "label": "specific form of",
+    "description": "Quadratic utility is a special case of the general utility function framework; its particular algebraic form is what allows expected utility to be expressed purely in terms of mean and variance, making it the unique bridge to Markowitz optimisation."
+  },
+  {
+    "source": "portfolio-theory/rational-expectations-hypothesis",
+    "target": "portfolio-theory/capital-asset-pricing-model",
+    "label": "assumed by",
+    "description": "CAPM is an equilibrium model derived under rational expectations — all investors share the same information set and the same beliefs about future returns, so the market portfolio lies on the efficient frontier."
+  },
+  {
+    "source": "portfolio-theory/rational-expectations-hypothesis",
+    "target": "portfolio-theory/efficient-markets-hypothesis",
+    "label": "underpins",
+    "description": "The Efficient Markets Hypothesis follows from rational expectations: if agents use all available information and the correct model, prices aggregate those expectations and fully reflect all information, leaving no exploitable inefficiencies."
+  },
+  {
+    "source": "portfolio-theory/rational-expectations-hypothesis",
+    "target": "statistics/autocorrelation",
+    "label": "implies zero forecast-error",
+    "description": "Under rational expectations, forecast errors must be uncorrelated with past information — finding autocorrelated forecast errors in currency forward rates or equity analyst estimates is direct evidence against the hypothesis."
   },
   {
     "source": "portfolio-theory/rebalancing",
@@ -9582,6 +10824,30 @@
     "description": "Both resampling and shrinkage address estimation error in Markowitz optimisation, but through different mechanisms — resampling averages over input uncertainty while shrinkage biases the inputs towards a stable target."
   },
   {
+    "source": "portfolio-theory/reverse-optimisation",
+    "target": "portfolio-theory/black-litterman-model",
+    "label": "prior step in",
+    "description": "Reverse optimisation produces the equilibrium implied returns Π that serve as the prior mean in the Black-Litterman model — without this step, the BL framework has no principled neutral starting point from which to blend investor views."
+  },
+  {
+    "source": "portfolio-theory/reverse-optimisation",
+    "target": "portfolio-theory/market-portfolio",
+    "label": "inverts weights of",
+    "description": "Reverse optimisation treats the market-cap-weighted market portfolio as the consensus optimal portfolio and solves backwards for the expected returns that would make a rational investor choose exactly those weights."
+  },
+  {
+    "source": "portfolio-theory/reverse-optimisation",
+    "target": "portfolio-theory/mean-variance-utility-function",
+    "label": "inverts",
+    "description": "Reverse optimisation algebraically inverts the mean-variance utility maximisation problem — instead of solving for weights given returns, it solves for returns given weights, using the same first-order conditions rearranged."
+  },
+  {
+    "source": "portfolio-theory/reverse-optimisation",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "diagnoses instability in",
+    "description": "Reverse optimisation reveals why naive Markowitz is sensitive to return inputs — small changes in expected returns map through Σ⁻¹ to large weight changes, motivating the use of implied equilibrium returns as a more stable prior."
+  },
+  {
     "source": "portfolio-theory/risk-budgeting",
     "target": "portfolio-theory/modern-portfolio-theory",
     "label": "extends",
@@ -9616,6 +10882,24 @@
     "target": "statistics/correlation",
     "label": "depends on",
     "description": "Risk parity allocations are computed from the covariance matrix — when correlations between assets spike (as in a crisis), the equal-risk-contribution assumption breaks down and the portfolio becomes less diversified than intended."
+  },
+  {
+    "source": "portfolio-theory/robust-optimisation",
+    "target": "portfolio-theory/ambiguity-aversion",
+    "label": "implements",
+    "description": "Robust optimisation is the formal mathematical implementation of ambiguity aversion: the maxmin objective over an uncertainty set is exactly the Gilboa-Schmeidler representation of preferences that the Ellsberg paradox motivates behaviourally."
+  },
+  {
+    "source": "portfolio-theory/robust-optimisation",
+    "target": "portfolio-theory/minimum-variance-portfolio",
+    "label": "converges to",
+    "description": "As the uncertainty set radius $\\kappa \\to \\infty$, the robust mean-variance portfolio converges to the minimum-variance portfolio — the limit case where return uncertainty is so large that only variance matters and all return forecasts are discarded."
+  },
+  {
+    "source": "portfolio-theory/robust-optimisation",
+    "target": "portfolio-theory/resampled-efficient-frontier",
+    "label": "contrasts with",
+    "description": "Both robust optimisation and resampled efficient frontier address estimation error, but differently: robust optimisation uses worst-case adversarial inputs within a deterministic uncertainty set, while resampled frontier uses a probabilistic bootstrap over many plausible input realisations."
   },
   {
     "source": "portfolio-theory/security-market-line",
@@ -9832,6 +11116,24 @@
     "target": "portfolio-theory/efficient-frontier",
     "label": "upper branch of",
     "description": "The efficient frontier is the upper branch of the two-asset opportunity set hyperbola — the set of weight combinations that maximise return for each level of risk, starting from the global minimum variance portfolio."
+  },
+  {
+    "source": "portfolio-theory/utility-function",
+    "target": "portfolio-theory/efficient-frontier",
+    "label": "selects from",
+    "description": "The efficient frontier presents the feasible risk-return combinations; the utility function determines which point on the frontier the investor actually chooses by finding where their highest indifference curve is tangent to the frontier."
+  },
+  {
+    "source": "portfolio-theory/utility-function",
+    "target": "portfolio-theory/mean-variance-utility-function",
+    "label": "specialised as",
+    "description": "The mean-variance utility function U = μ − (λ/2)σ² is the specific form of the general utility function that justifies Markowitz optimisation — it is exact when utility is quadratic and approximate when returns are near-normal."
+  },
+  {
+    "source": "portfolio-theory/utility-function",
+    "target": "probability/expected-value",
+    "label": "maximised via",
+    "description": "The expected utility hypothesis requires computing the probability-weighted average of U(W) across all outcomes — this is the expected value operator applied to the composed function U(W) rather than to W directly."
   },
   {
     "source": "portfolio-theory/zero-variance-portfolio",
@@ -10108,6 +11410,30 @@
     "target": "stochastic-processes/martingales",
     "label": "defines",
     "description": "A martingale is defined precisely as a process whose conditional expectation given the current filtration equals its current value — conditional expectation is the mathematical language in which the martingale property is stated."
+  },
+  {
+    "source": "probability/conjugate-prior",
+    "target": "portfolio-theory/black-litterman-model",
+    "label": "applied in",
+    "description": "Black-Litterman exploits the Normal-Normal conjugate pair: the CAPM equilibrium returns form the prior, investor views form the likelihood, and the posterior expected returns have an analytic closed form precisely because the Normal distribution is self-conjugate."
+  },
+  {
+    "source": "probability/conjugate-prior",
+    "target": "probability/bayes-theorem",
+    "label": "enables closed form of",
+    "description": "A conjugate prior is specifically chosen so that Bayes' theorem produces a posterior in the same family as the prior, giving an analytic rather than numeric update — eliminating the need for MCMC in routine Bayesian estimation."
+  },
+  {
+    "source": "probability/conjugate-prior",
+    "target": "probability/beta-distribution",
+    "label": "exemplified by",
+    "description": "The Beta distribution is the conjugate prior for Binomial likelihoods — the canonical example in credit modelling, where Beta priors on default probability update analytically as default events are observed."
+  },
+  {
+    "source": "probability/conjugate-prior",
+    "target": "statistics/markov-chain-monte-carlo",
+    "label": "alternative to",
+    "description": "MCMC is the computational fallback when conjugacy is unavailable — when the prior and likelihood are not conjugate, the posterior has no closed form and must be sampled numerically rather than computed analytically."
   },
   {
     "source": "probability/continuous-random-variable",
@@ -10620,6 +11946,24 @@
     "description": "Every Euler-Maruyama step requires a draw from N(0,1), which is generated via inverse transform sampling — applying the inverse normal CDF to a uniform random number."
   },
   {
+    "source": "probability/jeffreys-prior",
+    "target": "probability/conjugate-prior",
+    "label": "alternative to",
+    "description": "Conjugate priors are chosen for analytical tractability; Jeffreys prior is chosen for invariance — when no subjective prior information exists, Jeffreys provides the principled non-informative starting point that conjugate priors do not guarantee."
+  },
+  {
+    "source": "probability/jeffreys-prior",
+    "target": "statistics/bayesian-statistics",
+    "label": "used in",
+    "description": "Jeffreys prior is the standard reference prior in objective Bayesian analysis, used when analysts want posterior inference driven entirely by the data rather than by subjective prior beliefs — relevant in model calibration with limited historical data."
+  },
+  {
+    "source": "probability/jeffreys-prior",
+    "target": "statistics/maximum-likelihood-estimation",
+    "label": "connected to",
+    "description": "The Jeffreys prior is proportional to the square root of the Fisher information, which is also the key quantity in the Cramér–Rao lower bound for MLE — linking the non-informative prior directly to the asymptotic variance of the maximum likelihood estimator."
+  },
+  {
     "source": "probability/jensens-inequality",
     "target": "derivatives/black-scholes-equation",
     "label": "explains",
@@ -11056,6 +12400,24 @@
     "target": "statistics/skewness",
     "label": "instance of",
     "description": "A positively skewed distribution is the specific case where the skewness statistic γ₁ > 0 — the skewness card defines the measure; the positively skewed distribution card explains what positive γ₁ looks like geometrically and in financial contexts."
+  },
+  {
+    "source": "probability/posterior-predictive-distribution",
+    "target": "probability/conjugate-prior",
+    "label": "analytic under",
+    "description": "When the prior is conjugate to the likelihood, the posterior predictive distribution has a closed analytic form — for example, a Normal–Normal conjugate pair produces a Normal posterior predictive, making scenario generation tractable without Monte Carlo."
+  },
+  {
+    "source": "probability/posterior-predictive-distribution",
+    "target": "risk/value-at-risk",
+    "label": "extends",
+    "description": "Standard VaR conditions on a single calibrated model; the posterior predictive VaR integrates over the posterior distribution of model parameters, producing a heavier-tailed loss distribution that accounts for estimation uncertainty in the risk measure itself."
+  },
+  {
+    "source": "probability/posterior-predictive-distribution",
+    "target": "statistics/bayesian-statistics",
+    "label": "produced by",
+    "description": "The posterior predictive distribution is the Bayesian framework's natural forecast object: it integrates out all parameter uncertainty using the posterior, producing a distribution over future observations that is richer than any point-estimate-based forecast."
   },
   {
     "source": "probability/probability-density-function",
@@ -11688,6 +13050,24 @@
     "description": "Key rate duration decomposes the single modified duration figure into tenor-specific sensitivities, revealing how interest rate exposure is distributed across the yield curve rather than assuming a parallel shift."
   },
   {
+    "source": "risk/knightian-uncertainty",
+    "target": "risk/stress-testing",
+    "label": "addressed by",
+    "description": "Stress tests are the practical response to Knightian uncertainty: because tail probabilities cannot be reliably estimated from history, regulators require banks to evaluate losses under specified severe but plausible scenarios rather than under a calibrated probability distribution."
+  },
+  {
+    "source": "risk/knightian-uncertainty",
+    "target": "risk/value-at-risk",
+    "label": "challenges",
+    "description": "VaR implicitly assumes that historical return distributions are reliable estimates of future probabilities — an assumption that fails under Knightian uncertainty, where the true probability measure is unknown, making VaR figures dangerously precise during structural breaks."
+  },
+  {
+    "source": "risk/knightian-uncertainty",
+    "target": "statistics/a-priori-vs-a-posteriori",
+    "label": "limits",
+    "description": "Knightian uncertainty is the condition where a posteriori estimation breaks down because no comparable historical data exists, leaving the analyst with only a priori model assumptions — exposing the fragility of quantitative models in genuinely novel market regimes."
+  },
+  {
     "source": "risk/liquidity-risk",
     "target": "financial-maths/repo-agreement",
     "label": "manifests via",
@@ -11790,6 +13170,24 @@
     "description": "VaR estimates the worst expected loss over a single period at a given confidence level, while maximum drawdown captures the cumulative worst-case loss across multiple periods — together they provide a fuller picture of downside risk."
   },
   {
+    "source": "risk/model-conservatism-adjustment",
+    "target": "banking-regulation/frtb-overview",
+    "label": "required under",
+    "description": "FRTB's prudent valuation framework (Article 105 CRR) mandates Additional Valuation Adjustments including model uncertainty AVAs, making model conservatism adjustments a regulatory capital requirement rather than a discretionary prudential reserve."
+  },
+  {
+    "source": "risk/model-conservatism-adjustment",
+    "target": "risk/model-risk",
+    "label": "quantifies",
+    "description": "Model conservatism adjustments are the monetary expression of model risk: where model risk is the qualitative concern that a model is wrong, the AVA framework converts that concern into a specific capital deduction proportional to the width of the alternative model range."
+  },
+  {
+    "source": "risk/model-conservatism-adjustment",
+    "target": "risk/sr-11-7-model-validation",
+    "label": "outcome of",
+    "description": "SR 11-7 independent validation is the process that discovers the need for model conservatism adjustments: when validators find that a model systematically underprices risk or overvalues positions, a prudential add-on is applied to capital to compensate."
+  },
+  {
     "source": "risk/model-limitations",
     "target": "probability/normal-distribution",
     "label": "challenges",
@@ -11800,6 +13198,24 @@
     "target": "stochastic-processes/drift-and-volatility",
     "label": "questions",
     "description": "The basic model assumes constant drift and volatility, but real markets exhibit volatility clustering and regime changes — motivating GARCH, stochastic volatility, and jump-diffusion models."
+  },
+  {
+    "source": "risk/model-risk",
+    "target": "risk/knightian-uncertainty",
+    "label": "arises from",
+    "description": "Model risk is the institutional manifestation of Knightian uncertainty: because the true probability distribution of asset returns is unknown, any model is an approximation, and the dispersion of outputs across plausible models is the measurable proxy for the underlying deep uncertainty."
+  },
+  {
+    "source": "risk/model-risk",
+    "target": "risk/london-whale-case-study",
+    "label": "illustrated by",
+    "description": "The London Whale loss is a canonical model risk case study: a spreadsheet error in the VaR model halved measured risk, allowing positions to grow unchecked — demonstrating that implementation errors are as dangerous as theoretical model mis-specification."
+  },
+  {
+    "source": "risk/model-risk",
+    "target": "risk/model-limitations",
+    "label": "generalises",
+    "description": "Model limitations catalogues the specific technical failures of GBM-based models; model risk is the broader governance and regulatory framework for quantifying, monitoring, and capitalising against all sources of model error across an institution."
   },
   {
     "source": "risk/monte-carlo-simulation",
@@ -11944,6 +13360,24 @@
     "target": "risk/value-at-risk",
     "label": "quantified by",
     "description": "VaR is the primary regulatory metric for downside risk measurement, translating the abstract definition of financial risk into a concrete loss threshold at a specified confidence level."
+  },
+  {
+    "source": "risk/sr-11-7-model-validation",
+    "target": "risk/london-whale-case-study",
+    "label": "addressed by",
+    "description": "The London Whale loss is the canonical case study justifying SR 11-7's requirement for independent validation: a VaR model error went undetected precisely because the validators were not independent of the model developers — the failure that SR 11-7 was designed to prevent."
+  },
+  {
+    "source": "risk/sr-11-7-model-validation",
+    "target": "risk/model-risk",
+    "label": "governs",
+    "description": "SR 11-7 is the primary regulatory framework that defines model risk and mandates the governance practices — model inventory, independent validation, ongoing monitoring — required to manage it at systemically important financial institutions."
+  },
+  {
+    "source": "risk/sr-11-7-model-validation",
+    "target": "risk/value-at-risk",
+    "label": "validates",
+    "description": "VaR models are the primary subject of SR 11-7 validation: backtesting (comparing predicted quantiles to observed losses) and P&L attribution are the specific tests the guidance requires banks to perform to confirm their VaR models remain fit for purpose."
   },
   {
     "source": "risk/stress-testing",
@@ -12390,6 +13824,30 @@
     "description": "The uptick rule constrains short selling by requiring that short orders be placed above the last transaction price or current best bid, preventing short sellers from relentlessly selling into a falling market at every downtick."
   },
   {
+    "source": "statistics/a-priori-vs-a-posteriori",
+    "target": "derivatives/real-world-vs-risk-neutral-measure",
+    "label": "parallels",
+    "description": "The real-world (P) versus risk-neutral (Q) measure distinction mirrors a priori vs a posteriori reasoning: the risk-neutral measure is derived a priori from no-arbitrage theory, while the real-world measure is calibrated a posteriori from observed return data."
+  },
+  {
+    "source": "statistics/a-priori-vs-a-posteriori",
+    "target": "portfolio-theory/black-litterman-model",
+    "label": "applied in",
+    "description": "Black-Litterman is the canonical quantitative finance application of the a priori / a posteriori framework: CAPM equilibrium returns serve as the a priori prior and investor views are the a posteriori update, producing posterior portfolio weights via Bayes' theorem."
+  },
+  {
+    "source": "statistics/a-priori-vs-a-posteriori",
+    "target": "probability/bayes-theorem",
+    "label": "formalised by",
+    "description": "Bayes' theorem is the mathematical bridge that converts an a priori belief (the prior distribution) into an a posteriori belief (the posterior distribution) after observing data — it is the formal engine behind the epistemological distinction."
+  },
+  {
+    "source": "statistics/a-priori-vs-a-posteriori",
+    "target": "statistics/bayesian-statistics",
+    "label": "underpins",
+    "description": "The a priori / a posteriori distinction is the philosophical foundation of Bayesian statistics: the prior encodes a priori knowledge and the posterior represents a posteriori inference after combining the prior with the likelihood of observed data."
+  },
+  {
     "source": "statistics/aggregational-gaussianity",
     "target": "probability/fat-tailed-distributions",
     "label": "diminishes",
@@ -12528,6 +13986,48 @@
     "description": "Testing for autocorrelation in returns is a key diagnostic — near-zero autocorrelation in raw returns supports market efficiency, while positive autocorrelation in squared returns confirms volatility clustering."
   },
   {
+    "source": "statistics/bayes-factor",
+    "target": "portfolio-theory/fama-french-three-factor-model",
+    "label": "used to compare",
+    "description": "Bayes factors provide a principled way to decide whether adding factors beyond the Fama-French three-factor model is justified by the data, penalising model complexity automatically through the marginal likelihood integral."
+  },
+  {
+    "source": "statistics/bayes-factor",
+    "target": "statistics/bayesian-statistics",
+    "label": "extends",
+    "description": "The Bayes factor is the operational tool for Bayesian model comparison — it applies Bayesian updating not to parameters within a model but to the models themselves, selecting the one best supported by the data."
+  },
+  {
+    "source": "statistics/bayes-factor",
+    "target": "statistics/p-value",
+    "label": "alternative to",
+    "description": "The Bayes factor is the Bayesian analogue of the p-value for hypothesis testing; unlike p-values, it can quantify evidence in favour of the null hypothesis and avoids the threshold-setting problem that leads to p-hacking in financial research."
+  },
+  {
+    "source": "statistics/bayesian-statistics",
+    "target": "portfolio-theory/black-litterman-model",
+    "label": "underpins",
+    "description": "The Black-Litterman model is a direct application of Bayesian statistics: investor views serve as a prior distribution, market equilibrium returns provide the likelihood, and the resulting posterior expected returns replace ad-hoc estimates in mean-variance optimisation."
+  },
+  {
+    "source": "statistics/bayesian-statistics",
+    "target": "probability/bayes-theorem",
+    "label": "extends",
+    "description": "Bayesian statistics applies Bayes' theorem not just to discrete events but to continuous parameter distributions, treating unknown model parameters as random variables to be updated as financial data accumulates."
+  },
+  {
+    "source": "statistics/bayesian-statistics",
+    "target": "probability/beta-distribution",
+    "label": "uses as prior",
+    "description": "The Beta distribution is the natural conjugate prior for a Bernoulli likelihood, so Bayesian inference on binary financial outcomes (win/loss, default/no-default) yields a Beta posterior closed in analytic form."
+  },
+  {
+    "source": "statistics/bayesian-statistics",
+    "target": "probability/normalisation-constant",
+    "label": "requires",
+    "description": "The marginal likelihood in Bayes' theorem acts as the normalisation constant that ensures the posterior integrates to one; in high-dimensional portfolio problems this integral is analytically intractable and must be approximated by MCMC."
+  },
+  {
     "source": "statistics/bessels-correction",
     "target": "statistics/sample-variance",
     "label": "defines",
@@ -12562,6 +14062,24 @@
     "target": "statistics/variance-and-standard-deviation",
     "label": "normalised by",
     "description": "The OLS beta estimator divides the covariance of asset and market returns by the market variance — this normalisation converts a covariance into a unitless sensitivity measure."
+  },
+  {
+    "source": "statistics/bootstrap-hypothesis-test",
+    "target": "portfolio-theory/sharpe-ratio",
+    "label": "used to test",
+    "description": "The bootstrap is the standard method for computing confidence intervals and p-values for the Sharpe ratio, whose exact sampling distribution is complex and depends on the skewness and kurtosis of the underlying returns."
+  },
+  {
+    "source": "statistics/bootstrap-hypothesis-test",
+    "target": "statistics/p-value",
+    "label": "produces non-parametric",
+    "description": "The bootstrap hypothesis test generates a p-value empirically from resampled data rather than from a parametric formula, making it valid for the fat-tailed, skewed return distributions common in finance where classical z- and t-test p-values are unreliable."
+  },
+  {
+    "source": "statistics/bootstrap-hypothesis-test",
+    "target": "statistics/statistical-power",
+    "label": "improves",
+    "description": "Bootstrap and permutation tests are generally more powerful than their parametric counterparts when the true distribution has heavier tails than assumed, because they do not lose power by using the wrong null distribution."
   },
   {
     "source": "statistics/box-plots",
@@ -12714,6 +14232,24 @@
     "description": "The covariance between two asset returns in continuous time is modelled via correlated Brownian motions — the instantaneous covariance ρσ₁σ₂ dt drives multi-asset pricing and hedging."
   },
   {
+    "source": "statistics/credible-interval",
+    "target": "risk/value-at-risk",
+    "label": "complements",
+    "description": "While VaR is a frequentist quantile of the loss distribution, a credible interval around a VaR estimate quantifies the Bayesian parameter uncertainty — directly informing whether the reported VaR could be materially wrong given limited historical data."
+  },
+  {
+    "source": "statistics/credible-interval",
+    "target": "statistics/a-priori-vs-a-posteriori",
+    "label": "arises from",
+    "description": "Credible intervals are purely a posteriori objects: they summarise the posterior distribution that results from combining the a priori prior with the likelihood of observed data, and have no meaning outside a Bayesian framework."
+  },
+  {
+    "source": "statistics/credible-interval",
+    "target": "statistics/bayesian-statistics",
+    "label": "produced by",
+    "description": "Credible intervals are the natural output of Bayesian parameter estimation: once the posterior distribution is computed, the credible interval is simply the region of highest posterior density at the chosen coverage level."
+  },
+  {
     "source": "statistics/critical-region",
     "target": "probability/binomial-distribution",
     "label": "computed from",
@@ -12780,6 +14316,42 @@
     "description": "Data snooping bias is corrected by multiple testing adjustments such as the Bonferroni correction and false discovery rate control, which raise the significance threshold to account for the number of tests performed."
   },
   {
+    "source": "statistics/deflated-sharpe-ratio",
+    "target": "portfolio-theory/sharpe-ratio",
+    "label": "adjusts for trials",
+    "description": "The DSR deflates the observed Sharpe ratio downward based on the number of strategies trialled and the skewness/kurtosis of returns, producing a probability that the true Sharpe exceeds a benchmark rather than accepting the reported figure at face value."
+  },
+  {
+    "source": "statistics/deflated-sharpe-ratio",
+    "target": "statistics/data-snooping-bias",
+    "label": "corrects for",
+    "description": "The Deflated Sharpe Ratio is the quantitative fix for data snooping bias in factor research — it deflates reported Sharpe ratios by the expected maximum under repeated testing, so that only strategies with genuine out-of-sample predictive power survive the adjustment."
+  },
+  {
+    "source": "statistics/deflated-sharpe-ratio",
+    "target": "statistics/multiple-testing-correction",
+    "label": "applies to Sharpe ratios",
+    "description": "The DSR applies multiple testing logic specifically to the Sharpe ratio selection problem, adjusting the significance threshold upward as more strategies are evaluated — analogous to Bonferroni or FDR correction but tailored to the maximum-Sharpe-over-N-trials scenario."
+  },
+  {
+    "source": "statistics/effect-size",
+    "target": "portfolio-theory/sharpe-ratio",
+    "label": "operationalised by",
+    "description": "The annualised Sharpe ratio is the finance-native effect size for a trading strategy — it is Cohen's d scaled to a one-year horizon and tells investors whether the strategy's excess return is large enough to survive transaction costs."
+  },
+  {
+    "source": "statistics/effect-size",
+    "target": "statistics/p-value",
+    "label": "complements",
+    "description": "Effect size and p-value answer different questions — the p-value tests whether an effect is real, the effect size measures how large it is — and reporting both is essential in backtesting to distinguish statistically significant but economically trivial factor returns from genuinely tradeable strategies."
+  },
+  {
+    "source": "statistics/effect-size",
+    "target": "statistics/statistical-power",
+    "label": "determines required",
+    "description": "The effect size is the key input to power calculations: a small effect size requires a much larger sample to detect reliably, which is why backtests of weak factors need many years of data to achieve adequate statistical power."
+  },
+  {
     "source": "statistics/egarch-model",
     "target": "statistics/arch-model",
     "label": "extends",
@@ -12796,6 +14368,24 @@
     "target": "volatility/volatility-smile",
     "label": "explains",
     "description": "The leverage effect captured by EGARCH — negative returns increasing volatility disproportionately — is a primary driver of the implied volatility skew observed in equity options."
+  },
+  {
+    "source": "statistics/empirical-bayes",
+    "target": "portfolio-theory/black-litterman-model",
+    "label": "underpins",
+    "description": "The Black-Litterman equilibrium prior is motivated by empirical Bayes logic: CAPM market weights provide a data-driven starting point for the prior mean, so the posterior portfolio weights shrink towards a diversified benchmark rather than towards an arbitrary subjective belief."
+  },
+  {
+    "source": "statistics/empirical-bayes",
+    "target": "statistics/bayesian-statistics",
+    "label": "extends",
+    "description": "Empirical Bayes retains the full Bayesian updating structure but removes the need for a subjectively specified prior by estimating prior hyperparameters from the marginal distribution of the data — bridging Bayesian and frequentist approaches."
+  },
+  {
+    "source": "statistics/empirical-bayes",
+    "target": "statistics/maximum-likelihood-estimation",
+    "label": "uses",
+    "description": "In empirical Bayes, prior hyperparameters are estimated by maximising the marginal likelihood — integrating out the latent parameters — which is called Type II maximum likelihood and connects the Bayesian hierarchical model to standard MLE."
   },
   {
     "source": "statistics/estimating-parameters",
@@ -13092,6 +14682,24 @@
     "description": "The U-shaped intraday volatility pattern is a specific, deterministic form of time-varying volatility: volatility is systematically higher at open and close rather than randomly clustered. Both phenomena invalidate the constant-volatility assumption and must be accounted for in intraday risk models."
   },
   {
+    "source": "statistics/james-stein-estimator",
+    "target": "portfolio-theory/mpt-in-practice",
+    "label": "improves inputs for",
+    "description": "Mean-variance optimisation is highly sensitive to estimation error in expected returns; the James–Stein estimator reduces this sensitivity by shrinking sample means towards a common target, directly addressing the error-maximisation critique of naive Markowitz portfolios."
+  },
+  {
+    "source": "statistics/james-stein-estimator",
+    "target": "statistics/empirical-bayes",
+    "label": "interpreted as",
+    "description": "The James–Stein estimator has an empirical Bayes interpretation: it is the posterior mean under a Normal prior whose hyperparameters are estimated from the data itself, connecting the frequentist shrinkage result to the Bayesian hierarchical framework."
+  },
+  {
+    "source": "statistics/james-stein-estimator",
+    "target": "statistics/shrinkage-estimators",
+    "label": "instance of",
+    "description": "The James–Stein estimator is the original and most theoretically motivated shrinkage estimator, establishing the inadmissibility of the sample mean in dimension three or higher and motivating the broader family of Ledoit–Wolf and ridge-type shrinkage methods."
+  },
+  {
     "source": "statistics/jarque-bera-test",
     "target": "probability/normal-distribution",
     "label": "tests for",
@@ -13308,6 +14916,24 @@
     "description": "Mann-Whitney handles two independent samples while Wilcoxon signed-rank handles one sample or paired data — together they cover the non-parametric equivalents of the one- and two-sample t-tests."
   },
   {
+    "source": "statistics/markov-chain-monte-carlo",
+    "target": "portfolio-theory/black-litterman-model",
+    "label": "used to calibrate",
+    "description": "When Black-Litterman views are expressed as full probability distributions rather than point estimates, MCMC can sample from the resulting posterior over expected returns, allowing uncertainty in investor views to propagate through to portfolio weights."
+  },
+  {
+    "source": "statistics/markov-chain-monte-carlo",
+    "target": "risk/monte-carlo-simulation",
+    "label": "related to",
+    "description": "Both MCMC and Monte Carlo simulation generate samples to approximate distributions, but their purposes differ: Monte Carlo simulates future scenarios for pricing and risk measurement, while MCMC samples from a posterior distribution for parameter estimation."
+  },
+  {
+    "source": "statistics/markov-chain-monte-carlo",
+    "target": "statistics/bayesian-statistics",
+    "label": "enables",
+    "description": "MCMC is the computational engine that makes Bayesian inference tractable in quantitative finance; when the posterior over model parameters has no closed form, MCMC approximates it by sampling, turning theoretical Bayesian updating into a practical calibration tool."
+  },
+  {
     "source": "statistics/maximum-likelihood-estimation",
     "target": "statistics/consistent-estimator",
     "label": "achieves",
@@ -13324,6 +14950,30 @@
     "target": "volatility/realised-volatility",
     "label": "estimates",
     "description": "Fitting a distribution to realised volatility data — to calibrate models for VaR, option pricing, or risk management — uses MLE to find the parameter values most consistent with observed returns."
+  },
+  {
+    "source": "statistics/measurement-error",
+    "target": "statistics/beta-estimation",
+    "label": "limits precision of",
+    "description": "Idiosyncratic return noise is the measurement error in CAPM beta estimation; a high residual variance relative to market return variation inflates the standard error of the estimated beta, which is why beta estimates carry wide confidence intervals even over multi-year windows."
+  },
+  {
+    "source": "statistics/measurement-error",
+    "target": "statistics/generalised-least-squares-regression",
+    "label": "motivates",
+    "description": "When the homoscedasticity or independence assumptions on the error term are violated — a common finding in financial return data — GLS extends OLS by explicitly modelling the error covariance structure, correcting the biased standard errors that OLS would otherwise produce."
+  },
+  {
+    "source": "statistics/measurement-error",
+    "target": "statistics/ordinary-least-squares-regression",
+    "label": "assumed by",
+    "description": "OLS regression is derived under the Gauss–Markov assumptions — zero-mean, homoscedastic, and independent error terms — making measurement error's classical properties the theoretical foundation that guarantees OLS is the best linear unbiased estimator."
+  },
+  {
+    "source": "statistics/measurement-error",
+    "target": "statistics/overfitting",
+    "label": "sets floor for",
+    "description": "The irreducible error variance sets a lower bound on mean squared prediction error that no model — however complex — can breach; understanding this floor is essential for correctly diagnosing overfitting versus irreducible noise in quantitative strategy research."
   },
   {
     "source": "statistics/mle-arch-models",
@@ -13360,6 +15010,30 @@
     "target": "statistics/type-i-and-type-ii-error",
     "label": "controls",
     "description": "Multiple testing corrections directly control the aggregate Type I error rate when many tests are performed — Bonferroni controls the family-wise error rate while Benjamini–Hochberg controls the false discovery rate."
+  },
+  {
+    "source": "statistics/normality-tests",
+    "target": "probability/fat-tailed-distributions",
+    "label": "detects need for",
+    "description": "When normality tests reject the null hypothesis for financial return data — as they almost always do — they signal that fat-tailed distributions (Student-t, stable, or Lévy) should replace the Gaussian assumption in pricing and risk models."
+  },
+  {
+    "source": "statistics/normality-tests",
+    "target": "risk/value-at-risk",
+    "label": "validates assumption of",
+    "description": "Parametric VaR assumes normally distributed returns; normality tests are the standard diagnostic that confirms or refutes this assumption before the VaR figure is reported to risk managers or regulators."
+  },
+  {
+    "source": "statistics/normality-tests",
+    "target": "statistics/jarque-bera-test",
+    "label": "includes",
+    "description": "The Jarque-Bera test is one member of the normality test family, specialised for large samples where skewness and kurtosis are the primary departures of interest — the normality tests card contextualises when JB should be preferred over Shapiro-Wilk or Anderson-Darling."
+  },
+  {
+    "source": "statistics/normality-tests",
+    "target": "statistics/qq-plot",
+    "label": "complements",
+    "description": "Normality tests provide a formal p-value for departing from normality while the QQ plot shows visually where the departure occurs — together they give both statistical evidence and diagnostic insight into the nature of non-normality in return distributions."
   },
   {
     "source": "statistics/one-tailed-and-two-tailed-tests",
@@ -13474,6 +15148,42 @@
     "target": "statistics/wilcoxon-signed-rank-test",
     "label": "parametric version of",
     "description": "The Wilcoxon signed-rank test is the non-parametric alternative to the paired t-test, used when the differences are not normally distributed — important for skewed or heavy-tailed return differences."
+  },
+  {
+    "source": "statistics/particle-filter",
+    "target": "statistics/kalman-filter",
+    "label": "generalises",
+    "description": "The Kalman filter is the special case of the particle filter when both the state transition and observation models are linear and Gaussian — in that case, the particle approximation converges to the exact Kalman update as the number of particles grows."
+  },
+  {
+    "source": "statistics/particle-filter",
+    "target": "statistics/sequential-bayesian-updating",
+    "label": "applies",
+    "description": "The particle filter is the computational implementation of sequential Bayesian updating for non-linear, non-Gaussian models — it replaces the analytic recursive update (which only exists for conjugate or linear-Gaussian models) with a Monte Carlo approximation."
+  },
+  {
+    "source": "statistics/particle-filter",
+    "target": "volatility/heston-model",
+    "label": "used to filter",
+    "description": "The Heston stochastic volatility model has a non-linear relationship between latent volatility and observed option prices, making the Kalman filter inapplicable — particle filters are used to track the latent volatility state in real time from market observations."
+  },
+  {
+    "source": "statistics/permutation-test",
+    "target": "statistics/bootstrap-hypothesis-test",
+    "label": "related to",
+    "description": "Permutation tests and bootstrap tests are both resampling-based alternatives to parametric hypothesis tests; they differ in mechanism — permutation reshuffles labels while bootstrap resamples with replacement — and are complementary tools for non-parametric inference in backtesting."
+  },
+  {
+    "source": "statistics/permutation-test",
+    "target": "statistics/multiple-testing-correction",
+    "label": "addresses via max-statistic",
+    "description": "The max-statistic permutation test corrects for multiple testing by applying the full model-selection procedure to each permuted dataset and recording the maximum statistic, producing a p-value that correctly accounts for the search over many candidate signals."
+  },
+  {
+    "source": "statistics/permutation-test",
+    "target": "statistics/p-value",
+    "label": "produces non-parametric",
+    "description": "The permutation test generates a p-value from the empirical distribution of the test statistic under label-shuffling, making it valid for any test statistic and any data distribution — including the non-normal, autocorrelated return series common in factor research."
   },
   {
     "source": "statistics/population-mean",
@@ -13636,6 +15346,24 @@
     "target": "stochastic-processes/growth-vs-volatility-timescales",
     "label": "contrasted in",
     "description": "Mean returns scale linearly with time while volatility scales with the square root — this asymmetry explains why drift dominates at long horizons but is invisible at short ones."
+  },
+  {
+    "source": "statistics/sequential-bayesian-updating",
+    "target": "probability/conjugate-prior",
+    "label": "tractable under",
+    "description": "Sequential Bayesian updating is analytically tractable only when the prior is conjugate to the likelihood — without conjugacy, each step requires numerical integration or particle filtering, which is far more expensive than the closed-form conjugate update."
+  },
+  {
+    "source": "statistics/sequential-bayesian-updating",
+    "target": "statistics/bayesian-statistics",
+    "label": "online form of",
+    "description": "Sequential Bayesian updating applies Bayesian inference recursively in a data stream, treating each posterior as the next prior — producing the same result as batch Bayesian inference but in $O(1)$ time per observation rather than $O(T)$ for the full dataset."
+  },
+  {
+    "source": "statistics/sequential-bayesian-updating",
+    "target": "statistics/kalman-filter",
+    "label": "specialised by",
+    "description": "The Kalman filter is the linear Gaussian special case of sequential Bayesian updating: when both the prior and likelihood are Normal, the recursive posterior update has an analytic closed form — the Kalman gain equation — making it the computationally efficient implementation for linear state-space models."
   },
   {
     "source": "statistics/shrinkage-estimators",
@@ -13906,6 +15634,24 @@
     "target": "volatility/realised-volatility",
     "label": "shapes dynamics of",
     "description": "Volatility clustering means realised volatility is autocorrelated — periods of high realised vol tend to persist, which any practical estimator or trading strategy must account for."
+  },
+  {
+    "source": "statistics/walk-forward-analysis",
+    "target": "statistics/cross-validation",
+    "label": "time-series version of",
+    "description": "Walk-forward analysis is cross-validation adapted for time-series data — the train/test split always respects temporal order to prevent future information leaking into the training window, unlike standard k-fold CV which shuffles observations randomly."
+  },
+  {
+    "source": "statistics/walk-forward-analysis",
+    "target": "statistics/deflated-sharpe-ratio",
+    "label": "pairs with",
+    "description": "Walk-forward analysis generates the out-of-sample return series needed to compute an unbiased Sharpe ratio, and the Deflated Sharpe Ratio then adjusts that figure for the number of parameter configurations tested during in-sample optimisation."
+  },
+  {
+    "source": "statistics/walk-forward-analysis",
+    "target": "statistics/permutation-test",
+    "label": "validated by",
+    "description": "After walk-forward analysis produces an out-of-sample return stream, a permutation test confirms whether the observed OOS Sharpe ratio is statistically significant or could have arisen by chance from the same daily returns in a different order."
   },
   {
     "source": "statistics/wilcoxon-signed-rank-test",
@@ -15048,6 +16794,30 @@
     "description": "Variance swaps are one of the cleanest instruments for expressing a long volatility view — buying variance delivers a pure bet that realised volatility will exceed the strike, without the path-dependency of delta-hedged options."
   },
   {
+    "source": "volatility/multifractal-models",
+    "target": "calculus/navier-stokes-equation",
+    "label": "inspired by",
+    "description": "Multifractal models of asset returns borrow Kolmogorov's energy cascade from fluid turbulence theory, which itself emerges from the nonlinear inertial terms in the Navier-Stokes equations at high Reynolds number."
+  },
+  {
+    "source": "volatility/multifractal-models",
+    "target": "calculus/reynolds-number",
+    "label": "connected via turbulence to",
+    "description": "Both multifractal models and the Reynolds number arise from the same physical phenomenon — fluid turbulence at high Re — and together represent how physicists translated turbulence theory into the statistical properties of financial return series."
+  },
+  {
+    "source": "volatility/multifractal-models",
+    "target": "probability/fat-tailed-distributions",
+    "label": "generates",
+    "description": "Multifractal scaling produces fat-tailed return distributions as an emergent property of the cascade structure: when volatility is itself a random, self-similar process, extreme returns occur far more frequently than a normal distribution predicts."
+  },
+  {
+    "source": "volatility/multifractal-models",
+    "target": "statistics/volatility-clustering",
+    "label": "explains",
+    "description": "The multifractal cascade mechanism provides a structural explanation for volatility clustering: large-scale shocks cascade down to short timescales, creating the long-memory autocorrelation in squared returns that GARCH captures parametrically."
+  },
+  {
     "source": "volatility/realised-volatility",
     "target": "risk/volatility-scaling",
     "label": "feeds into",
@@ -15148,6 +16918,24 @@
     "target": "volatility/volatility-smile",
     "label": "explains",
     "description": "Stochastic volatility models were developed specifically to explain the volatility smile — the correlation between asset returns and volatility shocks generates the strike-dependent implied volatility pattern that constant-volatility models cannot produce."
+  },
+  {
+    "source": "volatility/variance-gamma-model",
+    "target": "computational-finance/carr-madan-fft-pricing",
+    "label": "priced via",
+    "description": "The Variance Gamma model's closed-form characteristic function is a direct input to the Carr-Madan FFT algorithm, which prices the full option strip across all strikes in a single FFT pass — making VG calibration computationally tractable."
+  },
+  {
+    "source": "volatility/variance-gamma-model",
+    "target": "volatility/heston-model",
+    "label": "alternative to",
+    "description": "Both Variance Gamma and Heston are characteristic-function models that fit the implied volatility smile, but VG uses a Lévy time-change to generate fat tails and skew, while Heston achieves this through stochastic volatility — they have different term-structure dynamics."
+  },
+  {
+    "source": "volatility/variance-gamma-model",
+    "target": "volatility/volatility-smile",
+    "label": "explains",
+    "description": "By independently controlling skewness (via θ) and excess kurtosis (via ν), the Variance Gamma model fits the full implied volatility smile with three parameters, capturing the asymmetric tails that Black-Scholes cannot reproduce with a single constant volatility."
   },
   {
     "source": "volatility/variance-risk-premium",
@@ -15406,5 +17194,59 @@
     "target": "statistics/volatility-clustering",
     "label": "causes",
     "description": "The crisis shocks, leverage effect, and information flow dynamics described in why-volatility-changes are the economic mechanisms that produce the statistical phenomenon of volatility clustering observed in return time series."
+  },
+  {
+    "source": "computational-finance/feedforward-network",
+    "target": "computational-finance/backpropagation",
+    "label": "trained by",
+    "description": "Backpropagation is the algorithm that trains feedforward networks by computing the gradient of the loss with respect to every weight via the chain rule, propagating error signals backwards through the directed acyclic graph that defines the feedforward architecture."
+  },
+  {
+    "source": "computational-finance/feedforward-network",
+    "target": "computational-finance/activation-functions",
+    "label": "requires",
+    "description": "Without non-linear activation functions, any feedforward network collapses to a single linear transformation regardless of depth — activation functions are what give the feedforward architecture its capacity to approximate non-linear financial relationships."
+  },
+  {
+    "source": "computational-finance/feedforward-network",
+    "target": "computational-finance/lstm",
+    "label": "contrasts with",
+    "description": "The feedforward network treats each observation independently with no memory of previous inputs, while LSTM maintains hidden state across time steps — this distinction determines whether feedforward or recurrent architecture is appropriate for cross-sectional versus time-series problems in quantitative finance."
+  },
+  {
+    "source": "computational-finance/feedforward-network",
+    "target": "computational-finance/neural-networks",
+    "label": "instance of",
+    "description": "The feedforward network is the canonical instance of the general neural network concept, establishing the foundational layer-by-layer forward pass that all other architectures — convolutional, recurrent, transformer — modify or extend."
+  },
+  {
+    "source": "computational-finance/convolutional-neural-network",
+    "target": "computational-finance/feedforward-network",
+    "label": "extends",
+    "description": "A CNN is a specialised feedforward network where convolutional layers replace fully connected layers for inputs with local structure — all the feedforward principles (forward pass, backpropagation, activation functions) apply, but weight sharing makes it tractable for high-dimensional inputs like images."
+  },
+  {
+    "source": "computational-finance/convolutional-neural-network",
+    "target": "computational-finance/lstm",
+    "label": "contrasts with",
+    "description": "CNNs exploit local spatial structure via fixed-size filters and are suited to image-based alternative data; LSTMs exploit temporal ordering via gated memory and are suited to sequential financial time series — the two architectures address fundamentally different data geometries."
+  },
+  {
+    "source": "computational-finance/universal-approximation-theorem",
+    "target": "computational-finance/feedforward-network",
+    "label": "justifies",
+    "description": "The universal approximation theorem provides the theoretical guarantee that a feedforward network with sufficient width can represent any continuous function — it is the mathematical justification for using feedforward networks to approximate pricing functions and factor models in finance."
+  },
+  {
+    "source": "computational-finance/universal-approximation-theorem",
+    "target": "computational-finance/neural-networks",
+    "label": "motivates",
+    "description": "The universal approximation theorem is the central theoretical result motivating the use of neural networks in quantitative finance: it guarantees that no continuous financial relationship is, in principle, beyond the representational capacity of a sufficiently wide neural network."
+  },
+  {
+    "source": "computational-finance/universal-approximation-theorem",
+    "target": "computational-finance/activation-functions",
+    "label": "requires",
+    "description": "The universal approximation theorem holds only for non-constant, bounded activation functions — linear activation functions reduce the network to a linear map regardless of depth, and the theorem breaks down, making non-linearity a necessary condition for universal expressivity."
   }
 ]

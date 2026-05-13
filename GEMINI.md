@@ -1,5 +1,7 @@
 # GEMINI.md
 
+> This file contains Gemini-specific instructions. An equivalent file for Claude Code exists as `CLAUDE.md`. Both cover the same project but are tailored to their respective AI assistants.
+
 This file provides context and instructions for the **Quantitative Finance Flash Cards** project.
 
 ## Project Overview

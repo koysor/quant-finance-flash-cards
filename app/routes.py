@@ -29,7 +29,10 @@ the CSS custom property ``--tc`` set inline on elements.
 import json
 import re
 
-from flask import Blueprint, Response, abort, current_app, jsonify, redirect, render_template, request, session, url_for
+from flask import (
+    Blueprint, Response, abort, current_app, jsonify,
+    redirect, render_template, request, session, url_for,
+)
 from flask.typing import ResponseReturnValue
 
 from app.db import (
@@ -325,7 +328,10 @@ def remove_link(card_id: str) -> Response:
 
     edge_id = request.form.get("edge_id", "").strip()
     if edge_id:
-        delete_edge(int(edge_id))
+        try:
+            delete_edge(int(edge_id))
+        except ValueError:
+            abort(400)
         save_edges_to_file()
 
     return redirect(url_for("main.card_detail", card_id=card_id))

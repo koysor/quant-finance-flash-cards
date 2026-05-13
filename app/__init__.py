@@ -27,8 +27,11 @@ from app.routes import bp, TOPIC_COLOURS, _topic_colour
 def _load_json_config(path: str, default: Any) -> Any:
     """Load a JSON file and return its contents, or *default* if the file is absent."""
     if os.path.exists(path):
-        with open(path) as f:
-            return json.load(f)
+        try:
+            with open(path) as f:
+                return json.load(f)
+        except json.JSONDecodeError as e:
+            raise ValueError(f"Malformed JSON in {path}: {e}") from e
     return default
 
 
@@ -91,6 +94,9 @@ def create_app() -> Flask:
         csrf_token
             A per-session random hex token checked on every POST request.
         """
+        # These two queries run on every request. At current scale (~900 cards) the
+        # cost is negligible, but if the card count grows substantially consider
+        # caching with a short TTL (e.g. flask_caching or a module-level dict).
         cards = get_all_cards()
         stats = get_site_stats()
         search_data = json.dumps([

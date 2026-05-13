@@ -29,14 +29,13 @@ Create a single `.md` file in `cards/<topic>/`. The filename becomes part of the
 
 ### Required format
 
-Every card must contain all four metadata fields and all four sections, in this exact order:
+Every card must contain all three metadata fields and all four sections, in this exact order:
 
 ```markdown
 # Concept Name
 
 **Topic:** Derivatives
 **Tags:** tag1, tag2, tag3
-**Created:** YYYY-MM-DD
 **Author:** <Your Name or AI model>
 
 ---
@@ -75,6 +74,8 @@ Every card must contain all four metadata fields and all four sections, in this 
 A typo here will create a new topic with the default grey colour. To add a genuinely new topic, add an entry to `TOPIC_COLOURS` in `app/routes.py` at the same time.
 
 **`**Tags:**`** is a comma-separated list of lowercase tags used for filtering, e.g. `options, Greeks, delta, gamma`. Tags appear in the filter strip on the index page.
+
+> **Note on creation date:** There is no `**Created:**` metadata field. The `/recent` page derives each card's creation date automatically from the file's modification time (`st_mtime`). You do not need to add a date — just commit the file and the timestamp is set.
 
 ### Section content rules
 

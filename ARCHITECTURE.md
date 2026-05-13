@@ -86,7 +86,7 @@ app.register_blueprint(bp)
 # context_processor → injects topic_colour(), search_data_json, site_stats, csrf_token
 ```
 
-The context processor runs on every request and queries `get_all_cards()` + `get_site_stats()`. Given the current card count and SQLite, this is negligible; if the card count grows substantially, results should be cached.
+The context processor runs on every request and queries `get_all_cards()` + `get_site_stats()` — two SQLite round-trips per page render. Given the current card count (~900) and single-process dev server, this is negligible. If the card count grows substantially or multi-worker deployment is introduced, results should be cached (e.g. with `flask_caching` or a module-level dict with a short TTL).
 
 ### 5. Routes — `app/routes.py`
 
