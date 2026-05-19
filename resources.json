@@ -3307,6 +3307,28 @@
       }
     ]
   },
+  "computational-finance/distribution-shift": {
+    "websites": [
+      {
+        "title": "Wikipedia — Dataset Shift",
+        "url": "https://en.wikipedia.org/wiki/Dataset_shift"
+      },
+      {
+        "title": "Wikipedia — Concept Drift",
+        "url": "https://en.wikipedia.org/wiki/Concept_drift"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Distribution Shift in Machine Learning — Andrej Karpathy Lecture",
+        "url": "https://www.youtube.com/watch?v=ue81oWSdHSU"
+      },
+      {
+        "title": "Covariate Shift and Domain Adaptation — MIT 6.S191",
+        "url": "https://www.youtube.com/watch?v=njKP3FqW3Sk"
+      }
+    ]
+  },
   "computational-finance/doc2vec": {
     "websites": [
       {
@@ -4603,6 +4625,28 @@
       }
     ]
   },
+  "computational-finance/multi-head-attention": {
+    "websites": [
+      {
+        "title": "The Illustrated Transformer — Jay Alammar",
+        "url": "https://jalammar.github.io/illustrated-transformer/"
+      },
+      {
+        "title": "Attention Is All You Need — Original Paper (arXiv)",
+        "url": "https://arxiv.org/abs/1706.03762"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Attention in Transformers, Visually Explained — 3Blue1Brown",
+        "url": "https://www.youtube.com/watch?v=eMlx5fFNoYc"
+      },
+      {
+        "title": "Transformer Neural Networks — StatQuest with Josh Starmer",
+        "url": "https://www.youtube.com/watch?v=zxQyTK8quyY"
+      }
+    ]
+  },
   "computational-finance/multilevel-monte-carlo": {
     "websites": [
       {
@@ -4910,6 +4954,28 @@
       {
         "title": "SciPy Documentation — scipy.optimize.minimize",
         "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html"
+      }
+    ]
+  },
+  "computational-finance/positional-encoding": {
+    "websites": [
+      {
+        "title": "The Illustrated Transformer — Jay Alammar",
+        "url": "https://jalammar.github.io/illustrated-transformer/"
+      },
+      {
+        "title": "Attention Is All You Need — Original Paper (arXiv)",
+        "url": "https://arxiv.org/abs/1706.03762"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Positional Encoding in Transformers — Computerphile",
+        "url": "https://www.youtube.com/watch?v=1biZfFLPRSY"
+      },
+      {
+        "title": "But what is a GPT? Visual intro to transformers — 3Blue1Brown",
+        "url": "https://www.youtube.com/watch?v=wjZofJX0v4M"
       }
     ]
   },

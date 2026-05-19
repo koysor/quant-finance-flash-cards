@@ -3811,6 +3811,12 @@
   },
   {
     "source": "computational-finance/bert",
+    "target": "computational-finance/multi-head-attention",
+    "label": "implements",
+    "description": "BERT stacks 12 transformer encoder layers each containing 12-head attention, giving the model 144 distinct attention patterns; the diversity of these learned patterns is why BERT representations are richer and more context-sensitive than earlier word embedding methods."
+  },
+  {
+    "source": "computational-finance/bert",
     "target": "computational-finance/transfer-learning",
     "label": "exemplifies",
     "description": "BERT is the canonical demonstration of transfer learning in NLP: weights pre-trained on billions of words are frozen or lightly updated when fine-tuning on a small labelled financial dataset, achieving accuracy that dwarfs models trained from scratch."
@@ -4212,6 +4218,24 @@
     "description": "KNN relies entirely on distance in feature space to identify the K nearest training points — the Euclidean metric is the default, but Manhattan or cosine similarity are used in financial contexts where outlier robustness or directionality matters."
   },
   {
+    "source": "computational-finance/distribution-shift",
+    "target": "computational-finance/generalisation-gap",
+    "label": "causes",
+    "description": "Distribution shift widens the generalisation gap in production: even a model with a small train-validation gap at training time will exhibit large live performance degradation if market conditions shift, because the validation data was drawn from the same historical regime as the training data."
+  },
+  {
+    "source": "computational-finance/distribution-shift",
+    "target": "computational-finance/look-ahead-bias",
+    "label": "distinct from",
+    "description": "Distribution shift and look-ahead bias are two separate sources of backtest failure: look-ahead bias contaminates training with future data, whilst distribution shift means the historical distribution itself is no longer representative of live conditions — a model can be look-ahead-free and still fail due to regime change."
+  },
+  {
+    "source": "computational-finance/distribution-shift",
+    "target": "computational-finance/time-series-cross-validation",
+    "label": "motivates",
+    "description": "Walk-forward time-series cross-validation is the primary technique for detecting and mitigating distribution shift in financial models — by evaluating the model on consecutive out-of-sample windows, practitioners can observe whether predictive performance degrades as the data distribution evolves."
+  },
+  {
     "source": "computational-finance/doc2vec",
     "target": "computational-finance/cosine-similarity",
     "label": "compared via",
@@ -4273,15 +4297,15 @@
   },
   {
     "source": "computational-finance/early-stopping",
-    "target": "computational-finance/hyperparameter",
-    "label": "implicit type of",
-    "description": "Early stopping acts as a regularisation hyperparameter: the patience value determines effective model complexity, and like all hyperparameters it must be chosen via held-out validation data from a later time period than the training set to avoid look-ahead bias."
-  },
-  {
-    "source": "computational-finance/early-stopping",
     "target": "computational-finance/bert",
     "label": "prevents forgetting in",
     "description": "Fine-tuning BERT without early stopping causes catastrophic forgetting — the model overwrites general language knowledge with patterns from a small financial dataset, degrading performance on new earnings releases outside the training regime."
+  },
+  {
+    "source": "computational-finance/early-stopping",
+    "target": "computational-finance/hyperparameter",
+    "label": "implicit type of",
+    "description": "Early stopping acts as a regularisation hyperparameter: the patience value determines effective model complexity, and like all hyperparameters it must be chosen via held-out validation data from a later time period than the training set to avoid look-ahead bias."
   },
   {
     "source": "computational-finance/elastic-net",
@@ -5089,15 +5113,15 @@
   },
   {
     "source": "computational-finance/layer-normalisation",
-    "target": "computational-finance/transformer",
-    "label": "stabilises",
-    "description": "Every Transformer sub-layer (multi-head attention and feed-forward) is followed by an Add & Norm block that applies a residual connection then LayerNorm, preventing gradient explosion or vanishing across the 12 or more layers needed to process financial text at scale."
-  },
-  {
-    "source": "computational-finance/layer-normalisation",
     "target": "computational-finance/bert",
     "label": "enables training of",
     "description": "LayerNorm is an architectural prerequisite for BERT's stability: without it, the 12-layer bidirectional encoder would suffer from gradient degradation during pre-training on billions of tokens, making FinBERT fine-tuning on labelled financial sentiment data impossible."
+  },
+  {
+    "source": "computational-finance/layer-normalisation",
+    "target": "computational-finance/transformer",
+    "label": "stabilises",
+    "description": "Every Transformer sub-layer (multi-head attention and feed-forward) is followed by an Add & Norm block that applies a residual connection then LayerNorm, preventing gradient explosion or vanishing across the 12 or more layers needed to process financial text at scale."
   },
   {
     "source": "computational-finance/leaky-relu",
@@ -5490,6 +5514,12 @@
     "description": "The Python simulation discretises the GBM SDE into log-normal increments — each column of the random matrix is one realisation of the geometric Brownian motion path from t=0 to T."
   },
   {
+    "source": "computational-finance/multi-head-attention",
+    "target": "computational-finance/attention-mechanism",
+    "label": "extends",
+    "description": "Multi-head attention parallelises H independent scaled dot-product attention operations and concatenates their outputs, extending single-head attention to capture diverse linguistic relationships simultaneously — such as syntactic structure and semantic similarity in the same forward pass."
+  },
+  {
     "source": "computational-finance/multilevel-monte-carlo",
     "target": "computational-finance/monte-carlo-greeks",
     "label": "pairs with",
@@ -5527,6 +5557,12 @@
   },
   {
     "source": "computational-finance/named-entity-recognition",
+    "target": "computational-finance/alternative-data",
+    "label": "generates",
+    "description": "NER transforms raw text into structured entity tables — firms, prices, dates — creating a queryable alternative-data asset from millions of press releases and filings that would otherwise be inaccessible to systematic trading strategies."
+  },
+  {
+    "source": "computational-finance/named-entity-recognition",
     "target": "computational-finance/bert",
     "label": "fine-tuned for",
     "description": "NER is a canonical BERT fine-tuning task: BERT's contextual token embeddings are passed through a linear classification head trained with cross-entropy to assign BIO labels, yielding state-of-the-art entity extraction from financial text."
@@ -5536,12 +5572,6 @@
     "target": "computational-finance/natural-language-processing",
     "label": "applied in",
     "description": "NER is a core NLP sub-task that converts unstructured financial text — earnings releases, analyst reports, regulatory filings — into structured entity data (company names, monetary values, dates) that downstream quantitative models can consume."
-  },
-  {
-    "source": "computational-finance/named-entity-recognition",
-    "target": "computational-finance/alternative-data",
-    "label": "generates",
-    "description": "NER transforms raw text into structured entity tables — firms, prices, dates — creating a queryable alternative-data asset from millions of press releases and filings that would otherwise be inaccessible to systematic trading strategies."
   },
   {
     "source": "computational-finance/natural-language-processing",
@@ -5776,6 +5806,24 @@
     "target": "portfolio-theory/modern-portfolio-theory",
     "label": "implements",
     "description": "SciPy's constrained optimiser is the practical tool for implementing Markowitz mean-variance optimisation — it finds the optimal asset weights that modern portfolio theory defines analytically but which require numerical methods for real-world portfolios with many assets and constraints."
+  },
+  {
+    "source": "computational-finance/positional-encoding",
+    "target": "computational-finance/attention-mechanism",
+    "label": "complements",
+    "description": "Positional encoding and attention are complementary: attention provides content-based routing between any two tokens, whilst positional encoding gives the model the raw material to route based on position — together they enable context-sensitive, order-aware sequence modelling."
+  },
+  {
+    "source": "computational-finance/positional-encoding",
+    "target": "computational-finance/tokenisation",
+    "label": "applied after",
+    "description": "Positional encodings are added to token embeddings immediately after tokenisation and embedding lookup, before the first attention layer — the final input to the transformer is the sum of the semantic embedding and the positional encoding vector for each token."
+  },
+  {
+    "source": "computational-finance/positional-encoding",
+    "target": "computational-finance/transformer",
+    "label": "required by",
+    "description": "Transformers are permutation-invariant by design — attention scores depend only on content, not position — so positional encoding is the essential mechanism that injects sequence order into the model, enabling it to distinguish 'revenue grew' from 'grew revenue'."
   },
   {
     "source": "computational-finance/principal-component-regression",
@@ -6562,6 +6610,12 @@
     "target": "computational-finance/finbert",
     "label": "backbone of",
     "description": "FinBERT's weights are initialised from a transformer (BERT) pre-trained on general English; the transformer backbone provides the contextual representations that make FinBERT sensitive to financial language nuance."
+  },
+  {
+    "source": "computational-finance/transformer",
+    "target": "computational-finance/multi-head-attention",
+    "label": "built from",
+    "description": "Every transformer layer consists of a multi-head attention sublayer followed by a feedforward sublayer — multi-head attention is the core computational primitive of the transformer architecture, responsible for all token-to-token information routing."
   },
   {
     "source": "computational-finance/transformer",
@@ -16912,6 +16966,12 @@
     "target": "probability/standardised-normal-variable",
     "label": "compares against",
     "description": "A normal Q-Q plot compares sample quantiles against theoretical quantiles of Z ~ N(0,1), using the standardised normal variable as the reference distribution."
+  },
+  {
+    "source": "statistics/regime-switching",
+    "target": "computational-finance/distribution-shift",
+    "label": "induces",
+    "description": "Regime switches — from risk-on to risk-off, from low to high volatility — are the primary cause of distribution shift in financial models, because the statistical relationship between features and returns changes across regimes, rendering models trained in one regime unreliable in another."
   },
   {
     "source": "statistics/regime-switching",
