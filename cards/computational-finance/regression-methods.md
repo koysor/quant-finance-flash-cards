@@ -1,7 +1,8 @@
 # Regression Methods
 
 **Topic:** Computational Finance
-**Tags:** regression, supervised learning, prediction, factor model, OLS, regularisation
+**Tags:** regression, supervised learning, prediction, factor model, ols, regularisation
+**Created:** 2026-05-18
 **Author:** Claude Sonnet 4.6
 
 ---

@@ -1,7 +1,7 @@
 # Convolutional Neural Network (CNN)
 
 **Topic:** Computational Finance
-**Tags:** convolutional neural network, CNN, filters, feature extraction, alternative data, image recognition
+**Tags:** convolutional neural network, cnn, filters, feature extraction, alternative data, image recognition
 **Created:** 2026-04-26
 **Author:** Claude Sonnet 4.6
 

@@ -1,7 +1,7 @@
 # Naive Bayes Classifier
 
 **Topic:** Computational Finance
-**Tags:** naive bayes, classification, bayes theorem, conditional independence, fraud detection, NLP
+**Tags:** naive bayes, classification, bayes theorem, conditional independence, fraud detection, nlp
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

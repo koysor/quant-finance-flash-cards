@@ -1,7 +1,7 @@
 # ROC Curve and AUC
 
 **Topic:** Computational Finance
-**Tags:** ROC, AUC, classification, threshold, sensitivity, credit scoring
+**Tags:** roc, auc, classification, threshold, sensitivity, credit scoring
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

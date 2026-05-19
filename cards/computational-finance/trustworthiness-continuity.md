@@ -1,7 +1,7 @@
 # Trustworthiness and Continuity
 
 **Topic:** Computational Finance
-**Tags:** trustworthiness, continuity, embedding quality, t-sne, umap, nearest neighbours, dimensionality reduction
+**Tags:** trustworthiness, continuity, embedding quality, t-sne, umap, dimensionality reduction
 **Created:** 2026-05-13
 **Author:** Claude Sonnet 4.6
 

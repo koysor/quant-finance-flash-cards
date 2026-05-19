@@ -1,7 +1,7 @@
 # Maximum Likelihood Estimation
 
 **Topic:** Computational Finance
-**Tags:** MLE, likelihood, parameter estimation, log-likelihood, calibration, statistical inference
+**Tags:** mle, likelihood, parameter estimation, log-likelihood, calibration, statistical inference
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

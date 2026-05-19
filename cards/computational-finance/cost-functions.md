@@ -1,7 +1,7 @@
 # Cost Functions
 
 **Topic:** Computational Finance
-**Tags:** cost function, loss function, MSE, cross-entropy, MLE, model calibration
+**Tags:** cost function, loss function, mse, cross-entropy, mle, model calibration
 **Created:** 2026-04-22
 **Author:** Claude Sonnet 4.6
 

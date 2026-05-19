@@ -1,7 +1,7 @@
 # Semidefinite Programming (SDP)
 
 **Topic:** Computational Finance
-**Tags:** semidefinite programming, SDP, convex optimisation, positive semidefinite, covariance estimation, factor model
+**Tags:** semidefinite programming, sdp, convex optimisation, positive semidefinite, covariance estimation, factor model
 **Created:** 2026-04-25
 **Author:** Claude Sonnet 4.6
 

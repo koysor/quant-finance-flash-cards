@@ -1,7 +1,7 @@
 # Multilevel Monte Carlo
 
 **Topic:** Computational Finance
-**Tags:** monte carlo, variance reduction, MLMC, simulation, path-dependent, computational efficiency
+**Tags:** monte carlo, variance reduction, mlmc, simulation, path-dependent, computational efficiency
 **Created:** 2026-04-19
 **Author:** Claude Sonnet 4.6
 

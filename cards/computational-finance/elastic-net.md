@@ -1,7 +1,7 @@
 # ElasticNet
 
 **Topic:** Computational Finance
-**Tags:** elastic net, regularisation, lasso, ridge, l1, l2, sparse regression
+**Tags:** elastic net, regularisation, lasso, ridge, l1, l2
 **Created:** 2026-05-13
 **Author:** Claude Sonnet 4.6
 

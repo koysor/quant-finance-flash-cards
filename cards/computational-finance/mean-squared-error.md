@@ -1,7 +1,7 @@
 # Mean Squared Error
 
 **Topic:** Computational Finance
-**Tags:** MSE, cost function, loss function, regression, convex optimisation, OLS
+**Tags:** mse, cost function, loss function, regression, convex optimisation, ols
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

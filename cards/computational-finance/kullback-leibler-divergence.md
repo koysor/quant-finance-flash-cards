@@ -49,6 +49,6 @@ KL divergence has three distinct roles in quantitative finance:
 
 1. **Model risk quantification** — the KL divergence between the physical measure $P$ and a risk-neutral pricing measure $Q$ quantifies the information gap between the real-world and the model's hedging assumptions. Large $D_{\text{KL}}(P \| Q)$ flags model risk: the model is encoding data under the wrong distribution, which manifests as hedging errors and mispriced tail risks.
 
-2. **Measure change (Girsanov's theorem)** — changing from $P$ to $Q$ in continuous-time finance is governed by the Radon-Nikodym derivative, which is directly related to $D_{\text{KL}}$. The KL divergence between $P$ and $Q$ penalises how far the risk-neutral measure is from the real-world measure — minimum-entropy (relative entropy) methods choose the pricing measure closest to $P$ whilst being consistent with observed prices.
+2. **Measure change (Girsanov's theorem)** — the Radon-Nikodym derivative governing the $P$-to-$Q$ change is directly linked to $D_{\text{KL}}$. Minimum-entropy methods choose the pricing measure closest to $P$ whilst fitting observed prices.
 
 3. **Regularisation in portfolio optimisation** — KL divergence from a reference portfolio (e.g. the market-cap index) is used as a penalty term to prevent overfit concentrated positions, analogously to how L2 regularisation penalises coefficient size in regression.

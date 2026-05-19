@@ -1,7 +1,7 @@
 # Soft Margin SVM
 
 **Topic:** Computational Finance
-**Tags:** svm, soft margin, slack variables, regularisation, C parameter, classification
+**Tags:** svm, soft margin, slack variables, regularisation, c parameter, classification
 **Created:** 2026-04-25
 **Author:** Claude Sonnet 4.6
 

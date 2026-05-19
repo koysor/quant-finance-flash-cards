@@ -1,7 +1,7 @@
 # Log-Loss (Cross-Entropy Loss)
 
 **Topic:** Computational Finance
-**Tags:** log-loss, cross-entropy, cost function, logistic regression, MLE, classification
+**Tags:** log-loss, cross-entropy, cost function, logistic regression, mle, classification
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

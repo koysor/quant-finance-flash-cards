@@ -1,7 +1,7 @@
 # Linear Regression
 
 **Topic:** Computational Finance
-**Tags:** linear regression, OLS, least squares, factor model, beta, supervised learning
+**Tags:** linear regression, ols, least squares, factor model, beta, supervised learning
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

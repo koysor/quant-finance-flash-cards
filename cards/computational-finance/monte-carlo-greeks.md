@@ -1,7 +1,7 @@
 # Monte Carlo Greeks
 
 **Topic:** Computational Finance
-**Tags:** python, monte carlo, greeks, pathwise, likelihood ratio, sensitivities, hedging
+**Tags:** monte carlo, greeks, pathwise, likelihood ratio, sensitivities, hedging
 **Created:** 2026-04-19
 **Author:** Claude Sonnet 4.6
 

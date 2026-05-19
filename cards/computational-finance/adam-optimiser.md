@@ -1,7 +1,7 @@
 # Adam Optimiser
 
 **Topic:** Computational Finance
-**Tags:** Adam, optimiser, adaptive learning rate, momentum, gradient descent, deep learning
+**Tags:** adam, optimiser, adaptive learning rate, momentum, gradient descent, deep learning
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

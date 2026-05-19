@@ -1,7 +1,7 @@
 # Attention Mechanism
 
 **Topic:** Computational Finance
-**Tags:** attention, transformer, self-attention, NLP, sequence modelling, deep learning
+**Tags:** attention, transformer, self-attention, nlp, sequence modelling, deep learning
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

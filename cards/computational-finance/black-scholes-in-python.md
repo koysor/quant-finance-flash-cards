@@ -1,7 +1,7 @@
 # Black-Scholes Implementation in Python
 
 **Topic:** Computational Finance
-**Tags:** python, Black-Scholes, option pricing, scipy, vectorisation, greeks
+**Tags:** python, black-scholes, option pricing, scipy, vectorisation, greeks
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6
 

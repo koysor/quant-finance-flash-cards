@@ -1,7 +1,7 @@
 # Second-Order Cone Programming (SOCP)
 
 **Topic:** Computational Finance
-**Tags:** SOCP, convex optimisation, robust portfolio, conic programme, quadratic constraint, tractable
+**Tags:** socp, convex optimisation, robust portfolio, conic programme, quadratic constraint, tractable
 **Created:** 2026-04-25
 **Author:** Claude Sonnet 4.6
 

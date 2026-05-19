@@ -41,6 +41,6 @@ Representative vectors are the backbone of **alternative data NLP pipelines** in
 
 - **Sentiment direction**: the vector difference $\phi(\text{"beat"}) - \phi(\text{"miss"})$ points in the direction of positive earnings surprise — projecting a document vector onto this direction gives a continuous sentiment score.
 - **Asset embeddings**: analogous to word embeddings, assets can be embedded using co-movement patterns; stocks that frequently move together have high cosine similarity, enabling data-driven sector classification without predefined labels.
-- **Regime centroids**: k-means on return vectors produces $K$ representative vectors (centroids) — each is the "average" market state for that regime and can be used to classify new days by finding the nearest centroid.
+- **Regime centroids**: k-means on return vectors produces $K$ centroids — each is the average market state for that regime, used to classify new days by nearest-centroid lookup.
 
-The key insight is that by choosing a good embedding, complex discrete objects become points in a continuous space where standard ML tools (distance metrics, clustering, regression) apply directly.
+The key insight: a good embedding maps discrete objects to a continuous space where standard ML tools — distance metrics, clustering, regression — apply directly.

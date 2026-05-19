@@ -39,4 +39,4 @@ In quantitative finance, poor initialisation of SOM or k-means weight vectors is
 2. Using **k-means++ seeding**, which guarantees the initial random representatives are spread across the feature space, dramatically reducing sensitivity to the random start
 3. Using **PCA-based initialisation** for SOMs — placing the initial weight vectors along the first two principal components of the data, which directly embeds prior knowledge of the main variance directions (e.g., risk-on/risk-off and duration exposure)
 
-The principle generalises: any ML model with randomly initialised parameters (neural network weights, k-means centroids, SOM nodes) is only as good as its eventual escape from poor random starting conditions.
+The principle generalises: any model with random initialisation is only as good as its escape from poor starting conditions.

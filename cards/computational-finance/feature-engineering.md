@@ -1,7 +1,7 @@
 # Feature Engineering
 
 **Topic:** Computational Finance
-**Tags:** feature engineering, feature selection, signal construction, factor, data preprocessing, ML pipeline
+**Tags:** feature engineering, feature selection, signal construction, factor, data preprocessing, ml pipeline
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

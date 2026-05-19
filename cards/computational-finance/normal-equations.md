@@ -1,7 +1,7 @@
 # Normal Equations
 
 **Topic:** Computational Finance
-**Tags:** normal equations, OLS, linear regression, closed-form, matrix inversion, factor model
+**Tags:** normal equations, ols, linear regression, closed-form, matrix inversion, factor model
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

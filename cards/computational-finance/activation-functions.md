@@ -1,7 +1,7 @@
 # Activation Functions
 
 **Topic:** Computational Finance
-**Tags:** activation function, ReLU, sigmoid, neural networks, non-linearity, deep learning
+**Tags:** activation function, relu, sigmoid, neural networks, non-linearity, deep learning
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

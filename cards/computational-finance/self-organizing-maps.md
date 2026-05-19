@@ -1,7 +1,7 @@
 # Self-Organizing Maps
 
 **Topic:** Computational Finance
-**Tags:** SOM, unsupervised learning, dimensionality reduction, clustering, visualisation, regime detection
+**Tags:** som, unsupervised learning, dimensionality reduction, clustering, visualisation, regime detection
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

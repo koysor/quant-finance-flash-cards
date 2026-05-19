@@ -1,7 +1,7 @@
 # Transfer Learning
 
 **Topic:** Computational Finance
-**Tags:** transfer learning, fine-tuning, pre-trained model, NLP, deep learning, domain adaptation
+**Tags:** transfer learning, fine-tuning, pre-trained model, nlp, deep learning, domain adaptation
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

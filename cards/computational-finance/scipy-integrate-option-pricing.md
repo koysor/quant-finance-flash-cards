@@ -1,7 +1,7 @@
 # scipy.integrate for Option Pricing
 
 **Topic:** Computational Finance
-**Tags:** python, scipy, numerical integration, characteristic function, Heston, option pricing
+**Tags:** python, scipy, numerical integration, characteristic function, heston, option pricing
 **Created:** 2026-04-19
 **Author:** Claude Sonnet 4.6
 

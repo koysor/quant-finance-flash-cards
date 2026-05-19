@@ -1,7 +1,7 @@
 # Stochastic Gradient Descent
 
 **Topic:** Computational Finance
-**Tags:** SGD, mini-batch, optimisation, gradient descent, online learning, neural networks
+**Tags:** sgd, mini-batch, optimisation, gradient descent, online learning, neural networks
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

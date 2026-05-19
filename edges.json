@@ -3534,6 +3534,30 @@
     "description": "A-level vectors introduce the dot product and magnitude in 2D/3D; the dot-product-and-norms card extends these to n-dimensional spaces and connects them to the matrix inner product used in portfolio analysis."
   },
   {
+    "source": "computational-finance/accuracy-paradox",
+    "target": "computational-finance/confusion-matrix",
+    "label": "motivates",
+    "description": "The accuracy paradox demonstrates why raw accuracy from the confusion matrix is insufficient for imbalanced datasets, motivating the use of Precision, Recall, and F1 Score as primary evaluation metrics."
+  },
+  {
+    "source": "computational-finance/accuracy-paradox",
+    "target": "computational-finance/f1-score",
+    "label": "remedied by",
+    "description": "The accuracy paradox on imbalanced datasets is directly remedied by reporting F1 score instead of accuracy, since F1 is dominated by the lower of Precision and Recall and cannot be inflated by predicting the majority class."
+  },
+  {
+    "source": "computational-finance/accuracy-paradox",
+    "target": "computational-finance/log-loss",
+    "label": "contrasts with",
+    "description": "Log-loss penalises overconfident wrong predictions proportionally, making it robust to class imbalance in contrast to raw accuracy which rewards majority-class bias."
+  },
+  {
+    "source": "computational-finance/accuracy-paradox",
+    "target": "computational-finance/roc-curve-and-auc",
+    "label": "resolved by",
+    "description": "AUC-ROC provides a threshold-independent measure of classifier performance that is insensitive to class imbalance, making it the standard alternative when the accuracy paradox renders raw accuracy misleading."
+  },
+  {
     "source": "computational-finance/activation-functions",
     "target": "computational-finance/backpropagation",
     "label": "must be differentiable for",
@@ -3574,6 +3598,24 @@
     "target": "computational-finance/stochastic-gradient-descent",
     "label": "improves on",
     "description": "Adam adds per-parameter momentum and adaptive scaling to vanilla SGD, addressing two key failure modes: slow convergence due to uniform learning rates and sensitivity to noisy gradients in sparse or high-variance feature directions."
+  },
+  {
+    "source": "computational-finance/alternative-data",
+    "target": "computational-finance/feature-engineering",
+    "label": "requires",
+    "description": "Raw alternative data (satellite images, transaction feeds, web scrapes) must be processed through feature engineering pipelines to convert them into structured numerical signals suitable for ML models."
+  },
+  {
+    "source": "computational-finance/alternative-data",
+    "target": "computational-finance/information-coefficient",
+    "label": "evaluated by",
+    "description": "Alternative data signals are evaluated using the IC between predicted and realised returns to determine whether the data source generates genuine alpha beyond what is available from traditional data."
+  },
+  {
+    "source": "computational-finance/alternative-data",
+    "target": "computational-finance/natural-language-processing",
+    "label": "processed via",
+    "description": "Text-based alternative data sources (earnings call transcripts, news articles, social media) require NLP pipelines to extract structured signals from unstructured language."
   },
   {
     "source": "computational-finance/analytic-vs-numeric-solution",
@@ -3630,6 +3672,36 @@
     "description": "Attention scores are dot products between query and key vectors, scaled by the square root of the key dimension to prevent large magnitudes saturating the softmax — making the dot product the core arithmetic operation of modern language models."
   },
   {
+    "source": "computational-finance/autoencoders",
+    "target": "computational-finance/neural-networks",
+    "label": "built from",
+    "description": "An autoencoder is a neural network with a bottleneck architecture — the encoder and decoder are standard feedforward networks, with the bottleneck layer's dimension being the key hyperparameter controlling compression."
+  },
+  {
+    "source": "computational-finance/autoencoders",
+    "target": "computational-finance/reconstruction-error-threshold",
+    "label": "produces signal for",
+    "description": "The autoencoder's reconstruction MSE is the raw anomaly signal that the threshold converts into a binary flag; calibrating the threshold is the operational step that makes an autoencoder usable for market surveillance."
+  },
+  {
+    "source": "computational-finance/autoencoders",
+    "target": "computational-finance/t-sne",
+    "label": "compared to",
+    "description": "Both autoencoders and t-SNE produce low-dimensional representations of financial data, but autoencoders learn a parametric mapping that supports out-of-sample inference whilst t-SNE produces a non-parametric embedding requiring full retraining on new data."
+  },
+  {
+    "source": "computational-finance/autoencoders",
+    "target": "computational-finance/unsupervised-learning",
+    "label": "instance of",
+    "description": "Autoencoders are an unsupervised learning method because they train purely on reconstruction error without labelled targets, learning latent representations of market data that capture the dominant structure of the return distribution."
+  },
+  {
+    "source": "computational-finance/autoencoders",
+    "target": "statistics/principal-component-analysis",
+    "label": "non-linear version of",
+    "description": "Autoencoders are the non-linear generalisation of PCA — both minimise reconstruction error from a low-dimensional representation, but PCA is constrained to linear projections whilst autoencoders use deep networks to learn non-linear manifold structure."
+  },
+  {
     "source": "computational-finance/automatic-differentiation",
     "target": "computational-finance/backpropagation",
     "label": "generalises",
@@ -3652,6 +3724,12 @@
     "target": "computational-finance/lstm",
     "label": "trains via BPTT",
     "description": "LSTMs are trained using backpropagation through time (BPTT), the temporal extension of standard backpropagation that unrolls the network across timesteps and computes gradients through the gate operations."
+  },
+  {
+    "source": "computational-finance/backpropagation",
+    "target": "computational-finance/neural-network-optimisers",
+    "label": "provides gradients for",
+    "description": "Backpropagation computes the gradient of the loss with respect to every weight; the optimiser then uses those gradients to update the weights according to its specific update rule (SGD, Adam, RMSProp)."
   },
   {
     "source": "computational-finance/batch-normalisation",
@@ -3678,6 +3756,72 @@
     "description": "Batch normalisation statistics are computed per mini-batch during SGD training, meaning the normalisation itself is stochastic — this introduces regularisation noise similar to dropout and helps the network generalise beyond the training distribution."
   },
   {
+    "source": "computational-finance/batch-size",
+    "target": "computational-finance/hyperparameter",
+    "label": "type of",
+    "description": "Batch size is a training hyperparameter that must be chosen before model fitting; unlike weights, it cannot be learned by gradient descent because changing it alters the gradient estimator itself rather than the loss surface."
+  },
+  {
+    "source": "computational-finance/batch-size",
+    "target": "computational-finance/layer-normalisation",
+    "label": "motivates",
+    "description": "LayerNorm was developed partly to overcome batch normalisation's dependence on batch size: when batches are small (as in NLP sequence tasks), batch statistics are noisy and normalisation degrades — LayerNorm normalises per-example and is invariant to batch size."
+  },
+  {
+    "source": "computational-finance/bayes-optimal-classifier",
+    "target": "computational-finance/bias-variance-trade-off",
+    "label": "bounds",
+    "description": "The Bayes error rate is the irreducible lower bound on classifier error; the bias-variance decomposition then explains the additional error from model misspecification and finite training data."
+  },
+  {
+    "source": "computational-finance/bayes-optimal-classifier",
+    "target": "computational-finance/logistic-regression",
+    "label": "approximated by",
+    "description": "Logistic regression approximates the Bayes optimal decision boundary under the assumption that the log-odds are linear in the features, making it the standard practical realisation of the Bayes classifier in credit scoring."
+  },
+  {
+    "source": "computational-finance/bayes-optimal-classifier",
+    "target": "computational-finance/naive-bayes-classifier",
+    "label": "approximated by",
+    "description": "Naive Bayes approximates the Bayes optimal classifier by assuming conditional independence of features given the class, which makes the posterior tractable at the cost of modelling accuracy."
+  },
+  {
+    "source": "computational-finance/bayesian-optimisation",
+    "target": "computational-finance/hyperparameter",
+    "label": "searches over",
+    "description": "Bayesian optimisation is the principled method for selecting hyperparameter values: it builds a Gaussian Process surrogate of the validation loss surface and queries the next configuration where expected improvement is highest, finding near-optimal hyperparameters in far fewer evaluations than grid search."
+  },
+  {
+    "source": "computational-finance/bayesian-optimisation",
+    "target": "computational-finance/hyperparameter-tuning",
+    "label": "more efficient than",
+    "description": "Bayesian optimisation outperforms grid and random search when each training run is expensive — as with gradient-boosted or deep learning models trained on financial time series — because it uses past evaluations to focus search on promising hyperparameter regions rather than sampling blindly."
+  },
+  {
+    "source": "computational-finance/bert",
+    "target": "computational-finance/attention-mechanism",
+    "label": "built on",
+    "description": "BERT stacks 12 bidirectional transformer layers each using multi-head self-attention, allowing every token to attend to every other token simultaneously — this is the mechanism that gives BERT its contextual representations."
+  },
+  {
+    "source": "computational-finance/bert",
+    "target": "computational-finance/finbert",
+    "label": "fine-tuned to create",
+    "description": "FinBERT is created by fine-tuning BERT's pre-trained weights on labelled financial text, inheriting BERT's bidirectional contextual representations and adapting them to domain-specific financial sentiment and terminology."
+  },
+  {
+    "source": "computational-finance/bert",
+    "target": "computational-finance/transfer-learning",
+    "label": "exemplifies",
+    "description": "BERT is the canonical demonstration of transfer learning in NLP: weights pre-trained on billions of words are frozen or lightly updated when fine-tuning on a small labelled financial dataset, achieving accuracy that dwarfs models trained from scratch."
+  },
+  {
+    "source": "computational-finance/bert",
+    "target": "computational-finance/transformer",
+    "label": "instance of",
+    "description": "BERT is an encoder-only transformer — it uses the transformer's multi-head self-attention blocks but omits the decoder half, making it optimised for understanding tasks (classification, extraction) rather than generation tasks (text completion)."
+  },
+  {
     "source": "computational-finance/best-matching-unit",
     "target": "computational-finance/distance-metrics",
     "label": "computed via",
@@ -3694,6 +3838,12 @@
     "target": "computational-finance/representative-vectors",
     "label": "selects from",
     "description": "The BMU search selects the most relevant representative vector (prototype) for a given input, linking the abstract concept of vector representation to the concrete operation of finding the nearest analogue in historical financial data."
+  },
+  {
+    "source": "computational-finance/beta-vae",
+    "target": "computational-finance/variational-autoencoder",
+    "label": "extends",
+    "description": "Beta-VAE extends the standard VAE by scaling the KL regularisation term by β > 1, enforcing statistical independence between latent dimensions to produce interpretable, disentangled factor representations."
   },
   {
     "source": "computational-finance/bias-variance-trade-off",
@@ -3750,6 +3900,48 @@
     "description": "The Heston model's characteristic function is the standard input to the Carr-Madan algorithm — Heston calibration was one of the original motivating applications, and the FFT approach makes it fast enough for live market-making."
   },
   {
+    "source": "computational-finance/classification-loss-functions",
+    "target": "computational-finance/hard-margin-svm",
+    "label": "optimised by",
+    "description": "Hard-margin SVMs minimise hinge loss subject to a margin constraint — the hinge loss's property of ignoring correctly-classified points beyond the margin creates the sparse support-vector solution."
+  },
+  {
+    "source": "computational-finance/classification-loss-functions",
+    "target": "computational-finance/log-loss",
+    "label": "includes",
+    "description": "Log-loss (binary cross-entropy) is the specific classification loss function minimised by logistic regression, and is one of the three canonical losses alongside hinge and zero-one covered in the broader taxonomy."
+  },
+  {
+    "source": "computational-finance/co-occurrence-matrix",
+    "target": "computational-finance/glove",
+    "label": "factorised by",
+    "description": "GloVe is built directly on the co-occurrence matrix: it trains word vectors so that their dot product approximates the log co-occurrence count, making the co-occurrence matrix the explicit data source that GloVe factorises."
+  },
+  {
+    "source": "computational-finance/co-occurrence-matrix",
+    "target": "computational-finance/natural-language-processing",
+    "label": "foundation of",
+    "description": "The co-occurrence matrix is a foundational corpus representation in NLP, encoding global word-pair statistics that underpin both classical distributional methods (PPMI) and modern embedding algorithms (GloVe) used in financial text analysis."
+  },
+  {
+    "source": "computational-finance/co-occurrence-matrix",
+    "target": "computational-finance/tf-idf",
+    "label": "contrasted with",
+    "description": "TF-IDF and co-occurrence matrices both summarise word frequencies, but TF-IDF tracks each word's importance within individual documents while the co-occurrence matrix tracks pairwise word association across the entire corpus."
+  },
+  {
+    "source": "computational-finance/co-occurrence-matrix",
+    "target": "computational-finance/word2vec",
+    "label": "global alternative to",
+    "description": "The co-occurrence matrix makes word-pair statistics explicit and global — GloVe directly factorises it — whereas Word2Vec implicitly captures the same information by training on local context windows without ever materialising the full matrix."
+  },
+  {
+    "source": "computational-finance/confusion-matrix",
+    "target": "computational-finance/f1-score",
+    "label": "summarised by",
+    "description": "The F1 score reduces the four confusion matrix cells to a single balanced metric by taking the harmonic mean of Precision and Recall, making it the standard headline figure for imbalanced financial classification tasks."
+  },
+  {
     "source": "computational-finance/confusion-matrix",
     "target": "computational-finance/logistic-regression",
     "label": "evaluates",
@@ -3768,10 +3960,76 @@
     "description": "VaR backtesting counts exceptions (losses exceeding the model threshold) in the same spirit as a confusion matrix counts misclassifications — both assess how well a model's predicted boundary matches realised outcomes."
   },
   {
+    "source": "computational-finance/contrastive-learning",
+    "target": "computational-finance/autoencoders",
+    "label": "alternative to",
+    "description": "Contrastive learning and autoencoder representation learning are both self-supervised approaches; contrastive methods directly optimise neighbourhood structure whilst autoencoders optimise reconstruction fidelity, producing different embedding geometries for regime detection."
+  },
+  {
+    "source": "computational-finance/contrastive-learning",
+    "target": "computational-finance/embedding-quality-metrics",
+    "label": "evaluated by",
+    "description": "Embeddings from contrastive pre-training are assessed using CPD and KNN preservation to verify that the learned representation faithfully reflects high-dimensional regime structure before being used for downstream classification."
+  },
+  {
+    "source": "computational-finance/convolutional-neural-network",
+    "target": "computational-finance/feedforward-network",
+    "label": "extends",
+    "description": "A CNN is a specialised feedforward network where convolutional layers replace fully connected layers for inputs with local structure — all the feedforward principles (forward pass, backpropagation, activation functions) apply, but weight sharing makes it tractable for high-dimensional inputs like images."
+  },
+  {
+    "source": "computational-finance/convolutional-neural-network",
+    "target": "computational-finance/lstm",
+    "label": "contrasts with",
+    "description": "CNNs exploit local spatial structure via fixed-size filters and are suited to image-based alternative data; LSTMs exploit temporal ordering via gated memory and are suited to sequential financial time series — the two architectures address fundamentally different data geometries."
+  },
+  {
+    "source": "computational-finance/correlation-distance-matrix",
+    "target": "computational-finance/hierarchical-clustering",
+    "label": "input to",
+    "description": "The correlation distance matrix is the standard pairwise distance input for hierarchical clustering of financial assets, converting return correlations into a valid metric that satisfies the triangle inequality required for dendrogram construction."
+  },
+  {
+    "source": "computational-finance/correlation-distance-matrix",
+    "target": "statistics/correlation",
+    "label": "derived from",
+    "description": "The correlation distance d = sqrt(2(1-rho)) is a monotone transformation of the Pearson correlation coefficient that converts it from a similarity measure in [-1,1] into a proper metric satisfying the triangle inequality."
+  },
+  {
+    "source": "computational-finance/cosine-similarity",
+    "target": "computational-finance/distance-metrics",
+    "label": "extends",
+    "description": "Cosine similarity is an angle-based distance metric that complements Euclidean and Manhattan distances — unlike those magnitude-sensitive measures, cosine similarity is scale-invariant, making it the preferred choice for comparing document embeddings of different lengths."
+  },
+  {
+    "source": "computational-finance/cosine-similarity",
+    "target": "computational-finance/glove",
+    "label": "measures similarity in",
+    "description": "Cosine similarity is the standard metric for retrieving nearest-neighbour words in GloVe embedding space and for evaluating whether two financial documents (e.g. two 10-K filings) discuss similar topics."
+  },
+  {
+    "source": "computational-finance/cosine-similarity",
+    "target": "computational-finance/representative-vectors",
+    "label": "compares",
+    "description": "Cosine similarity is the primary operation performed on representative vectors (embeddings) in financial NLP: it converts two high-dimensional word or document vectors into a single interpretable score of semantic closeness."
+  },
+  {
+    "source": "computational-finance/cosine-similarity",
+    "target": "computational-finance/word2vec",
+    "label": "evaluates",
+    "description": "Cosine similarity is used both to evaluate Word2Vec embedding quality (do semantically similar financial terms have high cosine similarity?) and operationally to build sentiment axes and find analogous historical market episodes."
+  },
+  {
     "source": "computational-finance/cost-function-minimisation",
     "target": "computational-finance/cost-functions",
     "label": "operates on",
     "description": "Cost function minimisation is the process that acts on a cost function to find optimal parameters; the choice of cost function (MSE, cross-entropy) determines the statistical assumptions, while the minimisation procedure finds the parameters that satisfy them."
+  },
+  {
+    "source": "computational-finance/cost-function-minimisation",
+    "target": "computational-finance/entropy-minimisation",
+    "label": "specialises to",
+    "description": "Cross-entropy loss is a specific instance of the general cost function minimisation framework: the gradient is computed, stationarity conditions are checked, and gradient descent drives the classifier to a low-loss solution — entropy minimisation is cost function minimisation applied to probabilistic classifiers."
   },
   {
     "source": "computational-finance/cost-function-minimisation",
@@ -3786,10 +4044,10 @@
     "description": "The normal equations are the closed-form analytical solution to the OLS cost function minimisation problem, obtained by setting the gradient of MSE to zero and solving the resulting linear system — valid whenever the Gram matrix is invertible."
   },
   {
-    "source": "computational-finance/cost-function-minimisation",
-    "target": "computational-finance/entropy-minimisation",
-    "label": "specialises to",
-    "description": "Cross-entropy loss is a specific instance of the general cost function minimisation framework: the gradient is computed, stationarity conditions are checked, and gradient descent drives the classifier to a low-loss solution — entropy minimisation is cost function minimisation applied to probabilistic classifiers."
+    "source": "computational-finance/cost-functions",
+    "target": "computational-finance/classification-loss-functions",
+    "label": "specialised by",
+    "description": "Classification loss functions are the subset of the general cost-function family tailored to discrete class labels, with the margin formulation replacing the squared residual used in regression."
   },
   {
     "source": "computational-finance/cost-functions",
@@ -3816,6 +4074,18 @@
     "description": "MSE is the cost function used for regression tasks such as calibrating a stochastic volatility model to market prices — minimising MSE is equivalent to MLE under a Gaussian error model, and it is convex and differentiable everywhere."
   },
   {
+    "source": "computational-finance/covers-theorem",
+    "target": "computational-finance/curse-of-dimensionality",
+    "label": "contrasts with",
+    "description": "Cover's theorem and the curse of dimensionality are two faces of high-dimensional geometry: Cover's theorem shows that more dimensions make classification easier by enabling linear separability, while the curse shows they make density estimation and distance metrics harder."
+  },
+  {
+    "source": "computational-finance/covers-theorem",
+    "target": "computational-finance/kernel-trick",
+    "label": "justifies",
+    "description": "Cover's theorem provides the principled rationale for the kernel trick: mapping financial features into a high-dimensional space via a kernel function will make most non-linearly-separable classification problems linearly separable, guaranteeing the existence of the separating hyperplane that SVMs seek."
+  },
+  {
     "source": "computational-finance/cpp-in-quantitative-finance",
     "target": "computational-finance/automatic-differentiation",
     "label": "used to implement",
@@ -3834,6 +4104,24 @@
     "description": "Sub-microsecond execution latency in HFT strategies requires C++: its compiled execution, zero-overhead abstractions, and direct memory control allow the full order-generation loop to complete within the sub-microsecond window that HFT demands."
   },
   {
+    "source": "computational-finance/crowding-problem",
+    "target": "computational-finance/curse-of-dimensionality",
+    "label": "caused by",
+    "description": "The crowding problem is a direct consequence of the curse of dimensionality: in high-dimensional spaces, volume concentrates on the surface of hyperspheres so all pairwise distances become approximately equal, leaving no room to represent them faithfully in 2-D."
+  },
+  {
+    "source": "computational-finance/crowding-problem",
+    "target": "computational-finance/manifold-hypothesis",
+    "label": "is consequence of ignoring",
+    "description": "The crowding problem arises precisely because naive projection methods ignore the manifold structure of high-dimensional data; acknowledging that data lies on a low-dimensional manifold motivates the heavy-tailed corrections that t-SNE applies."
+  },
+  {
+    "source": "computational-finance/crowding-problem",
+    "target": "computational-finance/t-sne",
+    "label": "solved by",
+    "description": "t-SNE was specifically designed to solve the crowding problem by using a heavy-tailed Student-t distribution in low-dimensional space, which provides more room for moderately-distant points to spread apart and reveal cluster structure."
+  },
+  {
     "source": "computational-finance/curse-of-dimensionality",
     "target": "computational-finance/k-nearest-neighbours",
     "label": "degrades",
@@ -3850,6 +4138,42 @@
     "target": "linear-algebra/eigenvalues-and-eigenvectors",
     "label": "mitigated via PCA using",
     "description": "Principal Component Analysis uses the eigendecomposition of the covariance matrix to project high-dimensional data onto the lower-dimensional subspace of maximum variance, directly addressing the curse of dimensionality by discarding noise dimensions."
+  },
+  {
+    "source": "computational-finance/data-normalisation",
+    "target": "computational-finance/elastic-net",
+    "label": "required by",
+    "description": "Elastic net and all L1/L2-penalised regression methods require standardised inputs because the penalty term treats all coefficients symmetrically — without scaling, features with larger numerical ranges receive smaller estimated coefficients and lighter effective regularisation."
+  },
+  {
+    "source": "computational-finance/data-normalisation",
+    "target": "computational-finance/feature-engineering",
+    "label": "follows",
+    "description": "Data normalisation is applied after feature engineering to ensure that constructed signals on different scales (returns, volumes, spreads) are comparable before being fed into distance-sensitive models."
+  },
+  {
+    "source": "computational-finance/data-normalisation",
+    "target": "computational-finance/look-ahead-bias",
+    "label": "vulnerable to",
+    "description": "Fitting a scaler on the full dataset before the train/test split causes look-ahead bias by incorporating future mean and variance into the normalisation of historical training data."
+  },
+  {
+    "source": "computational-finance/decision-threshold",
+    "target": "computational-finance/confusion-matrix",
+    "label": "controls",
+    "description": "Changing the decision threshold shifts all four confusion matrix cells — raising the threshold increases Precision and reduces Recall, whilst lowering it does the opposite — directly changing the cost profile of the model."
+  },
+  {
+    "source": "computational-finance/decision-threshold",
+    "target": "computational-finance/f1-score",
+    "label": "optimises",
+    "description": "The optimal decision threshold can be found by selecting the value that maximises F1 score (or F-beta) on a validation set, balancing Precision and Recall according to the relative cost of False Positives and False Negatives."
+  },
+  {
+    "source": "computational-finance/decision-threshold",
+    "target": "computational-finance/roc-curve-and-auc",
+    "label": "selected from",
+    "description": "The ROC curve traces out Recall versus False Positive Rate as the decision threshold varies, providing the information needed to select the threshold that minimises the business cost of classification errors."
   },
   {
     "source": "computational-finance/decision-trees",
@@ -3888,6 +4212,30 @@
     "description": "KNN relies entirely on distance in feature space to identify the K nearest training points — the Euclidean metric is the default, but Manhattan or cosine similarity are used in financial contexts where outlier robustness or directionality matters."
   },
   {
+    "source": "computational-finance/doc2vec",
+    "target": "computational-finance/cosine-similarity",
+    "label": "compared via",
+    "description": "Doc2Vec document embeddings are compared using cosine similarity to identify the most semantically similar historical filings, enabling nearest-neighbour retrieval across large corpora of 10-Ks and earnings transcripts."
+  },
+  {
+    "source": "computational-finance/doc2vec",
+    "target": "computational-finance/natural-language-processing",
+    "label": "applied in",
+    "description": "Doc2Vec is a document-level NLP embedding technique used in quantitative finance to convert entire filings or transcripts into a single dense vector for direct similarity comparison and downstream classification tasks."
+  },
+  {
+    "source": "computational-finance/doc2vec",
+    "target": "computational-finance/representative-vectors",
+    "label": "produces",
+    "description": "Doc2Vec produces a representative vector for each document — a compressed encoding that captures paragraph-level semantics and enables arithmetic comparisons between annual reports, prospectuses, and regulatory filings."
+  },
+  {
+    "source": "computational-finance/doc2vec",
+    "target": "computational-finance/word2vec",
+    "label": "extends",
+    "description": "Doc2Vec extends Word2Vec from word-level to document-level embeddings by adding a trainable paragraph ID vector to the prediction context, enabling full-document representations that word averaging cannot capture."
+  },
+  {
     "source": "computational-finance/dropout",
     "target": "computational-finance/bias-variance-trade-off",
     "label": "reduces variance via",
@@ -3910,6 +4258,102 @@
     "target": "statistics/regularisation",
     "label": "neural network alternative to",
     "description": "Ridge and LASSO penalise the magnitude of weights to control overfitting in linear models; dropout achieves a similar regularisation effect in deep networks by randomly zeroing activations rather than adding an explicit weight penalty to the loss function."
+  },
+  {
+    "source": "computational-finance/dynamic-time-warping",
+    "target": "computational-finance/contrastive-learning",
+    "label": "informs positive pairs for",
+    "description": "DTW distance is the natural metric for constructing positive pairs in contrastive learning over financial time series, allowing phase-shifted versions of the same regime period to be treated as similar without requiring exact date alignment."
+  },
+  {
+    "source": "computational-finance/dynamic-time-warping",
+    "target": "computational-finance/t-sne",
+    "label": "provides distance for",
+    "description": "DTW distances between financial time series can replace Euclidean distances as the input pairwise distance matrix for t-SNE, producing regime maps that correctly group phase-shifted crisis episodes rather than separating them into distinct clusters."
+  },
+  {
+    "source": "computational-finance/early-stopping",
+    "target": "computational-finance/hyperparameter",
+    "label": "implicit type of",
+    "description": "Early stopping acts as a regularisation hyperparameter: the patience value determines effective model complexity, and like all hyperparameters it must be chosen via held-out validation data from a later time period than the training set to avoid look-ahead bias."
+  },
+  {
+    "source": "computational-finance/early-stopping",
+    "target": "computational-finance/bert",
+    "label": "prevents forgetting in",
+    "description": "Fine-tuning BERT without early stopping causes catastrophic forgetting — the model overwrites general language knowledge with patterns from a small financial dataset, degrading performance on new earnings releases outside the training regime."
+  },
+  {
+    "source": "computational-finance/elastic-net",
+    "target": "computational-finance/hyperparameter-tuning",
+    "label": "parameterised by",
+    "description": "ElasticNet has two hyperparameters to tune via cross-validation — the regularisation strength λ and the mixing parameter α — making hyperparameter search essential to extract its advantages over simpler Ridge or LASSO alternatives."
+  },
+  {
+    "source": "computational-finance/elastic-net",
+    "target": "computational-finance/regression-methods",
+    "label": "variant of",
+    "description": "ElasticNet is a regularised regression variant that sits between Ridge and LASSO — it is the most flexible linear method when features arrive in correlated clusters, as is common in factor model construction."
+  },
+  {
+    "source": "computational-finance/elastic-net",
+    "target": "statistics/regularisation",
+    "label": "extends",
+    "description": "ElasticNet extends the standard Ridge/LASSO framework by combining both penalties with a mixing parameter α, providing a tunable dial between Ridge's grouped shrinkage and LASSO's sparse feature selection."
+  },
+  {
+    "source": "computational-finance/elbow-method",
+    "target": "computational-finance/hyperparameter-tuning",
+    "label": "instance of",
+    "description": "Choosing K in clustering is a form of hyperparameter tuning — the elbow and silhouette methods are the unsupervised analogues of cross-validated model selection, applied when there is no labelled target to optimise."
+  },
+  {
+    "source": "computational-finance/elbow-method",
+    "target": "computational-finance/k-means-clustering",
+    "label": "selects K for",
+    "description": "The elbow method and silhouette score are the standard diagnostic tools for choosing the optimal number of clusters K in K-Means, preventing both under-clustering (too few regimes) and over-clustering (meaningless fragmentation)."
+  },
+  {
+    "source": "computational-finance/embedding-quality-metrics",
+    "target": "computational-finance/t-sne",
+    "label": "evaluates",
+    "description": "CPD and KNN preservation are the standard metrics for assessing t-SNE embedding quality, used to choose the optimal perplexity hyperparameter and to validate that the 2-D regime map faithfully represents the original high-dimensional market structure."
+  },
+  {
+    "source": "computational-finance/embedding-quality-metrics",
+    "target": "computational-finance/trustworthiness-continuity",
+    "label": "extended by",
+    "description": "Trustworthiness and continuity refine the KNN preservation metric by distinguishing between false neighbours introduced by the embedding and true neighbours that were lost — failure modes that a single KNN score cannot separate."
+  },
+  {
+    "source": "computational-finance/embedding-quality-metrics",
+    "target": "computational-finance/umap",
+    "label": "evaluates",
+    "description": "Embedding quality metrics are used to compare UMAP against t-SNE and to tune n_neighbors — UMAP typically scores higher on CPD (global structure) whilst t-SNE scores higher on KNN preservation (local structure)."
+  },
+  {
+    "source": "computational-finance/embedding-quality-metrics",
+    "target": "statistics/spearmans-rank-correlation",
+    "label": "uses",
+    "description": "The CPD metric is computed as the Spearman rank correlation between pairwise distances in high-D and low-D space, making it robust to non-linear distance scaling and insensitive to the absolute distance magnitudes."
+  },
+  {
+    "source": "computational-finance/encoder-decoder",
+    "target": "computational-finance/attention-mechanism",
+    "label": "enhanced by",
+    "description": "Adding an attention mechanism to the encoder-decoder allows the decoder to selectively weight encoder hidden states at each output step, resolving the bottleneck where a single fixed context vector must represent the entire input history."
+  },
+  {
+    "source": "computational-finance/encoder-decoder",
+    "target": "computational-finance/autoencoders",
+    "label": "related to",
+    "description": "Both encoder-decoders and autoencoders share the encode-to-latent-then-decode structure; the autoencoder reconstructs its own input in an unsupervised setting whilst the encoder-decoder maps from one sequence to a different output sequence in a supervised setting."
+  },
+  {
+    "source": "computational-finance/encoder-decoder",
+    "target": "computational-finance/gated-recurrent-unit",
+    "label": "implemented with",
+    "description": "GRUs are commonly used as the building blocks of encoder-decoder architectures for financial time series forecasting, providing multi-step-ahead coherent predictions with fewer parameters than LSTM-based seq2seq models."
   },
   {
     "source": "computational-finance/ensemble-methods",
@@ -3978,6 +4422,12 @@
     "description": "Cross-entropy loss minimisation is equivalent to minimising KL divergence between predicted and true distributions — entropy minimisation is the practical training algorithm that implements the KL divergence concept from information theory in ML classifiers used for default probability estimation."
   },
   {
+    "source": "computational-finance/f1-score",
+    "target": "computational-finance/roc-curve-and-auc",
+    "label": "complements",
+    "description": "F1 score evaluates classifier performance at a fixed threshold whilst AUC-ROC evaluates rank ordering across all thresholds — together they give both threshold-specific and threshold-independent views of model quality."
+  },
+  {
     "source": "computational-finance/feature-engineering",
     "target": "computational-finance/curse-of-dimensionality",
     "label": "mitigates",
@@ -4000,6 +4450,30 @@
     "target": "statistics/correlation",
     "label": "uses for selection",
     "description": "Correlation analysis is the standard tool for identifying and removing redundant features during feature selection — high pairwise correlation between features indicates multicollinearity that can destabilise model coefficients."
+  },
+  {
+    "source": "computational-finance/feature-selection",
+    "target": "computational-finance/bias-variance-trade-off",
+    "label": "reduces overfitting via",
+    "description": "Feature selection reduces variance by removing noisy or irrelevant predictors from the model, directly addressing the overfitting side of the bias-variance tradeoff — fewer features means less sensitivity to idiosyncrasies in the training data."
+  },
+  {
+    "source": "computational-finance/feature-selection",
+    "target": "computational-finance/curse-of-dimensionality",
+    "label": "mitigates",
+    "description": "Feature selection is the primary tool for combating the curse of dimensionality in financial ML — by reducing the effective feature space to only predictive signals, it ensures model complexity stays proportionate to the number of available training observations."
+  },
+  {
+    "source": "computational-finance/feature-selection",
+    "target": "computational-finance/recursive-feature-elimination",
+    "label": "includes",
+    "description": "RFE is the canonical wrapper-family method within the feature selection taxonomy, where the model's own coefficient ranking drives the elimination sequence rather than a model-independent filter criterion."
+  },
+  {
+    "source": "computational-finance/feature-selection",
+    "target": "statistics/regularisation",
+    "label": "embedded via",
+    "description": "LASSO regularisation is the most widely used embedded feature selection method in quantitative finance — it simultaneously fits the model and zeroes out irrelevant coefficients, combining factor selection and estimation in a single pass."
   },
   {
     "source": "computational-finance/feature-vector",
@@ -4026,6 +4500,78 @@
     "description": "KNN classifies a new observation by finding the K training feature vectors closest to it in feature space; without a well-constructed and normalised feature vector, distance comparisons are meaningless and classification accuracy collapses."
   },
   {
+    "source": "computational-finance/feedforward-network",
+    "target": "computational-finance/activation-functions",
+    "label": "requires",
+    "description": "Without non-linear activation functions, any feedforward network collapses to a single linear transformation regardless of depth — activation functions are what give the feedforward architecture its capacity to approximate non-linear financial relationships."
+  },
+  {
+    "source": "computational-finance/feedforward-network",
+    "target": "computational-finance/backpropagation",
+    "label": "trained by",
+    "description": "Backpropagation is the algorithm that trains feedforward networks by computing the gradient of the loss with respect to every weight via the chain rule, propagating error signals backwards through the directed acyclic graph that defines the feedforward architecture."
+  },
+  {
+    "source": "computational-finance/feedforward-network",
+    "target": "computational-finance/lstm",
+    "label": "contrasts with",
+    "description": "The feedforward network treats each observation independently with no memory of previous inputs, while LSTM maintains hidden state across time steps — this distinction determines whether feedforward or recurrent architecture is appropriate for cross-sectional versus time-series problems in quantitative finance."
+  },
+  {
+    "source": "computational-finance/feedforward-network",
+    "target": "computational-finance/neural-networks",
+    "label": "instance of",
+    "description": "The feedforward network is the canonical instance of the general neural network concept, establishing the foundational layer-by-layer forward pass that all other architectures — convolutional, recurrent, transformer — modify or extend."
+  },
+  {
+    "source": "computational-finance/finbert",
+    "target": "computational-finance/attention-mechanism",
+    "label": "built on",
+    "description": "FinBERT's transformer layers use multi-head self-attention to read each word in the context of all surrounding words simultaneously, enabling it to correctly interpret domain-specific financial phrases and negation that lexicon-based tools miss."
+  },
+  {
+    "source": "computational-finance/finbert",
+    "target": "computational-finance/loughran-mcdonald-sentiment",
+    "label": "supersedes for context",
+    "description": "FinBERT supersedes the L&M lexicon for tasks requiring contextual understanding — L&M counts word occurrences independently, while FinBERT's bidirectional attention correctly handles 'not improving' as negative and 'raised guidance' as positive."
+  },
+  {
+    "source": "computational-finance/finbert",
+    "target": "computational-finance/natural-language-processing",
+    "label": "state of the art for",
+    "description": "FinBERT is the state-of-the-art model for financial NLP sentiment tasks, replacing bag-of-words approaches (TF-IDF, Loughran-McDonald) with deep contextual embeddings that achieve higher accuracy on earnings call and 10-K sentiment benchmarks."
+  },
+  {
+    "source": "computational-finance/finbert",
+    "target": "computational-finance/transfer-learning",
+    "label": "example of",
+    "description": "FinBERT demonstrates the transfer learning paradigm in finance: BERT's weights, pre-trained on general English, are fine-tuned on a financial corpus so the model retains broad language understanding while acquiring domain-specific financial sentiment knowledge."
+  },
+  {
+    "source": "computational-finance/gap-statistic",
+    "target": "computational-finance/elbow-method",
+    "label": "improves on",
+    "description": "The gap statistic provides a statistically principled alternative to the elbow method's visual heuristic, using a null reference distribution to determine whether observed cluster structure is significantly better than random."
+  },
+  {
+    "source": "computational-finance/gap-statistic",
+    "target": "computational-finance/k-means-clustering",
+    "label": "selects K for",
+    "description": "The gap statistic is applied after K-Means to determine the optimal number of clusters K, using B reference datasets to test whether the observed within-cluster dispersion is genuinely lower than chance."
+  },
+  {
+    "source": "computational-finance/gated-recurrent-unit",
+    "target": "computational-finance/lstm",
+    "label": "simplified version of",
+    "description": "The GRU achieves similar performance to the LSTM using only two gates (reset and update) instead of three (input, forget, output), with fewer parameters and faster training on financial time series of moderate length."
+  },
+  {
+    "source": "computational-finance/gated-recurrent-unit",
+    "target": "computational-finance/recurrent-neural-network",
+    "label": "extends",
+    "description": "The GRU extends the vanilla RNN by adding reset and update gates that control the flow of information through the hidden state, solving the vanishing gradient problem that limits the vanilla RNN's temporal memory."
+  },
+  {
     "source": "computational-finance/generalisation-gap",
     "target": "computational-finance/bias-variance-trade-off",
     "label": "measured by",
@@ -4048,6 +4594,66 @@
     "target": "computational-finance/machine-learning",
     "label": "key diagnostic in",
     "description": "The generalisation gap is the primary diagnostic for any trained ML model in production — a gap that grows over time indicates that the model's training distribution is diverging from the live market, triggering model retraining or replacement."
+  },
+  {
+    "source": "computational-finance/generative-adversarial-network",
+    "target": "computational-finance/feedforward-network",
+    "label": "composed of",
+    "description": "Both the GAN generator and discriminator are feedforward networks; the adversarial training setup is the innovation, not the underlying network architecture."
+  },
+  {
+    "source": "computational-finance/generative-adversarial-network",
+    "target": "computational-finance/variational-autoencoder",
+    "label": "alternative to",
+    "description": "GANs and VAEs are the two principal generative modelling approaches in quantitative finance; GANs produce sharper synthetic samples via adversarial training whilst VAEs provide a structured latent space with explicit probabilistic interpolation."
+  },
+  {
+    "source": "computational-finance/generative-adversarial-network",
+    "target": "computational-finance/wasserstein-distance",
+    "label": "stabilised by",
+    "description": "The Wasserstein GAN replaces the original GAN discriminator loss with a Wasserstein-1 estimate, resolving the mode collapse and vanishing gradient problems that make vanilla GAN training unstable on financial return data."
+  },
+  {
+    "source": "computational-finance/glove",
+    "target": "computational-finance/natural-language-processing",
+    "label": "applied within",
+    "description": "GloVe vectors are a core embedding resource in financial NLP pipelines, providing semantically rich word representations for tasks such as earnings sentiment classification, credit-risk lexicon construction, and regulatory filing clustering."
+  },
+  {
+    "source": "computational-finance/glove",
+    "target": "computational-finance/representative-vectors",
+    "label": "implements",
+    "description": "GloVe is a matrix-factorisation method for learning representative vectors from global co-occurrence statistics, producing a dense latent space where related financial terms (e.g. 'covenant' and 'breach') sit geometrically close."
+  },
+  {
+    "source": "computational-finance/glove",
+    "target": "computational-finance/word2vec",
+    "label": "alternative to",
+    "description": "GloVe and Word2Vec are competing word embedding algorithms; GloVe leverages global co-occurrence statistics and tends to produce better representations for rare financial terminology, while Word2Vec uses local context windows and trains incrementally on streaming text."
+  },
+  {
+    "source": "computational-finance/gpt",
+    "target": "computational-finance/bert",
+    "label": "contrasted with",
+    "description": "GPT and BERT are complementary transformers: GPT uses a causal mask for left-to-right generation (data augmentation, text summarisation), while BERT attends bidirectionally for understanding tasks (sentiment classification, NER) — practitioners choose between them based on whether generation or comprehension is required."
+  },
+  {
+    "source": "computational-finance/gpt",
+    "target": "computational-finance/natural-language-processing",
+    "label": "applied in",
+    "description": "GPT is used in financial NLP for text generation tasks that encoder-only models cannot perform: synthesising earnings transcripts for training data augmentation, summarising 10-K filings, and extracting structured financial data from unstructured press releases via prompting."
+  },
+  {
+    "source": "computational-finance/gpt",
+    "target": "computational-finance/transfer-learning",
+    "label": "exemplifies",
+    "description": "GPT's pre-train-then-fine-tune paradigm is a direct application of transfer learning: pre-training on billions of tokens learns general language structure, which is then adapted to domain-specific financial tasks with a fraction of the compute and labelled data."
+  },
+  {
+    "source": "computational-finance/gpt",
+    "target": "computational-finance/transformer",
+    "label": "instance of",
+    "description": "GPT is a decoder-only transformer — it uses the same multi-head self-attention and positional encoding as the full transformer but omits the encoder stack and adds a causal mask, making it optimised for autoregressive text generation."
   },
   {
     "source": "computational-finance/gradient-boosting",
@@ -4078,6 +4684,12 @@
     "target": "computational-finance/random-forests",
     "label": "compared with",
     "description": "Random forests (bagging) and gradient boosting are complementary ensemble strategies: random forests reduce variance by averaging uncorrelated parallel trees, while boosting reduces bias by sequentially targeting residuals — boosting typically achieves lower error but requires careful tuning to avoid overfitting."
+  },
+  {
+    "source": "computational-finance/gradient-boosting",
+    "target": "computational-finance/xgboost",
+    "label": "extended by",
+    "description": "XGBoost extends vanilla gradient boosting with leaf-weight regularisation (L1/L2), column subsampling, and second-order Taylor approximation of the loss — improving resistance to overfitting on low signal-to-noise financial data."
   },
   {
     "source": "computational-finance/gradient-descent",
@@ -4134,6 +4746,18 @@
     "description": "The gradient of the MSE cost function is written compactly as (2/N)X^T(Xθ−y) using matrix-vector multiplication — the inner product structure of this expression is why the gradient points along the residual vector projected onto the feature space."
   },
   {
+    "source": "computational-finance/graph-neural-networks",
+    "target": "computational-finance/correlation-distance-matrix",
+    "label": "uses as input",
+    "description": "The asset correlation matrix (or its distance transform) defines the adjacency structure of the graph on which a GNN performs message passing, directly linking factor model correlation estimates to the GNN's neighbourhood aggregation."
+  },
+  {
+    "source": "computational-finance/graph-neural-networks",
+    "target": "computational-finance/feedforward-network",
+    "label": "extends",
+    "description": "A GNN generalises the feedforward network by conditioning each node's representation on its graph neighbourhood rather than processing all features in isolation, enabling the model to learn from asset dependency structure."
+  },
+  {
     "source": "computational-finance/hard-margin-svm",
     "target": "computational-finance/kernel-trick",
     "label": "extended by",
@@ -4156,6 +4780,60 @@
     "target": "computational-finance/svm-dual-formulation",
     "label": "solved via",
     "description": "The hard-margin SVM primal problem is equivalently solved through its dual formulation, which exposes the sparsity structure (only support vectors matter) and enables the kernel trick by expressing everything as dot products."
+  },
+  {
+    "source": "computational-finance/hierarchical-clustering",
+    "target": "computational-finance/distance-metrics",
+    "label": "uses",
+    "description": "Hierarchical clustering requires a pairwise distance matrix as input; in equity portfolio construction, correlation distance (1 − ρ) is the standard choice because it captures return co-movement rather than level differences."
+  },
+  {
+    "source": "computational-finance/hierarchical-clustering",
+    "target": "computational-finance/k-means-clustering",
+    "label": "contrasts with",
+    "description": "Hierarchical clustering builds a nested dendrogram without a pre-specified K, while K-Means requires K upfront and optimises a global inertia objective — making hierarchical clustering more exploratory and K-Means more scalable."
+  },
+  {
+    "source": "computational-finance/hierarchical-clustering",
+    "target": "computational-finance/linkage-methods",
+    "label": "parameterised by",
+    "description": "The shape and quality of a hierarchical clustering dendrogram is entirely determined by the choice of linkage method, which defines how inter-cluster distance is computed from pairwise observation distances."
+  },
+  {
+    "source": "computational-finance/huber-loss",
+    "target": "computational-finance/cost-functions",
+    "label": "compared against",
+    "description": "Huber loss is the third member of the standard regression loss family alongside MSE and cross-entropy — the choice between L1, L2, and Huber loss is the core cost function decision for financial regression, determined by how much influence extreme observations should have."
+  },
+  {
+    "source": "computational-finance/huber-loss",
+    "target": "computational-finance/gradient-boosting",
+    "label": "used in",
+    "description": "XGBoost and LightGBM both expose Huber loss as a built-in regression objective, making it the standard loss function for gradient-boosted financial forecasting models where fat-tail return distributions would otherwise give excessive influence to crisis observations."
+  },
+  {
+    "source": "computational-finance/huber-loss",
+    "target": "computational-finance/mean-squared-error",
+    "label": "improves upon",
+    "description": "Huber loss reduces to MSE for residuals below the threshold δ but switches to linear (MAE-like) penalisation above it — making it strictly more robust than MSE for financial data where extreme observations are common and their squared penalty would otherwise dominate the loss surface."
+  },
+  {
+    "source": "computational-finance/hyperparameter",
+    "target": "computational-finance/hyperparameter-tuning",
+    "label": "selected by",
+    "description": "A hyperparameter's value is fixed before training; hyperparameter tuning is the formal process — grid search, random search, or Bayesian optimisation — used to find the value that minimises out-of-sample loss, treating each candidate setting as a separate model to compare."
+  },
+  {
+    "source": "computational-finance/hyperparameter",
+    "target": "computational-finance/learning-rate",
+    "label": "example of",
+    "description": "Learning rate is the canonical training hyperparameter: it controls the step size of gradient descent and cannot be estimated from data, so it must be set externally — typically by grid search over validation loss — before any parameters are updated."
+  },
+  {
+    "source": "computational-finance/hyperparameter",
+    "target": "statistics/regularisation",
+    "label": "controls",
+    "description": "Regularisation strength (L1 λ or L2 λ) is a hyperparameter that governs the bias-variance trade-off — a practitioner who selects it by examining backtest Sharpe ratios rather than walk-forward validation is implicitly fitting it to the test period, introducing silent over-fitting."
   },
   {
     "source": "computational-finance/hyperparameter-tuning",
@@ -4194,6 +4872,24 @@
     "description": "The hyperplane is the central geometric object in SVMs: the entire SVM training procedure is focused on finding the hyperplane that best separates classes with maximum margin."
   },
   {
+    "source": "computational-finance/information-coefficient",
+    "target": "computational-finance/time-series-cross-validation",
+    "label": "evaluated via",
+    "description": "Out-of-sample IC is computed using time-series cross-validation to ensure that signal evaluation folds only use past data for prediction, preventing the inflated IC estimates that result from standard k-fold shuffling."
+  },
+  {
+    "source": "computational-finance/information-coefficient",
+    "target": "portfolio-theory/fundamental-law-of-active-management",
+    "label": "inputs to",
+    "description": "The IC is one of the two key inputs to Grinold's Fundamental Law — IR = IC × √Breadth — directly linking signal skill (IC) to portfolio-level information ratio."
+  },
+  {
+    "source": "computational-finance/information-coefficient",
+    "target": "statistics/spearmans-rank-correlation",
+    "label": "measured by",
+    "description": "In equity factor research, the IC is typically computed as Spearman's rank correlation between predicted and realised cross-sectional returns, making it robust to outliers and non-linear monotone relationships."
+  },
+  {
     "source": "computational-finance/information-gain",
     "target": "computational-finance/decision-trees",
     "label": "drives splits in",
@@ -4228,6 +4924,54 @@
     "target": "computational-finance/naive-bayes-classifier",
     "label": "underpins",
     "description": "Naive Bayes is the classifier that maximises the information-theoretic likelihood under a conditional independence assumption; its log-probability scores are mutual information estimates between each feature and the class label."
+  },
+  {
+    "source": "computational-finance/intrinsic-dimensionality",
+    "target": "computational-finance/manifold-hypothesis",
+    "label": "quantifies",
+    "description": "Intrinsic dimensionality estimation provides the concrete numerical value of the manifold dimension k that the manifold hypothesis asserts is far smaller than the ambient data dimension d."
+  },
+  {
+    "source": "computational-finance/intrinsic-dimensionality",
+    "target": "computational-finance/t-sne",
+    "label": "informs hyperparameters of",
+    "description": "Estimating intrinsic dimensionality before running t-SNE tells the practitioner how much structure is lost in the 2-D projection and guides perplexity selection based on the effective neighbourhood size implied by k."
+  },
+  {
+    "source": "computational-finance/intrinsic-dimensionality",
+    "target": "computational-finance/variational-autoencoder",
+    "label": "sets bottleneck of",
+    "description": "The intrinsic dimensionality estimate k informs the VAE latent space dimension — setting the bottleneck to k ensures the encoder is forced to discover the true degrees of freedom without discarding genuine structure."
+  },
+  {
+    "source": "computational-finance/isolation-forest",
+    "target": "computational-finance/autoencoders",
+    "label": "alternative to",
+    "description": "Isolation forest and autoencoder reconstruction error are the two principal unsupervised anomaly detection approaches in financial surveillance; isolation forest requires no training on reconstruction whilst autoencoders provide richer explanatory output."
+  },
+  {
+    "source": "computational-finance/isolation-forest",
+    "target": "computational-finance/reconstruction-error-threshold",
+    "label": "compared with",
+    "description": "Both isolation forest and the autoencoder reconstruction error threshold produce anomaly scores that must be calibrated to the false-positive/false-negative cost asymmetry of the financial surveillance application."
+  },
+  {
+    "source": "computational-finance/jacobian-matrix",
+    "target": "computational-finance/automatic-differentiation",
+    "label": "computed by",
+    "description": "Automatic differentiation libraries build computation graphs that efficiently evaluate Jacobian-vector products without forming the full Jacobian matrix, making gradient-based calibration of pricing models tractable at scale."
+  },
+  {
+    "source": "computational-finance/jacobian-matrix",
+    "target": "computational-finance/backpropagation",
+    "label": "used in",
+    "description": "Backpropagation propagates error gradients backwards through each network layer by multiplying by the Jacobian of that layer's activation function — the Jacobian is the core mathematical object making credit-scoring and forecasting networks trainable."
+  },
+  {
+    "source": "computational-finance/jacobian-matrix",
+    "target": "linear-algebra/matrix-calculus",
+    "label": "generalises",
+    "description": "The Jacobian generalises the gradient from scalar-valued to vector-valued functions — matrix calculus provides the unified notational framework in which both the gradient (special case m=1) and the full Jacobian are defined and manipulated."
   },
   {
     "source": "computational-finance/k-means-clustering",
@@ -4303,9 +5047,69 @@
   },
   {
     "source": "computational-finance/kullback-leibler-divergence",
+    "target": "computational-finance/variational-autoencoder",
+    "label": "regularises",
+    "description": "KL divergence between the encoder's approximate posterior N(μ, σ²) and the standard normal prior is the regularisation term in the VAE ELBO objective, preventing the latent space from collapsing to a set of disconnected point masses."
+  },
+  {
+    "source": "computational-finance/kullback-leibler-divergence",
+    "target": "computational-finance/wasserstein-distance",
+    "label": "contrasted with",
+    "description": "KL divergence is undefined when distributions have non-overlapping support and is asymmetric; the Wasserstein distance avoids both limitations and provides geometrically meaningful distances in return space, making it preferable for comparing financial regime distributions."
+  },
+  {
+    "source": "computational-finance/kullback-leibler-divergence",
     "target": "probability/normal-distribution",
     "label": "measured between",
     "description": "The KL divergence between two Gaussian distributions has a closed-form expression involving the ratio of variances and the squared difference of means — commonly used in finance to quantify how much a model's assumed return distribution diverges from observed market data."
+  },
+  {
+    "source": "computational-finance/language-modelling-loss",
+    "target": "computational-finance/bert",
+    "label": "pre-trains via",
+    "description": "BERT's Masked Language Modelling objective is a form of language modelling loss: the cross-entropy over masked token predictions drives pre-training, with perplexity on held-out financial text serving as the indicator of how well a FinBERT checkpoint has adapted to domain-specific vocabulary."
+  },
+  {
+    "source": "computational-finance/language-modelling-loss",
+    "target": "computational-finance/gpt",
+    "label": "pre-trains via",
+    "description": "GPT is trained by minimising cross-entropy loss over every token position under the causal language modelling objective; perplexity on held-out financial text is the standard metric for comparing general-domain GPT checkpoints against domain-adaptively pre-trained variants before fine-tuning."
+  },
+  {
+    "source": "computational-finance/language-modelling-loss",
+    "target": "computational-finance/tokenisation",
+    "label": "defined over",
+    "description": "Language modelling loss is computed over the tokenised vocabulary — the probability $P(w_t|\\text{context})$ is a distribution over all tokens in the tokeniser's vocabulary, so the vocabulary size and tokenisation algorithm directly determine the difficulty of the loss and the perplexity baseline."
+  },
+  {
+    "source": "computational-finance/layer-normalisation",
+    "target": "computational-finance/batch-normalisation",
+    "label": "alternative to",
+    "description": "LayerNorm normalises across the feature dimension for each example independently, whereas BatchNorm normalises across the batch dimension — making LayerNorm preferable for NLP sequences of variable length where batch statistics are noisy."
+  },
+  {
+    "source": "computational-finance/layer-normalisation",
+    "target": "computational-finance/transformer",
+    "label": "stabilises",
+    "description": "Every Transformer sub-layer (multi-head attention and feed-forward) is followed by an Add & Norm block that applies a residual connection then LayerNorm, preventing gradient explosion or vanishing across the 12 or more layers needed to process financial text at scale."
+  },
+  {
+    "source": "computational-finance/layer-normalisation",
+    "target": "computational-finance/bert",
+    "label": "enables training of",
+    "description": "LayerNorm is an architectural prerequisite for BERT's stability: without it, the 12-layer bidirectional encoder would suffer from gradient degradation during pre-training on billions of tokens, making FinBERT fine-tuning on labelled financial sentiment data impossible."
+  },
+  {
+    "source": "computational-finance/leaky-relu",
+    "target": "computational-finance/activation-functions",
+    "label": "extends",
+    "description": "Leaky ReLU is a modification of the standard ReLU activation function that assigns a small non-zero slope to negative inputs, addressing the dying ReLU failure mode that can occur in deep networks trained on financial data with many negative-valued features."
+  },
+  {
+    "source": "computational-finance/leaky-relu",
+    "target": "computational-finance/backpropagation",
+    "label": "preserves gradient in",
+    "description": "Leaky ReLU ensures a non-zero gradient for all inputs, preventing the dead neuron failure mode where a unit's zero gradient blocks backpropagation updates — critical for maintaining gradient flow through deep financial networks."
   },
   {
     "source": "computational-finance/learning-rate",
@@ -4324,6 +5128,18 @@
     "target": "computational-finance/neural-networks",
     "label": "critical hyperparameter for",
     "description": "Neural network training via backpropagation applies gradient descent at every layer, making the learning rate the most consequential hyperparameter — adaptive methods such as Adam and RMSProp were developed specifically to tune it per-parameter automatically."
+  },
+  {
+    "source": "computational-finance/learning-rate-scheduling",
+    "target": "computational-finance/bert",
+    "label": "prevents forgetting in",
+    "description": "Linear warmup scheduling protects BERT's pre-trained attention weights during fine-tuning on financial text: starting with a near-zero learning rate gives the randomly-initialised classification head time to adapt before the rate is high enough to overwrite the pre-trained representations."
+  },
+  {
+    "source": "computational-finance/learning-rate-scheduling",
+    "target": "computational-finance/learning-rate",
+    "label": "varies over time",
+    "description": "Learning rate scheduling treats the learning rate not as a fixed hyperparameter but as a function of the training step — cosine annealing, linear warmup, and step decay are all policies for adjusting the learning rate dynamically to improve convergence and generalisation."
   },
   {
     "source": "computational-finance/linear-discriminant-analysis",
@@ -4374,6 +5190,24 @@
     "description": "Estimating the market beta of a stock via OLS regression of excess returns on the market factor is exactly linear regression with one predictor — the beta coefficient is the OLS slope estimate that minimises the mean-squared-error of residual returns."
   },
   {
+    "source": "computational-finance/linkage-methods",
+    "target": "computational-finance/hierarchical-clustering",
+    "label": "determines",
+    "description": "The linkage method is the key algorithmic choice in hierarchical clustering — Ward's linkage is the standard in financial applications because it produces compact, balanced clusters that correspond to natural risk factor groups."
+  },
+  {
+    "source": "computational-finance/local-outlier-factor",
+    "target": "computational-finance/isolation-forest",
+    "label": "contrasted with",
+    "description": "LOF detects observations that are anomalous relative to their local regime context, whilst isolation forest uses global path length — LOF is preferred when within-regime anomalies matter, isolation forest when rare global events are the target."
+  },
+  {
+    "source": "computational-finance/local-outlier-factor",
+    "target": "computational-finance/reconstruction-error-threshold",
+    "label": "alternative to",
+    "description": "LOF and autoencoder reconstruction error threshold are both unsupervised anomaly detectors; LOF requires no training and adapts to local density, whilst the autoencoder threshold requires neural network training but provides richer reconstruction-based explanations."
+  },
+  {
     "source": "computational-finance/log-loss",
     "target": "computational-finance/logistic-regression",
     "label": "cost function for",
@@ -4398,6 +5232,36 @@
     "description": "Log-loss arises naturally from Bayes' theorem: it is the negative log of the posterior probability of the correct class label, penalising confident wrong predictions by an amount proportional to the log of the predicted probability."
   },
   {
+    "source": "computational-finance/look-ahead-bias",
+    "target": "computational-finance/feature-selection",
+    "label": "invalidates",
+    "description": "Fitting preprocessing steps such as StandardScaler or PCA on the full dataset before train/test splitting is a common source of look-ahead bias that invalidates apparent out-of-sample feature selection results."
+  },
+  {
+    "source": "computational-finance/look-ahead-bias",
+    "target": "computational-finance/time-series-cross-validation",
+    "label": "prevented by",
+    "description": "Time-series cross-validation eliminates the training-leakage form of look-ahead bias by ensuring each training fold contains only observations that precede the corresponding test fold, simulating genuine live deployment."
+  },
+  {
+    "source": "computational-finance/loughran-mcdonald-sentiment",
+    "target": "computational-finance/alternative-data",
+    "label": "generates",
+    "description": "Applying the L&M dictionary to regulatory filings (10-Ks, 8-Ks) converts unstructured text into structured sentiment scores — a widely used source of text-based alternative data in quantitative equity strategies."
+  },
+  {
+    "source": "computational-finance/loughran-mcdonald-sentiment",
+    "target": "computational-finance/natural-language-processing",
+    "label": "applied within",
+    "description": "The L&M word list is a core lexicon resource within financial NLP pipelines, providing the domain-specific vocabulary needed to score sentiment in 10-K filings and earnings transcripts accurately."
+  },
+  {
+    "source": "computational-finance/loughran-mcdonald-sentiment",
+    "target": "computational-finance/vader-sentiment",
+    "label": "preferred over",
+    "description": "For formal financial documents, L&M is preferred over VADER because VADER was trained on informal social media text and assigns incorrect polarity to financial terms such as 'liability', 'capital', and 'tax'."
+  },
+  {
     "source": "computational-finance/lstm",
     "target": "computational-finance/activation-functions",
     "label": "gated by",
@@ -4408,6 +5272,12 @@
     "target": "computational-finance/neural-networks",
     "label": "extends",
     "description": "LSTM extends the feedforward neural network architecture by introducing a recurrent hidden state and gating mechanism, allowing the network to model sequential financial data such as return series or order-flow streams."
+  },
+  {
+    "source": "computational-finance/lstm",
+    "target": "computational-finance/recurrent-neural-network",
+    "label": "extends",
+    "description": "The LSTM extends the vanilla RNN by adding input, forget, and output gates that explicitly control which information is retained in the hidden state across time steps, solving the vanishing gradient problem that limits the vanilla RNN's temporal memory."
   },
   {
     "source": "computational-finance/machine-learning",
@@ -4432,6 +5302,30 @@
     "target": "statistics/correlation",
     "label": "uses in feature selection",
     "description": "Feature selection in ML models uses correlation analysis to identify and remove highly collinear inputs, preventing multicollinearity from distorting model weights — exactly the same concern as in factor model construction."
+  },
+  {
+    "source": "computational-finance/macro-forecasting",
+    "target": "computational-finance/time-series-cross-validation",
+    "label": "validated by",
+    "description": "Macro forecasting models must be evaluated using time-series cross-validation (expanding window) to prevent look-ahead bias — the same train/test discipline required for any sequential financial prediction task."
+  },
+  {
+    "source": "computational-finance/macro-forecasting",
+    "target": "computational-finance/xgboost",
+    "label": "implemented with",
+    "description": "XGBoost is commonly used in macro forecasting as the ML alternative to linear AR benchmarks, with its regularisation and feature importance helping identify which macro indicators (PMI, payrolls, credit spreads) drive equity returns."
+  },
+  {
+    "source": "computational-finance/manifold-hypothesis",
+    "target": "computational-finance/t-sne",
+    "label": "justifies",
+    "description": "The manifold hypothesis is the theoretical foundation for t-SNE: if financial return data lies near a low-dimensional non-linear manifold, non-linear neighbourhood-preserving methods will reveal structure that linear PCA projections destroy."
+  },
+  {
+    "source": "computational-finance/manifold-hypothesis",
+    "target": "computational-finance/umap",
+    "label": "justifies",
+    "description": "UMAP explicitly models high-dimensional data as a fuzzy topological approximation of an underlying manifold; the manifold hypothesis is the direct theoretical basis for why the method produces interpretable low-dimensional representations of financial factor data."
   },
   {
     "source": "computational-finance/maximum-likelihood-estimation",
@@ -4474,6 +5368,90 @@
     "target": "statistics/beta-estimation",
     "label": "foundation of",
     "description": "OLS beta estimation minimises the MSE cost function analytically — the resulting beta coefficients are the slope values that produce the smallest average squared residual between model predictions and realised returns."
+  },
+  {
+    "source": "computational-finance/mercers-theorem",
+    "target": "computational-finance/kernel-trick",
+    "label": "validates",
+    "description": "Mercer's theorem provides the mathematical guarantee that a kernel function corresponds to a valid inner product in some feature space — without this guarantee, the kernel trick's implicit feature map would not exist and the SVM dual would be non-convex."
+  },
+  {
+    "source": "computational-finance/mercers-theorem",
+    "target": "linear-algebra/positive-definite-matrices",
+    "label": "requires",
+    "description": "Mercer's condition reduces to positive semi-definiteness of the Gram matrix — the same PSD property that defines valid covariance matrices in portfolio theory and ensures the kernel-SVM optimisation problem has a unique global solution."
+  },
+  {
+    "source": "computational-finance/minkowski-distance",
+    "target": "computational-finance/distance-metrics",
+    "label": "generalises",
+    "description": "Minkowski distance is the parametric family that includes Euclidean and Manhattan distance as special cases at p=2 and p=1, unifying the distance metrics used in KNN and clustering under a single formula."
+  },
+  {
+    "source": "computational-finance/minkowski-distance",
+    "target": "computational-finance/k-nearest-neighbours",
+    "label": "used in",
+    "description": "KNN classification and regression use Minkowski distance to find the k nearest training points; the choice of p determines sensitivity to outlier feature differences and affects which stocks are classified as similar."
+  },
+  {
+    "source": "computational-finance/mode-collapse",
+    "target": "computational-finance/generative-adversarial-network",
+    "label": "failure mode of",
+    "description": "Mode collapse is the primary training failure of GANs in financial applications, causing the generator to produce only a narrow subset of market regimes rather than the full diversity of historical return distributions."
+  },
+  {
+    "source": "computational-finance/mode-collapse",
+    "target": "computational-finance/wasserstein-distance",
+    "label": "addressed by",
+    "description": "The Wasserstein GAN replaces the standard GAN discriminator with a Wasserstein-1 critic, providing a smooth gradient that prevents the generator from mode-chasing and collapsing to a small number of synthetic market scenarios."
+  },
+  {
+    "source": "computational-finance/model-cards",
+    "target": "computational-finance/accuracy-paradox",
+    "label": "addresses",
+    "description": "Model cards require disaggregated performance reporting across population slices, which directly surfaces the accuracy paradox — a model with high overall accuracy may have very low recall for the minority class that matters most."
+  },
+  {
+    "source": "computational-finance/model-cards",
+    "target": "computational-finance/shap-values",
+    "label": "incorporates",
+    "description": "Model cards for financial ML models typically include SHAP-based feature importance to explain the model's decisions to regulators and auditors, satisfying explainability requirements under Consumer Duty and the EU AI Act."
+  },
+  {
+    "source": "computational-finance/model-complexity",
+    "target": "computational-finance/bias-variance-trade-off",
+    "label": "governs",
+    "description": "Model complexity is the direct driver of the bias-variance trade-off: increasing capacity reduces bias but raises variance, and the VC bound formalises this as a penalty on generalisation error that grows with VC dimension relative to training set size."
+  },
+  {
+    "source": "computational-finance/model-complexity",
+    "target": "computational-finance/hyperparameter",
+    "label": "controlled by",
+    "description": "Hyperparameters such as regularisation strength, tree depth, and dropout rate are the practical controls for model complexity — selecting them via walk-forward cross-validation is the operational equivalent of minimising the VC bound on financial time series."
+  },
+  {
+    "source": "computational-finance/model-complexity",
+    "target": "statistics/deflated-sharpe-ratio",
+    "label": "operationalised by",
+    "description": "The deflated Sharpe ratio is the financial industry's practical substitute for the VC bound: it adjusts the reported Sharpe downward in proportion to the number of model configurations tested, penalising complexity in proportion to the risk of finding spurious patterns in historical data."
+  },
+  {
+    "source": "computational-finance/momentum-optimisation",
+    "target": "computational-finance/adam-optimiser",
+    "label": "feeds into",
+    "description": "Adam's first moment (exponential moving average of gradients) is precisely a momentum term — momentum-based gradient descent is the direct conceptual predecessor to Adam and RMSProp used to train financial neural networks."
+  },
+  {
+    "source": "computational-finance/momentum-optimisation",
+    "target": "computational-finance/gradient-descent",
+    "label": "extends",
+    "description": "Momentum extends gradient descent by accumulating a velocity vector from past gradients, smoothing out oscillations in narrow loss-surface valleys that plain gradient descent would bounce through when calibrating financial models."
+  },
+  {
+    "source": "computational-finance/momentum-optimisation",
+    "target": "computational-finance/stochastic-gradient-descent",
+    "label": "improves",
+    "description": "SGD with momentum is the standard training algorithm for financial neural networks — the momentum term is critical for navigating the noisy, non-convex loss surfaces that arise when fitting models on financial time-series data."
   },
   {
     "source": "computational-finance/monte-carlo-greeks",
@@ -4548,6 +5526,24 @@
     "description": "Naive Bayes applies Bayes' theorem to classification by computing the posterior probability of each class given the observed features, combining a class prior with the product of class-conditional likelihoods under the independence assumption."
   },
   {
+    "source": "computational-finance/named-entity-recognition",
+    "target": "computational-finance/bert",
+    "label": "fine-tuned for",
+    "description": "NER is a canonical BERT fine-tuning task: BERT's contextual token embeddings are passed through a linear classification head trained with cross-entropy to assign BIO labels, yielding state-of-the-art entity extraction from financial text."
+  },
+  {
+    "source": "computational-finance/named-entity-recognition",
+    "target": "computational-finance/natural-language-processing",
+    "label": "applied in",
+    "description": "NER is a core NLP sub-task that converts unstructured financial text — earnings releases, analyst reports, regulatory filings — into structured entity data (company names, monetary values, dates) that downstream quantitative models can consume."
+  },
+  {
+    "source": "computational-finance/named-entity-recognition",
+    "target": "computational-finance/alternative-data",
+    "label": "generates",
+    "description": "NER transforms raw text into structured entity tables — firms, prices, dates — creating a queryable alternative-data asset from millions of press releases and filings that would otherwise be inaccessible to systematic trading strategies."
+  },
+  {
     "source": "computational-finance/natural-language-processing",
     "target": "computational-finance/feature-engineering",
     "label": "requires text",
@@ -4564,6 +5560,54 @@
     "target": "computational-finance/representative-vectors",
     "label": "produces via embedding",
     "description": "NLP pipelines produce representative vectors (embeddings) for words and documents, converting discrete financial text into dense numeric vectors that capture semantic relationships and can be fed into downstream ML models."
+  },
+  {
+    "source": "computational-finance/nearest-centroid-classifier",
+    "target": "computational-finance/linear-discriminant-analysis",
+    "label": "simplified form of",
+    "description": "The nearest centroid classifier is a special case of linear discriminant analysis that ignores within-class covariance — both produce linear decision boundaries, but LDA's additional covariance term makes it better suited to correlated financial features."
+  },
+  {
+    "source": "computational-finance/nearest-centroid-classifier",
+    "target": "computational-finance/support-vector-machines",
+    "label": "contrasts with",
+    "description": "The nearest centroid classifier places its boundary equidistant between class means, while SVMs place it to maximise the margin between the closest support vectors — both are linear but SVMs are more robust to outliers in financial classification tasks."
+  },
+  {
+    "source": "computational-finance/nearest-centroid-classifier",
+    "target": "linear-algebra/dot-product-and-norms",
+    "label": "relies on",
+    "description": "The nearest centroid decision rule is expressed as an inner product test — the classifier assigns a new borrower profile to the class whose centroid has the smallest Euclidean distance, directly applying the norm and dot product to define 'closeness'."
+  },
+  {
+    "source": "computational-finance/neural-network-optimisers",
+    "target": "computational-finance/cost-function-minimisation",
+    "label": "implements",
+    "description": "Neural network optimisers are the practical implementation of cost function minimisation — they specify the iterative procedure (gradient descent variant) by which the network parameters are moved towards the loss minimum."
+  },
+  {
+    "source": "computational-finance/newtons-method-optimisation",
+    "target": "calculus/newton-raphson-method",
+    "label": "extends",
+    "description": "Newton's method for optimisation is Newton-Raphson applied to find the root of $\\nabla J = \\mathbf{0}$ rather than $f(x) = 0$ — the Hessian plays the role of the first derivative, giving the same quadratic convergence in the multivariable optimisation setting."
+  },
+  {
+    "source": "computational-finance/newtons-method-optimisation",
+    "target": "computational-finance/cost-function-minimisation",
+    "label": "solves",
+    "description": "Newton's method is the second-order route to cost-function minimisation — for quadratic costs (OLS, Markowitz) it reaches the exact minimum in one step; for non-quadratic costs (Heston, neural networks) L-BFGS approximates the Hessian inverse to achieve near-quadratic convergence."
+  },
+  {
+    "source": "computational-finance/newtons-method-optimisation",
+    "target": "computational-finance/gradient-descent",
+    "label": "improves upon",
+    "description": "Newton's method achieves quadratic convergence compared to gradient descent's linear convergence by using the Hessian to account for curvature in the loss surface — the trade-off is that computing and inverting the $n \\times n$ Hessian costs $O(n^3)$ per step."
+  },
+  {
+    "source": "computational-finance/newtons-method-optimisation",
+    "target": "linear-algebra/matrix-calculus",
+    "label": "uses",
+    "description": "Newton's method for optimisation applies the Hessian from matrix calculus as a curvature correction to the gradient step — the Hessian's inverse transforms the gradient from a raw direction into a natural parameter-space update that accounts for the local geometry of the loss surface."
   },
   {
     "source": "computational-finance/normal-equations",
@@ -4626,6 +5670,24 @@
     "description": "Simulating GBM paths requires generating correlated normal increments and computing cumulative products — vectorised NumPy expresses the entire path generation as array operations on random draws, avoiding per-step Python loops."
   },
   {
+    "source": "computational-finance/one-vs-rest-classification",
+    "target": "computational-finance/logistic-regression",
+    "label": "extends",
+    "description": "OvR extends binary logistic regression to K-class problems by training K independent logistic regressions, each estimating the probability that an observation belongs to one class versus all others."
+  },
+  {
+    "source": "computational-finance/one-vs-rest-classification",
+    "target": "computational-finance/softmax-function",
+    "label": "contrasts with",
+    "description": "OvR decomposes multiclass problems into independent binary classifiers, whilst softmax jointly models all class probabilities in a single model — OvR is preferred with SVMs and softmax with neural networks and logistic regression."
+  },
+  {
+    "source": "computational-finance/one-vs-rest-classification",
+    "target": "computational-finance/support-vector-machines",
+    "label": "extends",
+    "description": "SVMs are inherently binary classifiers; the one-vs-rest strategy is the standard approach for extending SVMs to credit rating or regime classification tasks with more than two classes."
+  },
+  {
     "source": "computational-finance/pandas-financial-time-series",
     "target": "statistics/ewma-volatility",
     "label": "implements",
@@ -4642,6 +5704,60 @@
     "target": "statistics/variance-and-standard-deviation",
     "label": "computes",
     "description": "pandas rolling().std() computes the standard deviation over a moving window — the same variance and standard deviation concepts applied incrementally across a time series to produce rolling volatility estimates."
+  },
+  {
+    "source": "computational-finance/perceptron",
+    "target": "computational-finance/activation-functions",
+    "label": "applies",
+    "description": "The perceptron applies an activation function to the weighted sum of its inputs; the choice of activation function (sigmoid, ReLU, softmax) at the output perceptron determines whether the network outputs a probability, a regression value, or a class label."
+  },
+  {
+    "source": "computational-finance/perceptron",
+    "target": "computational-finance/feedforward-network",
+    "label": "is building block of",
+    "description": "A feedforward network is an arrangement of perceptrons in layers; each perceptron in a layer independently computes a weighted sum of the previous layer's activations and passes it through an activation function."
+  },
+  {
+    "source": "computational-finance/permutation-feature-importance",
+    "target": "computational-finance/feature-selection",
+    "label": "guides",
+    "description": "Permutation feature importance scores guide feature selection by quantifying each signal's contribution to held-out performance, identifying candidates for removal when their importance is near zero."
+  },
+  {
+    "source": "computational-finance/permutation-feature-importance",
+    "target": "computational-finance/shap-values",
+    "label": "complemented by",
+    "description": "Permutation importance measures aggregate performance drop when a feature is shuffled, whilst SHAP provides signed individual-level decompositions — using both gives aggregate signal ranking and case-by-case explainability for regulatory reporting."
+  },
+  {
+    "source": "computational-finance/perplexity",
+    "target": "computational-finance/embedding-quality-metrics",
+    "label": "tuned via",
+    "description": "The optimal perplexity value for t-SNE is selected by scanning candidate values and choosing the one that maximises KNN preservation on a validation set, applying the same hyperparameter tuning discipline used for supervised models."
+  },
+  {
+    "source": "computational-finance/perplexity",
+    "target": "computational-finance/t-sne",
+    "label": "controls",
+    "description": "Perplexity is the primary hyperparameter of t-SNE, determining the effective neighbourhood size used to construct the high-dimensional similarity distribution and directly shaping whether the resulting embedding reveals local or global structure."
+  },
+  {
+    "source": "computational-finance/polyak-lojasiewicz-condition",
+    "target": "calculus/convex-function",
+    "label": "weaker than",
+    "description": "Every convex function satisfies the PL condition but not vice versa — the PL condition is strictly weaker than convexity, making it applicable to the non-convex loss landscapes of financial neural networks where convexity analysis fails entirely."
+  },
+  {
+    "source": "computational-finance/polyak-lojasiewicz-condition",
+    "target": "computational-finance/cost-function-minimisation",
+    "label": "extends guarantees for",
+    "description": "The PL condition extends cost-function minimisation convergence guarantees beyond convex problems — it provides the theoretical basis for why gradient descent finds global minima when training overparameterised financial neural networks despite non-convexity."
+  },
+  {
+    "source": "computational-finance/polyak-lojasiewicz-condition",
+    "target": "computational-finance/gradient-descent",
+    "label": "guarantees convergence of",
+    "description": "Under the PL condition, gradient descent converges linearly to the global minimum even on non-convex loss surfaces — the condition bounds the gradient norm below by the suboptimality gap, ensuring a small gradient always implies near-optimality rather than a plateau."
   },
   {
     "source": "computational-finance/portfolio-optimisation-in-python",
@@ -4780,6 +5896,42 @@
     "target": "computational-finance/self-organizing-maps",
     "label": "initialises nodes of",
     "description": "SOM training starts by assigning random representative vectors to every node on the grid; the subsequent competitive learning process (BMU search and neighbourhood updates) transforms these random initial vectors into a topology-preserving map of the financial data."
+  },
+  {
+    "source": "computational-finance/rbf-kernel",
+    "target": "computational-finance/hyperparameter-tuning",
+    "label": "parameterised by",
+    "description": "The bandwidth $\\sigma$ of the RBF kernel is the most influential hyperparameter in kernel SVM models — it is tuned jointly with the regularisation parameter $C$ via cross-validation on a held-out validation set."
+  },
+  {
+    "source": "computational-finance/rbf-kernel",
+    "target": "computational-finance/kernel-trick",
+    "label": "instance of",
+    "description": "The RBF kernel is the most widely used instantiation of the kernel trick — it implicitly maps financial feature vectors into an infinite-dimensional Hilbert space, enabling SVMs to learn arbitrarily complex decision boundaries."
+  },
+  {
+    "source": "computational-finance/rbf-kernel",
+    "target": "computational-finance/mercers-theorem",
+    "label": "satisfies",
+    "description": "The RBF kernel satisfies Mercer's condition (positive semi-definiteness) for every value of $\\sigma > 0$, guaranteeing that it corresponds to a valid inner product in an infinite-dimensional feature space and that the SVM dual is convex."
+  },
+  {
+    "source": "computational-finance/rbf-kernel",
+    "target": "computational-finance/support-vector-machines",
+    "label": "used in",
+    "description": "The RBF kernel is the default kernel choice when applying SVMs to financial classification tasks such as credit scoring and regime detection — its single bandwidth parameter makes it far easier to tune than polynomial kernels of varying degree."
+  },
+  {
+    "source": "computational-finance/recurrent-neural-network",
+    "target": "computational-finance/backpropagation",
+    "label": "trained via",
+    "description": "RNNs are trained using backpropagation through time (BPTT), an extension of standard backpropagation that unrolls the recurrence across all time steps before computing gradients — the same operation that exposes the vanishing gradient problem."
+  },
+  {
+    "source": "computational-finance/recursive-feature-elimination",
+    "target": "computational-finance/time-series-cross-validation",
+    "label": "extended by",
+    "description": "RFECV wraps recursive elimination in time-series cross-validation folds, automatically selecting the optimal feature count without look-ahead bias — the standard deployment in quantitative factor research."
   },
   {
     "source": "computational-finance/regression-methods",
@@ -5052,6 +6204,60 @@
     "description": "The positive-semidefinite constraint $\\mathbf{X} \\succeq 0$ is the defining feature of SDP — it directly enforces that the matrix variable remains a valid covariance matrix (non-negative eigenvalues) throughout optimisation, which linear or quadratic programming cannot guarantee."
   },
   {
+    "source": "computational-finance/sentence-transformers",
+    "target": "computational-finance/bert",
+    "label": "extends",
+    "description": "SBERT fine-tunes a BERT encoder with a siamese network and contrastive loss so that mean-pooled token embeddings form a semantically meaningful sentence-level vector space, overcoming BERT's inability to produce useful fixed-size sentence representations directly."
+  },
+  {
+    "source": "computational-finance/sentence-transformers",
+    "target": "computational-finance/cosine-similarity",
+    "label": "retrieves via",
+    "description": "SBERT pre-computes a single dense vector per financial document; at query time, the nearest documents are found by cosine similarity in $O(n)$ rather than the $O(n^2)$ all-pairs BERT inference that would otherwise be required."
+  },
+  {
+    "source": "computational-finance/sentence-transformers",
+    "target": "computational-finance/named-entity-recognition",
+    "label": "complements",
+    "description": "SBERT semantic retrieval and NER entity extraction are complementary financial NLP tools: SBERT finds the most relevant historical documents by meaning, while NER structures those documents into queryable entity tables — together they form a complete unstructured-to-structured data pipeline."
+  },
+  {
+    "source": "computational-finance/shap-values",
+    "target": "computational-finance/feature-selection",
+    "label": "informs",
+    "description": "Aggregated SHAP values (mean absolute SHAP across all predictions) serve as a model-aware feature importance measure, providing a principled basis for embedded feature selection that respects feature interactions rather than ranking features independently."
+  },
+  {
+    "source": "computational-finance/shap-values",
+    "target": "computational-finance/gradient-boosting",
+    "label": "explains",
+    "description": "TreeSHAP computes exact SHAP values for gradient-boosted trees in polynomial time, making SHAP the standard explainability framework for XGBoost and LightGBM models deployed in financial credit scoring and default prediction."
+  },
+  {
+    "source": "computational-finance/shap-values",
+    "target": "computational-finance/random-forests",
+    "label": "explains",
+    "description": "SHAP values provide rigorous feature attribution for Random Forest predictions, overcoming the model's native 'mean decrease in impurity' importance score — which is biased towards high-cardinality features and gives no indication of direction or per-observation influence."
+  },
+  {
+    "source": "computational-finance/smote",
+    "target": "computational-finance/accuracy-paradox",
+    "label": "prevents",
+    "description": "SMOTE oversampling prevents classifiers from collapsing to the majority class — the root cause of the accuracy paradox — by synthetically augmenting the minority class until the class distribution is more balanced."
+  },
+  {
+    "source": "computational-finance/smote",
+    "target": "computational-finance/k-nearest-neighbours",
+    "label": "uses",
+    "description": "SMOTE identifies minority-class neighbours using KNN in feature space to find the k nearest minority-class points for each seed observation before interpolating a synthetic sample along the connecting line segment."
+  },
+  {
+    "source": "computational-finance/smote",
+    "target": "computational-finance/look-ahead-bias",
+    "label": "vulnerable to",
+    "description": "Applying SMOTE to the full dataset before train/test splitting leaks synthetic copies of test-set minority samples into the training set — a form of look-ahead bias that inflates out-of-sample performance metrics."
+  },
+  {
     "source": "computational-finance/soft-margin-svm",
     "target": "computational-finance/bias-variance-trade-off",
     "label": "controlled by C via",
@@ -5062,6 +6268,36 @@
     "target": "computational-finance/support-vector-machines",
     "label": "practical form of",
     "description": "The soft-margin SVM is the form of SVM actually used in quantitative finance applications (credit scoring, fraud detection), since real financial data is never perfectly linearly separable as required by the hard-margin variant."
+  },
+  {
+    "source": "computational-finance/softmax-function",
+    "target": "computational-finance/activation-functions",
+    "label": "instance of",
+    "description": "Softmax is the standard output-layer activation function for multiclass classification in neural networks, converting raw scores to a valid probability distribution over K classes."
+  },
+  {
+    "source": "computational-finance/softmax-function",
+    "target": "computational-finance/kullback-leibler-divergence",
+    "label": "trained via",
+    "description": "Minimising categorical cross-entropy loss for a softmax output is equivalent to minimising the KL divergence between the predicted probability distribution and the true one-hot label distribution."
+  },
+  {
+    "source": "computational-finance/softmax-function",
+    "target": "computational-finance/logistic-regression",
+    "label": "generalises",
+    "description": "Softmax is the multiclass generalisation of the logistic sigmoid — when K=2 the two formulas are mathematically equivalent, and multinomial logistic regression uses softmax as its output layer."
+  },
+  {
+    "source": "computational-finance/som-quality-metrics",
+    "target": "computational-finance/elbow-method",
+    "label": "analogous to",
+    "description": "SOM quality metrics serve the same role as the elbow method in K-Means — they guide the selection of grid size (the SOM hyperparameter) by quantifying the trade-off between representational accuracy and topological faithfulness."
+  },
+  {
+    "source": "computational-finance/som-quality-metrics",
+    "target": "computational-finance/self-organizing-maps",
+    "label": "validates",
+    "description": "Quantisation error and topographic error are the two standard post-training quality metrics for a Self-Organising Map, assessing representational fidelity and topology preservation respectively before the map is used for regime analysis."
   },
   {
     "source": "computational-finance/stochastic-gradient-descent",
@@ -5148,6 +6384,24 @@
     "description": "The dual formulation is the standard algorithmic route for training SVMs in practice: quadratic programming solvers operate on the dual, and the resulting sparse set of support vectors defines the final classifier."
   },
   {
+    "source": "computational-finance/t-sne",
+    "target": "computational-finance/kullback-leibler-divergence",
+    "label": "minimises",
+    "description": "t-SNE minimises the KL divergence between the Gaussian pairwise similarity distribution in high-dimensional space and the Student-t distribution in the low-dimensional embedding, ensuring local neighbourhood structure is preserved."
+  },
+  {
+    "source": "computational-finance/t-sne",
+    "target": "computational-finance/self-organizing-maps",
+    "label": "contrasts with",
+    "description": "Both t-SNE and SOM produce 2-D visualisations of high-dimensional financial data, but SOM preserves global topology on a fixed grid (enabling regime path analysis), whilst t-SNE prioritises local cluster separation and cannot be used for sequential regime tracking."
+  },
+  {
+    "source": "computational-finance/t-sne",
+    "target": "statistics/principal-component-analysis",
+    "label": "contrasts with",
+    "description": "t-SNE and PCA are complementary dimensionality reduction methods: PCA preserves global variance through linear projections suitable for risk decomposition, whilst t-SNE preserves local cluster structure through non-linear embedding suited for exploratory visualisation."
+  },
+  {
     "source": "computational-finance/tensorflow",
     "target": "computational-finance/backpropagation",
     "label": "implements",
@@ -5170,6 +6424,78 @@
     "target": "computational-finance/pytorch",
     "label": "alternative to",
     "description": "TensorFlow and PyTorch serve the same deep learning workloads; PyTorch dominates quant research due to its dynamic graph and debugging ergonomics, while TensorFlow Serving and TFLite make TensorFlow more common in production finance deployments."
+  },
+  {
+    "source": "computational-finance/tf-idf",
+    "target": "computational-finance/feature-engineering",
+    "label": "used in",
+    "description": "TF-IDF is one of the most common feature engineering techniques for converting unstructured financial text — earnings transcripts, 10-K filings, news — into numerical vectors that a model can train on."
+  },
+  {
+    "source": "computational-finance/tf-idf",
+    "target": "computational-finance/loughran-mcdonald-sentiment",
+    "label": "complements",
+    "description": "TF-IDF and the L&M sentiment lexicon are complementary text analysis approaches: TF-IDF identifies the most distinctive terms in a filing without labels, while L&M maps those terms to financial polarity categories to produce an interpretable sentiment score."
+  },
+  {
+    "source": "computational-finance/tf-idf",
+    "target": "computational-finance/natural-language-processing",
+    "label": "foundation of",
+    "description": "TF-IDF is the foundational document representation technique in financial NLP, converting raw text into sparse numerical vectors before machine learning models — from naive Bayes to neural networks — can be applied."
+  },
+  {
+    "source": "computational-finance/time-series-cross-validation",
+    "target": "computational-finance/training-data",
+    "label": "implements for",
+    "description": "Time series cross-validation is the operational realisation of proper train/test discipline for sequential financial data — it enforces the chronological split requirement described in training data principles, preventing future information from contaminating model fitting."
+  },
+  {
+    "source": "computational-finance/time-series-cross-validation",
+    "target": "statistics/cross-validation",
+    "label": "extends",
+    "description": "Time series cross-validation extends standard k-fold CV by enforcing chronological ordering of splits — preventing the look-ahead bias that arises when standard CV randomly assigns future observations to the training fold when applied to financial time series."
+  },
+  {
+    "source": "computational-finance/time-series-cross-validation",
+    "target": "statistics/deflated-sharpe-ratio",
+    "label": "feeds into",
+    "description": "Walk-forward CV performance estimates are the inputs to the deflated Sharpe ratio — the number of CV folds corresponds to the number of trials, and the deflated SR adjusts the reported Sharpe downward to account for the multiple testing implicit in the iterative validation process."
+  },
+  {
+    "source": "computational-finance/tokenisation",
+    "target": "computational-finance/bert",
+    "label": "prerequisite for",
+    "description": "WordPiece tokenisation is the mandatory first step before any BERT inference: it converts raw financial text into the integer token IDs that index BERT's embedding matrix, and the choice of vocabulary size directly constrains how well BERT can represent domain-specific financial jargon."
+  },
+  {
+    "source": "computational-finance/tokenisation",
+    "target": "computational-finance/gpt",
+    "label": "prerequisite for",
+    "description": "BPE tokenisation converts raw text into the discrete token sequences that GPT's causal language model is trained on; the same tokeniser must be used at inference time, so tokenisation is the entry point for both GPT pre-training and all downstream financial text generation tasks."
+  },
+  {
+    "source": "computational-finance/tokenisation",
+    "target": "computational-finance/natural-language-processing",
+    "label": "first step in",
+    "description": "Every financial NLP pipeline begins with tokenisation: before any model can process an earnings call transcript or regulatory filing, the raw character sequence must be mapped to a discrete token vocabulary that the model's embedding layer can look up."
+  },
+  {
+    "source": "computational-finance/topological-data-analysis",
+    "target": "computational-finance/intrinsic-dimensionality",
+    "label": "complements",
+    "description": "Intrinsic dimensionality estimation tells you how many dimensions the manifold has; TDA tells you what shape it has — together they provide a complete geometric and topological prior for choosing dimensionality reduction methods."
+  },
+  {
+    "source": "computational-finance/topological-data-analysis",
+    "target": "computational-finance/manifold-hypothesis",
+    "label": "characterises",
+    "description": "TDA provides a coordinate-free description of the manifold's topology — its number of connected components, loops, and voids — complementing the manifold hypothesis's claim that high-dimensional financial data lies near a low-dimensional surface."
+  },
+  {
+    "source": "computational-finance/topological-data-analysis",
+    "target": "computational-finance/t-sne",
+    "label": "validates",
+    "description": "TDA's Betti numbers provide a ground-truth cluster count and topological structure against which t-SNE outputs can be validated — if t-SNE shows 5 clusters but β₀ = 4, one cluster is a visual artefact."
   },
   {
     "source": "computational-finance/training-data",
@@ -5220,6 +6546,54 @@
     "description": "Transfer learning starts from a neural network whose weights have been optimised on a large source dataset, inheriting the low-level feature detectors learned from abundant data before adapting to the target task with limited labels."
   },
   {
+    "source": "computational-finance/transformer",
+    "target": "computational-finance/attention-mechanism",
+    "label": "built on",
+    "description": "The transformer architecture is built entirely on stacked self-attention layers, dispensing with recurrence — the attention mechanism is its core computational primitive, applied in parallel across all sequence positions simultaneously."
+  },
+  {
+    "source": "computational-finance/transformer",
+    "target": "computational-finance/bert",
+    "label": "basis of",
+    "description": "BERT is an encoder-only transformer, using the transformer's multi-head self-attention and positional encoding but restricting to the encoder stack and adding a bidirectional pre-training objective."
+  },
+  {
+    "source": "computational-finance/transformer",
+    "target": "computational-finance/finbert",
+    "label": "backbone of",
+    "description": "FinBERT's weights are initialised from a transformer (BERT) pre-trained on general English; the transformer backbone provides the contextual representations that make FinBERT sensitive to financial language nuance."
+  },
+  {
+    "source": "computational-finance/transformer",
+    "target": "computational-finance/natural-language-processing",
+    "label": "state of the art for",
+    "description": "The transformer has replaced RNNs and CNNs as the standard architecture for financial NLP tasks including earnings sentiment scoring, regulatory filing risk classification, and central bank statement analysis."
+  },
+  {
+    "source": "computational-finance/umap",
+    "target": "computational-finance/k-nearest-neighbours",
+    "label": "uses",
+    "description": "UMAP constructs a weighted k-nearest-neighbour graph in high-dimensional space as the foundation of its embedding — the n_neighbors hyperparameter directly controls the trade-off between preserving local cluster structure and global manifold topology."
+  },
+  {
+    "source": "computational-finance/umap",
+    "target": "computational-finance/self-organizing-maps",
+    "label": "contrasts with",
+    "description": "Both UMAP and SOM produce topology-preserving low-dimensional representations of financial data, but SOM maps to a fixed discrete grid (enabling regime path tracking) whilst UMAP produces a continuous embedding that better separates distinct clusters."
+  },
+  {
+    "source": "computational-finance/umap",
+    "target": "computational-finance/t-sne",
+    "label": "improves on",
+    "description": "UMAP improves on t-SNE by preserving global topology alongside local structure, running significantly faster on large datasets, and supporting out-of-sample projection — making it more suitable than t-SNE for production financial data pipelines."
+  },
+  {
+    "source": "computational-finance/umap",
+    "target": "statistics/principal-component-analysis",
+    "label": "contrasts with",
+    "description": "UMAP and PCA are complementary dimensionality reduction methods: PCA finds linear projections that maximise variance and supports exact out-of-sample projection via matrix multiplication, whilst UMAP finds non-linear embeddings that better reveal cluster structure in complex factor spaces."
+  },
+  {
     "source": "computational-finance/underfitting",
     "target": "computational-finance/bias-variance-trade-off",
     "label": "is the high-bias regime of",
@@ -5244,6 +6618,24 @@
     "description": "Applying linear regression to inherently non-linear financial relationships — such as the convex price-yield curve of a bond or regime-switching equity returns — is a textbook case of underfitting, where the rigid functional form cannot approximate the true pattern."
   },
   {
+    "source": "computational-finance/universal-approximation-theorem",
+    "target": "computational-finance/activation-functions",
+    "label": "requires",
+    "description": "The universal approximation theorem holds only for non-constant, bounded activation functions — linear activation functions reduce the network to a linear map regardless of depth, and the theorem breaks down, making non-linearity a necessary condition for universal expressivity."
+  },
+  {
+    "source": "computational-finance/universal-approximation-theorem",
+    "target": "computational-finance/feedforward-network",
+    "label": "justifies",
+    "description": "The universal approximation theorem provides the theoretical guarantee that a feedforward network with sufficient width can represent any continuous function — it is the mathematical justification for using feedforward networks to approximate pricing functions and factor models in finance."
+  },
+  {
+    "source": "computational-finance/universal-approximation-theorem",
+    "target": "computational-finance/neural-networks",
+    "label": "motivates",
+    "description": "The universal approximation theorem is the central theoretical result motivating the use of neural networks in quantitative finance: it guarantees that no continuous financial relationship is, in principle, beyond the representational capacity of a sufficiently wide neural network."
+  },
+  {
     "source": "computational-finance/unsupervised-learning",
     "target": "computational-finance/k-means-clustering",
     "label": "includes",
@@ -5266,6 +6658,138 @@
     "target": "computational-finance/self-organizing-maps",
     "label": "includes",
     "description": "Self-Organizing Maps are a non-linear unsupervised technique that extends clustering by preserving the topological structure of the original feature space, making them especially useful for visualising the landscape of market regimes."
+  },
+  {
+    "source": "computational-finance/vader-sentiment",
+    "target": "computational-finance/alternative-data",
+    "label": "processes",
+    "description": "VADER processes text-based alternative data sources — news headlines, social media posts, earnings call excerpts — into numerical sentiment scores that can be used as input features for ML-based trading signals."
+  },
+  {
+    "source": "computational-finance/vader-sentiment",
+    "target": "computational-finance/natural-language-processing",
+    "label": "instance of",
+    "description": "VADER is a specific rule-based NLP tool for sentiment scoring, forming part of the broader NLP toolkit used in quantitative finance for extracting structured signals from unstructured financial text."
+  },
+  {
+    "source": "computational-finance/vanishing-gradient",
+    "target": "computational-finance/backpropagation",
+    "label": "arises during",
+    "description": "The vanishing gradient problem emerges from the chain rule of backpropagation: multiplying many Jacobians together causes gradient magnitudes to shrink exponentially in deep networks with bounded-derivative activations like sigmoid."
+  },
+  {
+    "source": "computational-finance/vanishing-gradient",
+    "target": "computational-finance/leaky-relu",
+    "label": "solved in feedforward nets by",
+    "description": "Leaky ReLU's non-zero gradient for all inputs (including negative) prevents the vanishing gradient problem in feedforward networks by avoiding the saturating regions where sigmoid and tanh derivatives shrink towards zero."
+  },
+  {
+    "source": "computational-finance/vanishing-gradient",
+    "target": "computational-finance/lstm",
+    "label": "solved in RNNs by",
+    "description": "The LSTM's cell state and gating mechanism create additive gradient pathways through time, allowing gradients to flow across hundreds of time steps without the exponential decay that cripples vanilla RNNs through multiplicative recurrence."
+  },
+  {
+    "source": "computational-finance/variance-inflation-factor",
+    "target": "computational-finance/linear-regression",
+    "label": "diagnoses issues in",
+    "description": "VIF diagnoses multicollinearity in linear regression — inflated VIF values signal that coefficient estimates are numerically unstable and their standard errors are too large to draw meaningful inference about which individual factors drive returns."
+  },
+  {
+    "source": "computational-finance/variance-inflation-factor",
+    "target": "computational-finance/principal-component-regression",
+    "label": "solved by",
+    "description": "When VIF screening reveals severe multicollinearity, principal component regression is the standard structural remedy — it orthogonalises the correlated features into uncorrelated PCs before regression, eliminating multicollinearity by construction without discarding signals."
+  },
+  {
+    "source": "computational-finance/variance-inflation-factor",
+    "target": "computational-finance/recursive-feature-elimination",
+    "label": "motivates",
+    "description": "Signals with high VIF are prime candidates for recursive elimination; RFE then removes them based on model performance rather than raw correlation, ensuring only the most predictive member of each correlated cluster is retained."
+  },
+  {
+    "source": "computational-finance/variance-inflation-factor",
+    "target": "statistics/regularisation",
+    "label": "addressed by",
+    "description": "Ridge regression directly addresses the multicollinearity that VIF detects — the L2 penalty stabilises coefficient estimates even when predictors are highly correlated, preventing the variance inflation that makes OLS unreliable in overlapping-factor financial models."
+  },
+  {
+    "source": "computational-finance/variational-autoencoder",
+    "target": "computational-finance/autoencoders",
+    "label": "extends",
+    "description": "The VAE extends the standard autoencoder by replacing the deterministic bottleneck with a probabilistic latent distribution, adding generative capability and enabling smooth interpolation between market regime embeddings."
+  },
+  {
+    "source": "computational-finance/variational-autoencoder",
+    "target": "computational-finance/beta-vae",
+    "label": "generalised by",
+    "description": "The standard VAE is the special case β = 1 of Beta-VAE; increasing β beyond 1 trades reconstruction fidelity for disentanglement, enabling targeted stress scenario construction in quantitative finance."
+  },
+  {
+    "source": "computational-finance/variational-autoencoder",
+    "target": "computational-finance/reconstruction-error-threshold",
+    "label": "feeds into",
+    "description": "Like the standard autoencoder, the VAE produces per-observation reconstruction errors that are thresholded to detect anomalous market conditions; the probabilistic latent space additionally allows uncertainty quantification around the threshold decision."
+  },
+  {
+    "source": "computational-finance/variational-autoencoder",
+    "target": "computational-finance/wasserstein-distance",
+    "label": "improved by",
+    "description": "The Wasserstein GAN replaces the standard VAE/GAN discriminator loss with a Wasserstein-1 estimate, improving training stability for generating synthetic financial return paths by providing a smoother gradient signal than KL divergence."
+  },
+  {
+    "source": "computational-finance/wasserstein-distance",
+    "target": "computational-finance/embedding-quality-metrics",
+    "label": "complements",
+    "description": "Wasserstein distance between the high-D and low-D pairwise distance distributions provides an alternative global quality metric to CPD, with the advantage of remaining finite and interpretable when the two distributions have non-overlapping support."
+  },
+  {
+    "source": "computational-finance/weight-initialisation",
+    "target": "computational-finance/leaky-relu",
+    "label": "paired with",
+    "description": "He initialisation is specifically designed for ReLU and Leaky ReLU activations, accounting for the fact that these functions zero approximately half of their inputs; using Xavier initialisation with ReLU systematically underestimates the required weight variance."
+  },
+  {
+    "source": "computational-finance/weight-initialisation",
+    "target": "computational-finance/vanishing-gradient",
+    "label": "prevents",
+    "description": "Xavier and He initialisation are designed to preserve activation variance across layers, preventing the vanishing gradient problem from occurring in the very first backward pass before any learning begins."
+  },
+  {
+    "source": "computational-finance/word2vec",
+    "target": "computational-finance/natural-language-processing",
+    "label": "used in",
+    "description": "Word2Vec provides the dense word embeddings that underpin modern financial NLP pipelines, replacing sparse TF-IDF vectors with semantically meaningful representations for earnings transcript analysis and news sentiment."
+  },
+  {
+    "source": "computational-finance/word2vec",
+    "target": "computational-finance/representative-vectors",
+    "label": "implements",
+    "description": "Word2Vec is the canonical algorithm for learning representative vectors (embeddings) of words, producing a latent space where semantic relationships between financial terms are encoded as geometric proximity."
+  },
+  {
+    "source": "computational-finance/word2vec",
+    "target": "computational-finance/tf-idf",
+    "label": "supersedes",
+    "description": "Word2Vec dense embeddings supersede TF-IDF sparse vectors for tasks requiring semantic generalisation — two filings using different vocabulary for the same concept (liquidity stress in 2008 vs funding pressure in 2020) appear similar in embedding space but not in TF-IDF space."
+  },
+  {
+    "source": "computational-finance/xgboost",
+    "target": "computational-finance/huber-loss",
+    "label": "uses",
+    "description": "XGBoost exposes Huber loss as a native regression objective, making it straightforward to limit the influence of crash-day return outliers when building financial forecasting models."
+  },
+  {
+    "source": "computational-finance/xgboost",
+    "target": "computational-finance/permutation-feature-importance",
+    "label": "ranked by",
+    "description": "Permutation feature importance applied to a trained XGBoost model on held-out data provides a model-agnostic signal ranking that is unaffected by in-sample gain-based importance inflation."
+  },
+  {
+    "source": "computational-finance/xgboost",
+    "target": "computational-finance/shap-values",
+    "label": "explained by",
+    "description": "XGBoost's TreeSHAP algorithm computes exact SHAP values in polynomial time for tree ensembles, making XGBoost the natural choice when model explainability is required for regulatory compliance in financial applications."
   },
   {
     "source": "derivatives/american-option-pricing",
@@ -8238,6 +9762,30 @@
     "description": "Eigenvalue clipping works by eigendecomposing the covariance matrix, modifying the noise eigenvalues, and reconstructing — the eigenvectors are preserved while only the eigenvalue magnitudes change."
   },
   {
+    "source": "linear-algebra/eigenvalue-deflation",
+    "target": "linear-algebra/eigenvalues-and-eigenvectors",
+    "label": "modifies spectrum of",
+    "description": "Deflation modifies the eigenspectrum of a matrix by zeroing out one known eigenvalue while leaving all others intact — it exploits the outer-product structure of the spectral decomposition to surgically remove one eigenpair."
+  },
+  {
+    "source": "linear-algebra/eigenvalue-deflation",
+    "target": "linear-algebra/power-iteration",
+    "label": "applied after",
+    "description": "After power iteration finds the dominant eigenvector, deflation removes its contribution from the matrix, allowing power iteration to converge to the second-largest eigenpair on the next run — the two algorithms are used in tandem to extract all principal components iteratively."
+  },
+  {
+    "source": "linear-algebra/eigenvalue-deflation",
+    "target": "linear-algebra/spectral-decomposition",
+    "label": "implements step of",
+    "description": "The spectral decomposition $\\mathbf{A} = \\sum_i \\lambda_i \\mathbf{v}_i \\mathbf{v}_i^\\top$ is built up iteratively through deflation — each deflation step peels off one rank-1 term, and the deflated matrix is what remains after removing the leading component."
+  },
+  {
+    "source": "linear-algebra/eigenvalue-deflation",
+    "target": "statistics/principal-component-analysis",
+    "label": "enables",
+    "description": "Eigenvalue deflation makes iterative PCA possible: after extracting the first principal component (market factor) from the return covariance matrix, deflating it exposes the second component (size/value factor), and so on until enough variance is explained."
+  },
+  {
     "source": "linear-algebra/eigenvalues-and-eigenvectors",
     "target": "linear-algebra/determinant",
     "label": "product gives",
@@ -8350,6 +9898,30 @@
     "target": "linear-algebra/systems-of-linear-equations",
     "label": "solves",
     "description": "Gaussian elimination is the standard direct method for solving Ax = b — it transforms the system into triangular form whose solution is then read off by back substitution."
+  },
+  {
+    "source": "linear-algebra/gram-matrix",
+    "target": "computational-finance/kernel-trick",
+    "label": "used by",
+    "description": "Kernel algorithms replace explicit high-dimensional feature computation with evaluations of the Gram matrix — the SVM dual, Gaussian processes, and kernel PCA all operate entirely through the $N \\times N$ kernel Gram matrix rather than individual feature vectors."
+  },
+  {
+    "source": "linear-algebra/gram-matrix",
+    "target": "computational-finance/mercers-theorem",
+    "label": "validated by",
+    "description": "Mercer's theorem establishes that a kernel produces a valid Gram matrix if and only if the matrix is positive semi-definite — checking the Gram matrix's PSD property is both the definition and the practical test for a mathematically legitimate kernel function."
+  },
+  {
+    "source": "linear-algebra/gram-matrix",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "related to",
+    "description": "The sample covariance matrix is a scaled Gram matrix of de-meaned return vectors — both are symmetric, positive semi-definite, and encode pairwise similarities, linking the theory of kernel methods directly to covariance-based portfolio risk models."
+  },
+  {
+    "source": "linear-algebra/gram-matrix",
+    "target": "linear-algebra/dot-product-and-norms",
+    "label": "built from",
+    "description": "Each entry of the Gram matrix is the inner product (dot product) of two data vectors — the matrix is a compact encoding of all pairwise similarities, with squared norms on the diagonal."
   },
   {
     "source": "linear-algebra/gram-schmidt-orthogonalisation",
@@ -8854,6 +10426,24 @@
     "target": "risk/monte-carlo-simulation",
     "label": "enables",
     "description": "Monte Carlo simulation of correlated assets requires Cholesky-decomposing the covariance matrix, which is only possible when it is positive definite — a rank-deficient or indefinite matrix breaks the simulation."
+  },
+  {
+    "source": "linear-algebra/power-iteration",
+    "target": "linear-algebra/eigenvalues-and-eigenvectors",
+    "label": "computes",
+    "description": "Power iteration is the iterative numerical method for finding the dominant eigenvalue and eigenvector of a large matrix when closed-form spectral decomposition is computationally prohibitive — the standard approach for PCA on high-dimensional financial datasets."
+  },
+  {
+    "source": "linear-algebra/power-iteration",
+    "target": "linear-algebra/singular-value-decomposition",
+    "label": "used in",
+    "description": "Efficient SVD algorithms for large matrices rely on power iteration variants (randomised SVD, Lanczos) that avoid explicit diagonalisation while converging to the dominant singular values — essential when decomposing large financial correlation matrices."
+  },
+  {
+    "source": "linear-algebra/power-iteration",
+    "target": "statistics/principal-component-analysis",
+    "label": "enables",
+    "description": "Power iteration computes the principal components of a covariance matrix by iteratively finding the dominant eigenvector then deflating — each iteration yields one factor that explains the most remaining variance in a financial return dataset."
   },
   {
     "source": "linear-algebra/projection-matrices",
@@ -10338,6 +11928,30 @@
     "description": "The Fundamental Law implies that for a given IC and breadth, the optimal tracking error budget determines how aggressively active bets should be sized — exceeding it adds risk without proportional return."
   },
   {
+    "source": "portfolio-theory/hierarchical-risk-parity",
+    "target": "computational-finance/correlation-distance-matrix",
+    "label": "uses",
+    "description": "HRP constructs the correlation distance matrix as the pairwise distance input to hierarchical clustering, ensuring that asset similarity is measured by return co-movement rather than price-level differences."
+  },
+  {
+    "source": "portfolio-theory/hierarchical-risk-parity",
+    "target": "computational-finance/hierarchical-clustering",
+    "label": "built on",
+    "description": "HRP uses hierarchical clustering as its first step to group assets by correlation structure, then allocates weights via recursive bisection of the resulting dendrogram — making clustering quality directly determine portfolio quality."
+  },
+  {
+    "source": "portfolio-theory/hierarchical-risk-parity",
+    "target": "portfolio-theory/minimum-variance-portfolio",
+    "label": "alternative to",
+    "description": "HRP is proposed as a robust alternative to minimum variance optimisation because it does not invert the covariance matrix, avoiding the instability that makes minimum variance weights extremely sensitive to estimation errors."
+  },
+  {
+    "source": "portfolio-theory/hierarchical-risk-parity",
+    "target": "portfolio-theory/risk-parity",
+    "label": "contrasts with",
+    "description": "HRP and equal-risk-contribution risk parity both target diversified risk allocation, but HRP uses clustering to avoid matrix inversion whilst ERC solves an optimisation problem that amplifies estimation error in the covariance matrix."
+  },
+  {
     "source": "portfolio-theory/information-ratio",
     "target": "financial-maths/relative-return",
     "label": "normalises",
@@ -10902,6 +12516,18 @@
     "description": "Both robust optimisation and resampled efficient frontier address estimation error, but differently: robust optimisation uses worst-case adversarial inputs within a deterministic uncertainty set, while resampled frontier uses a probabilistic bootstrap over many plausible input realisations."
   },
   {
+    "source": "portfolio-theory/sasb-materiality-map",
+    "target": "computational-finance/alternative-data",
+    "label": "structures",
+    "description": "SASB materiality maps structure alternative ESG data acquisition by specifying which environmental, social, and governance metrics are relevant for each industry sector, directing alternative data sourcing efforts."
+  },
+  {
+    "source": "portfolio-theory/sasb-materiality-map",
+    "target": "computational-finance/feature-selection",
+    "label": "guides",
+    "description": "SASB materiality maps guide ESG feature selection by identifying which sustainability metrics are financially material for a given industry, preventing the inclusion of immaterial ESG signals that add noise without alpha."
+  },
+  {
     "source": "portfolio-theory/security-market-line",
     "target": "portfolio-theory/capital-asset-pricing-model",
     "label": "visualises",
@@ -10936,6 +12562,18 @@
     "target": "statistics/variance-and-standard-deviation",
     "label": "normalised by",
     "description": "The denominator of the Sharpe Ratio is the standard deviation of portfolio returns — it normalises excess return by volatility to produce a risk-adjusted performance measure."
+  },
+  {
+    "source": "portfolio-theory/sharpe-style-analysis",
+    "target": "portfolio-theory/linear-factor-model",
+    "label": "reveals",
+    "description": "Style analysis reveals a fund's effective factor exposures (style tilts) as implied by the regression weights on passive style indices — mirroring how linear factor models decompose returns into systematic and idiosyncratic components."
+  },
+  {
+    "source": "portfolio-theory/sharpe-style-analysis",
+    "target": "statistics/ordinary-least-squares-regression",
+    "label": "implemented via",
+    "description": "Sharpe style analysis is a constrained OLS regression of fund returns against style index returns, where the non-negativity and sum-to-one constraints are imposed via quadratic programming."
   },
   {
     "source": "portfolio-theory/shortfall-probability",
@@ -14586,6 +16224,24 @@
     "description": "The GJR-GARCH asymmetry parameter γ directly quantifies the leverage effect: negative shocks receive impact α+γ while positive shocks receive only α."
   },
   {
+    "source": "statistics/granger-causality",
+    "target": "computational-finance/macro-forecasting",
+    "label": "used in",
+    "description": "Granger causality tests are used in macro forecasting to screen which economic indicators (PMI, credit spreads, payrolls) provide genuine incremental predictive power for asset returns before including them as regressors."
+  },
+  {
+    "source": "statistics/granger-causality",
+    "target": "statistics/autocorrelation",
+    "label": "models via",
+    "description": "Granger causality is assessed by adding lagged values of X to an autoregressive model of Y and testing whether the lagged cross-series terms are jointly significant — making autocorrelation structure central to the test design."
+  },
+  {
+    "source": "statistics/granger-causality",
+    "target": "statistics/stationarity",
+    "label": "requires",
+    "description": "The Granger causality F-test is only valid when both time series are stationary; applying it to non-stationary price levels generates spurious F-statistics from coincident trends rather than genuine predictability."
+  },
+  {
     "source": "statistics/hypothesis-testing",
     "target": "statistics/augmented-dickey-fuller-test",
     "label": "framework for",
@@ -15346,6 +17002,24 @@
     "target": "stochastic-processes/growth-vs-volatility-timescales",
     "label": "contrasted in",
     "description": "Mean returns scale linearly with time while volatility scales with the square root — this asymmetry explains why drift dominates at long horizons but is invisible at short ones."
+  },
+  {
+    "source": "statistics/selecting-principal-components",
+    "target": "computational-finance/curse-of-dimensionality",
+    "label": "mitigates",
+    "description": "Selecting a small number of principal components to retain is the primary dimensionality reduction strategy for mitigating the curse of dimensionality in high-dimensional financial covariance matrix estimation."
+  },
+  {
+    "source": "statistics/selecting-principal-components",
+    "target": "computational-finance/principal-component-regression",
+    "label": "feeds into",
+    "description": "Principal Component Regression requires a fixed number of retained PCs; the selection criteria (cumulative PVE threshold, scree elbow) determine how many PCs are used as regressors, directly controlling the bias-variance trade-off in the regression."
+  },
+  {
+    "source": "statistics/selecting-principal-components",
+    "target": "statistics/principal-component-analysis",
+    "label": "follows from",
+    "description": "Selecting the number of principal components is the practical decision step after performing PCA — the scree plot, cumulative variance threshold, and Kaiser criterion translate the eigenvalue spectrum into a concrete dimensionality choice."
   },
   {
     "source": "statistics/sequential-bayesian-updating",
@@ -17194,59 +18868,5 @@
     "target": "statistics/volatility-clustering",
     "label": "causes",
     "description": "The crisis shocks, leverage effect, and information flow dynamics described in why-volatility-changes are the economic mechanisms that produce the statistical phenomenon of volatility clustering observed in return time series."
-  },
-  {
-    "source": "computational-finance/feedforward-network",
-    "target": "computational-finance/backpropagation",
-    "label": "trained by",
-    "description": "Backpropagation is the algorithm that trains feedforward networks by computing the gradient of the loss with respect to every weight via the chain rule, propagating error signals backwards through the directed acyclic graph that defines the feedforward architecture."
-  },
-  {
-    "source": "computational-finance/feedforward-network",
-    "target": "computational-finance/activation-functions",
-    "label": "requires",
-    "description": "Without non-linear activation functions, any feedforward network collapses to a single linear transformation regardless of depth — activation functions are what give the feedforward architecture its capacity to approximate non-linear financial relationships."
-  },
-  {
-    "source": "computational-finance/feedforward-network",
-    "target": "computational-finance/lstm",
-    "label": "contrasts with",
-    "description": "The feedforward network treats each observation independently with no memory of previous inputs, while LSTM maintains hidden state across time steps — this distinction determines whether feedforward or recurrent architecture is appropriate for cross-sectional versus time-series problems in quantitative finance."
-  },
-  {
-    "source": "computational-finance/feedforward-network",
-    "target": "computational-finance/neural-networks",
-    "label": "instance of",
-    "description": "The feedforward network is the canonical instance of the general neural network concept, establishing the foundational layer-by-layer forward pass that all other architectures — convolutional, recurrent, transformer — modify or extend."
-  },
-  {
-    "source": "computational-finance/convolutional-neural-network",
-    "target": "computational-finance/feedforward-network",
-    "label": "extends",
-    "description": "A CNN is a specialised feedforward network where convolutional layers replace fully connected layers for inputs with local structure — all the feedforward principles (forward pass, backpropagation, activation functions) apply, but weight sharing makes it tractable for high-dimensional inputs like images."
-  },
-  {
-    "source": "computational-finance/convolutional-neural-network",
-    "target": "computational-finance/lstm",
-    "label": "contrasts with",
-    "description": "CNNs exploit local spatial structure via fixed-size filters and are suited to image-based alternative data; LSTMs exploit temporal ordering via gated memory and are suited to sequential financial time series — the two architectures address fundamentally different data geometries."
-  },
-  {
-    "source": "computational-finance/universal-approximation-theorem",
-    "target": "computational-finance/feedforward-network",
-    "label": "justifies",
-    "description": "The universal approximation theorem provides the theoretical guarantee that a feedforward network with sufficient width can represent any continuous function — it is the mathematical justification for using feedforward networks to approximate pricing functions and factor models in finance."
-  },
-  {
-    "source": "computational-finance/universal-approximation-theorem",
-    "target": "computational-finance/neural-networks",
-    "label": "motivates",
-    "description": "The universal approximation theorem is the central theoretical result motivating the use of neural networks in quantitative finance: it guarantees that no continuous financial relationship is, in principle, beyond the representational capacity of a sufficiently wide neural network."
-  },
-  {
-    "source": "computational-finance/universal-approximation-theorem",
-    "target": "computational-finance/activation-functions",
-    "label": "requires",
-    "description": "The universal approximation theorem holds only for non-constant, bounded activation functions — linear activation functions reduce the network to a linear map regardless of depth, and the theorem breaks down, making non-linearity a necessary condition for universal expressivity."
   }
 ]

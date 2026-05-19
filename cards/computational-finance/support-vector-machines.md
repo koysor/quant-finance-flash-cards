@@ -1,7 +1,7 @@
 # Support Vector Machines
 
 **Topic:** Computational Finance
-**Tags:** SVM, classification, hyperplane, margin, kernel trick, credit scoring
+**Tags:** svm, classification, hyperplane, margin, kernel trick, credit scoring
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

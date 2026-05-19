@@ -85,15 +85,12 @@ async def check_url(
     title = entry["title"]
 
     # Domains that block automated requests regardless of method — treat as always OK.
-    SKIP_DOMAINS = ("www.investopedia.com", "financeunlocked.com")
+    # youtube.com rate-limits and blocks bot GETs even for live videos.
+    SKIP_DOMAINS = ("www.investopedia.com", "financeunlocked.com", "youtube.com")
     if any(domain in url for domain in SKIP_DOMAINS):
         return card_id, category, title, url, True
 
     async with semaphore:
-        # Special handling for YouTube
-        if "youtube.com/watch?v=" in url:
-            ok = await check_youtube_availability(session, url)
-            return card_id, category, title, url, ok
 
         try:
             # General URL check

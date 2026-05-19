@@ -1,7 +1,7 @@
 # Reinforcement Learning
 
 **Topic:** Computational Finance
-**Tags:** reinforcement learning, agent, reward, policy, Markov decision process, algorithmic trading
+**Tags:** reinforcement learning, agent, reward, policy, markov decision process, algorithmic trading
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

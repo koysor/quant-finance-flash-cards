@@ -1,7 +1,7 @@
 # Gradient Boosting
 
 **Topic:** Computational Finance
-**Tags:** gradient boosting, ensemble, weak learners, XGBoost, sequential learning, credit scoring
+**Tags:** gradient boosting, ensemble, weak learners, xgboost, sequential learning, credit scoring
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

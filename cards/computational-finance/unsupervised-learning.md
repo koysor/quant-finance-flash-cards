@@ -1,7 +1,7 @@
 # Unsupervised Learning
 
 **Topic:** Computational Finance
-**Tags:** unsupervised learning, clustering, dimensionality reduction, regime detection, PCA, portfolio
+**Tags:** unsupervised learning, clustering, dimensionality reduction, regime detection, pca, portfolio
 **Created:** 2026-04-22
 **Author:** Claude Sonnet 4.6
 

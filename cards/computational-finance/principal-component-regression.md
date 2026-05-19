@@ -1,7 +1,7 @@
 # Principal Component Regression
 
 **Topic:** Computational Finance
-**Tags:** PCR, PCA, regression, dimensionality reduction, multicollinearity, factor model
+**Tags:** pcr, pca, regression, dimensionality reduction, multicollinearity, factor model
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 

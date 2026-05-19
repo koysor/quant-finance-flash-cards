@@ -1,7 +1,7 @@
 # Feature Vector
 
 **Topic:** Computational Finance
-**Tags:** feature vector, input vector, machine learning, normalisation, input representation, data preprocessing, supervised learning
+**Tags:** feature vector, input vector, machine learning, normalisation, data preprocessing, supervised learning
 **Created:** 2026-04-22
 **Author:** Claude Sonnet 4.6
 

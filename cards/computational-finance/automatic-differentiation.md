@@ -1,7 +1,7 @@
 # Automatic Differentiation
 
 **Topic:** Computational Finance
-**Tags:** automatic differentiation, adjoint, AAD, greeks, machine learning, backpropagation
+**Tags:** automatic differentiation, adjoint, aad, greeks, machine learning, backpropagation
 **Created:** 2026-04-19
 **Author:** Claude Sonnet 4.6
 
@@ -13,7 +13,7 @@ Automatic differentiation (AD) computes exact derivatives of any function implem
 
 ## Key Formula
 
-For a function $f: \mathbb{R}^n \to \mathbb{R}^m$ computed as a sequence of elementary operations, the chain rule gives the Jacobian. Two modes exist:
+Two modes of AD, both applying the chain rule to elementary operations:
 
 **Forward mode** — propagates derivative alongside the primal computation:
 
@@ -23,7 +23,7 @@ $$\dot{v}_i = \frac{\partial v_i}{\partial x_j} \quad \text{(cost: } n \text{ fo
 
 $$\bar{v}_i = \frac{\partial f}{\partial v_i} \quad \text{(cost: 1 forward + 1 backward pass, regardless of } n\text{)}$$
 
-For $f: \mathbb{R}^n \to \mathbb{R}$ (a scalar loss or P&L), reverse mode computes **all** $n$ partial derivatives in a single backward pass — $O(1)$ cost vs $O(n)$ for finite differences.
+For scalar $f: \mathbb{R}^n \to \mathbb{R}$, reverse mode computes all $n$ partials in one backward pass: $O(1)$ cost vs $O(n)$ for finite differences.
 
 **Python (JAX):**
 

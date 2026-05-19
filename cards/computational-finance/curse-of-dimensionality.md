@@ -1,7 +1,7 @@
 # Curse of Dimensionality
 
 **Topic:** Computational Finance
-**Tags:** dimensionality, feature selection, PCA, sparsity, machine learning, overfitting
+**Tags:** dimensionality, feature selection, pca, sparsity, machine learning, overfitting
 **Created:** 2026-04-18
 **Author:** Claude Sonnet 4.6
 
