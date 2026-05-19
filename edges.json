@@ -3721,6 +3721,12 @@
   },
   {
     "source": "computational-finance/backpropagation",
+    "target": "computational-finance/gradient-clipping",
+    "label": "requires",
+    "description": "Gradient clipping is applied immediately after the backward pass of backpropagation, before the optimiser step — it is an intervention on the raw gradients computed by backprop to prevent any single update from destabilising the model parameters."
+  },
+  {
+    "source": "computational-finance/backpropagation",
     "target": "computational-finance/lstm",
     "label": "trains via BPTT",
     "description": "LSTMs are trained using backpropagation through time (BPTT), the temporal extension of standard backpropagation that unrolls the network across timesteps and computes gradients through the gate operations."
@@ -4524,6 +4530,24 @@
     "description": "KNN classifies a new observation by finding the K training feature vectors closest to it in feature space; without a well-constructed and normalised feature vector, distance comparisons are meaningless and classification accuracy collapses."
   },
   {
+    "source": "computational-finance/federated-learning",
+    "target": "computational-finance/distribution-shift",
+    "label": "complicated by",
+    "description": "In federated financial modelling, each client (bank) has a non-IID data distribution reflecting its own borrower demographics — this statistical heterogeneity is a form of distribution shift across clients that causes FedAvg to converge more slowly and to a worse global optimum than with IID data."
+  },
+  {
+    "source": "computational-finance/federated-learning",
+    "target": "computational-finance/gradient-descent",
+    "label": "distributes",
+    "description": "FedAvg distributes the gradient descent computation across K clients, each running local SGD on its private data — the server aggregates weight updates rather than gradients, making federated learning communication-efficient compared to naive distributed SGD."
+  },
+  {
+    "source": "computational-finance/federated-learning",
+    "target": "computational-finance/neural-networks",
+    "label": "trains",
+    "description": "Federated learning is most commonly applied to train neural network models — the gradient-based update mechanism makes neural network weights straightforward to aggregate across clients, whereas tree-based models require different federation strategies."
+  },
+  {
     "source": "computational-finance/feedforward-network",
     "target": "computational-finance/activation-functions",
     "label": "requires",
@@ -4714,6 +4738,18 @@
     "target": "computational-finance/xgboost",
     "label": "extended by",
     "description": "XGBoost extends vanilla gradient boosting with leaf-weight regularisation (L1/L2), column subsampling, and second-order Taylor approximation of the loss — improving resistance to overfitting on low signal-to-noise financial data."
+  },
+  {
+    "source": "computational-finance/gradient-clipping",
+    "target": "computational-finance/learning-rate-scheduling",
+    "label": "complements",
+    "description": "Gradient clipping and learning rate scheduling both control the size of parameter updates but at different levels: clipping caps individual extreme gradient events whilst scheduling reduces the overall step size as training converges — combining both is standard when training deep models on volatile financial data."
+  },
+  {
+    "source": "computational-finance/gradient-clipping",
+    "target": "computational-finance/lstm",
+    "label": "stabilises training of",
+    "description": "LSTMs are particularly prone to exploding gradients because gradients are multiplied through the recurrent weight matrix at every time step — gradient clipping is standard practice when training LSTMs on financial sequences such as daily returns or tick data."
   },
   {
     "source": "computational-finance/gradient-descent",
@@ -5056,6 +5092,18 @@
     "target": "computational-finance/svm-dual-formulation",
     "label": "enabled by",
     "description": "The kernel trick is made possible by the dual formulation: because the dual expresses data only as dot products, these can be replaced by any kernel function to implicitly map data into a higher-dimensional feature space."
+  },
+  {
+    "source": "computational-finance/knowledge-distillation",
+    "target": "computational-finance/finbert",
+    "label": "compresses",
+    "description": "FinBERT is a common distillation target in financial NLP: its 110M-parameter teacher is distilled into a 4-layer student model that achieves near-equal sentiment classification accuracy at 5× lower inference latency, enabling real-time processing of news flow and earnings call transcripts."
+  },
+  {
+    "source": "computational-finance/knowledge-distillation",
+    "target": "computational-finance/softmax-function",
+    "label": "uses temperature-scaled",
+    "description": "Knowledge distillation uses a temperature-scaled softmax to produce soft probability targets from the teacher — raising temperature T above 1 flattens the output distribution, revealing the teacher's inter-class similarity structure which carries more training signal than hard one-hot labels."
   },
   {
     "source": "computational-finance/kullback-leibler-divergence",
@@ -5790,6 +5838,24 @@
     "description": "Under the PL condition, gradient descent converges linearly to the global minimum even on non-convex loss surfaces — the condition bounds the gradient norm below by the suboptimality gap, ensuring a small gradient always implies near-optimality rather than a plateau."
   },
   {
+    "source": "computational-finance/population-stability-index",
+    "target": "computational-finance/distribution-shift",
+    "label": "quantifies",
+    "description": "The Population Stability Index is the primary operational metric for detecting covariate shift in deployed financial models — a PSI above 0.20 on an input feature signals that the feature's distribution has shifted materially from the training period and the model should be reviewed."
+  },
+  {
+    "source": "computational-finance/population-stability-index",
+    "target": "computational-finance/kullback-leibler-divergence",
+    "label": "approximates",
+    "description": "PSI is a symmetrised KL divergence computed over histogram bins — when distributions are close, PSI ≈ 2 × D_KL, giving it an information-theoretic interpretation as the extra information needed to describe the current distribution using the reference distribution's encoding."
+  },
+  {
+    "source": "computational-finance/population-stability-index",
+    "target": "computational-finance/logistic-regression",
+    "label": "monitors stability of",
+    "description": "Logistic regression credit scorecards are the primary use case for PSI monitoring in banking — regulators and model risk teams compute PSI monthly on every scorecard input feature and on the score itself to confirm the model remains valid for the current borrower population."
+  },
+  {
     "source": "computational-finance/portfolio-optimisation-in-python",
     "target": "linear-algebra/positive-definite-matrices",
     "label": "requires",
@@ -5812,6 +5878,12 @@
     "target": "computational-finance/attention-mechanism",
     "label": "complements",
     "description": "Positional encoding and attention are complementary: attention provides content-based routing between any two tokens, whilst positional encoding gives the model the raw material to route based on position — together they enable context-sensitive, order-aware sequence modelling."
+  },
+  {
+    "source": "computational-finance/positional-encoding",
+    "target": "computational-finance/rotary-positional-encoding",
+    "label": "improved by",
+    "description": "RoPE improves on sinusoidal positional encoding by encoding relative rather than absolute position — the inner product between rotated query and key vectors depends only on their offset m−n, enabling better generalisation to document lengths beyond the training context window."
   },
   {
     "source": "computational-finance/positional-encoding",
@@ -6070,6 +6142,18 @@
     "target": "probability/expected-value",
     "label": "interpreted via",
     "description": "AUC has a probabilistic interpretation as the expected value of the indicator that a randomly drawn positive is scored higher than a randomly drawn negative — connecting the geometric area under the curve to a concrete probability statement."
+  },
+  {
+    "source": "computational-finance/rotary-positional-encoding",
+    "target": "computational-finance/multi-head-attention",
+    "label": "applied within",
+    "description": "RoPE is applied directly to the query and key vectors inside each attention head before the dot-product is computed, replacing the additive positional embedding used by BERT with a multiplicative rotation that preserves the geometry of the attention score function."
+  },
+  {
+    "source": "computational-finance/rotary-positional-encoding",
+    "target": "computational-finance/transformer",
+    "label": "variant used in",
+    "description": "RoPE is the positional encoding used in the LLaMA, GPT-NeoX, and Mistral transformer families — it has become the default for open-source LLMs applied to long financial documents because its relative structure allows length generalisation beyond the training context window."
   },
   {
     "source": "computational-finance/scikit-learn",
@@ -6577,6 +6661,12 @@
   },
   {
     "source": "computational-finance/transfer-learning",
+    "target": "computational-finance/knowledge-distillation",
+    "label": "combined with",
+    "description": "In financial NLP, transfer learning and knowledge distillation are used in sequence: a large model is first fine-tuned on financial text (transfer learning), then distilled into a smaller student for production deployment — the distillation step preserves the domain adaptation gained by fine-tuning."
+  },
+  {
+    "source": "computational-finance/transfer-learning",
     "target": "computational-finance/machine-learning",
     "label": "advanced technique in",
     "description": "Transfer learning extends the standard supervised ML pipeline by replacing random weight initialisation with pre-trained weights, dramatically reducing the labelled data requirement — critical in finance where high-quality annotated datasets are scarce and expensive."
@@ -6730,6 +6820,12 @@
     "target": "computational-finance/backpropagation",
     "label": "arises during",
     "description": "The vanishing gradient problem emerges from the chain rule of backpropagation: multiplying many Jacobians together causes gradient magnitudes to shrink exponentially in deep networks with bounded-derivative activations like sigmoid."
+  },
+  {
+    "source": "computational-finance/vanishing-gradient",
+    "target": "computational-finance/gradient-clipping",
+    "label": "complementary to",
+    "description": "Vanishing and exploding gradients are two sides of the same instability in deep networks: vanishing gradients are addressed by gating mechanisms and residual connections, whilst exploding gradients are addressed by gradient clipping — practitioners typically need both defences when training LSTMs on financial return series."
   },
   {
     "source": "computational-finance/vanishing-gradient",

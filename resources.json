@@ -3635,6 +3635,28 @@
       }
     ]
   },
+  "computational-finance/federated-learning": {
+    "websites": [
+      {
+        "title": "Google AI Blog — Federated Learning: Collaborative Machine Learning without Centralised Training Data",
+        "url": "https://ai.googleblog.com/2017/04/federated-learning-collaborative.html"
+      },
+      {
+        "title": "Wikipedia — Federated Learning",
+        "url": "https://en.wikipedia.org/wiki/Federated_learning"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Federated Learning — MIT Deep Learning",
+        "url": "https://www.youtube.com/watch?v=mohbnFRuMK0"
+      },
+      {
+        "title": "Privacy-Preserving Machine Learning — TensorFlow",
+        "url": "https://www.youtube.com/watch?v=X8YYWunttOY"
+      }
+    ]
+  },
   "computational-finance/feedforward-network": {
     "websites": [
       {
@@ -3808,6 +3830,28 @@
       {
         "title": "StatQuest — XGBoost Part 1: XGBoost Trees for Regression",
         "url": "https://www.youtube.com/watch?v=OtD8wVaFm6E"
+      }
+    ]
+  },
+  "computational-finance/gradient-clipping": {
+    "websites": [
+      {
+        "title": "Dive into Deep Learning — Gradient Clipping",
+        "url": "https://d2l.ai/chapter_recurrent-neural-networks/rnn-scratch.html"
+      },
+      {
+        "title": "Dive into Deep Learning — Gradient Clipping",
+        "url": "https://d2l.ai/chapter_recurrent-neural-networks/rnn-scratch.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Recurrent Neural Networks — MIT Deep Learning (Lex Fridman)",
+        "url": "https://www.youtube.com/watch?v=SEnXr6v2ifU"
+      },
+      {
+        "title": "Exploding and Vanishing Gradients — Deep Learning AI",
+        "url": "https://www.youtube.com/watch?v=qhXZsFVxGKo"
       }
     ]
   },
@@ -4148,6 +4192,28 @@
       {
         "title": "Support Vector Machines Part 2: The Polynomial Kernel – StatQuest (YouTube)",
         "url": "https://www.youtube.com/watch?v=Toet3EiSFcM"
+      }
+    ]
+  },
+  "computational-finance/knowledge-distillation": {
+    "websites": [
+      {
+        "title": "Hinton et al. — Distilling the Knowledge in a Neural Network (arXiv)",
+        "url": "https://arxiv.org/abs/1503.02531"
+      },
+      {
+        "title": "Hugging Face — Knowledge Distillation for NLP",
+        "url": "https://huggingface.co/docs/transformers/model_doc/distilbert"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Knowledge Distillation Explained — Yannic Kilcher",
+        "url": "https://www.youtube.com/watch?v=IIqVFe-6jW0"
+      },
+      {
+        "title": "Model Compression — Stanford CS224N NLP",
+        "url": "https://www.youtube.com/watch?v=2uiF6RZTMhQ"
       }
     ]
   },
@@ -4949,6 +5015,28 @@
       }
     ]
   },
+  "computational-finance/population-stability-index": {
+    "websites": [
+      {
+        "title": "Scorecard Model Monitoring — PSI Overview (Listendata)",
+        "url": "https://www.listendata.com/2015/05/population-stability-index.html"
+      },
+      {
+        "title": "Wikipedia — Population Stability Index",
+        "url": "https://en.wikipedia.org/wiki/Population_stability_index"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Model Monitoring in Machine Learning — Weights & Biases",
+        "url": "https://www.youtube.com/watch?v=hGCFBuqBmfA"
+      },
+      {
+        "title": "Credit Risk Modelling with Python — codebasics",
+        "url": "https://www.youtube.com/watch?v=MJs93B-Drco"
+      }
+    ]
+  },
   "computational-finance/portfolio-optimisation-in-python": {
     "websites": [
       {
@@ -5224,6 +5312,28 @@
       {
         "title": "StatQuest — Machine Learning Fundamentals: Sensitivity and Specificity",
         "url": "https://www.youtube.com/watch?v=vP06aMoz4v8"
+      }
+    ]
+  },
+  "computational-finance/rotary-positional-encoding": {
+    "websites": [
+      {
+        "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding (arXiv)",
+        "url": "https://arxiv.org/abs/2104.09864"
+      },
+      {
+        "title": "The Illustrated Transformer — Jay Alammar",
+        "url": "https://jalammar.github.io/illustrated-transformer/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Rotary Embeddings (RoPE) — Explained by Yannic Kilcher",
+        "url": "https://www.youtube.com/watch?v=GQPOtyITy54"
+      },
+      {
+        "title": "Positional Encoding in Transformers — Computerphile",
+        "url": "https://www.youtube.com/watch?v=1biZfFLPRSY"
       }
     ]
   },
