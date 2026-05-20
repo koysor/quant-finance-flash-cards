@@ -3738,6 +3738,24 @@
     "description": "Backpropagation computes the gradient of the loss with respect to every weight; the optimiser then uses those gradients to update the weights according to its specific update rule (SGD, Adam, RMSProp)."
   },
   {
+    "source": "computational-finance/bag-of-words",
+    "target": "computational-finance/cosine-similarity",
+    "label": "compared via",
+    "description": "Once text is encoded as a BoW count vector, cosine similarity measures how alike two financial documents are by comparing the angle between their sparse term-count vectors, making it invariant to document length."
+  },
+  {
+    "source": "computational-finance/bag-of-words",
+    "target": "computational-finance/natural-language-processing",
+    "label": "foundation of",
+    "description": "BoW is one of the oldest text-representation schemes in NLP, providing a simple bag-of-word-count baseline that underpins many early financial sentiment classifiers and document-retrieval systems."
+  },
+  {
+    "source": "computational-finance/bag-of-words",
+    "target": "computational-finance/tf-idf",
+    "label": "extended by",
+    "description": "TF-IDF improves on the raw BoW count vector by downweighting words that appear across many financial documents (such as 'market' or 'company'), making each document's term vector more discriminative."
+  },
+  {
     "source": "computational-finance/batch-normalisation",
     "target": "computational-finance/dropout",
     "label": "combined with",
@@ -4266,6 +4284,24 @@
     "description": "Doc2Vec extends Word2Vec from word-level to document-level embeddings by adding a trainable paragraph ID vector to the prediction context, enabling full-document representations that word averaging cannot capture."
   },
   {
+    "source": "computational-finance/document-term-matrix",
+    "target": "computational-finance/bag-of-words",
+    "label": "matrix form of",
+    "description": "The document-term matrix is the stacked form of individual BoW vectors: each row is one document's count vector, so the full matrix represents the entire corpus in a single rectangular array."
+  },
+  {
+    "source": "computational-finance/document-term-matrix",
+    "target": "computational-finance/latent-semantic-analysis",
+    "label": "factorised by",
+    "description": "LSA applies Truncated SVD to the document-term matrix to extract the dominant latent topics, compressing thousands of vocabulary dimensions into a dense, low-dimensional semantic space."
+  },
+  {
+    "source": "computational-finance/document-term-matrix",
+    "target": "computational-finance/tf-idf",
+    "label": "weighted by",
+    "description": "Replacing raw counts in the DTM with TF-IDF weights reduces the dominance of common finance words such as 'market' and 'company', producing more discriminative document representations."
+  },
+  {
     "source": "computational-finance/dropout",
     "target": "computational-finance/bias-variance-trade-off",
     "label": "reduces variance via",
@@ -4591,6 +4627,12 @@
   },
   {
     "source": "computational-finance/finbert",
+    "target": "computational-finance/sentiment-analysis-pipeline",
+    "label": "powers modern",
+    "description": "FinBERT has become the dominant backbone for financial sentiment pipelines, replacing classical BoW and TF-IDF approaches with contextual embeddings pre-trained on financial corpora."
+  },
+  {
+    "source": "computational-finance/finbert",
     "target": "computational-finance/transfer-learning",
     "label": "example of",
     "description": "FinBERT demonstrates the transfer learning paradigm in finance: BERT's weights, pre-trained on general English, are fine-tuned on a financial corpus so the model retains broad language understanding while acquiring domain-specific financial sentiment knowledge."
@@ -4666,6 +4708,12 @@
     "target": "computational-finance/natural-language-processing",
     "label": "applied within",
     "description": "GloVe vectors are a core embedding resource in financial NLP pipelines, providing semantically rich word representations for tasks such as earnings sentiment classification, credit-risk lexicon construction, and regulatory filing clustering."
+  },
+  {
+    "source": "computational-finance/glove",
+    "target": "computational-finance/pointwise-mutual-information",
+    "label": "approximates",
+    "description": "GloVe word embeddings are mathematically equivalent to factorising a shifted PMI matrix, showing that neural word vectors and classical co-occurrence statistics are two views of the same underlying structure."
   },
   {
     "source": "computational-finance/glove",
@@ -5152,6 +5200,18 @@
     "target": "computational-finance/tokenisation",
     "label": "defined over",
     "description": "Language modelling loss is computed over the tokenised vocabulary — the probability $P(w_t|\\text{context})$ is a distribution over all tokens in the tokeniser's vocabulary, so the vocabulary size and tokenisation algorithm directly determine the difficulty of the loss and the perplexity baseline."
+  },
+  {
+    "source": "computational-finance/latent-semantic-analysis",
+    "target": "computational-finance/natural-language-processing",
+    "label": "applied in",
+    "description": "LSA converts sparse document-term matrices into dense topic vectors, enabling unsupervised clustering of financial filings and earnings calls without labelled training data."
+  },
+  {
+    "source": "computational-finance/latent-semantic-analysis",
+    "target": "linear-algebra/singular-value-decomposition",
+    "label": "applied via",
+    "description": "LSA uses Truncated SVD to decompose the document-term matrix, retaining only the top-k singular values and thereby projecting documents and terms into a shared low-dimensional topic space."
   },
   {
     "source": "computational-finance/layer-normalisation",
@@ -5820,6 +5880,18 @@
     "description": "Perplexity is the primary hyperparameter of t-SNE, determining the effective neighbourhood size used to construct the high-dimensional similarity distribution and directly shaping whether the resulting embedding reveals local or global structure."
   },
   {
+    "source": "computational-finance/pointwise-mutual-information",
+    "target": "computational-finance/co-occurrence-matrix",
+    "label": "derived from",
+    "description": "PMI is computed directly from the co-occurrence counts in a word-context matrix: joint and marginal probabilities are estimated from how often pairs of words appear in the same context window."
+  },
+  {
+    "source": "computational-finance/pointwise-mutual-information",
+    "target": "computational-finance/information-theory",
+    "label": "rooted in",
+    "description": "PMI is an instance of mutual information applied at the level of individual word pairs, connecting corpus-level co-occurrence statistics to Shannon's information-theoretic framework."
+  },
+  {
     "source": "computational-finance/polyak-lojasiewicz-condition",
     "target": "calculus/convex-function",
     "label": "weaker than",
@@ -6352,6 +6424,18 @@
     "target": "computational-finance/named-entity-recognition",
     "label": "complements",
     "description": "SBERT semantic retrieval and NER entity extraction are complementary financial NLP tools: SBERT finds the most relevant historical documents by meaning, while NER structures those documents into queryable entity tables — together they form a complete unstructured-to-structured data pipeline."
+  },
+  {
+    "source": "computational-finance/sentiment-analysis-pipeline",
+    "target": "computational-finance/bag-of-words",
+    "label": "baseline uses",
+    "description": "The simplest financial sentiment pipeline encodes documents as BoW count vectors before feeding them to a Naive Bayes or logistic-regression classifier."
+  },
+  {
+    "source": "computational-finance/sentiment-analysis-pipeline",
+    "target": "computational-finance/natural-language-processing",
+    "label": "instance of",
+    "description": "Sentiment analysis is a supervised NLP application that assigns a directional score to financial text, making it one of the most commercially deployed NLP pipelines in quantitative finance."
   },
   {
     "source": "computational-finance/shap-values",
@@ -6904,6 +6988,18 @@
     "target": "computational-finance/vanishing-gradient",
     "label": "prevents",
     "description": "Xavier and He initialisation are designed to preserve activation variance across layers, preventing the vanishing gradient problem from occurring in the very first backward pass before any learning begins."
+  },
+  {
+    "source": "computational-finance/word2vec",
+    "target": "computational-finance/bag-of-words",
+    "label": "supersedes",
+    "description": "Word2Vec replaces the sparse, order-free count vectors of BoW with dense semantic embeddings, so phrases with similar financial meaning — such as 'profit rises' and 'earnings increase' — map to nearby points in vector space."
+  },
+  {
+    "source": "computational-finance/word2vec",
+    "target": "computational-finance/latent-semantic-analysis",
+    "label": "supersedes",
+    "description": "Word2Vec replaces the static, corpus-wide SVD factorisation of LSA with a neural prediction model that captures local context and analogy relationships, producing richer embeddings for financial text."
   },
   {
     "source": "computational-finance/word2vec",

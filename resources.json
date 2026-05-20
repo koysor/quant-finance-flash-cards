@@ -2803,6 +2803,28 @@
       }
     ]
   },
+  "computational-finance/bag-of-words": {
+    "websites": [
+      {
+        "title": "Bag-of-words model — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bag-of-words_model"
+      },
+      {
+        "title": "The bag of words representation — Scikit-learn",
+        "url": "https://scikit-learn.org/stable/modules/feature_extraction.html#the-bag-of-words-representation"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bag of Words — Computerphile",
+        "url": "https://www.youtube.com/watch?v=XXu7Z0rC2T4"
+      },
+      {
+        "title": "Naive Bayes, Clearly Explained — StatQuest",
+        "url": "https://www.youtube.com/watch?v=O2L2Uv9pdDA"
+      }
+    ]
+  },
   "computational-finance/batch-normalisation": {
     "websites": [
       {
@@ -3348,6 +3370,24 @@
       {
         "title": "Stanford CS224N Lecture 1: Introduction and Word Vectors",
         "url": "https://www.youtube.com/watch?v=8rXD5-xhemo"
+      }
+    ]
+  },
+  "computational-finance/document-term-matrix": {
+    "websites": [
+      {
+        "title": "Document-term matrix — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Document-term_matrix"
+      },
+      {
+        "title": "Text feature extraction — Scikit-learn",
+        "url": "https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Natural Language Processing In Python — sentdex",
+        "url": "https://www.youtube.com/watch?v=FLZvOKSCkxY"
       }
     ]
   },
@@ -4261,6 +4301,24 @@
       }
     ]
   },
+  "computational-finance/latent-semantic-analysis": {
+    "websites": [
+      {
+        "title": "Latent semantic analysis — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Latent_semantic_analysis"
+      },
+      {
+        "title": "TruncatedSVD — Scikit-learn",
+        "url": "https://scikit-learn.org/stable/modules/decomposition.html#lsa"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Singular Value Decomposition (SVD) — MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=rYz83XPxiZo"
+      }
+    ]
+  },
   "computational-finance/layer-normalisation": {
     "websites": [
       {
@@ -4993,6 +5051,24 @@
       }
     ]
   },
+  "computational-finance/pointwise-mutual-information": {
+    "websites": [
+      {
+        "title": "Pointwise mutual information — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Pointwise_mutual_information"
+      },
+      {
+        "title": "Collocations and PMI — NLTK How-To",
+        "url": "https://www.nltk.org/howto/collocations.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Word Embedding and Word2Vec, Clearly Explained — StatQuest",
+        "url": "https://www.youtube.com/watch?v=viZrOnJclY0"
+      }
+    ]
+  },
   "computational-finance/polyak-lojasiewicz-condition": {
     "websites": [
       {
@@ -5490,6 +5566,28 @@
       {
         "title": "3Blue1Brown — Attention in Transformers",
         "url": "https://www.youtube.com/watch?v=eMlx5fFNoYc"
+      }
+    ]
+  },
+  "computational-finance/sentiment-analysis-pipeline": {
+    "websites": [
+      {
+        "title": "Sentiment analysis — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sentiment_analysis"
+      },
+      {
+        "title": "NLP Course — HuggingFace",
+        "url": "https://huggingface.co/learn/nlp-course/chapter1/1"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Sentiment Analysis with Transformers — HuggingFace",
+        "url": "https://www.youtube.com/watch?v=u--UVvH-LIQ"
+      },
+      {
+        "title": "FinBERT: Financial Sentiment Analysis — Towards Data Science",
+        "url": "https://www.youtube.com/watch?v=O8NiXfVazv4"
       }
     ]
   },
