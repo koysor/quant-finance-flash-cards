@@ -1,7 +1,6 @@
 # Rebalancing
 
 **Topic:** Portfolio Theory & Asset Pricing
-**Level:** A Level Mathematics
 **Tags:** rebalancing, asset allocation, portfolio drift, transaction costs, target weights
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

@@ -1,7 +1,6 @@
 # Survivorship Bias
 
 **Topic:** Statistics
-**Level:** A Level Mathematics
 **Tags:** survivorship bias, selection bias, backtesting, data quality, research pitfall
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

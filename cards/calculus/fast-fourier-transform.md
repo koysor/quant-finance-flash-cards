@@ -1,7 +1,6 @@
 # Fast Fourier Transform
 
 **Topic:** Calculus
-**Level:** A Level Mathematics
 **Tags:** FFT, fourier transform, characteristic function, option pricing, numerical methods
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

@@ -1,7 +1,6 @@
 # Swaption
 
 **Topic:** Derivatives
-**Level:** A Level Mathematics
 **Tags:** swaption, interest rate option, volatility, rates, Black model, exercise
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

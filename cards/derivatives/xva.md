@@ -1,7 +1,6 @@
 # XVA
 
 **Topic:** Derivatives
-**Level:** A Level Mathematics
 **Tags:** XVA, CVA, DVA, FVA, valuation adjustment, counterparty risk, funding
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

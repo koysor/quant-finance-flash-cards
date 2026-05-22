@@ -1,7 +1,6 @@
 # Regime Switching
 
 **Topic:** Statistics
-**Level:** A Level Mathematics
 **Tags:** regime switching, hidden markov model, market regimes, volatility regimes, state detection
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

@@ -1,7 +1,6 @@
 # Mean Reversion Strategy
 
 **Topic:** Portfolio Theory & Asset Pricing
-**Level:** A Level Mathematics
 **Tags:** mean reversion, contrarian, value, overreaction, pairs trading
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

@@ -1,7 +1,6 @@
 # Data Snooping Bias
 
 **Topic:** Statistics
-**Level:** A Level Mathematics
 **Tags:** data snooping, multiple testing, p-hacking, false discovery, research bias
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

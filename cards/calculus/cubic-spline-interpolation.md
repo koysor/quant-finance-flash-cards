@@ -1,7 +1,6 @@
 # Cubic Spline Interpolation
 
 **Topic:** Calculus
-**Level:** A Level Mathematics
 **Tags:** cubic spline, interpolation, yield curve, curve construction, smoothness
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

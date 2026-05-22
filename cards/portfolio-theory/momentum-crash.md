@@ -1,7 +1,6 @@
 # Momentum Crash
 
 **Topic:** Portfolio Theory & Asset Pricing
-**Level:** A Level Mathematics
 **Tags:** momentum crash, tail risk, factor risk, drawdown, market recovery
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

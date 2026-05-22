@@ -1,7 +1,6 @@
 # Carhart Four-Factor Model
 
 **Topic:** Portfolio Theory & Asset Pricing
-**Level:** A Level Mathematics
 **Tags:** carhart, four-factor model, momentum, performance attribution, factor model
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

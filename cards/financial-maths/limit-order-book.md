@@ -1,7 +1,6 @@
 # Limit Order Book
 
 **Topic:** Financial Mathematics
-**Level:** A Level Mathematics
 **Tags:** limit order book, market microstructure, bid, ask, order flow, depth
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

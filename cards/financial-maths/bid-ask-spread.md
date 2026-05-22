@@ -1,7 +1,6 @@
 # Bid-Ask Spread
 
 **Topic:** Financial Mathematics
-**Level:** A Level Mathematics
 **Tags:** bid-ask spread, market microstructure, liquidity, transaction cost, market maker
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

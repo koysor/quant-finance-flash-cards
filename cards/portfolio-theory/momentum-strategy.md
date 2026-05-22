@@ -1,7 +1,6 @@
 # Momentum Strategy
 
 **Topic:** Portfolio Theory & Asset Pricing
-**Level:** A Level Mathematics
 **Tags:** momentum, trend following, cross-sectional, winner-loser, factor strategy
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

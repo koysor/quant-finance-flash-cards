@@ -1,7 +1,6 @@
 # Overfitting
 
 **Topic:** Statistics
-**Level:** A Level Mathematics
 **Tags:** overfitting, model selection, in-sample, out-of-sample, bias-variance tradeoff
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

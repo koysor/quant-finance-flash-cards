@@ -1,7 +1,6 @@
 # Volatility Scaling
 
 **Topic:** Risk
-**Level:** A Level Mathematics
 **Tags:** volatility scaling, risk management, position sizing, inverse volatility, momentum crash
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

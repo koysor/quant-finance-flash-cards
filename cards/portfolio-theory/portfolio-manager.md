@@ -1,7 +1,6 @@
 # Portfolio Manager
 
 **Topic:** Portfolio Theory & Asset Pricing
-**Level:** A Level Mathematics
 **Tags:** portfolio manager, asset allocation, performance attribution, alpha, benchmark
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

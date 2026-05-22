@@ -1,7 +1,6 @@
 # SABR Model
 
 **Topic:** Volatility
-**Level:** A Level Mathematics
 **Tags:** SABR, stochastic volatility, smile, rates, swaption, FX options
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

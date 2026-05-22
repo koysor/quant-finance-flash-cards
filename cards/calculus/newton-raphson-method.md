@@ -1,7 +1,6 @@
 # Newton-Raphson Method
 
 **Topic:** Calculus
-**Level:** A Level Mathematics
 **Tags:** newton-raphson, root finding, iteration, implied volatility, numerical methods
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

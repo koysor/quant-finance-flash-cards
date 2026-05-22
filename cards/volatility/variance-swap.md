@@ -1,7 +1,6 @@
 # Variance Swap
 
 **Topic:** Volatility
-**Level:** A Level Mathematics
 **Tags:** variance swap, realised variance, implied variance, volatility trading, convexity
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

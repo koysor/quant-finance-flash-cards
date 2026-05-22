@@ -1,7 +1,6 @@
 # Greeks by Finite Difference
 
 **Topic:** Derivatives
-**Level:** A Level Mathematics
 **Tags:** finite difference, bumping, Greeks, numerical differentiation, sensitivity
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

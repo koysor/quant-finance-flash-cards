@@ -1,7 +1,6 @@
 # Local Volatility
 
 **Topic:** Volatility
-**Level:** A Level Mathematics
 **Tags:** local volatility, dupire, volatility surface, smile-consistent, exotic pricing
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

@@ -1,7 +1,6 @@
 # P&L Attribution
 
 **Topic:** Risk
-**Level:** A Level Mathematics
 **Tags:** P&L attribution, risk explain, Greeks, trading desk, daily P&L
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

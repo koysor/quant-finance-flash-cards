@@ -1,7 +1,6 @@
 # Diversification
 
 **Topic:** Portfolio Theory & Asset Pricing
-**Level:** A Level Mathematics
 **Tags:** diversification, correlation, portfolio risk, unsystematic risk, risk reduction
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6

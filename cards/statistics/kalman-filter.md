@@ -1,7 +1,6 @@
 # Kalman Filter
 
 **Topic:** Statistics
-**Level:** A Level Mathematics
 **Tags:** kalman filter, state estimation, signal extraction, pairs trading, time series
 **Created:** 2026-03-22
 **Author:** Claude Opus 4.6
