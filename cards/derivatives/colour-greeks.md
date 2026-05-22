@@ -1,7 +1,7 @@
 # Colour (Greeks)
 
 **Topic:** Derivatives
-**Tags:** colour, color, Greeks, sensitivity, options, gamma, time decay
+**Tags:** colour, Greeks, sensitivity, options, gamma, time decay
 **Created:** 2026-03-06
 **Author:** Claude Opus 4.6
 

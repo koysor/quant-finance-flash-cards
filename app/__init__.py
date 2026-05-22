@@ -16,12 +16,48 @@ import os
 import secrets
 from typing import Any
 
-from flask import Flask, render_template, session
+from flask import Flask, g, render_template, session
 from werkzeug.exceptions import HTTPException
 
 from app.db import init_db, load_edges_from_file, get_all_cards, get_site_stats
 from app.loader import load_all_cards
 from app.routes import bp, TOPIC_COLOURS, _topic_colour
+
+# Module-level cache populated once after card loading and invalidated on reload.
+# Avoids running two DB queries + full JSON serialisation on every HTTP request.
+_search_data_cache: str | None = None
+_site_stats_cache: dict[str, int] | None = None
+
+
+def _invalidate_global_cache() -> None:
+    global _search_data_cache, _site_stats_cache
+    _search_data_cache = None
+    _site_stats_cache = None
+
+
+def _get_search_data_json() -> str:
+    global _search_data_cache
+    if _search_data_cache is None:
+        cards = get_all_cards()
+        _search_data_cache = json.dumps([
+            {
+                "id":     c["id"],
+                "name":   c["name"],
+                "topic":  c["topic"],
+                "tags":   c["tags"],
+                "url":    f"/card/{c['id']}",
+                "colour": _topic_colour(c["topic"]),
+            }
+            for c in cards
+        ])
+    return _search_data_cache
+
+
+def _get_site_stats() -> dict[str, int]:
+    global _site_stats_cache
+    if _site_stats_cache is None:
+        _site_stats_cache = get_site_stats()
+    return _site_stats_cache
 
 
 def _load_json_config(path: str, default: Any) -> Any:
@@ -49,8 +85,13 @@ def create_app() -> Flask:
         A fully initialised application instance ready to serve requests.
     """
     app = Flask(__name__)
-    # SECRET_KEY must be stable across restarts in production to keep sessions valid.
-    app.secret_key = os.environ.get("SECRET_KEY") or secrets.token_hex(32)
+    secret = os.environ.get("SECRET_KEY")
+    if not secret and not app.debug:
+        raise RuntimeError(
+            "SECRET_KEY environment variable must be set in production. "
+            "Run with FLASK_DEBUG=1 for local development."
+        )
+    app.secret_key = secret or secrets.token_hex(32)
 
     init_db()
 
@@ -69,9 +110,16 @@ def create_app() -> Flask:
         key_terms_dict=app.config["KEY_TERMS"],
     )
     load_edges_from_file()
+    _invalidate_global_cache()
 
     # resources.json maps card IDs to {websites, videos} lists shown in the sidebar.
     app.config["RESOURCES"] = _load_json_config(os.path.join(root, "resources.json"), {})
+
+    @app.teardown_appcontext
+    def close_db(exc: BaseException | None = None) -> None:
+        conn = g.pop("db", None)
+        if conn is not None:
+            conn.close()
 
     app.register_blueprint(bp)
 
@@ -94,30 +142,14 @@ def create_app() -> Flask:
         csrf_token
             A per-session random hex token checked on every POST request.
         """
-        # These two queries run on every request. At current scale (~900 cards) the
-        # cost is negligible, but if the card count grows substantially consider
-        # caching with a short TTL (e.g. flask_caching or a module-level dict).
-        cards = get_all_cards()
-        stats = get_site_stats()
-        search_data = json.dumps([
-            {
-                "id":     c["id"],
-                "name":   c["name"],
-                "topic":  c["topic"],
-                "tags":   c["tags"],
-                "url":    f"/card/{c['id']}",
-                "colour": _topic_colour(c["topic"]),
-            }
-            for c in cards
-        ])
         if "csrf_token" not in session:
             session["csrf_token"] = secrets.token_hex(16)
 
         return {
             "topic_colour":     _topic_colour,
-            "search_data_json": search_data,
+            "search_data_json": _get_search_data_json(),
             "TOPIC_COLOURS":    TOPIC_COLOURS,
-            "site_stats":       stats,
+            "site_stats":       _get_site_stats(),
             "csrf_token":       session["csrf_token"],
         }
 

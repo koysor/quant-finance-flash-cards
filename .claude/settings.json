@@ -1,4 +1,9 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(uv run python scripts/validate_urls.py --force*)"
+    ]
+  },
   "hooks": {
     "PreToolUse": [
       {

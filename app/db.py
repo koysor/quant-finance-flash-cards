@@ -25,6 +25,8 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 
+from flask import g
+
 DB_PATH    = Path(__file__).parent.parent / "graph.db"
 EDGES_PATH = Path(__file__).parent.parent / "edges.json"
 
@@ -54,17 +56,29 @@ CREATE INDEX IF NOT EXISTS idx_cards_topic  ON cards(topic);
 """
 
 
-def get_db() -> sqlite3.Connection:
-    """
-    Open and return a new SQLite connection to ``graph.db``.
-
-    ``row_factory`` is set to ``sqlite3.Row`` so columns can be accessed by name.
-    Foreign key enforcement is enabled for every connection.
-    """
+def _open_connection() -> sqlite3.Connection:
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys = ON")
     return conn
+
+
+def get_db() -> sqlite3.Connection:
+    """
+    Return the SQLite connection for the current context.
+
+    Inside a Flask request the connection is stored on ``g`` and reused for
+    the lifetime of the request, then closed by the teardown registered in
+    ``init_db``.  Outside a request context (startup, tests) a fresh
+    connection is opened and returned directly; the caller owns its lifecycle.
+    """
+    try:
+        if "db" not in g:
+            g.db = _open_connection()
+        return g.db
+    except RuntimeError:
+        # No active application context — startup or test path.
+        return _open_connection()
 
 
 def init_db() -> None:
@@ -247,7 +261,8 @@ def get_cards_by_date_range(
 
     Columns returned: ``id``, ``name``, ``topic``, ``tags``, ``created_date``, ``author``.
     """
-    if order not in ("ASC", "DESC"):
+    _ORDER = {"ASC": "ASC", "DESC": "DESC"}
+    if order not in _ORDER:
         raise ValueError(f"Invalid order direction: {order!r}. Must be 'ASC' or 'DESC'.")
 
     query = "SELECT id, name, topic, tags, created_date, author FROM cards WHERE 1=1"
@@ -260,7 +275,7 @@ def get_cards_by_date_range(
         query += " AND created_date <= ?"
         params.append(end_date)
 
-    query += f" ORDER BY created_date {order}, name ASC"
+    query += f" ORDER BY created_date {_ORDER[order]}, name ASC"
 
     with get_db() as conn:
         return conn.execute(query, params).fetchall()
@@ -281,6 +296,9 @@ def find_cards_by_slug(slug: str) -> list[sqlite3.Row]:
 
     Columns returned: ``id``, ``name``, ``topic``.
     """
+    # Escape LIKE special characters before building the pattern.
+    # SQLite LIKE treats '%', '_', and the escape char itself as special.
+    # See https://www.sqlite.org/lang_expr.html#the_like_glob_regexp_match_and_extract_operators
     safe_slug = slug.replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_")
     with get_db() as conn:
         return conn.execute(
@@ -374,18 +392,41 @@ def delete_edge(edge_id: int) -> None:
         conn.execute("DELETE FROM edges WHERE id = ?", (edge_id,))
 
 
-def load_edges_from_file() -> None:
+def load_edges_from_file() -> bool:
     """
     Replace the entire edges table with the contents of ``edges.json``.
 
     ``edges.json`` is the committed source of truth for relationships.  This
     function is called on every startup so that any manual edits to the file
     (the primary way of adding new edges) are reflected immediately.
+
+    Skips the reload if the file's mtime matches the value stored in the
+    ``edge_file_mtime`` entry of the ``meta`` table, avoiding a full
+    DELETE + INSERT on every startup when the file has not changed.
+
+    Returns
+    -------
+    bool
+        ``True`` if the table was reloaded, ``False`` if skipped.
     """
     if not EDGES_PATH.exists():
-        return
-    data = json.loads(EDGES_PATH.read_text(encoding="utf-8"))
+        return False
+
+    current_mtime = EDGES_PATH.stat().st_mtime
+
     with get_db() as conn:
+        conn.execute(
+            "CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT)"
+        )
+        row = conn.execute(
+            "SELECT value FROM meta WHERE key = 'edge_file_mtime'"
+        ).fetchone()
+        stored_mtime = float(row["value"]) if row else None
+
+        if stored_mtime is not None and abs(current_mtime - stored_mtime) < 0.001:
+            return False
+
+        data = json.loads(EDGES_PATH.read_text(encoding="utf-8"))
         conn.execute("DELETE FROM edges")
         conn.executemany(
             "INSERT INTO edges (source_id, target_id, label, description)"
@@ -395,6 +436,12 @@ def load_edges_from_file() -> None:
                 for e in data
             ],
         )
+        conn.execute(
+            "INSERT INTO meta (key, value) VALUES ('edge_file_mtime', ?)"
+            " ON CONFLICT(key) DO UPDATE SET value = excluded.value",
+            (str(current_mtime),),
+        )
+    return True
 
 
 def save_edges_to_file() -> None:

@@ -51,7 +51,9 @@ AUTHOR_RE = re.compile(r'^\*\*Author:\*\*\s*(.+)$', re.MULTILINE)
 
 # Strips all metadata lines from the raw text before passing it to the Markdown renderer
 # so that field labels like "**Topic:** Calculus" do not appear in the rendered HTML.
-_METADATA_RE = re.compile(r'^\*\*(?:Topic|Tags|Created|Author):\*\*\s*.+$', re.MULTILINE)
+# Level is included even though it is not a recognised field, to prevent legacy cards
+# that carry it from leaking the raw text into the rendered output.
+_METADATA_RE = re.compile(r'^\*\*(?:Topic|Tags|Created|Author|Level):\*\*\s*.+$', re.MULTILINE)
 
 # Matches both display math ($$...$$) and inline math ($...$), non-greedy.
 # Used to locate LaTeX regions for notation/key-term extraction and for math protection.
@@ -69,7 +71,10 @@ _LATEX_CONSTRUCT_RE = re.compile(r'\\(mathbb|mathcal|text|operatorname)\{([^}]+)
 
 # Sentinel used to temporarily replace underscores inside math blocks so that
 # markdown-it does not interpret them as emphasis markers.
-_MATH_UNDERSCORE_PLACEHOLDER = "⟦USCORE⟧"
+# U+E000 and U+E001 are Unicode Private Use Area codepoints — explicitly reserved
+# for private applications and guaranteed never to appear in real text content.
+# They pass through markdown-it unmodified (unlike NUL, which CommonMark maps to U+FFFD).
+_MATH_UNDERSCORE_PLACEHOLDER = "USCORE"
 
 
 def extract_key_terms(raw_text: str, key_terms_dict: dict[str, Any]) -> list[dict[str, Any]]:
@@ -244,7 +249,7 @@ def _parse_card(
     author = m_author.group(1).strip() if m_author else "Unknown"
 
     # Strip metadata lines before rendering so they do not appear in the HTML.
-    rendered_text = _METADATA_RE.sub("", text, count=4).strip()
+    rendered_text = _METADATA_RE.sub("", text).strip()
     html_content  = _restore_math(_md.render(_protect_math(rendered_text)))
 
     notation  = extract_notation(text, notation_dict)   if notation_dict   else []

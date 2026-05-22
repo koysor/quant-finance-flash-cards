@@ -85,15 +85,17 @@ def _card_excerpt(html_content: str) -> str:
     """
     Extract a plain-text excerpt from a card's Definition section.
 
-    Finds the first paragraph after the ``## Definition`` heading in the
-    pre-rendered HTML, strips all HTML tags, collapses whitespace, and
-    truncates to 157 characters.  Used for ``<meta name="description">`` and
-    Open Graph tags.
+    Finds the block of HTML immediately after the ``## Definition`` heading
+    (up to the next ``<h2>``), strips all tags, collapses whitespace, and
+    truncates to 157 characters.  Capturing the full block (rather than only
+    the first ``<p>``) handles Definition sections that open with a list or
+    table rather than a paragraph.
 
+    Used for ``<meta name="description">`` and Open Graph tags.
     Returns a generic fallback string if no Definition section is found.
     """
     m = re.search(
-        r'<h2[^>]*>\s*Definition\s*</h2>\s*<p>(.*?)</p>',
+        r'<h2[^>]*>\s*Definition\s*</h2>(.*?)(?=<h2|$)',
         html_content, re.IGNORECASE | re.DOTALL,
     )
     if not m:
@@ -419,10 +421,11 @@ def graph_view() -> str:
     ]
 
     # Only include topics that have at least one node in the current graph.
+    active_topics = {n["title"] for n in nodes}
     legend = [
         {"topic": t, "colour": c}
         for t, c in TOPIC_COLOURS.items()
-        if any(n["title"] == t for n in nodes)
+        if t in active_topics
     ]
 
     return render_template(

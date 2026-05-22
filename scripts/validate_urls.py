@@ -40,39 +40,6 @@ def resources_staged() -> bool:
         return True
 
 
-async def check_youtube_availability(session, url):
-    """Deep check for YouTube video availability."""
-    try:
-        async with session.get(url, timeout=TIMEOUT) as resp:
-            if resp.status != 200:
-                return False
-            html = await resp.text()
-            
-            # YouTube specific indicators of unavailability
-            unavailable_markers = [
-                '"status":"ERROR"',
-                '"reason":"Video unavailable"',
-                '"reason":"This video is private"',
-                '"reason":"This video has been removed by the uploader"',
-                '<div id="player-error-message"',
-                'class="yt-player-error-message-renderer"',
-                'video is unavailable',
-                'video is private'
-            ]
-            
-            for marker in unavailable_markers:
-                if marker in html or marker.lower() in html.lower():
-                    return False
-            
-            # If we find "status":"OK" in the player response, it's definitely fine
-            if '"status":"OK"' in html:
-                return True
-                
-            return True # Assume OK if no error markers found
-    except Exception:
-        return False
-
-
 async def check_url(
     session: aiohttp.ClientSession,
     semaphore: asyncio.Semaphore,
