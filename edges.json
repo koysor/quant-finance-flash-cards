@@ -5700,6 +5700,12 @@
     "description": "NLP pipelines produce representative vectors (embeddings) for words and documents, converting discrete financial text into dense numeric vectors that capture semantic relationships and can be fed into downstream ML models."
   },
   {
+    "source": "computational-finance/natural-language-processing",
+    "target": "computational-finance/word-embeddings",
+    "label": "uses",
+    "description": "Word embeddings are the standard numerical representation used in NLP pipelines to convert raw text into dense vectors that machine learning models can process for tasks such as sentiment analysis and named entity recognition."
+  },
+  {
     "source": "computational-finance/nearest-centroid-classifier",
     "target": "computational-finance/linear-discriminant-analysis",
     "label": "simplified form of",
@@ -6988,6 +6994,30 @@
     "target": "computational-finance/vanishing-gradient",
     "label": "prevents",
     "description": "Xavier and He initialisation are designed to preserve activation variance across layers, preventing the vanishing gradient problem from occurring in the very first backward pass before any learning begins."
+  },
+  {
+    "source": "computational-finance/word-embeddings",
+    "target": "computational-finance/cosine-similarity",
+    "label": "measured by",
+    "description": "Cosine similarity is the standard metric for comparing word embedding vectors, as it measures the angle between vectors independently of their magnitude, making it appropriate for high-dimensional embedding spaces."
+  },
+  {
+    "source": "computational-finance/word-embeddings",
+    "target": "computational-finance/doc2vec",
+    "label": "extended by",
+    "description": "Doc2Vec extends word embeddings to document-level representations by adding a paragraph token to the Word2Vec training objective, enabling document similarity comparisons in financial text analysis."
+  },
+  {
+    "source": "computational-finance/word-embeddings",
+    "target": "computational-finance/glove",
+    "label": "instantiated by",
+    "description": "GloVe is an alternative embedding algorithm to Word2Vec that learns the same kind of dense semantic vectors by factorising a global word co-occurrence matrix rather than using a local context window."
+  },
+  {
+    "source": "computational-finance/word-embeddings",
+    "target": "computational-finance/word2vec",
+    "label": "instantiated by",
+    "description": "Word2Vec is the most widely adopted algorithm for learning word embeddings, providing a concrete skip-gram or CBOW training procedure that produces the dense vectors the word embeddings concept describes."
   },
   {
     "source": "computational-finance/word2vec",

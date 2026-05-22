@@ -6155,6 +6155,28 @@
       }
     ]
   },
+  "computational-finance/word-embeddings": {
+    "websites": [
+      {
+        "title": "Word embeddings — TensorFlow",
+        "url": "https://www.tensorflow.org/text/guide/word_embeddings"
+      },
+      {
+        "title": "Word Embedding — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Word_embedding"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Word2Vec (Skip-gram) — StatQuest with Josh Starmer",
+        "url": "https://www.youtube.com/watch?v=viZrOnJclY0"
+      },
+      {
+        "title": "Word Embeddings — MIT 6.S191 Deep Learning",
+        "url": "https://www.youtube.com/watch?v=E8Ln4S3Bifs"
+      }
+    ]
+  },
   "computational-finance/word2vec": {
     "websites": [
       {
