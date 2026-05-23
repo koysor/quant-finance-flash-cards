@@ -3990,6 +3990,30 @@
     "description": "VaR backtesting counts exceptions (losses exceeding the model threshold) in the same spirit as a confusion matrix counts misclassifications — both assess how well a model's predicted boundary matches realised outcomes."
   },
   {
+    "source": "computational-finance/contextual-embeddings",
+    "target": "computational-finance/bert",
+    "label": "produced by",
+    "description": "BERT's bidirectional transformer architecture is the canonical model for generating contextual embeddings, with each token's representation attending to all other tokens in the sequence simultaneously."
+  },
+  {
+    "source": "computational-finance/contextual-embeddings",
+    "target": "computational-finance/finbert",
+    "label": "foundation of",
+    "description": "FinBERT inherits contextual embeddings from its BERT backbone, which is why it correctly interprets negation and financial jargon in earnings call sentences that lexicon-based methods misclassify."
+  },
+  {
+    "source": "computational-finance/contextual-embeddings",
+    "target": "computational-finance/sentence-transformers",
+    "label": "aggregated by",
+    "description": "Sentence Transformers (SBERT) pool contextual token embeddings into a single fixed-size sentence vector, enabling efficient semantic similarity search across large collections of financial documents."
+  },
+  {
+    "source": "computational-finance/contextual-embeddings",
+    "target": "computational-finance/word-embeddings",
+    "label": "supersedes",
+    "description": "Contextual embeddings produce a different vector for each word depending on its surrounding sentence, overcoming the fundamental limitation of static word embeddings which assign a single fixed representation regardless of context."
+  },
+  {
     "source": "computational-finance/contrastive-learning",
     "target": "computational-finance/autoencoders",
     "label": "alternative to",
@@ -5197,6 +5221,12 @@
   },
   {
     "source": "computational-finance/language-modelling-loss",
+    "target": "computational-finance/negative-sampling",
+    "label": "approximated by",
+    "description": "Negative sampling approximates the full language modelling cross-entropy loss by replacing the expensive denominator sum over all vocabulary words with a small fixed set of noise samples."
+  },
+  {
+    "source": "computational-finance/language-modelling-loss",
     "target": "computational-finance/tokenisation",
     "label": "defined over",
     "description": "Language modelling loss is computed over the tokenised vocabulary — the probability $P(w_t|\\text{context})$ is a distribution over all tokens in the tokeniser's vocabulary, so the vocabulary size and tokenisation algorithm directly determine the difficulty of the loss and the perplexity baseline."
@@ -5722,6 +5752,18 @@
     "target": "linear-algebra/dot-product-and-norms",
     "label": "relies on",
     "description": "The nearest centroid decision rule is expressed as an inner product test — the classifier assigns a new borrower profile to the class whose centroid has the smallest Euclidean distance, directly applying the norm and dot product to define 'closeness'."
+  },
+  {
+    "source": "computational-finance/negative-sampling",
+    "target": "computational-finance/word-embeddings",
+    "label": "enables",
+    "description": "Negative sampling reduces the per-step gradient update cost from O(|V|) to O(K), making it feasible to learn high-quality word embeddings from billions of tokens of financial text."
+  },
+  {
+    "source": "computational-finance/negative-sampling",
+    "target": "computational-finance/word2vec",
+    "label": "optimises training of",
+    "description": "Negative sampling is the approximation technique that makes Word2Vec training tractable on large corpora by replacing the full softmax with a binary classification over a small set of randomly sampled non-context words."
   },
   {
     "source": "computational-finance/neural-network-optimisers",
@@ -6432,6 +6474,18 @@
     "description": "SBERT semantic retrieval and NER entity extraction are complementary financial NLP tools: SBERT finds the most relevant historical documents by meaning, while NER structures those documents into queryable entity tables — together they form a complete unstructured-to-structured data pipeline."
   },
   {
+    "source": "computational-finance/sentencepiece",
+    "target": "computational-finance/bert",
+    "label": "used by",
+    "description": "Multilingual variants of BERT (mBERT, XLM-RoBERTa) use SentencePiece tokenisation to share a single vocabulary across dozens of languages, enabling cross-lingual financial NLP tasks."
+  },
+  {
+    "source": "computational-finance/sentencepiece",
+    "target": "computational-finance/tokenisation",
+    "label": "implements",
+    "description": "SentencePiece implements both BPE and unigram language model tokenisation in a single library, producing the subword vocabularies that BPE/WordPiece tokenisation cards describe at the algorithmic level."
+  },
+  {
     "source": "computational-finance/sentiment-analysis-pipeline",
     "target": "computational-finance/bag-of-words",
     "label": "baseline uses",
@@ -6772,6 +6826,12 @@
     "target": "computational-finance/neural-networks",
     "label": "reuses weights from",
     "description": "Transfer learning starts from a neural network whose weights have been optimised on a large source dataset, inheriting the low-level feature detectors learned from abundant data before adapting to the target task with limited labels."
+  },
+  {
+    "source": "computational-finance/transfer-learning",
+    "target": "computational-finance/sentencepiece",
+    "label": "paired with",
+    "description": "SentencePiece vocabularies are typically fixed during transfer learning — the tokeniser trained on the pre-training corpus is reused unchanged during fine-tuning, so domain-specific tokens that are rare in general text may be fragmented."
   },
   {
     "source": "computational-finance/transformer",

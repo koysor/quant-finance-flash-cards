@@ -3077,6 +3077,28 @@
       }
     ]
   },
+  "computational-finance/contextual-embeddings": {
+    "websites": [
+      {
+        "title": "The Illustrated BERT — Jay Alammar",
+        "url": "https://jalammar.github.io/illustrated-bert/"
+      },
+      {
+        "title": "Contextual Word Representations — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sentence_embedding"
+      }
+    ],
+    "videos": [
+      {
+        "title": "BERT Neural Network — Illustrated Guide — The AI Hacker",
+        "url": "https://www.youtube.com/watch?v=xI0HHN5XKDo"
+      },
+      {
+        "title": "Word Embeddings, Bias in ML, Why You Should Know About Them — MIT 6.S191",
+        "url": "https://www.youtube.com/watch?v=E8Ln4S3Bifs"
+      }
+    ]
+  },
   "computational-finance/contrastive-learning": {
     "websites": [
       {
@@ -4877,6 +4899,28 @@
       }
     ]
   },
+  "computational-finance/negative-sampling": {
+    "websites": [
+      {
+        "title": "Negative Sampling — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Word2vec#Negative_sampling"
+      },
+      {
+        "title": "Word2Vec Tutorial — Part 2: Negative Sampling — McCormickML",
+        "url": "https://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Word2Vec (Skip-gram) — StatQuest with Josh Starmer",
+        "url": "https://www.youtube.com/watch?v=viZrOnJclY0"
+      },
+      {
+        "title": "Word2Vec — Chris McCormick",
+        "url": "https://www.youtube.com/watch?v=pO3Jsr31s_Q"
+      }
+    ]
+  },
   "computational-finance/neural-network-optimisers": {
     "websites": [
       {
@@ -5566,6 +5610,28 @@
       {
         "title": "3Blue1Brown — Attention in Transformers",
         "url": "https://www.youtube.com/watch?v=eMlx5fFNoYc"
+      }
+    ]
+  },
+  "computational-finance/sentencepiece": {
+    "websites": [
+      {
+        "title": "SentencePiece — GitHub (google/sentencepiece)",
+        "url": "https://github.com/google/sentencepiece"
+      },
+      {
+        "title": "Subword Tokenization — HuggingFace NLP Course",
+        "url": "https://huggingface.co/learn/nlp-course/chapter6/1"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Let's build the GPT Tokenizer — Andrej Karpathy",
+        "url": "https://www.youtube.com/watch?v=zduSFxRajkE"
+      },
+      {
+        "title": "Tokenization — Hugging Face",
+        "url": "https://www.youtube.com/watch?v=VFp38yj8h3A"
       }
     ]
   },
