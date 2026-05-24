@@ -3329,6 +3329,28 @@
       }
     ]
   },
+  "computational-finance/data-leakage": {
+    "websites": [
+      {
+        "title": "Wikipedia — Leakage (machine learning)",
+        "url": "https://en.wikipedia.org/wiki/Leakage_(machine_learning)"
+      },
+      {
+        "title": "Scikit-learn — Common Pitfalls and Recommended Practices",
+        "url": "https://scikit-learn.org/stable/common_pitfalls.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Bias and Variance, Clearly Explained!!",
+        "url": "https://www.youtube.com/watch?v=EuBBz3bI-aA"
+      },
+      {
+        "title": "MIT OpenCourseWare — Introduction to Machine Learning (6.036)",
+        "url": "https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/"
+      }
+    ]
+  },
   "computational-finance/data-normalisation": {
     "websites": [
       {
@@ -3512,6 +3534,28 @@
       {
         "title": "3Blue1Brown \u2014 Gradient descent, how neural networks learn",
         "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w"
+      }
+    ]
+  },
+  "computational-finance/empirical-risk-minimisation": {
+    "websites": [
+      {
+        "title": "Wikipedia — Empirical Risk Minimization",
+        "url": "https://en.wikipedia.org/wiki/Empirical_risk_minimization"
+      },
+      {
+        "title": "Scikit-learn — Model Evaluation: Quantifying the Quality of Predictions",
+        "url": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Machine Learning Fundamentals: Bias and Variance",
+        "url": "https://www.youtube.com/watch?v=EuBBz3bI-aA"
+      },
+      {
+        "title": "MIT OpenCourseWare — Introduction to Machine Learning (6.036)",
+        "url": "https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/"
       }
     ]
   },
@@ -4573,6 +4617,28 @@
       }
     ]
   },
+  "computational-finance/loss-function": {
+    "websites": [
+      {
+        "title": "Wikipedia — Loss Function",
+        "url": "https://en.wikipedia.org/wiki/Loss_function"
+      },
+      {
+        "title": "Google ML Glossary — Loss",
+        "url": "https://developers.google.com/machine-learning/glossary#loss"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Loss Functions — A Friendly Introduction",
+        "url": "https://www.youtube.com/watch?v=YqcpSRDTiOg"
+      },
+      {
+        "title": "MIT OpenCourseWare — Introduction to Machine Learning (6.036)",
+        "url": "https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/"
+      }
+    ]
+  },
   "computational-finance/look-ahead-bias": {
     "websites": [
       {
@@ -5224,6 +5290,28 @@
       {
         "title": "Understanding t-SNE Perplexity \u2014 ritvikmath",
         "url": "https://www.youtube.com/watch?v=wvsE8jm1GzE"
+      }
+    ]
+  },
+  "computational-finance/point-in-time-data": {
+    "websites": [
+      {
+        "title": "Investopedia — Look-Ahead Bias: Definition, Prevention, Examples",
+        "url": "https://www.investopedia.com/terms/l/lookaheadbias.asp"
+      },
+      {
+        "title": "Wikipedia — Survivorship Bias",
+        "url": "https://en.wikipedia.org/wiki/Survivorship_bias"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Analytics of Finance (15.450)",
+        "url": "https://ocw.mit.edu/courses/15-450-analytics-of-finance-fall-2010/"
+      },
+      {
+        "title": "StatQuest — Bias and Variance, Clearly Explained!!",
+        "url": "https://www.youtube.com/watch?v=EuBBz3bI-aA"
       }
     ]
   },
@@ -6125,6 +6213,28 @@
       }
     ]
   },
+  "computational-finance/test-set": {
+    "websites": [
+      {
+        "title": "Google ML Glossary — Test Set",
+        "url": "https://developers.google.com/machine-learning/glossary#test-set"
+      },
+      {
+        "title": "Investopedia — Backtesting: Definition, How It Works, and Downsides",
+        "url": "https://www.investopedia.com/terms/b/backtesting.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Bias and Variance, Clearly Explained!!",
+        "url": "https://www.youtube.com/watch?v=EuBBz3bI-aA"
+      },
+      {
+        "title": "MIT OpenCourseWare — Introduction to Machine Learning (6.036)",
+        "url": "https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/"
+      }
+    ]
+  },
   "computational-finance/tokenisation": {
     "websites": [
       {
@@ -6184,6 +6294,28 @@
       {
         "title": "StatQuest \u2014 Cross-validation explained",
         "url": "https://www.youtube.com/watch?v=fSytzGwwBVw"
+      }
+    ]
+  },
+  "computational-finance/training-set": {
+    "websites": [
+      {
+        "title": "Google ML Glossary — Training Set",
+        "url": "https://developers.google.com/machine-learning/glossary#training-set"
+      },
+      {
+        "title": "Investopedia — Survivorship Bias: Definition and Use in Investing",
+        "url": "https://www.investopedia.com/terms/s/survivorshipbias.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Machine Learning Fundamentals: Bias and Variance",
+        "url": "https://www.youtube.com/watch?v=Gv9_4yMHFhI"
+      },
+      {
+        "title": "MIT OpenCourseWare — Introduction to Machine Learning (6.036)",
+        "url": "https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/"
       }
     ]
   },
@@ -6334,6 +6466,28 @@
       {
         "title": "NLP Crash Course \u2014 StatQuest with Josh Starmer",
         "url": "https://www.youtube.com/watch?v=FLZvOKSCkxY"
+      }
+    ]
+  },
+  "computational-finance/validation-set": {
+    "websites": [
+      {
+        "title": "Google ML Glossary — Validation Set",
+        "url": "https://developers.google.com/machine-learning/glossary#validation-set"
+      },
+      {
+        "title": "Wikipedia — Training, Validation, and Test Data Sets",
+        "url": "https://en.wikipedia.org/wiki/Training,_validation,_and_test_data_sets"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Cross Validation Explained",
+        "url": "https://www.youtube.com/watch?v=fSytzGwwBVw"
+      },
+      {
+        "title": "MIT OpenCourseWare — Introduction to Machine Learning (6.036)",
+        "url": "https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/"
       }
     ]
   },

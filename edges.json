@@ -4224,6 +4224,24 @@
     "description": "Principal Component Analysis uses the eigendecomposition of the covariance matrix to project high-dimensional data onto the lower-dimensional subspace of maximum variance, directly addressing the curse of dimensionality by discarding noise dimensions."
   },
   {
+    "source": "computational-finance/data-leakage",
+    "target": "computational-finance/feature-engineering",
+    "label": "introduced during",
+    "description": "Most data leakage in quantitative finance arises during feature engineering: fitting scalers, encoders, or PCA on the full dataset before the train/test split embeds test-set statistics into training features, inflating apparent in-sample performance."
+  },
+  {
+    "source": "computational-finance/data-leakage",
+    "target": "computational-finance/look-ahead-bias",
+    "label": "includes",
+    "description": "Look-ahead bias is the temporal form of data leakage: information from future time periods flows into features that should only use past data, causing systematic overstatement of backtest performance that collapses on live deployment."
+  },
+  {
+    "source": "computational-finance/data-leakage",
+    "target": "computational-finance/training-set",
+    "label": "corrupts",
+    "description": "Data leakage corrupts the training set by embedding features derived from the label or from post-prediction-date information, causing models to learn spurious correlations that appear predictive historically but do not generalise to new data."
+  },
+  {
     "source": "computational-finance/data-normalisation",
     "target": "computational-finance/elastic-net",
     "label": "required by",
@@ -4402,6 +4420,24 @@
     "target": "computational-finance/hyperparameter",
     "label": "implicit type of",
     "description": "Early stopping acts as a regularisation hyperparameter: the patience value determines effective model complexity, and like all hyperparameters it must be chosen via held-out validation data from a later time period than the training set to avoid look-ahead bias."
+  },
+  {
+    "source": "computational-finance/empirical-risk-minimisation",
+    "target": "computational-finance/generalisation-gap",
+    "label": "produces",
+    "description": "The generalisation gap is the difference between empirical risk (training loss) and expected risk (true loss); ERM minimises the former, and the gap quantifies how much the training-set minimiser diverges from the true risk minimiser on unseen financial data."
+  },
+  {
+    "source": "computational-finance/empirical-risk-minimisation",
+    "target": "computational-finance/loss-function",
+    "label": "minimises average of",
+    "description": "ERM is defined as minimising the training-set average of the loss function; the choice of loss function determines what statistical objective is being optimised and whether the resulting estimator is consistent for the true expected risk on future market data."
+  },
+  {
+    "source": "computational-finance/empirical-risk-minimisation",
+    "target": "computational-finance/training-set",
+    "label": "operates on",
+    "description": "ERM uses the training set exclusively to compute the empirical average of the loss — contaminating the training set with future information (look-ahead bias or data leakage) therefore undermines the validity of the ERM estimator and any performance claims derived from it."
   },
   {
     "source": "computational-finance/elastic-net",
@@ -5448,6 +5484,24 @@
     "description": "Log-loss arises naturally from Bayes' theorem: it is the negative log of the posterior probability of the correct class label, penalising confident wrong predictions by an amount proportional to the log of the predicted probability."
   },
   {
+    "source": "computational-finance/loss-function",
+    "target": "computational-finance/cost-functions",
+    "label": "instantiated as",
+    "description": "Cost functions are specific instantiations of the loss function concept — MSE for Gaussian regression, cross-entropy for classification — with the general loss function framework providing the statistical learning theory that justifies these choices via maximum likelihood estimation."
+  },
+  {
+    "source": "computational-finance/loss-function",
+    "target": "computational-finance/empirical-risk-minimisation",
+    "label": "averaged in",
+    "description": "The empirical risk is the training-set average of the loss function; minimising the empirical risk is precisely the act of model training, and the loss function's properties (convexity, differentiability) determine whether gradient-based optimisation is tractable."
+  },
+  {
+    "source": "computational-finance/loss-function",
+    "target": "computational-finance/gradient-descent",
+    "label": "differentiated for",
+    "description": "Gradient descent requires the loss function to be differentiable with respect to model parameters — this is why the non-differentiable 0-1 loss is replaced by convex surrogates (log-loss, hinge) that bound it from above and admit smooth optimisation in financial ML pipelines."
+  },
+  {
     "source": "computational-finance/look-ahead-bias",
     "target": "computational-finance/feature-selection",
     "label": "invalidates",
@@ -6022,6 +6076,24 @@
     "target": "computational-finance/t-sne",
     "label": "controls",
     "description": "Perplexity is the primary hyperparameter of t-SNE, determining the effective neighbourhood size used to construct the high-dimensional similarity distribution and directly shaping whether the resulting embedding reveals local or global structure."
+  },
+  {
+    "source": "computational-finance/point-in-time-data",
+    "target": "computational-finance/data-leakage",
+    "label": "prevents",
+    "description": "Non-point-in-time databases introduce a specific form of data leakage: restated earnings, revised ratings, or updated index constituents appear in historical data before they were published, allowing backtests to exploit information unavailable to any investor at the simulated decision date."
+  },
+  {
+    "source": "computational-finance/point-in-time-data",
+    "target": "computational-finance/feature-engineering",
+    "label": "constrains",
+    "description": "Point-in-time discipline requires that every fundamental feature use only the value publicly available on the feature construction date — not the latest revised figure — making PIT database infrastructure a precondition for unbiased fundamental feature engineering in quantitative strategies."
+  },
+  {
+    "source": "computational-finance/point-in-time-data",
+    "target": "computational-finance/look-ahead-bias",
+    "label": "eliminates",
+    "description": "Point-in-time databases are the primary defence against the restatement form of look-ahead bias: returning the as-reported figure rather than the latest revision ensures backtests cannot exploit accounting corrections that were announced months or years after the simulated decision date."
   },
   {
     "source": "computational-finance/pointwise-mutual-information",
@@ -6864,6 +6936,24 @@
     "description": "TF-IDF is the foundational document representation technique in financial NLP, converting raw text into sparse numerical vectors before machine learning models \u2014 from naive Bayes to neural networks \u2014 can be applied."
   },
   {
+    "source": "computational-finance/test-set",
+    "target": "computational-finance/generalisation-gap",
+    "label": "measures",
+    "description": "The generalisation gap is computed by comparing model loss on the training set against loss on the test set; the test set score is the unbiased estimator of out-of-sample predictive power and the definitive signal for whether a backtest result will survive live deployment."
+  },
+  {
+    "source": "computational-finance/test-set",
+    "target": "computational-finance/time-series-cross-validation",
+    "label": "extended by",
+    "description": "Time series cross-validation replaces a single static test set with a sequence of expanding or rolling holdout windows, averaging multiple test set evaluations to produce a lower-variance estimate of generalisation performance across different market regimes."
+  },
+  {
+    "source": "computational-finance/test-set",
+    "target": "computational-finance/training-data",
+    "label": "complements",
+    "description": "The test set and training set together constitute the full labelled dataset described in training data principles; the test set is the held-out portion examined only once, after all modelling decisions have been made using the training and validation sets."
+  },
+  {
     "source": "computational-finance/time-series-cross-validation",
     "target": "computational-finance/training-data",
     "label": "implements for",
@@ -6940,6 +7030,24 @@
     "target": "statistics/walk-forward-analysis",
     "label": "evaluated by",
     "description": "Walk-forward analysis repeatedly re-trains the model on an expanding or rolling training window and evaluates it on the immediately following period, replicating live deployment conditions and exposing look-ahead bias that a single static train/test split would conceal."
+  },
+  {
+    "source": "computational-finance/training-set",
+    "target": "computational-finance/generalisation-gap",
+    "label": "measured against",
+    "description": "The training set loss is the in-sample benchmark; the generalisation gap is the difference between this and the test set loss, quantifying how well a fitted model extrapolates beyond the data it was optimised on — the key diagnostic for backtest overfitting in quantitative strategies."
+  },
+  {
+    "source": "computational-finance/training-set",
+    "target": "computational-finance/look-ahead-bias",
+    "label": "contaminated by",
+    "description": "Look-ahead bias occurs when features in the training set are constructed using information unavailable at prediction time — for example, normalising returns using the full-sample mean instead of an expanding mean — inflating in-sample performance and producing a model that cannot be replicated in live trading."
+  },
+  {
+    "source": "computational-finance/training-set",
+    "target": "computational-finance/training-data",
+    "label": "subset of",
+    "description": "The training set is the portion of the full labelled dataset allocated to parameter optimisation; training data principles determine its size (typically 60% of observations) and the chronological split rules that prevent the training set from incorporating future information."
   },
   {
     "source": "computational-finance/transfer-learning",
@@ -7096,6 +7204,24 @@
     "target": "computational-finance/self-organizing-maps",
     "label": "includes",
     "description": "Self-Organizing Maps are a non-linear unsupervised technique that extends clustering by preserving the topological structure of the original feature space, making them especially useful for visualising the landscape of market regimes."
+  },
+  {
+    "source": "computational-finance/validation-set",
+    "target": "computational-finance/early-stopping",
+    "label": "drives",
+    "description": "Early stopping monitors validation loss to determine when to halt training, requiring a held-out validation set to provide a loss signal independent of the training objective — the validation set is therefore an operational prerequisite for early stopping in financial deep learning."
+  },
+  {
+    "source": "computational-finance/validation-set",
+    "target": "computational-finance/hyperparameter-tuning",
+    "label": "enables",
+    "description": "The validation set is the data partition against which hyperparameter candidates are scored; hyperparameter tuning is methodologically valid only when it uses validation loss rather than training loss, preventing the implicit data mining that arises when model selection decisions touch the test set."
+  },
+  {
+    "source": "computational-finance/validation-set",
+    "target": "computational-finance/test-set",
+    "label": "protects",
+    "description": "The validation set absorbs the data-mining cost of evaluating multiple model configurations, preserving the test set's integrity as an uncontaminated final evaluation partition — once any modelling decision is informed by the test set, it has become a second validation set and its performance estimate is no longer unbiased."
   },
   {
     "source": "computational-finance/vader-sentiment",
