@@ -24,7 +24,7 @@ $$\mathcal{L}_{0\text{-}1}(y, \hat{y}) = \mathbf{1}[\hat{y} \neq y]$$
 | Log-loss (cross-entropy) | $-y\ln\hat{p} - (1-y)\ln(1-\hat{p})$ | Probability calibration |
 | Hinge loss | $\max(0,\; 1 - y\hat{f})$ | SVM classification |
 | Squared error | $(\hat{y} - y)^2$ | Regression, Gaussian errors |
-| Huber loss | $\begin{cases}\frac{1}{2}(y-\hat{y})^2 & |y-\hat{y}|\leq\delta \\ \delta|y-\hat{y}|-\frac{\delta^2}{2} & \text{otherwise}\end{cases}$ | Regression, fat-tailed errors |
+| Huber loss | $\begin{cases}\frac{1}{2}(y-\hat{y})^2 & \lvert y-\hat{y}\rvert\leq\delta \\ \delta\lvert y-\hat{y}\rvert-\frac{\delta^2}{2} & \text{otherwise}\end{cases}$ | Regression, fat-tailed errors |
 
 ## Example
 

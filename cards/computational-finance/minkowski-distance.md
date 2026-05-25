@@ -19,7 +19,7 @@ $$d_p(\mathbf{x}, \mathbf{y}) = \left(\sum_{n=1}^{N} |x_n - y_n|^p\right)^{1/p}$
 |---|---|---|
 | 1 | Manhattan ($\ell_1$) | Robust to outliers; sparse paths |
 | 2 | Euclidean ($\ell_2$) | Smooth; most common default |
-| $\infty$ | Chebyshev | $\max_n |x_n - y_n|$ — worst single feature |
+| $\infty$ | Chebyshev | $\max_n \lvert x_n - y_n\rvert$ — worst single feature |
 
 As $p \to \infty$: $d_\infty(\mathbf{x}, \mathbf{y}) = \max_n |x_n - y_n|$, so only the largest feature difference matters.
 

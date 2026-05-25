@@ -17,8 +17,8 @@ $$y = A\sin(Bx + C) + D$$
 
 | Parameter | Effect |
 |---|---|
-| $|A|$ | Amplitude (half the peak-to-trough height) |
-| $2\pi/|B|$ | Period (horizontal length of one full cycle) |
+| $\lvert A\rvert$ | Amplitude (half the peak-to-trough height) |
+| $2\pi/\lvert B\rvert$ | Period (horizontal length of one full cycle) |
 | $-C/B$ | Phase shift (horizontal translation) |
 | $D$ | Vertical shift (midline) |
 

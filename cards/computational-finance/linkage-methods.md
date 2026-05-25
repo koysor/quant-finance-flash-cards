@@ -19,7 +19,7 @@ Let clusters $A$ and $B$ contain points with pairwise distances $d(a, b)$:
 |---|---|---|
 | Single | $\min_{a \in A,\, b \in B} d(a, b)$ | Sensitive to outliers; creates chains |
 | Complete | $\max_{a \in A,\, b \in B} d(a, b)$ | Creates compact, equal-sized clusters |
-| Average (UPGMA) | $\frac{1}{|A||B|}\sum_{a \in A}\sum_{b \in B} d(a, b)$ | Compromise; robust |
+| Average (UPGMA) | $\frac{1}{\lvert A\rvert\lvert B\rvert}\sum_{a \in A}\sum_{b \in B} d(a, b)$ | Compromise; robust |
 | **Ward's** | $\Delta J = J_{A \cup B} - J_A - J_B$ | Minimises within-cluster variance increase |
 
 **Ward's linkage** is typically preferred in finance because it produces balanced clusters of comparable size — reflecting the assumption that securities are drawn from a moderate number of approximately equal-sized risk factor groups.

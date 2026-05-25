@@ -26,7 +26,7 @@ $$R = \lim_{n \to \infty} \left|\frac{a_n}{a_{n+1}}\right|$$
 | $e^x = \sum x^n/n!$ | $\infty$ | all $x$ |
 | $\sin x$, $\cos x$ | $\infty$ | all $x$ |
 | $\ln(1+x) = \sum (-1)^{n+1}x^n/n$ | $1$ | $-1 < x \leq 1$ |
-| $\frac{1}{1-x} = \sum x^n$ | $1$ | $|x| < 1$ |
+| $\frac{1}{1-x} = \sum x^n$ | $1$ | $\lvert x\rvert < 1$ |
 
 ## Example
 

@@ -27,7 +27,7 @@ $$\text{Turnover} = \frac{\text{Total Volume Traded}}{\text{Shares Outstanding}}
 
 Two stocks over 5 trading days:
 
-| Stock | Avg $|r|$ | Avg daily volume | Amihud ratio |
+| Stock | Avg $\lvert r\rvert$ | Avg daily volume | Amihud ratio |
 |-------|----------|-----------------|-------------|
 | A (large-cap) | 0.8% | £50,000,000 | $\frac{0.008}{50{,}000{,}000} = 1.6 \times 10^{-10}$ |
 | B (small-cap) | 1.5% | £500,000 | $\frac{0.015}{500{,}000} = 3.0 \times 10^{-8}$ |

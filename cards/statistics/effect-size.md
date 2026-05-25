@@ -19,7 +19,7 @@ $$d = \frac{\bar{x} - \mu_0}{\sigma}$$
 
 **Interpretation:**
 
-| $|d|$ | Conventional label |
+| $\lvert d\rvert$ | Conventional label |
 |---|---|
 | 0.2 | Small |
 | 0.5 | Medium |
