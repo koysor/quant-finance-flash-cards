@@ -104,7 +104,7 @@ Each card is a single `.md` file in `cards/<topic>/`. The loader uses regex (not
 - The **Remember** section must connect the maths to a quantitative finance application
 - One concept per card, no padding
 - Do **not** add a `**Level:**` field — it is not a recognised metadata field
-- **LaTeX inside Markdown tables:** bare `|` inside `$...$` in a table cell is misread as a column separator. Always use `\lvert` and `\rvert` for absolute value (e.g. `$\lvert x\rvert$`), and `\middle\vert` for conditional-expectation bars. Never place `\begin{cases}` inside an inline formula in a table cell — the `\\` line-break is processed as an escaped backslash by Markdown; move piecewise formulas to a `$$...$$` display block outside the table instead.
+- **LaTeX inside Markdown tables:** bare `|` inside `$...$` in a table cell is misread as a column separator. Always use `\lvert` and `\rvert` for absolute value (e.g. `$\lvert x\rvert$`), and `\middle\vert` for conditional-expectation bars. Never place any `\begin{...}` environment (cases, aligned, align, matrix, …) inside an inline `$...$` in a table cell — the `\\` line-break is processed as an escaped backslash by Markdown; move such formulas to a `$$...$$` display block outside the table instead.
 - **Currency symbols in prose:** bare `$` in prose text (e.g. `$6 bn`, `$4.58`) can be misread by KaTeX as the start of inline maths, especially when other `$...$` LaTeX appears later in the same card. Always escape currency dollar signs with `\$` (e.g. `\$6 bn`).
 
 ## URL Validation Hook
