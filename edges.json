@@ -3648,6 +3648,18 @@
     "description": "Euler-Maruyama is a classic numerical scheme: it approximates the continuous SDE path by finite time steps, introducing discretisation error that vanishes as the step size shrinks — the opposite of an analytic solution that is exact by construction."
   },
   {
+    "source": "computational-finance/approximate-entropy",
+    "target": "computational-finance/entropy",
+    "label": "approximates rate of",
+    "description": "Approximate entropy is a computationally tractable finite-sample statistic that estimates the entropy rate of a time series — high ApEn indicates the series is close to a maximum-entropy (random) process, while low ApEn indicates recurring patterns and lower entropy rate."
+  },
+  {
+    "source": "computational-finance/approximate-entropy",
+    "target": "stochastic-processes/entropy-rate",
+    "label": "estimates",
+    "description": "Approximate entropy was designed as a practical estimator of entropy rate for short, noisy time series where the theoretical limit lim H(X_1,...,X_n)/n is not directly computable — it uses template-matching to approximate the conditional entropy of the next observation given recent history."
+  },
+  {
     "source": "computational-finance/attention-mechanism",
     "target": "computational-finance/activation-functions",
     "label": "uses",
@@ -4330,6 +4342,24 @@
     "target": "computational-finance/look-ahead-bias",
     "label": "vulnerable to",
     "description": "Fitting a scaler on the full dataset before the train/test split causes look-ahead bias by incorporating future mean and variance into the normalisation of historical training data."
+  },
+  {
+    "source": "computational-finance/data-processing-inequality",
+    "target": "computational-finance/information-gain",
+    "label": "bounds",
+    "description": "The DPI implies that successive feature transformations in a factor model pipeline can only reduce information gain relative to the original raw data — each discretisation, normalisation, or compression step is a potential irreversible loss of predictive signal."
+  },
+  {
+    "source": "computational-finance/data-processing-inequality",
+    "target": "computational-finance/kullback-leibler-divergence",
+    "label": "applies to",
+    "description": "The data processing inequality extends to KL divergence: D_KL(p(x)||q(x)) ≥ D_KL(p(y)||q(y)) for any channel mapping x to y, meaning that transforming data makes two distributions no more distinguishable — with direct implications for how much model-discriminating power is lost by feature engineering."
+  },
+  {
+    "source": "computational-finance/data-processing-inequality",
+    "target": "computational-finance/mutual-information",
+    "label": "constrains",
+    "description": "The DPI states I(X;Z) ≤ I(X;Y) for any Markov chain X→Y→Z — mutual information can only decrease along a processing pipeline, so the upper bound on how well any downstream model can predict X is set by the mutual information in the first feature representation."
   },
   {
     "source": "computational-finance/decision-threshold",
@@ -5224,6 +5254,12 @@
     "target": "computational-finance/entropy-minimisation",
     "label": "implements",
     "description": "Maximising information gain at each decision tree split is mathematically equivalent to minimising conditional entropy — information gain is the operational decision rule that converts the entropy minimisation objective into a practical feature selection algorithm."
+  },
+  {
+    "source": "computational-finance/information-gain",
+    "target": "probability/conditional-entropy",
+    "label": "equals reduction in",
+    "description": "Information gain IG(X,Y) = H(X) - H(X|Y) is the reduction in conditional entropy achieved by observing Y — the two concepts are defined in terms of each other, and decision tree splits that maximise IG are exactly those that minimise the resulting conditional entropy of the label."
   },
   {
     "source": "computational-finance/information-theory",
@@ -7284,6 +7320,24 @@
     "description": "The training set is the portion of the full labelled dataset allocated to parameter optimisation; training data principles determine its size (typically 60% of observations) and the chronological split rules that prevent the training set from incorporating future information."
   },
   {
+    "source": "computational-finance/transfer-entropy",
+    "target": "computational-finance/mutual-information",
+    "label": "directed version of",
+    "description": "Transfer entropy is the time-directed, asymmetric generalisation of mutual information: where I(X;Y) is symmetric and measures shared information without regard to direction or time, T_{X→Y} measures the directed flow of information from X's past to Y's future."
+  },
+  {
+    "source": "computational-finance/transfer-entropy",
+    "target": "probability/conditional-entropy",
+    "label": "defined as difference of",
+    "description": "Transfer entropy T_{X→Y} = H(Y_t|Y_{t-1}) - H(Y_t|Y_{t-1},X_{t-1}) is the difference between two conditional entropies: it measures how much the uncertainty about Y's next value is reduced by knowing X's past beyond what Y's own past already reveals."
+  },
+  {
+    "source": "computational-finance/transfer-entropy",
+    "target": "stochastic-processes/entropy-rate",
+    "label": "relates to",
+    "description": "Transfer entropy quantifies how much of the entropy rate of Y is explained by the past of X — a high T_{X→Y} means X's history substantially reduces the per-step uncertainty in Y beyond what Y's own autoregressive structure explains."
+  },
+  {
     "source": "computational-finance/transfer-learning",
     "target": "computational-finance/attention-mechanism",
     "label": "applied via",
@@ -7978,6 +8032,24 @@
     "target": "financial-maths/time-value-of-money",
     "label": "driven by",
     "description": "The core trade-off in early exercise is whether receiving cash now and earning interest outweighs the option's remaining time value — a direct application of the time value of money."
+  },
+  {
+    "source": "derivatives/entropy-based-option-pricing",
+    "target": "computational-finance/kullback-leibler-divergence",
+    "label": "minimises",
+    "description": "The minimum cross-entropy formulation of entropy-based option pricing minimises KL divergence from a prior log-normal density subject to observed option pricing constraints — the resulting risk-neutral density is the closest distribution to the prior that is consistent with market prices."
+  },
+  {
+    "source": "derivatives/entropy-based-option-pricing",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "recovers density for",
+    "description": "Entropy-based option pricing recovers the full risk-neutral probability density from a finite set of observed option prices, extending the risk-neutral pricing framework beyond parametric models to a non-parametric maximum entropy distribution over terminal asset prices."
+  },
+  {
+    "source": "derivatives/entropy-based-option-pricing",
+    "target": "probability/maximum-entropy-principle",
+    "label": "applies to option markets",
+    "description": "Entropy-based option pricing is a direct application of Jaynes' maximum entropy principle to derivatives markets: the least-assumptive risk-neutral density consistent with observed call prices is the one that maximises entropy (or minimises KL divergence from a prior), producing a model-free implied distribution."
   },
   {
     "source": "derivatives/european-option-pricing",
@@ -13870,6 +13942,30 @@
     "target": "probability/expected-value",
     "label": "used in",
     "description": "Computing expected payoffs under the binomial distribution requires summing probability-weighted outcomes, each of which involves a binomial coefficient — combinations are therefore embedded in every expectation calculation over discrete outcome spaces."
+  },
+  {
+    "source": "probability/conditional-entropy",
+    "target": "computational-finance/entropy",
+    "label": "bounded above by",
+    "description": "Conditional entropy H(X|Y) ≤ H(X) always, with equality when X and Y are independent — observing Y can only reduce or preserve uncertainty about X, making Shannon entropy the upper bound that conditional entropy approaches when the conditioning variable is uninformative."
+  },
+  {
+    "source": "probability/conditional-entropy",
+    "target": "computational-finance/joint-entropy",
+    "label": "defined via",
+    "description": "The chain rule H(X,Y) = H(Y) + H(X|Y) defines conditional entropy through joint entropy: H(X|Y) = H(X,Y) - H(Y), so estimating conditional entropy requires estimating the joint distribution of both variables."
+  },
+  {
+    "source": "probability/conditional-entropy",
+    "target": "computational-finance/mutual-information",
+    "label": "inputs to",
+    "description": "Mutual information I(X;Y) = H(X) - H(X|Y) is the reduction in conditional entropy from observing Y, so conditional entropy is the key quantity that links the prior uncertainty H(X) to the shared information I(X;Y) between two financial signals."
+  },
+  {
+    "source": "probability/conditional-entropy",
+    "target": "probability/conditional-probability",
+    "label": "defined using",
+    "description": "Conditional entropy H(X|Y) = -Σ p(x,y) log p(x|y) is computed from conditional probabilities p(x|y) — it is the expectation of the log conditional probability, extending conditional probability from an event-level statement to an average uncertainty measure."
   },
   {
     "source": "probability/conditional-expectation",

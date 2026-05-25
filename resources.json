@@ -1896,8 +1896,8 @@
         "url": "https://en.wikipedia.org/wiki/Karush%E2%80%93Kuhn%E2%80%93Tucker_conditions"
       },
       {
-        "title": "Convex Optimisation — Boyd & Vandenberghe (free textbook)",
-        "url": "https://web.stanford.edu/~boyd/cvxbook/"
+        "title": "UCLA EE236B — Convex Optimisation (Vandenberghe course notes)",
+        "url": "https://www.seas.ucla.edu/~vandenbe/ee236b/ee236b.html"
       }
     ],
     "videos": [
@@ -2745,6 +2745,28 @@
       }
     ]
   },
+  "computational-finance/approximate-entropy": {
+    "websites": [
+      {
+        "title": "Wikipedia — Approximate entropy",
+        "url": "https://en.wikipedia.org/wiki/Approximate_entropy"
+      },
+      {
+        "title": "Wikipedia — Sample entropy",
+        "url": "https://en.wikipedia.org/wiki/Sample_entropy"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Information Theory (6.050J)",
+        "url": "https://ocw.mit.edu/courses/6-050j-information-and-entropy-spring-2008/"
+      },
+      {
+        "title": "MIT OpenCourseWare — Discrete Stochastic Processes (6.262)",
+        "url": "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/"
+      }
+    ]
+  },
   "computational-finance/attention-mechanism": {
     "websites": [
       {
@@ -3454,6 +3476,28 @@
       {
         "title": "Normalisation vs Standardisation — Simplilearn",
         "url": "https://www.youtube.com/watch?v=mnKm3YP56PY"
+      }
+    ]
+  },
+  "computational-finance/data-processing-inequality": {
+    "websites": [
+      {
+        "title": "Wikipedia — Data processing inequality",
+        "url": "https://en.wikipedia.org/wiki/Data_processing_inequality"
+      },
+      {
+        "title": "Wikipedia — Sufficient statistic",
+        "url": "https://en.wikipedia.org/wiki/Sufficient_statistic"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Information Theory (6.050J)",
+        "url": "https://ocw.mit.edu/courses/6-050j-information-and-entropy-spring-2008/"
+      },
+      {
+        "title": "Khan Academy — Information entropy",
+        "url": "https://www.khanacademy.org/computing/computer-science/informationtheory/moderninfotheory/v/information-entropy"
       }
     ]
   },
@@ -6561,6 +6605,28 @@
       }
     ]
   },
+  "computational-finance/transfer-entropy": {
+    "websites": [
+      {
+        "title": "Wikipedia — Transfer entropy",
+        "url": "https://en.wikipedia.org/wiki/Transfer_entropy"
+      },
+      {
+        "title": "Wikipedia — Granger causality",
+        "url": "https://en.wikipedia.org/wiki/Granger_causality"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Information Theory (6.050J)",
+        "url": "https://ocw.mit.edu/courses/6-050j-information-and-entropy-spring-2008/"
+      },
+      {
+        "title": "MIT OpenCourseWare — Discrete Stochastic Processes (6.262)",
+        "url": "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/"
+      }
+    ]
+  },
   "computational-finance/transfer-learning": {
     "websites": [
       {
@@ -7034,6 +7100,28 @@
       {
         "title": "Investopedia — Early Exercise",
         "url": "https://www.investopedia.com/terms/e/earlyexercise.asp"
+      }
+    ]
+  },
+  "derivatives/entropy-based-option-pricing": {
+    "websites": [
+      {
+        "title": "Wikipedia — Risk-neutral measure",
+        "url": "https://en.wikipedia.org/wiki/Risk-neutral_measure"
+      },
+      {
+        "title": "Wikipedia — Principle of maximum entropy",
+        "url": "https://en.wikipedia.org/wiki/Principle_of_maximum_entropy"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Financial Engineering (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "MIT OpenCourseWare — Information Theory (6.050J)",
+        "url": "https://ocw.mit.edu/courses/6-050j-information-and-entropy-spring-2008/"
       }
     ]
   },
@@ -10269,6 +10357,28 @@
       {
         "title": "Khan Academy — Combinations",
         "url": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:prob-comb/x9e81a4f98389efdf:combinations/a/combination-formula"
+      }
+    ]
+  },
+  "probability/conditional-entropy": {
+    "websites": [
+      {
+        "title": "Wikipedia — Conditional entropy",
+        "url": "https://en.wikipedia.org/wiki/Conditional_entropy"
+      },
+      {
+        "title": "Wikipedia — Entropy (information theory)",
+        "url": "https://en.wikipedia.org/wiki/Entropy_(information_theory)"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy — Information entropy",
+        "url": "https://www.khanacademy.org/computing/computer-science/informationtheory/moderninfotheory/v/information-entropy"
+      },
+      {
+        "title": "MIT OpenCourseWare — Information Theory (6.050J)",
+        "url": "https://ocw.mit.edu/courses/6-050j-information-and-entropy-spring-2008/"
       }
     ]
   },
