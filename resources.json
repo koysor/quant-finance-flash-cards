@@ -3333,6 +3333,28 @@
       }
     ]
   },
+  "computational-finance/cross-entropy": {
+    "websites": [
+      {
+        "title": "Wikipedia — Cross entropy",
+        "url": "https://en.wikipedia.org/wiki/Cross_entropy"
+      },
+      {
+        "title": "Google ML Glossary — Cross-Entropy",
+        "url": "https://developers.google.com/machine-learning/glossary#cross-entropy"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Cross Entropy",
+        "url": "https://www.youtube.com/watch?v=6ArSys5qHAU"
+      },
+      {
+        "title": "MIT OpenCourseWare — Information Theory (6.050J)",
+        "url": "https://ocw.mit.edu/courses/6-050j-information-and-entropy-spring-2008/"
+      }
+    ]
+  },
   "computational-finance/cross-val-score": {
     "websites": [
       {
@@ -4389,6 +4411,28 @@
       }
     ]
   },
+  "computational-finance/joint-entropy": {
+    "websites": [
+      {
+        "title": "Wikipedia — Joint entropy",
+        "url": "https://en.wikipedia.org/wiki/Joint_entropy"
+      },
+      {
+        "title": "Wikipedia — Entropy (information theory)",
+        "url": "https://en.wikipedia.org/wiki/Entropy_(information_theory)"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Information Theory (6.050J)",
+        "url": "https://ocw.mit.edu/courses/6-050j-information-and-entropy-spring-2008/"
+      },
+      {
+        "title": "Khan Academy — Information entropy",
+        "url": "https://www.khanacademy.org/computing/computer-science/informationtheory/moderninfotheory/v/information-entropy"
+      }
+    ]
+  },
   "computational-finance/k-means-clustering": {
     "websites": [
       {
@@ -5072,6 +5116,28 @@
       {
         "title": "Mutual Information Clearly Explained — Normalized Nerd",
         "url": "https://www.youtube.com/watch?v=U9h1xkNELvY"
+      }
+    ]
+  },
+  "computational-finance/mutual-information": {
+    "websites": [
+      {
+        "title": "Wikipedia — Mutual information",
+        "url": "https://en.wikipedia.org/wiki/Mutual_information"
+      },
+      {
+        "title": "Wikipedia — Information theory",
+        "url": "https://en.wikipedia.org/wiki/Information_theory"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Mutual Information",
+        "url": "https://www.youtube.com/watch?v=eJIp_mgVLwE"
+      },
+      {
+        "title": "MIT OpenCourseWare — Information Theory (6.050J)",
+        "url": "https://ocw.mit.edu/courses/6-050j-information-and-entropy-spring-2008/"
       }
     ]
   },
@@ -10810,6 +10876,28 @@
       }
     ]
   },
+  "probability/maximum-entropy-principle": {
+    "websites": [
+      {
+        "title": "Wikipedia — Principle of maximum entropy",
+        "url": "https://en.wikipedia.org/wiki/Principle_of_maximum_entropy"
+      },
+      {
+        "title": "Wikipedia — Maximum entropy probability distribution",
+        "url": "https://en.wikipedia.org/wiki/Maximum_entropy_probability_distribution"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Information Theory (6.050J)",
+        "url": "https://ocw.mit.edu/courses/6-050j-information-and-entropy-spring-2008/"
+      },
+      {
+        "title": "YouTube — Maximum Entropy and the Exponential Family",
+        "url": "https://www.youtube.com/watch?v=2t18QrMvVBs"
+      }
+    ]
+  },
   "probability/mesokurtic": {
     "websites": [
       {
@@ -13527,6 +13615,28 @@
       {
         "title": "Wikipedia — Girsanov Theorem",
         "url": "https://en.wikipedia.org/wiki/Girsanov_theorem"
+      }
+    ]
+  },
+  "stochastic-processes/entropy-rate": {
+    "websites": [
+      {
+        "title": "Wikipedia — Entropy rate",
+        "url": "https://en.wikipedia.org/wiki/Entropy_rate"
+      },
+      {
+        "title": "Wikipedia — Markov chain (entropy rate)",
+        "url": "https://en.wikipedia.org/wiki/Markov_chain#Entropy_rate"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Information Theory (6.050J)",
+        "url": "https://ocw.mit.edu/courses/6-050j-information-and-entropy-spring-2008/"
+      },
+      {
+        "title": "MIT OpenCourseWare — Discrete Stochastic Processes (6.262)",
+        "url": "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/"
       }
     ]
   },

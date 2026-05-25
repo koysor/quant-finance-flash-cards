@@ -4230,6 +4230,18 @@
     "description": "Sub-microsecond execution latency in HFT strategies requires C++: its compiled execution, zero-overhead abstractions, and direct memory control allow the full order-generation loop to complete within the sub-microsecond window that HFT demands."
   },
   {
+    "source": "computational-finance/cross-entropy",
+    "target": "computational-finance/kullback-leibler-divergence",
+    "label": "equals entropy plus",
+    "description": "Cross-entropy decomposes as H(p,q) = H(p) + D_KL(p||q): the irreducible encoding cost under the true distribution plus the extra cost from using the wrong distribution — minimising cross-entropy during model training is therefore exactly equivalent to minimising KL divergence."
+  },
+  {
+    "source": "computational-finance/cross-entropy",
+    "target": "computational-finance/log-loss",
+    "label": "generalises to multi-class",
+    "description": "Log-loss is the binary special case of categorical cross-entropy: when K=2 and the true label is y, the cross-entropy −y log p̂ − (1−y) log(1−p̂) reduces to the familiar binary log-loss used to train logistic regression default models."
+  },
+  {
     "source": "computational-finance/cross-val-score",
     "target": "computational-finance/roc-curve-and-auc",
     "label": "evaluates via",
@@ -4594,6 +4606,12 @@
     "target": "computational-finance/random-forests",
     "label": "instantiated as",
     "description": "Random forests are the dominant instantiation of the bagging ensemble strategy, adding random feature subsampling to bootstrapping to further decorrelate trees and reduce the ensemble variance beyond what plain bagging achieves."
+  },
+  {
+    "source": "computational-finance/entropy",
+    "target": "computational-finance/cross-entropy",
+    "label": "lower bounds",
+    "description": "Shannon entropy H(p) is the minimum achievable cross-entropy H(p,q): it is reached only when the model distribution q matches the true distribution p exactly, so the entropy of the true label distribution sets the irreducible floor on training loss."
   },
   {
     "source": "computational-finance/entropy",
@@ -5274,6 +5292,24 @@
     "description": "The Jacobian generalises the gradient from scalar-valued to vector-valued functions — matrix calculus provides the unified notational framework in which both the gradient (special case m=1) and the full Jacobian are defined and manipulated."
   },
   {
+    "source": "computational-finance/joint-entropy",
+    "target": "computational-finance/entropy",
+    "label": "generalises",
+    "description": "Joint entropy H(X,Y) reduces to Shannon entropy H(X) when X and Y are independent, making it the natural extension of single-variable uncertainty to pairs of random variables such as two correlated factor returns in a multi-factor model."
+  },
+  {
+    "source": "computational-finance/joint-entropy",
+    "target": "computational-finance/kullback-leibler-divergence",
+    "label": "connected via chain rule to",
+    "description": "The chain rule H(X,Y) = H(X) + H(Y|X) connects joint entropy to conditional entropy, which can in turn be written using KL divergence — linking joint entropy, conditional entropy, KL divergence, and mutual information into a unified information-theoretic framework."
+  },
+  {
+    "source": "computational-finance/joint-entropy",
+    "target": "computational-finance/mutual-information",
+    "label": "inputs to",
+    "description": "Joint entropy H(X,Y) is the central quantity in the mutual information formula I(X;Y) = H(X) + H(Y) − H(X,Y): it captures the total uncertainty of two variables together, and subtracting it from the sum of marginal entropies yields the shared information between the two signals."
+  },
+  {
     "source": "computational-finance/k-means-clustering",
     "target": "computational-finance/distance-metrics",
     "label": "relies on",
@@ -5902,6 +5938,30 @@
     "target": "computational-finance/information-theory",
     "label": "applies",
     "description": "mutual_info_classif applies information-theoretic entropy measures to score the statistical dependence between each feature and the classification target, capturing non-linear as well as linear relationships that Pearson correlation would miss."
+  },
+  {
+    "source": "computational-finance/mutual-info-classif",
+    "target": "computational-finance/mutual-information",
+    "label": "estimates",
+    "description": "sklearn's mutual_info_classif estimates the mutual information I(X;Y) between each feature and the class label using a k-NN density estimator, translating the abstract information-theoretic concept into a practical non-linear feature scoring metric for financial classification models."
+  },
+  {
+    "source": "computational-finance/mutual-information",
+    "target": "computational-finance/entropy",
+    "label": "expressed in terms of",
+    "description": "Mutual information I(X;Y) = H(X) + H(Y) − H(X,Y) is built from three Shannon entropy quantities, so it inherits entropy's non-negativity and its interpretation as average surprise — zero MI means the two variables are statistically independent."
+  },
+  {
+    "source": "computational-finance/mutual-information",
+    "target": "computational-finance/joint-entropy",
+    "label": "requires",
+    "description": "Computing I(X;Y) = H(X) + H(Y) − H(X,Y) requires estimating the joint entropy H(X,Y), making joint entropy the key quantity that links the marginal uncertainties of two financial signals to the information they share."
+  },
+  {
+    "source": "computational-finance/mutual-information",
+    "target": "computational-finance/kullback-leibler-divergence",
+    "label": "equals KL divergence of",
+    "description": "Mutual information I(X;Y) = D_KL(p(x,y) || p(x)p(y)) is the KL divergence between the joint distribution and the product of marginals — measuring how far the joint is from independence, so zero MI implies statistical independence of the two signals."
   },
   {
     "source": "computational-finance/naive-bayes-classifier",
@@ -6898,6 +6958,12 @@
     "target": "computational-finance/activation-functions",
     "label": "instance of",
     "description": "Softmax is the standard output-layer activation function for multiclass classification in neural networks, converting raw scores to a valid probability distribution over K classes."
+  },
+  {
+    "source": "computational-finance/softmax-function",
+    "target": "computational-finance/cross-entropy",
+    "label": "paired with",
+    "description": "Softmax converts raw model logits into a probability distribution and cross-entropy then measures the divergence from the true one-hot label — the softmax-cross-entropy pair is the standard output layer and loss for multi-class classifiers such as market regime predictors and sector classification models."
   },
   {
     "source": "computational-finance/softmax-function",
@@ -12870,6 +12936,12 @@
     "description": "Both maximum entropy and risk parity portfolios reject return forecasts and focus on structural diversification — maximum entropy maximises the entropy of weights while risk parity equalises risk contributions, and the two coincide when all assets have equal volatility."
   },
   {
+    "source": "portfolio-theory/maximum-entropy-portfolio",
+    "target": "probability/maximum-entropy-principle",
+    "label": "applies to portfolios",
+    "description": "Maximum entropy portfolios apply Jaynes' principle directly: portfolio weights are treated as a probability distribution and entropy is maximised subject to a budget constraint, producing the most diversified allocation consistent with minimal prior assumptions about returns."
+  },
+  {
     "source": "portfolio-theory/mean-reversion-strategy",
     "target": "financial-maths/pairs-trading",
     "label": "foundation of",
@@ -14494,6 +14566,24 @@
     "target": "derivatives/black-scholes-equation",
     "label": "assumed by",
     "description": "Black-Scholes assumes stock prices are lognormally distributed — the N(d₁) and N(d₂) terms in the formula are computed from the normal distribution of log-prices."
+  },
+  {
+    "source": "probability/maximum-entropy-principle",
+    "target": "computational-finance/entropy",
+    "label": "maximises",
+    "description": "The maximum entropy principle selects the probability distribution with the highest Shannon entropy subject to known constraints — entropy is both the objective function and the measure of distributional uncertainty that makes the least-assumptive choice precise."
+  },
+  {
+    "source": "probability/maximum-entropy-principle",
+    "target": "computational-finance/kullback-leibler-divergence",
+    "label": "equivalent to minimising",
+    "description": "Maximising entropy subject to constraints is mathematically equivalent to minimising KL divergence from the uniform distribution — the maximum entropy distribution is the one closest to uniformity given the observed constraints, connecting the principle to the broader KL divergence framework."
+  },
+  {
+    "source": "probability/maximum-entropy-principle",
+    "target": "probability/bayes-theorem",
+    "label": "constructs priors for",
+    "description": "Bayes' theorem updates a prior distribution with observed data; the maximum entropy principle constructs the prior itself — together they form the Bayesian inference cycle where maximum entropy sets the least informative prior and Bayes' theorem updates it with evidence."
   },
   {
     "source": "probability/mesokurtic",
@@ -18328,6 +18418,24 @@
     "target": "stochastic-processes/itos-lemma",
     "label": "foundation of",
     "description": "The rule dW² = dt is the key substitution in deriving Itô’s lemma — it converts the second-order Taylor term ½ f′′ dW² into the deterministic Itô correction ½ f′′ dt."
+  },
+  {
+    "source": "stochastic-processes/entropy-rate",
+    "target": "computational-finance/entropy",
+    "label": "extends to processes",
+    "description": "Entropy rate h(X) = lim H(X_1,...,X_n)/n generalises Shannon entropy from a single random variable to a stationary stochastic process, measuring the average uncertainty generated per time step as the process evolves — it is the per-period entropy of an infinite sequence."
+  },
+  {
+    "source": "stochastic-processes/entropy-rate",
+    "target": "stochastic-processes/markov-property",
+    "label": "simplifies under",
+    "description": "For a Markov chain, the entropy rate simplifies to h = −Σ π_i Σ_j P_ij log P_ij, averaged over the stationary distribution — the Markov property makes the computation tractable by reducing the dependence on the full history to a single-step transition matrix."
+  },
+  {
+    "source": "stochastic-processes/entropy-rate",
+    "target": "stochastic-processes/regime-switching-models",
+    "label": "characterises randomness in",
+    "description": "The entropy rate of a regime-switching model measures the average surprise generated per period as the market moves between regimes — a low entropy rate indicates predictable regime transitions that trend-following strategies can exploit; a high entropy rate indicates near-random switching."
   },
   {
     "source": "stochastic-processes/equivalent-probability-measures",
