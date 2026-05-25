@@ -46,7 +46,7 @@ No single equation governs the taxonomy, but the categories map directly to capi
 
 Two landmark crises illustrate the distinction:
 
-**Market risk — 2020 oil price crash:** In April 2020, WTI crude futures fell to −$37 per barrel. Banks and funds holding long commodity positions suffered immediate mark-to-market losses purely from price moves — no counterparty failed. This is textbook market risk: the loss arose from a market price, not a default.
+**Market risk — 2020 oil price crash:** In April 2020, WTI crude futures fell to −\$37 per barrel. Banks and funds holding long commodity positions suffered immediate mark-to-market losses purely from price moves — no counterparty failed. This is textbook market risk: the loss arose from a market price, not a default.
 
 **Credit risk — Lehman Brothers 2008:** When Lehman filed for bankruptcy in September 2008, counterparties holding OTC derivatives, repo agreements, and unsecured bonds suffered losses because Lehman *failed to pay*, not because a market price moved against them. This is textbook credit risk: the loss arose from a counterparty's inability to meet its obligations.
 

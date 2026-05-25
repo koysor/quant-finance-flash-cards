@@ -15,7 +15,7 @@ The **Radon-Nikodym derivative** $\frac{d\mathbb{Q}}{d\mathbb{P}}$ is the densit
 |---|---|---|
 | $\frac{d\mathbb{Q}}{d\mathbb{P}}$ | "dQ over dP" | Radon-Nikodym derivative of $\mathbb{Q}$ w.r.t. $\mathbb{P}$ |
 | $\left.\frac{d\mathbb{Q}}{d\mathbb{P}}\right\vert_{\mathcal{F}_t}$ | "RN derivative at time $t$" | The density restricted to information up to time $t$ |
-| $Z_t = E^{\mathbb{P}}\!\left[\frac{d\mathbb{Q}}{d\mathbb{P}} \,\middle|\, \mathcal{F}_t\right]$ | "likelihood ratio process" | The martingale density process under $\mathbb{P}$ |
+| $Z_t = E^{\mathbb{P}}\!\left[\frac{d\mathbb{Q}}{d\mathbb{P}} \,\middle\vert\, \mathcal{F}_t\right]$ | "likelihood ratio process" | The martingale density process under $\mathbb{P}$ |
 | $\mathbb{Q} \ll \mathbb{P}$ | "$\mathbb{Q}$ absolutely continuous w.r.t. $\mathbb{P}$" | $\mathbb{Q}$ assigns zero probability to any event with $\mathbb{P}$-probability zero |
 
 ## Key Formula

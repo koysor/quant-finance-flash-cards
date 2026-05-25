@@ -59,7 +59,7 @@ Subadditivity is violated. Merging two portfolios appears riskier than holding t
 
 ## Example
 
-**JP Morgan's London Whale (2012).** Bruno Iksil's synthetic credit portfolio at JP Morgan's Chief Investment Office accumulated positions whose tail risk was masked by VaR. The desk switched to a VaR model that used shorter historical windows and smoother correlations, which mechanically reduced reported VaR by approximately 50% even as the actual position size grew. When markets moved against the trades, the realised loss reached $6.2 billion — far beyond anything the revised VaR indicated. The episode illustrates limitations 1, 2, and 3 simultaneously: the model used favourable recent history, understated non-linear credit-index payoffs, and gave management a false sense of security.
+**JP Morgan's London Whale (2012).** Bruno Iksil's synthetic credit portfolio at JP Morgan's Chief Investment Office accumulated positions whose tail risk was masked by VaR. The desk switched to a VaR model that used shorter historical windows and smoother correlations, which mechanically reduced reported VaR by approximately 50% even as the actual position size grew. When markets moved against the trades, the realised loss reached \$6.2 billion — far beyond anything the revised VaR indicated. The episode illustrates limitations 1, 2, and 3 simultaneously: the model used favourable recent history, understated non-linear credit-index payoffs, and gave management a false sense of security.
 
 ## Remember
 

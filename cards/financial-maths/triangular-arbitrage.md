@@ -39,7 +39,7 @@ Since $1.0080 > 1$, an arbitrage exists. Starting with $\$100{,}000$:
 2. Buy GBP: $90{,}909.09 \times 0.8400 = £\,76{,}363.64$
 3. Sell GBP for USD: $76{,}363.64 \times 1.3200 = \$100{,}800.00$
 
-**Riskless profit: $800.00** (0.80%, before transaction costs).
+**Riskless profit: \$800.00** (0.80%, before transaction costs).
 
 ## Remember
 

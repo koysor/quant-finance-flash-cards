@@ -42,7 +42,7 @@ $$d_2 = d_1 - 0.20\sqrt{0.5} \approx -0.0974 - 0.1414 = -0.2388$$
 $$C = 100\,\Phi(-0.0974) - 105\,e^{-0.025}\,\Phi(-0.2388)$$
 $$C \approx 100(0.4612) - 102.41(0.4056) \approx 46.12 - 41.54 = 4.58$$
 
-The call is worth approximately $4.58, computed entirely through evaluations of $\Phi$.
+The call is worth approximately \$4.58, computed entirely through evaluations of $\Phi$.
 
 ## Remember
 
