@@ -4277,6 +4277,28 @@
       }
     ]
   },
+  "computational-finance/encoder-only-vs-decoder-only": {
+    "websites": [
+      {
+        "title": "BERT vs GPT: What's the Difference? — Hugging Face Blog",
+        "url": "https://huggingface.co/blog/encoder-decoder"
+      },
+      {
+        "title": "GPT-2 — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/GPT-2"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Illustrated GPT-2 — The AI Epiphany",
+        "url": "https://www.youtube.com/watch?v=MQnJZuBGmSQ"
+      },
+      {
+        "title": "BERT vs GPT — StatQuest",
+        "url": "https://www.youtube.com/watch?v=90mGPxR2GgY"
+      }
+    ]
+  },
   "computational-finance/ensemble-methods": {
     "websites": [
       {
@@ -4542,6 +4564,28 @@
       {
         "title": "Wikipedia — Universal Approximation Theorem",
         "url": "https://en.wikipedia.org/wiki/Universal_approximation_theorem"
+      }
+    ]
+  },
+  "computational-finance/fine-tuning-vs-prompt-engineering": {
+    "websites": [
+      {
+        "title": "Fine-tuning — Hugging Face Documentation",
+        "url": "https://huggingface.co/docs/transformers/training"
+      },
+      {
+        "title": "Prompt engineering — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Prompt_engineering"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Fine-Tuning Large Language Models — DeepLearning.AI (Andrew Ng)",
+        "url": "https://www.youtube.com/watch?v=eC6Hd1hFvos"
+      },
+      {
+        "title": "Prompt Engineering Guide — 1littlecoder",
+        "url": "https://www.youtube.com/watch?v=dOxUroR57xs"
       }
     ]
   },
@@ -17207,6 +17251,132 @@
       {
         "title": "MIT OpenCourseWare — Time Series Analysis (14.384)",
         "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/"
+      }
+    ]
+  },
+  "computational-finance/deep-fbsde-solver": {
+    "websites": [
+      {
+        "title": "arXiv — Solving high-dimensional PDEs using deep learning",
+        "url": "https://arxiv.org/abs/1706.04702"
+      },
+      {
+        "title": "GitHub — Deep BSDE Solver (Official)",
+        "url": "https://github.com/frankhan91/DeepBSDE"
+      }
+    ],
+    "videos": [
+      {
+        "title": "YouTube — Deep Learning for High-Dimensional PDEs (Jiequn Han)",
+        "url": "https://www.youtube.com/watch?v=0k1q2C9E4zQ"
+      }
+    ]
+  },
+  "computational-finance/neural-network-model-calibration": {
+    "websites": [
+      {
+        "title": "arXiv — Deep Learning Volatility",
+        "url": "https://arxiv.org/abs/1901.09647"
+      },
+      {
+        "title": "Risk.net — Deep Learning Volatility",
+        "url": "https://www.risk.net/journal-of-risk/7949396/deep-learning-volatility-a-neural-network-approximation-approach"
+      }
+    ],
+    "videos": [
+      {
+        "title": "YouTube — Deep Learning Volatility (Blanka Horvath)",
+        "url": "https://www.youtube.com/watch?v=XzV2Z5I_6_M"
+      }
+    ]
+  },
+  "computational-finance/neural-networks-as-dynamical-systems": {
+    "websites": [
+      {
+        "title": "arXiv — Neural Ordinary Differential Equations",
+        "url": "https://arxiv.org/abs/1806.07366"
+      },
+      {
+        "title": "Towards Data Science — Neural ODEs",
+        "url": "https://towardsdatascience.com/neural-odes-breakthrough-of-neurips-2018-7264a2f8d380"
+      }
+    ],
+    "videos": [
+      {
+        "title": "NeurIPS — Neural Ordinary Differential Equations (Best Paper 2018)",
+        "url": "https://www.youtube.com/watch?v=V6nGT0GAKyg"
+      }
+    ]
+  },
+  "computational-finance/signal-to-noise-ratio-in-finance": {
+    "websites": [
+      {
+        "title": "Investopedia — Signal-to-Noise Ratio",
+        "url": "https://www.investopedia.com/terms/s/signal-to-noise-ratio.asp"
+      },
+      {
+        "title": "Advances in Financial Machine Learning (Lopez de Prado)",
+        "url": "https://www.wiley.com/en-us/Advances+in+Financial+Machine+Learning-p-9781119482086"
+      }
+    ],
+    "videos": [
+      {
+        "title": "YouTube — Financial Machine Learning: Signal vs Noise (Lopez de Prado)",
+        "url": "https://www.youtube.com/watch?v=YwL5l_VlX0g"
+      }
+    ]
+  },
+  "derivatives/utility-indifference-pricing": {
+    "websites": [
+      {
+        "title": "Wikipedia — Indifference Pricing",
+        "url": "https://en.wikipedia.org/wiki/Indifference_pricing"
+      },
+      {
+        "title": "Oxford Academic — Indifference Pricing of Financial Claims",
+        "url": "https://academic.oup.com/book/5560"
+      }
+    ],
+    "videos": [
+      {
+        "title": "YouTube — Pricing in Incomplete Markets",
+        "url": "https://www.youtube.com/watch?v=8K0m-H4xKq8"
+      }
+    ]
+  },
+  "volatility/rough-bergomi-model": {
+    "websites": [
+      {
+        "title": "SSRN — The Rough Bergomi Model",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2554754"
+      },
+      {
+        "title": "GitHub — rBergomi Solver",
+        "url": "https://github.com/ryanmccrickerd/rough_bergomi"
+      }
+    ],
+    "videos": [
+      {
+        "title": "YouTube — Rough Volatility and Bergomi Model (Jim Gatheral)",
+        "url": "https://www.youtube.com/watch?v=0Lz0-p79T_U"
+      }
+    ]
+  },
+  "computational-finance/agent-based-models-in-finance": {
+    "websites": [
+      {
+        "title": "Wikipedia — Agent-Based Model",
+        "url": "https://en.wikipedia.org/wiki/Agent-based_model"
+      },
+      {
+        "title": "JP Morgan — ABIDES Market Simulator",
+        "url": "https://github.com/jpmorganchase/ABIDES"
+      }
+    ],
+    "videos": [
+      {
+        "title": "YouTube — Agent-Based Models in Finance (JP Morgan AI Research)",
+        "url": "https://www.youtube.com/watch?v=zZ8X_qP6Y1k"
       }
     ]
   }

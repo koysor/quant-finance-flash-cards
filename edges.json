@@ -5388,6 +5388,30 @@
     "description": "The feedforward network is the canonical instance of the general neural network concept, establishing the foundational layer-by-layer forward pass that all other architectures — convolutional, recurrent, transformer — modify or extend."
   },
   {
+    "source": "computational-finance/fine-tuning-vs-prompt-engineering",
+    "target": "computational-finance/finbert",
+    "label": "example of",
+    "description": "FinBERT is the canonical example of fine-tuning in financial NLP — BERT's weights are updated on labelled sentiment data, achieving higher accuracy at lower inference cost than prompting a large generalist model for the same classification task."
+  },
+  {
+    "source": "computational-finance/fine-tuning-vs-prompt-engineering",
+    "target": "computational-finance/large-language-model",
+    "label": "adapts",
+    "description": "Both fine-tuning and prompt engineering are strategies for adapting a general-purpose LLM to a specific financial task — fine-tuning modifies the weights, prompt engineering modifies the input while weights remain frozen."
+  },
+  {
+    "source": "computational-finance/fine-tuning-vs-prompt-engineering",
+    "target": "computational-finance/prompt-engineering",
+    "label": "contrasts with",
+    "description": "Prompt engineering is the zero-weight-update alternative to fine-tuning: it achieves task adaptation by constructing structured inputs with few-shot examples rather than by gradient descent on labelled financial data."
+  },
+  {
+    "source": "computational-finance/fine-tuning-vs-prompt-engineering",
+    "target": "computational-finance/transfer-learning",
+    "label": "applies",
+    "description": "Fine-tuning is the most common form of transfer learning for LLMs in finance — the pre-trained weights encode general language knowledge and fine-tuning specialises them to a domain-specific task such as earnings sentiment or covenant extraction."
+  },
+  {
     "source": "computational-finance/finbert",
     "target": "computational-finance/attention-mechanism",
     "label": "built on",
@@ -22798,5 +22822,77 @@
     "target": "statistics/volatility-clustering",
     "label": "causes",
     "description": "The crisis shocks, leverage effect, and information flow dynamics described in why-volatility-changes are the economic mechanisms that produce the statistical phenomenon of volatility clustering observed in return time series."
+  },
+  {
+    "source": "computational-finance/deep-fbsde-solver",
+    "target": "stochastic-processes/stochastic-differential-equation",
+    "label": "solves",
+    "description": "Deep FBSDE solvers reformulate high-dimensional PDEs into stochastic differential equations that can be solved via deep learning."
+  },
+  {
+    "source": "computational-finance/deep-fbsde-solver",
+    "target": "derivatives/black-scholes-equation",
+    "label": "extends",
+    "description": "Provides a high-dimensional solution to the Black-Scholes PDE where traditional grid methods fail."
+  },
+  {
+    "source": "computational-finance/neural-network-model-calibration",
+    "target": "volatility/rough-volatility",
+    "label": "enables",
+    "description": "NN-based calibration makes rough volatility models computationally viable for real-time trading."
+  },
+  {
+    "source": "computational-finance/neural-network-model-calibration",
+    "target": "computational-finance/scipy-optimisation-for-calibration",
+    "label": "accelerates",
+    "description": "Replaces expensive pricing calls with fast NN forward passes during the optimisation loop."
+  },
+  {
+    "source": "computational-finance/neural-networks-as-dynamical-systems",
+    "target": "stochastic-processes/pontryagin-maximum-principle",
+    "label": "utilises",
+    "description": "Training deep networks can be framed as an optimal control problem using the Maximum Principle."
+  },
+  {
+    "source": "computational-finance/neural-networks-as-dynamical-systems",
+    "target": "computational-finance/neural-sde",
+    "label": "relates to",
+    "description": "Both frameworks treat neural network layers as steps in a continuous-time stochastic or deterministic process."
+  },
+  {
+    "source": "computational-finance/signal-to-noise-ratio-in-finance",
+    "target": "statistics/sharpe-ratio",
+    "label": "approximates",
+    "description": "The Sharpe ratio of a strategy is a direct measure of the signal-to-noise ratio of its returns."
+  },
+  {
+    "source": "computational-finance/signal-to-noise-ratio-in-finance",
+    "target": "statistics/overfitting",
+    "label": "causes",
+    "description": "The low signal-to-noise ratio in financial data is the primary driver of model overfitting."
+  },
+  {
+    "source": "derivatives/utility-indifference-pricing",
+    "target": "computational-finance/deep-hedging",
+    "label": "motivates",
+    "description": "Deep hedging implements utility indifference pricing by training neural networks to find the optimal hedge in incomplete markets."
+  },
+  {
+    "source": "volatility/rough-bergomi-model",
+    "target": "volatility/rough-volatility",
+    "label": "specialises",
+    "description": "Rough Bergomi is the most prominent practical implementation of the rough volatility hypothesis."
+  },
+  {
+    "source": "volatility/rough-bergomi-model",
+    "target": "stochastic-processes/fractional-brownian-motion",
+    "label": "requires",
+    "description": "The variance process in Rough Bergomi is driven by a fractional Brownian motion with H < 0.5."
+  },
+  {
+    "source": "computational-finance/agent-based-models-in-finance",
+    "target": "computational-finance/rl-dynamic-hedging",
+    "label": "simulates environment for",
+    "description": "ABMs provide the realistic market micro-structure needed to train RL agents for dynamic hedging."
   }
 ]
