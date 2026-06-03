@@ -14463,8 +14463,8 @@
         "url": "https://www.investopedia.com/terms/v/variationmargin.asp"
       },
       {
-        "title": "Corporate Finance Institute — Variation Margin",
-        "url": "https://corporatefinanceinstitute.com/resources/derivatives/variation-margin/"
+        "title": "Wikipedia — Margin (Finance)",
+        "url": "https://en.wikipedia.org/wiki/Margin_(finance)"
       }
     ]
   },
@@ -17279,8 +17279,8 @@
         "url": "https://arxiv.org/abs/1901.09647"
       },
       {
-        "title": "Risk.net — Deep Learning Volatility",
-        "url": "https://www.risk.net/journal-of-risk/7949396/deep-learning-volatility-a-neural-network-approximation-approach"
+        "title": "Wikipedia — Stochastic Volatility",
+        "url": "https://en.wikipedia.org/wiki/Stochastic_volatility"
       }
     ],
     "videos": [
@@ -17297,8 +17297,8 @@
         "url": "https://arxiv.org/abs/1806.07366"
       },
       {
-        "title": "Towards Data Science — Neural ODEs",
-        "url": "https://towardsdatascience.com/neural-odes-breakthrough-of-neurips-2018-7264a2f8d380"
+        "title": "Wikipedia — Neural Ordinary Differential Equation",
+        "url": "https://en.wikipedia.org/wiki/Neural_ordinary_differential_equation"
       }
     ],
     "videos": [
@@ -17333,8 +17333,8 @@
         "url": "https://en.wikipedia.org/wiki/Indifference_pricing"
       },
       {
-        "title": "Oxford Academic — Indifference Pricing of Financial Claims",
-        "url": "https://academic.oup.com/book/5560"
+        "title": "Wikipedia — Expected Utility Hypothesis",
+        "url": "https://en.wikipedia.org/wiki/Expected_utility_hypothesis"
       }
     ],
     "videos": [
@@ -17347,8 +17347,8 @@
   "volatility/rough-bergomi-model": {
     "websites": [
       {
-        "title": "SSRN — The Rough Bergomi Model",
-        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2554754"
+        "title": "arXiv — Pricing Under Rough Volatility (Bayer, Friz, Gatheral)",
+        "url": "https://arxiv.org/abs/1507.01212"
       },
       {
         "title": "GitHub — rBergomi Solver",
@@ -17369,14 +17369,1004 @@
         "url": "https://en.wikipedia.org/wiki/Agent-based_model"
       },
       {
-        "title": "JP Morgan — ABIDES Market Simulator",
-        "url": "https://github.com/jpmorganchase/ABIDES"
+        "title": "arXiv — ABIDES Market Simulator (Byrd et al.)",
+        "url": "https://arxiv.org/abs/1904.12066"
       }
     ],
     "videos": [
       {
         "title": "YouTube — Agent-Based Models in Finance (JP Morgan AI Research)",
         "url": "https://www.youtube.com/watch?v=zZ8X_qP6Y1k"
+      }
+    ]
+  },
+  "computational-finance/neural-network-option-pricing": {
+    "websites": [
+      {
+        "title": "Wikipedia — Option Pricing",
+        "url": "https://en.wikipedia.org/wiki/Option_pricing"
+      },
+      {
+        "title": "Investopedia — Black-Scholes Model",
+        "url": "https://www.investopedia.com/terms/b/blackscholes.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — But what is a neural network?",
+        "url": "https://www.youtube.com/watch?v=aircAruvnKk"
+      },
+      {
+        "title": "StatQuest — Neural Networks Part 1: Inside the Black Box",
+        "url": "https://www.youtube.com/watch?v=CqOfi41LfDw"
+      }
+    ]
+  },
+  "portfolio-theory/denoising-covariance-matrices": {
+    "websites": [
+      {
+        "title": "Wikipedia — Marchenko–Pastur Distribution",
+        "url": "https://en.wikipedia.org/wiki/Marchenko%E2%80%93Pastur_distribution"
+      },
+      {
+        "title": "Investopedia — Covariance",
+        "url": "https://www.investopedia.com/terms/c/covariance.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Principal Component Analysis (PCA), Step-by-Step",
+        "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ"
+      },
+      {
+        "title": "3Blue1Brown — Eigenvectors and Eigenvalues",
+        "url": "https://www.youtube.com/watch?v=PFDu9oVAE-g"
+      }
+    ]
+  },
+  "portfolio-theory/detoning-covariance-matrices": {
+    "websites": [
+      {
+        "title": "Wikipedia — Random Matrix Theory",
+        "url": "https://en.wikipedia.org/wiki/Random_matrix"
+      },
+      {
+        "title": "Investopedia — Correlation",
+        "url": "https://www.investopedia.com/terms/c/correlation.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Hierarchical Clustering",
+        "url": "https://www.youtube.com/watch?v=7xHsRkOdVwo"
+      },
+      {
+        "title": "3Blue1Brown — Eigenvectors and Eigenvalues",
+        "url": "https://www.youtube.com/watch?v=PFDu9oVAE-g"
+      }
+    ]
+  },
+  "portfolio-theory/nested-cluster-optimisation": {
+    "websites": [
+      {
+        "title": "Wikipedia — Hierarchical Clustering",
+        "url": "https://en.wikipedia.org/wiki/Hierarchical_clustering"
+      },
+      {
+        "title": "Investopedia — Modern Portfolio Theory",
+        "url": "https://www.investopedia.com/terms/m/modernportfoliotheory.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Hierarchical Clustering",
+        "url": "https://www.youtube.com/watch?v=7xHsRkOdVwo"
+      },
+      {
+        "title": "MIT OpenCourseWare — Portfolio Theory (18.S096)",
+        "url": "https://www.youtube.com/watch?v=8TJQhQ2GZ0Y"
+      }
+    ]
+  },
+  "stochastic-processes/empirical-stochastic-differential-equations": {
+    "websites": [
+      {
+        "title": "Wikipedia — Stochastic Differential Equation",
+        "url": "https://en.wikipedia.org/wiki/Stochastic_differential_equation"
+      },
+      {
+        "title": "Investopedia — Monte Carlo Simulation",
+        "url": "https://www.investopedia.com/terms/m/montecarlosimulation.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — But what is a neural network?",
+        "url": "https://www.youtube.com/watch?v=aircAruvnKk"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "computational-finance/minimum-spanning-tree": {
+    "websites": [
+      {
+        "title": "Wikipedia — Minimum Spanning Tree",
+        "url": "https://en.wikipedia.org/wiki/Minimum_spanning_tree"
+      },
+      {
+        "title": "Wikipedia — Kruskal's Algorithm",
+        "url": "https://en.wikipedia.org/wiki/Kruskal%27s_algorithm"
+      }
+    ],
+    "videos": [
+      {
+        "title": "William Fiset — Kruskal's Algorithm for Minimum Spanning Tree",
+        "url": "https://www.youtube.com/watch?v=JZBQLXgSGfs"
+      },
+      {
+        "title": "StatQuest — Hierarchical Clustering",
+        "url": "https://www.youtube.com/watch?v=7xHsRkOdVwo"
+      }
+    ]
+  },
+  "computational-finance/simulation-based-calibration": {
+    "websites": [
+      {
+        "title": "Wikipedia — Monte Carlo Method",
+        "url": "https://en.wikipedia.org/wiki/Monte_Carlo_method"
+      },
+      {
+        "title": "Investopedia — Monte Carlo Simulation",
+        "url": "https://www.investopedia.com/terms/m/montecarlosimulation.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Maximum Likelihood, clearly explained",
+        "url": "https://www.youtube.com/watch?v=XepXtl9YKwc"
+      },
+      {
+        "title": "3Blue1Brown — But what is a neural network?",
+        "url": "https://www.youtube.com/watch?v=aircAruvnKk"
+      }
+    ]
+  },
+  "computational-finance/soft-constraints-ml": {
+    "websites": [
+      {
+        "title": "Wikipedia — Constrained Optimisation",
+        "url": "https://en.wikipedia.org/wiki/Constrained_optimization"
+      },
+      {
+        "title": "Wikipedia — Physics-Informed Neural Networks",
+        "url": "https://en.wikipedia.org/wiki/Physics-informed_neural_networks"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Gradient Descent, How Neural Networks Learn",
+        "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w"
+      },
+      {
+        "title": "StatQuest — Gradient Descent, Step-by-Step",
+        "url": "https://www.youtube.com/watch?v=sDv4f4s2SB8"
+      }
+    ]
+  },
+  "statistics/marchenko-pastur-distribution": {
+    "websites": [
+      {
+        "title": "Wikipedia — Marchenko–Pastur Distribution",
+        "url": "https://en.wikipedia.org/wiki/Marchenko%E2%80%93Pastur_distribution"
+      },
+      {
+        "title": "Wikipedia — Random Matrix",
+        "url": "https://en.wikipedia.org/wiki/Random_matrix"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Principal Component Analysis (PCA), Step-by-Step",
+        "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ"
+      },
+      {
+        "title": "3Blue1Brown — Eigenvectors and Eigenvalues",
+        "url": "https://www.youtube.com/watch?v=PFDu9oVAE-g"
+      }
+    ]
+  },
+  "computational-finance/hard-constraints-neural-networks": {
+    "websites": [
+      {
+        "title": "Wikipedia — Constrained Optimisation",
+        "url": "https://en.wikipedia.org/wiki/Constrained_optimization"
+      },
+      {
+        "title": "Wikipedia — Monotonic Function",
+        "url": "https://en.wikipedia.org/wiki/Monotonic_function"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — But what is a neural network?",
+        "url": "https://www.youtube.com/watch?v=aircAruvnKk"
+      },
+      {
+        "title": "StatQuest — Neural Networks Part 1: Inside the Black Box",
+        "url": "https://www.youtube.com/watch?v=CqOfi41LfDw"
+      }
+    ]
+  },
+  "computational-finance/prims-algorithm": {
+    "websites": [
+      {
+        "title": "Wikipedia — Prim's Algorithm",
+        "url": "https://en.wikipedia.org/wiki/Prim%27s_algorithm"
+      },
+      {
+        "title": "Wikipedia — Minimum Spanning Tree",
+        "url": "https://en.wikipedia.org/wiki/Minimum_spanning_tree"
+      }
+    ],
+    "videos": [
+      {
+        "title": "William Fiset — Prim's Minimum Spanning Tree Algorithm",
+        "url": "https://www.youtube.com/watch?v=jsmMtJpPnhU"
+      },
+      {
+        "title": "StatQuest — Hierarchical Clustering",
+        "url": "https://www.youtube.com/watch?v=7xHsRkOdVwo"
+      }
+    ]
+  },
+  "statistics/wishart-distribution": {
+    "websites": [
+      {
+        "title": "Wikipedia — Wishart Distribution",
+        "url": "https://en.wikipedia.org/wiki/Wishart_distribution"
+      },
+      {
+        "title": "Wikipedia — Marchenko–Pastur Distribution",
+        "url": "https://en.wikipedia.org/wiki/Marchenko%E2%80%93Pastur_distribution"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Principal Component Analysis (PCA), Step-by-Step",
+        "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ"
+      },
+      {
+        "title": "3Blue1Brown — Eigenvectors and Eigenvalues",
+        "url": "https://www.youtube.com/watch?v=PFDu9oVAE-g"
+      }
+    ]
+  },
+  "computational-finance/input-convex-neural-networks": {
+    "websites": [
+      {
+        "title": "Wikipedia — Convex Function",
+        "url": "https://en.wikipedia.org/wiki/Convex_function"
+      },
+      {
+        "title": "Wikipedia — Artificial Neural Network",
+        "url": "https://en.wikipedia.org/wiki/Artificial_neural_network"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — But what is a neural network?",
+        "url": "https://www.youtube.com/watch?v=aircAruvnKk"
+      },
+      {
+        "title": "StatQuest — Neural Networks Part 1: Inside the Black Box",
+        "url": "https://www.youtube.com/watch?v=CqOfi41LfDw"
+      }
+    ]
+  },
+  "computational-finance/kruskals-algorithm": {
+    "websites": [
+      {
+        "title": "Wikipedia — Kruskal's Algorithm",
+        "url": "https://en.wikipedia.org/wiki/Kruskal%27s_algorithm"
+      },
+      {
+        "title": "Wikipedia — Minimum Spanning Tree",
+        "url": "https://en.wikipedia.org/wiki/Minimum_spanning_tree"
+      }
+    ],
+    "videos": [
+      {
+        "title": "William Fiset — Kruskal's Algorithm for Minimum Spanning Tree",
+        "url": "https://www.youtube.com/watch?v=JZBQLXgSGfs"
+      },
+      {
+        "title": "William Fiset — Union Find Data Structure",
+        "url": "https://www.youtube.com/watch?v=ibjEGG7ylHk"
+      }
+    ]
+  },
+  "computational-finance/spectral-clustering": {
+    "websites": [
+      {
+        "title": "Wikipedia — Spectral Clustering",
+        "url": "https://en.wikipedia.org/wiki/Spectral_clustering"
+      },
+      {
+        "title": "Wikipedia — Laplacian Matrix",
+        "url": "https://en.wikipedia.org/wiki/Laplacian_matrix"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — K-means Clustering",
+        "url": "https://www.youtube.com/watch?v=4b5d3muPQmA"
+      },
+      {
+        "title": "3Blue1Brown — Eigenvectors and Eigenvalues",
+        "url": "https://www.youtube.com/watch?v=PFDu9oVAE-g"
+      }
+    ]
+  },
+  "stochastic-processes/wishart-process": {
+    "websites": [
+      {
+        "title": "Wikipedia — Wishart Distribution",
+        "url": "https://en.wikipedia.org/wiki/Wishart_distribution"
+      },
+      {
+        "title": "Wikipedia — Cox–Ingersoll–Ross Model",
+        "url": "https://en.wikipedia.org/wiki/Cox%E2%80%93Ingersoll%E2%80%93Ross_model"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Principal Component Analysis (PCA), Step-by-Step",
+        "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "computational-finance/graph-laplacian": {
+    "websites": [
+      {
+        "title": "Wikipedia — Laplacian Matrix",
+        "url": "https://en.wikipedia.org/wiki/Laplacian_matrix"
+      },
+      {
+        "title": "Wikipedia — Spectral Graph Theory",
+        "url": "https://en.wikipedia.org/wiki/Spectral_graph_theory"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Eigenvectors and Eigenvalues",
+        "url": "https://www.youtube.com/watch?v=PFDu9oVAE-g"
+      },
+      {
+        "title": "StatQuest — K-means Clustering",
+        "url": "https://www.youtube.com/watch?v=4b5d3muPQmA"
+      }
+    ]
+  },
+  "computational-finance/union-find": {
+    "websites": [
+      {
+        "title": "Wikipedia — Disjoint-Set Data Structure",
+        "url": "https://en.wikipedia.org/wiki/Disjoint-set_data_structure"
+      },
+      {
+        "title": "Wikipedia — Kruskal's Algorithm",
+        "url": "https://en.wikipedia.org/wiki/Kruskal%27s_algorithm"
+      }
+    ],
+    "videos": [
+      {
+        "title": "William Fiset — Union Find Data Structure",
+        "url": "https://www.youtube.com/watch?v=ibjEGG7ylHk"
+      },
+      {
+        "title": "William Fiset — Kruskal's Algorithm for Minimum Spanning Tree",
+        "url": "https://www.youtube.com/watch?v=JZBQLXgSGfs"
+      }
+    ]
+  },
+  "fixed-income/affine-term-structure-models": {
+    "websites": [
+      {
+        "title": "Wikipedia — Short-Rate Model",
+        "url": "https://en.wikipedia.org/wiki/Short-rate_model"
+      },
+      {
+        "title": "Investopedia — Term Structure of Interest Rates",
+        "url": "https://www.investopedia.com/terms/t/termstructure.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      },
+      {
+        "title": "StatQuest — Principal Component Analysis (PCA), Step-by-Step",
+        "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ"
+      }
+    ]
+  },
+  "volatility/vol-of-vol": {
+    "websites": [
+      {
+        "title": "Wikipedia — Stochastic Volatility",
+        "url": "https://en.wikipedia.org/wiki/Stochastic_volatility"
+      },
+      {
+        "title": "Wikipedia — Heston Model",
+        "url": "https://en.wikipedia.org/wiki/Heston_model"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — But what is a neural network?",
+        "url": "https://www.youtube.com/watch?v=aircAruvnKk"
+      },
+      {
+        "title": "StatQuest — Gradient Descent, Step-by-Step",
+        "url": "https://www.youtube.com/watch?v=sDv4f4s2SB8"
+      }
+    ]
+  },
+  "calculus/riccati-ode": {
+    "websites": [
+      {
+        "title": "Wikipedia — Riccati Equation",
+        "url": "https://en.wikipedia.org/wiki/Riccati_equation"
+      },
+      {
+        "title": "Wikipedia — Short-Rate Model",
+        "url": "https://en.wikipedia.org/wiki/Short-rate_model"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      },
+      {
+        "title": "3Blue1Brown — Differential Equations Overview",
+        "url": "https://www.youtube.com/watch?v=p_di4Zn4wz4"
+      }
+    ]
+  },
+  "computational-finance/fiedler-value": {
+    "websites": [
+      {
+        "title": "Wikipedia — Algebraic Connectivity",
+        "url": "https://en.wikipedia.org/wiki/Algebraic_connectivity"
+      },
+      {
+        "title": "Wikipedia — Laplacian Matrix",
+        "url": "https://en.wikipedia.org/wiki/Laplacian_matrix"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Eigenvectors and Eigenvalues",
+        "url": "https://www.youtube.com/watch?v=PFDu9oVAE-g"
+      },
+      {
+        "title": "StatQuest — Principal Component Analysis (PCA), Step-by-Step",
+        "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ"
+      }
+    ]
+  },
+  "fixed-income/nelson-siegel-model": {
+    "websites": [
+      {
+        "title": "Wikipedia — Yield Curve",
+        "url": "https://en.wikipedia.org/wiki/Yield_curve"
+      },
+      {
+        "title": "Investopedia — Term Structure of Interest Rates",
+        "url": "https://www.investopedia.com/terms/t/termstructure.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      },
+      {
+        "title": "StatQuest — Linear Regression",
+        "url": "https://www.youtube.com/watch?v=nk2CQITm_eo"
+      }
+    ]
+  },
+  "calculus/ode-numerical-methods": {
+    "websites": [
+      {
+        "title": "Wikipedia — Runge–Kutta Methods",
+        "url": "https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods"
+      },
+      {
+        "title": "Wikipedia — Euler Method",
+        "url": "https://en.wikipedia.org/wiki/Euler_method"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Differential Equations Overview",
+        "url": "https://www.youtube.com/watch?v=p_di4Zn4wz4"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "computational-finance/cheeger-inequality": {
+    "websites": [
+      {
+        "title": "Wikipedia — Cheeger Constant (Graph Theory)",
+        "url": "https://en.wikipedia.org/wiki/Cheeger_constant_(graph_theory)"
+      },
+      {
+        "title": "Wikipedia — Algebraic Connectivity",
+        "url": "https://en.wikipedia.org/wiki/Algebraic_connectivity"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Eigenvectors and Eigenvalues",
+        "url": "https://www.youtube.com/watch?v=PFDu9oVAE-g"
+      },
+      {
+        "title": "StatQuest — K-means Clustering",
+        "url": "https://www.youtube.com/watch?v=4b5d3muPQmA"
+      }
+    ]
+  },
+  "fixed-income/dynamic-nelson-siegel-model": {
+    "websites": [
+      {
+        "title": "Wikipedia — Yield Curve",
+        "url": "https://en.wikipedia.org/wiki/Yield_curve"
+      },
+      {
+        "title": "Investopedia — Term Structure of Interest Rates",
+        "url": "https://www.investopedia.com/terms/t/termstructure.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Principal Component Analysis (PCA), Step-by-Step",
+        "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "fixed-income/term-premium": {
+    "websites": [
+      {
+        "title": "Wikipedia — Yield Curve",
+        "url": "https://en.wikipedia.org/wiki/Yield_curve"
+      },
+      {
+        "title": "Investopedia — Term Structure of Interest Rates",
+        "url": "https://www.investopedia.com/terms/t/termstructure.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Linear Regression",
+        "url": "https://www.youtube.com/watch?v=nk2CQITm_eo"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "stochastic-processes/two-factor-hull-white": {
+    "websites": [
+      {
+        "title": "Wikipedia — Hull–White Model",
+        "url": "https://en.wikipedia.org/wiki/Hull%E2%80%93White_model"
+      },
+      {
+        "title": "Wikipedia — Short-Rate Model",
+        "url": "https://en.wikipedia.org/wiki/Short-rate_model"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      },
+      {
+        "title": "StatQuest — Principal Component Analysis (PCA), Step-by-Step",
+        "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ"
+      }
+    ]
+  },
+  "calculus/adams-bashforth-method": {
+    "websites": [
+      {
+        "title": "Wikipedia — Linear Multistep Method",
+        "url": "https://en.wikipedia.org/wiki/Linear_multistep_method"
+      },
+      {
+        "title": "Wikipedia — Runge–Kutta Methods",
+        "url": "https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Differential Equations Overview",
+        "url": "https://www.youtube.com/watch?v=p_di4Zn4wz4"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "fixed-income/forward-guidance": {
+    "websites": [
+      {
+        "title": "Wikipedia — Forward Guidance",
+        "url": "https://en.wikipedia.org/wiki/Forward_guidance"
+      },
+      {
+        "title": "Investopedia — Term Structure of Interest Rates",
+        "url": "https://www.investopedia.com/terms/t/termstructure.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Principal Component Analysis (PCA), Step-by-Step",
+        "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "fixed-income/yield-curve-control": {
+    "websites": [
+      {
+        "title": "Wikipedia — Yield Curve",
+        "url": "https://en.wikipedia.org/wiki/Yield_curve"
+      },
+      {
+        "title": "Wikipedia — Quantitative Easing",
+        "url": "https://en.wikipedia.org/wiki/Quantitative_easing"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Linear Regression",
+        "url": "https://www.youtube.com/watch?v=nk2CQITm_eo"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "calculus/adams-moulton-method": {
+    "websites": [
+      {
+        "title": "Wikipedia — Linear Multistep Method",
+        "url": "https://en.wikipedia.org/wiki/Linear_multistep_method"
+      },
+      {
+        "title": "Wikipedia — Euler Method",
+        "url": "https://en.wikipedia.org/wiki/Euler_method"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Differential Equations Overview",
+        "url": "https://www.youtube.com/watch?v=p_di4Zn4wz4"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "fixed-income/quantitative-easing": {
+    "websites": [
+      {
+        "title": "Wikipedia — Quantitative Easing",
+        "url": "https://en.wikipedia.org/wiki/Quantitative_easing"
+      },
+      {
+        "title": "Investopedia — Quantitative Easing",
+        "url": "https://www.investopedia.com/terms/q/quantitative-easing.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Principal Component Analysis (PCA), Step-by-Step",
+        "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "fixed-income/taylor-rule": {
+    "websites": [
+      {
+        "title": "Wikipedia — Taylor Rule",
+        "url": "https://en.wikipedia.org/wiki/Taylor_rule"
+      },
+      {
+        "title": "Investopedia — Taylor Rule",
+        "url": "https://www.investopedia.com/terms/t/taylorsrule.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Linear Regression",
+        "url": "https://www.youtube.com/watch?v=nk2CQITm_eo"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "calculus/stiff-ode": {
+    "websites": [
+      {
+        "title": "Wikipedia — Stiff Equation",
+        "url": "https://en.wikipedia.org/wiki/Stiff_equation"
+      },
+      {
+        "title": "Wikipedia — Runge–Kutta Methods",
+        "url": "https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Differential Equations Overview",
+        "url": "https://www.youtube.com/watch?v=p_di4Zn4wz4"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "fixed-income/yield-curve-inversion": {
+    "websites": [
+      {
+        "title": "Wikipedia — Yield Curve",
+        "url": "https://en.wikipedia.org/wiki/Yield_curve"
+      },
+      {
+        "title": "Investopedia — Inverted Yield Curve",
+        "url": "https://www.investopedia.com/terms/i/invertedyieldcurve.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Linear Regression",
+        "url": "https://www.youtube.com/watch?v=nk2CQITm_eo"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "calculus/backward-differentiation-formula": {
+    "websites": [
+      {
+        "title": "Wikipedia — Backward Differentiation Formula",
+        "url": "https://en.wikipedia.org/wiki/Backward_differentiation_formula"
+      },
+      {
+        "title": "Wikipedia — Stiff Equation",
+        "url": "https://en.wikipedia.org/wiki/Stiff_equation"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown — Differential Equations Overview",
+        "url": "https://www.youtube.com/watch?v=p_di4Zn4wz4"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "financial-maths/output-gap": {
+    "websites": [
+      {
+        "title": "Wikipedia — Output Gap",
+        "url": "https://en.wikipedia.org/wiki/Output_gap"
+      },
+      {
+        "title": "Investopedia — Taylor Rule",
+        "url": "https://www.investopedia.com/terms/t/taylorsrule.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Linear Regression",
+        "url": "https://www.youtube.com/watch?v=nk2CQITm_eo"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "fixed-income/bear-steepener-bull-flattener": {
+    "websites": [
+      {
+        "title": "Wikipedia — Yield Curve",
+        "url": "https://en.wikipedia.org/wiki/Yield_curve"
+      },
+      {
+        "title": "Investopedia — Inverted Yield Curve",
+        "url": "https://www.investopedia.com/terms/i/invertedyieldcurve.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Principal Component Analysis (PCA), Step-by-Step",
+        "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "fixed-income/breakeven-inflation": {
+    "websites": [
+      {
+        "title": "Wikipedia — Inflation-Indexed Bond",
+        "url": "https://en.wikipedia.org/wiki/Inflation-indexed_bond"
+      },
+      {
+        "title": "Investopedia — Breakeven Inflation Rate",
+        "url": "https://www.investopedia.com/terms/b/breakeveninflationrate.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Linear Regression",
+        "url": "https://www.youtube.com/watch?v=nk2CQITm_eo"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "fixed-income/convexity-bias": {
+    "websites": [
+      {
+        "title": "Wikipedia — Jensen's Inequality",
+        "url": "https://en.wikipedia.org/wiki/Jensen%27s_inequality"
+      },
+      {
+        "title": "Wikipedia — Convexity (finance)",
+        "url": "https://en.wikipedia.org/wiki/Convexity_(finance)"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Maximum Likelihood, clearly explained",
+        "url": "https://www.youtube.com/watch?v=XepXtl9YKwc"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "fixed-income/cheapest-to-deliver": {
+    "websites": [
+      {
+        "title": "Wikipedia — Bond Futures",
+        "url": "https://en.wikipedia.org/wiki/Bond_futures"
+      },
+      {
+        "title": "Investopedia — Cheapest to Deliver",
+        "url": "https://www.investopedia.com/terms/c/cheapesttodeliver.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Linear Regression",
+        "url": "https://www.youtube.com/watch?v=nk2CQITm_eo"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "fixed-income/bond-futures-basis": {
+    "websites": [
+      {
+        "title": "Wikipedia — Bond Futures",
+        "url": "https://en.wikipedia.org/wiki/Bond_futures"
+      },
+      {
+        "title": "Investopedia — Cheapest to Deliver",
+        "url": "https://www.investopedia.com/terms/c/cheapesttodeliver.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Linear Regression",
+        "url": "https://www.youtube.com/watch?v=nk2CQITm_eo"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "fixed-income/conversion-factor": {
+    "websites": [
+      {
+        "title": "Wikipedia — Bond Futures",
+        "url": "https://en.wikipedia.org/wiki/Bond_futures"
+      },
+      {
+        "title": "Investopedia — Conversion Factor",
+        "url": "https://www.investopedia.com/terms/c/conversionfactor.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Linear Regression",
+        "url": "https://www.youtube.com/watch?v=nk2CQITm_eo"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "fixed-income/delivery-option-value": {
+    "websites": [
+      {
+        "title": "Wikipedia — Bond Futures",
+        "url": "https://en.wikipedia.org/wiki/Bond_futures"
+      },
+      {
+        "title": "Investopedia — Cheapest to Deliver",
+        "url": "https://www.investopedia.com/terms/c/cheapesttodeliver.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest — Linear Regression",
+        "url": "https://www.youtube.com/watch?v=nk2CQITm_eo"
+      },
+      {
+        "title": "MIT OpenCourseWare — Stochastic Differential Equations",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
       }
     ]
   }

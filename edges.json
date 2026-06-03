@@ -22861,7 +22861,7 @@
   },
   {
     "source": "computational-finance/signal-to-noise-ratio-in-finance",
-    "target": "statistics/sharpe-ratio",
+    "target": "portfolio-theory/sharpe-ratio",
     "label": "approximates",
     "description": "The Sharpe ratio of a strategy is a direct measure of the signal-to-noise ratio of its returns."
   },
@@ -22894,5 +22894,821 @@
     "target": "computational-finance/rl-dynamic-hedging",
     "label": "simulates environment for",
     "description": "ABMs provide the realistic market micro-structure needed to train RL agents for dynamic hedging."
+  },
+  {
+    "source": "linear-algebra/eigenvalues-and-eigenvectors",
+    "target": "portfolio-theory/denoising-covariance-matrices",
+    "label": "enables",
+    "description": "Denoising a covariance matrix requires spectral decomposition into eigenvalues and eigenvectors, which are then filtered using the Marchenko-Pastur threshold."
+  },
+  {
+    "source": "portfolio-theory/denoising-covariance-matrices",
+    "target": "linear-algebra/eigenvalue-clipping",
+    "label": "extends",
+    "description": "Marchenko-Pastur denoising is a theoretically grounded extension of eigenvalue clipping: instead of imposing an arbitrary floor, it uses random matrix theory to set the noise boundary."
+  },
+  {
+    "source": "portfolio-theory/denoising-covariance-matrices",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "stabilises inputs for",
+    "description": "Markowitz optimisation is highly sensitive to estimation error in the covariance matrix; denoising replaces spurious small eigenvalues with a stable floor, preventing extreme portfolio weights."
+  },
+  {
+    "source": "portfolio-theory/denoising-covariance-matrices",
+    "target": "portfolio-theory/detoning-covariance-matrices",
+    "label": "precedes",
+    "description": "Detoning is applied after denoising; removing noise first ensures the dominant market eigenvector extracted by detoning captures genuine market co-movement rather than a noise artefact."
+  },
+  {
+    "source": "portfolio-theory/detoning-covariance-matrices",
+    "target": "computational-finance/hierarchical-clustering",
+    "label": "improves",
+    "description": "Removing the market factor before clustering allows hierarchical algorithms to identify sector and style clusters that would otherwise be dominated by universal market co-movement."
+  },
+  {
+    "source": "portfolio-theory/detoning-covariance-matrices",
+    "target": "portfolio-theory/nested-cluster-optimisation",
+    "label": "enables",
+    "description": "NCO requires meaningful asset clusters; detoning the correlation matrix first ensures clusters reflect genuine sub-market structure rather than overall market co-movement."
+  },
+  {
+    "source": "computational-finance/hierarchical-clustering",
+    "target": "portfolio-theory/nested-cluster-optimisation",
+    "label": "drives",
+    "description": "NCO's first step uses hierarchical clustering to group assets; the quality of the cluster partition directly determines the stability of the resulting portfolio weights."
+  },
+  {
+    "source": "portfolio-theory/nested-cluster-optimisation",
+    "target": "portfolio-theory/hierarchical-risk-parity",
+    "label": "compared to",
+    "description": "HRP and NCO both use hierarchical clustering to address Markowitz instability, but NCO applies within-cluster optimisation while HRP allocates risk by bisecting the dendrogram."
+  },
+  {
+    "source": "portfolio-theory/nested-cluster-optimisation",
+    "target": "portfolio-theory/minimum-variance-portfolio",
+    "label": "uses",
+    "description": "NCO applies minimum-variance optimisation at both the intra-cluster and inter-cluster levels to determine the final asset weights."
+  },
+  {
+    "source": "portfolio-theory/denoising-covariance-matrices",
+    "target": "portfolio-theory/nested-cluster-optimisation",
+    "label": "preconditions",
+    "description": "Denoising the covariance matrix before NCO ensures the clustering step is not misled by spurious correlations, producing more stable and meaningful asset groupings."
+  },
+  {
+    "source": "stochastic-processes/empirical-stochastic-differential-equations",
+    "target": "stochastic-processes/geometric-brownian-motion",
+    "label": "extends",
+    "description": "Empirical SDEs generalise GBM by replacing its fixed drift and diffusion parameters with ML-estimated functions of state and time, capturing non-linear dynamics GBM cannot express."
+  },
+  {
+    "source": "stochastic-processes/euler-maruyama-method",
+    "target": "stochastic-processes/empirical-stochastic-differential-equations",
+    "label": "simulates",
+    "description": "Once the empirical drift and diffusion are trained on historical data, the Euler-Maruyama scheme generates sample paths from the learned SDE for risk management or pricing."
+  },
+  {
+    "source": "computational-finance/neural-networks",
+    "target": "stochastic-processes/empirical-stochastic-differential-equations",
+    "label": "parametrises",
+    "description": "Neural networks are the most flexible function approximators used to model the non-parametric drift and diffusion terms in empirical SDEs, replacing assumed parametric forms."
+  },
+  {
+    "source": "computational-finance/neural-networks",
+    "target": "computational-finance/neural-network-option-pricing",
+    "label": "applied in",
+    "description": "General neural network architecture is applied to option pricing by training on market inputs (spot, strike, expiry, volatility, rate) and learning the input-to-price mapping."
+  },
+  {
+    "source": "computational-finance/neural-network-option-pricing",
+    "target": "computational-finance/tdbp-model",
+    "label": "specialised by",
+    "description": "TDBP is a specialised neural-network pricer that uses backward induction and temporal difference learning, extending the general soft-constraint framework to time-series option pricing."
+  },
+  {
+    "source": "computational-finance/neural-network-option-pricing",
+    "target": "derivatives/black-scholes-equation",
+    "label": "supplements",
+    "description": "Neural network pricers are trained on Black-Scholes prices as a baseline target and are used where BS assumptions break down, such as for path-dependent or high-dimensional derivatives."
+  },
+  {
+    "source": "computational-finance/neural-network-option-pricing",
+    "target": "computational-finance/attention-option-pricing",
+    "label": "extended by",
+    "description": "Attention-based option pricing extends single-option neural networks to price the entire volatility surface simultaneously, capturing inter-strike no-arbitrage structure through self-attention."
+  },
+  {
+    "source": "statistics/marchenko-pastur-distribution",
+    "target": "linear-algebra/eigenvalue-clipping",
+    "label": "provides threshold for",
+    "description": "The Marchenko-Pastur upper bound λ+ is the exact threshold used in eigenvalue clipping to separate noise eigenvalues from signal eigenvalues in a sample covariance matrix."
+  },
+  {
+    "source": "statistics/marchenko-pastur-distribution",
+    "target": "portfolio-theory/denoising-covariance-matrices",
+    "label": "defines boundary in",
+    "description": "The MP distribution provides the theoretically grounded noise boundary used in covariance denoising to identify which eigenvalues should be replaced with the noise average."
+  },
+  {
+    "source": "statistics/principal-component-analysis",
+    "target": "statistics/marchenko-pastur-distribution",
+    "label": "interpreted via",
+    "description": "PCA of a financial covariance matrix generates eigenvalues that should be screened against the MP distribution to separate genuine risk factors from noise components."
+  },
+  {
+    "source": "computational-finance/minimum-spanning-tree",
+    "target": "computational-finance/hierarchical-clustering",
+    "label": "feeds into",
+    "description": "An MST on assets can be converted to a dendrogram, making it a precursor step to hierarchical clustering used in Hierarchical Risk Parity and Nested Cluster Optimisation."
+  },
+  {
+    "source": "computational-finance/minimum-spanning-tree",
+    "target": "portfolio-theory/hierarchical-risk-parity",
+    "label": "underpins",
+    "description": "HRP uses the same correlation-to-distance mapping as MST construction; the MST visualises the most significant edges in the asset correlation graph that HRP's clustering exploits."
+  },
+  {
+    "source": "portfolio-theory/detoning-covariance-matrices",
+    "target": "computational-finance/minimum-spanning-tree",
+    "label": "preconditions",
+    "description": "Detoning the correlation matrix before MST construction removes the dominant market factor, revealing genuine sector and style relationships in the resulting asset tree."
+  },
+  {
+    "source": "computational-finance/soft-constraints-ml",
+    "target": "statistics/regularisation",
+    "label": "generalises",
+    "description": "Regularisation is the special case where the penalty encodes a preference for small parameter magnitude; soft constraints generalise this to arbitrary financial or physical domain knowledge."
+  },
+  {
+    "source": "computational-finance/soft-constraints-ml",
+    "target": "computational-finance/neural-network-option-pricing",
+    "label": "applied in",
+    "description": "Monotonicity and non-negativity penalties on option prices are the canonical application of soft constraints in quantitative finance, ensuring arbitrage-free neural network pricers."
+  },
+  {
+    "source": "computational-finance/soft-constraints-ml",
+    "target": "computational-finance/deep-hedging",
+    "label": "applied in",
+    "description": "Deep hedging encodes transaction costs and risk limits as soft penalty terms in the hedging loss, constraining the neural network's actions to financially realistic hedge ratios."
+  },
+  {
+    "source": "computational-finance/simulation-based-calibration",
+    "target": "computational-finance/calibration-vs-simulation",
+    "label": "contrasted with",
+    "description": "Simulation-based calibration still fits a parametric model to market data using simulations; calibration-vs-simulation contrasts this approach with model-free simulation-based pricing."
+  },
+  {
+    "source": "risk/monte-carlo-simulation",
+    "target": "computational-finance/simulation-based-calibration",
+    "label": "required by",
+    "description": "The calibration loop generates many Monte Carlo paths from trial parameters; without fast simulation the outer optimisation would be computationally intractable."
+  },
+  {
+    "source": "computational-finance/bayesian-optimisation",
+    "target": "computational-finance/simulation-based-calibration",
+    "label": "accelerates",
+    "description": "Bayesian optimisation builds a surrogate of the expensive simulation loss and proposes parameter candidates that minimise calibration error with far fewer model evaluations than grid or random search."
+  },
+  {
+    "source": "stochastic-processes/empirical-stochastic-differential-equations",
+    "target": "computational-finance/simulation-based-calibration",
+    "label": "compared to",
+    "description": "Both methods estimate SDE dynamics from market data, but empirical SDEs use non-parametric ML to learn the drift and diffusion, whereas simulation-based calibration fits a parametric model by minimising simulation-to-market discrepancy."
+  },
+  {
+    "source": "statistics/wishart-distribution",
+    "target": "statistics/marchenko-pastur-distribution",
+    "label": "generates",
+    "description": "The Wishart distribution generates random covariance matrices whose limiting eigenvalue spectrum is described by the Marchenko-Pastur law as the matrix dimensions grow large."
+  },
+  {
+    "source": "statistics/wishart-distribution",
+    "target": "portfolio-theory/denoising-covariance-matrices",
+    "label": "motivates",
+    "description": "A sample covariance matrix is a Wishart random draw, which explains why its eigenvalues are noisy even when the true covariance is identity — making denoising a statistical necessity rather than a heuristic."
+  },
+  {
+    "source": "statistics/wishart-distribution",
+    "target": "linear-algebra/eigenvalue-clipping",
+    "label": "underpins",
+    "description": "Eigenvalue clipping exploits the known noise structure of Wishart matrices to identify and replace eigenvalues that are consistent with a purely random Wishart draw."
+  },
+  {
+    "source": "computational-finance/prims-algorithm",
+    "target": "computational-finance/minimum-spanning-tree",
+    "label": "constructs",
+    "description": "Prim's greedy node-expansion approach produces the same minimum spanning tree as Kruskal's edge-sorting approach but runs in O(N²) on dense adjacency matrices, making it preferred for financial correlation graphs."
+  },
+  {
+    "source": "computational-finance/prims-algorithm",
+    "target": "portfolio-theory/hierarchical-risk-parity",
+    "label": "builds input for",
+    "description": "Prim's algorithm constructs the MST on the correlation-distance matrix that can be converted into a dendrogram, providing the hierarchical structure HRP uses to allocate portfolio weights."
+  },
+  {
+    "source": "computational-finance/hard-constraints-neural-networks",
+    "target": "computational-finance/soft-constraints-ml",
+    "label": "contrasts with",
+    "description": "Hard constraints enforce financial rules exactly via architecture design; soft constraints allow violations at a cost via penalty terms — the choice trades off zero-violation guarantees against model flexibility."
+  },
+  {
+    "source": "computational-finance/hard-constraints-neural-networks",
+    "target": "computational-finance/neural-network-option-pricing",
+    "label": "alternative for",
+    "description": "Hard-constrained architectures (monotone networks, ICNNs) provide a zero-violation alternative to soft penalty terms for enforcing monotonicity and convexity in neural network option pricers."
+  },
+  {
+    "source": "computational-finance/hard-constraints-neural-networks",
+    "target": "computational-finance/deep-hedging",
+    "label": "alternative for",
+    "description": "Deep hedging can use hard-constrained networks to guarantee hedging actions always satisfy risk and position limits without relying on penalty weights that may be hard to tune."
+  },
+  {
+    "source": "computational-finance/spectral-clustering",
+    "target": "computational-finance/hierarchical-clustering",
+    "label": "alternative to",
+    "description": "Spectral clustering finds non-convex cluster boundaries in the asset correlation graph, overcoming the dendrogram-shape limitation of hierarchical clustering for complex factor structures."
+  },
+  {
+    "source": "computational-finance/spectral-clustering",
+    "target": "computational-finance/correlation-distance-matrix",
+    "label": "uses",
+    "description": "Spectral clustering converts the correlation distance matrix into a similarity graph whose Laplacian eigenvectors provide the low-dimensional embedding for K-means."
+  },
+  {
+    "source": "computational-finance/minimum-spanning-tree",
+    "target": "computational-finance/spectral-clustering",
+    "label": "compared to",
+    "description": "MST extracts the most significant edges from the asset graph; spectral clustering uses the full graph Laplacian spectrum to find cluster boundaries — both exploit the graph structure of the correlation matrix."
+  },
+  {
+    "source": "computational-finance/input-convex-neural-networks",
+    "target": "computational-finance/hard-constraints-neural-networks",
+    "label": "implements",
+    "description": "ICNNs are a specific realisation of hard constraints that enforce output convexity in inputs by restricting inter-layer weights to be non-negative and using convex non-decreasing activations."
+  },
+  {
+    "source": "computational-finance/input-convex-neural-networks",
+    "target": "computational-finance/neural-network-option-pricing",
+    "label": "applied in",
+    "description": "ICNNs enforce butterfly no-arbitrage (convexity in strike) in neural network option pricers as a hard architectural guarantee rather than a soft penalty term."
+  },
+  {
+    "source": "computational-finance/soft-constraints-ml",
+    "target": "computational-finance/input-convex-neural-networks",
+    "label": "compared to",
+    "description": "Soft penalties approximate convexity with near-zero violations; ICNNs achieve exact convexity through weight constraints at the cost of reduced model expressiveness."
+  },
+  {
+    "source": "computational-finance/kruskals-algorithm",
+    "target": "computational-finance/minimum-spanning-tree",
+    "label": "constructs",
+    "description": "Kruskal's edge-sorting approach builds the same minimum spanning tree as Prim's node-expansion approach but runs in O(E log E), making it slower on the dense correlation matrices typical of financial portfolios."
+  },
+  {
+    "source": "computational-finance/kruskals-algorithm",
+    "target": "computational-finance/hierarchical-clustering",
+    "label": "feeds into",
+    "description": "The MST built by Kruskal's algorithm can be converted into a dendrogram, linking graph-theoretic methods to the hierarchical clustering used in Hierarchical Risk Parity."
+  },
+  {
+    "source": "computational-finance/prims-algorithm",
+    "target": "computational-finance/kruskals-algorithm",
+    "label": "compared to",
+    "description": "Prim's and Kruskal's always produce the same MST; Prim's O(N²) adjacency scan is preferred on dense financial correlation graphs while Kruskal's O(E log E) sort is preferred on sparse graphs."
+  },
+  {
+    "source": "stochastic-processes/wishart-process",
+    "target": "statistics/wishart-distribution",
+    "label": "extends",
+    "description": "The Wishart process extends the static Wishart distribution to a dynamic matrix-valued SDE, allowing the covariance matrix to evolve over time under mean-reverting stochastic dynamics."
+  },
+  {
+    "source": "stochastic-processes/wishart-process",
+    "target": "stochastic-processes/cox-ingersoll-ross-model",
+    "label": "generalises",
+    "description": "The CIR variance process is the scalar 1×1 special case of the Wishart process; extending to an n×n matrix allows joint modelling of stochastic volatility and stochastic correlation across multiple assets."
+  },
+  {
+    "source": "stochastic-processes/wishart-process",
+    "target": "volatility/stochastic-volatility-models",
+    "label": "used in",
+    "description": "Wishart processes provide the covariance matrix dynamics in multi-asset stochastic volatility models that require stochastic correlation between assets, such as those used for CVA and basket option pricing."
+  },
+  {
+    "source": "computational-finance/graph-laplacian",
+    "target": "computational-finance/spectral-clustering",
+    "label": "used in",
+    "description": "The eigenvectors of the graph Laplacian are the basis of spectral clustering, mapping assets into a low-dimensional space where K-means identifies meaningful cluster boundaries."
+  },
+  {
+    "source": "computational-finance/graph-laplacian",
+    "target": "computational-finance/minimum-spanning-tree",
+    "label": "complements",
+    "description": "The MST retains only the minimum-weight spanning edges; the Laplacian captures the full graph structure including all non-spanning connections, making it more sensitive to weak inter-cluster links."
+  },
+  {
+    "source": "computational-finance/correlation-distance-matrix",
+    "target": "computational-finance/graph-laplacian",
+    "label": "used to build",
+    "description": "The correlation distance matrix is converted to a similarity matrix (e.g. via a Gaussian kernel), from which the graph Laplacian is constructed for spectral analysis of asset clusters."
+  },
+  {
+    "source": "computational-finance/union-find",
+    "target": "computational-finance/kruskals-algorithm",
+    "label": "enables",
+    "description": "Union-Find provides the near-constant-time cycle detection that makes Kruskal's greedy edge-addition efficient, reducing the per-edge check from O(N) DFS to O(α(N)) amortised."
+  },
+  {
+    "source": "computational-finance/union-find",
+    "target": "computational-finance/minimum-spanning-tree",
+    "label": "used in construction of",
+    "description": "Building the MST efficiently requires a data structure that can merge component sets and detect cycles in amortised O(1) time; Union-Find provides exactly this guarantee."
+  },
+  {
+    "source": "fixed-income/affine-term-structure-models",
+    "target": "stochastic-processes/vasicek-model",
+    "label": "includes",
+    "description": "The Vasicek model is the simplest one-factor Gaussian ATSM; its exponential-affine bond pricing formula is a direct special case of the general ATSM framework with a linear Riccati ODE."
+  },
+  {
+    "source": "fixed-income/affine-term-structure-models",
+    "target": "stochastic-processes/cox-ingersoll-ross-model",
+    "label": "includes",
+    "description": "The CIR model is the canonical one-factor square-root ATSM, where the affine square-root diffusion ensures non-negative rates while still admitting closed-form exponential-affine bond prices."
+  },
+  {
+    "source": "fixed-income/affine-term-structure-models",
+    "target": "fixed-income/yield-curve",
+    "label": "calibrated to",
+    "description": "ATSMs are fitted to the observed yield curve by solving for the state vector X that makes model yields match market zero rates across all maturities simultaneously."
+  },
+  {
+    "source": "volatility/vol-of-vol",
+    "target": "volatility/heston-model",
+    "label": "parameterises",
+    "description": "Vol of vol ξ is the key Heston parameter governing smile curvature; increasing ξ steepens the volatility wings without changing the ATM implied vol level."
+  },
+  {
+    "source": "volatility/vol-of-vol",
+    "target": "volatility/stochastic-volatility-models",
+    "label": "key parameter in",
+    "description": "Vol of vol is the defining parameter that distinguishes stochastic volatility models from local volatility: setting ξ=0 collapses the Heston model to a deterministic variance process with no smile curvature."
+  },
+  {
+    "source": "stochastic-processes/wishart-process",
+    "target": "volatility/vol-of-vol",
+    "label": "generalises",
+    "description": "In multi-asset models, the Wishart process replaces the scalar vol of vol ξ with a matrix diffusion coefficient Q, governing how rapidly the full covariance matrix fluctuates rather than a single variance process."
+  },
+  {
+    "source": "calculus/riccati-ode",
+    "target": "fixed-income/affine-term-structure-models",
+    "label": "used in",
+    "description": "The B(t,T) factor loadings in every ATSM are solutions to a Riccati ODE; Gaussian models yield a linear ODE with a closed form while square-root models require numerical integration."
+  },
+  {
+    "source": "calculus/riccati-ode",
+    "target": "stochastic-processes/linear-quadratic-regulator",
+    "label": "used in",
+    "description": "The matrix Riccati ODE determines the optimal feedback gain in LQR problems; its solution P(t) gives the quadratic value function coefficients that drive the optimal control policy."
+  },
+  {
+    "source": "stochastic-processes/cox-ingersoll-ross-model",
+    "target": "calculus/riccati-ode",
+    "label": "solved via",
+    "description": "CIR bond pricing reduces to a scalar Riccati ODE for B(τ); unlike Vasicek, the non-zero B² term makes it nonlinear, though a closed form still exists involving hyperbolic functions."
+  },
+  {
+    "source": "computational-finance/fiedler-value",
+    "target": "computational-finance/graph-laplacian",
+    "label": "derived from",
+    "description": "The Fiedler value is the second-smallest eigenvalue of the graph Laplacian; computing it requires eigendecomposition of L and its magnitude directly measures the graph's algebraic connectivity."
+  },
+  {
+    "source": "computational-finance/fiedler-value",
+    "target": "computational-finance/spectral-clustering",
+    "label": "drives",
+    "description": "The Fiedler value measures the minimum partition cost that spectral clustering exploits; a small Fiedler value means the second eigenvector will find a clean cluster boundary in the asset graph."
+  },
+  {
+    "source": "computational-finance/fiedler-value",
+    "target": "portfolio-theory/hierarchical-risk-parity",
+    "label": "monitors quality of",
+    "description": "HRP's cluster stability depends on clear asset group boundaries; monitoring the Fiedler value over time alerts risk managers when the asset graph's cluster structure is weakening under rising cross-asset correlations."
+  },
+  {
+    "source": "fixed-income/nelson-siegel-model",
+    "target": "fixed-income/affine-term-structure-models",
+    "label": "precursor to",
+    "description": "Nelson-Siegel inspired the Dynamic Nelson-Siegel model, which gives the NS factors affine stochastic dynamics and connects the parsimonious NS parameterisation to the formal ATSM no-arbitrage framework."
+  },
+  {
+    "source": "fixed-income/nelson-siegel-model",
+    "target": "fixed-income/yield-curve",
+    "label": "fits",
+    "description": "Nelson-Siegel is the most widely used parametric model for fitting a smooth zero-coupon yield curve from sparse bond price observations across maturities."
+  },
+  {
+    "source": "fixed-income/nelson-siegel-model",
+    "target": "fixed-income/yield-curve-bootstrapping",
+    "label": "compared to",
+    "description": "Bootstrapping extracts zero rates non-parametrically from coupon bonds; Nelson-Siegel imposes a smooth four-parameter shape — more interpretable but unable to fit arbitrary curve shapes."
+  },
+  {
+    "source": "calculus/ode-numerical-methods",
+    "target": "calculus/riccati-ode",
+    "label": "integrates",
+    "description": "When the Riccati ODE for bond price factor loadings has no closed form (square-root or multi-factor models), RK4 or adaptive solvers provide the numerical integration required at each calibration step."
+  },
+  {
+    "source": "calculus/ode-numerical-methods",
+    "target": "fixed-income/affine-term-structure-models",
+    "label": "enables",
+    "description": "Numerical ODE integration of the Riccati system extends ATSM pricing to non-Gaussian or high-dimensional factor models where the exponential-affine formula cannot be evaluated analytically."
+  },
+  {
+    "source": "stochastic-processes/euler-maruyama-method",
+    "target": "calculus/ode-numerical-methods",
+    "label": "related to",
+    "description": "Euler-Maruyama is the stochastic extension of the deterministic Euler method, applying the same first-order forward step but adding a diffusion term scaled by a Brownian increment."
+  },
+  {
+    "source": "computational-finance/cheeger-inequality",
+    "target": "computational-finance/fiedler-value",
+    "label": "bounds via",
+    "description": "The Cheeger inequality uses the Fiedler value λ₂ to provide provable lower and upper bounds on the minimum normalised cut cost, guaranteeing that spectral methods find near-optimal asset partitions."
+  },
+  {
+    "source": "computational-finance/cheeger-inequality",
+    "target": "computational-finance/spectral-clustering",
+    "label": "justifies",
+    "description": "The upper bound in the Cheeger inequality proves the Fiedler vector partition achieves a cut cost within √(2λ₂) of optimal, providing the theoretical foundation for spectral clustering in portfolio construction."
+  },
+  {
+    "source": "computational-finance/cheeger-inequality",
+    "target": "computational-finance/graph-laplacian",
+    "label": "derived from",
+    "description": "The Cheeger inequality is a spectral graph theory result about the normalised Laplacian eigenvalues; its proof links the algebraic structure of L to the combinatorial minimum-cut problem."
+  },
+  {
+    "source": "fixed-income/dynamic-nelson-siegel-model",
+    "target": "fixed-income/nelson-siegel-model",
+    "label": "extends",
+    "description": "DNS makes the Nelson-Siegel factors stochastic by adding VAR(1) dynamics, enabling yield curve forecasting and term premium decomposition that are impossible with the static model."
+  },
+  {
+    "source": "fixed-income/dynamic-nelson-siegel-model",
+    "target": "fixed-income/affine-term-structure-models",
+    "label": "bridges to",
+    "description": "DNS with affine factor dynamics under the risk-neutral measure becomes formally equivalent to a three-factor Gaussian ATSM, connecting its forecasting framework to no-arbitrage bond pricing."
+  },
+  {
+    "source": "fixed-income/dynamic-nelson-siegel-model",
+    "target": "fixed-income/yield-curve",
+    "label": "forecasts",
+    "description": "The DNS VAR dynamics produce h-step-ahead forecasts of the entire yield curve simultaneously, outperforming random walk benchmarks especially at medium horizons of 3-12 months."
+  },
+  {
+    "source": "fixed-income/term-premium",
+    "target": "fixed-income/nelson-siegel-model",
+    "label": "estimated via",
+    "description": "The Nelson-Siegel slope factor β₂ proxies for the term premium; formal DNS models decompose yields into expected rate paths and term premium components using the three-factor structure."
+  },
+  {
+    "source": "fixed-income/term-premium",
+    "target": "fixed-income/affine-term-structure-models",
+    "label": "decomposed by",
+    "description": "ATSMs specified under both physical and risk-neutral measures formally separate bond yields into expected short-rate paths and risk compensation, providing model-consistent term premium estimates."
+  },
+  {
+    "source": "fixed-income/term-premium",
+    "target": "fixed-income/yield-curve",
+    "label": "component of",
+    "description": "Every point on the yield curve embeds a term premium that varies across maturities; extracting it is essential for distinguishing monetary policy expectations from changes in risk appetite."
+  },
+  {
+    "source": "stochastic-processes/two-factor-hull-white",
+    "target": "stochastic-processes/hull-white-model",
+    "label": "extends",
+    "description": "G2++ adds a second correlated mean-reverting factor to Hull-White, capturing yield curve slope and curvature dynamics that a single factor cannot reproduce."
+  },
+  {
+    "source": "stochastic-processes/two-factor-hull-white",
+    "target": "fixed-income/affine-term-structure-models",
+    "label": "implements",
+    "description": "G2++ is a two-factor Gaussian ATSM; its bond pricing formula is a direct application of the exponential-affine framework with two decoupled Riccati solutions."
+  },
+  {
+    "source": "stochastic-processes/two-factor-hull-white",
+    "target": "calculus/riccati-ode",
+    "label": "solved via",
+    "description": "The B_a and B_b factor loadings in G2++ bond pricing are solutions to two independent linear Riccati ODEs, both with closed-form exponential solutions due to Gaussian factor dynamics."
+  },
+  {
+    "source": "calculus/adams-bashforth-method",
+    "target": "calculus/ode-numerical-methods",
+    "label": "extends",
+    "description": "Adams-Bashforth multi-step methods achieve the same high-order accuracy as Runge-Kutta single-step methods but use only one new function evaluation per step, making them more efficient for repeated ODE integration in term structure calibration."
+  },
+  {
+    "source": "calculus/adams-bashforth-method",
+    "target": "calculus/riccati-ode",
+    "label": "efficiently integrates",
+    "description": "AB4 integrates the Riccati ODE for ATSM bond price loadings at 25% of the function evaluation cost of RK4, enabling faster swaption calibration in multi-factor models without closed-form Riccati solutions."
+  },
+  {
+    "source": "fixed-income/forward-guidance",
+    "target": "fixed-income/term-premium",
+    "label": "shifts",
+    "description": "Explicit forward guidance reduces the term premium by lowering uncertainty about the future short-rate path, compressing long yields beyond the direct rate expectations effect."
+  },
+  {
+    "source": "fixed-income/forward-guidance",
+    "target": "fixed-income/dynamic-nelson-siegel-model",
+    "label": "analysed with",
+    "description": "DNS models decompose the yield impact of forward guidance into its rate expectations component (change in slope factor β₂) and term premium component (change in the risk premium residual)."
+  },
+  {
+    "source": "fixed-income/forward-guidance",
+    "target": "fixed-income/yield-curve",
+    "label": "reshapes",
+    "description": "Forward guidance flattens or steepens the yield curve by shifting market expectations of the future short-rate path, particularly affecting the 1–5 year segment most sensitive to policy timing."
+  },
+  {
+    "source": "fixed-income/yield-curve-control",
+    "target": "fixed-income/term-premium",
+    "label": "suppresses",
+    "description": "YCC pins the term premium at whatever value fills the gap between the peg yield and expected short rates, often compressing it far below its natural level and expanding the central bank's balance sheet endogenously."
+  },
+  {
+    "source": "fixed-income/yield-curve-control",
+    "target": "fixed-income/yield-curve",
+    "label": "pegs",
+    "description": "YCC directly targets a specific maturity point on the yield curve, distorting the normal relationship between short-rate expectations and long yields across the term structure."
+  },
+  {
+    "source": "fixed-income/yield-curve-control",
+    "target": "fixed-income/forward-guidance",
+    "label": "compared to",
+    "description": "Forward guidance affects long yields indirectly by shifting rate expectations; YCC affects them directly through unlimited bond purchases, making it more powerful but more distortive to market pricing."
+  },
+  {
+    "source": "calculus/adams-moulton-method",
+    "target": "calculus/adams-bashforth-method",
+    "label": "corrects",
+    "description": "Adams-Moulton is the implicit corrector step that improves on the Adams-Bashforth predictor; together they form the ABM predictor-corrector scheme achieving O(h⁵) accuracy at 2 function evaluations per step."
+  },
+  {
+    "source": "calculus/adams-moulton-method",
+    "target": "calculus/ode-numerical-methods",
+    "label": "extends",
+    "description": "The ABM predictor-corrector completes the multi-step ODE framework, achieving O(h⁵) global accuracy with 2 evaluations per step versus RK4's O(h⁴) at 4 evaluations."
+  },
+  {
+    "source": "calculus/adams-moulton-method",
+    "target": "calculus/riccati-ode",
+    "label": "efficiently integrates",
+    "description": "The ABM scheme integrates the Riccati ODE in ATSM calibration with higher accuracy and built-in error estimation than single-step methods, enabling adaptive step-size control at no extra cost."
+  },
+  {
+    "source": "fixed-income/quantitative-easing",
+    "target": "fixed-income/term-premium",
+    "label": "compresses",
+    "description": "QE removes duration risk from private portfolios, reducing the term premium investors demand even when rate expectations are anchored near zero."
+  },
+  {
+    "source": "fixed-income/quantitative-easing",
+    "target": "fixed-income/yield-curve-control",
+    "label": "compared to",
+    "description": "QE reduces long yields as a by-product of finite asset purchases; YCC directly targets a yield level with unlimited purchases — a qualitative difference in commitment and balance-sheet expansion."
+  },
+  {
+    "source": "fixed-income/quantitative-easing",
+    "target": "fixed-income/yield-curve",
+    "label": "flattens",
+    "description": "QE's disproportionate reduction of term premia at long maturities flattens the yield curve, compressing the slope between short and long yields even without changing the policy rate."
+  },
+  {
+    "source": "fixed-income/taylor-rule",
+    "target": "fixed-income/forward-guidance",
+    "label": "informs",
+    "description": "Central banks communicate future rate paths that are often benchmarked against Taylor Rule prescriptions, making the rule the implicit structural model behind forward guidance statements."
+  },
+  {
+    "source": "fixed-income/taylor-rule",
+    "target": "fixed-income/yield-curve",
+    "label": "drives short end of",
+    "description": "Taylor Rule implied rate paths directly set the expected short-rate component of the yield curve for 1–3 year maturities, which are dominated by rate expectations rather than term premia."
+  },
+  {
+    "source": "fixed-income/taylor-rule",
+    "target": "fixed-income/term-premium",
+    "label": "separated from",
+    "description": "By providing a structural model for the expected short-rate path, the Taylor Rule helps decompose bond yields into rate expectations and the residual term premium, enabling cleaner risk premium estimation."
+  },
+  {
+    "source": "calculus/stiff-ode",
+    "target": "calculus/adams-moulton-method",
+    "label": "motivates",
+    "description": "Stiff ODEs require unconditionally stable implicit solvers; Adams-Moulton is the standard implicit multi-step method that remains stable where explicit methods like Adams-Bashforth become unstable."
+  },
+  {
+    "source": "calculus/stiff-ode",
+    "target": "calculus/ode-numerical-methods",
+    "label": "constrains choice of",
+    "description": "The presence of stiffness eliminates explicit solvers as practical integrators; identifying stiffness is the first step in selecting an appropriate ODE method for term structure calibration."
+  },
+  {
+    "source": "stochastic-processes/two-factor-hull-white",
+    "target": "calculus/stiff-ode",
+    "label": "can produce",
+    "description": "G2++ and multi-factor term structure models with very different mean-reversion speeds produce stiff Riccati systems, requiring implicit integration methods for stable and efficient calibration."
+  },
+  {
+    "source": "fixed-income/yield-curve-inversion",
+    "target": "fixed-income/yield-curve",
+    "label": "extreme form of",
+    "description": "Yield curve inversion is the case where the yield curve slope turns negative, a rare and significant shape that reverses the normal upward-sloping term structure."
+  },
+  {
+    "source": "fixed-income/yield-curve-inversion",
+    "target": "fixed-income/taylor-rule",
+    "label": "signals deviation from",
+    "description": "Inversion typically occurs when the policy rate exceeds the Taylor Rule's long-run prescription, so markets price in future cuts that pull long yields below short yields."
+  },
+  {
+    "source": "fixed-income/yield-curve-inversion",
+    "target": "fixed-income/term-premium",
+    "label": "reflects collapse of",
+    "description": "Deep inversions are amplified when the long-maturity term premium turns negative — flight-to-safety demand compresses long yields further, widening the inversion beyond what rate expectations alone would produce."
+  },
+  {
+    "source": "fixed-income/yield-curve-inversion",
+    "target": "fixed-income/dynamic-nelson-siegel-model",
+    "label": "decomposed by",
+    "description": "DNS models separate inversion into an expectations component (markets pricing in future cuts) and a term premium component (negative risk premia on long bonds), clarifying whether inversion reflects macro pessimism or technical demand."
+  },
+  {
+    "source": "calculus/backward-differentiation-formula",
+    "target": "calculus/stiff-ode",
+    "label": "solves",
+    "description": "BDF methods are unconditionally A-stable, making them the standard choice for stiff ODEs in term structure calibration where Adams-Moulton or explicit methods show instability."
+  },
+  {
+    "source": "calculus/backward-differentiation-formula",
+    "target": "calculus/adams-moulton-method",
+    "label": "compared to",
+    "description": "Both BDF and Adams-Moulton are implicit multi-step methods; Adams-Moulton loses A-stability above order 2 while BDF retains A(α)-stability up to order 6, making BDF preferred for highly stiff systems."
+  },
+  {
+    "source": "calculus/backward-differentiation-formula",
+    "target": "calculus/riccati-ode",
+    "label": "integrates",
+    "description": "BDF is the solver of choice for stiff Riccati systems arising in multi-factor ATSMs with very different mean-reversion speeds, providing stable integration without step-size restrictions."
+  },
+  {
+    "source": "fixed-income/bear-steepener-bull-flattener",
+    "target": "fixed-income/yield-curve",
+    "label": "describes moves of",
+    "description": "Bear/bull steepener and flattener are the standard vocabulary for classifying yield curve shape changes, each carrying distinct implications for the driving macro force and optimal DV01 positioning."
+  },
+  {
+    "source": "fixed-income/bear-steepener-bull-flattener",
+    "target": "fixed-income/yield-curve-inversion",
+    "label": "precedes",
+    "description": "Bear flatteners (short rates rising faster than long rates during a tightening cycle) are the typical path leading to yield curve inversion, as the central bank raises short rates above their long-run neutral level."
+  },
+  {
+    "source": "fixed-income/bear-steepener-bull-flattener",
+    "target": "fixed-income/term-premium",
+    "label": "reflects changes in",
+    "description": "Bear steepeners are often driven by term premium repricing (e.g. QT reducing central bank demand for long bonds) rather than rate expectations, making term premium decomposition essential for curve trade attribution."
+  },
+  {
+    "source": "financial-maths/output-gap",
+    "target": "fixed-income/taylor-rule",
+    "label": "inputs to",
+    "description": "The output gap is one of the two primary inputs to the Taylor Rule; a positive gap (economy above potential) raises the prescribed rate, while a negative gap calls for accommodation."
+  },
+  {
+    "source": "financial-maths/output-gap",
+    "target": "fixed-income/yield-curve-inversion",
+    "label": "predicts",
+    "description": "A strongly positive output gap entering a tightening cycle typically produces a bear-flattener followed by inversion, as the central bank raises rates above neutral to cool the overheating economy."
+  },
+  {
+    "source": "fixed-income/breakeven-inflation",
+    "target": "fixed-income/taylor-rule",
+    "label": "inputs to",
+    "description": "Breakeven inflation provides the market's estimate of expected inflation, the key variable in the Taylor Rule that determines whether the real policy rate is above or below neutral."
+  },
+  {
+    "source": "fixed-income/breakeven-inflation",
+    "target": "fixed-income/yield-curve",
+    "label": "component of",
+    "description": "Every nominal yield on the yield curve embeds a breakeven inflation component; changes in breakeven rates shift the entire curve even without any change in real yields or monetary policy expectations."
+  },
+  {
+    "source": "fixed-income/breakeven-inflation",
+    "target": "fixed-income/term-premium",
+    "label": "partially explained by",
+    "description": "The inflation risk premium embedded in breakeven inflation is a component of the nominal term premium; when inflation uncertainty rises, both breakeven rates and term premia widen simultaneously."
+  },
+  {
+    "source": "fixed-income/convexity-bias",
+    "target": "fixed-income/convexity",
+    "label": "arises from",
+    "description": "Bond price convexity is the source of convexity bias in forward rates; the non-linear price-yield relationship causes Jensen's inequality to drive a wedge between forward rates and expected future spot rates."
+  },
+  {
+    "source": "fixed-income/convexity-bias",
+    "target": "fixed-income/term-premium",
+    "label": "obscures",
+    "description": "Convexity bias causes forward rates to exceed expected future short rates, making term premium estimates from DNS and ATSM models appear smaller — or more negative — than the true risk compensation investors require."
+  },
+  {
+    "source": "fixed-income/convexity-bias",
+    "target": "fixed-income/forward-rate-curve",
+    "label": "elevates",
+    "description": "The forward rate curve embeds convexity bias at long maturities, systematically exceeding the model-expected future rate by an amount proportional to rate variance and the product of the two maturities."
+  },
+  {
+    "source": "fixed-income/convexity-bias",
+    "target": "fixed-income/overnight-index-swap",
+    "label": "compared via",
+    "description": "OIS-implied forward rates carry convexity bias while SOFR futures prices do not; the spread between long-dated OIS forwards and futures measures the convexity correction directly."
+  },
+  {
+    "source": "fixed-income/cheapest-to-deliver",
+    "target": "fixed-income/dv01",
+    "label": "determines futures",
+    "description": "The CTD bond's DV01 divided by its conversion factor gives the futures contract's effective DV01, which sets the number of contracts needed to hedge a given interest rate exposure."
+  },
+  {
+    "source": "fixed-income/cheapest-to-deliver",
+    "target": "fixed-income/convexity",
+    "label": "creates negative",
+    "description": "CTD switching gives bond futures negative convexity from the long's perspective: as yields move, the deliverable always shifts to the bond least favourable to the long, making the futures price-yield relationship concave."
+  },
+  {
+    "source": "fixed-income/cheapest-to-deliver",
+    "target": "derivatives/forward-price",
+    "label": "modifies",
+    "description": "The bond futures price equals the CTD's forward price divided by its conversion factor; the delivery option value causes the futures price to trade slightly below this no-arbitrage benchmark."
+  },
+  {
+    "source": "risk/key-rate-duration",
+    "target": "fixed-income/cheapest-to-deliver",
+    "label": "hedged using",
+    "description": "Key-rate duration buckets are hedged with futures contracts whose effective DV01 is set by the CTD bond; a CTD switch between hedge rebalancing changes the futures DV01 and creates hedging slippage."
+  },
+  {
+    "source": "fixed-income/bond-futures-basis",
+    "target": "fixed-income/cheapest-to-deliver",
+    "label": "driven by",
+    "description": "The CTD bond's carry and delivery option value jointly determine the gross and net basis; a CTD switch changes the basis discontinuously, causing unexpected P&L in basis trades."
+  },
+  {
+    "source": "fixed-income/bond-futures-basis",
+    "target": "fixed-income/delivery-option-value",
+    "label": "contains",
+    "description": "Net basis equals the delivery option value after stripping carry; it is the quantity a basis trader earns by being long cash CTD and short futures, as compensation for selling the short's delivery optionality."
+  },
+  {
+    "source": "fixed-income/bond-futures-basis",
+    "target": "fixed-income/convexity-bias",
+    "label": "distinguished from",
+    "description": "Both basis and convexity bias cause discrepancies between cash and futures prices; basis reflects carry and delivery optionality on near-term futures, while convexity bias affects the term structure of forward rates at longer horizons."
+  },
+  {
+    "source": "fixed-income/conversion-factor",
+    "target": "fixed-income/cheapest-to-deliver",
+    "label": "determines",
+    "description": "The conversion factor is the multiplier used to compute invoice prices; the CTD is the bond for which actual market price most exceeds the futures price times CF, making it the rational choice for the short to deliver."
+  },
+  {
+    "source": "fixed-income/conversion-factor",
+    "target": "fixed-income/bond-futures-basis",
+    "label": "used in",
+    "description": "Gross basis is computed as cash price minus futures price times conversion factor; the CF is thus the essential link between the standardised futures price and the individual bond's cash price."
+  },
+  {
+    "source": "fixed-income/conversion-factor",
+    "target": "derivatives/forward-price",
+    "label": "applied in",
+    "description": "Bond futures invoice prices multiply the settlement price by the conversion factor to produce the forward-equivalent price of each deliverable bond, linking the standardised contract to each bond's specific forward value."
+  },
+  {
+    "source": "fixed-income/delivery-option-value",
+    "target": "fixed-income/cheapest-to-deliver",
+    "label": "arises from",
+    "description": "The delivery option value exists because the short can switch between CTD bonds; its magnitude depends on the number of competitive bonds and the yield volatility that determines how likely a CTD switch becomes."
+  },
+  {
+    "source": "fixed-income/delivery-option-value",
+    "target": "fixed-income/convexity",
+    "label": "creates negative",
+    "description": "The short's ability to switch to whichever bond becomes cheapest gives bond futures negative convexity from the long's perspective, as the deliverable always shifts to the bond least favourable to the long position."
   }
 ]
