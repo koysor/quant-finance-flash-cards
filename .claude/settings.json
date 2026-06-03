@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(uv run python scripts/validate_urls.py --force*)"
+      "Bash(uv run python scripts/validate_urls.py --force*)",
+      "Bash(curl -s *)",
+      "Bash(curl -sI *)"
     ]
   },
   "hooks": {
