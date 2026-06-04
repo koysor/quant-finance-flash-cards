@@ -1,32 +1,43 @@
 # Markov Decision Process (MDP)
 
 **Topic:** Computational Finance
-**Tags:** reinforcement learning, mdp, stochastic control, states, actions
-**Author:** Gemini CLI
+**Tags:** mdp, reinforcement learning, stochastic control, states, actions, markov property
+**Created:** 2026-06-05
+**Author:** Claude Sonnet 4.6
 
 ---
 
 ## Definition
 
-A **Markov Decision Process (MDP)** is a mathematical framework used to model decision-making in environments where outcomes are partially random and partially under the control of an agent. It provides the formal foundation for Reinforcement Learning.
-
-An MDP is defined by a 5-tuple $(S, A, P, R, \gamma)$:
-- **States ($S$):** A set of all possible situations the agent can be in.
-- **Actions ($A$):** A set of all possible moves the agent can make.
-- **Transitions ($P$):** The probability $P(s' | s, a)$ of moving to state $s'$ from state $s$ after taking action $a$.
-- **Rewards ($R$):** The immediate reward $R(s, a)$ received after taking action $a$ in state $s$.
-- **Discount Factor ($\gamma$):** A value $\gamma \in [0, 1]$ that represents the preference for immediate rewards over future rewards.
+A **Markov Decision Process (MDP)** is the mathematical framework for sequential decision-making under uncertainty. An agent observes a state, takes an action, receives a reward, and transitions to a new state — with transitions governed by the Markov property: the future depends only on the current state and action, not on any prior history. MDPs are the formal foundation for reinforcement learning.
 
 ## Key Formula
 
-The **Markov Property** states that the future depends only on the current state and action, not on the sequence of events that preceded it:
+An MDP is defined by the 5-tuple $(S, A, P, R, \gamma)$:
 
-$$\mathbb{P}(s_{t+1} | s_t, a_t, s_{t-1}, a_{t-1}, \dots) = \mathbb{P}(s_{t+1} | s_t, a_t)$$
+| Symbol | Meaning |
+|--------|---------|
+| $S$ | State space |
+| $A$ | Action space |
+| $P(s' \mid s, a)$ | Transition probability to state $s'$ from $(s, a)$ |
+| $R(s, a)$ | Expected immediate reward for action $a$ in state $s$ |
+| $\gamma \in [0,1]$ | Discount factor for future rewards |
+
+The **Markov property**: $P(s_{t+1} \mid s_t, a_t, s_{t-1}, \ldots) = P(s_{t+1} \mid s_t, a_t)$.
+
+The agent's goal is to find a policy $\pi: S \to A$ that maximises the expected discounted return $\mathbb{E}\!\left[\sum_{t=0}^\infty \gamma^t R(s_t, a_t)\right]$.
 
 ## Example
 
-Consider an automated execution algorithm (the agent). The **state** could be the current inventory and the limit order book depth. The **actions** are the sizes and prices of orders to place. The **reward** is the implementation shortfall (difference between execution price and arrival price). The **transitions** are governed by market dynamics and other participants' reactions.
+An optimal execution agent models its problem as an MDP:
+- **State** $s_t$: (remaining inventory $I_t$, time remaining $\tau$, current mid-price $P_t$, bid-ask spread)
+- **Action** $a_t$: number of shares to sell in this period
+- **Reward** $r_t$: cash received minus market impact cost $= a_t P_t - \eta a_t^2$
+- **Transition**: $I_{t+1} = I_t - a_t$; $P_{t+1}$ evolves via GBM
+- **Discount**: $\gamma = 0.99$ (slightly penalises delaying sales)
 
-## Remember (Finance application)
+The optimal policy $\pi^*(s_t)$ is the Almgren-Chriss schedule for linear impact — recovered analytically or approximated via Q-learning.
 
-MDPs are the core "physics" of reinforcement learning in finance. By framing a trading problem as an MDP, we can use algorithms like Q-learning to find optimal strategies that account for market impact and transaction costs over time, rather than just optimising for the next second.
+## Remember
+
+Framing a trading problem as an MDP is the first and most important step in applying reinforcement learning to finance. The state design determines what information the agent can use; the reward function determines what the agent optimises. Poor state or reward design produces RL agents that learn to game the reward signal rather than trade well — known as **reward hacking**. In practice, the state must include risk exposures (inventory, Greeks) and market conditions (volatility regime, spread), while the reward must penalise transaction costs and drawdowns, not just raw P&L.

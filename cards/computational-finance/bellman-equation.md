@@ -1,31 +1,34 @@
 # Bellman Equation
 
 **Topic:** Computational Finance
-**Tags:** reinforcement learning, bellman equation, dynamic programming, value function
-**Author:** Gemini CLI
+**Tags:** bellman equation, dynamic programming, value function, reinforcement learning, optimality
+**Created:** 2026-06-05
+**Author:** Claude Sonnet 4.6
 
 ---
 
 ## Definition
 
-The **Bellman Equation** is a recursive relationship that decomposes the value of a state (or state-action pair) into the immediate reward plus the discounted value of the subsequent state. It is the fundamental equation for solving Reinforcement Learning problems using dynamic programming.
-
-The equation expresses that the value of being in a state is the expected reward of the next step plus the value of where you end up, discounted by $\gamma$.
+The **Bellman equation** is a recursive relationship that decomposes the value of being in a state into the immediate reward plus the discounted value of the next state. It is the fundamental equation of dynamic programming and reinforcement learning: any optimal policy must satisfy it, and solving it — exactly or approximately — is the core task of every RL algorithm.
 
 ## Key Formula
 
-For a given policy $\pi$, the **Value Function** $V_\pi(s)$ satisfies:
+For a policy $\pi$, the **Bellman expectation equation** for the state-value function is:
 
-$$V_\pi(s) = \mathbb{E}_\pi [R_{t+1} + \gamma V_\pi(s_{t+1}) | s_t = s]$$
+$$V^\pi(s) = \mathbb{E}_\pi\!\left[r_{t+1} + \gamma\, V^\pi(s_{t+1}) \mid s_t = s\right]$$
 
-The **Bellman Optimality Equation** for the optimal value function $V^*(s)$ is:
+The **Bellman optimality equation** gives the value under the best possible policy:
 
-$$V^*(s) = \max_a \mathbb{E} [R_{t+1} + \gamma V^*(s_{t+1}) | s_t = s, a_t = a]$$
+$$V^*(s) = \max_a \mathbb{E}\!\left[r_{t+1} + \gamma\, V^*(s_{t+1}) \mid s_t = s,\, a_t = a\right]$$
+
+Equivalently for Q-values: $Q^*(s,a) = \mathbb{E}\!\left[r_{t+1} + \gamma \max_{a'} Q^*(s_{t+1}, a')\right]$.
+
+The discount factor $\gamma \in [0,1]$ controls how much future rewards are worth relative to immediate ones.
 
 ## Example
 
-In a portfolio optimisation problem, the Bellman equation allows us to break down the complex problem of "maximising total wealth over 30 years" into a series of smaller, identical problems: "What is the best action *now*, given that I will also act optimally in all future steps?"
+An execution agent splits a 10,000-share sell order over $T = 5$ periods. State $s_t$ = remaining inventory; reward $r_t$ = P&L minus market impact cost; $\gamma = 0.99$. The Bellman equation says: the value of holding 6,000 shares with 3 periods left equals the best immediate sale profit now plus 0.99 times the value of the resulting inventory next period. Working backwards from the terminal state ($V^*(0) = 0$, no inventory left) gives the optimal sale schedule at each step.
 
-## Remember (Finance application)
+## Remember
 
-The Bellman equation is the "Law of Iterated Expectations" applied to optimal control. In derivative pricing, it is analogous to the risk-neutral pricing formula $V_t = e^{-r \Delta t} \mathbb{E}^\mathbb{Q}[V_{t+1} | \mathcal{F}_t]$, where the current price is the discounted expected future price. In RL, we use it to iteratively improve our estimates of asset values or trading policy performance.
+The Bellman equation is the bridge between intuition and algorithm in RL-based trading. It says: **you never need to plan the entire future — just compare the immediate reward to the discounted continuation value**. Q-learning approximates $Q^*$ by iterating the Bellman optimality equation; deep Q-networks (DQN) parameterise $Q^*$ with a neural network and minimise the Bellman residual as a loss function. In options pricing, the same structure appears as risk-neutral pricing: $V_t = e^{-r\Delta t}\mathbb{E}^\mathbb{Q}[V_{t+1} \mid \mathcal{F}_t]$ — discounted expected value forward one step, exactly the Bellman form.

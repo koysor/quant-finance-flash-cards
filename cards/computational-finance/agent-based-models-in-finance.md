@@ -1,32 +1,28 @@
 # Agent-Based Models in Finance
 
 **Topic:** Computational Finance
-**Tags:** abm, market simulator, micro-structure, flash crash, emergent behaviour, abides
-**Created:** 2026-06-03
-**Author:** Gemini CLI
+**Tags:** agent-based model, market microstructure, heterogeneous agents, emergent behaviour, simulation
+**Created:** 2026-06-05
+**Author:** Claude Sonnet 4.6
 
 ---
 
 ## Definition
 
-An **Agent-Based Model (ABM)** is a computational simulation that models the financial market as a collection of autonomous "agents" (traders, market makers, speculators) who interact and compete based on specific behavioural rules. Unlike top-down equilibrium models (like Black-Scholes), ABMs are **bottom-up** systems where market phenomena, such as price formation and "flash crashes", emerge from the aggregate interactions of individual agents.
+An **agent-based model (ABM)** simulates a financial market as a system of interacting autonomous agents — traders, market makers, regulators — each following their own rules and responding to prices and information. Unlike equilibrium models, ABMs make no assumption that markets are in equilibrium; instead, macro-level phenomena (price dynamics, volatility clustering, flash crashes) emerge from micro-level interactions between heterogeneous agents.
 
 ## Key Formula
 
-There is no single "closed-form" formula for an ABM, as the system evolves through discrete simulation steps. The price at time $t+1$ is an emergent property of the agents' orders:
+A typical agent $i$ updates its demand $d_i$ based on a mix of fundamental and trend-following signals:
 
-$$S_{t+1} = S_t + f(\text{OrderBook}_t, \{ \text{Agent}_i(\text{State}_t) \}_{i=1}^N)$$
+$$d_{i,t} = w_i^f \cdot (V_i - P_t) + w_i^m \cdot \frac{P_t - P_{t-1}}{P_{t-1}} + \varepsilon_{i,t}$$
 
-where $\text{Agent}_i$ represents the decision logic of the $i$-th agent. Modern simulators like **ABIDES** (JP Morgan) use ML-trained agents whose objective is:
-
-$$\max_{\pi_i} \mathbb{E} \left[ \sum_{t=0}^T R_t \right]$$
-
-where $R_t$ is the agent's reward (e.g., P&L or market-making rebate).
+where $V_i$ is agent $i$'s private valuation, $P_t$ is the current price, $w_i^f$ weights fundamental trading, $w_i^m$ weights momentum trading, and $\varepsilon_{i,t}$ is noise. The market-clearing price is set by aggregating all agents' orders through an order book mechanism.
 
 ## Example
 
-The **Santa Fe Artificial Stock Market** was an early ABM that showed how price bubbles could form even when all agents are "rational", simply due to inductive learning and trend-following. In a more modern context, banks use the **ABIDES** simulator to test high-frequency trading (HFT) algorithms. By populating a simulated exchange with 1,000 "noise" traders and 10 "HFT" agents, researchers can observe how a specific HFT strategy might contribute to or prevent a **flash crash** under stressed liquidity conditions.
+The 2010 Flash Crash ABM (Kirilenko et al.): a simulation with heterogeneous agents (fundamentalists, high-frequency traders, noise traders) reproduces the 9% Dow Jones drop in 36 minutes. When a large sell order triggers HFT market makers to withdraw liquidity simultaneously, the model produces a cascade identical in shape to the real event — despite no single agent "causing" the crash. No equilibrium model can generate this emergent instability.
 
 ## Remember
 
-ABMs are the "market simulators" used to train **Deep Hedging** and **RL Pricing** agents. They solve the "no perfect market simulator" challenge by providing a realistic environment that accounts for order book dynamics and market impact—features that are missing from standard stochastic processes. Their primary use in quantitative finance is for **stress testing** and understanding **market micro-structure** where traditional continuous-time mathematics fails.
+Agent-based models are the primary tool for studying systemic risk and market microstructure phenomena that equilibrium models cannot explain. The **Bank of England** and **ESMA** use ABMs to stress-test financial stability scenarios — simulating how fire sales, margin calls, and herding propagate through interconnected institutions. In quantitative trading, ABMs are used to simulate realistic order flow for training RL execution agents: instead of training on historical data, the agent learns in a synthetic market where adversarial HFT agents, noise traders, and momentum traders interact, producing richer and more stress-tested training environments than any historical replay.

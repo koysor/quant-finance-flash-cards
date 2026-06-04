@@ -1,31 +1,40 @@
-# Temporal Difference (TD) Learning
+# Temporal Difference Learning
 
 **Topic:** Computational Finance
-**Tags:** reinforcement learning, td learning, bootstrapping, prediction, value function
-**Author:** Gemini CLI
+**Tags:** temporal difference, td learning, reinforcement learning, bootstrapping, td error
+**Created:** 2026-06-05
+**Author:** Claude Sonnet 4.6
 
 ---
 
 ## Definition
 
-**Temporal Difference (TD) Learning** is a reinforcement learning method that learns by updating its estimates based on other learned estimates, without waiting for the final outcome. This process of "learning a prediction from a prediction" is known as **bootstrapping**.
-
-TD learning combines the ideas of Monte Carlo methods (learning from experience) and Dynamic Programming (bootstrapping). It updates the value of a state as soon as the next state and reward are observed.
+**Temporal difference (TD) learning** is a model-free reinforcement learning method that updates value estimates by bootstrapping — using the current estimate of the next state's value rather than waiting for the actual episode return. It combines the sample efficiency of Monte Carlo methods (no model needed) with the online learning of dynamic programming (updates after each step, not each episode).
 
 ## Key Formula
 
-The simplest form, **TD(0)**, updates the value function $V(s_t)$ towards a target that includes the immediate reward $R_{t+1}$ and the discounted estimate of the next state's value:
+The **TD(0) update** for the state-value function after observing transition $(s_t, r_{t+1}, s_{t+1})$:
 
-$$V(s_t) \leftarrow V(s_t) + \alpha \underbrace{\left[ R_{t+1} + \gamma V(s_{t+1}) - V(s_t) \right]}_{\text{TD Error}}$$
+$$V(s_t) \leftarrow V(s_t) + \alpha\,\delta_t$$
 
-where:
-- $\alpha$ is the **learning rate**.
-- The term in brackets is the **TD Error**, representing the difference between the new estimate and the old one.
+where $\alpha \in (0,1]$ is the learning rate and $\delta_t$ is the **TD error**:
+
+$$\delta_t = r_{t+1} + \gamma\, V(s_{t+1}) - V(s_t)$$
+
+The TD error measures the difference between the updated estimate ($r_{t+1} + \gamma V(s_{t+1})$) and the current estimate ($V(s_t)$). The update shrinks this discrepancy at each step.
+
+For action values, **SARSA** (on-policy) updates $Q(s_t, a_t)$ using the next action $a_{t+1}$ chosen by the policy; **Q-learning** (off-policy) uses $\max_{a'} Q(s_{t+1}, a')$ regardless of the action actually taken.
 
 ## Example
 
-Imagine predicting the closing price of a stock at the end of the day. A Monte Carlo approach waits until the market closes to update its model. A TD approach updates its prediction every hour (or even every tick) based on the price movement and its own updated prediction for the rest of the day.
+A portfolio rebalancing agent estimates $V(s)$ where $s$ = (current weights, factor scores). After one step: current weights = [60% equity, 40% bond], reward $r_{t+1} = +0.12\%$ (monthly Sharpe increment), next state value $V(s_{t+1}) = 2.85$, $V(s_t) = 2.70$, $\gamma = 0.95$, $\alpha = 0.1$:
 
-## Remember (Finance application)
+$$\delta_t = 0.0012 + 0.95 \times 2.85 - 2.70 = 0.0012 + 2.7075 - 2.70 = 0.0087$$
 
-TD learning is highly efficient for financial time series because it allows an agent to learn intra-day or mid-sequence. In trading, this is like updating the valuation of a **forward start contract** as new market data arrives, rather than waiting for the contract to mature to see the final payoff. It enables "on-line" learning in rapidly changing markets.
+$$V(s_t) \leftarrow 2.70 + 0.1 \times 0.0087 = 2.7009$$
+
+The value estimate increases slightly — the outcome was marginally better than expected.
+
+## Remember
+
+TD learning is why Q-learning and SARSA can train in real time, one trade at a time, without waiting for a full trading session to end. The TD error $\delta_t$ is the workhorse signal: positive $\delta_t$ means outcomes were better than expected (reinforce the action); negative $\delta_t$ means they were worse (suppress it). Neuroscience research has found that dopamine neurons in the brain fire in proportion to $\delta_t$ — the same signal evolution found optimal for sequential reward learning. In finance, TD learning underpins online calibration of execution models, where the agent continuously updates its cost estimates as new market data arrives without retraining from scratch.

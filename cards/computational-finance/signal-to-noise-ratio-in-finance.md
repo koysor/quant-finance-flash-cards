@@ -1,32 +1,38 @@
 # Signal-to-Noise Ratio in Finance
 
 **Topic:** Computational Finance
-**Tags:** ml in finance, signal-to-noise ratio, stationarity, overfitting, data mining bias
-**Created:** 2026-06-03
-**Author:** Gemini CLI
+**Tags:** signal-to-noise ratio, alpha decay, sharpe ratio, information ratio, factor signal
+**Created:** 2026-06-05
+**Author:** Claude Sonnet 4.6
 
 ---
 
 ## Definition
 
-In quantitative finance, the **Signal-to-Noise Ratio (SNR)** measures the strength of the predictable component (the signal) relative to the unpredictable, random component (the noise) in financial data. Unlike physical systems where SNR is often high, financial markets are characterised by extremely low SNR due to market efficiency, high-frequency noise, and the competitive nature of trading. This makes financial machine learning prone to **overfitting** and **spurious correlations**.
+The **signal-to-noise ratio (SNR)** in finance measures how much genuine predictive information (signal) a factor or strategy contains relative to random variation (noise). A high SNR indicates a factor whose predictions are reliably correct; a low SNR — the norm in financial markets — means that even a genuine alpha signal is overwhelmed by random returns, making it extremely difficult to distinguish skill from luck in short samples.
 
 ## Key Formula
 
-The SNR can be approximated using the **Sharpe Ratio** ($SR$) in the context of a trading strategy. For a strategy with expected return $\mu$ and volatility $\sigma$:
+For a trading signal $f_t$ predicting next-period returns $r_{t+1}$, the SNR is:
 
-$$SNR \approx \frac{\mu}{\sigma} \sqrt{T}$$
+$$\text{SNR} = \frac{\text{Var}(\mathbb{E}[r_{t+1} \mid f_t])}{\text{Var}(r_{t+1} \mid f_t)} = \frac{\sigma_\alpha^2}{\sigma_\varepsilon^2}$$
 
-where $T$ is the number of observations. In machine learning, the signal is often modelled as $y = f(X) + \epsilon$, where $f(X)$ is the signal and $\epsilon$ is the noise ($\mathbb{E}[\epsilon] = 0$). The SNR is:
+where $\sigma_\alpha^2$ is the variance of the predictable component and $\sigma_\varepsilon^2$ is the variance of the unpredictable residual. The **information ratio** is related:
 
-$$SNR = \frac{\text{Var}(f(X))}{\text{Var}(\epsilon)}$$
+$$\text{IR} = \frac{\mu_\alpha}{\sigma_\alpha} \approx \text{IC} \times \sqrt{N}$$
 
-Typical daily return SNR in equity markets is often estimated to be below $0.01$ (or $1\%$), meaning $99\%$ of the variance in returns is unexplainable by past information.
+where IC (information coefficient) is the correlation between signal and realised return, and $N$ is the number of independent bets. The minimum number of observations to detect a signal with power $1-\beta$ at significance level $\alpha$ is:
+
+$$T \geq \left(\frac{z_{1-\alpha/2} + z_{1-\beta}}{\text{SNR}}\right)^2$$
 
 ## Example
 
-A hedge fund develops a complex Transformer model to predict 5-minute stock returns. The model achieves an $R^2$ of $0.05$ (meaning it "explains" $5\%$ of the variance) on training data. However, when deployed, the $R^2$ drops to $-0.02$. The low SNR in the data allowed the model to find patterns in the noise that did not persist. A simpler Linear Regression with $R^2 = 0.005$ might have been more robust, as it was less likely to "over-extract" signal from such a low SNR environment.
+A momentum factor has IC = 0.05 (correlation between signal and next-month return). The residual volatility is $\sigma_\varepsilon = 15\%$ per month. SNR $\approx$ IC $= 0.05$ — very low. To detect this signal at 95% confidence with 80% power:
+
+$$T \geq \left(\frac{1.96 + 0.84}{0.05}\right)^2 = (56)^2 = 3{,}136 \text{ months} \approx 261 \text{ years}$$
+
+This illustrates why backtesting financial signals is so difficult: even genuine factors require implausibly long histories to be statistically confirmed.
 
 ## Remember
 
-Low SNR is the "First Law of Financial Machine Learning". It means that **complex models are not always better**. In a low SNR environment, the risk of a model "hallucinating" patterns in random noise is extremely high. Robustness is usually achieved through strong regularisation, cross-validation (like Purged Walk-Forward), and prioritizing economic intuition over pure data-driven pattern recognition.
+The low SNR of financial data is the fundamental reason why **overfitting is endemic in quantitative finance**: with hundreds of candidate factors and only decades of monthly returns, the probability of finding a spuriously significant signal by data mining is very high. Lopez de Prado's research shows that most backtested strategies are overfit — the "discovered" alpha is largely noise. This motivates techniques like walk-forward testing, combinatorially symmetric cross-validation (CSCV), and the deflated Sharpe ratio, all of which correct for the multiple testing problem that low SNR makes severe. It also explains why ML models trained on financial data require far more regularisation than those trained on image or text data.

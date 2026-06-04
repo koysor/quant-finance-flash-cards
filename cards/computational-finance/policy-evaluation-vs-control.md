@@ -1,31 +1,32 @@
 # Policy Evaluation vs Control
 
 **Topic:** Computational Finance
-**Tags:** reinforcement learning, policy evaluation, control problem, prediction, optimality
-**Author:** Gemini CLI
+**Tags:** policy evaluation, policy control, reinforcement learning, policy iteration, value iteration
+**Created:** 2026-06-05
+**Author:** Claude Sonnet 4.6
 
 ---
 
 ## Definition
 
-Reinforcement Learning is typically composed of two distinct but related problems:
-
-1. **Policy Evaluation (Prediction):** Estimating the value function $V_\pi$ for a *given* policy $\pi$. We want to know how much reward we expect to get if we follow a specific fixed strategy.
-2. **Control Problem:** Finding the *optimal* policy $\pi^*$ that maximises the expected return. This involves improving the policy based on our evaluations.
+**Policy evaluation** (the prediction problem) computes the value function $V^\pi$ for a *fixed* policy $\pi$ — it answers "how good is this strategy?" **Policy control** (the control problem) finds the *optimal* policy $\pi^*$ that maximises the value function — it answers "what is the best strategy?" Every RL algorithm alternates between these two tasks: evaluate the current policy, improve it, repeat.
 
 ## Key Formula
 
-**Policy Evaluation** (Fixed $\pi$):
-$$V_\pi(s) = \sum_{a} \pi(a|s) \sum_{s', r} P(s', r | s, a) [r + \gamma V_\pi(s')]$$
+**Iterative policy evaluation** — repeatedly apply the Bellman expectation operator until convergence:
 
-**Control Problem** (Optimising $\pi$):
-$$\pi^* = \arg\max_\pi V_\pi(s), \quad \forall s \in S$$
+$$V_{k+1}(s) = \sum_a \pi(a \mid s) \sum_{s'} P(s' \mid s, a)\left[R(s,a) + \gamma V_k(s')\right]$$
+
+**Policy improvement** — given $V^\pi$, the greedy improved policy is:
+
+$$\pi'(s) = \arg\max_a \sum_{s'} P(s' \mid s, a)\left[R(s,a) + \gamma V^\pi(s')\right]$$
+
+**Policy iteration** alternates evaluation and improvement until $\pi' = \pi$ (convergence guaranteed). **Value iteration** collapses both steps by using $\max_a$ directly in the Bellman update, reaching $V^*$ in one pass.
 
 ## Example
 
-- **Policy Evaluation:** Backtesting a fixed 50/200-day moving average crossover strategy. We aren't changing the strategy; we just want to accurately estimate its expected Sharpe ratio or P&L.
-- **Control Problem:** Using a neural network to *learn* when to buy or sell to maximise total return. The agent explores different crossover periods and signal combinations to find the best possible strategy.
+A daily rebalancing agent evaluates the "60/40 fixed-weight" policy: run iterative policy evaluation using a month of simulated transitions (state = factor scores, action = rebalance to 60/40, reward = Sharpe increment). This gives $V^{60/40}(s)$ for all states. Policy improvement then checks: is there any action $a$ such that $R(s,a) + \gamma V^{60/40}(s') > V^{60/40}(s)$? If yes, the policy is updated to prefer that action — e.g., tilting to 70/30 during high-momentum regimes. Repeating until no improvement gives the optimal policy $\pi^*$.
 
-## Remember (Finance application)
+## Remember
 
-In quantitative finance, many tasks are pure **Policy Evaluation** (e.g., risk management, where we evaluate the Value-at-Risk of an existing portfolio). However, the ultimate goal of Alpha-seeking strategies is the **Control Problem**: discovering the optimal way to allocate capital and execute trades to outperform the market.
+The evaluation-vs-control distinction maps directly onto two practical questions quant researchers ask: "how well does this strategy perform?" (evaluation) and "what is the best strategy?" (control). In live trading systems, full policy iteration is rarely feasible because the transition model $P(s' \mid s, a)$ is unknown — instead, model-free algorithms like Q-learning and SARSA perform implicit policy improvement online, updating the policy after every trade rather than running full sweeps. Understanding this distinction is essential for debugging RL trading agents: a poorly converged value estimate (bad evaluation) will produce a suboptimal policy even with correct improvement steps.

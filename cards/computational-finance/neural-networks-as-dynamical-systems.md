@@ -1,32 +1,32 @@
 # Neural Networks as Dynamical Systems
 
 **Topic:** Computational Finance
-**Tags:** resnet, neural ode, dynamical systems, optimal control, stability, exploding gradients
-**Created:** 2026-06-03
-**Author:** Gemini CLI
+**Tags:** neural ode, dynamical systems, continuous depth, residual network, time series
+**Created:** 2026-06-05
+**Author:** Claude Sonnet 4.6
 
 ---
 
 ## Definition
 
-Viewing **Neural Networks as Dynamical Systems** (specifically Residual Networks) interprets the forward pass of a network as the discretisation of a continuous-time ordinary differential equation (ODE). This perspective allows for the application of **stability theory** from dynamical systems and **optimal control theory** (e.g., Pontryagin's Maximum Principle) to design deep learning architectures that are more robust, stable, and data-efficient.
+Viewing a **neural network as a dynamical system** treats the forward pass through the layers as a discrete-time (or continuous-time) evolution of a hidden state. A residual network (ResNet) block $\mathbf{h}_{t+1} = \mathbf{h}_t + f(\mathbf{h}_t, \theta_t)$ is precisely an Euler discretisation of the ODE $d\mathbf{h}/dt = f(\mathbf{h}, t, \theta)$. Taking the layer-count to infinity recovers the **Neural ODE** (Chen et al., 2018): a network parameterised by a differential equation rather than a sequence of discrete transformations.
 
 ## Key Formula
 
-A **Residual Network (ResNet)** layer is defined by the transformation:
+A Neural ODE defines the hidden state evolution via:
 
-$$X_{t+1} = X_t + f(X_t, \theta_t)$$
+$$\frac{d\mathbf{h}(t)}{dt} = f_\theta(\mathbf{h}(t), t), \qquad \mathbf{h}(0) = \mathbf{x}$$
 
-where $X_t$ is the state (activations) at layer $t$, and $f$ is the residual function. If we introduce a step size $\Delta t \to 0$, this converges to a **Neural ODE**:
+The output is $\mathbf{h}(T)$, computed by a black-box ODE solver (e.g. Runge-Kutta). Gradients are computed via the **adjoint method** rather than backpropagation through solver steps:
 
-$$\frac{dX}{dt} = f(X_t, t, \theta_t)$$
+$$\frac{dL}{d\theta} = -\int_T^0 \mathbf{a}(t)^\top \frac{\partial f_\theta}{\partial \theta}\,dt, \qquad \frac{d\mathbf{a}}{dt} = -\mathbf{a}(t)^\top \frac{\partial f_\theta}{\partial \mathbf{h}}$$
 
-The training of the network then becomes an **Optimal Control Problem**: find the parameters $\theta(t)$ (the control) that minimise a terminal loss $J = \Phi(X_T)$ subject to the state dynamics.
+where $\mathbf{a}(t) = dL/d\mathbf{h}(t)$ is the adjoint state — memory cost is $O(1)$ in depth.
 
 ## Example
 
-In financial time-series forecasting, a standard deep network might suffer from **exploding gradients** if the weights are poorly initialised, leading to unstable predictions. By interpreting the network as a stable dynamical system, one can enforce constraints on the weights (e.g., anti-symmetric weights) such that the energy of the system $\lVert X_t \rVert^2$ is conserved or dissipated over layers. This ensures that the network remains stable even as its depth (number of layers) increases, leading to more reliable risk estimates.
+A Neural ODE models the evolution of a portfolio's latent state (factor exposures, regime) as a continuous-time ODE driven by market data. Given observations at irregular times $t_1 < t_2 < \cdots < t_n$ (e.g. trades, news events), the ODE solver integrates forward from each observation to the next — unlike RNNs, no fixed time-step grid is required. This naturally handles the irregularly-spaced tick data that is standard in financial markets.
 
 ## Remember
 
-The "Networks as ODEs" viewpoint bridges the gap between machine learning and classical physics/engineering. It explains why ResNets are so successful: they are essentially stable Euler integrators of a continuous process. For quantitative finance, this is crucial for **model interpretability** and **stability**—ensuring that a pricing neural network doesn't produce wildly different prices (numerical instability) when the input market data is slightly perturbed.
+The dynamical systems view is not just a theoretical curiosity — it resolves a practical problem in financial time-series modelling: traditional RNNs and LSTMs require uniformly-spaced inputs, but financial data arrives irregularly (order flow, corporate announcements, macro releases). Neural ODEs solve this by treating the hidden state as a continuous trajectory, evaluated at whatever times observations arrive. The Neural SDE extension adds stochastic forcing, making it directly applicable to latent stochastic volatility modelling — a Neural ODE in the drift plus a learnable diffusion coefficient.

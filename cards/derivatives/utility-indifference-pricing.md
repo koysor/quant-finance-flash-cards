@@ -1,32 +1,34 @@
 # Utility Indifference Pricing
 
 **Topic:** Derivatives
-**Tags:** incomplete markets, utility theory, indifference price, risk aversion, exponential utility
-**Created:** 2026-06-03
-**Author:** Gemini CLI
+**Tags:** utility indifference, incomplete markets, risk aversion, exponential utility, reservation price
+**Created:** 2026-06-05
+**Author:** Claude Sonnet 4.6
 
 ---
 
 ## Definition
 
-**Utility Indifference Pricing** is a framework for valuing financial claims in **incomplete markets**, where perfect replication (hedging) is impossible. The indifference price $p_0$ is the amount of money that leaves an investor equally happy (in terms of expected utility) whether they sell the claim and hedge it optimally, or do nothing. It represents the minimum compensation a risk-averse agent requires to take on the risk of an unhedgeable claim.
+**Utility indifference pricing** (also called reservation pricing) values a derivative in an incomplete market by finding the price $p$ at which an agent is indifferent between (a) trading optimally without the derivative, and (b) selling the derivative at price $p$ and then trading optimally with the resulting position. It is the subjective price at which selling the derivative neither improves nor worsens the agent's expected utility.
 
 ## Key Formula
 
-For an agent with utility function $U(x)$, the indifference price $p_0$ of a claim $Z$ is the value that satisfies:
+For an agent with exponential utility $U(W) = -e^{-\gamma W}$ (risk aversion $\gamma > 0$), the indifference price $p$ of a claim $H$ satisfies:
 
-$$\sup_{\delta} \mathbb{E}[U(\Pi_T(0, 0, \delta))] = \sup_{\delta} \mathbb{E}[U(\Pi_T(Z, p_0, \delta))]$$
+$$V(w) = V^H(w + p)$$
 
-where $\Pi_T$ is the terminal wealth of a portfolio with hedge $\delta$. For an **exponential utility** $U(x) = -\frac{1}{\lambda} e^{-\lambda x}$ with risk aversion $\lambda$:
+where $V(w) = \sup_\pi \mathbb{E}[-e^{-\gamma W_T^\pi}]$ is the value function without the claim, and $V^H(w+p) = \sup_\pi \mathbb{E}[-e^{-\gamma(W_T^\pi - H)}]$ is the value function after selling $H$ for $p$.
 
-$$p_0 = \frac{1}{\lambda} \log \frac{\mathbb{E}[e^{\lambda Z^*}]}{\mathbb{E}[e^{\lambda \Pi^*}]}$$
+This yields the **indifference price**:
 
-In complete markets, $p_0$ collapses to the standard risk-neutral price, regardless of the utility function $U$.
+$$p = \frac{1}{\gamma}\left[\inf_{\mathbb{Q}}\left(\mathbb{E}^{\mathbb{Q}}[H] + \frac{1}{\gamma} H(\mathbb{Q} \| \mathbb{P})\right) - \inf_{\mathbb{Q}} \frac{1}{\gamma} H(\mathbb{Q} \| \mathbb{P})\right]$$
+
+where the infimum is over equivalent martingale measures $\mathbb{Q}$, and $H(\mathbb{Q} \| \mathbb{P})$ is the relative entropy of $\mathbb{Q}$ with respect to the physical measure $\mathbb{P}$. As $\gamma \to 0$ (risk-neutral limit), $p \to \mathbb{E}^{\mathbb{Q}^*}[H]$ — the standard risk-neutral price under the minimal entropy martingale measure.
 
 ## Example
 
-A bank wants to price a bespoke insurance derivative against a "flash crash" in an illiquid emerging market index. Because the index is illiquid, the bank cannot perfectly delta-hedge. Using a risk aversion $\lambda = 0.1$, the bank calculates that the expected loss and volatility of the unhedged residual risk require a "risk premium" of £5M over the expected payoff. The utility indifference price is thus £55M, whereas a naive risk-neutral model (ignoring incompleteness) might have suggested £50M.
+A natural gas producer holds unhedgeable weather risk and sells a temperature-indexed weather call option paying $\max(T_{\text{avg}} - 20, 0) \times \text{\textsterling}1{,}000$ per degree. Standard risk-neutral pricing fails — temperature is not a traded asset, so the market is incomplete. With risk aversion $\gamma = 0.01$ and the distribution of $T_{\text{avg}}$ estimated from historical data, the utility indifference price is \$3{,}200, reflecting both the expected payoff and a risk premium for the unhedgeable residual exposure. A risk-neutral model using an arbitrary pricing measure might give \$2{,}500 — the difference is the agent's personal risk premium, and it shrinks as $\gamma \to 0$.
 
 ## Remember
 
-Utility indifference pricing is the "gold standard" for pricing in **incomplete markets**—those with transaction costs, liquidity gaps, or non-tradable risk factors. It replaces the "no-arbitrage" requirement of complete markets with a "no-utility-loss" requirement. In modern quantitative finance, it is the theoretical foundation for **Deep Hedging**, where neural networks are trained to find the hedge $\delta$ that achieves this utility equilibrium.
+Utility indifference pricing is the theoretically correct approach to valuation in **incomplete markets** — markets where the underlying risk cannot be fully replicated by traded assets. This covers weather and catastrophe derivatives, executive stock options (employees cannot short their own company), insurance liabilities, and credit derivatives with jump-to-default risk. In contrast to Black-Scholes (which assumes a complete market with perfect replication), indifference prices depend on the agent's risk aversion $\gamma$: as $\gamma \to 0$ the agent becomes risk neutral and the indifference price converges to the standard risk-neutral expectation. This makes utility indifference pricing the theoretical bridge between subjective personal valuation and objective market pricing.

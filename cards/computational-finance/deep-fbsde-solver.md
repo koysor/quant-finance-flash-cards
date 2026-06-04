@@ -1,34 +1,34 @@
 # Deep FBSDE Solver
 
 **Topic:** Computational Finance
-**Tags:** deep learning, bsde, fbsde, pricing, hedging, high-dimensional, pde
-**Created:** 2026-06-03
-**Author:** Gemini CLI
+**Tags:** fbsde, deep learning, pde, option pricing, high-dimensional
+**Created:** 2026-06-05
+**Author:** Claude Sonnet 4.6
 
 ---
 
 ## Definition
 
-A **Deep FBSDE Solver** (Han et al., 2018) is a deep learning framework used to solve high-dimensional partial differential equations (PDEs) by reformulating them as **Forward-Backward Stochastic Differential Equations (FBSDEs)**. The unknown solution (e.g., option price) and its gradient (e.g., delta) are parameterised as neural networks. The networks are trained to satisfy the terminal condition (payoff) by simulating paths of the forward process and integrating the backward SDE.
+The **Deep FBSDE solver** (Han, Jentzen & E, 2018) uses deep neural networks to solve **forward-backward stochastic differential equations (FBSDEs)** — and by extension, high-dimensional parabolic PDEs — that are intractable by classical finite difference or tree methods. It reformulates the PDE as a stochastic control problem, parameterising the unknown gradient of the solution with a neural network trained by minimising a terminal condition loss.
 
 ## Key Formula
 
-Consider a derivative price $Y_t$ following the backward SDE derived from the Black-Scholes PDE:
+A parabolic PDE $\frac{\partial u}{\partial t} + \mathcal{L}u + f = 0$ with terminal condition $u(T,x) = g(x)$ is equivalent (by the Feynman-Kac formula) to the FBSDE system:
 
-$$dY_t = rY_t \, dt + \sigma X_t \frac{\partial Y}{\partial X} \, dW_t$$
+$$dX_t = \mu(X_t)\,dt + \sigma(X_t)\,dW_t \quad \text{(forward SDE)}$$
 
-Since $\frac{\partial Y}{\partial X}$ (the delta) is unknown, we approximate it with a neural network $N_\theta(X_t, t)$. The discretised process for $Y$ becomes:
+$$dY_t = -f(X_t, Y_t, Z_t)\,dt + Z_t^\top dW_t \quad \text{(backward SDE)}$$
 
-$$Y_{t+1} \approx Y_t + rY_t \Delta t + \sigma X_t N_\theta(X_t, t) \Delta W_t$$
+where $Y_t = u(t, X_t)$ is the PDE solution and $Z_t = \sigma^\top \nabla_x u$ is its gradient. The deep FBSDE method parameterises $Z_t \approx \mathcal{N}_\theta(t, X_t)$ with a neural network and minimises:
 
-The network parameters $\theta$ and the initial price $Y_0$ are learned by minimising the mean squared error between the predicted terminal value $Y_T$ and the actual payoff $g(X_T)$:
+$$\mathcal{L}(\theta) = \mathbb{E}\!\left[\lvert Y_T - g(X_T) \rvert^2\right]$$
 
-$$\mathcal{L}(\theta, Y_0) = \mathbb{E}\!\left[ \lvert Y_T - g(X_T) \rvert^2 \right]$$
+via stochastic gradient descent over simulated forward paths.
 
 ## Example
 
-Pricing a 100-dimensional European basket option where the payoff depends on the average price of 100 correlated stocks. Traditional grid-based PDE solvers fail due to the **curse of dimensionality** ($100$ dimensions). A Deep FBSDE solver, parameterised with a 4-layer fully connected network, can estimate the price and the 100-dimensional delta vector simultaneously. After training on $10^5$ simulated paths, it converges to a price within $0.1\%$ of the Monte Carlo benchmark but provides the full Greeks surface in a single forward pass.
+Pricing a **100-dimensional basket option** with correlated underlyings — a problem where the curse of dimensionality makes grids infeasible ($10^{100}$ grid points for a 100-dimensional grid). The forward SDE simulates 100-dimensional GBM paths; the neural network $\mathcal{N}_\theta$ outputs a 100-dimensional gradient (the delta vector) at each time step; training minimises the discrepancy between the network's terminal payoff prediction and the actual payoff $g(X_T) = \max(\bar{X}_T - K, 0)$. Convergence is achieved in minutes on a GPU versus years for a grid-based solver.
 
 ## Remember
 
-Deep FBSDE solvers bypass the curse of dimensionality by treating the pricing problem as a **supervised learning task** on stochastic paths. The key insight is that the backward SDE describes the dynamics of the replicating portfolio; by training the network to match the payoff, we are effectively "learning" the optimal hedging strategy $(\frac{\partial Y}{\partial X})$ and the fair price $(Y_0)$ at once. This is particularly useful for valuation adjustments (XVA) and risk management in high-dimensional portfolios where Monte Carlo is too slow for real-time Greeks.
+The deep FBSDE solver is one of the landmark results showing that deep learning can overcome the curse of dimensionality in quantitative finance. Classical PDE methods (finite differences, trinomial trees) scale exponentially with the number of risk factors — making them useless for portfolios of correlated assets or XVA calculations that depend on dozens of market factors simultaneously. Deep FBSDE solvers scale polynomially: the network width grows modestly with dimension. The same framework solves CVA, FVA, and optimal hedging problems in high dimensions, and is actively used in research at major banks for pricing exotic derivatives with many underlyings.
