@@ -816,6 +816,24 @@
     "description": "Yield curve risk is the exposure to non-parallel changes in the yield curve \u2014 steepening, flattening, and twisting \u2014 that affect different tenors of the banking book differently."
   },
   {
+    "source": "calculus/adaptive-step-size-control",
+    "target": "calculus/ode-numerical-methods",
+    "label": "extends",
+    "description": "Fixed-step ODE methods (Euler, RK4) use a constant step size chosen conservatively for the most difficult part of the solution; adaptive step size control extends these methods by automatically adjusting h based on a local error estimate, achieving the same accuracy with far fewer function evaluations."
+  },
+  {
+    "source": "calculus/adaptive-step-size-control",
+    "target": "calculus/adams-moulton-method",
+    "label": "combined with",
+    "description": "Adams-Moulton predictor-corrector methods are naturally suited to adaptive step size control because the corrector's improvement over the predictor provides a free error estimate at each step, enabling step size adjustment without extra function evaluations."
+  },
+  {
+    "source": "calculus/adaptive-step-size-control",
+    "target": "stochastic-processes/hamilton-jacobi-bellman",
+    "label": "applied when solving",
+    "description": "The HJB PDE for optimal control problems — including optimal execution and Merton portfolio allocation — requires numerical time-stepping that benefits from adaptive step size: the value function changes most rapidly near the terminal condition, where small steps are needed, and more slowly far from it."
+  },
+  {
     "source": "calculus/addition-and-subtraction-of-complex-numbers",
     "target": "calculus/complex-conjugate",
     "label": "used with",
@@ -946,6 +964,24 @@
     "target": "stochastic-processes/euler-maruyama-method",
     "label": "characterises error of",
     "description": "The Euler-Maruyama scheme has O(sqrt(\u0394t)) strong convergence and O(\u0394t) weak convergence \u2014 big-O notation is the formal language used to state these rates and to compare numerical SDE discretisation schemes."
+  },
+  {
+    "source": "calculus/bisection-method",
+    "target": "calculus/newton-raphson-method",
+    "label": "slower but more robust than",
+    "description": "Newton-Raphson converges quadratically (doubling correct digits per iteration) but requires the derivative and can diverge if the initial guess is poor; bisection converges linearly but is guaranteed to find the root given any bracketing interval, making it the preferred fallback for implied volatility inversion when Newton-Raphson fails."
+  },
+  {
+    "source": "calculus/bisection-method",
+    "target": "volatility/implied-volatility",
+    "label": "used to solve for",
+    "description": "Implied volatility cannot be solved analytically from the Black-Scholes formula \u2014 bisection brackets the root by finding volatility values that produce prices above and below the market price, then halving the interval until the model price matches the market price to the required tolerance."
+  },
+  {
+    "source": "calculus/bisection-method",
+    "target": "calculus/continuous-function",
+    "label": "requires continuity for",
+    "description": "The bisection method's convergence guarantee relies entirely on the Intermediate Value Theorem \u2014 a continuous function that changes sign on an interval must have a root there \u2014 making continuity the essential precondition for the method's correctness."
   },
   {
     "source": "calculus/binomial-coefficients",
@@ -5284,6 +5320,30 @@
     "target": "computational-finance/reinforcement-learning",
     "label": "fundamental dilemma of",
     "description": "Every RL algorithm must solve the exploration-exploitation trade-off: without exploration an agent cannot discover better strategies, but without exploitation it cannot collect the rewards those strategies produce."
+  },
+  {
+    "source": "computational-finance/finite-difference-method",
+    "target": "computational-finance/analytic-vs-numeric-solution",
+    "label": "example of numerical in",
+    "description": "The finite difference method is the canonical numerical alternative to analytic option pricing — where Black-Scholes gives a closed form for European options, FDM discretises the same underlying PDE to handle American options and path-dependent features that lack closed forms."
+  },
+  {
+    "source": "computational-finance/finite-difference-method",
+    "target": "computational-finance/numerical-greeks-by-finite-difference",
+    "label": "distinct from bumping in",
+    "description": "Finite difference PDE solvers and finite difference Greek approximations both use divided differences, but serve different purposes — PDE-FDM discretises the pricing equation on a grid to find option values, while bump-and-reprice FD approximates sensitivities by perturbing inputs to an already-solved pricing model."
+  },
+  {
+    "source": "computational-finance/finite-difference-method",
+    "target": "derivatives/american-option-pricing",
+    "label": "prices via grid in",
+    "description": "FDM is the standard grid-based method for American option pricing — it solves the Black-Scholes PDE backwards in time and applies the early exercise constraint at every node, capturing the early exercise premium that analytical Black-Scholes cannot."
+  },
+  {
+    "source": "computational-finance/finite-difference-method",
+    "target": "derivatives/finite-difference-methods",
+    "label": "extends with schemes in",
+    "description": "The computational-finance card extends the derivatives FDM card by covering the Crank-Nicolson and implicit time-stepping schemes, the resulting tridiagonal system, and stability analysis — moving from the basic discretisation formulas to production-ready implementation choices."
   },
   {
     "source": "computational-finance/f1-score",

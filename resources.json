@@ -981,6 +981,18 @@
       }
     ]
   },
+  "calculus/adaptive-step-size-control": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Adaptive step size",
+        "url": "https://en.wikipedia.org/wiki/Adaptive_step_size"
+      },
+      {
+        "title": "SciPy docs \u2014 solve_ivp (adaptive ODE solver)",
+        "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html"
+      }
+    ]
+  },
   "calculus/addition-and-subtraction-of-complex-numbers": {
     "websites": [
       {
@@ -1060,6 +1072,14 @@
       {
         "title": "Paul's Online Math Notes \u2014 Newton's Method (Numerical Methods)",
         "url": "https://tutorial.math.lamar.edu/Classes/CalcI/NewtonsMethod.aspx"
+      }
+    ]
+  },
+  "calculus/bisection-method": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Bisection method",
+        "url": "https://en.wikipedia.org/wiki/Bisection_method"
       }
     ]
   },
@@ -2984,11 +3004,11 @@
   "computational-finance/bellman-equation": {
     "websites": [
       {
-        "title": "Bellman equation — Wikipedia",
+        "title": "Bellman equation \u2014 Wikipedia",
         "url": "https://en.wikipedia.org/wiki/Bellman_equation"
       },
       {
-        "title": "Introduction to RL — OpenAI Spinning Up",
+        "title": "Introduction to RL \u2014 OpenAI Spinning Up",
         "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro.html"
       }
     ]
@@ -2996,11 +3016,11 @@
   "computational-finance/bellman-operator": {
     "websites": [
       {
-        "title": "Bellman equation — Wikipedia",
+        "title": "Bellman equation \u2014 Wikipedia",
         "url": "https://en.wikipedia.org/wiki/Bellman_equation"
       },
       {
-        "title": "Contraction mapping — Wikipedia",
+        "title": "Contraction mapping \u2014 Wikipedia",
         "url": "https://en.wikipedia.org/wiki/Contraction_mapping"
       }
     ]
@@ -4322,12 +4342,12 @@
   "computational-finance/encoder-only-vs-decoder-only": {
     "websites": [
       {
-        "title": "BERT vs GPT: What's the Difference? \u2014 Hugging Face Blog",
-        "url": "https://huggingface.co/blog/encoder-decoder"
+        "title": "Wikipedia \u2014 BERT (language model)",
+        "url": "https://en.wikipedia.org/wiki/BERT_(language_model)"
       },
       {
-        "title": "GPT-2 \u2014 Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/GPT-2"
+        "title": "Wikipedia \u2014 GPT (language model)",
+        "url": "https://en.wikipedia.org/wiki/GPT_(language_model)"
       }
     ],
     "videos": [
@@ -4448,6 +4468,18 @@
       {
         "title": "StatQuest \u2014 Machine Learning Fundamentals: Cross Validation",
         "url": "https://www.youtube.com/watch?v=fSytzGwwBVw"
+      }
+    ]
+  },
+  "computational-finance/finite-difference-method": {
+    "websites": [
+      {
+        "title": "Finite difference methods for option pricing \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Finite_difference_methods_for_option_pricing"
+      },
+      {
+        "title": "Finite Difference Method \u2014 QuantLib documentation",
+        "url": "https://www.quantlib.org/reference/group__lattices.html"
       }
     ]
   },
@@ -4612,11 +4644,11 @@
   "computational-finance/fine-tuning-vs-prompt-engineering": {
     "websites": [
       {
-        "title": "Fine-tuning \u2014 Hugging Face Documentation",
-        "url": "https://huggingface.co/docs/transformers/training"
+        "title": "Wikipedia \u2014 Fine-tuning (deep learning)",
+        "url": "https://en.wikipedia.org/wiki/Fine-tuning_(deep_learning)"
       },
       {
-        "title": "Prompt engineering \u2014 Wikipedia",
+        "title": "Wikipedia \u2014 Prompt engineering",
         "url": "https://en.wikipedia.org/wiki/Prompt_engineering"
       }
     ],
@@ -4634,12 +4666,12 @@
   "computational-finance/finbert": {
     "websites": [
       {
-        "title": "ProsusAI/finbert \u2014 Hugging Face",
-        "url": "https://huggingface.co/ProsusAI/finbert"
+        "title": "Wikipedia \u2014 BERT (language model)",
+        "url": "https://en.wikipedia.org/wiki/BERT_(language_model)"
       },
       {
-        "title": "BERT (Language Model) \u2014 Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/BERT_(language_model)"
+        "title": "Wikipedia \u2014 Sentiment analysis",
+        "url": "https://en.wikipedia.org/wiki/Sentiment_analysis"
       }
     ],
     "videos": [
@@ -4798,12 +4830,12 @@
   "computational-finance/gpt": {
     "websites": [
       {
-        "title": "Generative Pre-trained Transformer \u2014 Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Generative_pre-trained_transformer"
+        "title": "Wikipedia \u2014 GPT (language model)",
+        "url": "https://en.wikipedia.org/wiki/GPT_(language_model)"
       },
       {
-        "title": "GPT-2 \u2014 Hugging Face Model Card",
-        "url": "https://huggingface.co/openai-community/gpt2"
+        "title": "Wikipedia \u2014 Large language model",
+        "url": "https://en.wikipedia.org/wiki/Large_language_model"
       }
     ],
     "videos": [
@@ -5258,12 +5290,12 @@
   "computational-finance/knowledge-distillation": {
     "websites": [
       {
-        "title": "Hinton et al. \u2014 Distilling the Knowledge in a Neural Network (arXiv)",
-        "url": "https://arxiv.org/abs/1503.02531"
+        "title": "Wikipedia \u2014 Knowledge distillation",
+        "url": "https://en.wikipedia.org/wiki/Knowledge_distillation"
       },
       {
-        "title": "Hugging Face \u2014 Knowledge Distillation for NLP",
-        "url": "https://huggingface.co/docs/transformers/model_doc/distilbert"
+        "title": "Wikipedia \u2014 Model compression",
+        "url": "https://en.wikipedia.org/wiki/Model_compression"
       }
     ],
     "videos": [
@@ -5346,12 +5378,12 @@
   "computational-finance/large-language-model": {
     "websites": [
       {
-        "title": "Large language model \u2014 Wikipedia",
+        "title": "Wikipedia \u2014 Large language model",
         "url": "https://en.wikipedia.org/wiki/Large_language_model"
       },
       {
-        "title": "Hugging Face NLP Course \u2014 Introduction to NLP",
-        "url": "https://huggingface.co/learn/nlp-course/chapter1/1"
+        "title": "Wikipedia \u2014 Transformer (deep learning)",
+        "url": "https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)"
       }
     ],
     "videos": [
@@ -5774,12 +5806,12 @@
   "computational-finance/masked-language-modelling": {
     "websites": [
       {
-        "title": "Masked Language Modelling \u2014 Hugging Face Documentation",
-        "url": "https://huggingface.co/docs/transformers/tasks/masked_language_modeling"
+        "title": "Wikipedia \u2014 BERT (language model)",
+        "url": "https://en.wikipedia.org/wiki/BERT_(language_model)"
       },
       {
-        "title": "BERT: Pre-training of Deep Bidirectional Transformers \u2014 Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/BERT_(language_model)"
+        "title": "Wikipedia \u2014 Language model",
+        "url": "https://en.wikipedia.org/wiki/Language_model"
       }
     ],
     "videos": [
@@ -6376,11 +6408,11 @@
   "computational-finance/neural-networks-as-dynamical-systems": {
     "websites": [
       {
-        "title": "Wikipedia — Neural ODE",
+        "title": "Wikipedia \u2014 Neural ODE",
         "url": "https://en.wikipedia.org/wiki/Neural_ODE"
       },
       {
-        "title": "Wikipedia — Recurrent neural network",
+        "title": "Wikipedia \u2014 Recurrent neural network",
         "url": "https://en.wikipedia.org/wiki/Recurrent_neural_network"
       }
     ]
@@ -6866,11 +6898,11 @@
   "computational-finance/policy-evaluation-vs-control": {
     "websites": [
       {
-        "title": "Wikipedia — Markov decision process",
+        "title": "Wikipedia \u2014 Markov decision process",
         "url": "https://en.wikipedia.org/wiki/Markov_decision_process"
       },
       {
-        "title": "OpenAI Spinning Up — Introduction to RL Part 3: Intro to Policy Optimisation",
+        "title": "OpenAI Spinning Up \u2014 Introduction to RL Part 3: Intro to Policy Optimisation",
         "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro3.html"
       }
     ]
@@ -7048,12 +7080,12 @@
   "computational-finance/prompt-engineering": {
     "websites": [
       {
-        "title": "Prompt engineering \u2014 Wikipedia",
+        "title": "Wikipedia \u2014 Prompt engineering",
         "url": "https://en.wikipedia.org/wiki/Prompt_engineering"
       },
       {
-        "title": "Hugging Face NLP Course \u2014 Introduction to NLP",
-        "url": "https://huggingface.co/learn/nlp-course/chapter1/1"
+        "title": "Wikipedia \u2014 Large language model",
+        "url": "https://en.wikipedia.org/wiki/Large_language_model"
       }
     ],
     "videos": [
@@ -7508,12 +7540,12 @@
   "computational-finance/retrieval-augmented-generation": {
     "websites": [
       {
-        "title": "Retrieval-augmented generation \u2014 Wikipedia",
+        "title": "Wikipedia \u2014 Retrieval-augmented generation",
         "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
       },
       {
-        "title": "Hugging Face NLP Course \u2014 Introduction to NLP",
-        "url": "https://huggingface.co/learn/nlp-course/chapter1/1"
+        "title": "Wikipedia \u2014 Large language model",
+        "url": "https://en.wikipedia.org/wiki/Large_language_model"
       }
     ],
     "videos": [
@@ -7662,12 +7694,12 @@
   "computational-finance/rlhf": {
     "websites": [
       {
-        "title": "Reinforcement learning from human feedback \u2014 Wikipedia",
+        "title": "Wikipedia \u2014 Reinforcement learning from human feedback",
         "url": "https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback"
       },
       {
-        "title": "Hugging Face \u2014 RLHF in Practice",
-        "url": "https://huggingface.co/blog/rlhf"
+        "title": "Wikipedia \u2014 Large language model",
+        "url": "https://en.wikipedia.org/wiki/Large_language_model"
       }
     ],
     "videos": [
@@ -7772,11 +7804,11 @@
   "computational-finance/state-and-action-value-functions": {
     "websites": [
       {
-        "title": "Value function — Wikipedia",
+        "title": "Value function \u2014 Wikipedia",
         "url": "https://en.wikipedia.org/wiki/Value_function"
       },
       {
-        "title": "A (Long) Peek into Reinforcement Learning — Lilian Weng",
+        "title": "A (Long) Peek into Reinforcement Learning \u2014 Lilian Weng",
         "url": "https://lilianweng.github.io/posts/2018-02-19-rl-overview/"
       }
     ]
@@ -7984,12 +8016,12 @@
   "computational-finance/sentencepiece": {
     "websites": [
       {
-        "title": "SentencePiece \u2014 GitHub (google/sentencepiece)",
-        "url": "https://github.com/google/sentencepiece"
+        "title": "Wikipedia \u2014 Byte pair encoding",
+        "url": "https://en.wikipedia.org/wiki/Byte_pair_encoding"
       },
       {
-        "title": "Subword Tokenization \u2014 HuggingFace NLP Course",
-        "url": "https://huggingface.co/learn/nlp-course/chapter6/1"
+        "title": "Wikipedia \u2014 Lexical analysis",
+        "url": "https://en.wikipedia.org/wiki/Lexical_analysis"
       }
     ],
     "videos": [
@@ -8006,12 +8038,12 @@
   "computational-finance/sentiment-analysis-pipeline": {
     "websites": [
       {
-        "title": "Sentiment analysis \u2014 Wikipedia",
+        "title": "Wikipedia \u2014 Sentiment analysis",
         "url": "https://en.wikipedia.org/wiki/Sentiment_analysis"
       },
       {
-        "title": "NLP Course \u2014 HuggingFace",
-        "url": "https://huggingface.co/learn/nlp-course/chapter1/1"
+        "title": "Wikipedia \u2014 BERT (language model)",
+        "url": "https://en.wikipedia.org/wiki/BERT_(language_model)"
       }
     ],
     "videos": [
@@ -8554,12 +8586,12 @@
   "computational-finance/tokenisation": {
     "websites": [
       {
-        "title": "Byte-Pair Encoding \u2014 Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Byte_pair_encoding"
+        "title": "Wikipedia \u2014 Lexical analysis",
+        "url": "https://en.wikipedia.org/wiki/Lexical_analysis"
       },
       {
-        "title": "Hugging Face \u2014 Summary of the Tokenizers",
-        "url": "https://huggingface.co/docs/transformers/tokenizer_summary"
+        "title": "Wikipedia \u2014 Byte pair encoding",
+        "url": "https://en.wikipedia.org/wiki/Byte_pair_encoding"
       }
     ],
     "videos": [
@@ -9952,11 +9984,11 @@
   "derivatives/utility-indifference-pricing": {
     "websites": [
       {
-        "title": "Wikipedia — Indifference price",
+        "title": "Wikipedia \u2014 Indifference price",
         "url": "https://en.wikipedia.org/wiki/Indifference_price"
       },
       {
-        "title": "Investopedia — Incomplete Markets",
+        "title": "Investopedia \u2014 Incomplete Markets",
         "url": "https://www.investopedia.com/terms/i/incomplete-market.asp"
       }
     ]
@@ -10918,17 +10950,17 @@
   "linear-algebra/matrix-form": {
     "websites": [
       {
-        "title": "Wikipedia — System of linear equations",
+        "title": "Wikipedia \u2014 System of linear equations",
         "url": "https://en.wikipedia.org/wiki/System_of_linear_equations"
       },
       {
-        "title": "Khan Academy — Introduction to matrices",
+        "title": "Khan Academy \u2014 Introduction to matrices",
         "url": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:matrices/x9e81a4f98389efdf:intro-to-matrices/v/introduction-to-the-matrix"
       }
     ],
     "videos": [
       {
-        "title": "3Blue1Brown — Vectors, what even are they? (Essence of Linear Algebra, Ch. 1)",
+        "title": "3Blue1Brown \u2014 Vectors, what even are they? (Essence of Linear Algebra, Ch. 1)",
         "url": "https://www.youtube.com/watch?v=fNk_zzaMoSs"
       },
       {
@@ -17177,11 +17209,11 @@
   "volatility/rough-bergomi-model": {
     "websites": [
       {
-        "title": "Wikipedia — Fractional Brownian motion",
+        "title": "Wikipedia \u2014 Fractional Brownian motion",
         "url": "https://en.wikipedia.org/wiki/Fractional_Brownian_motion"
       },
       {
-        "title": "Wikipedia — Stochastic volatility",
+        "title": "Wikipedia \u2014 Stochastic volatility",
         "url": "https://en.wikipedia.org/wiki/Stochastic_volatility"
       }
     ]
