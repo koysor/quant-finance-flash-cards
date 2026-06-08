@@ -13668,6 +13668,24 @@
     "description": "Net basis equals the delivery option value after stripping carry; it is the quantity a basis trader earns by being long cash CTD and short futures, as compensation for selling the short's delivery optionality."
   },
   {
+    "source": "fixed-income/bond-yield",
+    "target": "fixed-income/accrued-interest",
+    "label": "applied to dirty price",
+    "description": "The YTM formula uses the dirty price (full price paid) as the left-hand side; since bonds are quoted in clean price, the accrued interest must be added before solving for the yield."
+  },
+  {
+    "source": "fixed-income/bond-yield",
+    "target": "fixed-income/convexity",
+    "label": "second derivative gives",
+    "description": "Convexity is the second derivative of price with respect to yield divided by price; together with modified duration it provides a more accurate quadratic approximation of the price-yield relationship for large yield moves."
+  },
+  {
+    "source": "fixed-income/bond-yield",
+    "target": "fixed-income/modified-duration",
+    "label": "differentiated to give",
+    "description": "Modified duration is -(1/P)\u00b7\u2202P/\u2202Y where Y is the bond yield; differentiating the yield pricing formula with respect to Y gives the weighted average time to payment, which is the Macaulay duration divided by (1+Y/m)."
+  },
+  {
     "source": "fixed-income/breakeven-inflation",
     "target": "fixed-income/taylor-rule",
     "label": "inputs to",
@@ -13720,6 +13738,18 @@
     "target": "fixed-income/dv01",
     "label": "determines futures",
     "description": "The CTD bond's DV01 divided by its conversion factor gives the futures contract's effective DV01, which sets the number of contracts needed to hedge a given interest rate exposure."
+  },
+  {
+    "source": "fixed-income/collateral-discounting",
+    "target": "banking-regulation/netting-set-csa",
+    "label": "governed by",
+    "description": "The Credit Support Annex (CSA) within the ISDA master agreement specifies the legal collateral rate c that determines which curve must be used for discounting \u2014 the CSA dictates the discount curve."
+  },
+  {
+    "source": "fixed-income/collateral-discounting",
+    "target": "fixed-income/overnight-index-swap",
+    "label": "discount rate from",
+    "description": "The OIS curve gives the collateral discount factors P^c(0,t) used to discount all cash flows of collateralised derivatives under the overnight collateral rate convention."
   },
   {
     "source": "fixed-income/convergence-trading",
@@ -13794,6 +13824,24 @@
     "description": "Convexity bias causes forward rates to exceed expected future short rates, making term premium estimates from DNS and ATSM models appear smaller \u2014 or more negative \u2014 than the true risk compensation investors require."
   },
   {
+    "source": "fixed-income/coupon-bond-and-strips",
+    "target": "fixed-income/accrued-interest",
+    "label": "priced via",
+    "description": "The dirty price of a coupon bond splits into the clean (quoted) price plus accrued interest \u2014 the accrued calculation depends on the coupon schedule established at bond issuance."
+  },
+  {
+    "source": "fixed-income/coupon-bond-and-strips",
+    "target": "fixed-income/modified-duration",
+    "label": "sensitivity measured by",
+    "description": "Modified duration quantifies how much the coupon bond's dirty price changes per unit yield change; since a coupon bond pays cash flows at multiple dates its duration is less than its maturity, unlike a ZCB."
+  },
+  {
+    "source": "fixed-income/coupon-bond-and-strips",
+    "target": "fixed-income/zero-coupon-bond",
+    "label": "decomposes into",
+    "description": "Any coupon bond is a portfolio of zero-coupon bonds; STRIPS make this decomposition explicit by allowing each coupon and the principal to trade as separate ZCBs."
+  },
+  {
     "source": "fixed-income/credit-default-swap",
     "target": "financial-maths/hazard-rate",
     "label": "priced using",
@@ -13812,6 +13860,18 @@
     "description": "CDS spreads are used to bootstrap the piecewise-constant hazard rate curve in intensity-based models, analogously to how swap rates imply the discount curve."
   },
   {
+    "source": "fixed-income/cross-currency-swap",
+    "target": "financial-maths/interest-rate-swap",
+    "label": "extends",
+    "description": "A cross-currency swap is a generalisation of an IRS to two currencies: each leg pays a floating benchmark rate in its own currency, with the added complexity of notional exchange and cross-currency basis."
+  },
+  {
+    "source": "fixed-income/cross-currency-swap",
+    "target": "fixed-income/basis-curve",
+    "label": "implies",
+    "description": "The cross-currency basis spread in an xccy swap is the same quantity quoted in the cross-currency basis curve; a non-zero basis reflects funding imbalances between currencies that pure FX forward pricing cannot explain."
+  },
+  {
     "source": "fixed-income/delivery-option-value",
     "target": "fixed-income/cheapest-to-deliver",
     "label": "arises from",
@@ -13822,6 +13882,18 @@
     "target": "fixed-income/convexity",
     "label": "creates negative",
     "description": "The short's ability to switch to whichever bond becomes cheapest gives bond futures negative convexity from the long's perspective, as the deliverable always shifts to the bond least favourable to the long position."
+  },
+  {
+    "source": "fixed-income/deposits-and-bills",
+    "target": "financial-maths/day-count-conventions",
+    "label": "depends on",
+    "description": "The accrual factor \u03b4 that converts calendar days to a year fraction is central to both deposit and bill pricing; Act/360 is used for USD/EUR deposits while Act/365F applies to GBP."
+  },
+  {
+    "source": "fixed-income/deposits-and-bills",
+    "target": "fixed-income/multi-curve-framework",
+    "label": "inputs to",
+    "description": "Short-dated deposits are among the market instruments used to calibrate the near end of OIS and IBOR forward curves in the multi-curve framework."
   },
   {
     "source": "fixed-income/dv01",
@@ -13854,6 +13926,24 @@
     "description": "The DNS VAR dynamics produce h-step-ahead forecasts of the entire yield curve simultaneously, outperforming random walk benchmarks especially at medium horizons of 3-12 months."
   },
   {
+    "source": "fixed-income/floating-rate-note",
+    "target": "financial-maths/sofr-ibor-transition",
+    "label": "transitioned by",
+    "description": "The LIBOR transition replaced IBOR-linked FRNs with compounded overnight-rate FRNs (SOFR, SONIA); the mechanical reset and par pricing properties are preserved but the compounding convention differs from a simple IBOR fixing."
+  },
+  {
+    "source": "fixed-income/floating-rate-note",
+    "target": "fixed-income/multi-curve-framework",
+    "label": "priced within",
+    "description": "Under the multi-curve framework an FRN references a specific forward curve F^j; the floating coupon PV uses F^j for expected coupons and the OIS discounting curve P for present value, not a single shared curve."
+  },
+  {
+    "source": "fixed-income/floating-rate-note",
+    "target": "fixed-income/zero-coupon-bond",
+    "label": "priced via",
+    "description": "An FRN with zero spread can be shown to price at par at each reset date by decomposing its cash flows into a long ZCB maturing at the next coupon date and a recursive sequence of ZCBs \u2014 the ZCB pricing identity telescopes to par."
+  },
+  {
     "source": "fixed-income/forward-guidance",
     "target": "fixed-income/dynamic-nelson-siegel-model",
     "label": "analysed with",
@@ -13872,6 +13962,18 @@
     "description": "Forward guidance flattens or steepens the yield curve by shifting market expectations of the future short-rate path, particularly affecting the 1\u20135 year segment most sensitive to policy timing."
   },
   {
+    "source": "fixed-income/forward-rate-agreement",
+    "target": "financial-maths/interest-rate-swap",
+    "label": "single-period version of",
+    "description": "An IRS is a sequence of FRA-like cash flows, but FRAs settle with ISDA discounting at the start of each accrual period whereas swap coupons settle at the end \u2014 making them equivalent only in present value, not cash flow timing."
+  },
+  {
+    "source": "fixed-income/forward-rate-agreement",
+    "target": "fixed-income/multi-curve-framework",
+    "label": "calibrates",
+    "description": "Short-dated FRAs pin down forward IBOR rates at specific maturities and are among the primary instruments used to bootstrap IBOR forward curves in the multi-curve framework."
+  },
+  {
     "source": "fixed-income/forward-rate-curve",
     "target": "financial-maths/interest-rate-swap",
     "label": "prices floating leg of",
@@ -13882,6 +13984,24 @@
     "target": "fixed-income/zero-rate-curve",
     "label": "derived from",
     "description": "The forward rate curve is obtained from the zero rate curve via the relationship between consecutive discount factors, so the zero curve is the foundation from which all forward rates are derived through bootstrapping."
+  },
+  {
+    "source": "fixed-income/hjm-framework",
+    "target": "fixed-income/forward-rate-curve",
+    "label": "models dynamics of",
+    "description": "HJM directly models how the instantaneous forward rate curve f(t,u) evolves stochastically over time, making it the natural framework for products whose payoff depends on the full shape of the yield curve."
+  },
+  {
+    "source": "fixed-income/hjm-framework",
+    "target": "fixed-income/libor-market-model",
+    "label": "underpins",
+    "description": "The LIBOR Market Model (BGM) extends HJM by parameterising the volatilities of discrete forward LIBOR rates rather than the instantaneous forward rate, inheriting HJM's no-arbitrage drift condition."
+  },
+  {
+    "source": "fixed-income/hjm-framework",
+    "target": "stochastic-processes/hull-white-model",
+    "label": "generalises",
+    "description": "The Hull-White model is a special case of HJM obtained by choosing an exponentially decaying volatility function \u03c3(t,u) = \u03c3 e^{-\u03ba(u-t)}, which maps the full forward curve dynamics back to a single short-rate SDE."
   },
   {
     "source": "fixed-income/interest-rate-cap-floor",
@@ -13942,6 +14062,24 @@
     "target": "fixed-income/dv01",
     "label": "converts to",
     "description": "DV01 is obtained by multiplying modified duration by the bond price and by 0.0001 \u2014 modified duration gives the percentage sensitivity whilst DV01 expresses the same risk in cash terms per basis point."
+  },
+  {
+    "source": "fixed-income/multi-curve-framework",
+    "target": "financial-maths/libor-ois-spread",
+    "label": "motivated by",
+    "description": "The LIBOR-OIS spread spiking to ~150bps during the 2007 GFC demonstrated that IBOR contains credit and liquidity risk premia absent from overnight rates, which is the empirical justification for the multi-curve separation."
+  },
+  {
+    "source": "fixed-income/multi-curve-framework",
+    "target": "fixed-income/collateral-discounting",
+    "label": "combined with",
+    "description": "The multi-curve framework handles the forward rate side (multiple IBOR/ON curves) while collateral discounting handles the discount rate side (overnight collateral rate); together they form the modern pricing framework for cleared derivatives."
+  },
+  {
+    "source": "fixed-income/multi-curve-framework",
+    "target": "fixed-income/overnight-index-swap",
+    "label": "uses as discounting curve",
+    "description": "In the multi-curve framework the OIS curve \u2014 built from overnight index swaps \u2014 serves as the discounting curve P(t,\u00b7) for all collateralised derivatives, while IBOR instruments generate separate forward curves."
   },
   {
     "source": "fixed-income/nelson-siegel-model",
@@ -14182,6 +14320,24 @@
     "target": "fixed-income/spread-curve",
     "label": "point on",
     "description": "The Z-spread is a single number summarising a bond's credit premium relative to the zero curve, whilst the spread curve shows how this premium varies by maturity \u2014 the Z-spread is the constant-spread special case of the more general spread curve."
+  },
+  {
+    "source": "fixed-income/zero-coupon-bond",
+    "target": "fixed-income/coupon-bond-and-strips",
+    "label": "building block of",
+    "description": "A coupon bond decomposes into a portfolio of zero-coupon bonds \u2014 one for each coupon payment and one for the principal \u2014 so ZCB pricing is the foundation of coupon bond valuation."
+  },
+  {
+    "source": "fixed-income/zero-coupon-bond",
+    "target": "fixed-income/yield-curve-bootstrapping",
+    "label": "recovered by",
+    "description": "Bootstrapping extracts the sequence of discount factors P(0,t\u2081), P(0,t\u2082), \u2026 from market instrument prices, effectively inferring zero-coupon bond prices for maturities where pure ZCBs do not trade."
+  },
+  {
+    "source": "fixed-income/zero-coupon-bond",
+    "target": "fixed-income/zero-rate-curve",
+    "label": "defines",
+    "description": "The zero-coupon bond's price P(0,T) is the discount factor from which zero rates are derived by inverting the compounding formula, so every point on the zero rate curve corresponds to one ZCB price."
   },
   {
     "source": "fixed-income/zero-rate-curve",

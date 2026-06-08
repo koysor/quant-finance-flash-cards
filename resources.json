@@ -12059,6 +12059,28 @@
       }
     ]
   },
+  "fixed-income/bond-yield": {
+    "websites": [
+      {
+        "title": "Yield to Maturity \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/y/yieldtomaturity.asp"
+      },
+      {
+        "title": "Yield to Maturity \u2013 Corporate Finance Institute",
+        "url": "https://corporatefinanceinstitute.com/resources/fixed-income/yield-to-maturity-ytm/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Yield to Maturity \u2013 Khan Academy",
+        "url": "https://www.youtube.com/watch?v=mCbogjEWifM"
+      },
+      {
+        "title": "Bond Pricing and Yield \u2013 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=EmTVkbq4GPk"
+      }
+    ]
+  },
   "fixed-income/breakeven-inflation": {
     "websites": [
       {
@@ -12112,6 +12134,28 @@
       {
         "title": "MIT OpenCourseWare \u2014 Stochastic Differential Equations",
         "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "fixed-income/collateral-discounting": {
+    "websites": [
+      {
+        "title": "OIS Discounting \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/o/overnight-index-swap.asp"
+      },
+      {
+        "title": "Credit Support Annex (CSA) \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/c/creditsupportannex.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Collateral and OIS Discounting Explained \u2013 QuantPie",
+        "url": "https://www.youtube.com/watch?v=5p6_U4uH5ao"
+      },
+      {
+        "title": "Derivative Valuation with Collateral \u2013 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=GpZpUCJY19k"
       }
     ]
   },
@@ -12171,6 +12215,50 @@
       }
     ]
   },
+  "fixed-income/coupon-bond-and-strips": {
+    "websites": [
+      {
+        "title": "US Treasury STRIPS \u2013 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/United_States_Treasury_security#STRIPS"
+      },
+      {
+        "title": "Coupon Bond \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/c/couponbond.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Introduction to Bond Valuation \u2013 Khan Academy",
+        "url": "https://www.youtube.com/watch?v=EmTVkbq4GPk"
+      },
+      {
+        "title": "Bond Pricing and Duration \u2013 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=GpZpUCJY19k"
+      }
+    ]
+  },
+  "fixed-income/cross-currency-swap": {
+    "websites": [
+      {
+        "title": "Cross-Currency Swap \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/c/cross-currency-swap.asp"
+      },
+      {
+        "title": "Cross-Currency Swap \u2013 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cross-currency_swap"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Cross Currency Swaps \u2013 Khan Academy Finance",
+        "url": "https://www.youtube.com/watch?v=4kJ3guE1Igs"
+      },
+      {
+        "title": "FX Swaps and Cross-Currency Swaps \u2013 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=7VHVCLbdZ3o"
+      }
+    ]
+  },
   "fixed-income/delivery-option-value": {
     "websites": [
       {
@@ -12190,6 +12278,28 @@
       {
         "title": "MIT OpenCourseWare \u2014 Stochastic Differential Equations",
         "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
+  "fixed-income/deposits-and-bills": {
+    "websites": [
+      {
+        "title": "Treasury Bills \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/t/treasurybill.asp"
+      },
+      {
+        "title": "Certificate of Deposit \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/c/certificateofdeposit.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Money Market Instruments Explained \u2013 Khan Academy",
+        "url": "https://www.youtube.com/watch?v=7VHVCLbdZ3o"
+      },
+      {
+        "title": "Treasury Bills and Money Markets \u2013 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=3eElJJxOxJk"
       }
     ]
   },
@@ -12215,6 +12325,28 @@
       }
     ]
   },
+  "fixed-income/floating-rate-note": {
+    "websites": [
+      {
+        "title": "Floating Rate Note \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/f/frn.asp"
+      },
+      {
+        "title": "Floating Rate Note \u2013 Corporate Finance Institute",
+        "url": "https://corporatefinanceinstitute.com/resources/fixed-income/floating-rate-note/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Floating Rate Bonds Explained \u2013 Khan Academy",
+        "url": "https://www.youtube.com/watch?v=lQKT5SHxDOo"
+      },
+      {
+        "title": "SOFR FRNs and LIBOR Transition \u2013 ARRC Webinars",
+        "url": "https://www.youtube.com/watch?v=3eElJJxOxJk"
+      }
+    ]
+  },
   "fixed-income/forward-guidance": {
     "websites": [
       {
@@ -12237,6 +12369,50 @@
       }
     ]
   },
+  "fixed-income/forward-rate-agreement": {
+    "websites": [
+      {
+        "title": "Forward Rate Agreement \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/f/fra.asp"
+      },
+      {
+        "title": "Forward Rate Agreement \u2013 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Forward_rate_agreement"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Forward Rate Agreements Explained \u2013 QuantPie",
+        "url": "https://www.youtube.com/watch?v=PwlWLMRv3j4"
+      },
+      {
+        "title": "Interest Rate Derivatives \u2013 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=3eElJJxOxJk"
+      }
+    ]
+  },
+  "fixed-income/hjm-framework": {
+    "websites": [
+      {
+        "title": "Heath\u2013Jarrow\u2013Morton Framework \u2013 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Heath%E2%80%93Jarrow%E2%80%93Morton_framework"
+      },
+      {
+        "title": "HJM Framework \u2013 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Heath%E2%80%93Jarrow%E2%80%93Morton_framework"
+      }
+    ],
+    "videos": [
+      {
+        "title": "HJM Interest Rate Models \u2013 QuantPie",
+        "url": "https://www.youtube.com/watch?v=VHRQmB3HYAI"
+      },
+      {
+        "title": "Term Structure Models \u2013 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=TzPPRgCMdAw"
+      }
+    ]
+  },
   "fixed-income/libor-market-model": {
     "websites": [
       {
@@ -12256,6 +12432,28 @@
       {
         "title": "MIT OpenCourseWare \u2014 Mathematics with Applications in Finance (18.S096)",
         "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "fixed-income/multi-curve-framework": {
+    "websites": [
+      {
+        "title": "Multi-Curve Framework \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/l/libor-ois-spread.asp"
+      },
+      {
+        "title": "LIBOR-OIS Spread \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/l/libor-ois-spread.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Multi-Curve Interest Rate Framework \u2013 QuantPie",
+        "url": "https://www.youtube.com/watch?v=5p6_U4uH5ao"
+      },
+      {
+        "title": "OIS Discounting and Multi-Curve Pricing \u2013 MIT Finance Lectures",
+        "url": "https://www.youtube.com/watch?v=PwlWLMRv3j4"
       }
     ]
   },
@@ -12434,6 +12632,28 @@
       {
         "title": "Patrick Boyle \u2014 Yield Curve Inversion Explained",
         "url": "https://www.youtube.com/watch?v=AKjnYf2e-oI"
+      }
+    ]
+  },
+  "fixed-income/zero-coupon-bond": {
+    "websites": [
+      {
+        "title": "Zero-Coupon Bond \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/z/zero-couponbond.asp"
+      },
+      {
+        "title": "Zero-Coupon Bond \u2013 Corporate Finance Institute",
+        "url": "https://corporatefinanceinstitute.com/resources/fixed-income/zero-coupon-bond/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Zero Coupon Bonds Explained \u2013 Khan Academy",
+        "url": "https://www.youtube.com/watch?v=lQKT5SHxDOo"
+      },
+      {
+        "title": "Bond Valuation \u2013 Discount Factors \u2013 MIT OpenCourseWare Finance",
+        "url": "https://www.youtube.com/watch?v=GpZpUCJY19k"
       }
     ]
   },
