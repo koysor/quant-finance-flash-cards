@@ -7194,6 +7194,24 @@
     "description": "Put-call parity forces the difference between call Rho and put Rho to equal KTe^{-rT}, providing a consistency check on any Rho calculation."
   },
   {
+    "source": "derivatives/quanto-options",
+    "target": "derivatives/black-scholes-equation",
+    "label": "uses",
+    "description": "The quanto call price formula is Black-Scholes applied to a foreign asset whose drift has been shifted by the quanto adjustment -rho*sigma_S*sigma_X under the domestic risk-neutral measure."
+  },
+  {
+    "source": "derivatives/quanto-options",
+    "target": "derivatives/garman-kohlhagen-model",
+    "label": "extends",
+    "description": "Garman-Kohlhagen prices standard FX options; quanto options remove the FX exposure by fixing the exchange rate, replacing the FX forward in the drift with a correlation-adjusted equivalent."
+  },
+  {
+    "source": "derivatives/quanto-options",
+    "target": "stochastic-processes/correlated-brownian-motions",
+    "label": "derived using",
+    "description": "The quanto adjustment arises from the cross-variation between the foreign asset and FX rate processes; correlated Brownian motions generate the -rho*sigma_S*sigma_X drift shift when changing from foreign to domestic measure."
+  },
+  {
     "source": "derivatives/real-world-vs-risk-neutral-measure",
     "target": "derivatives/risk-neutral-pricing",
     "label": "motivates",
@@ -25918,6 +25936,12 @@
     "target": "stochastic-processes/martingales",
     "label": "becomes under Q",
     "description": "Under the real-world measure, GBM with drift \u03bc \u2260 r is not a martingale after discounting \u2014 but under the risk-neutral measure Q, the discounted GBM stock price becomes a martingale, which is the key insight enabling derivative pricing."
+  },
+  {
+    "source": "stochastic-processes/girsanov-theorem",
+    "target": "derivatives/quanto-options",
+    "label": "used to derive",
+    "description": "Girsanov's theorem is the measure-change machinery that converts the foreign asset's drift from r_f (under the foreign risk-neutral measure) to r_f - rho*sigma_S*sigma_X (under the domestic risk-neutral measure)."
   },
   {
     "source": "stochastic-processes/girsanov-theorem",

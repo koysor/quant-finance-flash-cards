@@ -5889,6 +5889,28 @@
       }
     ]
   },
+  "derivatives/quanto-options": {
+    "websites": [
+      {
+        "title": "Quanto Option \u2013 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Quanto"
+      },
+      {
+        "title": "Quanto Options Explained \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/q/quantoption.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Quanto Options and FX Derivatives \u2013 Financial Mathematics",
+        "url": "https://www.youtube.com/watch?v=5d3P9Vh7Jdo"
+      },
+      {
+        "title": "Risk-Neutral Pricing and Measure Changes \u2013 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=mPIHBTzKPgc"
+      }
+    ]
+  },
   "derivatives/recombining-tree": {
     "websites": [
       {
