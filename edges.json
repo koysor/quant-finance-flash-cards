@@ -9036,6 +9036,18 @@
     "description": "Every nominal yield on the yield curve embeds a breakeven inflation component; changes in breakeven rates shift the entire curve even without any change in real yields or monetary policy expectations."
   },
   {
+    "source": "fixed-income/brennan-schwartz-model",
+    "target": "fixed-income/two-factor-interest-rate-models",
+    "label": "included in",
+    "description": "Brennan-Schwartz is the first two-factor term structure model and the only one with two directly observable state variables (short rate and long rate), though it lacks a closed-form bond price."
+  },
+  {
+    "source": "fixed-income/brennan-schwartz-model",
+    "target": "fixed-income/yield-curve",
+    "label": "factors observed from",
+    "description": "Brennan-Schwartz reads its two state variables directly from the yield curve \u2014 the short rate from the overnight end and the long rate from the consol (perpetual bond) yield \u2014 avoiding latent factor estimation."
+  },
+  {
     "source": "fixed-income/calibration-degrees-of-freedom",
     "target": "fixed-income/calibration-inconsistency",
     "label": "leads to",
@@ -9432,6 +9444,24 @@
     "description": "An FRN with zero spread can be shown to price at par at each reset date by decomposing its cash flows into a long ZCB maturing at the next coupon date and a recursive sequence of ZCBs \u2014 the ZCB pricing identity telescopes to par."
   },
   {
+    "source": "fixed-income/fong-vasicek-model",
+    "target": "fixed-income/general-affine-two-factor",
+    "label": "instance of",
+    "description": "Fong-Vasicek is an affine two-factor model with state variables (r, V); its bond prices take the form e^{A+Br+CV} as a special case of the general affine two-factor framework."
+  },
+  {
+    "source": "fixed-income/fong-vasicek-model",
+    "target": "fixed-income/two-factor-interest-rate-models",
+    "label": "included in",
+    "description": "The Fong-Vasicek model is one of the four major two-factor short-rate models; unlike Brennan-Schwartz it remains tractable, but its variance factor is latent and unobservable."
+  },
+  {
+    "source": "fixed-income/fong-vasicek-model",
+    "target": "stochastic-processes/cox-ingersoll-ross-model",
+    "label": "CIR variance process in",
+    "description": "Fong-Vasicek uses a CIR process for the short-rate variance; this ensures variance stays non-negative and inherits the CIR model's tractability for the volatility factor."
+  },
+  {
     "source": "fixed-income/forward-guidance",
     "target": "fixed-income/dynamic-nelson-siegel-model",
     "label": "analysed with",
@@ -9478,6 +9508,30 @@
     "target": "fixed-income/affine-term-structure-models",
     "label": "one-factor instance of",
     "description": "The general affine one-factor model is the single-state-variable special case of the affine term structure class; the multi-factor extension replaces scalar A and B with vector functions."
+  },
+  {
+    "source": "fixed-income/general-affine-two-factor",
+    "target": "fixed-income/affine-term-structure-models",
+    "label": "two-factor instance of",
+    "description": "The general affine two-factor model is the two-dimensional case of affine term structure models; bond yields are affine in two state variables rather than one."
+  },
+  {
+    "source": "fixed-income/general-affine-two-factor",
+    "target": "fixed-income/general-affine-one-factor",
+    "label": "two-factor extension of",
+    "description": "The general affine two-factor model adds a second state variable l to the one-factor affine structure, extending the single exponential-affine ansatz e^{A-Br} to e^{A-Br-Cl}."
+  },
+  {
+    "source": "fixed-income/general-affine-two-factor",
+    "target": "fixed-income/two-factor-interest-rate-models",
+    "label": "common bond price in",
+    "description": "Brennan-Schwartz, Fong-Vasicek, Longstaff-Schwartz, and G2++ all produce bond prices of the form e^{A-Br-Cl} within the general affine two-factor framework."
+  },
+  {
+    "source": "fixed-income/general-affine-two-factor",
+    "target": "fixed-income/two-factor-pricing-pde",
+    "label": "solution form for",
+    "description": "Substituting the ansatz e^{A-Br-Cl} into the two-factor pricing PDE and matching powers of r and l yields the three-ODE Riccati system that determines A, B, C."
   },
   {
     "source": "fixed-income/hjm-framework",
@@ -9670,6 +9724,30 @@
     "target": "stochastic-processes/fokker-planck-steady-state",
     "label": "combined with",
     "description": "The lognormal steady-state distribution is substituted into the Fokker\u2013Planck inversion formula to recover the nonlinear mean-reverting drift consistent with US LIBOR data."
+  },
+  {
+    "source": "fixed-income/longstaff-schwartz-model",
+    "target": "computational-finance/longstaff-schwartz",
+    "label": "different work from",
+    "description": "The Longstaff-Schwartz interest rate model (1992) and the Longstaff-Schwartz Least-Squares Monte Carlo method (2001) share the same authors but are entirely separate contributions separated by nine years."
+  },
+  {
+    "source": "fixed-income/longstaff-schwartz-model",
+    "target": "fixed-income/general-affine-two-factor",
+    "label": "closed-form solution of",
+    "description": "Because the two CIR factors in the Longstaff-Schwartz model are independent, the three-ODE Riccati system decouples into two independent CIR Riccati equations, admitting analytical solutions."
+  },
+  {
+    "source": "fixed-income/longstaff-schwartz-model",
+    "target": "fixed-income/two-factor-interest-rate-models",
+    "label": "included in",
+    "description": "Longstaff-Schwartz is one of the canonical two-factor short-rate models; its two-CIR-factor structure guarantees non-negative rates and provides closed-form bond prices at the cost of using latent state variables."
+  },
+  {
+    "source": "fixed-income/longstaff-schwartz-model",
+    "target": "stochastic-processes/cox-ingersoll-ross-model",
+    "label": "built from two",
+    "description": "The Longstaff-Schwartz interest rate model uses two independent CIR processes as latent factors; the short rate is their linear combination, inheriting CIR's non-negativity and tractability."
   },
   {
     "source": "fixed-income/modified-duration",
@@ -25060,6 +25138,30 @@
     "target": "statistics/marchenko-pastur-distribution",
     "label": "generates",
     "description": "The Wishart distribution generates random covariance matrices whose limiting eigenvalue spectrum is described by the Marchenko-Pastur law as the matrix dimensions grow large."
+  },
+  {
+    "source": "stochastic-processes/affine-processes",
+    "target": "computational-finance/carr-madan-fft-pricing",
+    "label": "enables",
+    "description": "Affine processes have analytically tractable characteristic functions, making FFT-based option pricing via the Carr-Madan formula feasible for the full Heston, Bates, and jump-diffusion model families."
+  },
+  {
+    "source": "stochastic-processes/affine-processes",
+    "target": "fixed-income/affine-term-structure-models",
+    "label": "underpins",
+    "description": "Affine term structure models are affine processes applied to the short rate; the exponential-affine bond pricing formula follows directly from the affine characteristic function."
+  },
+  {
+    "source": "stochastic-processes/affine-processes",
+    "target": "fixed-income/exponential-affine-ansatz",
+    "label": "motivates",
+    "description": "The exponential-affine ansatz is exactly the one-dimensional instance of the general affine-process Laplace transform; the Riccati ODEs for A(t) and B(t) are the scalar case of the vector Riccati system."
+  },
+  {
+    "source": "stochastic-processes/affine-processes",
+    "target": "stochastic-processes/cox-ingersoll-ross-model",
+    "label": "includes",
+    "description": "The CIR model is the canonical one-dimensional affine process with square-root diffusion; its affine structure allows closed-form bond and option prices via the Riccati ODEs."
   },
   {
     "source": "stochastic-processes/backward-kolmogorov-equation",

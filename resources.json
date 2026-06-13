@@ -7353,6 +7353,28 @@
       }
     ]
   },
+  "fixed-income/brennan-schwartz-model": {
+    "websites": [
+      {
+        "title": "Brennan-Schwartz Model \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Short-rate_model"
+      },
+      {
+        "title": "Two-Factor Short-Rate Models \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Short-rate_model#Two-factor_short-rate_models"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Two-Factor Short-Rate Models \u2014 QuantLib",
+        "url": "https://www.youtube.com/watch?v=NcM0-GNRwso"
+      },
+      {
+        "title": "Interest Rate Models Survey \u2014 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=7w3ild0CJfM"
+      }
+    ]
+  },
   "fixed-income/calibration-degrees-of-freedom": {
     "websites": [
       {
@@ -7839,6 +7861,28 @@
       }
     ]
   },
+  "fixed-income/fong-vasicek-model": {
+    "websites": [
+      {
+        "title": "Stochastic Volatility Interest Rate Models \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Vasicek_model"
+      },
+      {
+        "title": "Two-Factor Short-Rate Models \u2014 CFI",
+        "url": "https://corporatefinanceinstitute.com/resources/fixed-income/short-rate-model/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "CIR Model and Square-Root Processes \u2014 Bionic Turtle",
+        "url": "https://www.youtube.com/watch?v=Bz1L2IpCuM4"
+      },
+      {
+        "title": "Stochastic Interest Rate Models Overview \u2014 QuantLib",
+        "url": "https://www.youtube.com/watch?v=NcM0-GNRwso"
+      }
+    ]
+  },
   "fixed-income/forward-guidance": {
     "websites": [
       {
@@ -7902,6 +7946,28 @@
       {
         "title": "Wikipedia \u2014 Riccati equation",
         "url": "https://en.wikipedia.org/wiki/Riccati_equation"
+      }
+    ]
+  },
+  "fixed-income/general-affine-two-factor": {
+    "websites": [
+      {
+        "title": "Affine Term Structure Models \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Affine_term_structure_model"
+      },
+      {
+        "title": "Two-Factor Interest Rate Models \u2014 Investopedia",
+        "url": "https://www.investopedia.com/terms/t/two-factor-model.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Affine Term Structure Models \u2014 Bionic Turtle",
+        "url": "https://www.youtube.com/watch?v=gbZEFVGAi7E"
+      },
+      {
+        "title": "Two-Factor Interest Rate Models \u2014 QuantLib",
+        "url": "https://www.youtube.com/watch?v=NcM0-GNRwso"
       }
     ]
   },
@@ -8166,6 +8232,28 @@
       {
         "title": "Wikipedia \u2014 Mean reversion",
         "url": "https://en.wikipedia.org/wiki/Mean_reversion_(finance)"
+      }
+    ]
+  },
+  "fixed-income/longstaff-schwartz-model": {
+    "websites": [
+      {
+        "title": "Short-Rate Model \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Short-rate_model"
+      },
+      {
+        "title": "CIR Model \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cox%E2%80%93Ingersoll%E2%80%93Ross_model"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Cox-Ingersoll-Ross Model \u2014 Bionic Turtle",
+        "url": "https://www.youtube.com/watch?v=Bz1L2IpCuM4"
+      },
+      {
+        "title": "Multi-Factor Interest Rate Models \u2014 QuantLib",
+        "url": "https://www.youtube.com/watch?v=NcM0-GNRwso"
       }
     ]
   },
@@ -21417,6 +21505,28 @@
       {
         "title": "3Blue1Brown \u2014 Eigenvectors and Eigenvalues",
         "url": "https://www.youtube.com/watch?v=PFDu9oVAE-g"
+      }
+    ]
+  },
+  "stochastic-processes/affine-processes": {
+    "websites": [
+      {
+        "title": "Affine Process \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Affine_process"
+      },
+      {
+        "title": "Affine Term Structure Models \u2014 Investopedia",
+        "url": "https://www.investopedia.com/terms/a/affine-term-structure-model.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Affine Processes in Finance \u2014 QuantLib",
+        "url": "https://www.youtube.com/watch?v=NcM0-GNRwso"
+      },
+      {
+        "title": "Heston Model and Characteristic Functions \u2014 Bionic Turtle",
+        "url": "https://www.youtube.com/watch?v=gbZEFVGAi7E"
       }
     ]
   },
