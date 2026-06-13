@@ -4555,6 +4555,28 @@
       }
     ]
   },
+  "computational-finance/tikhonov-regularisation-calibration": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Tikhonov regularization",
+        "url": "https://en.wikipedia.org/wiki/Tikhonov_regularization"
+      },
+      {
+        "title": "Wikipedia \u2014 Inverse problem",
+        "url": "https://en.wikipedia.org/wiki/Inverse_problem"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Linear Algebra (18.06)",
+        "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/"
+      },
+      {
+        "title": "StatQuest \u2014 Regularization Part 1: Ridge Regression",
+        "url": "https://www.youtube.com/watch?v=Q81RR3yKn30"
+      }
+    ]
+  },
   "computational-finance/time-space-domain": {
     "websites": [
       {
@@ -4618,6 +4640,28 @@
       {
         "title": "MIT OpenCourseWare \u2014 Discrete Stochastic Processes (6.262)",
         "url": "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/"
+      }
+    ]
+  },
+  "computational-finance/trinomial-tree-short-rate": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Trinomial tree",
+        "url": "https://en.wikipedia.org/wiki/Trinomial_tree"
+      },
+      {
+        "title": "Wikipedia \u2014 Ho-Lee model",
+        "url": "https://en.wikipedia.org/wiki/Ho%E2%80%93Lee_model"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "Bionic Turtle \u2014 Interest Rate Trees (Hull-White)",
+        "url": "https://www.youtube.com/watch?v=eRqKxLWuHQQ"
       }
     ]
   },
@@ -7199,6 +7243,28 @@
       }
     ]
   },
+  "fixed-income/bachelier-normal-model": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Bachelier model",
+        "url": "https://en.wikipedia.org/wiki/Bachelier_model"
+      },
+      {
+        "title": "Investopedia \u2014 Interest Rate Cap and Floor",
+        "url": "https://www.investopedia.com/terms/i/interestratecap.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "Bionic Turtle \u2014 Normal (Bachelier) vs Lognormal (Black) Models",
+        "url": "https://www.youtube.com/watch?v=VBv3as8NRFE"
+      }
+    ]
+  },
   "fixed-income/bear-steepener-bull-flattener": {
     "websites": [
       {
@@ -8188,6 +8254,28 @@
       {
         "title": "Interest Rate Derivatives Pricing \u2013 MIT OpenCourseWare",
         "url": "https://www.youtube.com/watch?v=mPIHBTzKPgc"
+      }
+    ]
+  },
+  "fixed-income/hull-white-vol-calibration": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Hull-White model",
+        "url": "https://en.wikipedia.org/wiki/Hull%E2%80%93White_model"
+      },
+      {
+        "title": "Investopedia \u2014 Interest Rate Cap and Floor",
+        "url": "https://www.investopedia.com/terms/i/interestratefloor.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "Investopedia \u2014 Interest Rate Cap",
+        "url": "https://www.investopedia.com/terms/i/interestratecap.asp"
       }
     ]
   },
@@ -21577,6 +21665,28 @@
       {
         "title": "Math is Fun \u2014 Standard Deviation and Variance",
         "url": "https://www.mathsisfun.com/data/standard-deviation.html"
+      }
+    ]
+  },
+  "statistics/vasicek-mle-estimation": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Ornstein-Uhlenbeck process",
+        "url": "https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process"
+      },
+      {
+        "title": "Wikipedia \u2014 Vasicek model",
+        "url": "https://en.wikipedia.org/wiki/Vasicek_model"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "StatQuest \u2014 Maximum Likelihood Estimation, clearly explained",
+        "url": "https://www.youtube.com/watch?v=XepXtl9YKwc"
       }
     ]
   },

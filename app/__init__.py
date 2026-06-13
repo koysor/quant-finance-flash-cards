@@ -39,17 +39,22 @@ def _get_search_data_json() -> str:
     global _search_data_cache
     if _search_data_cache is None:
         cards = get_all_cards()
-        _search_data_cache = json.dumps([
-            {
-                "id":     c["id"],
-                "name":   c["name"],
-                "topic":  c["topic"],
-                "tags":   c["tags"],
-                "url":    f"/card/{c['id']}",
-                "colour": _topic_colour(c["topic"]),
-            }
-            for c in cards
-        ])
+        _search_data_cache = (
+            json.dumps([
+                {
+                    "id":     c["id"],
+                    "name":   c["name"],
+                    "topic":  c["topic"],
+                    "tags":   c["tags"],
+                    "url":    f"/card/{c['id']}",
+                    "colour": _topic_colour(c["topic"]),
+                }
+                for c in cards
+            ])
+            .replace("<", "\\u003c")
+            .replace(">", "\\u003e")
+            .replace("&", "\\u0026")
+        )
     return _search_data_cache
 
 

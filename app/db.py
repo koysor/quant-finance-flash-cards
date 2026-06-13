@@ -21,6 +21,7 @@ Both tables are created idempotently; ``init_db`` also runs ``ALTER TABLE``
 migrations for columns added after the initial schema was deployed.
 """
 import json
+import os
 import sqlite3
 from pathlib import Path
 from typing import Any
@@ -94,8 +95,9 @@ def init_db() -> None:
         # Edges table: add description column introduced after initial release.
         try:
             conn.execute("ALTER TABLE edges ADD COLUMN description TEXT NOT NULL DEFAULT ''")
-        except sqlite3.OperationalError:
-            pass  # column already exists
+        except sqlite3.OperationalError as e:
+            if "duplicate column" not in str(e).lower():
+                raise
 
         # Cards table: add columns introduced after the initial schema.
         for col in (
@@ -106,8 +108,9 @@ def init_db() -> None:
         ):
             try:
                 conn.execute(f"ALTER TABLE cards ADD COLUMN {col}")
-            except sqlite3.OperationalError:
-                pass  # column already exists
+            except sqlite3.OperationalError as e:
+                if "duplicate column" not in str(e).lower():
+                    raise
 
 
 # ---------------------------------------------------------------------------
@@ -148,14 +151,26 @@ def upsert_card(card: dict[str, Any]) -> None:
 def get_stored_mtime(card_id: str) -> float | None:
     """
     Return the ``file_mtime`` stored for *card_id*, or ``None`` if not in the DB.
-
-    Used by the loader to decide whether a card file needs to be re-parsed.
     """
     with get_db() as conn:
         row = conn.execute(
             "SELECT file_mtime FROM cards WHERE id = ?", (card_id,)
         ).fetchone()
     return row["file_mtime"] if row else None
+
+
+def get_all_card_mtimes() -> dict[str, float]:
+    """
+    Return a mapping of ``card_id → file_mtime`` for every card in the database.
+
+    Used by the loader to skip unchanged files in a single bulk query instead
+    of issuing one SELECT per card file.
+    """
+    with get_db() as conn:
+        return {
+            r["id"]: r["file_mtime"]
+            for r in conn.execute("SELECT id, file_mtime FROM cards").fetchall()
+        }
 
 
 def get_all_card_ids() -> set[str]:
@@ -325,15 +340,22 @@ def get_cards_by_tag(tag: str) -> list[sqlite3.Row]:
 
     The query pads the tags column with commas on both sides so that a partial
     tag name (e.g. ``"risk"``) cannot accidentally match a longer tag
-    (e.g. ``"systematic-risk"``).
+    (e.g. ``"systematic-risk"``).  LIKE special characters in *tag* are escaped
+    so that ``%`` and ``_`` are treated as literals.
 
     Columns: ``id``, ``name``, ``topic``, ``tags``.
     """
+    safe_tag = (
+        tag.strip()
+        .replace("\\", "\\\\")
+        .replace("%", "\\%")
+        .replace("_", "\\_")
+    )
     with get_db() as conn:
         return conn.execute(
             "SELECT id, name, topic, tags FROM cards"
-            " WHERE ',' || tags || ',' LIKE ? ORDER BY topic, name",
-            (f"%,{tag.strip()},%",),
+            " WHERE ',' || tags || ',' LIKE ? ESCAPE '\\' ORDER BY topic, name",
+            (f"%,{safe_tag},%",),
         ).fetchall()
 
 
@@ -380,16 +402,20 @@ def get_incoming(card_id: str) -> list[sqlite3.Row]:
         ).fetchall()
 
 
-def delete_edge(edge_id: int) -> None:
+def delete_edge(edge_id: int, source_id: str) -> None:
     """
-    Delete a single edge by its integer primary key.
+    Delete a single edge by its integer primary key, restricted to a given source card.
 
-    Called by the ``remove_link`` route after a user clicks the × button in the
-    sidebar.  The caller is responsible for persisting the change to
-    ``edges.json`` via ``save_edges_to_file()``.
+    The ``source_id`` guard prevents one card's remove-link form from deleting
+    edges that belong to a different card (IDOR).  Called by the ``remove_link``
+    route; caller is responsible for persisting the change via
+    ``save_edges_to_file()``.
     """
     with get_db() as conn:
-        conn.execute("DELETE FROM edges WHERE id = ?", (edge_id,))
+        conn.execute(
+            "DELETE FROM edges WHERE id = ? AND source_id = ?",
+            (edge_id, source_id),
+        )
 
 
 def load_edges_from_file() -> bool:
@@ -429,7 +455,7 @@ def load_edges_from_file() -> bool:
         data = json.loads(EDGES_PATH.read_text(encoding="utf-8"))
         conn.execute("DELETE FROM edges")
         conn.executemany(
-            "INSERT INTO edges (source_id, target_id, label, description)"
+            "INSERT OR IGNORE INTO edges (source_id, target_id, label, description)"
             " VALUES (?, ?, ?, ?)",
             [
                 (e["source"], e["target"], e.get("label", ""), e.get("description", ""))
@@ -466,10 +492,12 @@ def save_edges_to_file() -> None:
         }
         for r in rows
     ]
-    EDGES_PATH.write_text(
+    tmp = EDGES_PATH.with_suffix(".tmp")
+    tmp.write_text(
         json.dumps(data, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
+    os.replace(tmp, EDGES_PATH)
 
 
 def get_all_edges() -> list[sqlite3.Row]:

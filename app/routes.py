@@ -234,7 +234,7 @@ def recent() -> Response | str:
 
     grouped: dict[str, list] = {}
     for card in cards:
-        date = card["created_date"] or "Unknown"
+        date = (card["created_date"] or "Unknown")[:10]
         grouped.setdefault(date, []).append(card)
     return render_template("recent.html", grouped=grouped)
 
@@ -279,7 +279,7 @@ def card_detail(card_id: str) -> ResponseReturnValue:
     siblings = get_topic_cards(card["topic"])
     idx      = next((i for i, c in enumerate(siblings) if c["id"] == card_id), -1)
     prev_card = dict(siblings[idx - 1]) if idx > 0             else None
-    next_card = dict(siblings[idx + 1]) if idx < len(siblings) - 1 else None
+    next_card = dict(siblings[idx + 1]) if 0 <= idx < len(siblings) - 1 else None
 
     resources = current_app.config["RESOURCES"].get(card_id, {})
     notation  = json.loads(card["notation"])  if card["notation"]  else []
@@ -305,7 +305,12 @@ def card_detail(card_id: str) -> ResponseReturnValue:
         card_excerpt=_card_excerpt(card["html_content"]),
         resources=resources,
         notation=notation,
-        notation_map_json=json.dumps(notation_map),
+        notation_map_json=(
+            json.dumps(notation_map)
+            .replace("<", "\\u003c")
+            .replace(">", "\\u003e")
+            .replace("&", "\\u0026")
+        ),
         key_terms=key_terms,
     )
 
@@ -332,7 +337,7 @@ def remove_link(card_id: str) -> Response:
     edge_id = request.form.get("edge_id", "").strip()
     if edge_id:
         try:
-            delete_edge(int(edge_id))
+            delete_edge(int(edge_id), card_id)
         except ValueError:
             abort(400)
         save_edges_to_file()

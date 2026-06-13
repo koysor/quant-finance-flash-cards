@@ -39,7 +39,7 @@ from typing import Any
 from flask import Flask
 from markdown_it import MarkdownIt
 
-from app.db import delete_card, get_all_card_ids, get_stored_mtime, upsert_card
+from app.db import delete_card, get_all_card_ids, get_all_card_mtimes, upsert_card
 
 CARDS_DIR = Path(__file__).parent.parent / "cards"
 
@@ -298,13 +298,14 @@ def load_all_cards(
     int
         Total number of card files found on disk (not just those reloaded).
     """
-    paths  = sorted(CARDS_DIR.rglob("*.md"))
-    loaded = 0
+    paths         = sorted(CARDS_DIR.rglob("*.md"))
+    stored_mtimes = get_all_card_mtimes()
+    loaded        = 0
 
     for path in paths:
         card_id       = path.relative_to(CARDS_DIR).with_suffix("").as_posix()
         current_mtime = path.stat().st_mtime
-        stored_mtime  = get_stored_mtime(card_id)
+        stored_mtime  = stored_mtimes.get(card_id)
 
         if stored_mtime is not None and abs(current_mtime - stored_mtime) < 0.001:
             continue  # file unchanged — skip expensive re-parse
