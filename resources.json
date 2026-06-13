@@ -4945,6 +4945,28 @@
       }
     ]
   },
+  "derivatives/carr-madan-fourier-inversion": {
+    "websites": [
+      {
+        "title": "Carr-Madan Option Pricing \u2013 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Carr%E2%80%93Madan_formula"
+      },
+      {
+        "title": "Fourier Transform Methods in Finance \u2013 QuantLib",
+        "url": "https://quantlib-python-docs.readthedocs.io/en/latest/pricing_engines.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Fast Fourier Transform for Option Pricing \u2013 Quant Finance",
+        "url": "https://www.youtube.com/watch?v=D5dZcITcpks"
+      },
+      {
+        "title": "Characteristic Functions in Finance \u2013 Mathematical Finance",
+        "url": "https://www.youtube.com/watch?v=r6sGWTCkiFY"
+      }
+    ]
+  },
   "derivatives/cash-and-carry-arbitrage": {
     "websites": [
       {
@@ -8122,6 +8144,28 @@
       {
         "title": "Wikipedia \u2014 Hull\u2013White model",
         "url": "https://en.wikipedia.org/wiki/Hull%E2%80%93White_model"
+      }
+    ]
+  },
+  "fixed-income/hull-white-bond-option": {
+    "websites": [
+      {
+        "title": "Hull-White Model \u2013 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Hull%E2%80%93White_model"
+      },
+      {
+        "title": "Bond Options and Interest Rate Models \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/b/bond-option.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Hull-White Model \u2013 Calibration and Bond Options",
+        "url": "https://www.youtube.com/watch?v=hJsVz6xZ_v4"
+      },
+      {
+        "title": "Interest Rate Derivatives Pricing \u2013 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=mPIHBTzKPgc"
       }
     ]
   },
@@ -21626,6 +21670,28 @@
       }
     ]
   },
+  "stochastic-processes/bates-model": {
+    "websites": [
+      {
+        "title": "Stochastic Volatility Models \u2013 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Stochastic_volatility"
+      },
+      {
+        "title": "Jump Diffusion Models \u2013 QuantLib Documentation",
+        "url": "https://quantlib-python-docs.readthedocs.io/en/latest/pricing_engines.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Heston Model and Extensions \u2013 Quantitative Finance YouTube",
+        "url": "https://www.youtube.com/watch?v=t5pVNkZNsFE"
+      },
+      {
+        "title": "Stochastic Volatility Models \u2013 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=mPIHBTzKPgc"
+      }
+    ]
+  },
   "stochastic-processes/branching-process": {
     "websites": [
       {
@@ -22757,6 +22823,28 @@
       {
         "title": "Investopedia \u2014 Stochastic Volatility",
         "url": "https://www.investopedia.com/terms/s/stochastic-volatility.asp"
+      }
+    ]
+  },
+  "volatility/shifted-sabr-model": {
+    "websites": [
+      {
+        "title": "SABR Model \u2013 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/SABR_volatility_model"
+      },
+      {
+        "title": "SABR Volatility Model \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/s/sabr-volatility-model.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "SABR Model and Hagan Formula \u2013 Interest Rate Derivatives",
+        "url": "https://www.youtube.com/watch?v=5d3P9Vh7Jdo"
+      },
+      {
+        "title": "Negative Rates and Vol Models \u2013 QuantLib",
+        "url": "https://www.youtube.com/watch?v=JrI-WrjvH48"
       }
     ]
   },

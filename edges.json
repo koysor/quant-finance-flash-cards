@@ -5880,6 +5880,24 @@
     "description": "A calendar spread profits when the near-term implied vol is high relative to the back-month vol \u2014 either through vol term structure steepness or elevated event risk in the front month."
   },
   {
+    "source": "derivatives/carr-madan-fourier-inversion",
+    "target": "computational-finance/carr-madan-fft-pricing",
+    "label": "theoretical basis of",
+    "description": "The Carr-Madan Fourier inversion provides the mathematical derivation \u2014 Gil-Pelaez inversion, dampening factor alpha, and the modified integrand Psi(u) \u2014 that the FFT pricing algorithm implements numerically."
+  },
+  {
+    "source": "derivatives/carr-madan-fourier-inversion",
+    "target": "stochastic-processes/affine-processes",
+    "label": "exploits",
+    "description": "Affine processes guarantee an exponential-affine characteristic function, which is exactly what Carr-Madan requires: a closed-form phi(u) that can be evaluated at complex arguments for the modified integrand Psi(u)."
+  },
+  {
+    "source": "derivatives/carr-madan-fourier-inversion",
+    "target": "stochastic-processes/bates-model",
+    "label": "prices via",
+    "description": "The Carr-Madan FFT method applies directly to Bates because the model has an analytic characteristic function, giving efficient pricing of the full option surface without Monte Carlo."
+  },
+  {
     "source": "derivatives/cash-and-carry-arbitrage",
     "target": "derivatives/no-arbitrage-principle",
     "label": "enforces",
@@ -9630,6 +9648,12 @@
     "description": "The Ho\u2013Lee calibration solution shows that making \u03b7 a free function of time provides exactly one degree of freedom per maturity, sufficient to match the entire yield curve simultaneously."
   },
   {
+    "source": "fixed-income/ho-lee-calibration",
+    "target": "fixed-income/hull-white-bond-option",
+    "label": "simpler version of",
+    "description": "Ho-Lee bond option pricing is the limiting case of Hull-White bond option pricing when mean reversion a=0; Hull-White adds a non-zero a to control how fast the conditional bond vol sigma_P decays for long option tenors."
+  },
+  {
     "source": "fixed-income/ho-lee-model",
     "target": "fixed-income/ho-lee-bond-price",
     "label": "produces",
@@ -9646,6 +9670,18 @@
     "target": "fixed-income/short-rate-sde",
     "label": "special case of",
     "description": "Ho\u2013Lee is a special case of the general short-rate SDE with constant volatility w = c and time-dependent drift u = \u03b7(t), distinguishing it from constant-parameter models by having no fixed long-run level."
+  },
+  {
+    "source": "fixed-income/hull-white-bond-option",
+    "target": "fixed-income/blacks-model-swaption",
+    "label": "related to",
+    "description": "Both express caplet or swaption prices in a Black-type formula; Hull-White bond option pricing makes the Black vol a function of the model parameters (a, sigma) and term structure inputs, bridging model and market quoting conventions."
+  },
+  {
+    "source": "fixed-income/hull-white-bond-option",
+    "target": "stochastic-processes/hull-white-model",
+    "label": "derived from",
+    "description": "The closed-form bond option price follows directly from the Hull-White zero-coupon bond formula P(t,T)=A(t,T)exp(-B(t,T)r_t), since bond prices are log-normally distributed under the model, enabling a Black-Scholes-type formula."
   },
   {
     "source": "fixed-income/inflation-linked-bonds",
@@ -25278,6 +25314,24 @@
     "description": "The backward Kolmogorov equation and the Fokker-Planck (forward Kolmogorov) equation are adjoint PDEs \u2014 the forward equation evolves the probability density forward in time, while the backward equation evolves expected payoffs backward from a terminal condition."
   },
   {
+    "source": "stochastic-processes/bates-model",
+    "target": "derivatives/merton-jump-diffusion-pricing",
+    "label": "extends",
+    "description": "Bates replaces Merton's constant diffusion vol with a CIR stochastic variance process, combining the term-structure smile from stochastic vol with the short-dated skew from jumps."
+  },
+  {
+    "source": "stochastic-processes/bates-model",
+    "target": "stochastic-processes/affine-jump-diffusion",
+    "label": "special case of",
+    "description": "The Bates model is the canonical affine jump-diffusion applied to equity derivatives: Heston variance (CIR) plus log-normal price jumps, giving the affine jump-diffusion framework a concrete, calibratable form."
+  },
+  {
+    "source": "stochastic-processes/bates-model",
+    "target": "volatility/heston-model",
+    "label": "extends",
+    "description": "Bates augments Heston with a compound Poisson jump component in the log stock price to capture the steep short-dated skew that diffusion-only stochastic vol cannot reproduce."
+  },
+  {
     "source": "stochastic-processes/branching-process",
     "target": "stochastic-processes/hawkes-process",
     "label": "branching structure of",
@@ -26857,6 +26911,12 @@
   },
   {
     "source": "volatility/heston-model",
+    "target": "derivatives/carr-madan-fourier-inversion",
+    "label": "priced via",
+    "description": "Heston's analytic characteristic function is the direct input to the Carr-Madan integral; the FFT then turns one closed-form CF evaluation into option prices across the full strike grid simultaneously."
+  },
+  {
+    "source": "volatility/heston-model",
     "target": "derivatives/complete-markets",
     "label": "violates",
     "description": "The Heston model introduces stochastic volatility as a second source of randomness that cannot be hedged with the stock alone, making the market incomplete and requiring an additional instrument or a market price of volatility risk."
@@ -27136,6 +27196,24 @@
     "target": "volatility/volatility-surface",
     "label": "parameterises",
     "description": "SABR provides a parsimonious parameterisation of the volatility surface for interest rate and FX options, allowing smooth interpolation and extrapolation from a few calibrated parameters."
+  },
+  {
+    "source": "volatility/shifted-sabr-model",
+    "target": "fixed-income/blacks-model-swaption",
+    "label": "extends",
+    "description": "Shifted SABR in the limit nu=0 reduces to a shifted lognormal (shifted Black) model; the shift s is chosen so F+s > 0, restoring the applicability of Black's formula to negative-rate swaption markets."
+  },
+  {
+    "source": "volatility/shifted-sabr-model",
+    "target": "fixed-income/normal-swaption-model",
+    "label": "alternative to",
+    "description": "When EUR swaption rates went negative, practitioners chose between shifted SABR (keeping a lognormal-like smile with a displacement) and normal/Bachelier models (treating rates as Gaussian with no lower bound); both coexist on rates desks."
+  },
+  {
+    "source": "volatility/shifted-sabr-model",
+    "target": "volatility/sabr-model",
+    "label": "extends",
+    "description": "Shifted SABR replaces the forward rate F with F+s in the SABR dynamics, preserving all Hagan approximation formulas while allowing the underlying forward to take negative values \u2014 essential for post-2014 EUR rates markets."
   },
   {
     "source": "volatility/short-volatility",
