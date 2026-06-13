@@ -4789,6 +4789,28 @@
       }
     ]
   },
+  "derivatives/bear-put-spread": {
+    "websites": [
+      {
+        "title": "Bear Put Spread \u2014 Investopedia",
+        "url": "https://www.investopedia.com/terms/b/bearputspread.asp"
+      },
+      {
+        "title": "Bear Put Spread \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bear_spread"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bear Put Spread Explained \u2014 projectfinance",
+        "url": "https://www.youtube.com/watch?v=vPE1oEJx0ZU"
+      },
+      {
+        "title": "Vertical Spread Strategies \u2014 tastylive",
+        "url": "https://www.youtube.com/watch?v=FyuIU9MhOiA"
+      }
+    ]
+  },
   "derivatives/bermudan-option": {
     "websites": [
       {
@@ -4898,6 +4920,28 @@
       {
         "title": "Butterfly Options Strategy \u2014 Options Trading IQ",
         "url": "https://www.youtube.com/watch?v=BhyNxb5QHGQ"
+      }
+    ]
+  },
+  "derivatives/calendar-spread": {
+    "websites": [
+      {
+        "title": "Calendar Spread \u2014 Investopedia",
+        "url": "https://www.investopedia.com/terms/c/calendarspread.asp"
+      },
+      {
+        "title": "Calendar Spread Options \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Calendar_spread"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Calendar Spread Options Strategy \u2014 projectfinance",
+        "url": "https://www.youtube.com/watch?v=S6tPmW49BVIY"
+      },
+      {
+        "title": "Trading Calendar Spreads \u2014 tastylive",
+        "url": "https://www.youtube.com/watch?v=BpPU0O0CLMI"
       }
     ]
   },
@@ -5430,6 +5474,28 @@
       {
         "title": "Investopedia \u2014 Delta Hedging",
         "url": "https://www.investopedia.com/terms/d/deltahedging.asp"
+      }
+    ]
+  },
+  "derivatives/iron-condor": {
+    "websites": [
+      {
+        "title": "Iron Condor \u2014 Investopedia",
+        "url": "https://www.investopedia.com/terms/i/ironcondor.asp"
+      },
+      {
+        "title": "Iron Condor Options Strategy \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Iron_condor"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Iron Condor Explained \u2014 projectfinance",
+        "url": "https://www.youtube.com/watch?v=7KdN6FMdMqI"
+      },
+      {
+        "title": "Iron Condor Strategy Guide \u2014 tastylive",
+        "url": "https://www.youtube.com/watch?v=T_3jGXe7RiE"
       }
     ]
   },
@@ -7067,6 +7133,28 @@
       }
     ]
   },
+  "fixed-income/asset-backed-securities": {
+    "websites": [
+      {
+        "title": "Asset-Backed Securities \u2014 Investopedia",
+        "url": "https://www.investopedia.com/terms/a/asset-backedsecurity.asp"
+      },
+      {
+        "title": "Asset-Backed Security \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Asset-backed_security"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Asset-Backed Securities Explained \u2014 Khan Academy",
+        "url": "https://www.youtube.com/watch?v=KiAMCzHWC2o"
+      },
+      {
+        "title": "ABS Securitisation \u2014 Bionic Turtle",
+        "url": "https://www.youtube.com/watch?v=QarxYiJ7yWY"
+      }
+    ]
+  },
   "fixed-income/bear-steepener-bull-flattener": {
     "websites": [
       {
@@ -7472,6 +7560,28 @@
       {
         "title": "Derivative Valuation with Collateral \u2013 MIT OpenCourseWare",
         "url": "https://www.youtube.com/watch?v=GpZpUCJY19k"
+      }
+    ]
+  },
+  "fixed-income/collateralised-mortgage-obligation": {
+    "websites": [
+      {
+        "title": "Collateralised Mortgage Obligation \u2014 Investopedia",
+        "url": "https://www.investopedia.com/terms/c/cmo.asp"
+      },
+      {
+        "title": "Collateralized Mortgage Obligation \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Collateralized_mortgage_obligation"
+      }
+    ],
+    "videos": [
+      {
+        "title": "CMO Explained \u2014 Bionic Turtle",
+        "url": "https://www.youtube.com/watch?v=bM4mcQ3dKRc"
+      },
+      {
+        "title": "Mortgage Securities and CMOs \u2014 Khan Academy",
+        "url": "https://www.youtube.com/watch?v=KiAMCzHWC2o"
       }
     ]
   },
@@ -19058,6 +19168,28 @@
       }
     ]
   },
+  "risk/synthetic-cdo": {
+    "websites": [
+      {
+        "title": "Synthetic CDO \u2014 Investopedia",
+        "url": "https://www.investopedia.com/terms/s/syntheticcdo.asp"
+      },
+      {
+        "title": "Synthetic CDO \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Synthetic_CDO"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Synthetic CDO Explained \u2014 Khan Academy",
+        "url": "https://www.youtube.com/watch?v=Qte6DFfV7JM"
+      },
+      {
+        "title": "The Big Short and Synthetic CDOs \u2014 Patrick Boyle",
+        "url": "https://www.youtube.com/watch?v=AizinxaGGGQ"
+      }
+    ]
+  },
   "risk/tail-risk-hedging": {
     "websites": [
       {
@@ -22271,6 +22403,28 @@
       {
         "title": "Dupire Local Volatility Surface \u2014 MathFinance",
         "url": "https://www.youtube.com/watch?v=kYJGKhwzjAw"
+      }
+    ]
+  },
+  "volatility/forward-volatility": {
+    "websites": [
+      {
+        "title": "Forward Volatility \u2014 Investopedia",
+        "url": "https://www.investopedia.com/terms/f/forwardvolatility.asp"
+      },
+      {
+        "title": "Volatility Term Structure \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Volatility_smile#Volatility_term_structure"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Forward Volatility and Term Structure \u2014 Bionic Turtle",
+        "url": "https://www.youtube.com/watch?v=kZJFTVKhQXY"
+      },
+      {
+        "title": "Volatility Surface and Forward Vol \u2014 QuantLib",
+        "url": "https://www.youtube.com/watch?v=NcM0-GNRwso"
       }
     ]
   },

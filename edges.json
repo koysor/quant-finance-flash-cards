@@ -5676,6 +5676,24 @@
     "description": "Barrier options track a single binary event (barrier crossed or not), while lookback options track the running extremum \u2014 both require augmented RL state vectors, but barrier options need only one extra bit while lookbacks need a continuous running maximum or minimum."
   },
   {
+    "source": "derivatives/bear-put-spread",
+    "target": "derivatives/bull-call-spread",
+    "label": "mirror of",
+    "description": "A bear put spread and bull call spread at the same strikes have the same bounded payoff profile by put-call parity; one is used for bearish views, the other for bullish."
+  },
+  {
+    "source": "derivatives/bear-put-spread",
+    "target": "derivatives/collar-strategy",
+    "label": "component of",
+    "description": "A put-spread collar combines a long bear put spread with a short call to reduce downside protection cost while capping upside, extending the simple collar with a lower-strike short put."
+  },
+  {
+    "source": "derivatives/bear-put-spread",
+    "target": "derivatives/put-call-parity",
+    "label": "equivalent via",
+    "description": "Put-call parity establishes that a bear put spread (long higher put, short lower put) is equivalent to a bull call spread (long lower call, short higher call) net of discounting."
+  },
+  {
     "source": "derivatives/bermudan-option",
     "target": "computational-finance/longstaff-schwartz",
     "label": "benchmarked against",
@@ -5842,6 +5860,24 @@
     "target": "volatility/volatility-smile",
     "label": "prices the density at",
     "description": "By Breeden-Litzenberger, the butterfly spread price is proportional to the risk-neutral probability density at the middle strike, making it a direct measure of the smile's curvature."
+  },
+  {
+    "source": "derivatives/calendar-spread",
+    "target": "derivatives/theta-greeks",
+    "label": "exploits differential",
+    "description": "Near-term options have higher theta than longer-dated ones (time decay accelerates near expiry), so selling the near-term leg of a calendar spread collects faster time decay."
+  },
+  {
+    "source": "derivatives/calendar-spread",
+    "target": "volatility/forward-volatility",
+    "label": "exposes to",
+    "description": "The residual long option in a calendar spread has a payoff governed by the forward volatility for the remaining period; calendar spreads are therefore natural vehicles for trading forward vol."
+  },
+  {
+    "source": "derivatives/calendar-spread",
+    "target": "volatility/volatility-term-structure",
+    "label": "profits from shape of",
+    "description": "A calendar spread profits when the near-term implied vol is high relative to the back-month vol \u2014 either through vol term structure steepness or elevated event risk in the front month."
   },
   {
     "source": "derivatives/cash-and-carry-arbitrage",
@@ -6556,6 +6592,24 @@
     "target": "derivatives/option-replication",
     "label": "imperfection of",
     "description": "Hedging error quantifies the imperfection of option replication in practice \u2014 theoretical continuous replication has zero error, but discrete rebalancing introduces stochastic P&L deviations that scale inversely with the square root of rebalancing frequency."
+  },
+  {
+    "source": "derivatives/iron-condor",
+    "target": "derivatives/butterfly-spread",
+    "label": "wider version of",
+    "description": "A butterfly spread has all strikes centred at one point; an iron condor separates the short strikes to create a flat profit zone, giving more room for the underlying to move."
+  },
+  {
+    "source": "derivatives/iron-condor",
+    "target": "derivatives/strangle",
+    "label": "short with wings added to",
+    "description": "An iron condor is a short strangle with protective long options at outer strikes; adding the wings converts unlimited loss into a defined-risk strategy."
+  },
+  {
+    "source": "derivatives/iron-condor",
+    "target": "derivatives/theta-greeks",
+    "label": "profits from",
+    "description": "The iron condor has positive theta \u2014 both short options decay daily \u2014 making it an income strategy that collects time value while the underlying remains within the break-even range."
   },
   {
     "source": "derivatives/jump-condition",
@@ -8784,6 +8838,24 @@
     "description": "In the LIBOR market model, the annuity factor aggregates the individual discount factors at each swap payment date, providing the measure-change weight between the forward and annuity measures."
   },
   {
+    "source": "fixed-income/asset-backed-securities",
+    "target": "fixed-income/mortgage-backed-securities",
+    "label": "broader category than",
+    "description": "MBS are a specific type of ABS backed by residential mortgages; ABS is the wider asset class covering auto loans, credit card receivables, student loans, and other financial assets."
+  },
+  {
+    "source": "fixed-income/asset-backed-securities",
+    "target": "risk/cdo-tranching",
+    "label": "analogous structure to",
+    "description": "ABS uses the same SPV waterfall and credit enhancement mechanics as CDOs; the tranche hierarchy (senior, mezzanine, equity) and overcollateralisation tests are equivalent concepts."
+  },
+  {
+    "source": "fixed-income/asset-backed-securities",
+    "target": "risk/clo",
+    "label": "related to",
+    "description": "A CLO is an ABS backed by leveraged corporate loans; both use SPV structures, OC/IC tests, and waterfall mechanics, differing primarily in the type of underlying collateral."
+  },
+  {
     "source": "fixed-income/asset-swap-spread",
     "target": "financial-maths/interest-rate-swap",
     "label": "uses",
@@ -9100,6 +9172,24 @@
     "target": "fixed-income/overnight-index-swap",
     "label": "discount rate from",
     "description": "The OIS curve gives the collateral discount factors P^c(0,t) used to discount all cash flows of collateralised derivatives under the overnight collateral rate convention."
+  },
+  {
+    "source": "fixed-income/collateralised-mortgage-obligation",
+    "target": "fixed-income/convexity",
+    "label": "support tranche has extreme negative",
+    "description": "CMO support (companion) tranches absorb all prepayment variability, giving them extreme negative convexity \u2014 duration can extend dramatically when rates rise, far more than a plain MBS pass-through."
+  },
+  {
+    "source": "fixed-income/collateralised-mortgage-obligation",
+    "target": "fixed-income/mortgage-backed-securities",
+    "label": "tranches cash flows of",
+    "description": "A CMO takes a mortgage pass-through MBS pool and redistributes its principal and interest cash flows into tranches with distinct prepayment and duration profiles."
+  },
+  {
+    "source": "fixed-income/collateralised-mortgage-obligation",
+    "target": "fixed-income/prepayment-risk",
+    "label": "redistributes",
+    "description": "The CMO structure concentrates prepayment risk in support tranches while insulating PAC tranches; it does not eliminate prepayment risk \u2014 it reallocates it to investors with higher risk appetite."
   },
   {
     "source": "fixed-income/convergence-trading",
@@ -22038,6 +22128,24 @@
     "description": "Stress testing complements VaR by evaluating portfolio losses under extreme scenarios that VaR \u2014 which focuses on a specific confidence level under normal conditions \u2014 may not capture."
   },
   {
+    "source": "risk/synthetic-cdo",
+    "target": "derivatives/cds-index",
+    "label": "built from",
+    "description": "Many synthetic CDOs reference standardised CDS index portfolios (CDX, iTraxx) rather than bespoke names, enabling index tranching with standardised correlation products."
+  },
+  {
+    "source": "risk/synthetic-cdo",
+    "target": "risk/cdo-tranching",
+    "label": "synthetic version of",
+    "description": "A synthetic CDO replicates the tranche structure of a cash CDO using CDS rather than physical bonds; tranche loss mechanics and copula modelling are identical."
+  },
+  {
+    "source": "risk/synthetic-cdo",
+    "target": "risk/gaussian-copula-credit",
+    "label": "priced via",
+    "description": "Synthetic CDO tranche expected losses are computed with the Gaussian copula; base correlation is calibrated to observed index tranche spreads to produce an arbitrage-free surface."
+  },
+  {
     "source": "risk/tail-risk-hedging",
     "target": "probability/fat-tailed-distributions",
     "label": "motivated by",
@@ -26530,6 +26638,30 @@
     "target": "volatility/stochastic-volatility-models",
     "label": "compared to",
     "description": "Dupire local vol perfectly fits today's smile but predicts a flattening of the forward smile, whereas stochastic vol models generate richer forward smile dynamics, making them better for pricing cliquets and autocallables."
+  },
+  {
+    "source": "volatility/forward-volatility",
+    "target": "derivatives/calendar-spread",
+    "label": "traded via",
+    "description": "A calendar spread is the primary instrument for expressing a view on forward volatility; its P&L at front-month expiry is driven by the realised forward vol relative to the implied forward vol at entry."
+  },
+  {
+    "source": "volatility/forward-volatility",
+    "target": "volatility/dupire-formula",
+    "label": "extracted from",
+    "description": "Dupire's local vol surface implies a specific forward vol structure; the forward variance is derived by differencing the total implied variance surface across maturities."
+  },
+  {
+    "source": "volatility/forward-volatility",
+    "target": "volatility/stochastic-volatility-models",
+    "label": "rich dynamics from",
+    "description": "Stochastic vol models (Heston, SABR) generate richer forward vol dynamics than local vol models, producing a non-flat forward smile crucial for accurately pricing cliquets and autocallables."
+  },
+  {
+    "source": "volatility/forward-volatility",
+    "target": "volatility/variance-swap",
+    "label": "priced using",
+    "description": "A forward-starting variance swap pays the realised variance over [T1,T2]; its fair strike equals the forward variance implied by the ratio of total implied variances at the two maturities."
   },
   {
     "source": "volatility/heston-model",
