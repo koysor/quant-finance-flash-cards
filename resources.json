@@ -7729,6 +7729,28 @@
       }
     ]
   },
+  "fixed-income/dai-singleton-classification": {
+    "websites": [
+      {
+        "title": "Affine Term Structure Models \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Affine_term_structure_model"
+      },
+      {
+        "title": "Short-Rate Model Classification \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Short-rate_model"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Affine Term Structure Models \u2014 Bionic Turtle",
+        "url": "https://www.youtube.com/watch?v=gbZEFVGAi7E"
+      },
+      {
+        "title": "Multi-Factor Interest Rate Models \u2014 QuantLib",
+        "url": "https://www.youtube.com/watch?v=NcM0-GNRwso"
+      }
+    ]
+  },
   "fixed-income/delivery-option-value": {
     "websites": [
       {
@@ -7814,6 +7836,28 @@
       {
         "title": "Wikipedia \u2014 Short-rate model",
         "url": "https://en.wikipedia.org/wiki/Short-rate_model"
+      }
+    ]
+  },
+  "fixed-income/feller-condition": {
+    "websites": [
+      {
+        "title": "Feller's Condition \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Feller_process"
+      },
+      {
+        "title": "CIR Model Positivity \u2014 Investopedia",
+        "url": "https://www.investopedia.com/terms/c/cox-ingersoll-ross-model.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "CIR Model and the Feller Condition \u2014 Bionic Turtle",
+        "url": "https://www.youtube.com/watch?v=Bz1L2IpCuM4"
+      },
+      {
+        "title": "Square-Root Diffusion and Boundary Behaviour \u2014 QuantLib",
+        "url": "https://www.youtube.com/watch?v=NcM0-GNRwso"
       }
     ]
   },
@@ -7924,6 +7968,28 @@
       {
         "title": "Interest Rate Derivatives \u2013 MIT OpenCourseWare",
         "url": "https://www.youtube.com/watch?v=3eElJJxOxJk"
+      }
+    ]
+  },
+  "fixed-income/g2-plus-plus-model": {
+    "websites": [
+      {
+        "title": "Hull-White Two-Factor Model \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Hull%E2%80%93White_model"
+      },
+      {
+        "title": "G2++ Model Overview \u2014 Investopedia",
+        "url": "https://www.investopedia.com/terms/h/hullwhite-model.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Hull-White Two-Factor Model \u2014 Bionic Turtle",
+        "url": "https://www.youtube.com/watch?v=7w3ild0CJfM"
+      },
+      {
+        "title": "G2++ Swaption Pricing \u2014 QuantLib Python",
+        "url": "https://www.youtube.com/watch?v=NcM0-GNRwso"
       }
     ]
   },
@@ -21505,6 +21571,28 @@
       {
         "title": "3Blue1Brown \u2014 Eigenvectors and Eigenvalues",
         "url": "https://www.youtube.com/watch?v=PFDu9oVAE-g"
+      }
+    ]
+  },
+  "stochastic-processes/affine-jump-diffusion": {
+    "websites": [
+      {
+        "title": "Affine Process \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Affine_process"
+      },
+      {
+        "title": "Bates Model \u2014 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Heston_model#Bates_model"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Bates Stochastic Volatility Jump Model \u2014 Bionic Turtle",
+        "url": "https://www.youtube.com/watch?v=gbZEFVGAi7E"
+      },
+      {
+        "title": "Affine Jump-Diffusion and Characteristic Functions \u2014 QuantLib",
+        "url": "https://www.youtube.com/watch?v=NcM0-GNRwso"
       }
     ]
   },

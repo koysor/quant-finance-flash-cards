@@ -9342,6 +9342,24 @@
     "description": "The cross-currency basis spread in an xccy swap is the same quantity quoted in the cross-currency basis curve; a non-zero basis reflects funding imbalances between currencies that pure FX forward pricing cannot explain."
   },
   {
+    "source": "fixed-income/dai-singleton-classification",
+    "target": "fixed-income/affine-term-structure-models",
+    "label": "classifies",
+    "description": "Dai-Singleton's Am(n) framework provides a canonical form for every admissible n-factor affine term structure model, settling which parameter constraints are required for internal consistency."
+  },
+  {
+    "source": "fixed-income/dai-singleton-classification",
+    "target": "fixed-income/general-affine-two-factor",
+    "label": "sub-families of",
+    "description": "The A0(2), A1(2), and A2(2) sub-families of the Dai-Singleton classification correspond respectively to G2++, Fong-Vasicek type, and Longstaff-Schwartz \u2014 all instances of the general affine two-factor bond-price formula."
+  },
+  {
+    "source": "fixed-income/dai-singleton-classification",
+    "target": "stochastic-processes/affine-processes",
+    "label": "classifies within",
+    "description": "The Am(n) classification is the fixed-income application of the general affine-process theory; Dai-Singleton proved which combinations of Gaussian and square-root factors yield admissible term structure models."
+  },
+  {
     "source": "fixed-income/delivery-option-value",
     "target": "fixed-income/cheapest-to-deliver",
     "label": "arises from",
@@ -9406,6 +9424,24 @@
     "target": "fixed-income/vasicek-ab-solutions",
     "label": "produces",
     "description": "Applying the exponential-affine ansatz to the Vasicek pricing PDE reduces it to two ODEs whose closed-form solutions are the B(\u03c4) saturation function and the A(\u03c4) convexity adjustment."
+  },
+  {
+    "source": "fixed-income/feller-condition",
+    "target": "fixed-income/fong-vasicek-model",
+    "label": "applies to variance process of",
+    "description": "In Fong-Vasicek, the variance V follows a CIR process; the Feller condition on its parameters determines whether V can touch zero, which would switch the model to a Vasicek-type regime momentarily."
+  },
+  {
+    "source": "fixed-income/feller-condition",
+    "target": "fixed-income/longstaff-schwartz-model",
+    "label": "applies to each factor of",
+    "description": "The Longstaff-Schwartz model uses two independent CIR factors; the Feller condition must be satisfied for each factor separately to ensure the short rate r = cx + dy stays non-negative."
+  },
+  {
+    "source": "fixed-income/feller-condition",
+    "target": "stochastic-processes/cox-ingersoll-ross-model",
+    "label": "parameter constraint for",
+    "description": "The Feller condition 2\u03ba\u03b8 \u2265 \u03c3\u00b2 is the exact parameter restriction that determines whether the CIR process's zero boundary is accessible; it is the central admissibility criterion for the CIR model."
   },
   {
     "source": "fixed-income/fixed-income-pricing-pde",
@@ -9502,6 +9538,30 @@
     "target": "fixed-income/zero-rate-curve",
     "label": "derived from",
     "description": "The forward rate curve is obtained from the zero rate curve via the relationship between consecutive discount factors, so the zero curve is the foundation from which all forward rates are derived through bootstrapping."
+  },
+  {
+    "source": "fixed-income/g2-plus-plus-model",
+    "target": "fixed-income/bermudan-swaption",
+    "label": "standard model for",
+    "description": "G2++ is the dominant model for pricing Bermudan swaptions on bank trading desks; its two-factor structure captures both level and slope changes, enabling accurate exercise boundary estimation by Monte Carlo or PDE."
+  },
+  {
+    "source": "fixed-income/g2-plus-plus-model",
+    "target": "fixed-income/dai-singleton-classification",
+    "label": "A0(2) member of",
+    "description": "G2++ belongs to the A0(2) family in the Dai-Singleton classification \u2014 two Gaussian factors, zero square-root factors \u2014 giving fully Gaussian rate distributions and analytically tractable European swaption prices."
+  },
+  {
+    "source": "fixed-income/g2-plus-plus-model",
+    "target": "fixed-income/two-factor-interest-rate-models",
+    "label": "most widely used member of",
+    "description": "Among the four canonical two-factor short-rate models, G2++ (two-factor Hull-White) is the most used in practice because it combines exact yield-curve fit, analytical swaption prices, and straightforward Monte Carlo simulation."
+  },
+  {
+    "source": "fixed-income/g2-plus-plus-model",
+    "target": "stochastic-processes/two-factor-hull-white",
+    "label": "formalisation of",
+    "description": "G2++ is the Brigo-Mercurio formalisation of the two-factor Hull-White model; it adds the deterministic shift \u03c6(t) for exact yield-curve fit and derives closed-form swaption prices from the Gaussian factor structure."
   },
   {
     "source": "fixed-income/general-affine-one-factor",
@@ -25138,6 +25198,30 @@
     "target": "statistics/marchenko-pastur-distribution",
     "label": "generates",
     "description": "The Wishart distribution generates random covariance matrices whose limiting eigenvalue spectrum is described by the Marchenko-Pastur law as the matrix dimensions grow large."
+  },
+  {
+    "source": "stochastic-processes/affine-jump-diffusion",
+    "target": "computational-finance/carr-madan-fft-pricing",
+    "label": "priced via",
+    "description": "Because the characteristic function of an affine jump-diffusion is exponential-affine, Carr-Madan FFT pricing applies directly, enabling full implied volatility surface calibration for Bates and Duffie-Pan-Singleton models in milliseconds."
+  },
+  {
+    "source": "stochastic-processes/affine-jump-diffusion",
+    "target": "stochastic-processes/affine-processes",
+    "label": "extends with jumps",
+    "description": "Affine jump-diffusions add compound Poisson jumps with affine intensity to affine diffusions; the characteristic function remains exponential-affine in the state, so the same Riccati ODE machinery applies with an extra jump term."
+  },
+  {
+    "source": "stochastic-processes/affine-jump-diffusion",
+    "target": "stochastic-processes/intensity-based-credit-model",
+    "label": "framework for",
+    "description": "Duffie-Singleton credit models use affine jump-diffusion dynamics for the default intensity; affine structure gives closed-form survival probabilities via the same Riccati ODEs used for bond pricing."
+  },
+  {
+    "source": "stochastic-processes/affine-jump-diffusion",
+    "target": "stochastic-processes/jump-diffusion-models",
+    "label": "affine-tractable class of",
+    "description": "Affine jump-diffusions are the tractable sub-family of jump-diffusion models; the affine intensity constraint ensures the characteristic function is known analytically rather than requiring simulation."
   },
   {
     "source": "stochastic-processes/affine-processes",
