@@ -64,6 +64,7 @@ TOPIC_COLOURS: dict[str, str] = {
     "Financial Mathematics":           "#10b981",   # emerald
     "Fixed Income":                    "#0d9488",   # teal-dark
     "Linear Algebra":                  "#8b5cf6",   # violet
+    "Machine Learning":                "#22c55e",   # green
     "Mathematical Notation":           "#f97316",   # orange
     "Portfolio Theory & Asset Pricing":"#14b8a6",   # teal
     "Probability":                     "#f43f5e",   # rose

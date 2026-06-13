@@ -122,10 +122,12 @@ Run manually: `uv run python scripts/validate_urls.py --force`
 |---|---|---|
 | `cards/banking-regulation/` | `Banking Regulation` | FRTB, IRRBB, LCR, NSFR, Basel capital rules |
 | `cards/calculus/` | `Calculus` | Differentiation, integration, Taylor series |
+| `cards/computational-finance/` | `Computational Finance` | Python finance libraries (QuantLib, PyFolio, vectorbt), numerical methods for finance (finite difference, quasi-Monte Carlo), RL applied to derivative pricing, finance-specific ML methodology (triple barrier, purged CV) |
 | `cards/derivatives/` | `Derivatives` | Options, futures, Greeks, pricing |
 | `cards/financial-maths/` | `Financial Mathematics` | TVM, compounding, NPV, leverage, execution |
 | `cards/fixed-income/` | `Fixed Income` | Bonds, yield curves, duration, DV01, credit spreads |
 | `cards/linear-algebra/` | `Linear Algebra` | Matrices, vectors, eigenvalues |
+| `cards/machine-learning/` | `Machine Learning` | ML algorithms (SVM, trees, neural networks), deep learning architectures, training techniques, RL algorithms, NLP, generative models, MLOps |
 | `cards/mathematical-notation/` | `Mathematical Notation` | Sigma, pi, set, and logical notation conventions |
 | `cards/portfolio-theory/` | `Portfolio Theory & Asset Pricing` | CAPM, factor models, performance ratios |
 | `cards/probability/` | `Probability` | Distributions, expectation, Bayes |
