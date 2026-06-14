@@ -35,6 +35,7 @@ from flask import (
 )
 from flask.typing import ResponseReturnValue
 
+from app.extensions import cache, limiter
 from app.db import (
     delete_edge,
     find_cards_by_slug,
@@ -191,6 +192,41 @@ def barbie_theme() -> Response:
     return resp
 
 
+@bp.get("/search-data.json")
+@limiter.limit("60 per minute")
+@cache.cached(timeout=0, key_prefix="search_data_json")
+def search_data_json_view() -> Response:
+    """
+    Return the full card index as JSON for the client-side search overlay.
+
+    Served as a separate cacheable endpoint so the ~350 KB payload is not
+    embedded in every HTML page.  Flask-caching stores the response in memory;
+    nginx can additionally cache it for 24 h via ``proxy_cache``.
+    """
+    cards = get_all_cards()
+    data = (
+        json.dumps([
+            {
+                "id":     c["id"],
+                "name":   c["name"],
+                "topic":  c["topic"],
+                "tags":   c["tags"],
+                "url":    f"/card/{c['id']}",
+                "colour": _topic_colour(c["topic"]),
+            }
+            for c in cards
+        ])
+        .replace("<", "\\u003c")
+        .replace(">", "\\u003e")
+        .replace("&", "\\u0026")
+    )
+    return Response(
+        data,
+        mimetype="application/json",
+        headers={"Cache-Control": "public, max-age=86400"},
+    )
+
+
 @bp.get("/random")
 def random_card() -> Response:
     """Redirect to a randomly selected card, or 404 if the database is empty."""
@@ -201,6 +237,7 @@ def random_card() -> Response:
 
 
 @bp.get("/recent")
+@cache.cached(timeout=300, query_string=True)
 def recent() -> Response | str:
     """
     Render a reverse-chronological list of cards, grouped by date.
@@ -316,6 +353,7 @@ def card_detail(card_id: str) -> ResponseReturnValue:
 
 
 @bp.post("/card/<path:card_id>/remove-link")
+@limiter.limit("5 per minute")
 def remove_link(card_id: str) -> Response:
     """
     Delete a single outgoing edge from a card.
@@ -346,6 +384,8 @@ def remove_link(card_id: str) -> Response:
 
 
 @bp.get("/formulas")
+@limiter.limit("30 per minute")
+@cache.cached(timeout=0, key_prefix="formulas_view")
 def formulas() -> str:
     """
     Render a page aggregating the Key Formula section from every card.
@@ -371,6 +411,8 @@ def formulas() -> str:
 
 
 @bp.get("/graph")
+@limiter.limit("10 per minute")
+@cache.cached(timeout=0, key_prefix="graph_view")
 def graph_view() -> str:
     """
     Render the interactive vis.js knowledge graph.

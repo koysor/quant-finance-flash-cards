@@ -60,6 +60,9 @@ CREATE INDEX IF NOT EXISTS idx_cards_topic  ON cards(topic);
 def _open_connection() -> sqlite3.Connection:
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
+    conn.execute("PRAGMA journal_mode = WAL")   # concurrent readers during writes
+    conn.execute("PRAGMA synchronous = NORMAL") # durable on OS crash; safe for derived cache
+    conn.execute("PRAGMA cache_size = -32000")  # 32 MB in-process page cache per connection
     conn.execute("PRAGMA foreign_keys = ON")
     return conn
 

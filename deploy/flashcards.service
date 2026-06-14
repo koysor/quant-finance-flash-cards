@@ -1,0 +1,29 @@
+[Unit]
+Description=Quantitative Finance Flash Cards (gunicorn)
+After=network.target
+
+[Service]
+Type=notify
+User=www-data
+Group=www-data
+
+# Replace /opt/flashcards with your actual deployment path
+WorkingDirectory=/opt/flashcards
+ExecStart=/opt/flashcards/.venv/bin/gunicorn \
+    --config /opt/flashcards/gunicorn.conf.py \
+    wsgi:app
+
+# Load SECRET_KEY and any optional overrides from this file
+EnvironmentFile=/opt/flashcards/.env.production
+
+Restart=on-failure
+RestartSec=5
+
+# Harden the process
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/opt/flashcards /var/log/flashcards
+
+[Install]
+WantedBy=multi-user.target

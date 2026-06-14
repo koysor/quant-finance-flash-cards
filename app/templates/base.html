@@ -28,6 +28,7 @@
     ]})"></script>
 
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="preload" href="/search-data.json" as="fetch" crossorigin="anonymous">
   {% block head_extra %}{% endblock %}
 
   <!-- Apply saved theme, font size, and wide mode before paint — prevents flash -->
@@ -283,7 +284,10 @@
 </div>
 
 <script>
-const ALL_CARDS = {{ search_data_json|safe }};
+let ALL_CARDS = [];
+fetch('/search-data.json')
+  .then(r => r.json())
+  .then(data => { ALL_CARDS = data; });
 
 /* ── Theme toggle ── */
 function setTheme(theme) {

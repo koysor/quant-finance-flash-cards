@@ -19,43 +19,17 @@ from typing import Any
 from flask import Flask, g, render_template, session
 from werkzeug.exceptions import HTTPException
 
-from app.db import init_db, load_edges_from_file, get_all_cards, get_site_stats
+from app.db import init_db, load_edges_from_file, get_site_stats
+from app.extensions import cache, limiter
 from app.loader import load_all_cards
 from app.routes import bp, TOPIC_COLOURS, _topic_colour
 
-# Module-level cache populated once after card loading and invalidated on reload.
-# Avoids running two DB queries + full JSON serialisation on every HTTP request.
-_search_data_cache: str | None = None
 _site_stats_cache: dict[str, int] | None = None
 
 
 def _invalidate_global_cache() -> None:
-    global _search_data_cache, _site_stats_cache
-    _search_data_cache = None
+    global _site_stats_cache
     _site_stats_cache = None
-
-
-def _get_search_data_json() -> str:
-    global _search_data_cache
-    if _search_data_cache is None:
-        cards = get_all_cards()
-        _search_data_cache = (
-            json.dumps([
-                {
-                    "id":     c["id"],
-                    "name":   c["name"],
-                    "topic":  c["topic"],
-                    "tags":   c["tags"],
-                    "url":    f"/card/{c['id']}",
-                    "colour": _topic_colour(c["topic"]),
-                }
-                for c in cards
-            ])
-            .replace("<", "\\u003c")
-            .replace(">", "\\u003e")
-            .replace("&", "\\u0026")
-        )
-    return _search_data_cache
 
 
 def _get_site_stats() -> dict[str, int]:
@@ -98,11 +72,23 @@ def create_app() -> Flask:
         )
     app.secret_key = secret or secrets.token_hex(32)
 
+    root = os.path.dirname(app.root_path)
+
+    cache.init_app(app, config={
+        "CACHE_TYPE":            os.environ.get("CACHE_TYPE", "SimpleCache"),
+        "CACHE_DEFAULT_TIMEOUT": 300,
+        "CACHE_REDIS_URL":       os.environ.get("REDIS_URL"),
+    })
+    app.config.setdefault(
+        "RATELIMIT_STORAGE_URI",
+        os.environ.get("RATELIMIT_STORAGE_URI", "memory://"),
+    )
+    limiter.init_app(app)
+
     init_db()
 
     # notation.json maps LaTeX commands (e.g. "\sigma") to {symbol, meaning} pairs.
     # Used at card-load time to annotate which LaTeX symbols appear in each card.
-    root = os.path.dirname(app.root_path)
     app.config["NOTATION"]  = _load_json_config(os.path.join(root, "notation.json"),  {})
 
     # key-terms.json maps plain variable names (e.g. "dW", "S") to {symbol, meaning} pairs.
@@ -116,6 +102,8 @@ def create_app() -> Flask:
     )
     load_edges_from_file()
     _invalidate_global_cache()
+    with app.app_context():
+        cache.clear()  # evict any stale cached responses from a previous run
 
     # resources.json maps card IDs to {websites, videos} lists shown in the sidebar.
     app.config["RESOURCES"] = _load_json_config(os.path.join(root, "resources.json"), {})
@@ -151,11 +139,10 @@ def create_app() -> Flask:
             session["csrf_token"] = secrets.token_hex(16)
 
         return {
-            "topic_colour":     _topic_colour,
-            "search_data_json": _get_search_data_json(),
-            "TOPIC_COLOURS":    TOPIC_COLOURS,
-            "site_stats":       _get_site_stats(),
-            "csrf_token":       session["csrf_token"],
+            "topic_colour":  _topic_colour,
+            "TOPIC_COLOURS": TOPIC_COLOURS,
+            "site_stats":    _get_site_stats(),
+            "csrf_token":    session["csrf_token"],
         }
 
     @app.errorhandler(404)
