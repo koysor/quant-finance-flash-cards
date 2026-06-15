@@ -2472,6 +2472,24 @@
     "description": "Each probability is a definite integral of the PDF; the bounds set the outcome region, in finance the exercise boundary or loss threshold."
   },
   {
+    "source": "calculus/linear-interpolation",
+    "target": "calculus/cubic-spline-interpolation",
+    "label": "contrasted with",
+    "description": "Linear interpolation and cubic spline interpolation represent the two most common yield-curve construction choices: linear is simple and exact at pillars but produces kinks in slope, while cubic spline is smooth but can oscillate and requires a global solve."
+  },
+  {
+    "source": "calculus/linear-interpolation",
+    "target": "calculus/piecewise-linear",
+    "label": "produces",
+    "description": "Applying linear interpolation across a set of pillar points produces a piecewise linear function on the full domain \u2014 continuous everywhere but with a change of slope at each pillar date."
+  },
+  {
+    "source": "calculus/linear-interpolation",
+    "target": "fixed-income/forward-rate-curve",
+    "label": "used in",
+    "description": "The forward rate curve is most commonly constructed by linearly interpolating zero rates or discount factors between quoted pillar maturities, making linear interpolation the de facto standard before more sophisticated spline methods are applied."
+  },
+  {
     "source": "calculus/lipschitz-condition",
     "target": "calculus/ordinary-differential-equations",
     "label": "ensures uniqueness for",
@@ -3036,6 +3054,54 @@
     "description": "The branching structure of the CRR binomial option pricing tree mirrors Pascal's triangle: at step n there are n+1 nodes, and the number of paths reaching each node is the corresponding entry in row n of the triangle."
   },
   {
+    "source": "calculus/piecewise-constant",
+    "target": "calculus/cubic-spline-interpolation",
+    "label": "contrasted with",
+    "description": "Piecewise constant and cubic spline interpolation represent opposite extremes of curve construction: piecewise constant prioritises exact local calibration at each breakpoint while cubic splines sacrifice exact fit for a smooth, twice-differentiable curve \u2014 a trade-off that matters when constructing yield or volatility surfaces."
+  },
+  {
+    "source": "calculus/piecewise-constant",
+    "target": "calculus/piecewise-function",
+    "label": "special case of",
+    "description": "A piecewise constant function is the simplest piecewise function, in which every piece is a constant rather than a general expression \u2014 the kinks at breakpoints become outright jumps, and the derivative is zero everywhere except at the breakpoints where it is undefined."
+  },
+  {
+    "source": "calculus/piecewise-constant",
+    "target": "fixed-income/yield-curve-bootstrapping",
+    "label": "used in",
+    "description": "Yield curve bootstrapping assumes instantaneous forward rates are piecewise constant between quoted maturities, allowing each benchmark instrument to be stripped sequentially with a closed-form equation for the unknown forward rate in each interval."
+  },
+  {
+    "source": "calculus/piecewise-constant",
+    "target": "stochastic-processes/intensity-based-credit-model",
+    "label": "parametrises",
+    "description": "Intensity-based credit models routinely parametrise the hazard rate as piecewise constant across maturity buckets so that each CDS spread can be used to solve analytically for the constant hazard rate in the next interval \u2014 a sequential bootstrap identical in structure to forward-rate stripping."
+  },
+  {
+    "source": "calculus/piecewise-linear",
+    "target": "calculus/piecewise-constant",
+    "label": "generalises",
+    "description": "A piecewise linear function generalises the piecewise constant case by allowing each piece to have a non-zero slope \u2014 piecewise constant is the degenerate piecewise linear case where every slope is zero."
+  },
+  {
+    "source": "calculus/piecewise-linear",
+    "target": "calculus/piecewise-function",
+    "label": "special case of",
+    "description": "A piecewise linear function is a piecewise function in which every piece is restricted to a degree-one polynomial, making it the simplest piecewise form that can approximate curved payoffs and continuous functions with kinks."
+  },
+  {
+    "source": "calculus/piecewise-linear",
+    "target": "derivatives/option-payoff-diagrams",
+    "label": "models",
+    "description": "Every vanilla and spread option payoff at expiry is piecewise linear \u2014 a call is two linear pieces joined at the strike, a bull spread adds a third flat cap \u2014 so option payoff diagrams are precisely plots of piecewise linear functions."
+  },
+  {
+    "source": "calculus/piecewise-linear",
+    "target": "machine-learning/neural-networks",
+    "label": "activation function in",
+    "description": "The ReLU activation function max(0, x) is piecewise linear \u2014 zero for negative inputs, identity for positive inputs \u2014 making deep neural networks with ReLU activations globally piecewise linear functions whose regions are defined by which neurons are active."
+  },
+  {
     "source": "calculus/points-of-inflexion",
     "target": "calculus/convex-function",
     "label": "boundary of",
@@ -3418,6 +3484,24 @@
     "target": "derivatives/finite-difference-methods",
     "label": "accelerates",
     "description": "Richardson extrapolation can be applied to a finite-difference PDE solver by running the grid at two resolutions and combining the results, cancelling the leading error term and achieving fourth-order accuracy from a second-order scheme at little extra cost."
+  },
+  {
+    "source": "calculus/riemann-sum",
+    "target": "calculus/definite-integral",
+    "label": "converges to",
+    "description": "The Riemann sum is the constructive definition of the definite integral: as the partition is refined to infinitely many infinitely thin rectangles, the sum converges to the exact area under the curve."
+  },
+  {
+    "source": "calculus/riemann-sum",
+    "target": "calculus/piecewise-constant",
+    "label": "approximates via",
+    "description": "A Riemann sum approximates the integrand by a piecewise constant function \u2014 each rectangle holds the integrand constant at its sample value \u2014 making piecewise constant the core modelling assumption behind all Riemann-type quadrature rules."
+  },
+  {
+    "source": "calculus/riemann-sum",
+    "target": "risk/monte-carlo-simulation",
+    "label": "randomised form of",
+    "description": "Monte Carlo integration is a Riemann sum with randomly placed nodes: the sample mean of path payoffs is a stochastic Riemann sum that converges at rate O(1/sqrt(n)) rather than the O(1/n) of deterministic rules, but works in high dimensions where regular grids are impractical."
   },
   {
     "source": "calculus/rotational-symmetry",
@@ -6984,6 +7068,30 @@
     "description": "Moneyness classifies a put as ITM, ATM, or OTM depending on whether the underlying is below, at, or above the strike \u2014 this classification determines the put's intrinsic value and delta."
   },
   {
+    "source": "derivatives/option-payoff-convexity",
+    "target": "calculus/convex-function",
+    "label": "applies",
+    "description": "The expiry payoff of a long option is a convex function of the underlying, so all results from convex function theory \u2014 including Jensen's inequality and the positivity of the second derivative \u2014 apply directly to options pricing and hedging."
+  },
+  {
+    "source": "derivatives/option-payoff-convexity",
+    "target": "calculus/piecewise-linear",
+    "label": "arising from kink in",
+    "description": "Option payoff convexity originates from the kink at the strike in the piecewise linear payoff: the payoff transitions from slope zero to slope one at K, creating a point of infinite curvature at expiry that smooths to finite positive gamma before expiry."
+  },
+  {
+    "source": "derivatives/option-payoff-convexity",
+    "target": "derivatives/gamma-greeks",
+    "label": "explains positive",
+    "description": "The convexity of the option payoff is the geometric reason why all long option positions have positive gamma: a curved payoff function always has a positive second derivative, which is exactly what gamma measures for the option price surface."
+  },
+  {
+    "source": "derivatives/option-payoff-convexity",
+    "target": "probability/jensens-inequality",
+    "label": "instance of",
+    "description": "The fact that a long option is worth more than its intrinsic value whenever volatility is positive is a direct application of Jensen's inequality: for a convex payoff f(S_T), E[f(S_T)] >= f(E[S_T]), so the fair value exceeds the payoff evaluated at the expected price."
+  },
+  {
     "source": "derivatives/option-payoff-diagrams",
     "target": "derivatives/protective-put-strategy",
     "label": "visualises",
@@ -7486,6 +7594,24 @@
     "target": "derivatives/put-call-parity",
     "label": "simplest case of",
     "description": "Put-call parity is the most elementary static hedge relationship: a long call combined with a short put at the same strike exactly replicates a forward payoff with no rebalancing, demonstrating that vanilla option portfolios can match payoffs without any dynamic trading."
+  },
+  {
+    "source": "derivatives/static-replication",
+    "target": "calculus/piecewise-linear",
+    "label": "builds from",
+    "description": "Static replication assembles exotic payoffs from a weighted strip of vanilla options, each of which has a piecewise linear payoff \u2014 the decomposition converts a complex terminal profile into a portfolio of simple two-piece payoff functions."
+  },
+  {
+    "source": "derivatives/static-replication",
+    "target": "derivatives/option-payoff-diagrams",
+    "label": "decomposes into",
+    "description": "The static replication formula decomposes any smooth payoff diagram into a linear combination of individual call and put payoff diagrams, with the weight on each vanilla option determined by the second derivative of the target payoff at that strike."
+  },
+  {
+    "source": "derivatives/static-replication",
+    "target": "volatility/variance-swap",
+    "label": "replicates",
+    "description": "The variance swap's log-payoff is the canonical application of static replication: buying a 1/K^2-weighted strip of calls and puts for all strikes replicates the variance payoff model-free, which is why the VIX is computed from quoted option prices alone."
   },
   {
     "source": "derivatives/statistical-arbitrage",
@@ -8158,6 +8284,24 @@
     "target": "portfolio-theory/fama-french-three-factor-model",
     "label": "built on",
     "description": "The Fama\u2013French three-factor model was the foundational academic work that identified size and value as compensated factors alongside the market \u2014 it launched the factor investing industry."
+  },
+  {
+    "source": "financial-maths/fisher-equation",
+    "target": "fixed-income/bond-yield",
+    "label": "decomposes",
+    "description": "The Fisher equation decomposes a nominal bond yield into a real component and an inflation compensation component, showing that two bonds with identical nominal yields but different maturities can imply very different real returns depending on the inflation term structure."
+  },
+  {
+    "source": "financial-maths/fisher-equation",
+    "target": "fixed-income/breakeven-inflation",
+    "label": "defines",
+    "description": "Break-even inflation is the Fisher spread applied to market prices: the difference between the nominal bond yield and the real (inflation-linked) bond yield directly measures the market-implied inflation expectation embedded in nominal yields via the Fisher equation."
+  },
+  {
+    "source": "financial-maths/fisher-equation",
+    "target": "fixed-income/inflation-linked-bonds",
+    "label": "underpins pricing of",
+    "description": "Inflation-linked bond pricing rests on the Fisher equation: the real yield on a TIPS or gilt strip is the nominal yield minus expected inflation, and the bond pays coupons and principal indexed to realised inflation rather than the expected rate."
   },
   {
     "source": "financial-maths/fund-of-funds",
@@ -8856,6 +9000,42 @@
     "description": "When bootstrapping a yield curve from bond prices, the dirty price (full price) must be used as the input \u2014 using clean prices without adding accrued interest will produce systematically incorrect discount factors, particularly for bonds trading near coupon payment dates."
   },
   {
+    "source": "fixed-income/acm-model",
+    "target": "fixed-income/completely-vs-essentially-affine",
+    "label": "uses",
+    "description": "The ACM model adopts the essentially affine market price of risk, allowing term premia to vary independently of yield-curve volatility \u2014 a key reason the model tracks empirical term premia more accurately than older completely affine specifications."
+  },
+  {
+    "source": "fixed-income/acm-model",
+    "target": "fixed-income/term-premium",
+    "label": "estimates",
+    "description": "The ACM model is the standard tool used by the Federal Reserve Bank of New York to decompose Treasury yields into rate-expectation and term-premium components, with daily estimates published on the NY Fed website."
+  },
+  {
+    "source": "fixed-income/acm-model",
+    "target": "fixed-income/yield-curve-pca-factors",
+    "label": "uses as state",
+    "description": "ACM uses the first five principal components of the Treasury yield curve as state variables, so the model's factors are exactly the PCA level, slope, and curvature factors widely used in yield-curve analysis."
+  },
+  {
+    "source": "fixed-income/affine-model-identification",
+    "target": "fixed-income/acm-model",
+    "label": "motivates normalisation in",
+    "description": "The ACM model's use of PCA factors as state variables is itself an identification choice \u2014 the orthogonality of principal components removes the rotational ambiguity that would otherwise make parameter estimates incomparable across studies."
+  },
+  {
+    "source": "fixed-income/affine-model-identification",
+    "target": "fixed-income/dai-singleton-classification",
+    "label": "resolved by",
+    "description": "Dai and Singleton's canonical form for the Am(n) classification resolves the identification problem by imposing the minimum set of parameter restrictions needed to select a unique model representative from each observational equivalence class."
+  },
+  {
+    "source": "fixed-income/affine-model-identification",
+    "target": "fixed-income/general-affine-model",
+    "label": "applies to",
+    "description": "The observational equivalence problem is a core issue in the general N-factor affine model, where any invertible linear rotation of the state vector produces identical bond prices with different parameter values."
+  },
+  {
     "source": "fixed-income/affine-term-structure-models",
     "target": "fixed-income/yield-curve",
     "label": "calibrated to",
@@ -9060,6 +9240,30 @@
     "description": "The bond hedging argument shows that the market price of risk \u03bb cannot be eliminated from fixed-income pricing because the short rate is not a traded asset that can self-hedge."
   },
   {
+    "source": "fixed-income/bond-pricing-equation",
+    "target": "fixed-income/affine-term-structure-models",
+    "label": "closed-form cases of",
+    "description": "Affine term structure models are exactly the class of short-rate models for which the bond pricing equation expectation can be evaluated in closed form, yielding the exponential-affine formula exp(A - B*r) rather than requiring Monte Carlo simulation."
+  },
+  {
+    "source": "fixed-income/bond-pricing-equation",
+    "target": "fixed-income/bond-hedging-argument",
+    "label": "equivalent to",
+    "description": "The risk-neutral expectation bond pricing equation and the bond hedging PDE are two routes to the same answer: Feynman-Kac guarantees that the conditional expectation under Q satisfies the same fixed-income PDE derived from hedging two bonds."
+  },
+  {
+    "source": "fixed-income/bond-pricing-equation",
+    "target": "fixed-income/coupon-bond-and-strips",
+    "label": "generalised by",
+    "description": "The coupon bond pricing formula is a direct application of the zero-coupon bond pricing equation: each coupon cash flow is multiplied by the corresponding P(t, t_i) obtained from the expectation formula, then summed."
+  },
+  {
+    "source": "fixed-income/bond-pricing-equation",
+    "target": "stochastic-processes/feynman-kac-formula",
+    "label": "derived from",
+    "description": "The bond pricing equation is the Feynman-Kac representation of the fixed-income PDE: the solution to the PDE with terminal condition V(r,T)=1 equals the conditional expectation of exp(-integral of r) under the risk-neutral measure."
+  },
+  {
     "source": "fixed-income/bond-yield",
     "target": "fixed-income/accrued-interest",
     "label": "applied to dirty price",
@@ -9210,6 +9414,24 @@
     "description": "The CTD bond's DV01 divided by its conversion factor gives the futures contract's effective DV01, which sets the number of contracts needed to hedge a given interest rate exposure."
   },
   {
+    "source": "fixed-income/cir-bond-price-formula",
+    "target": "fixed-income/affine-term-structure-models",
+    "label": "instance of",
+    "description": "The CIR bond price formula is a one-factor affine term structure model: the bond price is exponential-affine in the single state variable r_t, with A and B functions satisfying the Riccati ODEs that characterise all affine models."
+  },
+  {
+    "source": "fixed-income/cir-bond-price-formula",
+    "target": "fixed-income/bond-pricing-equation",
+    "label": "closed-form solution of",
+    "description": "The CIR A(tau) and B(tau) functions give the exact closed-form evaluation of the bond pricing expectation E^Q[exp(-integral of r)] when r follows the square-root CIR diffusion, making Monte Carlo unnecessary for this model."
+  },
+  {
+    "source": "fixed-income/cir-bond-price-formula",
+    "target": "fixed-income/vasicek-ab-solutions",
+    "label": "contrasted with",
+    "description": "CIR and Vasicek both have exponential-affine bond price formulae of the form A(tau)*exp(-B(tau)*r), but CIR A and B are more complex due to the sqrt(r) volatility that prevents negative rates, whereas Vasicek allows analytically simpler expressions."
+  },
+  {
     "source": "fixed-income/cms-convexity-adjustment",
     "target": "fixed-income/convexity-adjustment-stochastic-rates",
     "label": "specific case of",
@@ -9268,6 +9490,24 @@
     "target": "fixed-income/prepayment-risk",
     "label": "redistributes",
     "description": "The CMO structure concentrates prepayment risk in support tranches while insulating PAC tranches; it does not eliminate prepayment risk \u2014 it reallocates it to investors with higher risk appetite."
+  },
+  {
+    "source": "fixed-income/completely-vs-essentially-affine",
+    "target": "fixed-income/dai-singleton-classification",
+    "label": "extends",
+    "description": "The completely affine specification enforces Dai\u2013Singleton admissibility constraints on the market price of risk; the essentially affine extension relaxes these constraints while preserving the affine structure of bond prices."
+  },
+  {
+    "source": "fixed-income/completely-vs-essentially-affine",
+    "target": "fixed-income/general-affine-model",
+    "label": "specialises to",
+    "description": "The completely affine and essentially affine specifications are both instances of the general affine framework; the distinction lies in which family of market-price-of-risk functions is permitted."
+  },
+  {
+    "source": "fixed-income/completely-vs-essentially-affine",
+    "target": "fixed-income/term-premium",
+    "label": "determines shape of",
+    "description": "The choice between completely and essentially affine risk prices determines whether the term premium is mechanically tied to instantaneous volatility or is free to vary independently, with essentially affine models fitting historical term premium dynamics far better."
   },
   {
     "source": "fixed-income/convergence-trading",
@@ -9396,6 +9636,30 @@
     "description": "CDS spreads are used to bootstrap the piecewise-constant hazard rate curve in intensity-based models, analogously to how swap rates imply the discount curve."
   },
   {
+    "source": "fixed-income/credit-spread",
+    "target": "fixed-income/credit-default-swap",
+    "label": "traded via",
+    "description": "Credit default swaps allow investors to trade credit spreads directly: the CDS premium is approximately equal to the credit spread of the reference bond, enabling the separation of credit risk from interest rate risk for hedging and speculation."
+  },
+  {
+    "source": "fixed-income/credit-spread",
+    "target": "fixed-income/hazard-rate-bootstrapping",
+    "label": "calibrated via",
+    "description": "Credit spreads observed in the bond market are the primary calibration instruments for hazard rate bootstrapping: the approximate formula spread = lambda*(1-R) converts each maturity spread into the hazard rate for that interval."
+  },
+  {
+    "source": "fixed-income/credit-spread",
+    "target": "fixed-income/z-spread",
+    "label": "measured by",
+    "description": "The Z-spread is the parallel shift to the risk-free spot curve that reprices a corporate bond exactly, providing a precise credit spread measure that accounts for the full shape of the yield curve rather than a single benchmark yield."
+  },
+  {
+    "source": "fixed-income/credit-spread",
+    "target": "risk/recovery-rate",
+    "label": "determined jointly with",
+    "description": "The credit spread formula spread = lambda*(1-R) shows that credit spreads cannot uniquely identify the default probability lambda and the recovery rate R separately: the same spread is consistent with many (lambda, R) pairs, making recovery rate assumptions critical."
+  },
+  {
     "source": "fixed-income/cross-currency-swap",
     "target": "financial-maths/interest-rate-swap",
     "label": "extends",
@@ -9448,6 +9712,24 @@
     "target": "fixed-income/multi-curve-framework",
     "label": "inputs to",
     "description": "Short-dated deposits are among the market instruments used to calibrate the near end of OIS and IBOR forward curves in the multi-curve framework."
+  },
+  {
+    "source": "fixed-income/discrete-time-affine-model",
+    "target": "fixed-income/acm-model",
+    "label": "framework for",
+    "description": "The ACM model is a leading application of the discrete-time affine framework, using a five-factor Gaussian VAR to estimate term premia from monthly Treasury yield data without any continuous-time approximation."
+  },
+  {
+    "source": "fixed-income/discrete-time-affine-model",
+    "target": "fixed-income/completely-vs-essentially-affine",
+    "label": "instantiates",
+    "description": "Discrete-time affine models can implement either completely affine or essentially affine risk prices by choosing different functional forms for the market price of risk vector in the stochastic discount factor."
+  },
+  {
+    "source": "fixed-income/discrete-time-affine-model",
+    "target": "fixed-income/general-affine-model",
+    "label": "discrete analogue of",
+    "description": "The discrete-time VAR affine model is the exact discrete-time counterpart of the continuous-time general affine framework, producing the same exponential-affine bond pricing formula but estimated via matrix recursions instead of ODE solvers."
   },
   {
     "source": "fixed-income/dv01",
@@ -9594,6 +9876,30 @@
     "description": "Short-dated FRAs pin down forward IBOR rates at specific maturities and are among the primary instruments used to bootstrap IBOR forward curves in the multi-curve framework."
   },
   {
+    "source": "fixed-income/forward-rate-bond-price",
+    "target": "calculus/linear-interpolation",
+    "label": "motivates precision of",
+    "description": "Because the instantaneous forward rate is the derivative of the log bond price with respect to maturity, imprecise interpolation between bond prices can produce wildly erratic forward rate curves, motivating smooth interpolation methods over simple linear interpolation."
+  },
+  {
+    "source": "fixed-income/forward-rate-bond-price",
+    "target": "fixed-income/bond-pricing-equation",
+    "label": "consistent with",
+    "description": "The bond pricing equation and the forward rate formula are two representations of the same object: the short rate r_t = f(t,t) is the instantaneous forward rate at the current time, and the bond price expectation integrates over all future instantaneous forwards."
+  },
+  {
+    "source": "fixed-income/forward-rate-bond-price",
+    "target": "fixed-income/forward-rate-curve",
+    "label": "defines mathematically",
+    "description": "The forward rate curve f(t,T) is mathematically defined by the log-derivative formula f = -d(ln P)/dT, making it the precise continuous-time limit of the discrete forward rates used in yield curve bootstrapping."
+  },
+  {
+    "source": "fixed-income/forward-rate-bond-price",
+    "target": "fixed-income/hjm-framework",
+    "label": "foundation of",
+    "description": "The HJM framework takes the relationship P(t,T) = exp(-integral of f(t,u) du) as its starting point and models f(t,T) directly, with the no-arbitrage drift condition ensuring the bond prices implied by the forward curve are internally consistent."
+  },
+  {
     "source": "fixed-income/forward-rate-curve",
     "target": "financial-maths/interest-rate-swap",
     "label": "prices floating leg of",
@@ -9630,6 +9936,42 @@
     "description": "G2++ is the Brigo-Mercurio formalisation of the two-factor Hull-White model; it adds the deterministic shift \u03c6(t) for exact yield-curve fit and derives closed-form swaption prices from the Gaussian factor structure."
   },
   {
+    "source": "fixed-income/general-affine-model",
+    "target": "fixed-income/affine-term-structure-models",
+    "label": "generalises",
+    "description": "The general affine model provides the full N-factor dual-measure specification (Duffie-Kan 1996), of which the standard ATSM bond pricing formula P = exp(A - B'X) is the risk-neutral pricing component."
+  },
+  {
+    "source": "fixed-income/general-affine-model",
+    "target": "fixed-income/dai-singleton-classification",
+    "label": "classified by",
+    "description": "Dai and Singleton (2000) classify all general affine models into families A_m(N) by the number of square-root factors m, identifying which parameter restrictions are internally admissible."
+  },
+  {
+    "source": "fixed-income/general-affine-model",
+    "target": "fixed-income/general-affine-one-factor",
+    "label": "reduces to",
+    "description": "Setting N=1 and a scalar state X=r recovers the one-factor general affine model: the vector Riccati ODE system collapses to the scalar ODEs for A(\u03c4) and B(\u03c4)."
+  },
+  {
+    "source": "fixed-income/general-affine-model",
+    "target": "fixed-income/general-affine-two-factor",
+    "label": "reduces to",
+    "description": "Setting N=2 and X=(r,l) recovers the two-factor general affine model: the vector Riccati system becomes three scalar ODEs for A(\u03c4), B(\u03c4), and C(\u03c4)."
+  },
+  {
+    "source": "fixed-income/general-affine-model",
+    "target": "fixed-income/interest-rate-market-price-of-risk",
+    "label": "extends",
+    "description": "The general affine model uses the essentially affine specification \u03bb_t = \u03bb_0 + \u03bb_1 X_t to extend the one-factor constant market price of risk to a state-dependent N-factor formulation."
+  },
+  {
+    "source": "fixed-income/general-affine-model",
+    "target": "fixed-income/term-premium",
+    "label": "produces",
+    "description": "The essentially affine market price of risk in the general affine model enables term premium decomposition: the premium equals -B(\u03c4)' H_0 \u03bb_t, extracted by fitting both P-measure time-series and Q-measure cross-section."
+  },
+  {
     "source": "fixed-income/general-affine-one-factor",
     "target": "fixed-income/affine-term-structure-models",
     "label": "one-factor instance of",
@@ -9658,6 +10000,30 @@
     "target": "fixed-income/two-factor-pricing-pde",
     "label": "solution form for",
     "description": "Substituting the ansatz e^{A-Br-Cl} into the two-factor pricing PDE and matching powers of r and l yields the three-ODE Riccati system that determines A, B, C."
+  },
+  {
+    "source": "fixed-income/hazard-rate-bootstrapping",
+    "target": "calculus/piecewise-constant",
+    "label": "assumes",
+    "description": "Hazard rate bootstrapping becomes tractable precisely because it assumes a piecewise constant hazard rate: each interval introduces one unknown, and the survival probability integral reduces to a closed-form product of exponentials."
+  },
+  {
+    "source": "fixed-income/hazard-rate-bootstrapping",
+    "target": "fixed-income/credit-default-swap",
+    "label": "calibrates to",
+    "description": "Hazard rate bootstrapping uses quoted CDS spreads as the calibration instruments, solving sequentially for the hazard rate in each maturity bucket so the model exactly reprices each CDS at par."
+  },
+  {
+    "source": "fixed-income/hazard-rate-bootstrapping",
+    "target": "fixed-income/yield-curve-bootstrapping",
+    "label": "analogous to",
+    "description": "Hazard rate bootstrapping follows the same sequential local-calibration logic as yield curve bootstrapping: each new maturity instrument introduces exactly one new unknown parameter, which is solved analytically given the parameters from all shorter maturities."
+  },
+  {
+    "source": "fixed-income/hazard-rate-bootstrapping",
+    "target": "stochastic-processes/intensity-based-credit-model",
+    "label": "parametrises",
+    "description": "The output of hazard rate bootstrapping is the piecewise constant intensity function that directly parametrises intensity-based credit models, providing the survival probabilities needed to price any instrument that depends on a firm's default time."
   },
   {
     "source": "fixed-income/hjm-framework",
@@ -9844,6 +10210,24 @@
     "target": "fixed-income/two-factor-interest-rate-models",
     "label": "includes",
     "description": "Two-factor models (G2++, Longstaff-Schwartz) appear in the landscape between one-factor short-rate models and LMM, offering richer correlation structure for callable bond and CVA applications."
+  },
+  {
+    "source": "fixed-income/kim-wright-model",
+    "target": "fixed-income/acm-model",
+    "label": "contrasts with",
+    "description": "Both Kim\u2013Wright and ACM decompose Treasury yields into rate expectations and term premium, but Kim\u2013Wright uses two latent factors estimated by Kalman filter while ACM uses five observable principal components with OLS regression, producing materially different term-premium estimates in practice."
+  },
+  {
+    "source": "fixed-income/kim-wright-model",
+    "target": "fixed-income/completely-vs-essentially-affine",
+    "label": "uses",
+    "description": "Kim\u2013Wright adopts the essentially affine market price of risk, allowing the term premium to vary as an affine function of the latent state vector independently of yield-curve volatility \u2014 the same class as ACM and the key departure from older completely affine models."
+  },
+  {
+    "source": "fixed-income/kim-wright-model",
+    "target": "fixed-income/term-premium",
+    "label": "estimates",
+    "description": "Kim\u2013Wright is one of the Federal Reserve Board's primary tools for extracting the term premium from Treasury yields, with the Kalman filter recovering unobserved state variables that drive the decomposition into rate expectations and risk compensation components."
   },
   {
     "source": "fixed-income/libor-in-arrears-swap",
@@ -10096,6 +10480,24 @@
     "target": "fixed-income/interest-rate-model-landscape",
     "label": "priced with",
     "description": "Callable CMS range accrual notes sit at the complex end of the interest rate model landscape, requiring a stochastic volatility term-structure model such as SABR-LMM to capture both the corridor probability and the callable feature simultaneously."
+  },
+  {
+    "source": "fixed-income/real-yield",
+    "target": "financial-maths/fisher-equation",
+    "label": "derived from",
+    "description": "The real yield is the Fisher decomposition of the nominal yield minus expected inflation: the Fisher equation r_nom = r_real + pi gives r_real = r_nom - pi, making the TIPS-Treasury spread the direct market measure of expected inflation."
+  },
+  {
+    "source": "fixed-income/real-yield",
+    "target": "fixed-income/breakeven-inflation",
+    "label": "determines",
+    "description": "Break-even inflation is the difference between the nominal yield and the real yield: when the TIPS real yield rises and nominal yields are unchanged, break-even inflation falls, signalling lower market-implied inflation expectations."
+  },
+  {
+    "source": "fixed-income/real-yield",
+    "target": "fixed-income/inflation-linked-bonds",
+    "label": "quoted for",
+    "description": "Real yield is the primary metric by which inflation-linked bonds (TIPS, index-linked gilts) are quoted and traded: the buyer locks in a real return above CPI regardless of actual inflation outcomes over the bond's life."
   },
   {
     "source": "fixed-income/risk-neutral-short-rate",
@@ -10380,6 +10782,24 @@
     "description": "The closed-form B(\u03c4) and A(\u03c4) functions for Vasicek bond prices are obtained by applying the exponential-affine ansatz to the Vasicek pricing PDE and solving the resulting two ODEs analytically."
   },
   {
+    "source": "fixed-income/wishart-affine-term-structure",
+    "target": "fixed-income/cross-currency-swap",
+    "label": "prices consistently",
+    "description": "The stochastic correlation between yield curves in the Wishart affine model is essential for consistent pricing of cross-currency swaps, where the swap value depends on the joint distribution of interest rates across two or more currencies."
+  },
+  {
+    "source": "fixed-income/wishart-affine-term-structure",
+    "target": "fixed-income/general-affine-model",
+    "label": "extends to matrix-valued",
+    "description": "The Wishart affine term structure model generalises the general affine framework by replacing scalar variance factors with a Wishart covariance matrix, retaining exponential-affine bond pricing with matrix-valued Riccati ODEs."
+  },
+  {
+    "source": "fixed-income/wishart-affine-term-structure",
+    "target": "stochastic-processes/wishart-process",
+    "label": "applies to yield curves",
+    "description": "The Wishart affine term structure model directly uses the Wishart matrix process as its state variable, extending the scalar CIR variance dynamics to a full covariance matrix driving joint multi-currency yield curve evolution."
+  },
+  {
     "source": "fixed-income/yield-curve",
     "target": "derivatives/rho-greeks",
     "label": "drives",
@@ -10504,6 +10924,24 @@
     "target": "fixed-income/interest-rate-market-price-of-risk",
     "label": "estimates",
     "description": "The short-end slope of the yield curve is the empirical method for extracting the market price of interest rate risk \u03bb, since the yield at short maturities equals the spot rate plus (u \u2212 \u03bbw)/2 times time to maturity."
+  },
+  {
+    "source": "fixed-income/yield-curve-theories",
+    "target": "fixed-income/forward-rate-curve",
+    "label": "interpreted via",
+    "description": "The pure expectations hypothesis gives the sharpest interpretation of the forward rate curve: each forward rate is the market-expected future spot rate for that period, making the entire forward curve a forecast of the future short rate path."
+  },
+  {
+    "source": "fixed-income/yield-curve-theories",
+    "target": "fixed-income/term-premium",
+    "label": "motivates",
+    "description": "The liquidity preference theory is the theoretical foundation for the term premium: it explains why investors demand extra yield for long-maturity bonds and why the term premium is typically positive and increasing with maturity."
+  },
+  {
+    "source": "fixed-income/yield-curve-theories",
+    "target": "fixed-income/yield-curve",
+    "label": "explains shape of",
+    "description": "Yield curve theories collectively explain why the yield curve can be normal (upward-sloping), flat, inverted, or humped: each shape has a different interpretation depending on which theory best describes the current market environment."
   },
   {
     "source": "fixed-income/z-spread",
@@ -10990,6 +11428,12 @@
     "target": "linear-algebra/matrix-exponential",
     "label": "foundation of",
     "description": "Eigenvalues and eigenvectors are the foundation of the matrix exponential for diagonalisable matrices \u2014 each eigenvalue lambda_i maps to e^{lambda_i} on the diagonal, so the spectrum of A fully determines e^A."
+  },
+  {
+    "source": "linear-algebra/eigenvalues-and-eigenvectors",
+    "target": "linear-algebra/perron-frobenius-theorem",
+    "label": "specialised by",
+    "description": "The Perron\u2013Frobenius theorem is a specialisation of eigenvalue theory to irreducible non-negative matrices, identifying the leading eigenvalue and its unique positive eigenvector as the objects that determine the stationary distribution of an associated Markov chain."
   },
   {
     "source": "linear-algebra/eigenvalues-and-eigenvectors",
@@ -11554,6 +11998,12 @@
     "target": "linear-algebra/rank",
     "label": "illustrates",
     "description": "The outer product of two non-zero vectors always produces a rank-1 matrix \u2014 it is the canonical example of a rank-1 matrix and demonstrates that rank measures the number of independent rows or columns."
+  },
+  {
+    "source": "linear-algebra/perron-frobenius-theorem",
+    "target": "stochastic-processes/stationary-distribution",
+    "label": "proves existence of",
+    "description": "For an irreducible stochastic matrix, the Perron\u2013Frobenius theorem guarantees a unique stationary distribution with all positive entries \u2014 the linear algebra foundation for why ergodic Markov chains converge to a unique invariant measure."
   },
   {
     "source": "linear-algebra/pivot",
@@ -18402,6 +18852,24 @@
     "description": "Constant-mix requires periodic rebalancing to restore portfolio weights to their targets \u2014 the frequency and threshold of rebalancing determines the strategy's transaction cost drag and how closely it tracks the theoretical concave payoff profile."
   },
   {
+    "source": "portfolio-theory/consumption-based-capm",
+    "target": "portfolio-theory/equity-premium-puzzle",
+    "label": "motivates",
+    "description": "CCAPM predicts an equity premium of \u03b3\u03c3_c \u03c3_eq \u03c1, but with plausible \u03b3\u22482 this gives \u22480.16% per year \u2014 far below the observed \u22486%, defining the equity premium puzzle."
+  },
+  {
+    "source": "portfolio-theory/consumption-based-capm",
+    "target": "portfolio-theory/euler-equation-asset-pricing",
+    "label": "derived from",
+    "description": "CCAPM follows directly from the consumption Euler equation E[M_{t+1}R_{t+1}]=1 with CRRA utility, replacing the abstract SDF with the concrete consumption ratio."
+  },
+  {
+    "source": "portfolio-theory/consumption-based-capm",
+    "target": "portfolio-theory/stochastic-discount-factor",
+    "label": "implements",
+    "description": "CCAPM provides the explicit SDF M_{t+1} = \u03b2(C_{t+1}/C_t)^{-\u03b3}, connecting the abstract SDF pricing kernel to observable aggregate consumption data."
+  },
+  {
     "source": "portfolio-theory/contrarian-investor",
     "target": "portfolio-theory/mean-reversion-strategy",
     "label": "employs",
@@ -18496,6 +18964,30 @@
     "target": "portfolio-theory/momentum-strategy",
     "label": "decomposes",
     "description": "Cross-sectional vs time-series momentum decomposes the broad momentum effect into two distinct implementations \u2014 relative ranking within a universe versus absolute trend signals on individual assets."
+  },
+  {
+    "source": "portfolio-theory/crra-utility",
+    "target": "portfolio-theory/consumption-based-capm",
+    "label": "underlies",
+    "description": "CRRA utility generates the CCAPM stochastic discount factor M_{t+1} = \u03b2(C_{t+1}/C_t)^{-\u03b3}, with \u03b3 determining both risk aversion and intertemporal substitution."
+  },
+  {
+    "source": "portfolio-theory/crra-utility",
+    "target": "portfolio-theory/epstein-zin-preferences",
+    "label": "generalised by",
+    "description": "Epstein-Zin preferences generalise CRRA by decoupling risk aversion \u03b3 from the elasticity of intertemporal substitution \u03c8, which are forced equal in standard CRRA (\u03c8 = 1/\u03b3)."
+  },
+  {
+    "source": "portfolio-theory/crra-utility",
+    "target": "portfolio-theory/hansen-jagannathan-bound",
+    "label": "tested by",
+    "description": "The HJ bound provides a lower bound on SDF volatility that CRRA utility fails to meet with plausible \u03b3, quantifying why the equity premium puzzle is so severe."
+  },
+  {
+    "source": "portfolio-theory/crra-utility",
+    "target": "portfolio-theory/mertons-portfolio-problem",
+    "label": "used in",
+    "description": "Merton's continuous-time portfolio problem derives the optimal equity allocation as (\u03bc-r)/(\u03b3\u03c3\u00b2) under CRRA utility, with \u03b3=1 (log utility) giving the Kelly fraction."
   },
   {
     "source": "portfolio-theory/denoising-covariance-matrices",
@@ -18648,6 +19140,60 @@
     "description": "The weak form of EMH implies that return autocorrelation should be zero at all lags \u2014 any detectable pattern in past prices would be instantly arbitraged away; finding significant autocorrelation is therefore evidence against market efficiency."
   },
   {
+    "source": "portfolio-theory/epstein-zin-preferences",
+    "target": "portfolio-theory/equity-premium-puzzle",
+    "label": "helps resolve",
+    "description": "By separating risk aversion from EIS, Epstein-Zin allows calibrations (e.g. \u03b3=10, \u03c8=1.5) that match the observed equity premium without the extreme \u03b3\u224875 required by CRRA."
+  },
+  {
+    "source": "portfolio-theory/epstein-zin-preferences",
+    "target": "portfolio-theory/stochastic-discount-factor",
+    "label": "extends",
+    "description": "Epstein-Zin generates a richer SDF that loads on both consumption growth and market returns, producing higher effective SDF volatility than CRRA without requiring implausible risk aversion."
+  },
+  {
+    "source": "portfolio-theory/equity-premium-puzzle",
+    "target": "portfolio-theory/consumption-based-capm",
+    "label": "arises from",
+    "description": "The equity premium puzzle is revealed by the CCAPM: with plausible risk aversion, the model predicts equity premia an order of magnitude smaller than those observed historically."
+  },
+  {
+    "source": "portfolio-theory/equity-premium-puzzle",
+    "target": "portfolio-theory/epstein-zin-preferences",
+    "label": "addressed by",
+    "description": "Epstein-Zin preferences help resolve the equity premium puzzle by decoupling risk aversion from EIS, enabling high effective SDF volatility without requiring \u03b3\u224875."
+  },
+  {
+    "source": "portfolio-theory/equity-premium-puzzle",
+    "target": "portfolio-theory/hansen-jagannathan-bound",
+    "label": "formalised by",
+    "description": "The HJ bound formalises the equity premium puzzle: matching observed Sharpe ratios of \u22480.40 requires std(M)/E[M] \u2265 0.40, which standard consumption SDFs fail to achieve."
+  },
+  {
+    "source": "portfolio-theory/euler-equation-asset-pricing",
+    "target": "fixed-income/bond-pricing-equation",
+    "label": "reduces to",
+    "description": "Applied to a risk-free zero-coupon bond, the Euler equation E_t[M*R_f] = 1 gives P(t,T) = E_t^Q[exp(-integral of r_s ds)], recovering the bond pricing equation as a special case where the SDF is the risk-neutral deflator."
+  },
+  {
+    "source": "portfolio-theory/euler-equation-asset-pricing",
+    "target": "portfolio-theory/capital-asset-pricing-model",
+    "label": "specialises to",
+    "description": "CAPM is the special case of the Euler equation where the SDF is linear in the market return: M = a - b*R_m, which implies that only market-beta, not idiosyncratic risk, earns a risk premium."
+  },
+  {
+    "source": "portfolio-theory/euler-equation-asset-pricing",
+    "target": "portfolio-theory/hansen-jagannathan-bound",
+    "label": "implies",
+    "description": "The Euler equation implies the Hansen-Jagannathan bound: for the SDF to satisfy E[MR] = 1 for all observed assets, its volatility relative to its mean must be at least as large as the maximum Sharpe ratio in the cross-section."
+  },
+  {
+    "source": "portfolio-theory/euler-equation-asset-pricing",
+    "target": "portfolio-theory/stochastic-discount-factor",
+    "label": "requires",
+    "description": "The Euler equation E_t[M*R] = 1 is the defining pricing condition that the stochastic discount factor must satisfy for every traded asset, connecting the SDF to observable expected returns and risk premia."
+  },
+  {
     "source": "portfolio-theory/expected-portfolio-return",
     "target": "portfolio-theory/modern-portfolio-theory",
     "label": "return input to",
@@ -18712,6 +19258,24 @@
     "target": "portfolio-theory/tracking-error",
     "label": "constrains",
     "description": "The Fundamental Law implies that for a given IC and breadth, the optimal tracking error budget determines how aggressively active bets should be sized \u2014 exceeding it adds risk without proportional return."
+  },
+  {
+    "source": "portfolio-theory/hansen-jagannathan-bound",
+    "target": "portfolio-theory/capital-asset-pricing-model",
+    "label": "challenges",
+    "description": "The CAPM implies an SDF linear in the market return with volatility roughly gamma*sigma_m; for plausible risk aversion gamma and observed market volatility sigma_m, this SDF volatility is far below what the HJ bound requires to match the equity premium."
+  },
+  {
+    "source": "portfolio-theory/hansen-jagannathan-bound",
+    "target": "portfolio-theory/sharpe-ratio",
+    "label": "bounds via SDF volatility",
+    "description": "The HJ bound states that the maximum Sharpe ratio achievable by any portfolio cannot exceed the volatility-to-mean ratio of the SDF, connecting the cross-sectional dispersion of expected returns to the required volatility of the pricing kernel."
+  },
+  {
+    "source": "portfolio-theory/hansen-jagannathan-bound",
+    "target": "portfolio-theory/stochastic-discount-factor",
+    "label": "constrains volatility of",
+    "description": "The HJ bound is a constraint on the SDF: any candidate pricing kernel must have std(M)/E[M] >= SR_max, and models whose SDF is insufficiently volatile are rejected as inconsistent with observed Sharpe ratios in the cross-section of assets."
   },
   {
     "source": "portfolio-theory/hierarchical-risk-parity",
@@ -19582,6 +20146,30 @@
     "target": "risk/maximum-drawdown",
     "label": "averages over",
     "description": "While the Calmar ratio uses the single maximum drawdown, the Sterling ratio averages the largest drawdowns \u2014 this reduces the influence of a single extreme event on the risk assessment."
+  },
+  {
+    "source": "portfolio-theory/stochastic-discount-factor",
+    "target": "derivatives/risk-neutral-pricing",
+    "label": "specialises to",
+    "description": "Risk-neutral pricing is the special case of SDF pricing where the stochastic discount factor equals the risk-neutral deflator exp(-rt) times the Radon-Nikodym derivative dQ/dP, converting the physical expectation into a risk-neutral expectation."
+  },
+  {
+    "source": "portfolio-theory/stochastic-discount-factor",
+    "target": "fixed-income/bond-pricing-equation",
+    "label": "generalises",
+    "description": "The bond pricing equation P(t,T) = E^Q[exp(-integral of r)] is the SDF pricing formula applied to a risk-free bond, where the SDF under Q is exactly the stochastic discount factor exp(-integral of r_s ds)."
+  },
+  {
+    "source": "portfolio-theory/stochastic-discount-factor",
+    "target": "portfolio-theory/sharpe-ratio",
+    "label": "bounds via Hansen-Jagannathan",
+    "description": "The Hansen-Jagannathan bound states that the maximum Sharpe ratio of any portfolio equals the volatility of the SDF divided by its mean, so the SDF directly constrains the set of achievable risk-return combinations in any economy."
+  },
+  {
+    "source": "portfolio-theory/stochastic-discount-factor",
+    "target": "stochastic-processes/radon-nikodym-derivative",
+    "label": "related to",
+    "description": "The SDF is the product of the risk-free discount factor and the Radon-Nikodym derivative dQ/dP: changing from the physical to the risk-neutral measure by multiplying by dQ/dP is equivalent to adjusting for the risk price embedded in the SDF."
   },
   {
     "source": "portfolio-theory/systematic-vs-idiosyncratic-risk",
@@ -21576,6 +22164,12 @@
     "description": "Variance reduction techniques \u2014 antithetic variates, control variates, importance sampling \u2014 are applied within Monte Carlo simulations to achieve the same pricing accuracy with far fewer paths, directly reducing the computational cost of derivatives pricing and risk measurement."
   },
   {
+    "source": "probability/variance-reduction-techniques",
+    "target": "stochastic-processes/ergodic-theorem",
+    "label": "exploits",
+    "description": "Variance reduction in Monte Carlo simulation relies implicitly on ergodicity: simulated paths are treated as exchangeable samples from the same stationary distribution, so averaging across paths or across time within a single path both converge to the same ensemble expectation."
+  },
+  {
     "source": "probability/venn-diagrams",
     "target": "probability/bayes-theorem",
     "label": "supports derivation of",
@@ -21724,6 +22318,48 @@
     "target": "financial-maths/prime-broker",
     "label": "concentrated in",
     "description": "For hedge funds, counterparty risk is heavily concentrated in the prime brokerage relationship \u2014 a prime broker failure can freeze assets, borrows, and margin financing simultaneously."
+  },
+  {
+    "source": "risk/credit-rating-transition-matrix",
+    "target": "fixed-income/credit-spread",
+    "label": "linked to",
+    "description": "Credit spreads are related to transition matrix default probabilities via \u03bb \u2248 s/(1-R); market-implied (risk-neutral) PDs consistently exceed historical (physical) PDs from transition matrices."
+  },
+  {
+    "source": "risk/credit-rating-transition-matrix",
+    "target": "fixed-income/hazard-rate-bootstrapping",
+    "label": "complements",
+    "description": "Transition matrices give physical (historical) default probabilities by rating grade, while hazard rate bootstrapping from CDS spreads gives risk-neutral PDs \u2014 the gap is the credit risk premium."
+  },
+  {
+    "source": "risk/credit-rating-transition-matrix",
+    "target": "risk/default-probability",
+    "label": "produces",
+    "description": "The default column of a credit rating transition matrix gives the one-year probability of default for each rating grade \u2014 the primary input to Basel IRB models."
+  },
+  {
+    "source": "risk/default-probability",
+    "target": "fixed-income/credit-spread",
+    "label": "inferred from",
+    "description": "The risk-neutral default probability is inferred from the credit spread via the formula PD = 1 - exp(-lambda*T) where lambda = spread/(1-R), making credit spreads the primary market-implied source of default probability estimates."
+  },
+  {
+    "source": "risk/default-probability",
+    "target": "fixed-income/hazard-rate-bootstrapping",
+    "label": "modelled via",
+    "description": "The hazard rate, whose integral gives the cumulative default probability Q(T) = 1 - exp(-integral of lambda), is bootstrapped from CDS spreads to produce a full term structure of default probabilities across maturities."
+  },
+  {
+    "source": "risk/default-probability",
+    "target": "risk/merton-structural-credit-model",
+    "label": "estimated by",
+    "description": "The Merton structural model estimates the physical default probability as the probability that firm value V falls below the debt face D at maturity, giving PD = N(-DD) where DD is the distance to default."
+  },
+  {
+    "source": "risk/default-probability",
+    "target": "risk/recovery-rate",
+    "label": "paired with",
+    "description": "Default probability and recovery rate together determine expected credit loss: EL = PD * LGD = PD * (1 - R), so the credit spread reflects both the probability of default and how much is recovered if it occurs."
   },
   {
     "source": "risk/distance-to-default",
@@ -22174,6 +22810,24 @@
     "target": "risk/value-at-risk",
     "label": "computes",
     "description": "Monte Carlo VaR simulates thousands of portfolio paths and reads the loss quantile directly from the resulting distribution, avoiding the normality assumption of parametric VaR."
+  },
+  {
+    "source": "risk/non-ergodic-markets",
+    "target": "risk/model-risk",
+    "label": "contributes to",
+    "description": "Non-ergodicity is a primary source of model risk: calibrating to one historical regime and forecasting another means the model's distributional assumptions are systematically wrong, inflating or deflating risk measures in ways that are hard to detect until a structural break occurs."
+  },
+  {
+    "source": "risk/non-ergodic-markets",
+    "target": "stochastic-processes/ergodic-theorem",
+    "label": "violates assumption of",
+    "description": "Non-ergodic markets break the core condition of the ergodic theorem \u2014 that one long historical path and many independent realisations are statistically equivalent \u2014 making historical time averages unreliable proxies for future ensemble risk."
+  },
+  {
+    "source": "risk/non-ergodic-markets",
+    "target": "stochastic-processes/regime-switching-models",
+    "label": "modelled via",
+    "description": "Regime-switching models capture non-ergodic market behaviour by allowing process parameters to shift discretely across states, so the overall historical distribution is a mixture rather than the single stationary distribution that ergodic models assume."
   },
   {
     "source": "risk/parametric-var",
@@ -23190,6 +23844,30 @@
     "description": "The IQR displayed by a box plot is a robust spread measure that complements the variance \u2014 IQR is unaffected by outliers that heavily influence standard deviation."
   },
   {
+    "source": "statistics/burn-in-diagnostics",
+    "target": "statistics/effective-sample-size",
+    "label": "complements",
+    "description": "Burn-in diagnostics establish whether the chain has converged to stationarity, while effective sample size measures how much independent information post-convergence samples contain \u2014 both metrics are required to assess MCMC output quality."
+  },
+  {
+    "source": "statistics/burn-in-diagnostics",
+    "target": "statistics/markov-chain-monte-carlo",
+    "label": "validates",
+    "description": "Gelman\u2013Rubin R\u0302 and effective sample size are the standard convergence checks applied to MCMC chains before posterior summaries are reported; they are the quality-control step that separates trustworthy Bayesian calibration from biased artefacts."
+  },
+  {
+    "source": "statistics/burn-in-diagnostics",
+    "target": "stochastic-processes/mixing-time",
+    "label": "estimates",
+    "description": "Burn-in diagnostics such as R\u0302 and ESS are practical tools for assessing whether the burn-in period has been long enough to exceed the chain's mixing time; R\u0302 > 1.1 is a signal that the chain has not yet forgotten its starting state."
+  },
+  {
+    "source": "statistics/burn-in-diagnostics",
+    "target": "stochastic-processes/spectral-gap",
+    "label": "diagnosed by",
+    "description": "A near-zero spectral gap is the root cause of high R\u0302 and low ESS in burn-in diagnostics; identifying slow mixing as a spectral gap problem points the practitioner toward reparameterisation rather than simply running more iterations."
+  },
+  {
     "source": "statistics/central-limit-theorem",
     "target": "probability/inverse-transform-sampling",
     "label": "alternative to",
@@ -23488,6 +24166,18 @@
     "target": "statistics/statistical-power",
     "label": "determines required",
     "description": "The effect size is the key input to power calculations: a small effect size requires a much larger sample to detect reliably, which is why backtests of weak factors need many years of data to achieve adequate statistical power."
+  },
+  {
+    "source": "statistics/effective-sample-size",
+    "target": "statistics/markov-chain-monte-carlo",
+    "label": "measures efficiency of",
+    "description": "Effective sample size is the primary metric for assessing the computational efficiency of an MCMC run, quantifying how many effectively independent draws are obtained from the correlated chain produced by algorithms such as Metropolis\u2013Hastings."
+  },
+  {
+    "source": "statistics/effective-sample-size",
+    "target": "stochastic-processes/mixing-time",
+    "label": "linked to",
+    "description": "A chain with a short mixing time has rapidly decaying autocorrelations and therefore a large effective sample size relative to the raw iteration count \u2014 both are direct consequences of a large spectral gap."
   },
   {
     "source": "statistics/egarch-model",
@@ -23842,6 +24532,24 @@
     "target": "statistics/stationarity",
     "label": "requires",
     "description": "The Granger causality F-test is only valid when both time series are stationary; applying it to non-stationary price levels generates spurious F-statistics from coincident trends rather than genuine predictability."
+  },
+  {
+    "source": "statistics/hamiltonian-monte-carlo",
+    "target": "statistics/burn-in-diagnostics",
+    "label": "still requires",
+    "description": "Despite faster mixing than Metropolis\u2013Hastings, HMC chains still require a burn-in period before samples are treated as draws from the posterior \u2014 Gelman\u2013Rubin diagnostics are used to confirm convergence and set the appropriate discard length."
+  },
+  {
+    "source": "statistics/hamiltonian-monte-carlo",
+    "target": "statistics/effective-sample-size",
+    "label": "maximises",
+    "description": "HMC's leapfrog dynamics are designed to make proposals that are simultaneously far from the current point and in a high-probability region, increasing the spectral gap and therefore the effective sample size per iteration far beyond what random-walk Metropolis achieves."
+  },
+  {
+    "source": "statistics/hamiltonian-monte-carlo",
+    "target": "statistics/markov-chain-monte-carlo",
+    "label": "implements",
+    "description": "Hamiltonian Monte Carlo is a gradient-based MCMC algorithm that constructs the required Markov chain using Hamiltonian dynamics, producing far lower autocorrelation than Metropolis\u2013Hastings and making it the default sampler in Stan and PyMC."
   },
   {
     "source": "statistics/hypothesis-testing",
@@ -24334,6 +25042,30 @@
     "target": "statistics/parametric-model",
     "label": "fits",
     "description": "Method of moments is one of the simplest ways to fit a parametric family to observed financial data: sample moments are equated to the theoretical moments expressed as functions of the unknown parameters, yielding explicit closed-form estimators whenever the system of equations can be solved analytically."
+  },
+  {
+    "source": "statistics/metropolis-hastings",
+    "target": "statistics/burn-in-diagnostics",
+    "label": "requires",
+    "description": "Metropolis\u2013Hastings chains take many steps to forget their starting point, so burn-in diagnostics are used to discard the initial transient period before treating samples as representative draws from the stationary distribution."
+  },
+  {
+    "source": "statistics/metropolis-hastings",
+    "target": "statistics/hamiltonian-monte-carlo",
+    "label": "extended by",
+    "description": "Hamiltonian Monte Carlo generalises Metropolis\u2013Hastings by using gradient information to propose large, directed moves through the parameter space, dramatically reducing autocorrelation and increasing effective sample size in high-dimensional models."
+  },
+  {
+    "source": "statistics/metropolis-hastings",
+    "target": "statistics/markov-chain-monte-carlo",
+    "label": "implements",
+    "description": "Metropolis\u2013Hastings is the canonical algorithm for constructing the Markov chain in MCMC sampling, providing the concrete accept/reject mechanism that generalises the original Metropolis symmetric-proposal algorithm."
+  },
+  {
+    "source": "statistics/metropolis-hastings",
+    "target": "stochastic-processes/stationary-distribution",
+    "label": "converges to",
+    "description": "The Metropolis\u2013Hastings algorithm constructs a Markov chain whose stationary distribution is the target posterior \u03c0, so post-burn-in samples can be treated as approximate draws from \u03c0."
   },
   {
     "source": "statistics/mle-arch-models",
@@ -25567,6 +26299,12 @@
   },
   {
     "source": "stochastic-processes/cox-ingersoll-ross-model",
+    "target": "fixed-income/cir-bond-price-formula",
+    "label": "gives rise to",
+    "description": "The CIR SDE dr = kappa(theta - r)dt + sigma*sqrt(r)*dW is the starting point from which the bond pricing PDE is derived; solving that PDE with terminal condition V(r,T)=1 yields the closed-form CIR A and B functions."
+  },
+  {
+    "source": "stochastic-processes/cox-ingersoll-ross-model",
     "target": "stochastic-processes/diffusion-coefficient",
     "label": "state-dependent",
     "description": "The CIR diffusion sigma*sqrt(r) depends on the current rate level \u2014 as r approaches zero the noise vanishes, preventing negative rates when the Feller condition is met."
@@ -25630,6 +26368,30 @@
     "target": "stochastic-processes/poisson-process",
     "label": "claim arrivals via",
     "description": "Claim arrivals in the Cram\u00e9r-Lundberg model follow a Poisson process with rate lambda, directly connecting ruin theory to the standard framework of counting processes and exponential inter-arrival times."
+  },
+  {
+    "source": "stochastic-processes/detailed-balance",
+    "target": "statistics/markov-chain-monte-carlo",
+    "label": "guarantees correctness of",
+    "description": "The Metropolis\u2013Hastings acceptance step is designed to satisfy detailed balance with the posterior as the stationary distribution; this is the mathematical guarantee that the chain's long-run samples come from the correct target distribution regardless of the proposal used."
+  },
+  {
+    "source": "stochastic-processes/detailed-balance",
+    "target": "statistics/metropolis-hastings",
+    "label": "guarantees convergence of",
+    "description": "Detailed balance is the condition that the Metropolis\u2013Hastings acceptance ratio is designed to satisfy, ensuring the Markov chain produced by M\u2013H has the target distribution \u03c0 as its unique stationary distribution."
+  },
+  {
+    "source": "stochastic-processes/detailed-balance",
+    "target": "stochastic-processes/markov-property",
+    "label": "relies on",
+    "description": "Detailed balance is a property of Markov chains specifically \u2014 it characterises the time-reversibility of the chain under its stationary distribution, a concept that is only meaningful when the process satisfies the memoryless Markov property."
+  },
+  {
+    "source": "stochastic-processes/detailed-balance",
+    "target": "stochastic-processes/stationary-distribution",
+    "label": "sufficient for",
+    "description": "Detailed balance \u03c0(x)P(x,y) = \u03c0(y)P(y,x) immediately implies \u03c0 is the stationary distribution, because summing over y recovers the global balance equation (\u03c0P)_x = \u03c0_x without requiring a full eigenvalue analysis."
   },
   {
     "source": "stochastic-processes/diffusion-coefficient",
@@ -25756,6 +26518,18 @@
     "target": "stochastic-processes/radon-nikodym-derivative",
     "label": "quantified by",
     "description": "The Radon\u2013Nikod\u00fdm derivative is the density function that formalises the relationship between equivalent measures \u2014 it converts expectations under one measure to expectations under the other."
+  },
+  {
+    "source": "stochastic-processes/ergodic-theorem",
+    "target": "stochastic-processes/fokker-planck-steady-state",
+    "label": "requires stationarity from",
+    "description": "The ergodic theorem guarantees time averages converge to ensemble averages only when the process has reached a stationary distribution \u2014 the Fokker-Planck steady-state equation characterises precisely this limiting distribution for diffusion processes."
+  },
+  {
+    "source": "stochastic-processes/ergodic-theorem",
+    "target": "stochastic-processes/markov-property",
+    "label": "relies on",
+    "description": "Standard proofs of the ergodic theorem apply to Markov processes, where the memoryless property ensures the chain mixes and forgets its initial state, allowing time averages to converge to the ensemble mean."
   },
   {
     "source": "stochastic-processes/euler-maruyama-method",
@@ -26382,6 +27156,24 @@
     "description": "The Milstein method is a numerical scheme for solving SDEs by time-stepping \u2014 it discretises the continuous SDE dS = a dt + b dW into a recurrence relation that converges to the true solution as the step size \u03b4t tends to zero."
   },
   {
+    "source": "stochastic-processes/mixing-time",
+    "target": "statistics/markov-chain-monte-carlo",
+    "label": "governs burn-in for",
+    "description": "The mixing time sets the minimum burn-in length for MCMC: samples collected before the chain has mixed are biased by the arbitrary starting state, and only after \u03c4_mix steps do draws become representative of the target distribution."
+  },
+  {
+    "source": "stochastic-processes/mixing-time",
+    "target": "stochastic-processes/markov-property",
+    "label": "applies to",
+    "description": "Mixing time is defined for Markov chains, where the memoryless Markov property guarantees that convergence to the stationary distribution depends only on the current state, making the total-variation bound computable from the transition matrix's spectral gap."
+  },
+  {
+    "source": "stochastic-processes/mixing-time",
+    "target": "stochastic-processes/stationary-distribution",
+    "label": "measures convergence to",
+    "description": "Mixing time quantifies the number of steps a Markov chain needs before its distribution is within total-variation distance \u03b5 of its stationary distribution, linking the chain's transient dynamics to its long-run equilibrium."
+  },
+  {
     "source": "stochastic-processes/multi-asset-itos-lemma",
     "target": "derivatives/black-scholes-equation",
     "label": "generalises",
@@ -26458,6 +27250,12 @@
     "target": "statistics/vasicek-mle-estimation",
     "label": "estimated via",
     "description": "The Ornstein-Uhlenbeck SDE has exact Gaussian transitions, so its discretised conditional distribution gives a closed-form log-likelihood that reduces to OLS on an AR(1) \u2014 making the Vasicek MLE analytically tractable."
+  },
+  {
+    "source": "stochastic-processes/ornstein-uhlenbeck-process",
+    "target": "stochastic-processes/ergodic-theorem",
+    "label": "is ergodic via",
+    "description": "The Ornstein-Uhlenbeck process satisfies the ergodic theorem \u2014 its Gaussian stationary distribution is unique and the process is positive-recurrent, so time-average estimates of the long-run mean and variance converge from a single observed path."
   },
   {
     "source": "stochastic-processes/ornstein-uhlenbeck-process",
@@ -26562,6 +27360,30 @@
     "description": "Girsanov\u2019s theorem specifies the Radon\u2013Nikod\u00fdm derivative that effects the change of measure, transforming a drifting process into a standard Brownian motion under the new measure."
   },
   {
+    "source": "stochastic-processes/recurrence-and-transience",
+    "target": "linear-algebra/perron-frobenius-theorem",
+    "label": "ensures applicability of",
+    "description": "Positive recurrence is the condition under which a Markov chain has a finite stationary distribution \u2014 the same irreducibility and positive-recurrence conditions that allow the Perron\u2013Frobenius theorem to guarantee a unique stationary distribution for the associated stochastic matrix."
+  },
+  {
+    "source": "stochastic-processes/recurrence-and-transience",
+    "target": "stochastic-processes/cox-ingersoll-ross-model",
+    "label": "linked to Feller condition in",
+    "description": "The Feller condition 2\u03ba\u03b8 > \u03c3\u00b2 ensures the CIR process is positive recurrent and cannot reach zero, guaranteeing a Gamma stationary distribution and making historical estimates of the long-run mean \u03b8 statistically well-defined."
+  },
+  {
+    "source": "stochastic-processes/recurrence-and-transience",
+    "target": "stochastic-processes/ergodic-theorem",
+    "label": "required by",
+    "description": "The ergodic theorem applies only to positive-recurrent, irreducible Markov chains; for transient or null-recurrent chains the time average does not converge to a finite ensemble expectation, breaking the foundation on which historical simulation rests."
+  },
+  {
+    "source": "stochastic-processes/recurrence-and-transience",
+    "target": "stochastic-processes/stationary-distribution",
+    "label": "required for",
+    "description": "A unique stationary distribution exists if and only if the chain is irreducible and positive recurrent; transient chains have no invariant probability measure and null-recurrent chains have only infinite-mass invariant measures."
+  },
+  {
     "source": "stochastic-processes/regime-switching-models",
     "target": "computational-finance/simulation-vs-real-data-rl",
     "label": "complicates",
@@ -26656,6 +27478,60 @@
     "target": "stochastic-processes/stochastic-differential-equation",
     "label": "organises",
     "description": "Standard form dG = A dt + B dW_t provides a systematic way to identify drift and diffusion in any SDE, regardless of how the equation is originally written."
+  },
+  {
+    "source": "stochastic-processes/spectral-gap",
+    "target": "linear-algebra/perron-frobenius-theorem",
+    "label": "defined via",
+    "description": "The spectral gap is the difference between the Perron root (1 for stochastic matrices) and the modulus of the second-largest eigenvalue \u2014 a quantity whose existence and properties are established by the Perron\u2013Frobenius theorem."
+  },
+  {
+    "source": "stochastic-processes/spectral-gap",
+    "target": "statistics/effective-sample-size",
+    "label": "bounds",
+    "description": "The spectral gap \u03b4 of a Markov chain's transition kernel controls how fast autocorrelations decay, bounding the integrated autocorrelation time \u03c4 and therefore determining the effective sample size achievable per iteration."
+  },
+  {
+    "source": "stochastic-processes/spectral-gap",
+    "target": "statistics/hamiltonian-monte-carlo",
+    "label": "improved by",
+    "description": "HMC achieves a much larger spectral gap than random-walk Metropolis\u2013Hastings because gradient-guided leapfrog proposals reduce serial correlation between successive samples, yielding far greater effective sample size per iteration."
+  },
+  {
+    "source": "stochastic-processes/spectral-gap",
+    "target": "statistics/markov-chain-monte-carlo",
+    "label": "diagnoses efficiency of",
+    "description": "A near-zero spectral gap signals a slow-mixing MCMC chain where samples remain correlated across thousands of iterations; reparameterising the model to increase the spectral gap is the standard fix when calibrating complex stochastic volatility models via MCMC."
+  },
+  {
+    "source": "stochastic-processes/spectral-gap",
+    "target": "stochastic-processes/mixing-time",
+    "label": "bounds",
+    "description": "The spectral gap \u03b4 = 1 \u2212 \u03bb\u2082 provides a rigorous upper bound on mixing time \u2014 \u03c4_mix(\u03b5) \u2264 (1/\u03b4)\u00b7ln(1/(\u03b5\u00b7\u03c0_min)) \u2014 giving a practitioner a computable estimate of the minimum burn-in before MCMC samples are representative of the target distribution."
+  },
+  {
+    "source": "stochastic-processes/spectral-gap",
+    "target": "stochastic-processes/stationary-distribution",
+    "label": "governs decay to",
+    "description": "The spectral gap controls how quickly the distribution P^t(x,\u00b7) decays toward the stationary distribution \u03c0: the total-variation distance decays geometrically at rate (1 \u2212 \u03b4)^t, so a larger gap means exponentially faster convergence from any starting state."
+  },
+  {
+    "source": "stochastic-processes/stationary-distribution",
+    "target": "stochastic-processes/ergodic-theorem",
+    "label": "preconditions",
+    "description": "The ergodic theorem holds only when the process has a unique stationary distribution; once that distribution exists and is reached, time averages along a single path converge almost surely to the ensemble expectation under it."
+  },
+  {
+    "source": "stochastic-processes/stationary-distribution",
+    "target": "stochastic-processes/fokker-planck-steady-state",
+    "label": "characterised by",
+    "description": "For a continuous diffusion, the stationary distribution is the unique density solving the Fokker\u2013Planck equation with all time derivatives set to zero \u2014 the steady-state solution equates drift flux and diffusion flux, pinpointing where the process spends its long-run time."
+  },
+  {
+    "source": "stochastic-processes/stationary-distribution",
+    "target": "stochastic-processes/vasicek-steady-state",
+    "label": "realised as",
+    "description": "The Vasicek steady-state Gaussian N(\u03b8, \u03c3\u00b2/2\u03ba) is the explicit stationary distribution of the Ornstein\u2013Uhlenbeck short-rate process, confirming that the long-run short rate centres on the mean-reversion level \u03b8 and that faster mean-reversion (larger \u03ba) compresses the tails."
   },
   {
     "source": "stochastic-processes/stochastic-calculus",

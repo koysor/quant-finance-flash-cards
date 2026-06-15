@@ -2091,6 +2091,28 @@
       }
     ]
   },
+  "calculus/linear-interpolation": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Linear Interpolation",
+        "url": "https://en.wikipedia.org/wiki/Linear_interpolation"
+      },
+      {
+        "title": "Paul's Online Math Notes \u2014 Interpolation",
+        "url": "https://tutorial.math.lamar.edu/Classes/DE/EulerMethod.aspx"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Linear Interpolation",
+        "url": "https://www.youtube.com/watch?v=Mq-1xRYcjTA"
+      },
+      {
+        "title": "The Organic Chemistry Tutor \u2014 Interpolation",
+        "url": "https://www.youtube.com/watch?v=WBa_QDBMSR4"
+      }
+    ]
+  },
   "calculus/linearity-of-differentiation": {
     "websites": [
       {
@@ -2409,6 +2431,50 @@
       }
     ]
   },
+  "calculus/piecewise-constant": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Step Function",
+        "url": "https://en.wikipedia.org/wiki/Step_function"
+      },
+      {
+        "title": "Wolfram MathWorld \u2014 Step Function",
+        "url": "https://mathworld.wolfram.com/StepFunction.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Piecewise Functions",
+        "url": "https://www.youtube.com/watch?v=mJNNBz-6BbQ"
+      },
+      {
+        "title": "The Organic Chemistry Tutor \u2014 Piecewise Functions",
+        "url": "https://www.youtube.com/watch?v=WXm9-GGQ0eM"
+      }
+    ]
+  },
+  "calculus/piecewise-linear": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Piecewise Linear Function",
+        "url": "https://en.wikipedia.org/wiki/Piecewise_linear_function"
+      },
+      {
+        "title": "Investopedia \u2014 Bull Call Spread",
+        "url": "https://www.investopedia.com/terms/b/bullcallspread.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Piecewise Functions",
+        "url": "https://www.youtube.com/watch?v=mJNNBz-6BbQ"
+      },
+      {
+        "title": "3Blue1Brown \u2014 But what is a Neural Network?",
+        "url": "https://www.youtube.com/watch?v=aircAruvnKk"
+      }
+    ]
+  },
   "calculus/points-of-inflexion": {
     "websites": [
       {
@@ -2654,6 +2720,28 @@
       {
         "title": "3Blue1Brown \u2014 Differential Equations Overview",
         "url": "https://www.youtube.com/watch?v=p_di4Zn4wz4"
+      }
+    ]
+  },
+  "calculus/riemann-sum": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Riemann Sum",
+        "url": "https://en.wikipedia.org/wiki/Riemann_sum"
+      },
+      {
+        "title": "Khan Academy \u2014 Riemann Sums",
+        "url": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-2/a/riemann-sums-review"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Riemann Sums and Definite Integrals",
+        "url": "https://www.youtube.com/watch?v=gFpHHTxsDkI"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Numerical Integration",
+        "url": "https://www.youtube.com/watch?v=7K1sB05pE0A"
       }
     ]
   },
@@ -5733,6 +5821,28 @@
       }
     ]
   },
+  "derivatives/option-payoff-convexity": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Convexity",
+        "url": "https://www.investopedia.com/terms/c/convexity.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Greeks (Finance)",
+        "url": "https://en.wikipedia.org/wiki/Greeks_(finance)"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Convex Functions and Jensen's Inequality",
+        "url": "https://www.youtube.com/watch?v=ZFsXpkNrBjk"
+      },
+      {
+        "title": "3Blue1Brown \u2014 But what is a Neural Network?",
+        "url": "https://www.youtube.com/watch?v=aircAruvnKk"
+      }
+    ]
+  },
   "derivatives/option-payoff-diagrams": {
     "websites": [
       {
@@ -6172,6 +6282,28 @@
       {
         "title": "Khan Academy \u2014 Put and Call Options",
         "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/put-call-options/v/put-and-call-options"
+      }
+    ]
+  },
+  "derivatives/static-replication": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Replicating Portfolio",
+        "url": "https://en.wikipedia.org/wiki/Replicating_portfolio"
+      },
+      {
+        "title": "Wikipedia \u2014 Variance Swap",
+        "url": "https://en.wikipedia.org/wiki/Variance_swap"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Options and Derivatives Pricing",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      },
+      {
+        "title": "3Blue1Brown \u2014 Essence of Calculus (Integration)",
+        "url": "https://www.youtube.com/watch?v=rfG8ce4nNh0"
       }
     ]
   },
@@ -6747,6 +6879,28 @@
       }
     ]
   },
+  "financial-maths/fisher-equation": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Fisher Equation",
+        "url": "https://en.wikipedia.org/wiki/Fisher_equation"
+      },
+      {
+        "title": "Investopedia \u2014 Fisher Effect",
+        "url": "https://www.investopedia.com/terms/f/fishereffect.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Nominal and Real Interest Rates",
+        "url": "https://www.youtube.com/watch?v=kGMFVAzU7Fo"
+      },
+      {
+        "title": "Khan Academy \u2014 Inflation and Purchasing Power",
+        "url": "https://www.youtube.com/watch?v=5EJL6IWV_8w"
+      }
+    ]
+  },
   "financial-maths/fund-of-funds": {
     "websites": [
       {
@@ -7177,6 +7331,50 @@
       }
     ]
   },
+  "fixed-income/acm-model": {
+    "websites": [
+      {
+        "title": "NY Fed \u2014 Adrian\u2013Crump\u2013Moench Term Premium Data",
+        "url": "https://www.newyorkfed.org/research/data_indicators/term-premia"
+      },
+      {
+        "title": "Wikipedia \u2014 Yield Curve",
+        "url": "https://en.wikipedia.org/wiki/Yield_curve"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Fixed Income Lecture: Term Structure Models",
+        "url": "https://www.youtube.com/watch?v=rAlFcRuGCOc"
+      },
+      {
+        "title": "Khan Academy \u2014 Bond Prices and Interest Rates",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/bonds-tutorial/v/introduction-to-the-yield-curve"
+      }
+    ]
+  },
+  "fixed-income/affine-model-identification": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Identifiability",
+        "url": "https://en.wikipedia.org/wiki/Identifiability"
+      },
+      {
+        "title": "Investopedia \u2014 Affine Term Structure Models",
+        "url": "https://www.investopedia.com/terms/a/affine-term-structure-model.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Econometrics: Identification",
+        "url": "https://www.youtube.com/watch?v=7OFlGHpAULc"
+      },
+      {
+        "title": "Khan Academy \u2014 Introduction to Statistical Models",
+        "url": "https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-discrete/v/random-variables"
+      }
+    ]
+  },
   "fixed-income/affine-term-structure-models": {
     "websites": [
       {
@@ -7419,6 +7617,28 @@
       }
     ]
   },
+  "fixed-income/bond-pricing-equation": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Bond Valuation",
+        "url": "https://en.wikipedia.org/wiki/Bond_valuation"
+      },
+      {
+        "title": "Investopedia \u2014 Bond Pricing",
+        "url": "https://www.investopedia.com/articles/bonds/07/price_yield.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Introduction to Bond Pricing",
+        "url": "https://www.youtube.com/watch?v=kgn52XD4Xj0"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Fixed Income Securities",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      }
+    ]
+  },
   "fixed-income/bond-yield": {
     "websites": [
       {
@@ -7629,6 +7849,28 @@
       }
     ]
   },
+  "fixed-income/cir-bond-price-formula": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Cox-Ingersoll-Ross Model",
+        "url": "https://en.wikipedia.org/wiki/Cox%E2%80%93Ingersoll%E2%80%93Ross_model"
+      },
+      {
+        "title": "Investopedia \u2014 Interest Rate Models",
+        "url": "https://www.investopedia.com/terms/i/interest-rate-options.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Fixed Income Securities",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      },
+      {
+        "title": "Khan Academy \u2014 Introduction to Bond Pricing",
+        "url": "https://www.youtube.com/watch?v=kgn52XD4Xj0"
+      }
+    ]
+  },
   "fixed-income/cms-convexity-adjustment": {
     "websites": [
       {
@@ -7714,6 +7956,28 @@
       {
         "title": "Mortgage Securities and CMOs \u2014 Khan Academy",
         "url": "https://www.youtube.com/watch?v=KiAMCzHWC2o"
+      }
+    ]
+  },
+  "fixed-income/completely-vs-essentially-affine": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Affine Term Structure Model",
+        "url": "https://en.wikipedia.org/wiki/Affine_term_structure_model"
+      },
+      {
+        "title": "Investopedia \u2014 Term Premium",
+        "url": "https://www.investopedia.com/terms/t/term-premium.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Interest Rate Models",
+        "url": "https://www.youtube.com/watch?v=rAlFcRuGCOc"
+      },
+      {
+        "title": "Khan Academy \u2014 Introduction to Bond Yields",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/bonds-tutorial/v/introduction-to-the-yield-curve"
       }
     ]
   },
@@ -7817,6 +8081,28 @@
       }
     ]
   },
+  "fixed-income/credit-spread": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Credit Spread (Bond)",
+        "url": "https://en.wikipedia.org/wiki/Credit_spread_(bond)"
+      },
+      {
+        "title": "Investopedia \u2014 Credit Spread",
+        "url": "https://www.investopedia.com/terms/c/creditspread.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Bonds and Bond Yields",
+        "url": "https://www.youtube.com/watch?v=mJNNBz-6BbQ"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Credit Risk",
+        "url": "https://www.youtube.com/watch?v=A5W8MMSRPXM"
+      }
+    ]
+  },
   "fixed-income/cross-currency-swap": {
     "websites": [
       {
@@ -7902,6 +8188,28 @@
       {
         "title": "Treasury Bills and Money Markets \u2013 MIT OpenCourseWare",
         "url": "https://www.youtube.com/watch?v=3eElJJxOxJk"
+      }
+    ]
+  },
+  "fixed-income/discrete-time-affine-model": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Affine Term Structure Model",
+        "url": "https://en.wikipedia.org/wiki/Affine_term_structure_model"
+      },
+      {
+        "title": "Investopedia \u2014 Vector Autoregression (VAR)",
+        "url": "https://www.investopedia.com/terms/v/vector-autoregression-var.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Time Series Econometrics",
+        "url": "https://www.youtube.com/watch?v=WmkBvEtbbHc"
+      },
+      {
+        "title": "StatQuest \u2014 Linear Regression",
+        "url": "https://www.youtube.com/watch?v=7ArmBVF2dCs"
       }
     ]
   },
@@ -8081,6 +8389,28 @@
       }
     ]
   },
+  "fixed-income/forward-rate-bond-price": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Forward Rate",
+        "url": "https://en.wikipedia.org/wiki/Forward_rate"
+      },
+      {
+        "title": "Investopedia \u2014 Forward Rate",
+        "url": "https://www.investopedia.com/terms/f/forwardrate.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Introduction to Bond Pricing",
+        "url": "https://www.youtube.com/watch?v=kgn52XD4Xj0"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Term Structure of Interest Rates",
+        "url": "https://www.youtube.com/watch?v=A5W8MMSRPXM"
+      }
+    ]
+  },
   "fixed-income/g2-plus-plus-model": {
     "websites": [
       {
@@ -8100,6 +8430,28 @@
       {
         "title": "G2++ Swaption Pricing \u2014 QuantLib Python",
         "url": "https://www.youtube.com/watch?v=NcM0-GNRwso"
+      }
+    ]
+  },
+  "fixed-income/general-affine-model": {
+    "websites": [
+      {
+        "title": "Affine Term Structure Models \u2013 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Affine_term_structure_model"
+      },
+      {
+        "title": "Term Structure Models \u2013 QuantLib Documentation",
+        "url": "https://quantlib-python-docs.readthedocs.io/en/latest/termstructures.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Affine Term Structure Models \u2013 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=UY4xvDr7Uus"
+      },
+      {
+        "title": "Duffie-Kan Affine Models \u2013 Finance Lectures",
+        "url": "https://www.youtube.com/watch?v=6Lkn9HVYuik"
       }
     ]
   },
@@ -8144,6 +8496,28 @@
       {
         "title": "Two-Factor Interest Rate Models \u2014 QuantLib",
         "url": "https://www.youtube.com/watch?v=NcM0-GNRwso"
+      }
+    ]
+  },
+  "fixed-income/hazard-rate-bootstrapping": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Credit Default Swap",
+        "url": "https://en.wikipedia.org/wiki/Credit_default_swap"
+      },
+      {
+        "title": "Investopedia \u2014 Hazard Rate",
+        "url": "https://www.investopedia.com/terms/h/hazardrate.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Credit Risk",
+        "url": "https://www.youtube.com/watch?v=A5W8MMSRPXM"
+      },
+      {
+        "title": "Khan Academy \u2014 Exponential Decay (Hazard Rate Intuition)",
+        "url": "https://www.youtube.com/watch?v=HTDop6eEsaA"
       }
     ]
   },
@@ -8363,6 +8737,28 @@
       },
       {
         "title": "Fixed Income Overview \u2013 Khan Academy Finance",
+        "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/interest-tutorial"
+      }
+    ]
+  },
+  "fixed-income/kim-wright-model": {
+    "websites": [
+      {
+        "title": "Term Structure of Interest Rates \u2013 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Term_structure_of_interest_rates"
+      },
+      {
+        "title": "Yield Curve \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/y/yieldcurve.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Topics in Mathematics with Applications in Finance \u2013 MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "Interest Rate Basics \u2013 Khan Academy",
         "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/interest-tutorial"
       }
     ]
@@ -8658,6 +9054,28 @@
       {
         "title": "Interest Rate Caps and Floors Explained \u2013 QuantLib Python",
         "url": "https://www.youtube.com/watch?v=5_syjW4-FWM"
+      }
+    ]
+  },
+  "fixed-income/real-yield": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Real Interest Rate",
+        "url": "https://en.wikipedia.org/wiki/Real_interest_rate"
+      },
+      {
+        "title": "Investopedia \u2014 Real Rate of Return",
+        "url": "https://www.investopedia.com/terms/r/realrateofreturn.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Nominal and Real Interest Rates",
+        "url": "https://www.youtube.com/watch?v=kGMFVAzU7Fo"
+      },
+      {
+        "title": "Khan Academy \u2014 Inflation and Purchasing Power",
+        "url": "https://www.youtube.com/watch?v=5EJL6IWV_8w"
       }
     ]
   },
@@ -9123,6 +9541,28 @@
       }
     ]
   },
+  "fixed-income/wishart-affine-term-structure": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Wishart Distribution",
+        "url": "https://en.wikipedia.org/wiki/Wishart_distribution"
+      },
+      {
+        "title": "Investopedia \u2014 Cross-Currency Swap",
+        "url": "https://www.investopedia.com/terms/c/cross-currency-swap.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Stochastic Calculus for Finance",
+        "url": "https://www.youtube.com/watch?v=rAlFcRuGCOc"
+      },
+      {
+        "title": "Khan Academy \u2014 Covariance and Correlation",
+        "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-population/v/variance-of-a-population"
+      }
+    ]
+  },
   "fixed-income/yield-curve": {
     "websites": [
       {
@@ -9246,6 +9686,28 @@
       {
         "title": "Wikipedia \u2014 Yield curve",
         "url": "https://en.wikipedia.org/wiki/Yield_curve"
+      }
+    ]
+  },
+  "fixed-income/yield-curve-theories": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Expectations Hypothesis",
+        "url": "https://en.wikipedia.org/wiki/Expectations_hypothesis"
+      },
+      {
+        "title": "Investopedia \u2014 Term Structure of Interest Rates",
+        "url": "https://www.investopedia.com/terms/t/termstructure.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Yield Curve Primer",
+        "url": "https://www.youtube.com/watch?v=4wNpMIHSBqI"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Term Structure of Interest Rates",
+        "url": "https://www.youtube.com/watch?v=A5W8MMSRPXM"
       }
     ]
   },
@@ -9608,6 +10070,28 @@
       {
         "title": "Khan Academy \u2014 Vectors and Matrix Multiplication",
         "url": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces"
+      }
+    ]
+  },
+  "linear-algebra/perron-frobenius-theorem": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Perron\u2013Frobenius theorem",
+        "url": "https://en.wikipedia.org/wiki/Perron%E2%80%93Frobenius_theorem"
+      },
+      {
+        "title": "Wolfram MathWorld \u2014 Perron\u2013Frobenius Theorem",
+        "url": "https://mathworld.wolfram.com/Perron-FrobeniusTheorem.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "3Blue1Brown \u2014 Eigenvalues and Eigenvectors (Essence of Linear Algebra)",
+        "url": "https://www.youtube.com/watch?v=PFDu9oVAE-g"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Eigenvalues and Eigenvectors",
+        "url": "https://www.youtube.com/watch?v=cdZnhQjJu4I"
       }
     ]
   },
@@ -16105,6 +16589,28 @@
       }
     ]
   },
+  "portfolio-theory/consumption-based-capm": {
+    "websites": [
+      {
+        "title": "Consumption-Based CAPM \u2013 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Consumption-based_capital_asset_pricing_model"
+      },
+      {
+        "title": "Consumption CAPM \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/c/ccapm.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Consumption Based Asset Pricing \u2013 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=Bq-kvr_sYGI"
+      },
+      {
+        "title": "Stochastic Discount Factor and Asset Pricing \u2013 Yale (John Cochrane)",
+        "url": "https://www.youtube.com/watch?v=6Lkn9HVYuik"
+      }
+    ]
+  },
   "portfolio-theory/contrarian-investor": {
     "websites": [
       {
@@ -16210,6 +16716,28 @@
       {
         "title": "AQR \u2014 Time Series Momentum",
         "url": "https://www.aqr.com/insights/research/journal-article/time-series-momentum"
+      }
+    ]
+  },
+  "portfolio-theory/crra-utility": {
+    "websites": [
+      {
+        "title": "CRRA Utility \u2013 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Isoelastic_utility"
+      },
+      {
+        "title": "Risk Aversion \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/r/riskaverse.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Risk Aversion and Utility Functions \u2013 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=oqDjSCWQUxA"
+      },
+      {
+        "title": "Expected Utility Theory \u2013 EDHEC Risk Institute",
+        "url": "https://www.youtube.com/watch?v=Kh4mC4cXqEA"
       }
     ]
   },
@@ -16355,6 +16883,72 @@
       }
     ]
   },
+  "portfolio-theory/epstein-zin-preferences": {
+    "websites": [
+      {
+        "title": "Epstein-Zin Preferences \u2013 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Epstein%E2%80%93Zin_preferences"
+      },
+      {
+        "title": "Recursive Utility \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/r/recursive-preference.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Recursive Utility and Asset Pricing \u2013 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=o_cpCXGCfpA"
+      },
+      {
+        "title": "Long Run Risk Model \u2013 Finance Lectures",
+        "url": "https://www.youtube.com/watch?v=3IVpBG7HZWU"
+      }
+    ]
+  },
+  "portfolio-theory/equity-premium-puzzle": {
+    "websites": [
+      {
+        "title": "Equity Premium Puzzle \u2013 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Equity_premium_puzzle"
+      },
+      {
+        "title": "Equity Risk Premium \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/e/equityriskpremium.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Equity Premium Puzzle \u2013 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=dGMdyYZDUsE"
+      },
+      {
+        "title": "The Equity Risk Premium \u2013 Damodaran Online",
+        "url": "https://www.youtube.com/watch?v=WT0UFpH0gHk"
+      }
+    ]
+  },
+  "portfolio-theory/euler-equation-asset-pricing": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Consumption-Based CAPM",
+        "url": "https://en.wikipedia.org/wiki/Consumption-based_capital_asset_pricing_model"
+      },
+      {
+        "title": "Investopedia \u2014 Stochastic Discount Factor",
+        "url": "https://www.investopedia.com/terms/s/stochasticdiscountfactor.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Asset Pricing Theory",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      },
+      {
+        "title": "Khan Academy \u2014 Expected Value and Variance",
+        "url": "https://www.youtube.com/watch?v=uzkc-qNVoOk"
+      }
+    ]
+  },
   "portfolio-theory/expected-portfolio-return": {
     "websites": [
       {
@@ -16402,6 +16996,28 @@
     ]
   },
   "portfolio-theory/fundamental-law-of-active-management": {},
+  "portfolio-theory/hansen-jagannathan-bound": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Hansen-Jagannathan Bound",
+        "url": "https://en.wikipedia.org/wiki/Hansen%E2%80%93Jagannathan_bound"
+      },
+      {
+        "title": "Wikipedia \u2014 Equity Premium Puzzle",
+        "url": "https://en.wikipedia.org/wiki/Equity_premium_puzzle"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Asset Pricing Theory",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      },
+      {
+        "title": "Khan Academy \u2014 Expected Return and Risk",
+        "url": "https://www.youtube.com/watch?v=uzkc-qNVoOk"
+      }
+    ]
+  },
   "portfolio-theory/hierarchical-risk-parity": {
     "websites": [
       {
@@ -17067,6 +17683,28 @@
       {
         "title": "Wikipedia \u2014 Sterling Ratio",
         "url": "https://en.wikipedia.org/wiki/Sterling_ratio"
+      }
+    ]
+  },
+  "portfolio-theory/stochastic-discount-factor": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Stochastic Discount Factor",
+        "url": "https://en.wikipedia.org/wiki/Stochastic_discount_factor"
+      },
+      {
+        "title": "Investopedia \u2014 Pricing Kernel",
+        "url": "https://www.investopedia.com/terms/p/pricingkernel.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Asset Pricing Theory",
+        "url": "https://www.youtube.com/watch?v=TuTmC8aOQJE"
+      },
+      {
+        "title": "Khan Academy \u2014 Expected Value and Risk",
+        "url": "https://www.youtube.com/watch?v=uzkc-qNVoOk"
       }
     ]
   },
@@ -18962,6 +19600,50 @@
       }
     ]
   },
+  "risk/credit-rating-transition-matrix": {
+    "websites": [
+      {
+        "title": "Credit Rating \u2013 Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Credit_rating"
+      },
+      {
+        "title": "Transition Matrix \u2013 Investopedia",
+        "url": "https://www.investopedia.com/terms/t/transition-matrix.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Credit Risk Models \u2013 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=QEjlb73gGBE"
+      },
+      {
+        "title": "Markov Chains Explained \u2013 StatQuest",
+        "url": "https://www.youtube.com/watch?v=i3AkTO9HLXo"
+      }
+    ]
+  },
+  "risk/default-probability": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Probability of Default",
+        "url": "https://en.wikipedia.org/wiki/Probability_of_default"
+      },
+      {
+        "title": "Investopedia \u2014 Default Risk",
+        "url": "https://www.investopedia.com/terms/d/defaultrisk.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Credit Risk",
+        "url": "https://www.youtube.com/watch?v=A5W8MMSRPXM"
+      },
+      {
+        "title": "Khan Academy \u2014 Introduction to Bond Pricing",
+        "url": "https://www.youtube.com/watch?v=kgn52XD4Xj0"
+      }
+    ]
+  },
   "risk/distance-to-default": {
     "websites": [
       {
@@ -19291,6 +19973,28 @@
       {
         "title": "Investopedia \u2014 Monte Carlo Simulation",
         "url": "https://www.investopedia.com/terms/m/montecarlosimulation.asp"
+      }
+    ]
+  },
+  "risk/non-ergodic-markets": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Ergodicity Economics",
+        "url": "https://en.wikipedia.org/wiki/Ergodicity_economics"
+      },
+      {
+        "title": "Investopedia \u2014 Model Risk",
+        "url": "https://www.investopedia.com/terms/m/modelrisk.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Mathematics with Applications in Finance (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Discrete Stochastic Processes (6.262)",
+        "url": "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/"
       }
     ]
   },
@@ -20036,6 +20740,28 @@
       }
     ]
   },
+  "statistics/burn-in-diagnostics": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Markov Chain Monte Carlo (Convergence)",
+        "url": "https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo#Convergence"
+      },
+      {
+        "title": "Wikipedia \u2014 Effective Sample Size",
+        "url": "https://en.wikipedia.org/wiki/Effective_sample_size"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Mathematics with Applications in Finance (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Discrete Stochastic Processes (6.262)",
+        "url": "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/"
+      }
+    ]
+  },
   "statistics/central-limit-theorem": {
     "websites": [
       {
@@ -20243,6 +20969,28 @@
       {
         "title": "Wikipedia \u2014 Effect Size",
         "url": "https://en.wikipedia.org/wiki/Effect_size"
+      }
+    ]
+  },
+  "statistics/effective-sample-size": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Effective sample size",
+        "url": "https://en.wikipedia.org/wiki/Effective_sample_size"
+      },
+      {
+        "title": "Stan Reference Manual \u2014 Effective Sample Size",
+        "url": "https://mc-stan.org/docs/reference-manual/effective-sample-size.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest \u2014 Markov Chains Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=i3AkTO9HLXo"
+      },
+      {
+        "title": "ritvikmath \u2014 Effective Sample Size",
+        "url": "https://www.youtube.com/watch?v=s4GdnzaFKU0"
       }
     ]
   },
@@ -20535,6 +21283,28 @@
       {
         "title": "Granger Causality Test \u2014 Statsmodels",
         "url": "https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.grangercausalitytests.html"
+      }
+    ]
+  },
+  "statistics/hamiltonian-monte-carlo": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Hamiltonian Monte Carlo",
+        "url": "https://en.wikipedia.org/wiki/Hamiltonian_Monte_Carlo"
+      },
+      {
+        "title": "mc-stan.org \u2014 Hamiltonian Monte Carlo sampling",
+        "url": "https://mc-stan.org/docs/reference-manual/hamiltonian-monte-carlo.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "PyMC Labs \u2014 Introduction to Hamiltonian Monte Carlo",
+        "url": "https://www.youtube.com/watch?v=qLBnHMOKGv0"
+      },
+      {
+        "title": "Statistical Rethinking \u2014 HMC and NUTS",
+        "url": "https://www.youtube.com/watch?v=v-j0UmWf3Us"
       }
     ]
   },
@@ -20911,6 +21681,28 @@
       {
         "title": "Investopedia \u2014 Method of Moments",
         "url": "https://www.investopedia.com/terms/m/method-of-moments.asp"
+      }
+    ]
+  },
+  "statistics/metropolis-hastings": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Metropolis\u2013Hastings algorithm",
+        "url": "https://en.wikipedia.org/wiki/Metropolis%E2%80%93Hastings_algorithm"
+      },
+      {
+        "title": "Wikipedia \u2014 Markov Chain Monte Carlo",
+        "url": "https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo"
+      }
+    ],
+    "videos": [
+      {
+        "title": "ritvikmath \u2014 Markov Chain Monte Carlo (MCMC) Clearly Explained",
+        "url": "https://www.youtube.com/watch?v=yApmR-c_hKU"
+      },
+      {
+        "title": "Ben Lambert \u2014 A Student's Guide to Bayesian Statistics: MCMC",
+        "url": "https://www.youtube.com/watch?v=OTO1DygELpY"
       }
     ]
   },
@@ -21950,6 +22742,28 @@
       }
     ]
   },
+  "stochastic-processes/detailed-balance": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Detailed Balance",
+        "url": "https://en.wikipedia.org/wiki/Detailed_balance"
+      },
+      {
+        "title": "Wikipedia \u2014 Metropolis\u2013Hastings Algorithm",
+        "url": "https://en.wikipedia.org/wiki/Metropolis%E2%80%93Hastings_algorithm"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Discrete Stochastic Processes (6.262)",
+        "url": "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Mathematics with Applications in Finance (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
   "stochastic-processes/diffusion-coefficient": {
     "websites": [
       {
@@ -22055,6 +22869,28 @@
       {
         "title": "Wikipedia \u2014 Fundamental Theorem of Asset Pricing",
         "url": "https://en.wikipedia.org/wiki/Fundamental_theorem_of_asset_pricing"
+      }
+    ]
+  },
+  "stochastic-processes/ergodic-theorem": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Ergodic Theory",
+        "url": "https://en.wikipedia.org/wiki/Ergodic_theory"
+      },
+      {
+        "title": "Wolfram MathWorld \u2014 Ergodic Theory",
+        "url": "https://mathworld.wolfram.com/ErgodicTheory.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Ergodicity and the Ergodic Theorem \u2014 MIT OpenCourseWare",
+        "url": "https://www.youtube.com/watch?v=lh-NG5VZe5I"
+      },
+      {
+        "title": "Stationary Distributions and Ergodicity \u2014 MIT 18.650 Statistics",
+        "url": "https://www.youtube.com/watch?v=ZjrJpkD3o1w"
       }
     ]
   },
@@ -22414,6 +23250,28 @@
       }
     ]
   },
+  "stochastic-processes/mixing-time": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Markov Chain Mixing Time",
+        "url": "https://en.wikipedia.org/wiki/Markov_chain_mixing_time"
+      },
+      {
+        "title": "Wikipedia \u2014 Total Variation Distance",
+        "url": "https://en.wikipedia.org/wiki/Total_variation_distance_of_probability_measures"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Discrete Stochastic Processes (6.262)",
+        "url": "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Mathematics with Applications in Finance (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
   "stochastic-processes/novikov-condition": {
     "websites": [
       {
@@ -22528,6 +23386,28 @@
       }
     ]
   },
+  "stochastic-processes/recurrence-and-transience": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Recurrent Markov Chain",
+        "url": "https://en.wikipedia.org/wiki/Markov_chain#Recurrent_Markov_chain"
+      },
+      {
+        "title": "Brilliant.org \u2014 Markov Chains",
+        "url": "https://brilliant.org/wiki/markov-chains/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Discrete Stochastic Processes (6.262)",
+        "url": "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Mathematics with Applications in Finance (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
   "stochastic-processes/regime-switching-models": {
     "websites": [
       {
@@ -22577,6 +23457,50 @@
       {
         "title": "Stochastic Processes and Brownian Motion \u2013 StatQuest",
         "url": "https://www.youtube.com/watch?v=rBjft49MAO8"
+      }
+    ]
+  },
+  "stochastic-processes/spectral-gap": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Spectral Gap",
+        "url": "https://en.wikipedia.org/wiki/Spectral_gap"
+      },
+      {
+        "title": "Wikipedia \u2014 Markov Chain Mixing Time",
+        "url": "https://en.wikipedia.org/wiki/Markov_chain_mixing_time"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Discrete Stochastic Processes (6.262)",
+        "url": "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Mathematics with Applications in Finance (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "stochastic-processes/stationary-distribution": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Stationary Distribution",
+        "url": "https://en.wikipedia.org/wiki/Stationary_distribution"
+      },
+      {
+        "title": "Brilliant.org \u2014 Markov Chains",
+        "url": "https://brilliant.org/wiki/markov-chains/"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Discrete Stochastic Processes (6.262)",
+        "url": "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Mathematics with Applications in Finance (18.S096)",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
       }
     ]
   },
