@@ -9,10 +9,31 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Uses [uv](https://docs.astral.sh/uv/) for dependency management. Python 3.12.
 
 ```bash
-uv sync               # create/update the virtual environment
-uv add <pkg>          # add a runtime dependency
-uv add --dev <pkg>    # add a dev dependency
-uv run python run.py  # start the dev server at http://127.0.0.1:5000
+uv sync                             # create/update the virtual environment
+uv add <pkg>                        # add a runtime dependency
+uv add --dev <pkg>                  # add a dev dependency
+FLASK_DEBUG=1 uv run python run.py  # start the dev server at http://127.0.0.1:5000
+```
+
+**`FLASK_DEBUG=1` is required locally.** `create_app()` raises `RuntimeError` unless `SECRET_KEY` is set in the environment or debug mode is on. Backgrounded without it, the process dies immediately and the traceback goes to wherever stdout was redirected — a stale `app.log` or an already-running instance then makes the restart look successful.
+
+To restart cleanly, stop the old server **by port**, not with `pkill -f "run.py"` — that pattern also matches the shell running the command whenever the launch string appears in the same command line, killing the caller before the server ever starts:
+
+```bash
+lsof -ti tcp:5000 | xargs -r kill 2>/dev/null
+rm -f graph.db app.log
+FLASK_DEBUG=1 uv run python run.py > app.log 2>&1 &
+```
+
+Startup reparses every card to rebuild `graph.db`, which takes upwards of twenty seconds at the current card count, so poll for a response instead of waiting a fixed couple of seconds — and treat a non-200 as a real failure, since the loader rejects malformed cards and unknown topics at this point:
+
+```bash
+for i in $(seq 1 30); do
+  code=$(curl -s -o /dev/null -w "%{http_code}" "http://127.0.0.1:5000/card/<card-id>")
+  [ "$code" = "200" ] && break
+  sleep 2
+done
+if [ "$code" != "200" ]; then echo "FAILED ($code)"; tail -30 app.log; fi
 ```
 
 ## Testing
