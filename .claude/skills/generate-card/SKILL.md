@@ -56,7 +56,7 @@ For each related card, create a directed edge (pick whichever direction makes mo
 - **`label`** — short relationship tag (2-3 words), e.g. *derived via*, *used in*, *parameterised by*, *extends*, *constrains*, *feeds into*
 - **`description`** — one plain-English sentence explaining *why* these concepts are linked in quantitative finance. Match the quality and specificity of existing descriptions in `edges.json`.
 
-Append the new edges to `edges.json`, keeping the array sorted by `source_id` then `target_id`. Preserve the existing formatting (2-space indent, trailing newline).
+Append the new edges to `edges.json`, keeping the array sorted by `source_id` then `target_id`. Preserve the existing formatting exactly — see the serialisation note below.
 
 ## Step 4 — Generate learning resources
 
@@ -64,7 +64,17 @@ Read `resources.json`. Add an entry for the new card with:
 - **`websites`** — 2 objects, each with `title` and `url`. Use well-known, beginner-friendly sources (Khan Academy, Investopedia, Wikipedia, Brilliant, Paul's Online Math Notes, Corporate Finance Institute, etc.).
 - **`videos`** — 2 objects, each with `title` and `url`. Use well-known educational YouTube channels (3Blue1Brown, Khan Academy, StatQuest, The Organic Chemistry Tutor, MIT OpenCourseWare, etc.). Only use URLs you are confident exist.
 
-Write the updated `resources.json` back, keeping the object sorted by card ID. Preserve 2-space indent formatting and trailing newline.
+Write the updated `resources.json` back, keeping the object sorted by card ID. Preserve the existing formatting exactly — see the serialisation note below.
+
+### Serialising `edges.json` and `resources.json`
+
+Both files are stored with **escaped non-ASCII**: an em-dash is written as the six ASCII characters `\u2014` rather than as the literal character. Descriptions and resource titles are full of em-dashes, so writing these files with `ensure_ascii=False` rewrites thousands of unrelated lines and turns a 40-line addition into a 16,000-line diff that buries the real change. Always write them with:
+
+```python
+json.dumps(data, indent=2, ensure_ascii=True) + "\n"
+```
+
+This reproduces the committed files byte-for-byte, so the diff shows only the entries actually added.
 
 ## Step 5 — Validate resource URLs
 
