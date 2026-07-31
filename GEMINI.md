@@ -30,6 +30,16 @@ The project includes specialized Gemini skills to automate workflows:
 - **Key Terms:** `key-terms.json` (Plain-text equation variable definitions, e.g. `dW`, `S`)
 - **Cache:** `graph.db` (Gitignored SQLite database, rebuilt on startup)
 
+### Startup Sequence
+`app/__init__.py` → `create_app()` performs, in order:
+1. `init_db()` — idempotent DDL for the `cards` and `edges` tables
+2. Load `notation.json` → `app.config["NOTATION"]`
+3. Load `key-terms.json` → `app.config["KEY_TERMS"]`
+4. `load_all_cards(...)` — scans `cards/**/*.md`, skips unchanged files by `st_mtime`, upserts changed ones, removes cards whose files no longer exist
+5. `load_edges_from_file()` — clears the `edges` table and repopulates from `edges.json`
+6. Load `resources.json` → `app.config["RESOURCES"]`
+7. Register the blueprint and attach the context processor (CSRF token, topic colours, search data, site stats)
+
 ## Building and Running
 
 The project uses `uv` for dependency management.
@@ -41,14 +51,42 @@ uv sync                      # Create/update virtual environment
 
 ### Running the App
 ```bash
-uv run python run.py         # Starts server at http://127.0.0.1:5000
+FLASK_DEBUG=1 uv run python run.py    # Starts server at http://127.0.0.1:5000
 ```
 
-On first run or restart, the app scans `cards/`, parses metadata, and populates `graph.db`. Card changes are picked up on server restart.
+**`FLASK_DEBUG=1` is required for local development.** `create_app()` raises `RuntimeError` unless either `SECRET_KEY` is set in the environment or debug mode is on. If the server is launched in the background without it, the process dies immediately and the traceback is easily lost — always confirm the server is actually serving before assuming a restart succeeded.
+
+Startup rebuilds `graph.db` by parsing every card, which takes upwards of twenty seconds for a collection of this size. Poll for a response rather than waiting a fixed couple of seconds:
+
+```bash
+for i in $(seq 1 30); do
+  code=$(curl -s -o /dev/null -w "%{http_code}" "http://127.0.0.1:5000/card/<card-id>")
+  [ "$code" = "200" ] && break
+  sleep 2
+done
+```
+
+Card changes are picked up on server restart. Delete `graph.db` first to force a full rebuild. To stop a running instance, kill it **by port** (`lsof -ti tcp:5000 | xargs -r kill`) rather than with `pkill -f "run.py"` — that pattern also matches the shell issuing the command whenever the same command line contains the launch string, killing the caller instead of the server.
 
 ### Utilities
 - **URL Validation:** `uv run python scripts/validate_urls.py --force` (Checks links in `resources.json`)
 - **README Stats:** `uv run python scripts/update_readme_stats.py` (Updates card and edge counts in README)
+- **Install Git Hooks:** `bash scripts/install_hooks.sh` (Installs the pre-commit URL validator; the hook itself is not committed, so run this after cloning)
+
+URL validation runs automatically on `git commit` when `resources.json` is staged, and **blocks the commit** if any link fails. Some well-known hosts reject automated requests outright (Real Python returns 403 to every user agent) while others rate-limit intermittently under concurrency — a failure on retry-friendly hosts such as Wikipedia or BIS is usually transient, but a hard 403 means the link must be replaced.
+
+## Routes
+
+| Method | URL | Purpose |
+|---|---|---|
+| GET | `/` | Card grid, tag filter strip, `?tag=` / `?topic=` filtering |
+| GET | `/tag/<tag>` | All cards carrying one tag |
+| GET | `/card/<path:card_id>` | Card content, prerequisites, see-also, sidebar |
+| POST | `/card/<path:card_id>/remove-link` | Delete an edge (CSRF-protected) |
+| GET | `/graph` | vis.js network — path finding, topic filtering, edge weights |
+| GET | `/formulas` | All Key Formula sections aggregated by topic |
+| GET | `/recent` | Reverse-chronological card list grouped by date (unlisted) |
+| GET | `/random` | Redirect to a random card |
 
 ## Testing
 
@@ -68,6 +106,7 @@ Cards are stored in `cards/<topic>/<slug>.md`. They MUST follow a strict format 
 
 **Topic:** <Topic Name>
 **Tags:** tag1, tag2
+**Created:** YYYY-MM-DD
 **Author:** <Name/Model>
 
 ---
@@ -82,17 +121,46 @@ Cards are stored in `cards/<topic>/<slug>.md`. They MUST follow a strict format 
 ...
 ```
 
+- **Required fields:** `**Topic:**`, `**Tags:**` and `**Author:**` are extracted by regex; a card missing any of them raises `ValueError` at startup. `**Created:**` is conventional but not parsed — it is stripped from the rendered output, and `/recent` sorts by the file's modification time instead.
 - **British English:** Use British spelling (e.g., "normalised", "behaviour").
 - **Maths:** Use `$...$` for inline and `$$...$$` for display maths (KaTeX).
 - **Topic Identity:** Topics must match keys in `app/routes.py::TOPIC_COLOURS`.
 - **Do not** add a `**Level:**` field — it is not a recognised metadata field.
 
-Topics (15): `Banking Regulation`, `Calculus`, `Computational Finance`, `Derivatives`, `Financial Mathematics`, `Fixed Income`, `Linear Algebra`, `Mathematical Notation`, `Portfolio Theory & Asset Pricing`, `Probability`, `Risk`, `Short Selling`, `Statistics`, `Stochastic Processes`, `Volatility`.
+### LaTeX Pitfalls
+- **Inside Markdown tables:** a bare `|` within `$...$` is misread as a column separator. Use `\lvert` and `\rvert` for absolute value (e.g. `$\lvert x\rvert$`) and `\middle\vert` for conditional-expectation bars. Never place a `\begin{...}` environment (cases, aligned, matrix, …) inside inline `$...$` in a table cell — Markdown treats the `\\` line break as an escaped backslash. Move such formulas into a `$$...$$` block outside the table.
+- **Currency in prose:** escape dollar signs as `\$` (e.g. `\$6 bn`). A bare `$` can be read by KaTeX as the opening of inline maths, especially when other `$...$` appears later in the same card.
+
+### Topics and Directories
+
+Topics (16):
+
+| Directory | Topic name |
+|---|---|
+| `cards/banking-regulation/` | `Banking Regulation` |
+| `cards/calculus/` | `Calculus` |
+| `cards/computational-finance/` | `Computational Finance` |
+| `cards/derivatives/` | `Derivatives` |
+| `cards/financial-maths/` | `Financial Mathematics` |
+| `cards/fixed-income/` | `Fixed Income` |
+| `cards/linear-algebra/` | `Linear Algebra` |
+| `cards/machine-learning/` | `Machine Learning` |
+| `cards/mathematical-notation/` | `Mathematical Notation` |
+| `cards/portfolio-theory/` | `Portfolio Theory & Asset Pricing` |
+| `cards/probability/` | `Probability` |
+| `cards/risk/` | `Risk` |
+| `cards/short-selling/` | `Short Selling` |
+| `cards/statistics/` | `Statistics` |
+| `cards/stochastic-processes/` | `Stochastic Processes` |
+| `cards/volatility/` | `Volatility` |
+
+Adding a topic requires a new entry in `TOPIC_COLOURS`; the colour cascades to card tiles, content headings, graph nodes and badges through the CSS custom property `--tc`.
 
 ### Database and Loading
 - **Card IDs:** Derived from file paths (e.g., `derivatives/black-scholes-equation`).
 - **Loader:** `app/loader.py` performs incremental reloads based on file `st_mtime`.
 - **Edges:** Mutations (removing links) are written back to `edges.json`. Adding edges is currently manual via `edges.json`.
+- **Edge integrity:** Both `source` and `target` must be existing card IDs. Orphaned edges are skipped silently at load time, so a typo produces a missing link rather than an error — verify IDs when editing `edges.json` by hand, and never commit `edges.json` without the cards it references.
 
 ### Frontend
 - **No Build Step:** All CSS is in `app/static/style.css`. Third-party JS/CSS is loaded from CDNs.
