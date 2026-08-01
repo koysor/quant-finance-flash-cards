@@ -3537,6 +3537,28 @@
       }
     ]
   },
+  "computational-finance/information-driven-bars": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Market microstructure",
+        "url": "https://en.wikipedia.org/wiki/Market_microstructure"
+      },
+      {
+        "title": "Investopedia \u2014 Volume of Trade",
+        "url": "https://www.investopedia.com/terms/v/volumeoftrade.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "pandas \u2014 Time series resampling",
+        "url": "https://pandas.pydata.org/docs/user_guide/timeseries.html"
+      }
+    ]
+  },
   "computational-finance/label-construction": {
     "websites": [
       {
@@ -6005,6 +6027,28 @@
       }
     ]
   },
+  "derivatives/kth-to-default-basket-cds": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Credit default swap",
+        "url": "https://en.wikipedia.org/wiki/Credit_default_swap"
+      },
+      {
+        "title": "Investopedia \u2014 Credit Default Swap",
+        "url": "https://www.investopedia.com/terms/c/creditdefaultswap.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "Wikipedia \u2014 Collateralized debt obligation",
+        "url": "https://en.wikipedia.org/wiki/Collateralized_debt_obligation"
+      }
+    ]
+  },
   "derivatives/law-of-one-price": {
     "websites": [
       {
@@ -8455,6 +8499,28 @@
       }
     ]
   },
+  "fixed-income/credit-dv01": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 DV01 (Dollar Duration)",
+        "url": "https://www.investopedia.com/terms/d/dollarduration.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Credit spread (bond)",
+        "url": "https://en.wikipedia.org/wiki/Credit_spread_(bond)"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "Wikipedia \u2014 Bond duration",
+        "url": "https://en.wikipedia.org/wiki/Bond_duration"
+      }
+    ]
+  },
   "fixed-income/credit-spread": {
     "websites": [
       {
@@ -10646,6 +10712,28 @@
       {
         "title": "MathWorld \u2014 Matrix Norm",
         "url": "https://mathworld.wolfram.com/MatrixNorm.html"
+      }
+    ]
+  },
+  "linear-algebra/nearest-correlation-matrix": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Definite matrix",
+        "url": "https://en.wikipedia.org/wiki/Definite_matrix"
+      },
+      {
+        "title": "Wikipedia \u2014 Cholesky decomposition",
+        "url": "https://en.wikipedia.org/wiki/Cholesky_decomposition"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Linear Algebra (18.06)",
+        "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
       }
     ]
   },
@@ -14081,6 +14169,28 @@
       }
     ]
   },
+  "machine-learning/model-stacking": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Ensemble learning",
+        "url": "https://en.wikipedia.org/wiki/Ensemble_learning"
+      },
+      {
+        "title": "scikit-learn \u2014 Stacked generalization",
+        "url": "https://scikit-learn.org/stable/modules/ensemble.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest \u2014 Random Forests Part 1",
+        "url": "https://www.youtube.com/watch?v=J4Wdy0Wc_xQ"
+      },
+      {
+        "title": "StatQuest \u2014 Gradient Boost Part 1",
+        "url": "https://www.youtube.com/watch?v=3CC4N4z3GJc"
+      }
+    ]
+  },
   "machine-learning/momentum-optimisation": {
     "websites": [
       {
@@ -17217,6 +17327,28 @@
       }
     ]
   },
+  "portfolio-theory/corner-solution": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Modern portfolio theory",
+        "url": "https://en.wikipedia.org/wiki/Modern_portfolio_theory"
+      },
+      {
+        "title": "Investopedia \u2014 Efficient Frontier",
+        "url": "https://www.investopedia.com/terms/e/efficientfrontier.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "Wikipedia \u2014 Black\u2013Litterman model",
+        "url": "https://en.wikipedia.org/wiki/Black%E2%80%93Litterman_model"
+      }
+    ]
+  },
   "portfolio-theory/correlation-cases": {
     "websites": [
       {
@@ -19966,6 +20098,28 @@
       }
     ]
   },
+  "probability/student-t-copula": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Copula (statistics)",
+        "url": "https://en.wikipedia.org/wiki/Copula_(statistics)"
+      },
+      {
+        "title": "Wikipedia \u2014 Multivariate t-distribution",
+        "url": "https://en.wikipedia.org/wiki/Multivariate_t-distribution"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "Wikipedia \u2014 Tail dependence",
+        "url": "https://en.wikipedia.org/wiki/Tail_dependence"
+      }
+    ]
+  },
   "probability/students-t-distribution": {
     "websites": [
       {
@@ -20122,6 +20276,28 @@
       }
     ]
   },
+  "risk/base-correlation": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Tranches",
+        "url": "https://www.investopedia.com/terms/t/tranches.asp"
+      },
+      {
+        "title": "Wikipedia \u2014 Collateralized debt obligation",
+        "url": "https://en.wikipedia.org/wiki/Collateralized_debt_obligation"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "Wikipedia \u2014 Correlation trading",
+        "url": "https://en.wikipedia.org/wiki/Correlation_trading"
+      }
+    ]
+  },
   "risk/cdo-tranching": {
     "websites": [
       {
@@ -20257,6 +20433,28 @@
       {
         "title": "Credit Risk: Structural Models Explained",
         "url": "https://www.youtube.com/watch?v=Z5yRMMVUC5w"
+      }
+    ]
+  },
+  "risk/drawdown-control": {
+    "websites": [
+      {
+        "title": "Investopedia \u2014 Drawdown",
+        "url": "https://www.investopedia.com/terms/d/drawdown.asp"
+      },
+      {
+        "title": "Investopedia \u2014 Value at Risk (VaR)",
+        "url": "https://www.investopedia.com/terms/v/var.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "Wikipedia \u2014 Drawdown (economics)",
+        "url": "https://en.wikipedia.org/wiki/Drawdown_(economics)"
       }
     ]
   },
@@ -21902,6 +22100,28 @@
       }
     ]
   },
+  "statistics/hurst-exponent": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Hurst exponent",
+        "url": "https://en.wikipedia.org/wiki/Hurst_exponent"
+      },
+      {
+        "title": "Wikipedia \u2014 Long-range dependence",
+        "url": "https://en.wikipedia.org/wiki/Long-range_dependence"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "Wikipedia \u2014 Fractional Brownian motion",
+        "url": "https://en.wikipedia.org/wiki/Fractional_Brownian_motion"
+      }
+    ]
+  },
   "statistics/hypothesis-testing": {
     "websites": [
       {
@@ -21974,11 +22194,55 @@
       }
     ]
   },
+  "statistics/johansen-procedure": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Johansen test",
+        "url": "https://en.wikipedia.org/wiki/Johansen_test"
+      },
+      {
+        "title": "Wikipedia \u2014 Cointegration",
+        "url": "https://en.wikipedia.org/wiki/Cointegration"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "statsmodels \u2014 Vector Error Correction Models",
+        "url": "https://www.statsmodels.org/stable/vector_ar.html"
+      }
+    ]
+  },
   "statistics/kalman-filter": {
     "websites": [
       {
         "title": "Investopedia \u2014 Kalman Filter in Finance",
         "url": "https://www.investopedia.com/terms/k/kalmanfilter.asp"
+      }
+    ]
+  },
+  "statistics/kendalls-tau": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Kendall rank correlation coefficient",
+        "url": "https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient"
+      },
+      {
+        "title": "Investopedia \u2014 Correlation Coefficient",
+        "url": "https://www.investopedia.com/terms/c/correlationcoefficient.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Khan Academy \u2014 Correlation coefficients",
+        "url": "https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data"
+      },
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
       }
     ]
   },
@@ -22172,6 +22436,28 @@
       }
     ]
   },
+  "statistics/mackinnon-critical-values": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Dickey\u2013Fuller test",
+        "url": "https://en.wikipedia.org/wiki/Dickey%E2%80%93Fuller_test"
+      },
+      {
+        "title": "Wikipedia \u2014 Augmented Dickey\u2013Fuller test",
+        "url": "https://en.wikipedia.org/wiki/Augmented_Dickey%E2%80%93Fuller_test"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "statsmodels \u2014 Unit root tests",
+        "url": "https://www.statsmodels.org/stable/tsa.html"
+      }
+    ]
+  },
   "statistics/mahalanobis-distance": {
     "websites": [
       {
@@ -22251,6 +22537,28 @@
       {
         "title": "Wikipedia \u2014 Maximum Likelihood Estimation",
         "url": "https://en.wikipedia.org/wiki/Maximum_likelihood_estimation"
+      }
+    ]
+  },
+  "statistics/mean-reversion-half-life": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Ornstein\u2013Uhlenbeck process",
+        "url": "https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process"
+      },
+      {
+        "title": "Investopedia \u2014 Mean Reversion",
+        "url": "https://www.investopedia.com/terms/m/meanreversion.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "Wikipedia \u2014 Autoregressive model",
+        "url": "https://en.wikipedia.org/wiki/Autoregressive_model"
       }
     ]
   },
@@ -23098,6 +23406,28 @@
       }
     ]
   },
+  "statistics/variance-ratio-test": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Random walk hypothesis",
+        "url": "https://en.wikipedia.org/wiki/Random_walk_hypothesis"
+      },
+      {
+        "title": "Investopedia \u2014 Random Walk Theory",
+        "url": "https://www.investopedia.com/terms/r/randomwalktheory.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "Wikipedia \u2014 Efficient-market hypothesis",
+        "url": "https://en.wikipedia.org/wiki/Efficient-market_hypothesis"
+      }
+    ]
+  },
   "statistics/vasicek-mle-estimation": {
     "websites": [
       {
@@ -23117,6 +23447,28 @@
       {
         "title": "StatQuest \u2014 Maximum Likelihood Estimation, clearly explained",
         "url": "https://www.youtube.com/watch?v=XepXtl9YKwc"
+      }
+    ]
+  },
+  "statistics/vector-error-correction-model": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Error correction model",
+        "url": "https://en.wikipedia.org/wiki/Error_correction_model"
+      },
+      {
+        "title": "statsmodels \u2014 Vector Autoregressions",
+        "url": "https://www.statsmodels.org/stable/vector_ar.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT OpenCourseWare \u2014 Topics in Mathematics with Applications in Finance",
+        "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      },
+      {
+        "title": "Wikipedia \u2014 Vector autoregression",
+        "url": "https://en.wikipedia.org/wiki/Vector_autoregression"
       }
     ]
   },

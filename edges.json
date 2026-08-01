@@ -4404,6 +4404,24 @@
     "description": "In equity factor research, the IC is typically computed as Spearman's rank correlation between predicted and realised cross-sectional returns, making it robust to outliers and non-linear monotone relationships."
   },
   {
+    "source": "computational-finance/information-driven-bars",
+    "target": "computational-finance/ohlcv",
+    "label": "resamples",
+    "description": "Standard OHLCV data is aggregated on the clock, which oversamples quiet periods and undersamples active ones; resampling by trade count, volume or notional gives bars of roughly equal information content."
+  },
+  {
+    "source": "computational-finance/information-driven-bars",
+    "target": "computational-finance/triple-barrier-method",
+    "label": "underlies",
+    "description": "Labelling schemes and the statistical tests applied afterwards all assume observations are comparable draws, so the bar construction is a modelling decision that silently shapes every downstream result."
+  },
+  {
+    "source": "computational-finance/information-driven-bars",
+    "target": "statistics/stationarity",
+    "label": "improves",
+    "description": "Returns sampled on activity rather than on the clock are much closer to independent and identically distributed, removing serial correlation and fat tails that are artefacts of the sampling scheme rather than of the market."
+  },
+  {
     "source": "computational-finance/label-construction",
     "target": "computational-finance/look-ahead-bias",
     "label": "primary source of",
@@ -7054,6 +7072,36 @@
     "target": "derivatives/finite-difference-methods",
     "label": "applied within",
     "description": "In a finite-difference equity pricer, the dividend jump condition is implemented by interpolating the option value grid at each ex-dividend time slice onto the shifted spot grid S\u2212D before resuming the backward induction, with the remapping typically done using cubic spline or linear interpolation between existing grid nodes."
+  },
+  {
+    "source": "derivatives/kth-to-default-basket-cds",
+    "target": "financial-maths/hazard-rate",
+    "label": "parameterised by",
+    "description": "Each reference name's default time is drawn from an exponential distribution parameterised by the piecewise-constant hazard rates bootstrapped from that name's quoted CDS curve."
+  },
+  {
+    "source": "derivatives/kth-to-default-basket-cds",
+    "target": "fixed-income/credit-dv01",
+    "label": "risk-managed by",
+    "description": "Basket spread risk is decomposed name by name by bumping each reference credit curve one basis point and repricing, giving the per-name credit DV01 that a desk actually hedges."
+  },
+  {
+    "source": "derivatives/kth-to-default-basket-cds",
+    "target": "probability/student-t-copula",
+    "label": "priced by sampling",
+    "description": "The joint distribution of the k-th default time has no closed form, so the basket is priced by Monte Carlo: sample correlated uniforms from a copula, convert each to a default time, and take the k-th smallest."
+  },
+  {
+    "source": "derivatives/kth-to-default-basket-cds",
+    "target": "risk/cdo-tranching",
+    "label": "simplest case of",
+    "description": "A first-to-default basket behaves like a CDO equity tranche and higher k like more senior tranches, which is why the five-name basket is the standard route into pricing pooled, correlation-sensitive credit products."
+  },
+  {
+    "source": "derivatives/kth-to-default-basket-cds",
+    "target": "risk/recovery-rate",
+    "label": "sized by",
+    "description": "The default leg pays loss given default, one minus the recovery rate, on the defaulted name's share of notional, so an assumed recovery of 40 per cent sets the magnitude of every payout in the simulation."
   },
   {
     "source": "derivatives/law-of-one-price",
@@ -9984,6 +10032,24 @@
     "description": "CDS spreads are used to bootstrap the piecewise-constant hazard rate curve in intensity-based models, analogously to how swap rates imply the discount curve."
   },
   {
+    "source": "fixed-income/credit-dv01",
+    "target": "fixed-income/dv01",
+    "label": "credit analogue of",
+    "description": "DV01 measures sensitivity to a basis point of interest rate, credit DV01 to a basis point of credit spread, and a credit desk sizes and hedges positions in the second exactly as a rates desk does in the first."
+  },
+  {
+    "source": "fixed-income/credit-dv01",
+    "target": "risk/default-probability",
+    "label": "weighted by",
+    "description": "The risky annuity that transmits spread moves into value is discounted by survival probabilities, so the sensitivity shrinks as spreads widen and default becomes more likely \u2014 an asymmetry plain DV01 does not have."
+  },
+  {
+    "source": "fixed-income/credit-dv01",
+    "target": "risk/synthetic-cdo",
+    "label": "measures exposure of",
+    "description": "Selling protection is a leveraged long position in the underlying bond with no funding requirement, so notional understates the risk and credit DV01 is what makes a synthetic book comparable to a cash one."
+  },
+  {
     "source": "fixed-income/credit-spread",
     "target": "fixed-income/credit-default-swap",
     "label": "traded via",
@@ -12436,6 +12502,24 @@
     "target": "linear-algebra/singular-value-decomposition",
     "label": "computed via",
     "description": "The pseudoinverse is defined through the SVD by inverting the non-zero singular values in Sigma, making SVD the standard numerical method for computing it stably \u2014 especially when the matrix is near rank-deficient."
+  },
+  {
+    "source": "linear-algebra/nearest-correlation-matrix",
+    "target": "linear-algebra/cholesky-decomposition",
+    "label": "prerequisite for",
+    "description": "Cholesky factorisation fails outright on a matrix with a negative eigenvalue, so copula sampling cannot begin until the estimated correlation matrix has been projected back onto the positive semi-definite cone."
+  },
+  {
+    "source": "linear-algebra/nearest-correlation-matrix",
+    "target": "linear-algebra/eigenvalues-and-eigenvectors",
+    "label": "repairs via",
+    "description": "Eigenvalue clipping floors the spectrum at zero and rebuilds the matrix, which is why a negative eigenvalue is read as a portfolio direction that would otherwise be assigned negative variance."
+  },
+  {
+    "source": "linear-algebra/nearest-correlation-matrix",
+    "target": "portfolio-theory/denoising-covariance-matrices",
+    "label": "complements",
+    "description": "Both act on the spectrum of an estimated matrix, but repair only enforces validity while denoising additionally shrinks the noisy small eigenvalues that an inverse covariance would otherwise amplify."
   },
   {
     "source": "linear-algebra/null-space",
@@ -16068,6 +16152,30 @@
     "description": "Weights & Biases handles experiment tracking and hyperparameter logging during research, while a model registry takes over at promotion time \u2014 the two tools together cover the full lifecycle from exploratory runs to governed production deployment."
   },
   {
+    "source": "machine-learning/model-stacking",
+    "target": "computational-finance/purged-cross-validation",
+    "label": "requires",
+    "description": "Out-of-fold meta-features leak across fold boundaries when returns are serially correlated, so folds must be purged and embargoed or the stack reports a performance it cannot repeat live."
+  },
+  {
+    "source": "machine-learning/model-stacking",
+    "target": "machine-learning/ensemble-methods",
+    "label": "extends",
+    "description": "Bagging and boosting combine models by fixed rules, whereas stacking fits a second-stage model that learns observation-dependent weights from the base learners' disagreements."
+  },
+  {
+    "source": "machine-learning/model-stacking",
+    "target": "machine-learning/lstm",
+    "label": "combines",
+    "description": "A recurrent network contributes sequential structure to the ensemble, and stacking pays off precisely because its errors are uncorrelated with those of a tree fitted on the same features."
+  },
+  {
+    "source": "machine-learning/model-stacking",
+    "target": "machine-learning/xgboost",
+    "label": "combines",
+    "description": "A gradient-boosted tree is one of the standard base learners in a financial stack, contributing non-linear feature interactions that a linear model or a recurrent network would miss."
+  },
+  {
     "source": "machine-learning/momentum-optimisation",
     "target": "machine-learning/adam-optimiser",
     "label": "feeds into",
@@ -19416,6 +19524,30 @@
     "description": "Contrarian and momentum investors take diametrically opposed positions \u2014 contrarians buy what momentum investors sell, and the relative profitability of each approach depends on the time horizon and market regime."
   },
   {
+    "source": "portfolio-theory/corner-solution",
+    "target": "portfolio-theory/black-litterman-model",
+    "label": "motivates",
+    "description": "Black-Litterman replaces the sample mean with equilibrium returns implied by index weights and tilts them only where a view is held, anchoring the posterior near the market portfolio instead of at a corner."
+  },
+  {
+    "source": "portfolio-theory/corner-solution",
+    "target": "portfolio-theory/efficient-frontier",
+    "label": "distorts",
+    "description": "A frontier computed from sample estimates sits visibly away from the true one even when the estimation error is under half a percentage point, so the plotted curve overstates what is actually attainable."
+  },
+  {
+    "source": "portfolio-theory/corner-solution",
+    "target": "portfolio-theory/risk-parity",
+    "label": "avoided by",
+    "description": "Allocating by risk contribution rather than by optimised expected return sidesteps the mean estimate entirely, which is why risk parity and equal weighting are so hard to beat out of sample."
+  },
+  {
+    "source": "portfolio-theory/corner-solution",
+    "target": "statistics/sample-mean",
+    "label": "caused by",
+    "description": "Expected return errors are roughly twenty times more damaging to a mean-variance optimiser than covariance errors, so any asset whose mean is overstated by sampling chance is loaded up by the unconstrained solution."
+  },
+  {
     "source": "portfolio-theory/correlation-cases",
     "target": "portfolio-theory/diversification-bounds",
     "label": "determines",
@@ -22566,6 +22698,36 @@
     "description": "SDEs are the natural continuous-time language for stochastic dynamics \u2014 they describe how a stochastic process evolves by specifying its instantaneous drift and diffusion, linking the abstract concept of stochasticity to the concrete equations that govern asset prices, interest rates, and volatility."
   },
   {
+    "source": "probability/student-t-copula",
+    "target": "linear-algebra/cholesky-decomposition",
+    "label": "imposes correlation via",
+    "description": "Correlation enters the sampling algorithm at exactly one step, multiplying the independent draws by the Cholesky factor of the correlation matrix \u2014 the operation that factorises the copula into linear equations."
+  },
+  {
+    "source": "probability/student-t-copula",
+    "target": "probability/copulas",
+    "label": "specialises",
+    "description": "Sklar's theorem guarantees dependence can be separated from marginals; the t copula is the specific dependence structure obtained from a multivariate Student's t, chosen when joint extremes matter."
+  },
+  {
+    "source": "probability/student-t-copula",
+    "target": "risk/gaussian-copula-credit",
+    "label": "corrects tail of",
+    "description": "The Gaussian copula has zero tail dependence at any correlation below one, so it assigns vanishing probability to many names failing together \u2014 the deficiency that mispriced senior tranches and that finite degrees of freedom repair."
+  },
+  {
+    "source": "probability/student-t-copula",
+    "target": "statistics/kendalls-tau",
+    "label": "parameterised by",
+    "description": "An elliptical copula takes a linear correlation matrix, so a tau estimated on ranks must be converted through the sine relation before it can be used as the copula's correlation input."
+  },
+  {
+    "source": "probability/student-t-copula",
+    "target": "statistics/maximum-likelihood-estimation",
+    "label": "calibrated by",
+    "description": "With the correlation matrix inferred separately from rank measures, the degrees of freedom are chosen by maximising the summed log copula density over a grid of integer values on the pseudo-samples."
+  },
+  {
     "source": "probability/students-t-distribution",
     "target": "probability/fat-tailed-distributions",
     "label": "example of",
@@ -22764,6 +22926,24 @@
     "description": "Backtests conducted on survivor-only databases are systematically distorted upward, as they exclude the stocks that went bankrupt or were delisted \u2014 precisely the ones that would have caused losses."
   },
   {
+    "source": "risk/base-correlation",
+    "target": "probability/student-t-copula",
+    "label": "symptom addressed by",
+    "description": "The skew exists because the Gaussian copula understates joint defaults; a t copula generates that clustering structurally through its degrees of freedom rather than by tilting a parameter per detachment point."
+  },
+  {
+    "source": "risk/base-correlation",
+    "target": "risk/cdo-tranching",
+    "label": "quotes",
+    "description": "Tranches are quoted through the correlation that reprices the base tranche running from zero to each detachment point, a decomposition that avoids the multiple or missing roots that afflict compound correlation on mezzanine tranches."
+  },
+  {
+    "source": "risk/base-correlation",
+    "target": "risk/gaussian-copula-credit",
+    "label": "patches",
+    "description": "The rising correlation skew is the adjustment that forces a model with no tail dependence to match traded senior tranche prices, playing the same role in credit that the implied volatility smile plays in equity options."
+  },
+  {
     "source": "risk/cdo-tranching",
     "target": "risk/gaussian-copula-credit",
     "label": "priced via",
@@ -22906,6 +23086,30 @@
     "target": "stochastic-processes/lognormal-asset-prices",
     "label": "computed from",
     "description": "Distance to default uses the lognormal distribution of asset prices to measure how far (in standard deviations) the expected log-asset value lies above the default threshold, applying the It\u00f4-corrected drift \u03bc - \u00bd\u03c3\u00b2 for the one-year horizon."
+  },
+  {
+    "source": "risk/drawdown-control",
+    "target": "derivatives/statistical-arbitrage",
+    "label": "disciplines",
+    "description": "A spread furthest from equilibrium looks most attractive to the entry rule at exactly the moment the existing position is deepest under water, so a drawdown budget is what stops a converging trade being added to until close-out."
+  },
+  {
+    "source": "risk/drawdown-control",
+    "target": "risk/backtesting",
+    "label": "evaluated in",
+    "description": "A backtest must show not only cumulative profit but that the strategy would have survived its own worst stretch, since a positive-expectancy system returns nothing if it is closed out before the edge is realised."
+  },
+  {
+    "source": "risk/drawdown-control",
+    "target": "risk/maximum-drawdown",
+    "label": "budgets against",
+    "description": "Maximum drawdown measures what has already happened, whereas drawdown control turns a pre-set tolerance into a live constraint by requiring today's value at risk to fit inside the distance still remaining to it."
+  },
+  {
+    "source": "risk/drawdown-control",
+    "target": "risk/value-at-risk",
+    "label": "constrains",
+    "description": "Because value at risk scales with position size, requiring it to fit within the residual drawdown budget translates directly into a scaling factor on exposure that tightens as losses accumulate."
   },
   {
     "source": "risk/drawdown-duration",
@@ -25086,6 +25290,24 @@
     "description": "Hamiltonian Monte Carlo is a gradient-based MCMC algorithm that constructs the required Markov chain using Hamiltonian dynamics, producing far lower autocorrelation than Metropolis\u2013Hastings and making it the default sampler in Stan and PyMC."
   },
   {
+    "source": "statistics/hurst-exponent",
+    "target": "derivatives/statistical-arbitrage",
+    "label": "gates entries for",
+    "description": "Computed on a rolling window, a value below one half confirms the anti-persistent regime in which reversion entries are justified, and a spread drifting back towards 0.5 warns the cointegrating relationship is breaking."
+  },
+  {
+    "source": "statistics/hurst-exponent",
+    "target": "stochastic-processes/fractional-brownian-motion",
+    "label": "parameterises",
+    "description": "Fractional Brownian motion is defined by its Hurst exponent, the parameter controlling whether increments are positively correlated, independent, or anti-persistent."
+  },
+  {
+    "source": "statistics/hurst-exponent",
+    "target": "volatility/rough-volatility",
+    "label": "measures roughness in",
+    "description": "Realised volatility shows a Hurst exponent near 0.1, far below the 0.5 of Brownian motion, and that empirical finding is the entire motivation for rough volatility models."
+  },
+  {
     "source": "statistics/hypothesis-testing",
     "target": "statistics/augmented-dickey-fuller-test",
     "label": "framework for",
@@ -25218,6 +25440,30 @@
     "description": "The Jarque-Bera test converts the descriptive observation that returns exhibit skewness and excess kurtosis into a formal statistical test with a p-value, quantifying how far the data deviate from normality."
   },
   {
+    "source": "statistics/johansen-procedure",
+    "target": "linear-algebra/eigenvalues-and-eigenvectors",
+    "label": "built on",
+    "description": "The trace and maximum-eigenvalue statistics are functions of the estimated eigenvalues, which are the squared canonical correlations between differenced prices and their lagged levels."
+  },
+  {
+    "source": "statistics/johansen-procedure",
+    "target": "statistics/cointegration",
+    "label": "generalises",
+    "description": "Engle-Granger handles one pair and forces a choice of which series goes on the left, whereas Johansen treats all variables symmetrically and can detect several independent long-run relationships at once."
+  },
+  {
+    "source": "statistics/johansen-procedure",
+    "target": "statistics/mackinnon-critical-values",
+    "label": "compared against",
+    "description": "Johansen statistics have non-standard distributions whose critical values depend on the number of variables and the deterministic terms assumed, so the right table must be selected rather than a normal cut-off."
+  },
+  {
+    "source": "statistics/johansen-procedure",
+    "target": "statistics/vector-error-correction-model",
+    "label": "tests rank of",
+    "description": "The whole procedure is a test on the rank of the long-run impact matrix in the VECM, since that rank is precisely the number of cointegrating relationships in the system."
+  },
+  {
     "source": "statistics/kalman-filter",
     "target": "financial-maths/pairs-trading",
     "label": "estimates hedge ratio for",
@@ -25234,6 +25480,24 @@
     "target": "statistics/beta-estimation",
     "label": "dynamic version of",
     "description": "The Kalman filter provides a dynamic, time-varying version of beta estimation \u2014 instead of a fixed regression coefficient, beta is modelled as a hidden state that evolves over time."
+  },
+  {
+    "source": "statistics/kendalls-tau",
+    "target": "linear-algebra/nearest-correlation-matrix",
+    "label": "may require",
+    "description": "A correlation matrix assembled entry by entry from pairwise rank measures carries no guarantee of joint consistency, so the converted matrix often has a negative eigenvalue and must be repaired before use."
+  },
+  {
+    "source": "statistics/kendalls-tau",
+    "target": "statistics/kernel-density-estimation",
+    "label": "computed on output of",
+    "description": "Rank correlation for copula calibration is estimated on pseudo-samples, and kernel smoothing produces the empirical CDF that turns non-normal credit spread data into the uniform scores required."
+  },
+  {
+    "source": "statistics/kendalls-tau",
+    "target": "statistics/spearmans-rank-correlation",
+    "label": "alternative to",
+    "description": "Both discard magnitudes in favour of ranks, but they are on different scales and map to linear correlation through different formulae, so the two must never be substituted for one another."
   },
   {
     "source": "statistics/kernel-density-estimation",
@@ -25458,6 +25722,24 @@
     "description": "Long memory is the quantitative refinement of volatility clustering: where clustering shows that shocks persist for some lags, long memory shows the decay is hyperbolic rather than geometric, extending the phenomenon to horizons of hundreds of days."
   },
   {
+    "source": "statistics/mackinnon-critical-values",
+    "target": "statistics/augmented-dickey-fuller-test",
+    "label": "calibrates",
+    "description": "The Dickey-Fuller statistic has no standard distribution under a unit root null, so its cut-offs must be simulated and, in MacKinnon's response-surface form, adjusted for the number of observations."
+  },
+  {
+    "source": "statistics/mackinnon-critical-values",
+    "target": "statistics/cointegration",
+    "label": "corrects testing of",
+    "description": "A residual produced by regression has been fitted to look as stationary as possible, so testing it needs the more demanding cointegration critical values rather than the plain unit-root table."
+  },
+  {
+    "source": "statistics/mackinnon-critical-values",
+    "target": "statistics/hypothesis-testing",
+    "label": "specialises",
+    "description": "It is a concrete case where the null distribution is non-standard and sample-size dependent, so the usual normal or t cut-offs would reject far too readily."
+  },
+  {
     "source": "statistics/mahalanobis-distance",
     "target": "linear-algebra/covariance-matrix",
     "label": "requires",
@@ -25534,6 +25816,30 @@
     "target": "volatility/realised-volatility",
     "label": "estimates",
     "description": "Fitting a distribution to realised volatility data \u2014 to calibrate models for VaR, option pricing, or risk management \u2014 uses MLE to find the parameter values most consistent with observed returns."
+  },
+  {
+    "source": "statistics/mean-reversion-half-life",
+    "target": "derivatives/statistical-arbitrage",
+    "label": "sizes bounds for",
+    "description": "Entry bounds are set at a multiple of the equilibrium standard deviation implied by the OU fit, and the half-life sets the expected holding period and therefore the achievable number of round trips."
+  },
+  {
+    "source": "statistics/mean-reversion-half-life",
+    "target": "statistics/cointegration",
+    "label": "filters",
+    "description": "Cointegration establishes that an equilibrium exists but not how quickly it is restored, and a pair with a six-month half-life ties up capital far too long to trade however strong its test statistics."
+  },
+  {
+    "source": "statistics/mean-reversion-half-life",
+    "target": "stochastic-processes/mean-reversion",
+    "label": "quantifies",
+    "description": "Half-life converts an abstract reversion speed into a number of days, the form in which a trader can judge whether the pull back to equilibrium is fast enough to be worth trading."
+  },
+  {
+    "source": "statistics/mean-reversion-half-life",
+    "target": "stochastic-processes/ornstein-uhlenbeck-process",
+    "label": "fitted from",
+    "description": "The discrete solution of the OU SDE is an AR(1) regression, so the reversion speed and equilibrium level fall straight out of the fitted slope and intercept of a spread regressed on its own lag."
   },
   {
     "source": "statistics/measurement-error",
@@ -26526,6 +26832,24 @@
     "description": "The square-root rule follows directly from the variance addition property for independent random variables \u2014 total variance equals the sum of individual variances, so total standard deviation grows as \u221an."
   },
   {
+    "source": "statistics/variance-ratio-test",
+    "target": "computational-finance/bollinger-bands",
+    "label": "gates",
+    "description": "A ratio below one confirms the mean-reverting regime in which band entries work, suppressing the false signals that occur when price rides a band through a trending market."
+  },
+  {
+    "source": "statistics/variance-ratio-test",
+    "target": "statistics/hurst-exponent",
+    "label": "equivalent to",
+    "description": "Both measure how variance accumulates with the sampling interval and are linked exactly by the variance ratio equalling the lag raised to twice the Hurst exponent minus one, so they should agree on the same data."
+  },
+  {
+    "source": "statistics/variance-ratio-test",
+    "target": "statistics/stationarity",
+    "label": "probes",
+    "description": "Under a random walk variance grows linearly with horizon, so a ratio significantly below one is direct evidence of the negative autocorrelation that a stationary, mean-reverting series exhibits."
+  },
+  {
     "source": "statistics/vasicek-mle-estimation",
     "target": "fixed-income/calibration-vs-fitting",
     "label": "implements",
@@ -26536,6 +26860,30 @@
     "target": "stochastic-processes/vasicek-model",
     "label": "parameterises",
     "description": "Running OLS on discretised rate observations recovers the three Vasicek parameters (kappa, theta, sigma) via closed-form back-transformations, fully parameterising the continuous-time SDE for simulation or analytical bond pricing."
+  },
+  {
+    "source": "statistics/vector-error-correction-model",
+    "target": "derivatives/statistical-arbitrage",
+    "label": "identifies trade for",
+    "description": "The adjustment coefficients say which leg of a pair does the correcting, which is what determines where a statistical arbitrage position should be concentrated rather than split evenly."
+  },
+  {
+    "source": "statistics/vector-error-correction-model",
+    "target": "statistics/cointegration",
+    "label": "models",
+    "description": "The error correction term is the lagged cointegrating residual, so the VECM is the dynamic model that describes how a cointegrated system returns to its long-run equilibrium."
+  },
+  {
+    "source": "statistics/vector-error-correction-model",
+    "target": "statistics/multivariate-regression",
+    "label": "estimated by",
+    "description": "The Johansen estimator concentrates the model by regressing both differences and lagged levels on the short-run terms, then estimates the reduced-rank long-run matrix from the two residual series."
+  },
+  {
+    "source": "statistics/vector-error-correction-model",
+    "target": "statistics/non-stationarity",
+    "label": "balances",
+    "description": "Differences are stationary but lagged levels are not, so the long-run matrix must have reduced rank for the equation to balance \u2014 which is exactly the algebraic statement that cointegration exists."
   },
   {
     "source": "statistics/volatility-clustering",
