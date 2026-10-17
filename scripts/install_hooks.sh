@@ -15,6 +15,9 @@ cat > "$HOOK_SRC" << 'HOOK'
 #!/usr/bin/env bash
 # Pre-commit hook
 
+# uv lives in ~/.local/bin, which is missing from PATH in non-login shells
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
+
 # Validate URLs in resources.json when it is staged
 if git diff --cached --name-only | grep -q '^resources\.json$'; then
     echo "resources.json staged — running URL validation..."
