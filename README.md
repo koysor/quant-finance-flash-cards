@@ -70,7 +70,7 @@ A `.env.example` file is provided as a template.
 
 | Layer | Technology |
 |---|---|
-| Server | Python 3.12, Flask 3 |
+| Server | Python 3.14, Flask 3 |
 | Database | SQLite (via `sqlite3` stdlib) |
 | Maths rendering | KaTeX 0.16.9 (client-side, CDN) |
 | Graph visualisation | vis-network 9.1.9 (CDN) |

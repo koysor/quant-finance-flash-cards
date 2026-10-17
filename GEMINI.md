@@ -17,7 +17,7 @@ The project includes specialized Gemini skills to automate workflows:
 - **`quant-resource-manager`**: Manages external links in `resources.json` and updates project statistics.
 
 ### Core Technologies
-- **Backend:** Python 3.12, Flask 3, SQLite (standard library)
+- **Backend:** Python 3.14, Flask 3, SQLite (standard library)
 - **Frontend:** Jinja2 templates, Vanilla CSS (CSS custom properties), KaTeX (maths rendering), vis-network (graph visualisation)
 - **Package Management:** [uv](https://docs.astral.sh/uv/)
 - **Parsing:** `markdown-it-py` for content, regex for metadata.

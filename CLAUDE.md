@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Environment
 
-Uses [uv](https://docs.astral.sh/uv/) for dependency management. Python 3.12.
+Uses [uv](https://docs.astral.sh/uv/) for dependency management. Python 3.14.
 
 ```bash
 uv sync                             # create/update the virtual environment
