@@ -9,6 +9,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from app import create_app
 
+# create_app() refuses to start without SECRET_KEY unless FLASK_DEBUG is on.
+os.environ.setdefault("SECRET_KEY", "test-secret-key")
+
 @pytest.fixture
 def app():
     app = create_app()

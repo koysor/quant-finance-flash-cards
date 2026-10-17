@@ -3,12 +3,18 @@ import json
 import pytest
 
 def test_search_data_json_context(client):
-    """Verify search data is present and valid in all responses."""
+    """Verify pages load search data from /search-data.json and it is valid."""
     response = client.get('/')
     assert response.status_code == 200
-    # The search data is injected as ALL_CARDS in a script tag in base.html
-    # We can check for the beginning of the assignment
-    assert b'const ALL_CARDS = [' in response.data
+    # base.html fetches the card index lazily rather than embedding it.
+    assert b"fetch('/search-data.json')" in response.data
+
+    data = client.get('/search-data.json')
+    assert data.status_code == 200
+    assert data.mimetype == 'application/json'
+    cards = data.get_json()
+    assert cards
+    assert {'id', 'name', 'topic', 'tags', 'url', 'colour'} <= set(cards[0])
 
 def test_index_filtering_tag(client):
     """Verify that the index route correctly filters by tag."""
