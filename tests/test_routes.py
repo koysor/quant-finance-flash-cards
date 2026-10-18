@@ -103,3 +103,9 @@ def test_edges_have_no_duplicate_pairs():
     edges = json.loads(db.EDGES_PATH.read_text(encoding="utf-8"))
     pairs = [(e["source"], e["target"]) for e in edges]
     assert len(pairs) == len(set(pairs))
+
+
+def test_search_data_urls_follow_forwarded_prefix(client):
+    resp = client.get("/search-data.json", headers={"X-Forwarded-Prefix": "/flashcards"})
+    urls = [c["url"] for c in json.loads(resp.data)]
+    assert urls and all(u.startswith("/flashcards/card/") for u in urls)

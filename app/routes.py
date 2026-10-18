@@ -212,7 +212,7 @@ def search_data_json_view() -> Response:
                 "name":   c["name"],
                 "topic":  c["topic"],
                 "tags":   c["tags"],
-                "url":    f"/card/{c['id']}",
+                "url":    url_for("main.card_detail", card_id=c["id"]),
                 "colour": _topic_colour(c["topic"]),
             }
             for c in cards
