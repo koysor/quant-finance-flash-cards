@@ -38,9 +38,9 @@ if [ "$code" != "200" ]; then echo "FAILED ($code)"; tail -30 app.log; fi
 
 ## Testing
 
-There are no automated tests. The application is pure CRUD with no business logic to protect. The only meaningful logic is the regex metadata parsing in `loader.py`; a malformed card raises `ValueError` at startup, so failures are immediate and visible.
+Run `uv run pytest`. Tests copy the database and `edges.json` into a temp directory, so they never modify the real ones. A malformed card or unknown topic raises `ValueError` at startup.
 
-Verify changes by starting the server and checking:
+Also verify changes by starting the server and checking:
 1. The card appears on the index page under the correct topic
 2. The card detail page renders correctly, including maths
 3. `/graph` shows the card as a node
@@ -64,7 +64,7 @@ Flask web application that reads Markdown flash cards from `cards/` and stores t
 6. Load `resources.json` → `app.config["RESOURCES"]` (per-card website/video links)
 7. Blueprint registered, context processor attached (CSRF token, topic colours, search data, stats)
 
-**Edge mutations:** removing a link via the card detail sidebar writes to `graph.db` first, then calls `save_edges_to_file()` to keep `edges.json` in sync. Commit `edges.json` after changes. Adding edges is done by editing `edges.json` directly and restarting.
+**Edge mutations** (only when `ALLOW_EDGE_EDIT=1`): removing a link via the card detail sidebar writes to `graph.db` first, then calls `save_edges_to_file()` to keep `edges.json` in sync. Commit `edges.json` after changes. Adding edges is done by editing `edges.json` directly and restarting.
 
 **`edges.json` format:** a JSON array of objects with `source`, `target` (card IDs), `label` (short relationship type like "foundation of"), and `description` (plain-English explanation of the relationship).
 
@@ -78,7 +78,7 @@ Flask routes use `<path:card_id>` to allow the `/` in URLs.
 
 **Context processor** (`app/__init__.py`) injects into every template:
 - `topic_colour(topic)` — returns hex colour from `TOPIC_COLOURS`
-- `search_data_json` — JSON array of all cards for client-side search
+- `edge_edit_enabled` — true when `ALLOW_EDGE_EDIT=1`; shows the remove-link button
 - `site_stats` — `card_count`, `topic_count`, `edge_count`
 - `csrf_token` — session-based token for POST form protection
 
@@ -95,6 +95,7 @@ Flask routes use `<path:card_id>` to allow the `/` in URLs.
 | GET | `/graph` | vis.js network — path finding, topic filtering, edge weights |
 | GET | `/formulas` | All Key Formula sections aggregated by topic |
 | GET | `/recent` | Reverse-chronological card list, grouped by date (unlisted) |
+| GET | `/barbie` | Sets a cookie (undocumented easter egg) |
 | GET | `/random` | Redirect to a random card (JS version prefers unvisited) |
 
 ## Card Authoring
@@ -106,6 +107,7 @@ Each card is a single `.md` file in `cards/<topic>/`. The loader uses regex (not
 
 **Topic:** <must match a key in TOPIC_COLOURS exactly>
 **Tags:** tag1, tag2, tag3
+**Created:** YYYY-MM-DD   (optional; drives /recent, falls back to file mtime)
 **Author:** <model name or "Unknown">
 
 ---

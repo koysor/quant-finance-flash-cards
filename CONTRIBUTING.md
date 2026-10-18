@@ -140,7 +140,7 @@ The colour cascades automatically to card tiles, the graph, content headings, an
 
 ## Verifying your changes
 
-There are no automated tests. Start the server and check:
+Run `uv run pytest` for the automated tests, then start the server and check:
 
 ```bash
 uv run python run.py

@@ -83,7 +83,7 @@ load_all_cards(notation_dict, key_terms_dict)  # mtime-checked upserts + stale c
 load_edges_from_file()          # clears edges table, repopulates from edges.json
 # load resources.json → app.config["RESOURCES"]  (per-card website/video links)
 app.register_blueprint(bp)
-# context_processor → injects topic_colour(), search_data_json, site_stats, csrf_token
+# context_processor → injects topic_colour(), site_stats, csrf_token, edge_edit_enabled
 ```
 
 The context processor runs on every request and queries `get_all_cards()` + `get_site_stats()` — two SQLite round-trips per page render. Given the current card count (~900) and single-process dev server, this is negligible. If the card count grows substantially or multi-worker deployment is introduced, results should be cached (e.g. with `flask_caching` or a module-level dict with a short TTL).
@@ -126,7 +126,7 @@ disambiguate.html Disambiguation page shown when multiple cards share a slug
 404.html          Branded error page
 ```
 
-`base.html` embeds all card metadata as `ALL_CARDS` JSON (from the context processor's `search_data_json`) so the Spotlight-style search overlay works entirely client-side with no additional requests.
+The Spotlight-style search overlay fetches all card metadata once from `/search-data.json` and then searches entirely client-side.
 
 ### 7. Frontend — `app/static/`
 
@@ -196,4 +196,4 @@ The Flask debug reloader watches Python files. **It does not watch `cards/*.md`*
 
 **New key term:** add an entry to `key-terms.json` mapping a plain variable name (e.g. `dW`) to `{symbol, meaning}`. It will appear in the sidebar of every card whose LaTeX math blocks contain that variable.
 
-**New route:** add a handler to `app/routes.py` and a template to `app/templates/`. The context processor variables (`topic_colour`, `search_data_json`, `site_stats`) are available in all templates automatically.
+**New route:** add a handler to `app/routes.py` and a template to `app/templates/`. The context processor variables (`topic_colour`, `site_stats`) are available in all templates automatically.

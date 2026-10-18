@@ -63,6 +63,6 @@ def test_recent_route_default_sorting(client):
     assert dates == sorted(dates, reverse=True)
 
 def test_recent_route_invalid_dates(client):
-    """Test that invalid date formats don't crash the app."""
+    """Test that invalid date formats are rejected with a 400."""
     response = client.get('/recent?start=not-a-date&end=xyz')
-    assert response.status_code == 200
+    assert response.status_code == 400

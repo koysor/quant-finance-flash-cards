@@ -26,8 +26,13 @@ fi
 
 # Update README stats when cards or edges change
 if git diff --cached --name-only | grep -qE '^(cards/|edges\.json$)'; then
-    uv run python scripts/update_readme_stats.py
-    git add README.md
+    # Stage README only if it has no unstaged edits of its own, so we never sweep in unrelated work.
+    if git diff --quiet -- README.md; then
+        uv run python scripts/update_readme_stats.py
+        git add README.md
+    else
+        echo "README.md has unstaged changes — skipping stats update"
+    fi
 fi
 HOOK
 

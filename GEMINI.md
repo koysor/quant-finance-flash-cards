@@ -90,7 +90,7 @@ URL validation runs automatically on `git commit` when `resources.json` is stage
 
 ## Testing
 
-There are no automated test suites. Verification is manual:
+Run `uv run pytest` for the automated tests, then verify manually:
 1. Start the server and ensure it doesn't fail with `ValueError` (triggered by malformed cards).
 2. Verify new cards appear on the index page under the correct topic.
 3. Check the card detail page for correct HTML/KaTeX rendering.

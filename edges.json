@@ -29575,12 +29575,6 @@
   },
   {
     "source": "volatility/vix-index",
-    "target": "volatility/variance-swap",
-    "label": "approximates fair strike of",
-    "description": "The VIX is mathematically the square root of the fair variance strike for a 30-day variance swap on SPX \u2014 the VIX formula's log-strip of OTM options is precisely the model-free replication formula for a variance swap, making the VIX the standard benchmark for variance swap fair value."
-  },
-  {
-    "source": "volatility/vix-index",
     "target": "volatility/vol-surface-arbitrage-constraints",
     "label": "requires arbitrage-free inputs for",
     "description": "The VIX log-strip formula requires integrating OTM option prices across all strikes \u2014 if the implied vol surface violates butterfly or calendar spread arbitrage at any point, the VIX calculation produces a meaningless result, making arbitrage-free surface construction a prerequisite for accurate VIX computation."

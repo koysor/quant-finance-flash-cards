@@ -31,6 +31,7 @@ re-parsed.  Deleted files are detected by comparing the live file set against
 all IDs in the database and removing any that are no longer present.
 """
 import datetime
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -39,12 +40,15 @@ from typing import Any
 from flask import Flask
 from markdown_it import MarkdownIt
 
-from app.db import delete_card, get_all_card_ids, get_all_card_mtimes, upsert_card
+from app.db import (
+    delete_card, get_all_card_ids, get_all_card_mtimes, get_meta, set_meta, upsert_card,
+)
 
 CARDS_DIR = Path(__file__).parent.parent / "cards"
 
 # Regex patterns for extracting required metadata fields from raw Markdown text.
 TITLE_RE  = re.compile(r'^#\s+(.+)$',              re.MULTILINE)
+CREATED_RE = re.compile(r'^\*\*Created:\*\*\s*(\d{4}-\d{2}-\d{2})\s*$', re.MULTILINE)
 TOPIC_RE  = re.compile(r'^\*\*Topic:\*\*\s*(.+)$', re.MULTILINE)
 TAGS_RE   = re.compile(r'^\*\*Tags:\*\*\s*(.+)$',  re.MULTILINE)
 AUTHOR_RE = re.compile(r'^\*\*Author:\*\*\s*(.+)$', re.MULTILINE)
@@ -59,8 +63,8 @@ _METADATA_RE = re.compile(r'^\*\*(?:Topic|Tags|Created|Author|Level):\*\*\s*.+$'
 # Used to locate LaTeX regions for notation/key-term extraction and for math protection.
 _MATH_RE = re.compile(r'(\$\$[\s\S]*?\$\$|\$(?!\s)[^$\n]+?\$)')
 
-# Shared Markdown-it instance with table support enabled.
-_md = MarkdownIt().enable("table")
+# Shared Markdown-it instance with table support; raw HTML is escaped, not passed through.
+_md = MarkdownIt("commonmark", {"html": False}).enable("table")
 
 # Matches simple LaTeX command names, e.g. \sigma, \mathbb (without argument).
 _LATEX_CMD_RE = re.compile(r'\\([a-zA-Z]+)')
@@ -233,17 +237,25 @@ def _parse_card(
     topic   = _require(TOPIC_RE, "**Topic:**")
     tags    = _require(TAGS_RE,  "**Tags:**")
 
+    from app.routes import TOPIC_COLOURS  # local import: routes imports app.db, not the loader
+    if topic not in TOPIC_COLOURS:
+        raise ValueError(f"Unknown topic '{topic}' in {path}; add it to TOPIC_COLOURS")
+
     # Normalise tags: strip whitespace around each comma-separated value.
     tags = ",".join(t.strip() for t in tags.split(","))
 
     # Compute stat once; reuse for both created_date and file_mtime.
     stat = path.stat()
 
-    # Derive the creation date from the file's modification time so that the
-    # /recent page reflects actual changes rather than an optional metadata field.
-    created_date = datetime.datetime.fromtimestamp(
-        stat.st_mtime
-    ).isoformat(sep=" ", timespec="seconds")
+    # Prefer the card's own **Created:** date; fall back to the file mtime so
+    # that cards without one still appear on /recent.
+    m_created = CREATED_RE.search(text)
+    if m_created:
+        created_date = f"{m_created.group(1)} 00:00:00"
+    else:
+        created_date = datetime.datetime.fromtimestamp(
+            stat.st_mtime
+        ).isoformat(sep=" ", timespec="seconds")
 
     m_author = AUTHOR_RE.search(text)
     author = m_author.group(1).strip() if m_author else "Unknown"
@@ -300,6 +312,15 @@ def load_all_cards(
     """
     paths         = sorted(CARDS_DIR.rglob("*.md"))
     stored_mtimes = get_all_card_mtimes()
+
+    # Cards embed notation/key-term lookups and rendered HTML, so a change to
+    # either dictionary or to the parser invalidates every cached row.
+    fingerprint = hashlib.sha256(
+        json.dumps([notation_dict, key_terms_dict], sort_keys=True).encode()
+        + Path(__file__).read_bytes()
+    ).hexdigest()
+    if get_meta("parse_fingerprint") != fingerprint:
+        stored_mtimes = {}
     loaded        = 0
 
     for path in paths:
@@ -322,6 +343,8 @@ def load_all_cards(
     stale = get_all_card_ids() - live_ids
     for card_id in stale:
         delete_card(card_id)
+
+    set_meta("parse_fingerprint", fingerprint)
 
     total = len(paths)
     msg = f"Cards: {total} total, {loaded} reloaded, {len(stale)} removed."

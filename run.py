@@ -6,5 +6,5 @@ app = create_app()
 
 if __name__ == "__main__":
     port  = int(os.environ.get("PORT", 5000))
-    debug = os.environ.get("DEBUG", "true").lower() == "true"
+    debug = os.environ.get("DEBUG", "false").lower() == "true"
     app.run(debug=debug, port=port)

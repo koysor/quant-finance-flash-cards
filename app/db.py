@@ -21,8 +21,11 @@ Both tables are created idempotently; ``init_db`` also runs ``ALTER TABLE``
 migrations for columns added after the initial schema was deployed.
 """
 import json
+import logging
 import os
 import sqlite3
+from collections.abc import Iterator
+from contextlib import contextmanager
 from pathlib import Path
 from typing import Any
 
@@ -50,6 +53,7 @@ CREATE TABLE IF NOT EXISTS edges (
     description TEXT NOT NULL DEFAULT '',
     created_at  TEXT NOT NULL DEFAULT (datetime('now'))
 );
+CREATE UNIQUE INDEX IF NOT EXISTS idx_edges_pair ON edges(source_id, target_id);
 
 CREATE INDEX IF NOT EXISTS idx_edges_source ON edges(source_id);
 CREATE INDEX IF NOT EXISTS idx_edges_target ON edges(target_id);
@@ -57,8 +61,41 @@ CREATE INDEX IF NOT EXISTS idx_cards_topic  ON cards(topic);
 """
 
 
-def _open_connection() -> sqlite3.Connection:
-    conn = sqlite3.connect(DB_PATH)
+class _ClosingConnection(sqlite3.Connection):
+    """Connection whose ``with`` block commits and then closes it."""
+
+    def __exit__(self, exc_type, exc, tb):
+        try:
+            return super().__exit__(exc_type, exc, tb)
+        finally:
+            self.close()
+
+
+_bulk_conn: sqlite3.Connection | None = None
+
+
+@contextmanager
+def bulk_connection() -> Iterator[sqlite3.Connection]:
+    """
+    Share one connection and one transaction between all ``db.py`` calls made
+    outside a request context (startup card load), then commit and close it.
+    """
+    global _bulk_conn
+    conn = _open_connection(sqlite3.Connection)
+    _bulk_conn = conn
+    try:
+        yield conn
+        conn.commit()
+    except BaseException:
+        conn.rollback()
+        raise
+    finally:
+        _bulk_conn = None
+        conn.close()
+
+
+def _open_connection(factory: type[sqlite3.Connection] = _ClosingConnection) -> sqlite3.Connection:
+    conn = sqlite3.connect(DB_PATH, factory=factory)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA journal_mode = WAL")   # concurrent readers during writes
     conn.execute("PRAGMA synchronous = NORMAL") # durable on OS crash; safe for derived cache
@@ -73,16 +110,16 @@ def get_db() -> sqlite3.Connection:
 
     Inside a Flask request the connection is stored on ``g`` and reused for
     the lifetime of the request, then closed by the teardown registered in
-    ``init_db``.  Outside a request context (startup, tests) a fresh
+    ``create_app()``.  Outside a request context (startup, tests) a fresh
     connection is opened and returned directly; the caller owns its lifecycle.
     """
     try:
         if "db" not in g:
-            g.db = _open_connection()
+            g.db = _open_connection(sqlite3.Connection)
         return g.db
     except RuntimeError:
         # No active application context — startup or test path.
-        return _open_connection()
+        return _bulk_conn if _bulk_conn is not None else _open_connection()
 
 
 def init_db() -> None:
@@ -149,6 +186,25 @@ def upsert_card(card: dict[str, Any]) -> None:
     """
     with get_db() as conn:
         conn.execute(sql, card)
+
+
+def get_meta(key: str) -> str | None:
+    """Return the ``meta`` value stored under *key*, or ``None``."""
+    with get_db() as conn:
+        conn.execute("CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT)")
+        row = conn.execute("SELECT value FROM meta WHERE key = ?", (key,)).fetchone()
+    return row["value"] if row else None
+
+
+def set_meta(key: str, value: str) -> None:
+    """Store *value* under *key* in the ``meta`` table."""
+    with get_db() as conn:
+        conn.execute("CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT)")
+        conn.execute(
+            "INSERT INTO meta (key, value) VALUES (?, ?)"
+            " ON CONFLICT(key) DO UPDATE SET value = excluded.value",
+            (key, value),
+        )
 
 
 def get_stored_mtime(card_id: str) -> float | None:
@@ -457,12 +513,18 @@ def load_edges_from_file() -> bool:
 
         data = json.loads(EDGES_PATH.read_text(encoding="utf-8"))
         conn.execute("DELETE FROM edges")
+        known = {r[0] for r in conn.execute("SELECT id FROM cards")}
+        valid = [e for e in data if e["source"] in known and e["target"] in known]
+        if len(valid) != len(data):
+            logging.getLogger(__name__).warning(
+                "Skipped %d edge(s) referencing unknown cards", len(data) - len(valid)
+            )
         conn.executemany(
             "INSERT OR IGNORE INTO edges (source_id, target_id, label, description)"
             " VALUES (?, ?, ?, ?)",
             [
                 (e["source"], e["target"], e.get("label", ""), e.get("description", ""))
-                for e in data
+                for e in valid
             ],
         )
         conn.execute(

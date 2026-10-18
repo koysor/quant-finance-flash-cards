@@ -13,6 +13,7 @@ import subprocess
 import sys
 import re
 from pathlib import Path
+from urllib.parse import urlparse
 
 import aiohttp
 
@@ -54,7 +55,8 @@ async def check_url(
     # Domains that block automated requests regardless of method — treat as always OK.
     # youtube.com rate-limits and blocks bot GETs even for live videos.
     SKIP_DOMAINS = ("www.investopedia.com", "financeunlocked.com", "youtube.com")
-    if any(domain in url for domain in SKIP_DOMAINS):
+    host = (urlparse(url).hostname or "").lower()
+    if any(host == d or host.endswith("." + d) for d in SKIP_DOMAINS):
         return card_id, category, title, url, True
 
     async with semaphore:

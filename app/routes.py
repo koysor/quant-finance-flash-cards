@@ -27,6 +27,7 @@ automatically to card tiles, graph nodes, topic badges, and sidebar dots through
 the CSS custom property ``--tc`` set inline on elements.
 """
 import json
+import os
 import re
 
 from flask import (
@@ -236,8 +237,23 @@ def random_card() -> Response:
     return redirect(url_for("main.card_detail", card_id=card["id"]))
 
 
+_DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}(?: \d{2}:\d{2}:\d{2})?")
+
+
+def _wants_json() -> bool:
+    return (
+        request.args.get("format") == "json" or
+        request.headers.get("Accept") == "application/json"
+    )
+
+
+def _recent_cache_key() -> str:
+    """Cache key that separates the HTML and JSON variants of ``/recent``."""
+    return f"recent:{'json' if _wants_json() else 'html'}:{request.full_path}"
+
+
 @bp.get("/recent")
-@cache.cached(timeout=300, query_string=True)
+@cache.cached(timeout=300, make_cache_key=_recent_cache_key)
 def recent() -> Response | str:
     """
     Render a reverse-chronological list of cards, grouped by date.
@@ -254,10 +270,11 @@ def recent() -> Response | str:
     """
     start    = request.args.get("start", "").strip() or None
     end      = request.args.get("end",   "").strip() or None
-    is_json  = (
-        request.args.get("format") == "json" or
-        request.headers.get("Accept") == "application/json"
-    )
+    is_json  = _wants_json()
+
+    for value in (start, end):
+        if value and not _DATE_RE.fullmatch(value):
+            abort(400)
 
     if start and len(start) == 10:
         start = f"{start} 00:00:00"
@@ -362,9 +379,14 @@ def remove_link(card_id: str) -> Response:
     After deletion the edge is persisted to ``edges.json`` via ``save_edges_to_file()``
     so the committed file stays in sync with the database.
 
+    Disabled unless ``ALLOW_EDGE_EDIT=1`` is set, because it rewrites the
+    committed ``edges.json``; returns 404 when disabled.
     Returns 403 on CSRF failure, 404 if the card does not exist.
     Redirects back to the card detail page on success.
     """
+    if os.environ.get("ALLOW_EDGE_EDIT") != "1":
+        abort(404)
+
     token = request.form.get("csrf_token", "")
     if not token or token != session.get("csrf_token"):
         abort(403)
@@ -379,6 +401,10 @@ def remove_link(card_id: str) -> Response:
         except ValueError:
             abort(400)
         save_edges_to_file()
+
+        from app import _invalidate_global_cache  # local import: avoids a circular import
+        _invalidate_global_cache()
+        cache.clear()
 
     return redirect(url_for("main.card_detail", card_id=card_id))
 
@@ -478,7 +504,7 @@ def graph_view() -> str:
 
     return render_template(
         "graph.html",
-        nodes_json=json.dumps(nodes),
-        edges_json=json.dumps(edges),
+        nodes_json=json.dumps(nodes).replace("<", "\\u003c"),
+        edges_json=json.dumps(edges).replace("<", "\\u003c"),
         legend=legend,
     )

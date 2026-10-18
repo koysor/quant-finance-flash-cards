@@ -155,11 +155,13 @@
             <li>
               <a href="{{ url_for('main.card_detail', card_id=edge['target_id']) }}">{{ edge['target_name'] }}</a>
               {% if edge['label'] %}<span class="edge-label">{{ edge['label'] }}</span>{% endif %}
+              {% if edge_edit_enabled %}
               <form method="post" action="{{ url_for('main.remove_link', card_id=card['id']) }}" class="inline-form">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
                 <input type="hidden" name="edge_id" value="{{ edge['id'] }}">
                 <button type="submit" class="btn-remove" title="Remove link">&times;</button>
               </form>
+              {% endif %}
             </li>
           {% endfor %}
         </ul>
