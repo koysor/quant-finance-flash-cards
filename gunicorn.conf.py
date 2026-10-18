@@ -1,11 +1,12 @@
-import multiprocessing
+import os
 
-# Bind to localhost only — nginx sits in front.
-bind = "127.0.0.1:8000"
+# Inside the container Caddy reaches us over the Docker host port mapping, so
+# bind to all interfaces; override with GUNICORN_BIND for a bare-metal setup.
+bind = os.environ.get("GUNICORN_BIND", "0.0.0.0:8000")
 
 # sync workers are correct for SQLite (CPU-bound reads, no async I/O needed).
-# Start with 2*nproc+1; tune down if memory is tight.
-workers      = multiprocessing.cpu_count() * 2 + 1
+# Default to one worker: the production host is a shared 1 GiB instance.
+workers      = int(os.environ.get("WEB_CONCURRENCY", 1))
 worker_class = "sync"
 
 # Load the app once in the master process, then fork.
@@ -16,6 +17,7 @@ preload_app = True
 timeout   = 30
 keepalive = 5
 
-accesslog = "/var/log/flashcards/access.log"
-errorlog  = "/var/log/flashcards/error.log"
+# Log to stdout/stderr so `docker logs` (or journald) captures everything.
+accesslog = "-"
+errorlog  = "-"
 loglevel  = "info"

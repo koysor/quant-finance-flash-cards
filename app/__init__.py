@@ -18,8 +18,9 @@ from typing import Any
 
 from flask import Flask, g, render_template, session
 from werkzeug.exceptions import HTTPException
+from werkzeug.middleware.proxy_fix import ProxyFix
 
-from app.db import init_db, load_edges_from_file, get_site_stats
+from app.db import bulk_connection, init_db, load_edges_from_file, get_site_stats
 from app.extensions import cache, limiter
 from app.loader import load_all_cards
 from app.routes import bp, TOPIC_COLOURS, _topic_colour
@@ -64,6 +65,9 @@ def create_app() -> Flask:
         A fully initialised application instance ready to serve requests.
     """
     app = Flask(__name__)
+    # Behind Caddy: trust one proxy hop for client IP, scheme, host and the
+    # X-Forwarded-Prefix header (the app is served under /flashcards/).
+    app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
     secret = os.environ.get("SECRET_KEY")
     if not secret and not app.debug:
         raise RuntimeError(
@@ -95,12 +99,13 @@ def create_app() -> Flask:
     # Used at card-load time to annotate which equation variables appear in each card.
     app.config["KEY_TERMS"] = _load_json_config(os.path.join(root, "key-terms.json"), {})
 
-    load_all_cards(
-        app,
-        notation_dict=app.config["NOTATION"],
-        key_terms_dict=app.config["KEY_TERMS"],
-    )
-    load_edges_from_file()
+    with bulk_connection():
+        load_all_cards(
+            app,
+            notation_dict=app.config["NOTATION"],
+            key_terms_dict=app.config["KEY_TERMS"],
+        )
+        load_edges_from_file()
     _invalidate_global_cache()
     with app.app_context():
         cache.clear()  # evict any stale cached responses from a previous run
@@ -143,6 +148,7 @@ def create_app() -> Flask:
             "TOPIC_COLOURS": TOPIC_COLOURS,
             "site_stats":    _get_site_stats(),
             "csrf_token":    session["csrf_token"],
+            "edge_edit_enabled": os.environ.get("ALLOW_EDGE_EDIT") == "1",
         }
 
     @app.errorhandler(404)

@@ -30,3 +30,6 @@ graph.db-wal
 # Skill artifacts
 *.skill
 app.log
+
+.env
+docker/.env

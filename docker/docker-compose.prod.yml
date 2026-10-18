@@ -1,0 +1,21 @@
+# Docker Compose for production deployment on EC2
+# Uses the pre-built image from GitHub Container Registry (GHCR).
+# HTTPS and the /flashcards/ prefix are handled by the Caddy reverse proxy in
+# the quant-finance deployment, which strips the prefix before proxying here.
+
+name: flashcards
+
+services:
+  flashcards:
+    image: ghcr.io/koysor/quant-finance-flash-cards:latest
+    ports:
+      - "8506:8000"
+    restart: unless-stopped
+    mem_limit: 180m
+    memswap_limit: 256m
+    env_file:
+      - .env
+    environment:
+      - WEB_CONCURRENCY=1
+      - MALLOC_ARENA_MAX=2
+      - PYTHONOPTIMIZE=1

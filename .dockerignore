@@ -1,0 +1,13 @@
+.venv
+.git
+.github
+.pytest_cache
+.claude
+.agents
+.gemini
+graph.db
+tests
+docker
+deploy
+__pycache__
+*.pyc
