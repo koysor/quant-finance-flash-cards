@@ -1111,6 +1111,18 @@
       }
     ]
   },
+  "calculus/auxiliary-equation": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Characteristic equation (calculus)",
+        "url": "https://en.wikipedia.org/wiki/Characteristic_equation_(calculus)"
+      },
+      {
+        "title": "Paul's Online Math Notes \u2014 Real Roots",
+        "url": "https://tutorial.math.lamar.edu/Classes/DE/RealRoots.aspx"
+      }
+    ]
+  },
   "calculus/backward-difference-approximation": {
     "websites": [
       {
@@ -1195,6 +1207,18 @@
       }
     ]
   },
+  "calculus/classifying-differential-equations": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Ordinary differential equation",
+        "url": "https://en.wikipedia.org/wiki/Ordinary_differential_equation"
+      },
+      {
+        "title": "Wikipedia \u2014 Linear differential equation",
+        "url": "https://en.wikipedia.org/wiki/Linear_differential_equation"
+      }
+    ]
+  },
   "calculus/completing-the-square": {
     "websites": [
       {
@@ -1250,6 +1274,18 @@
       {
         "title": "Khan Academy \u2014 Introduction to function composition",
         "url": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:transformations/x2ec2f6f830c9fb89:composing/v/function-composition"
+      }
+    ]
+  },
+  "calculus/constant-coefficient-second-order-odes": {
+    "websites": [
+      {
+        "title": "Paul's Online Math Notes \u2014 Complex Roots",
+        "url": "https://tutorial.math.lamar.edu/Classes/DE/ComplexRoots.aspx"
+      },
+      {
+        "title": "Wikipedia \u2014 Linear differential equation",
+        "url": "https://en.wikipedia.org/wiki/Linear_differential_equation"
       }
     ]
   },
@@ -1547,6 +1583,18 @@
       }
     ]
   },
+  "calculus/euler-equations-ode": {
+    "websites": [
+      {
+        "title": "Paul's Online Math Notes \u2014 Euler Differential Equations",
+        "url": "https://tutorial.math.lamar.edu/Classes/DE/EulerEquations.aspx"
+      },
+      {
+        "title": "Wikipedia \u2014 Cauchy\u2013Euler equation",
+        "url": "https://en.wikipedia.org/wiki/Cauchy%E2%80%93Euler_equation"
+      }
+    ]
+  },
   "calculus/eulers-formula": {
     "websites": [
       {
@@ -1616,6 +1664,30 @@
       {
         "title": "MIT OCW \u2014 Matrix Methods in Data Analysis (18.065)",
         "url": "https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/"
+      }
+    ]
+  },
+  "calculus/first-order-odes-with-a-variable-missing": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Ordinary differential equation",
+        "url": "https://en.wikipedia.org/wiki/Ordinary_differential_equation"
+      },
+      {
+        "title": "Paul's Online Math Notes \u2014 Separable Equations",
+        "url": "https://tutorial.math.lamar.edu/Classes/DE/Separable.aspx"
+      }
+    ]
+  },
+  "calculus/forming-differential-equations": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Ordinary differential equation",
+        "url": "https://en.wikipedia.org/wiki/Ordinary_differential_equation"
+      },
+      {
+        "title": "Paul's Online Math Notes \u2014 Differential Equations: Definitions",
+        "url": "https://tutorial.math.lamar.edu/Classes/DE/Definitions.aspx"
       }
     ]
   },
@@ -1873,6 +1945,18 @@
       }
     ]
   },
+  "calculus/initial-and-boundary-value-problems": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Initial value problem",
+        "url": "https://en.wikipedia.org/wiki/Initial_value_problem"
+      },
+      {
+        "title": "Wikipedia \u2014 Boundary value problem",
+        "url": "https://en.wikipedia.org/wiki/Boundary_value_problem"
+      }
+    ]
+  },
   "calculus/integral": {
     "websites": [
       {
@@ -2091,6 +2175,18 @@
       }
     ]
   },
+  "calculus/linear-independence-of-solutions": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Wronskian",
+        "url": "https://en.wikipedia.org/wiki/Wronskian"
+      },
+      {
+        "title": "Paul's Online Math Notes \u2014 The Wronskian",
+        "url": "https://tutorial.math.lamar.edu/Classes/DE/Wronskian.aspx"
+      }
+    ]
+  },
   "calculus/linear-interpolation": {
     "websites": [
       {
@@ -2173,6 +2269,18 @@
       }
     ]
   },
+  "calculus/method-of-undetermined-coefficients": {
+    "websites": [
+      {
+        "title": "Paul's Online Math Notes \u2014 Undetermined Coefficients",
+        "url": "https://tutorial.math.lamar.edu/Classes/DE/UndeterminedCoefficients.aspx"
+      },
+      {
+        "title": "Wikipedia \u2014 Method of undetermined coefficients",
+        "url": "https://en.wikipedia.org/wiki/Method_of_undetermined_coefficients"
+      }
+    ]
+  },
   "calculus/mixed-partial-derivatives": {
     "websites": [
       {
@@ -2242,6 +2350,18 @@
       {
         "title": "Paul's Online Math Notes \u2014 Partial Derivatives",
         "url": "https://tutorial.math.lamar.edu/Classes/CalcIII/PartialDerivatives.aspx"
+      }
+    ]
+  },
+  "calculus/multivariate-chain-rule": {
+    "websites": [
+      {
+        "title": "Paul's Online Math Notes \u2014 Chain Rule (multivariate)",
+        "url": "https://tutorial.math.lamar.edu/Classes/CalcIII/ChainRule.aspx"
+      },
+      {
+        "title": "Wikipedia \u2014 Chain rule",
+        "url": "https://en.wikipedia.org/wiki/Chain_rule"
       }
     ]
   },
@@ -2647,6 +2767,18 @@
       }
     ]
   },
+  "calculus/reduction-to-constant-coefficients": {
+    "websites": [
+      {
+        "title": "Paul's Online Math Notes \u2014 Euler Differential Equations",
+        "url": "https://tutorial.math.lamar.edu/Classes/DE/EulerEquations.aspx"
+      },
+      {
+        "title": "Wikipedia \u2014 Cauchy\u2013Euler equation",
+        "url": "https://en.wikipedia.org/wiki/Cauchy%E2%80%93Euler_equation"
+      }
+    ]
+  },
   "calculus/remainder-theorem": {
     "websites": [
       {
@@ -2674,6 +2806,18 @@
       {
         "title": "Paul's Online Math Notes \u2014 Partial Fractions (Repeated Roots)",
         "url": "https://tutorial.math.lamar.edu/Classes/CalcII/PartialFractions.aspx"
+      }
+    ]
+  },
+  "calculus/resonance-in-odes": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Resonance",
+        "url": "https://en.wikipedia.org/wiki/Resonance"
+      },
+      {
+        "title": "Paul's Online Math Notes \u2014 Undetermined Coefficients",
+        "url": "https://tutorial.math.lamar.edu/Classes/DE/UndeterminedCoefficients.aspx"
       }
     ]
   },
@@ -2742,6 +2886,18 @@
       {
         "title": "MIT OpenCourseWare \u2014 Numerical Integration",
         "url": "https://www.youtube.com/watch?v=7K1sB05pE0A"
+      }
+    ]
+  },
+  "calculus/second-order-odes-reduction-of-order": {
+    "websites": [
+      {
+        "title": "Paul's Online Math Notes \u2014 Reduction of Order",
+        "url": "https://tutorial.math.lamar.edu/Classes/DE/ReductionofOrder.aspx"
+      },
+      {
+        "title": "Wikipedia \u2014 Reduction of order",
+        "url": "https://en.wikipedia.org/wiki/Reduction_of_order"
       }
     ]
   },
@@ -2823,6 +2979,18 @@
       }
     ]
   },
+  "calculus/stationary-points-of-two-variable-functions": {
+    "websites": [
+      {
+        "title": "Paul's Online Math Notes \u2014 Relative Minimums and Maximums",
+        "url": "https://tutorial.math.lamar.edu/Classes/CalcIII/RelativeExtrema.aspx"
+      },
+      {
+        "title": "Wikipedia \u2014 Second partial derivative test",
+        "url": "https://en.wikipedia.org/wiki/Second_partial_derivative_test"
+      }
+    ]
+  },
   "calculus/stiff-ode": {
     "websites": [
       {
@@ -2873,6 +3041,18 @@
       }
     ]
   },
+  "calculus/taylor-series-in-two-variables": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Taylor series",
+        "url": "https://en.wikipedia.org/wiki/Taylor_series"
+      },
+      {
+        "title": "Wikipedia \u2014 Taylor's theorem",
+        "url": "https://en.wikipedia.org/wiki/Taylor%27s_theorem"
+      }
+    ]
+  },
   "calculus/trigonometric-equations": {
     "websites": [
       {
@@ -2894,6 +3074,18 @@
       {
         "title": "Paul's Online Math Notes \u2014 Trig Cheat Sheet",
         "url": "https://tutorial.math.lamar.edu/pdf/Trig_Cheat_Sheet.pdf"
+      }
+    ]
+  },
+  "calculus/variable-separable-equations": {
+    "websites": [
+      {
+        "title": "Paul's Online Math Notes \u2014 Separable Equations",
+        "url": "https://tutorial.math.lamar.edu/Classes/DE/Separable.aspx"
+      },
+      {
+        "title": "Wikipedia \u2014 Separation of variables",
+        "url": "https://en.wikipedia.org/wiki/Separation_of_variables"
       }
     ]
   },
@@ -10501,6 +10693,18 @@
       }
     ]
   },
+  "linear-algebra/criteria-for-invertibility": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Invertible matrix",
+        "url": "https://en.wikipedia.org/wiki/Invertible_matrix"
+      },
+      {
+        "title": "Wikipedia \u2014 Rank (linear algebra)",
+        "url": "https://en.wikipedia.org/wiki/Rank_(linear_algebra)"
+      }
+    ]
+  },
   "linear-algebra/determinant": {
     "websites": [
       {
@@ -10628,6 +10832,18 @@
       {
         "title": "Khan Academy \u2014 Linear Transformations",
         "url": "https://www.khanacademy.org/math/linear-algebra/matrix-transformations/linear-transformations/v/linear-transformations"
+      }
+    ]
+  },
+  "linear-algebra/matrices-definition-and-notation": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Matrix (mathematics)",
+        "url": "https://en.wikipedia.org/wiki/Matrix_(mathematics)"
+      },
+      {
+        "title": "Wikipedia \u2014 Symmetric matrix",
+        "url": "https://en.wikipedia.org/wiki/Symmetric_matrix"
       }
     ]
   },
@@ -10924,6 +11140,18 @@
       {
         "title": "Khan Academy \u2014 Transpose of a Matrix",
         "url": "https://www.khanacademy.org/math/linear-algebra/matrix-transformations/matrix-transpose/v/linear-algebra-transpose-of-a-matrix"
+      }
+    ]
+  },
+  "linear-algebra/vector-arithmetic": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Euclidean vector",
+        "url": "https://en.wikipedia.org/wiki/Euclidean_vector"
+      },
+      {
+        "title": "Wikipedia \u2014 Linear combination",
+        "url": "https://en.wikipedia.org/wiki/Linear_combination"
       }
     ]
   },
@@ -16883,6 +17111,18 @@
       }
     ]
   },
+  "mathematical-notation/number-systems-and-logical-shorthand": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Number",
+        "url": "https://en.wikipedia.org/wiki/Number"
+      },
+      {
+        "title": "Wikipedia \u2014 List of mathematical symbols",
+        "url": "https://en.wikipedia.org/wiki/List_of_mathematical_symbols"
+      }
+    ]
+  },
   "mathematical-notation/operator-notation": {
     "websites": [
       {
@@ -18766,6 +19006,18 @@
       }
     ]
   },
+  "probability/birthday-and-monty-hall-problems": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Birthday problem",
+        "url": "https://en.wikipedia.org/wiki/Birthday_problem"
+      },
+      {
+        "title": "Wikipedia \u2014 Monty Hall problem",
+        "url": "https://en.wikipedia.org/wiki/Monty_Hall_problem"
+      }
+    ]
+  },
   "probability/bivariate-normal": {
     "websites": [
       {
@@ -19173,6 +19425,18 @@
       {
         "title": "Kurtosis Explained \u2014 Khan Academy",
         "url": "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/other-measures-of-spread/a/skewness-and-kurtosis"
+      }
+    ]
+  },
+  "probability/expectation-algebra": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Expected value",
+        "url": "https://en.wikipedia.org/wiki/Expected_value"
+      },
+      {
+        "title": "Wikipedia \u2014 Variance",
+        "url": "https://en.wikipedia.org/wiki/Variance"
       }
     ]
   },
@@ -20035,6 +20299,18 @@
       {
         "title": "Khan Academy \u2014 Basic Probability",
         "url": "https://www.khanacademy.org/math/statistics-probability/probability-library/basic-theoretical-probability/v/basic-probability"
+      }
+    ]
+  },
+  "probability/second-moment": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Moment (mathematics)",
+        "url": "https://en.wikipedia.org/wiki/Moment_(mathematics)"
+      },
+      {
+        "title": "Wikipedia \u2014 Variance",
+        "url": "https://en.wikipedia.org/wiki/Variance"
       }
     ]
   },
@@ -22574,6 +22850,18 @@
       }
     ]
   },
+  "statistics/measures-of-location-and-spread": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Interquartile range",
+        "url": "https://en.wikipedia.org/wiki/Interquartile_range"
+      },
+      {
+        "title": "Wikipedia \u2014 Central tendency",
+        "url": "https://en.wikipedia.org/wiki/Central_tendency"
+      }
+    ]
+  },
   "statistics/method-of-moments": {
     "websites": [
       {
@@ -22623,6 +22911,18 @@
       {
         "title": "MIT OpenCourseWare \u2014 Time Series Analysis (14.384)",
         "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/"
+      }
+    ]
+  },
+  "statistics/moving-average-and-autoregressive-models": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Autoregressive model",
+        "url": "https://en.wikipedia.org/wiki/Autoregressive_model"
+      },
+      {
+        "title": "Wikipedia \u2014 Moving-average model",
+        "url": "https://en.wikipedia.org/wiki/Moving-average_model"
       }
     ]
   },

@@ -2,7 +2,7 @@
 
 Bite-sized revision flash cards for Quantitative Finance exams and interviews, designed for accessibility and clarity. Each card covers one concept — definition, key formula, worked example, and its finance application.
 
-1642 cards · 16 topics · 4976 concept connections
+1667 cards · 16 topics · 5030 concept connections
 
 ## Running the app
 
@@ -35,19 +35,19 @@ A `.env.example` file is provided as a template.
 | Topic | Cards | Scope |
 |---|---|---|
 | Banking Regulation | 52 | FRTB, IRRBB, LCR, NSFR, EVE, EaR, Basel capital rules |
-| Calculus | 178 | Differentiation, integration, Taylor series, quadratic techniques, A Level pure maths |
+| Calculus | 194 | Differentiation, integration, Taylor series, quadratic techniques, A Level pure maths |
 | Computational Finance | 111 | Numerical methods, finite differences, FFT, simulation, ML algorithms |
 | Derivatives | 133 | Options, futures, Greeks, pricing models, risk-neutral theory |
 | Financial Mathematics | 55 | TVM, compounding, NPV, leverage, hedge funds, execution |
 | Fixed Income | 141 | Bonds, yield curves, duration, DV01, credit spreads, swaps, short-rate models, calibration |
-| Linear Algebra | 75 | Matrices, vectors, eigenvalues, SVD, decompositions |
+| Linear Algebra | 78 | Matrices, vectors, eigenvalues, SVD, decompositions |
 | Machine Learning | 282 | ML algorithms (SVM, trees, neural networks), deep learning, training techniques, RL, NLP, generative models, MLOps |
-| Mathematical Notation | 61 | Sigma, pi, set theory, logical and summation notation |
+| Mathematical Notation | 62 | Sigma, pi, set theory, logical and summation notation |
 | Portfolio Theory & Asset Pricing | 102 | CAPM, efficient frontier, factor models, performance ratios |
-| Probability | 103 | Distributions, expectation, Bayes, transform methods |
+| Probability | 106 | Distributions, expectation, Bayes, transform methods |
 | Risk | 50 | VaR, CVaR, Monte Carlo, stress testing, EVT, drawdowns |
 | Short Selling | 20 | Short mechanics, securities lending, regulation, short squeezes |
-| Statistics | 143 | Regression, hypothesis testing, covariance estimation |
+| Statistics | 145 | Regression, hypothesis testing, covariance estimation |
 | Stochastic Processes | 92 | Brownian motion, GBM, Itô's lemma, SDEs, martingales |
 | Volatility | 44 | Implied/realised vol, VIX, vol surface, smile, stochastic vol models |
 

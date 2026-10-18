@@ -960,6 +960,18 @@
     "description": "The tangent function has vertical asymptotes at x = \u03c0/2 + n\u03c0 where cos x = 0 \u2014 the most elementary example of an asymptote encountered in A Level trigonometry."
   },
   {
+    "source": "calculus/auxiliary-equation",
+    "target": "calculus/eulers-formula",
+    "label": "uses",
+    "description": "Euler's formula converts complex-conjugate roots of the auxiliary equation into real sine and cosine solutions."
+  },
+  {
+    "source": "calculus/auxiliary-equation",
+    "target": "linear-algebra/eigenvalues-and-eigenvectors",
+    "label": "analogue of",
+    "description": "The auxiliary polynomial plays the role of the characteristic polynomial; its roots are the eigenvalues of the equivalent first-order system."
+  },
+  {
     "source": "calculus/backward-difference-approximation",
     "target": "calculus/big-o-notation",
     "label": "error characterised by",
@@ -1122,6 +1134,12 @@
     "description": "Ito s Lemma is the stochastic generalisation of the chain rule \u2014 it adds the correction term (1/2)sigma^2 S^2 f_{SS} dt that arises because (dW)^2 = dt, making it the essential tool for differentiating functions of stochastic processes."
   },
   {
+    "source": "calculus/classifying-differential-equations",
+    "target": "derivatives/black-scholes-equation",
+    "label": "applied to",
+    "description": "The Black-Scholes equation is a second-order, linear PDE with variable coefficients, which is why superposition holds and why it can be transformed into the heat equation."
+  },
+  {
     "source": "calculus/completing-the-square",
     "target": "calculus/quadratic-formula",
     "label": "derives",
@@ -1210,6 +1228,18 @@
     "target": "calculus/inverse-functions",
     "label": "undone by",
     "description": "The inverse function f\u207b\u00b9 satisfies f\u207b\u00b9\u2218f = identity, so composing a function with its inverse undoes the transformation \u2014 the defining property of the inverse."
+  },
+  {
+    "source": "calculus/constant-coefficient-second-order-odes",
+    "target": "calculus/auxiliary-equation",
+    "label": "solved via",
+    "description": "Trying e^(mx) turns the differential equation into the quadratic auxiliary equation whose roots determine the solution."
+  },
+  {
+    "source": "calculus/constant-coefficient-second-order-odes",
+    "target": "calculus/discriminant",
+    "label": "case set by",
+    "description": "The sign of the discriminant decides between real distinct, repeated and complex roots, i.e. the over-damped, critically damped and oscillatory regimes."
   },
   {
     "source": "calculus/constant-of-integration",
@@ -1656,6 +1686,24 @@
     "description": "The two elementary optimisation rules \u2014 min/max duality and affine transformation invariance \u2014 explain why the MVO utility-maximisation form max w'\u03bc \u2212 (\u03bb/2)w'\u03a3w and the variance-minimisation form min (\u03bb/2)w'\u03a3w \u2212 w'\u03bc share the same optimal portfolio w*, letting practitioners choose whichever form is algebraically or computationally convenient."
   },
   {
+    "source": "calculus/euler-equations-ode",
+    "target": "calculus/reduction-to-constant-coefficients",
+    "label": "solved by",
+    "description": "Substituting t = ln x converts an Euler equation into a constant-coefficient one."
+  },
+  {
+    "source": "calculus/euler-equations-ode",
+    "target": "derivatives/black-scholes-equation",
+    "label": "structure of",
+    "description": "Each derivative in the Black-Scholes equation carries a matching power of S, so in S alone it is an Euler equation."
+  },
+  {
+    "source": "calculus/euler-equations-ode",
+    "target": "derivatives/perpetual-american-option",
+    "label": "power-law solution of",
+    "description": "With no time dependence the perpetual American option solves an Euler equation, which gives the power-law form S^m."
+  },
+  {
     "source": "calculus/eulers-formula",
     "target": "calculus/complex-numbers",
     "label": "converts to",
@@ -1816,6 +1864,18 @@
     "target": "portfolio-theory/modern-portfolio-theory",
     "label": "derives solution of",
     "description": "Setting the gradient of the mean-variance objective to zero and solving gives the closed-form optimal weights w* = (1/\u03bb)\u03a3\u207b\u00b9\u03bc; the negative-definite Hessian confirms the stationary point is a maximum, not a saddle \u2014 the mathematical foundation of every efficient frontier calculation."
+  },
+  {
+    "source": "calculus/first-order-odes-with-a-variable-missing",
+    "target": "calculus/variable-separable-equations",
+    "label": "simplest case of",
+    "description": "Direct integration is the special case of a separable equation in which one factor is constant."
+  },
+  {
+    "source": "calculus/forming-differential-equations",
+    "target": "derivatives/black-scholes-equation",
+    "label": "used to verify",
+    "description": "Checking that a candidate price function satisfies the Black-Scholes PDE is the forming-and-eliminating skill used in reverse."
   },
   {
     "source": "calculus/forward-difference-approximation",
@@ -2155,6 +2215,12 @@
   },
   {
     "source": "calculus/initial-and-boundary-conditions",
+    "target": "calculus/initial-and-boundary-value-problems",
+    "label": "extends to PDEs",
+    "description": "The ODE distinction between initial and boundary data carries over to PDEs, where Dirichlet and Neumann conditions fix the solution."
+  },
+  {
+    "source": "calculus/initial-and-boundary-conditions",
     "target": "derivatives/black-scholes-equation",
     "label": "applied in",
     "description": "The Black-Scholes PDE is universal across all European options \u2014 the terminal condition (payoff) and boundary conditions are what select the unique pricing solution for each specific contract type."
@@ -2164,6 +2230,12 @@
     "target": "derivatives/european-option-pricing",
     "label": "determines",
     "description": "The terminal condition V(S,T) = max(S-K,0) for a call or max(K-S,0) for a put is the boundary condition that, combined with the Black-Scholes PDE, yields the closed-form European option price."
+  },
+  {
+    "source": "calculus/initial-and-boundary-value-problems",
+    "target": "derivatives/european-option-pricing",
+    "label": "terminal data in",
+    "description": "A European option is a terminal value problem: the payoff at expiry plus boundary behaviour as the asset price tends to zero and infinity fix the price."
   },
   {
     "source": "calculus/integral",
@@ -2478,6 +2550,18 @@
     "description": "Each probability is a definite integral of the PDF; the bounds set the outcome region, in finance the exercise boundary or loss threshold."
   },
   {
+    "source": "calculus/linear-independence-of-solutions",
+    "target": "linear-algebra/determinant",
+    "label": "tested by",
+    "description": "The Wronskian is a determinant of the solutions and their derivatives; it is non-zero exactly when the solutions are independent."
+  },
+  {
+    "source": "calculus/linear-independence-of-solutions",
+    "target": "linear-algebra/linear-independence",
+    "label": "same idea as",
+    "description": "Independent solutions of a linear ODE are independent vectors in a function space, so the same span and basis ideas apply."
+  },
+  {
     "source": "calculus/linear-interpolation",
     "target": "calculus/cubic-spline-interpolation",
     "label": "contrasted with",
@@ -2598,6 +2682,18 @@
     "description": "The GBM log-return ln(S_T/S_0) = (\u03bc - \u00bd\u03c3\u00b2)T + \u03c3W_T is derived by applying the Maclaurin series of ln(1+x) to the small-increment form of the stock price process."
   },
   {
+    "source": "calculus/method-of-undetermined-coefficients",
+    "target": "calculus/auxiliary-equation",
+    "label": "needs",
+    "description": "The complementary function comes from the auxiliary equation, and the trial for the particular integral must be checked against its roots."
+  },
+  {
+    "source": "calculus/method-of-undetermined-coefficients",
+    "target": "calculus/resonance-in-odes",
+    "label": "breaks down at",
+    "description": "When the forcing term is already a solution of the homogeneous equation the trial fails and must be multiplied by a power of x."
+  },
+  {
     "source": "calculus/mixed-partial-derivatives",
     "target": "calculus/partial-derivatives",
     "label": "extends",
@@ -2698,6 +2794,24 @@
     "target": "stochastic-processes/multi-asset-itos-lemma",
     "label": "prerequisite for",
     "description": "The multi-asset Ito's lemma applies the multivariate chain rule to stochastic functions of several correlated underlyings \u2014 the total-derivative structure dV = sum_i (partial V / partial S_i) dS_i is exactly the multivariate calculus total derivative extended to the stochastic setting."
+  },
+  {
+    "source": "calculus/multivariate-chain-rule",
+    "target": "calculus/chain-rule",
+    "label": "extends",
+    "description": "The single-variable chain rule is the one-path case of the multivariate rule."
+  },
+  {
+    "source": "calculus/multivariate-chain-rule",
+    "target": "calculus/partial-derivatives",
+    "label": "built from",
+    "description": "Each term in the multivariate chain rule is a partial derivative times the derivative of the intermediate variable."
+  },
+  {
+    "source": "calculus/multivariate-chain-rule",
+    "target": "stochastic-processes/itos-lemma",
+    "label": "deterministic form of",
+    "description": "Ito's lemma is the multivariate chain rule for a function of a stochastic variable, with an extra second-order term."
   },
   {
     "source": "calculus/navier-stokes-equation",
@@ -2875,6 +2989,18 @@
   },
   {
     "source": "calculus/ordinary-differential-equations",
+    "target": "calculus/classifying-differential-equations",
+    "label": "classified by",
+    "description": "Before solving an ODE you name its order, linearity and homogeneity; those labels decide which method the other ODE cards apply."
+  },
+  {
+    "source": "calculus/ordinary-differential-equations",
+    "target": "calculus/forming-differential-equations",
+    "label": "solved in reverse by",
+    "description": "Forming an equation from a general solution is the reverse of solving it, and confirms how many arbitrary constants an ODE of a given order carries."
+  },
+  {
+    "source": "calculus/ordinary-differential-equations",
     "target": "calculus/integrating-factor-method",
     "label": "solved by",
     "description": "The integrating factor method is the standard analytical technique for solving first-order linear ODEs \u2014 which include the Vasicek mean-reversion equation \u2014 making it the direct next step after understanding what an ODE is."
@@ -2884,6 +3010,12 @@
     "target": "calculus/parabolic-pdes",
     "label": "generalised by",
     "description": "A PDE is the multi-variable generalisation of an ODE \u2014 the Black-Scholes PDE involves partial derivatives in both time and the asset price, whereas an ODE for a bank account involves only a single time derivative."
+  },
+  {
+    "source": "calculus/ordinary-differential-equations",
+    "target": "calculus/second-order-odes-reduction-of-order",
+    "label": "reduced in order by",
+    "description": "The substitution p = y' lowers a second-order equation to a first-order one that the earlier methods can solve."
   },
   {
     "source": "calculus/ordinary-differential-equations",
@@ -3390,6 +3522,18 @@
     "description": "The Jarque-Bera test statistic involves skewness and kurtosis, whose population values under normality follow chi-squared distributions; evaluating the exact moments of these distributions uses the gamma reduction formula, connecting recursive integration to goodness-of-fit testing in finance."
   },
   {
+    "source": "calculus/reduction-to-constant-coefficients",
+    "target": "calculus/constant-coefficient-second-order-odes",
+    "label": "leads to",
+    "description": "After the logarithmic substitution the equation is solved with the constant-coefficient auxiliary-equation method."
+  },
+  {
+    "source": "calculus/reduction-to-constant-coefficients",
+    "target": "calculus/reducing-pde-to-heat-equation",
+    "label": "rehearsal for",
+    "description": "The change of variable S = e^x used here is the first step in turning Black-Scholes into the heat equation."
+  },
+  {
     "source": "calculus/remainder-theorem",
     "target": "calculus/factor-theorem",
     "label": "generalises",
@@ -3430,6 +3574,12 @@
     "target": "calculus/singularity-of-a-function",
     "label": "creates",
     "description": "A repeated linear factor $(x-a)^n$ in the denominator creates a pole of order $n$ at $x = a$ \u2014 a higher-order singularity that contributes multiple terms in the Laurent expansion and correspondingly multiple terms in the partial fraction decomposition."
+  },
+  {
+    "source": "calculus/resonance-in-odes",
+    "target": "calculus/auxiliary-equation",
+    "label": "multiplicity from",
+    "description": "The power of x needed in the trial equals the multiplicity of the matching root of the auxiliary equation."
   },
   {
     "source": "calculus/reverse-chain-rule",
@@ -3520,6 +3670,12 @@
     "target": "probability/normal-distribution",
     "label": "property of",
     "description": "The bivariate standard normal density is rotationally symmetric \u2014 its contours are circles \u2014 which is why the standard normal can be factored as a product of two independent univariate normals and why Brownian motion in 2D is isotropic."
+  },
+  {
+    "source": "calculus/second-order-odes-reduction-of-order",
+    "target": "calculus/chain-rule",
+    "label": "uses",
+    "description": "Writing y'' = p dp/dy is the chain rule applied to the derivative p, treated as a function of y."
   },
   {
     "source": "calculus/sensitivity",
@@ -3618,6 +3774,24 @@
     "description": "The second derivative test classifies stationary points as maxima, minima, or inconclusive \u2014 the primary application of higher derivatives in A Level calculus."
   },
   {
+    "source": "calculus/stationary-points",
+    "target": "calculus/stationary-points-of-two-variable-functions",
+    "label": "extends to",
+    "description": "With two variables the second-derivative test uses the Hessian determinant and adds the saddle point as a third outcome."
+  },
+  {
+    "source": "calculus/stationary-points-of-two-variable-functions",
+    "target": "linear-algebra/positive-definite-matrices",
+    "label": "Hessian test via",
+    "description": "A stationary point is a minimum when the Hessian is positive definite, which is the matrix form of the D > 0, f_xx > 0 test."
+  },
+  {
+    "source": "calculus/stationary-points-of-two-variable-functions",
+    "target": "portfolio-theory/modern-portfolio-theory",
+    "label": "used in",
+    "description": "The minimum-variance portfolio is a stationary point of the portfolio variance in several weights at once."
+  },
+  {
     "source": "calculus/stiff-ode",
     "target": "calculus/adams-moulton-method",
     "label": "motivates",
@@ -3685,6 +3859,12 @@
   },
   {
     "source": "calculus/taylor-series",
+    "target": "calculus/taylor-series-in-two-variables",
+    "label": "extends to",
+    "description": "The two-variable expansion adds a tangent plane and cross-derivative curvature terms to the one-variable series."
+  },
+  {
+    "source": "calculus/taylor-series",
     "target": "derivatives/continuous-time-limit",
     "label": "applied in",
     "description": "The continuous-time limit derivation uses a Taylor expansion of the option value in powers of delta-t to extract the Black-Scholes PDE from the discrete binomial pricing formula."
@@ -3700,6 +3880,12 @@
     "target": "stochastic-processes/itos-lemma",
     "label": "motivates",
     "description": "It\u00f4\u2019s Lemma is the stochastic calculus equivalent of a Taylor expansion \u2014 it tells you how a function of a random process changes, using the same first- and second-derivative structure. The proof of It\u00f4\u2019s Lemma proceeds by Taylor-expanding f(S, t) to second order and substituting (dW)\u00b2 = dt \u2014 the Taylor expansion is not merely motivational but the actual derivation technique."
+  },
+  {
+    "source": "calculus/taylor-series-in-two-variables",
+    "target": "stochastic-processes/itos-lemma",
+    "label": "template for",
+    "description": "Expanding V(S + dS, t + dt) to second order and keeping the dS^2 term is exactly how Ito's lemma is derived."
   },
   {
     "source": "calculus/trigonometric-equations",
@@ -3748,6 +3934,18 @@
     "target": "calculus/trigonometric-functions",
     "label": "relates",
     "description": "Trigonometric identities express exact algebraic relationships between sin, cos, tan and their reciprocals \u2014 they are the tools for rewriting trig expressions without changing their value."
+  },
+  {
+    "source": "calculus/variable-separable-equations",
+    "target": "calculus/integrating-factor-method",
+    "label": "alternative to",
+    "description": "Separation handles equations whose right-hand side factorises; the integrating factor handles linear equations that do not separate."
+  },
+  {
+    "source": "calculus/variable-separable-equations",
+    "target": "stochastic-processes/geometric-brownian-motion",
+    "label": "gives drift of",
+    "description": "Separating dS = mu S dt gives S = S0 exp(mu t), the deterministic growth that the drift term of geometric Brownian motion contributes."
   },
   {
     "source": "calculus/vectors",
@@ -11928,6 +12126,24 @@
     "description": "Cramer's Rule provides a determinant-based closed-form solution for systems of linear equations with a unique solution \u2014 it is most practical for 2x2 and 3x3 systems arising in hedging and replication problems."
   },
   {
+    "source": "linear-algebra/criteria-for-invertibility",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "fails for",
+    "description": "A sample covariance matrix from fewer observations than assets is singular, so the minimum-variance weights cannot be computed."
+  },
+  {
+    "source": "linear-algebra/criteria-for-invertibility",
+    "target": "linear-algebra/determinant",
+    "label": "tested by",
+    "description": "A square matrix is invertible exactly when its determinant is non-zero."
+  },
+  {
+    "source": "linear-algebra/criteria-for-invertibility",
+    "target": "linear-algebra/matrix-inverse",
+    "label": "condition for",
+    "description": "The inverse exists only when the matrix has full rank and no zero eigenvalue."
+  },
+  {
     "source": "linear-algebra/determinant",
     "target": "linear-algebra/matrix-inverse",
     "label": "gates",
@@ -12334,6 +12550,18 @@
     "target": "linear-algebra/systems-of-linear-equations",
     "label": "solves",
     "description": "LU decomposition is the standard numerical algorithm for solving Ax = b \u2014 it encodes Gaussian elimination into triangular factors that can be reused efficiently across multiple right-hand sides, such as stress scenarios in a risk engine."
+  },
+  {
+    "source": "linear-algebra/matrices-definition-and-notation",
+    "target": "linear-algebra/covariance-matrix",
+    "label": "example of",
+    "description": "The covariance matrix is a square, symmetric matrix with one row and column per asset."
+  },
+  {
+    "source": "linear-algebra/matrices-definition-and-notation",
+    "target": "linear-algebra/matrix-multiplication",
+    "label": "defines order for",
+    "description": "The order of each matrix decides whether a product exists and what shape it has."
   },
   {
     "source": "linear-algebra/matrix-addition",
@@ -13006,6 +13234,18 @@
     "target": "linear-algebra/qr-decomposition",
     "label": "component of",
     "description": "The R factor in QR decomposition is upper triangular \u2014 solving the least-squares system reduces to back substitution on Rx = Q'b, which is O(n^2) and numerically stable."
+  },
+  {
+    "source": "linear-algebra/vector-arithmetic",
+    "target": "linear-algebra/linear-combinations",
+    "label": "builds",
+    "description": "A linear combination is any vector formed by scaling and adding others, which is what a portfolio of return vectors is."
+  },
+  {
+    "source": "linear-algebra/vector-arithmetic",
+    "target": "linear-algebra/linear-independence",
+    "label": "leads to",
+    "description": "Vectors are independent when none is a combination of the others, the condition for a portfolio problem to have a unique answer."
   },
   {
     "source": "linear-algebra/vector-spaces-and-subspaces",
@@ -18852,6 +19092,18 @@
     "description": "N(x) and N'(x) are the CDF and PDF of the standard normal distribution N(0,1) \u2014 this card explains how to read these symbols that appear throughout options pricing and risk measurement."
   },
   {
+    "source": "mathematical-notation/number-systems-and-logical-shorthand",
+    "target": "mathematical-notation/natural-numbers",
+    "label": "overview of",
+    "description": "Share counts and time steps are natural numbers or integers, the first links in the nested chain of number systems."
+  },
+  {
+    "source": "mathematical-notation/number-systems-and-logical-shorthand",
+    "target": "mathematical-notation/real-numbers",
+    "label": "overview of",
+    "description": "Prices and returns are modelled in the reals, one link in the chain of number systems from the naturals to the complex numbers."
+  },
+  {
     "source": "mathematical-notation/operator-notation",
     "target": "derivatives/black-scholes-equation",
     "label": "compactifies",
@@ -21168,6 +21420,18 @@
     "description": "Each step of a discrete random walk is an independent up-or-down trial \u2014 the total number of up-moves after n steps follows a binomial distribution B(n, p)."
   },
   {
+    "source": "probability/birthday-and-monty-hall-problems",
+    "target": "probability/bayes-theorem",
+    "label": "solved by",
+    "description": "Bayes' theorem gives the Monty Hall result by updating the probability of each door after the host opens one."
+  },
+  {
+    "source": "probability/birthday-and-monty-hall-problems",
+    "target": "probability/conditional-probability",
+    "label": "illustrates",
+    "description": "Both problems are resolved by conditioning on information, such as the host's forced choice of a goat."
+  },
+  {
     "source": "probability/bivariate-normal",
     "target": "derivatives/compound-option",
     "label": "used in",
@@ -21634,6 +21898,18 @@
     "target": "statistics/kurtosis",
     "label": "derived from",
     "description": "Excess kurtosis = kurtosis \u2212 3: the kurtosis card defines \u03b3\u2082 = E[(X\u2212\u03bc)\u2074]/\u03c3\u2074; excess kurtosis is the same statistic recentred to make the normal distribution the zero baseline, which is more intuitive for comparing distributions."
+  },
+  {
+    "source": "probability/expectation-algebra",
+    "target": "probability/expectation-and-variance",
+    "label": "rules for",
+    "description": "Scaling and addition rules for expectation and variance follow directly from their definitions."
+  },
+  {
+    "source": "probability/expectation-algebra",
+    "target": "statistics/portfolio-variance",
+    "label": "underlies",
+    "description": "Portfolio variance is the variance rule for sums applied with weights and covariances, giving the sigma squared over n diversification result."
   },
   {
     "source": "probability/expectation-and-variance",
@@ -22624,6 +22900,18 @@
     "target": "probability/random-variable",
     "label": "domain of",
     "description": "A random variable is a function X: \u03a9 \u2192 \u211d from the sample space to the reals \u2014 the sample space is the domain every random variable is defined over, so understanding \u03a9 is the prerequisite to defining any probabilistic model."
+  },
+  {
+    "source": "probability/second-moment",
+    "target": "probability/central-moments",
+    "label": "related to",
+    "description": "The second central moment is the variance; the raw second moment adds back the squared mean."
+  },
+  {
+    "source": "probability/second-moment",
+    "target": "probability/expectation-and-variance",
+    "label": "rearranges",
+    "description": "Variance equals the second moment minus the squared mean, the most commonly used identity for computing it."
   },
   {
     "source": "probability/sigma-algebra",
@@ -25866,6 +26154,24 @@
     "description": "The irreducible error variance sets a lower bound on mean squared prediction error that no model \u2014 however complex \u2014 can breach; understanding this floor is essential for correctly diagnosing overfitting versus irreducible noise in quantitative strategy research."
   },
   {
+    "source": "statistics/measures-of-location-and-spread",
+    "target": "statistics/bessels-correction",
+    "label": "explains",
+    "description": "Dividing by n - 1 rather than n makes the sample variance an unbiased estimate of the population variance."
+  },
+  {
+    "source": "statistics/measures-of-location-and-spread",
+    "target": "statistics/outlier-detection",
+    "label": "leads to",
+    "description": "The 1.5 IQR rule flags outliers and is the simplest robust method of detecting extreme returns."
+  },
+  {
+    "source": "statistics/measures-of-location-and-spread",
+    "target": "statistics/variance-and-standard-deviation",
+    "label": "summarised by",
+    "description": "Variance and standard deviation are the standard measures of spread, computed with the n - 1 correction."
+  },
+  {
     "source": "statistics/method-of-moments",
     "target": "probability/moment-generating-function",
     "label": "uses moments from",
@@ -25924,6 +26230,24 @@
     "target": "statistics/maximum-likelihood-estimation",
     "label": "applies to ARCH via",
     "description": "MLE for ARCH models applies the general MLE principle to time-series data by conditioning each observation's likelihood contribution on the recursively computed conditional variance h_t, rather than treating observations as i.i.d."
+  },
+  {
+    "source": "statistics/moving-average-and-autoregressive-models",
+    "target": "statistics/garch-model",
+    "label": "extended by",
+    "description": "GARCH applies the autoregressive idea to the conditional variance rather than the level of the series."
+  },
+  {
+    "source": "statistics/moving-average-and-autoregressive-models",
+    "target": "statistics/stationarity",
+    "label": "requires",
+    "description": "An AR(1) is stationary only when |phi| < 1; at phi = 1 it is a random walk."
+  },
+  {
+    "source": "statistics/moving-average-and-autoregressive-models",
+    "target": "stochastic-processes/ornstein-uhlenbeck-process",
+    "label": "discretisation of",
+    "description": "An AR(1) with phi = 1 - kappa dt is the discrete-time version of Ornstein-Uhlenbeck mean reversion."
   },
   {
     "source": "statistics/multicollinearity",
