@@ -2,6 +2,7 @@
 
 **Topic:** Derivatives
 **Tags:** delta hedging, delta-neutral, Greeks, replication, options
+**Author:** Unknown
 
 ---
 

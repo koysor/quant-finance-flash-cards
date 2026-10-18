@@ -2,6 +2,7 @@
 
 **Topic:** Statistics
 **Tags:** hypothesis testing, normality, skewness, kurtosis, goodness of fit, returns
+**Author:** Unknown
 
 ---
 

@@ -13,9 +13,9 @@
 
 ## Key Formula
 
-QuantLib prices a European call by wiring together a process, an engine, and an instrument. The engine evaluates the Black-Scholes-Merton closed form:
+QuantLib prices a European call by wiring together a process, an engine, and an instrument. The engine evaluates the Black-Scholes-Merton closed form with continuous dividend yield $q$:
 
-$$C = S_0\,\Phi(d_1) - K e^{-rT}\Phi(d_2), \qquad d_{1,2} = \frac{\ln(S_0/K) + (r \pm \tfrac{1}{2}\sigma^2)T}{\sigma\sqrt{T}}$$
+$$C = S_0 e^{-qT}\,\Phi(d_1) - K e^{-rT}\Phi(d_2), \qquad d_{1,2} = \frac{\ln(S_0/K) + (r - q \pm \tfrac{1}{2}\sigma^2)T}{\sigma\sqrt{T}}$$
 
 ```python
 import QuantLib as ql
@@ -34,8 +34,12 @@ process  = ql.BlackScholesMertonProcess(
     ql.BlackVolTermStructureHandle(ql.BlackConstantVol(today, ql.TARGET(), 0.20, ql.Actual365Fixed()))  # σ=20%
 )
 option.setPricingEngine(ql.AnalyticEuropeanEngine(process))
-print(option.NPV())   # ≈ 14.23
+print(option.NPV())   # ≈ 12.39
 ```
+
+## Example
+
+With $S_0 = 105$, $K = 100$, $r = 5\%$, $q = 2\%$, $\sigma = 20\%$ and $T = 1$ year, the code above gives a call price of about **12.39**. Bumping the spot quote to 106 and re-reading `option.NPV()` gives a finite-difference delta without touching the pricing code.
 
 ## Remember
 

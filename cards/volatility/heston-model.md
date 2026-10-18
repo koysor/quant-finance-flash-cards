@@ -2,6 +2,7 @@
 
 **Topic:** Volatility
 **Tags:** stochastic volatility, Heston, volatility smile, options, pricing, mean reversion
+**Author:** Unknown
 
 ---
 

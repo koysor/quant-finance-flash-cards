@@ -2,6 +2,7 @@
 
 **Topic:** Stochastic Processes
 **Tags:** drift, SDE, risk-neutral, mu, deterministic, continuous time
+**Author:** Unknown
 
 ---
 

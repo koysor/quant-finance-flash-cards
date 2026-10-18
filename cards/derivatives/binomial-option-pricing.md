@@ -2,6 +2,7 @@
 
 **Topic:** Derivatives
 **Tags:** binomial tree, option pricing, risk-neutral probability, no-arbitrage, CQF, numerical methods
+**Author:** Unknown
 
 ---
 

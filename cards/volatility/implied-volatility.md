@@ -2,6 +2,7 @@
 
 **Topic:** Volatility
 **Tags:** implied volatility, volatility smile, volatility skew, Black-Scholes, options
+**Author:** Unknown
 
 ---
 

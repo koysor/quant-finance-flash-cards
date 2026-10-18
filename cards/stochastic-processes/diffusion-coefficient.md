@@ -2,6 +2,7 @@
 
 **Topic:** Stochastic Processes
 **Tags:** diffusion, volatility, SDE, stochastic processes, noise, sigma
+**Author:** Unknown
 
 ---
 

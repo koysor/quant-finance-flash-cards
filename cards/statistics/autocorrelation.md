@@ -2,6 +2,7 @@
 
 **Topic:** Statistics
 **Tags:** autocorrelation, time series, serial correlation, stationarity, returns
+**Author:** Unknown
 
 ---
 

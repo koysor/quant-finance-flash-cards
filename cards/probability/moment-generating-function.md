@@ -2,6 +2,7 @@
 
 **Topic:** Probability
 **Tags:** distributions, probability, moments, expectation, transforms
+**Author:** Unknown
 
 ---
 

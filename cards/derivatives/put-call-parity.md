@@ -2,6 +2,7 @@
 
 **Topic:** Derivatives
 **Tags:** options, put-call parity, arbitrage, no-arbitrage
+**Author:** Unknown
 
 ---
 

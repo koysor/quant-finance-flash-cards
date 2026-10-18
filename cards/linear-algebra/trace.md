@@ -2,6 +2,7 @@
 
 **Topic:** Linear Algebra
 **Tags:** trace, matrix, eigenvalues, diagonal, linear algebra
+**Author:** Unknown
 
 ---
 

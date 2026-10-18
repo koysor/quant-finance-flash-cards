@@ -2,6 +2,7 @@
 
 **Topic:** Statistics
 **Tags:** kurtosis, tail risk, distributions, moments, fat tails
+**Author:** Unknown
 
 ---
 

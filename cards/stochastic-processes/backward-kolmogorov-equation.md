@@ -2,6 +2,7 @@
 
 **Topic:** Stochastic Processes
 **Tags:** Kolmogorov, PDE, backward equation, trinomial model, Black-Scholes, boundary condition, diffusion
+**Author:** Unknown
 
 ---
 

@@ -2,6 +2,7 @@
 
 **Topic:** Risk
 **Tags:** Monte Carlo, simulation, random paths, pricing, risk
+**Author:** Unknown
 
 ---
 

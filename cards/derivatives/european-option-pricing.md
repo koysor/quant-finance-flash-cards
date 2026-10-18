@@ -2,6 +2,7 @@
 
 **Topic:** Derivatives
 **Tags:** European options, options pricing, Black-Scholes, payoff, exercise
+**Author:** Unknown
 
 ---
 

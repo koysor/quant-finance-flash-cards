@@ -2,6 +2,7 @@
 
 **Topic:** Calculus
 **Tags:** logarithm, exponential, derivatives, continuous compounding, log-returns
+**Author:** Unknown
 
 ---
 

@@ -2,6 +2,7 @@
 
 **Topic:** Linear Algebra
 **Tags:** positive definite, covariance matrix, eigenvalues, Cholesky, quadratic form
+**Author:** Unknown
 
 ---
 

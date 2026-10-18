@@ -2,6 +2,7 @@
 
 **Topic:** Calculus
 **Tags:** calculus, PDE, ODE, similarity variable, self-similar, diffusion, Gaussian
+**Author:** Unknown
 
 ---
 

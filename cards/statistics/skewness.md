@@ -2,6 +2,7 @@
 
 **Topic:** Statistics
 **Tags:** skewness, asymmetry, distributions, moments, returns, risk
+**Author:** Unknown
 
 ---
 

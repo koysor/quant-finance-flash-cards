@@ -2,6 +2,7 @@
 
 **Topic:** Stochastic Processes
 **Tags:** transition density, Gaussian, Brownian motion, Kolmogorov, Green's function, diffusion
+**Author:** Unknown
 
 ---
 

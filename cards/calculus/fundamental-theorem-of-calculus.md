@@ -2,6 +2,7 @@
 
 **Topic:** Calculus
 **Tags:** calculus, integration, antiderivative, FTC
+**Author:** Unknown
 
 ---
 

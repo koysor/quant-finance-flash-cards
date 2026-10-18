@@ -2,6 +2,7 @@
 
 **Topic:** Statistics
 **Tags:** volatility, clustering, autocorrelation, GARCH, stylised facts, returns
+**Author:** Unknown
 
 ---
 

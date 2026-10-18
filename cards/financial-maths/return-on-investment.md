@@ -2,6 +2,7 @@
 
 **Topic:** Financial Mathematics
 **Tags:** returns, investment, relative change, asset pricing
+**Author:** Unknown
 
 ---
 

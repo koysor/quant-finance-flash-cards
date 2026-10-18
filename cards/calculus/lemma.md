@@ -2,6 +2,7 @@
 
 **Topic:** Calculus
 **Tags:** lemma, proof, theorem, mathematical reasoning, logic
+**Author:** Unknown
 
 ---
 

@@ -2,6 +2,7 @@
 
 **Topic:** Calculus
 **Tags:** calculus, integration, antiderivative, substitution, by-parts
+**Author:** Unknown
 
 ---
 

@@ -2,6 +2,7 @@
 
 **Topic:** Stochastic Processes
 **Tags:** martingale, conditional expectation, fair game, risk-neutral, no-arbitrage
+**Author:** Unknown
 
 ---
 

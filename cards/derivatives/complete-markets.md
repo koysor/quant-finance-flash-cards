@@ -2,6 +2,7 @@
 
 **Topic:** Derivatives
 **Tags:** complete market, replication, binomial model, no-arbitrage, hedging, incomplete market
+**Author:** Unknown
 
 ---
 

@@ -2,6 +2,7 @@
 
 **Topic:** Probability
 **Tags:** distributions, probability, continuous, fat tails, hypothesis testing
+**Author:** Unknown
 
 ---
 

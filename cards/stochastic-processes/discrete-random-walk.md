@@ -2,6 +2,7 @@
 
 **Topic:** Stochastic Processes
 **Tags:** random walk, discrete, simulation, price model, GBM
+**Author:** Unknown
 
 ---
 

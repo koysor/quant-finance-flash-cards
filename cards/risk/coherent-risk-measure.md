@@ -2,6 +2,7 @@
 
 **Topic:** Risk
 **Tags:** risk, coherent, subadditivity, expected shortfall, risk measure, regulation
+**Author:** Unknown
 
 ---
 

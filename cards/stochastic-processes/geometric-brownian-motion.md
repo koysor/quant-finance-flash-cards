@@ -2,6 +2,7 @@
 
 **Topic:** Stochastic Processes
 **Tags:** GBM, stochastic processes, asset prices, lognormal, Itô's lemma
+**Author:** Unknown
 
 ---
 

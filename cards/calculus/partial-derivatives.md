@@ -2,6 +2,7 @@
 
 **Topic:** Calculus
 **Tags:** calculus, partial derivatives, multivariable, Greeks, Black-Scholes
+**Author:** Unknown
 
 ---
 

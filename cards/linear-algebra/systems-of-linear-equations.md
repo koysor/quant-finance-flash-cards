@@ -2,6 +2,7 @@
 
 **Topic:** Linear Algebra
 **Tags:** linear algebra, systems, simultaneous equations, calibration, replication
+**Author:** Unknown
 
 ---
 

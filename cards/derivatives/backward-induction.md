@@ -2,6 +2,7 @@
 
 **Topic:** Derivatives
 **Tags:** binomial tree, option pricing, dynamic programming, delta, CQF
+**Author:** Unknown
 
 ---
 

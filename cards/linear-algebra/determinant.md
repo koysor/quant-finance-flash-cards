@@ -2,6 +2,7 @@
 
 **Topic:** Linear Algebra
 **Tags:** linear algebra, matrices, determinant, invertibility, covariance matrix
+**Author:** Unknown
 
 ---
 

@@ -2,6 +2,7 @@
 
 **Topic:** Stochastic Processes
 **Tags:** drift, volatility, parameters, annualisation, mu, sigma
+**Author:** Unknown
 
 ---
 

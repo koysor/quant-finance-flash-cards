@@ -2,6 +2,7 @@
 
 **Topic:** Statistics
 **Tags:** volatility, standard deviation, scaling, square root, risk
+**Author:** Unknown
 
 ---
 

@@ -2,7 +2,7 @@
 
 Bite-sized revision flash cards for Quantitative Finance exams and interviews, designed for accessibility and clarity. Each card covers one concept — definition, key formula, worked example, and its finance application.
 
-1642 cards · 16 topics · 4977 concept connections
+1642 cards · 16 topics · 4976 concept connections
 
 ## Running the app
 
@@ -25,7 +25,8 @@ bash scripts/install_hooks.sh
 |---|---|---|
 | `SECRET_KEY` | Random (changes on restart) | Flask session signing key. Set a stable value in production to keep sessions valid across restarts. |
 | `PORT` | `5000` | Port for the development server. |
-| `DEBUG` | `true` | Enable Flask debug mode and the interactive reloader. Set to `false` in production. |
+| `DEBUG` | `false` | Enable Flask debug mode and the interactive reloader when running `run.py`. |
+| `ALLOW_EDGE_EDIT` | unset | Set to `1` to enable the card-page "remove link" button, which rewrites `edges.json`. Leave unset in production. |
 
 A `.env.example` file is provided as a template.
 
@@ -34,20 +35,27 @@ A `.env.example` file is provided as a template.
 | Topic | Cards | Scope |
 |---|---|---|
 | Banking Regulation | 52 | FRTB, IRRBB, LCR, NSFR, EVE, EaR, Basel capital rules |
-| Calculus | 174 | Differentiation, integration, Taylor series, quadratic techniques, A Level pure maths |
-| Computational Finance | 378 | Numerical methods, finite differences, FFT, simulation, ML algorithms |
-| Derivatives | 92 | Options, futures, Greeks, pricing models, risk-neutral theory |
-| Financial Mathematics | 53 | TVM, compounding, NPV, leverage, hedge funds, execution |
-| Fixed Income | 99 | Bonds, yield curves, duration, DV01, credit spreads, swaps, short-rate models, calibration |
-| Linear Algebra | 73 | Matrices, vectors, eigenvalues, SVD, decompositions |
+| Calculus | 178 | Differentiation, integration, Taylor series, quadratic techniques, A Level pure maths |
+| Computational Finance | 111 | Numerical methods, finite differences, FFT, simulation, ML algorithms |
+| Derivatives | 133 | Options, futures, Greeks, pricing models, risk-neutral theory |
+| Financial Mathematics | 55 | TVM, compounding, NPV, leverage, hedge funds, execution |
+| Fixed Income | 141 | Bonds, yield curves, duration, DV01, credit spreads, swaps, short-rate models, calibration |
+| Linear Algebra | 75 | Matrices, vectors, eigenvalues, SVD, decompositions |
+| Machine Learning | 282 | ML algorithms (SVM, trees, neural networks), deep learning, training techniques, RL, NLP, generative models, MLOps |
 | Mathematical Notation | 61 | Sigma, pi, set theory, logical and summation notation |
-| Portfolio Theory & Asset Pricing | 94 | CAPM, efficient frontier, factor models, performance ratios |
-| Probability | 99 | Distributions, expectation, Bayes, transform methods |
-| Risk | 37 | VaR, CVaR, Monte Carlo, stress testing, EVT, drawdowns |
-| Short Selling | 18 | Short mechanics, securities lending, regulation, short squeezes |
-| Statistics | 129 | Regression, hypothesis testing, covariance estimation |
-| Stochastic Processes | 72 | Brownian motion, GBM, Itô's lemma, SDEs, martingales |
-| Volatility | 35 | Implied/realised vol, VIX, vol surface, smile, stochastic vol models |
+| Portfolio Theory & Asset Pricing | 102 | CAPM, efficient frontier, factor models, performance ratios |
+| Probability | 103 | Distributions, expectation, Bayes, transform methods |
+| Risk | 50 | VaR, CVaR, Monte Carlo, stress testing, EVT, drawdowns |
+| Short Selling | 20 | Short mechanics, securities lending, regulation, short squeezes |
+| Statistics | 143 | Regression, hypothesis testing, covariance estimation |
+| Stochastic Processes | 92 | Brownian motion, GBM, Itô's lemma, SDEs, martingales |
+| Volatility | 44 | Implied/realised vol, VIX, vol surface, smile, stochastic vol models |
+
+## Deployment (AWS EC2)
+
+The app ships the same way as the other koysor apps: GitHub Actions runs the tests, builds `docker/Dockerfile`, pushes the image to GHCR and SSHes to the shared EC2 instance (secrets `EC2_HOST` and `EC2_SSH_KEY`) to run `docker/docker-compose.prod.yml`. The Caddy container from the `quant-finance` repo terminates TLS and serves the app at `https://koysor.duckdns.org/flashcards/`, stripping the prefix and passing `X-Forwarded-Prefix` (handled by `ProxyFix` in `app/__init__.py`). The container listens on host port 8506.
+
+One-time host setup: create `~/quant-finance-flash-cards/docker/.env` from `docker/.env.example` with a generated `SECRET_KEY`, make the GHCR package public, and check memory headroom with `free -m` and `docker stats --no-stream` (the instance is a shared 1 GiB t3.micro). `deploy/` holds an alternative systemd + nginx setup for a standalone host.
 
 ## Features
 

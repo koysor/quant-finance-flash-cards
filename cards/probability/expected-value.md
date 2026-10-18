@@ -2,6 +2,7 @@
 
 **Topic:** Probability
 **Tags:** probability, expectation, discrete, continuous
+**Author:** Unknown
 
 ---
 

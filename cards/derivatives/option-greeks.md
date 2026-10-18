@@ -2,6 +2,7 @@
 
 **Topic:** Derivatives
 **Tags:** options, Greeks, delta, gamma, theta, vega, rho
+**Author:** Unknown
 
 ---
 

@@ -2,6 +2,7 @@
 
 **Topic:** Risk
 **Tags:** risk, tail risk, EVT, extreme events, loss distribution, GEV
+**Author:** Unknown
 
 ---
 

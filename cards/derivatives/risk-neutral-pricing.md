@@ -2,6 +2,7 @@
 
 **Topic:** Derivatives
 **Tags:** risk-neutral measure, Q measure, no-arbitrage, martingale, derivatives pricing
+**Author:** Unknown
 
 ---
 

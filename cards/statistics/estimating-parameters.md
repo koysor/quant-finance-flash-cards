@@ -2,6 +2,7 @@
 
 **Topic:** Statistics
 **Tags:** estimation, annualisation, drift, volatility, calibration
+**Author:** Unknown
 
 ---
 

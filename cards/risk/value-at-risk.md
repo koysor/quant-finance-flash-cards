@@ -2,6 +2,7 @@
 
 **Topic:** Risk
 **Tags:** risk, VaR, quantile, loss distribution
+**Author:** Unknown
 
 ---
 

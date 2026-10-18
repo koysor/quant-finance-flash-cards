@@ -2,6 +2,7 @@
 
 **Topic:** Probability
 **Tags:** probability, conditional probability, Bayesian
+**Author:** Unknown
 
 ---
 

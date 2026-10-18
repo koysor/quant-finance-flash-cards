@@ -2,6 +2,7 @@
 
 **Topic:** Volatility
 **Tags:** volatility smile, implied volatility, skew, Black-Scholes, options, strike price
+**Author:** Unknown
 
 ---
 

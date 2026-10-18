@@ -2,6 +2,7 @@
 
 **Topic:** Probability
 **Tags:** distributions, fat tails, kurtosis, tail risk, extreme events
+**Author:** Unknown
 
 ---
 

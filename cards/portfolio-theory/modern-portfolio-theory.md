@@ -2,6 +2,7 @@
 
 **Topic:** Portfolio Theory & Asset Pricing
 **Tags:** portfolio theory, diversification, efficient frontier, mean-variance, optimisation
+**Author:** Unknown
 
 ---
 

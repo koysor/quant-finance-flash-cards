@@ -2,6 +2,7 @@
 
 **Topic:** Stochastic Processes
 **Tags:** Fokker-Planck, probability density, PDE, diffusion, Kolmogorov, transition density
+**Author:** Unknown
 
 ---
 

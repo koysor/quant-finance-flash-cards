@@ -2,6 +2,7 @@
 
 **Topic:** Statistics
 **Tags:** CLT, convergence, normal distribution, sampling, estimation
+**Author:** Unknown
 
 ---
 

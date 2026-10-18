@@ -2,6 +2,7 @@
 
 **Topic:** Risk
 **Tags:** limitations, fat tails, volatility clustering, model risk, assumptions
+**Author:** Unknown
 
 ---
 

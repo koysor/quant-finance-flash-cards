@@ -2,6 +2,7 @@
 
 **Topic:** Derivatives
 **Tags:** no-arbitrage, hedging, risk-free rate, derivative pricing, CQF
+**Author:** Unknown
 
 ---
 

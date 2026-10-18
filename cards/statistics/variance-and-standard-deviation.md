@@ -2,6 +2,7 @@
 
 **Topic:** Statistics
 **Tags:** statistics, descriptive stats, risk, spread
+**Author:** Unknown
 
 ---
 

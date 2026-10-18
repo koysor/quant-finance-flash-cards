@@ -2,6 +2,7 @@
 
 **Topic:** Derivatives
 **Tags:** binomial model, Black-Scholes, PDE, Taylor expansion, convergence, CQF
+**Author:** Unknown
 
 ---
 

@@ -2,6 +2,7 @@
 
 **Topic:** Linear Algebra
 **Tags:** linear algebra, matrices, inverse, regression, portfolio optimisation
+**Author:** Unknown
 
 ---
 

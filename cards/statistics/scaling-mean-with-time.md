@@ -2,6 +2,7 @@
 
 **Topic:** Statistics
 **Tags:** mean, drift, scaling, time, annualisation
+**Author:** Unknown
 
 ---
 

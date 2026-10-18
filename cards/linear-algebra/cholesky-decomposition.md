@@ -2,6 +2,7 @@
 
 **Topic:** Linear Algebra
 **Tags:** linear algebra, matrices, Cholesky, Monte Carlo, correlation, simulation
+**Author:** Unknown
 
 ---
 

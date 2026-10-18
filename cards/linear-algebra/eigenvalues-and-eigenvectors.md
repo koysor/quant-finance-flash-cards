@@ -2,6 +2,7 @@
 
 **Topic:** Linear Algebra
 **Tags:** linear algebra, eigenvalues, eigenvectors, PCA, covariance matrix, risk
+**Author:** Unknown
 
 ---
 

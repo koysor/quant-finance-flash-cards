@@ -2,6 +2,7 @@
 
 **Topic:** Probability
 **Tags:** lognormal, distributions, asset prices, returns, probability
+**Author:** Unknown
 
 ---
 

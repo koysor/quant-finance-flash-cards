@@ -2,6 +2,7 @@
 
 **Topic:** Linear Algebra
 **Tags:** linear algebra, matrices, portfolio theory
+**Author:** Unknown
 
 ---
 

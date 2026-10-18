@@ -2,6 +2,7 @@
 
 **Topic:** Statistics
 **Tags:** returns, mean, standard deviation, standardisation, volatility
+**Author:** Unknown
 
 ---
 

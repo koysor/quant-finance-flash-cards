@@ -2,6 +2,7 @@
 
 **Topic:** Derivatives
 **Tags:** American options, options pricing, early exercise, binomial tree, exercise boundary
+**Author:** Unknown
 
 ---
 

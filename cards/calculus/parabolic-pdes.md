@@ -2,6 +2,7 @@
 
 **Topic:** Calculus
 **Tags:** PDE, parabolic, heat equation, diffusion, Black-Scholes, classification
+**Author:** Unknown
 
 ---
 

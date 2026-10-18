@@ -2,6 +2,7 @@
 
 **Topic:** Fixed Income
 **Tags:** yield curve, interest rates, term structure, bonds, discounting
+**Author:** Unknown
 
 ---
 

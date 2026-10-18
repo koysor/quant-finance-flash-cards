@@ -2,6 +2,7 @@
 
 **Topic:** Linear Algebra
 **Tags:** linear algebra, vectors, dot product, norms, Cauchy-Schwarz, portfolio theory
+**Author:** Unknown
 
 ---
 

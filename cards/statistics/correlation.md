@@ -2,6 +2,7 @@
 
 **Topic:** Statistics
 **Tags:** statistics, correlation, covariance, portfolio theory
+**Author:** Unknown
 
 ---
 
