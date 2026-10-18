@@ -2,7 +2,7 @@
 
 Bite-sized revision flash cards for Quantitative Finance exams and interviews, designed for accessibility and clarity. Each card covers one concept — definition, key formula, worked example, and its finance application.
 
-1667 cards · 16 topics · 5030 concept connections
+1679 cards · 16 topics · 5058 concept connections
 
 ## Running the app
 
@@ -34,11 +34,11 @@ A `.env.example` file is provided as a template.
 
 | Topic | Cards | Scope |
 |---|---|---|
-| Banking Regulation | 52 | FRTB, IRRBB, LCR, NSFR, EVE, EaR, Basel capital rules |
+| Banking Regulation | 57 | FRTB, IRRBB, LCR, NSFR, EVE, EaR, Basel capital rules |
 | Calculus | 194 | Differentiation, integration, Taylor series, quadratic techniques, A Level pure maths |
 | Computational Finance | 111 | Numerical methods, finite differences, FFT, simulation, ML algorithms |
 | Derivatives | 133 | Options, futures, Greeks, pricing models, risk-neutral theory |
-| Financial Mathematics | 55 | TVM, compounding, NPV, leverage, hedge funds, execution |
+| Financial Mathematics | 62 | TVM, compounding, NPV, leverage, hedge funds, execution |
 | Fixed Income | 141 | Bonds, yield curves, duration, DV01, credit spreads, swaps, short-rate models, calibration |
 | Linear Algebra | 78 | Matrices, vectors, eigenvalues, SVD, decompositions |
 | Machine Learning | 282 | ML algorithms (SVM, trees, neural networks), deep learning, training techniques, RL, NLP, generative models, MLOps |

@@ -174,6 +174,18 @@
     "description": "Economic capital is the difference between the tail quantile of the credit loss distribution (at 99.9%) and the expected loss \u2014 the further right the tail extends, the larger the capital buffer required."
   },
   {
+    "source": "banking-regulation/credit-spread-risk-in-the-banking-book",
+    "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
+    "label": "separate from",
+    "description": "CSRBB is the spread component of a bond's value, which swap hedges of the risk-free rate leave open."
+  },
+  {
+    "source": "banking-regulation/credit-spread-risk-in-the-banking-book",
+    "target": "banking-regulation/liquidity-buffer-composition",
+    "label": "affects",
+    "description": "Bonds held in the liquidity buffer lose value when spreads widen, just when liquidity may be needed."
+  },
+  {
     "source": "banking-regulation/credit-value-adjustment-cva",
     "target": "banking-regulation/expected-loss",
     "label": "analogous to",
@@ -234,6 +246,24 @@
     "description": "The SBM captures gradual credit spread moves via delta/vega/curvature sensitivities, while DRC separately capitalises the discrete jump-to-default event; both are required under FRTB SA and IMA."
   },
   {
+    "source": "banking-regulation/delta-eve-shock-scenarios",
+    "target": "banking-regulation/economic-value-of-equity",
+    "label": "scenarios applied to",
+    "description": "Each prescribed scenario produces a shocked EVE; the difference from the base case is the reported change."
+  },
+  {
+    "source": "banking-regulation/delta-eve-shock-scenarios",
+    "target": "banking-regulation/irrbb-supervisory-outlier-test",
+    "label": "feeds into",
+    "description": "The worst-case loss across the six scenarios is the numerator of the supervisory outlier test."
+  },
+  {
+    "source": "banking-regulation/delta-eve-shock-scenarios",
+    "target": "banking-regulation/yield-curve-risk",
+    "label": "captures",
+    "description": "Steepener and flattener scenarios exist because curve shape changes cause losses a parallel shift would miss."
+  },
+  {
     "source": "banking-regulation/dva",
     "target": "banking-regulation/credit-value-adjustment-cva",
     "label": "mirror of",
@@ -262,6 +292,12 @@
     "target": "financial-maths/net-interest-income",
     "label": "measures risk to",
     "description": "EaR quantifies the potential decline in NII under adverse rate scenarios \u2014 it is the probabilistic wrapper around NII sensitivity that translates rate risk into an earnings impact figure."
+  },
+  {
+    "source": "banking-regulation/earnings-at-risk",
+    "target": "financial-maths/static-vs-dynamic-balance-sheet",
+    "label": "depends on",
+    "description": "Earnings at risk differs sharply between a static and a dynamic balance sheet assumption."
   },
   {
     "source": "banking-regulation/earnings-at-risk",
@@ -391,6 +427,12 @@
   },
   {
     "source": "banking-regulation/interest-rate-risk-in-the-banking-book",
+    "target": "banking-regulation/delta-eve-shock-scenarios",
+    "label": "measured with",
+    "description": "IRRBB is quantified by applying the six prescribed shock scenarios to the banking book and recording the change in economic value."
+  },
+  {
+    "source": "banking-regulation/interest-rate-risk-in-the-banking-book",
     "target": "banking-regulation/economic-value-of-equity",
     "label": "measured via",
     "description": "EVE is one of the two core IRRBB metrics \u2014 it captures the present-value impact of rate changes on the entire banking book, providing the solvency perspective that Basel requires alongside the earnings (NII) view."
@@ -442,6 +484,36 @@
     "target": "machine-learning/auc",
     "label": "validated via",
     "description": "IRB credit models must demonstrate discriminatory power before regulatory approval; the Gini coefficient (G = 2\u00b7AUC - 1) is the standard metric, with supervisors typically requiring G \u2265 0.30 for retail PD models."
+  },
+  {
+    "source": "banking-regulation/irrbb-standardised-framework",
+    "target": "banking-regulation/delta-eve-shock-scenarios",
+    "label": "standardises",
+    "description": "The framework fixes the shock scenarios and the maturity schedule so banks can be compared."
+  },
+  {
+    "source": "banking-regulation/irrbb-standardised-framework",
+    "target": "banking-regulation/interest-rate-tenor-vertices",
+    "label": "uses",
+    "description": "Cash flows are slotted into time buckets, the same bucketed term structure used to measure sensitivities."
+  },
+  {
+    "source": "banking-regulation/irrbb-standardised-framework",
+    "target": "financial-maths/non-maturity-deposits",
+    "label": "assumptions for",
+    "description": "Core and non-core deposit slotting is the largest behavioural judgement in the standardised measure."
+  },
+  {
+    "source": "banking-regulation/irrbb-supervisory-outlier-test",
+    "target": "banking-regulation/capital-ratios-cet1",
+    "label": "scaled by",
+    "description": "Tier 1 capital is the denominator, so a thinly capitalised bank breaches with a smaller economic exposure."
+  },
+  {
+    "source": "banking-regulation/irrbb-supervisory-outlier-test",
+    "target": "banking-regulation/economic-value-of-equity",
+    "label": "compares",
+    "description": "The test compares the largest fall in EVE with 15% of Tier 1 capital."
   },
   {
     "source": "banking-regulation/isda-simm",
@@ -748,6 +820,18 @@
     "target": "risk/value-at-risk",
     "label": "stress-calibrated version of",
     "description": "Stressed VaR is calculated using the same VaR model and confidence level (99%, 10-day) as standard VaR, but calibrated to a 12-month historical stress window rather than recent data \u2014 making SVaR a counter-cyclical supplement to standard VaR."
+  },
+  {
+    "source": "banking-regulation/trading-book-banking-book-boundary",
+    "target": "banking-regulation/frtb-overview",
+    "label": "reformed by",
+    "description": "FRTB tightened the boundary to stop capital arbitrage between the two books."
+  },
+  {
+    "source": "banking-regulation/trading-book-banking-book-boundary",
+    "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
+    "label": "scope of",
+    "description": "IRRBB applies only to banking-book positions because the trading book's rate risk is already in market risk capital."
   },
   {
     "source": "banking-regulation/uncleared-margin-rules",
@@ -8646,6 +8730,18 @@
     "description": "The volatility drag formula g = \u03bc - \u00bd\u03c3\u00b2 is a direct consequence of the lognormal asset price model: the mean of the lognormal grows at \u03bc but the median (typical outcome) grows at the geometric rate \u03bc - \u00bd\u03c3\u00b2, due to the It\u00f4 correction."
   },
   {
+    "source": "financial-maths/asset-and-liability-sensitivity",
+    "target": "banking-regulation/repricing-risk",
+    "label": "follows from",
+    "description": "The sign of the cumulative repricing gap determines whether a bank is asset- or liability-sensitive."
+  },
+  {
+    "source": "financial-maths/asset-and-liability-sensitivity",
+    "target": "financial-maths/deposit-beta",
+    "label": "modified by",
+    "description": "Low deposit betas make a bank more asset-sensitive than its contractual gap suggests."
+  },
+  {
     "source": "financial-maths/asset-liability-management",
     "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
     "label": "manages",
@@ -8662,6 +8758,24 @@
     "target": "financial-maths/net-interest-income",
     "label": "optimises",
     "description": "ALM optimises NII by managing the repricing profile of the banking book \u2014 the ALM desk decides how much rate risk to take in pursuit of higher net interest margins while staying within risk limits."
+  },
+  {
+    "source": "financial-maths/banking-book-interest-rate-hedging",
+    "target": "banking-regulation/basis-risk-banking-book",
+    "label": "leaves",
+    "description": "A swap on one reference rate leaves basis risk against loans and deposits priced on others."
+  },
+  {
+    "source": "financial-maths/banking-book-interest-rate-hedging",
+    "target": "financial-maths/duration-gap",
+    "label": "sized from",
+    "description": "The hedge notional is chosen to close the duration gap between fixed-rate assets and floating funding."
+  },
+  {
+    "source": "financial-maths/banking-book-interest-rate-hedging",
+    "target": "financial-maths/hedge-accounting-fair-value-vs-cash-flow",
+    "label": "accounted for by",
+    "description": "Hedge accounting determines whether the swap's value changes create profit-and-loss volatility."
   },
   {
     "source": "financial-maths/benchmark-index",
@@ -8970,6 +9084,12 @@
     "description": "The hazard rate function lambda(t) is the fundamental building block of intensity-based credit models, where it governs the instantaneous probability of default and is calibrated to CDS spreads."
   },
   {
+    "source": "financial-maths/hedge-accounting-fair-value-vs-cash-flow",
+    "target": "financial-maths/funds-transfer-pricing",
+    "label": "related to",
+    "description": "Hedges transfer interest rate risk to treasury, mirroring the internal transfer price charged to business lines."
+  },
+  {
     "source": "financial-maths/hedge-funds",
     "target": "derivatives/delta-hedging",
     "label": "employs",
@@ -9204,6 +9324,12 @@
     "description": "NII is directly exposed to repricing risk \u2014 when assets and liabilities reprice at different times, rate movements create gaps that squeeze or expand the net interest margin."
   },
   {
+    "source": "financial-maths/net-interest-income",
+    "target": "financial-maths/static-vs-dynamic-balance-sheet",
+    "label": "simulated under",
+    "description": "An NII sensitivity depends on whether the simulation holds the balance sheet constant or lets it change."
+  },
+  {
     "source": "financial-maths/non-maturity-deposits",
     "target": "banking-regulation/interest-rate-risk-in-the-banking-book",
     "label": "key assumption of",
@@ -9358,6 +9484,18 @@
     "target": "short-selling/securities-lending",
     "label": "provides",
     "description": "Prime brokers are the primary providers of securities lending services to hedge funds, sourcing borrows from custodians and institutional lenders to facilitate short selling."
+  },
+  {
+    "source": "financial-maths/rate-volume-mix-analysis",
+    "target": "banking-regulation/repricing-risk",
+    "label": "isolates",
+    "description": "The rate component is the part of earnings movement that repricing risk is responsible for."
+  },
+  {
+    "source": "financial-maths/rate-volume-mix-analysis",
+    "target": "financial-maths/net-interest-income",
+    "label": "decomposes",
+    "description": "The analysis splits a change in NII into the part from volume growth and the part from repricing."
   },
   {
     "source": "financial-maths/relative-return",
@@ -9520,6 +9658,36 @@
     "target": "statistics/cointegration",
     "label": "relies on",
     "description": "Many stat arb strategies use cointegration to identify groups of securities that share long-run equilibria \u2014 trading the mean-reverting residuals across many such groups generates the diversified alpha stream."
+  },
+  {
+    "source": "financial-maths/structural-hedge",
+    "target": "financial-maths/asset-and-liability-sensitivity",
+    "label": "reduces",
+    "description": "By locking in fixed yields, the hedge reduces the earnings sensitivity of an asset-sensitive bank."
+  },
+  {
+    "source": "financial-maths/structural-hedge",
+    "target": "financial-maths/non-maturity-deposits",
+    "label": "hedges the core of",
+    "description": "A structural hedge is sized from the stable core of non-maturity deposits and equity."
+  },
+  {
+    "source": "financial-maths/term-spread-and-net-interest-margin",
+    "target": "banking-regulation/yield-curve-risk",
+    "label": "exposed to",
+    "description": "A flattening or inverted curve compresses the term spread and the margin."
+  },
+  {
+    "source": "financial-maths/term-spread-and-net-interest-margin",
+    "target": "financial-maths/net-interest-income",
+    "label": "drives",
+    "description": "The slope of the curve sets the margin earned by borrowing short and lending long."
+  },
+  {
+    "source": "financial-maths/term-spread-and-net-interest-margin",
+    "target": "fixed-income/bear-steepener-bull-flattener",
+    "label": "links to",
+    "description": "Whether a curve move is a steepener or flattener determines the effect on a bank's margin."
   },
   {
     "source": "financial-maths/time-value-of-money",

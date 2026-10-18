@@ -237,6 +237,18 @@
       }
     ]
   },
+  "banking-regulation/credit-spread-risk-in-the-banking-book": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Credit spread (bond)",
+        "url": "https://en.wikipedia.org/wiki/Credit_spread_(bond)"
+      },
+      {
+        "title": "BIS \u2014 Interest rate risk in the banking book (BCBS d368)",
+        "url": "https://www.bis.org/bcbs/publ/d368.htm"
+      }
+    ]
+  },
   "banking-regulation/credit-value-adjustment-cva": {
     "websites": [
       {
@@ -300,6 +312,18 @@
       {
         "title": "Investopedia Academy \u2014 Risk Management",
         "url": "https://www.investopedia.com/terms/d/defaultrisk.asp"
+      }
+    ]
+  },
+  "banking-regulation/delta-eve-shock-scenarios": {
+    "websites": [
+      {
+        "title": "BIS \u2014 Interest rate risk in the banking book (BCBS d368)",
+        "url": "https://www.bis.org/bcbs/publ/d368.htm"
+      },
+      {
+        "title": "BIS FSI \u2014 IRRBB Pillar 2 standardised framework: executive summary",
+        "url": "https://www.bis.org/fsi/fsisummaries/irrbb.htm"
       }
     ]
   },
@@ -508,6 +532,30 @@
       {
         "title": "MIT OpenCourseWare \u2014 Financial Engineering",
         "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/irrbb-standardised-framework": {
+    "websites": [
+      {
+        "title": "BIS FSI \u2014 IRRBB Pillar 2 standardised framework: executive summary",
+        "url": "https://www.bis.org/fsi/fsisummaries/irrbb.htm"
+      },
+      {
+        "title": "BIS \u2014 Interest rate risk in the banking book (BCBS d368)",
+        "url": "https://www.bis.org/bcbs/publ/d368.htm"
+      }
+    ]
+  },
+  "banking-regulation/irrbb-supervisory-outlier-test": {
+    "websites": [
+      {
+        "title": "BIS \u2014 Interest rate risk in the banking book (BCBS d368)",
+        "url": "https://www.bis.org/bcbs/publ/d368.htm"
+      },
+      {
+        "title": "BIS FSI \u2014 IRRBB Pillar 2 standardised framework: executive summary",
+        "url": "https://www.bis.org/fsi/fsisummaries/irrbb.htm"
       }
     ]
   },
@@ -898,6 +946,18 @@
       {
         "title": "MIT OpenCourseWare \u2014 Financial Engineering",
         "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/"
+      }
+    ]
+  },
+  "banking-regulation/trading-book-banking-book-boundary": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Trading book",
+        "url": "https://en.wikipedia.org/wiki/Trading_book"
+      },
+      {
+        "title": "Wikipedia \u2014 Banking book",
+        "url": "https://en.wikipedia.org/wiki/Banking_book"
       }
     ]
   },
@@ -7295,6 +7355,18 @@
       }
     ]
   },
+  "financial-maths/asset-and-liability-sensitivity": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Interest rate risk",
+        "url": "https://en.wikipedia.org/wiki/Interest_rate_risk"
+      },
+      {
+        "title": "Wikipedia \u2014 Net interest income",
+        "url": "https://en.wikipedia.org/wiki/Net_interest_income"
+      }
+    ]
+  },
   "financial-maths/asset-liability-management": {
     "websites": [
       {
@@ -7310,6 +7382,18 @@
       {
         "title": "FDIC \u2014 Interest Rate Risk Management",
         "url": "https://www.fdic.gov/resources/bankers/capital-markets/interest-rate-risk/"
+      }
+    ]
+  },
+  "financial-maths/banking-book-interest-rate-hedging": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Interest rate swap",
+        "url": "https://en.wikipedia.org/wiki/Interest_rate_swap"
+      },
+      {
+        "title": "Wikipedia \u2014 Interest rate risk",
+        "url": "https://en.wikipedia.org/wiki/Interest_rate_risk"
       }
     ]
   },
@@ -7524,6 +7608,18 @@
       {
         "title": "Investopedia \u2014 Haircut (Finance)",
         "url": "https://www.investopedia.com/terms/h/haircut.asp"
+      }
+    ]
+  },
+  "financial-maths/hedge-accounting-fair-value-vs-cash-flow": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Hedge accounting",
+        "url": "https://en.wikipedia.org/wiki/Hedge_accounting"
+      },
+      {
+        "title": "Wikipedia \u2014 Interest rate swap",
+        "url": "https://en.wikipedia.org/wiki/Interest_rate_swap"
       }
     ]
   },
@@ -7775,6 +7871,18 @@
       }
     ]
   },
+  "financial-maths/rate-volume-mix-analysis": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Net interest margin",
+        "url": "https://en.wikipedia.org/wiki/Net_interest_margin"
+      },
+      {
+        "title": "Wikipedia \u2014 Net interest income",
+        "url": "https://en.wikipedia.org/wiki/Net_interest_income"
+      }
+    ]
+  },
   "financial-maths/relative-return": {
     "websites": [
       {
@@ -7855,11 +7963,47 @@
       }
     ]
   },
+  "financial-maths/static-vs-dynamic-balance-sheet": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Net interest income",
+        "url": "https://en.wikipedia.org/wiki/Net_interest_income"
+      },
+      {
+        "title": "Wikipedia \u2014 Asset and liability management",
+        "url": "https://en.wikipedia.org/wiki/Asset_and_liability_management"
+      }
+    ]
+  },
   "financial-maths/statistical-arbitrage": {
     "websites": [
       {
         "title": "Investopedia \u2014 Statistical Arbitrage",
         "url": "https://www.investopedia.com/terms/s/statisticalarbitrage.asp"
+      }
+    ]
+  },
+  "financial-maths/structural-hedge": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Interest rate swap",
+        "url": "https://en.wikipedia.org/wiki/Interest_rate_swap"
+      },
+      {
+        "title": "Wikipedia \u2014 Asset and liability management",
+        "url": "https://en.wikipedia.org/wiki/Asset_and_liability_management"
+      }
+    ]
+  },
+  "financial-maths/term-spread-and-net-interest-margin": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Net interest margin",
+        "url": "https://en.wikipedia.org/wiki/Net_interest_margin"
+      },
+      {
+        "title": "Wikipedia \u2014 Maturity transformation",
+        "url": "https://en.wikipedia.org/wiki/Maturity_transformation"
       }
     ]
   },
