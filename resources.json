@@ -1178,12 +1178,6 @@
     ]
   },
   "calculus/centred-derivative": {
-    "websites": [
-      {
-        "title": "Paul's Online Math Notes \u2014 Approximating Derivatives",
-        "url": "https://tutorial.math.lamar.edu/Classes/CalcI/DerivApps.aspx"
-      }
-    ],
     "videos": [
       {
         "title": "Khan Academy \u2014 Secant Lines and Average Rate of Change",
@@ -1192,6 +1186,12 @@
       {
         "title": "MIT OpenCourseWare \u2014 Numerical Methods for PDEs",
         "url": "https://ocw.mit.edu/courses/18-336-numerical-methods-for-partial-differential-equations-spring-2009/"
+      }
+    ],
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Finite difference",
+        "url": "https://en.wikipedia.org/wiki/Finite_difference"
       }
     ]
   },
@@ -1228,28 +1228,28 @@
     ]
   },
   "calculus/complex-conjugate": {
-    "websites": [
-      {
-        "title": "Paul's Online Math Notes \u2014 Complex Numbers",
-        "url": "https://tutorial.math.lamar.edu/Extras/ComplexNumbers/ComplexNumbers.aspx"
-      }
-    ],
     "videos": [
       {
         "title": "Khan Academy \u2014 Complex conjugates and dividing complex numbers",
         "url": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:complex/x2ec2f6f830c9fb89:complex-div/v/complex-conjugates-example"
+      }
+    ],
+    "websites": [
+      {
+        "title": "Paul's Online Math Notes \u2014 Complex Numbers",
+        "url": "https://tutorial.math.lamar.edu/Classes/Alg/ComplexNumbers.aspx"
       }
     ]
   },
   "calculus/complex-conjugate-identities": {
     "websites": [
       {
-        "title": "Paul's Online Math Notes \u2014 Complex Numbers",
-        "url": "https://tutorial.math.lamar.edu/Extras/ComplexNumbers/ComplexNumbers.aspx"
-      },
-      {
         "title": "Brilliant \u2014 Complex Conjugates",
         "url": "https://brilliant.org/wiki/complex-conjugates/"
+      },
+      {
+        "title": "Paul's Online Math Notes \u2014 Complex Numbers",
+        "url": "https://tutorial.math.lamar.edu/Classes/Alg/ComplexNumbers.aspx"
       }
     ],
     "videos": [
@@ -1344,16 +1344,16 @@
       {
         "title": "Khan Academy \u2014 Law of Cosines",
         "url": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:law-of-cosines/a/law-of-cosines"
+      },
+      {
+        "title": "Wikipedia \u2014 Law of cosines",
+        "url": "https://en.wikipedia.org/wiki/Law_of_cosines"
       }
     ],
     "videos": [
       {
         "title": "Math is Fun \u2014 The Law of Cosines",
         "url": "https://www.mathsisfun.com/algebra/trig-cosine-law.html"
-      },
-      {
-        "title": "Paul's Online Math Notes \u2014 Law of Cosines",
-        "url": "https://tutorial.math.lamar.edu/Classes/CalcII/LawofCosines.aspx"
       }
     ]
   },
@@ -1702,8 +1702,8 @@
   "calculus/fourier-transform": {
     "websites": [
       {
-        "title": "Paul's Online Math Notes \u2014 Fourier Transform",
-        "url": "https://tutorial.math.lamar.edu/Classes/DE/FourierTransforms.aspx"
+        "title": "Wikipedia \u2014 Fourier transform",
+        "url": "https://en.wikipedia.org/wiki/Fourier_transform"
       }
     ]
   },
@@ -1740,8 +1740,8 @@
         "url": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/ab-6-4/v/fundamental-theorem-of-calculus"
       },
       {
-        "title": "Paul's Online Math Notes \u2014 Fundamental Theorem of Calculus",
-        "url": "https://tutorial.math.lamar.edu/Classes/CalcI/FundThmOfCalc.aspx"
+        "title": "Wikipedia \u2014 Fundamental theorem of calculus",
+        "url": "https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus"
       }
     ]
   },
@@ -2192,10 +2192,6 @@
       {
         "title": "Wikipedia \u2014 Linear Interpolation",
         "url": "https://en.wikipedia.org/wiki/Linear_interpolation"
-      },
-      {
-        "title": "Paul's Online Math Notes \u2014 Interpolation",
-        "url": "https://tutorial.math.lamar.edu/Classes/DE/EulerMethod.aspx"
       }
     ],
     "videos": [
@@ -2468,16 +2464,16 @@
     ]
   },
   "calculus/ordinary-differential-equations": {
-    "websites": [
-      {
-        "title": "Paul's Online Math Notes \u2014 First Order Differential Equations",
-        "url": "https://tutorial.math.lamar.edu/Classes/DE/FirstOrder.aspx"
-      }
-    ],
     "videos": [
       {
         "title": "Khan Academy \u2014 Introduction to Differential Equations",
         "url": "https://www.khanacademy.org/math/differential-equations/first-order-differential-equations/differential-equations-intro/v/differential-equation-introduction"
+      }
+    ],
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Ordinary differential equation",
+        "url": "https://en.wikipedia.org/wiki/Ordinary_differential_equation"
       }
     ]
   },
@@ -2762,8 +2758,8 @@
   "calculus/reduction-formula": {
     "websites": [
       {
-        "title": "Reduction Formulas \u2014 Paul's Online Math Notes",
-        "url": "https://tutorial.math.lamar.edu/Classes/CalcII/ReductionFormula.aspx"
+        "title": "Wikipedia \u2014 Reduction formula",
+        "url": "https://en.wikipedia.org/wiki/Reduction_formula"
       }
     ]
   },
@@ -2940,26 +2936,20 @@
       {
         "title": "Khan Academy \u2014 Law of Sines",
         "url": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:law-of-sines/a/law-of-sines"
+      },
+      {
+        "title": "Wikipedia \u2014 Law of sines",
+        "url": "https://en.wikipedia.org/wiki/Law_of_sines"
       }
     ],
     "videos": [
       {
         "title": "Math is Fun \u2014 The Law of Sines",
         "url": "https://www.mathsisfun.com/algebra/trig-sine-law.html"
-      },
-      {
-        "title": "Paul's Online Math Notes \u2014 Law of Sines",
-        "url": "https://tutorial.math.lamar.edu/Classes/CalcII/LawofSines.aspx"
       }
     ]
   },
   "calculus/singularity-of-a-function": {
-    "websites": [
-      {
-        "title": "Paul's Online Math Notes \u2014 Singular Points",
-        "url": "https://tutorial.math.lamar.edu/Classes/DE/Singular.aspx"
-      }
-    ],
     "videos": [
       {
         "title": "Khan Academy \u2014 Introduction to Limits",
@@ -2968,6 +2958,12 @@
       {
         "title": "Khan Academy \u2014 Graphs of Rational Functions: Vertical Asymptotes",
         "url": "https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:rational-functions/x9e81a4f98389efdf:graphs-of-rational-functions/v/graphs-of-rational-functions-vertical-asymptotes"
+      }
+    ],
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Singularity (mathematics)",
+        "url": "https://en.wikipedia.org/wiki/Singularity_(mathematics)"
       }
     ]
   },
@@ -3697,10 +3693,6 @@
   },
   "computational-finance/hedging-gain-statistic": {
     "websites": [
-      {
-        "title": "Rotman School of Management \u2014 Hull & White, Optimal Delta Hedging for Options (2017)",
-        "url": "https://www-2.rotman.utoronto.ca/~hull/downloadablepublications/Optimal%20Delta%20Hedging.pdf"
-      },
       {
         "title": "Investopedia \u2014 Delta Hedging",
         "url": "https://www.investopedia.com/terms/d/deltahedging.asp"
@@ -6321,10 +6313,6 @@
   },
   "derivatives/minimum-variance-delta": {
     "websites": [
-      {
-        "title": "Rotman School of Management \u2014 Hull & White, Optimal Delta Hedging for Options (2017)",
-        "url": "https://www-2.rotman.utoronto.ca/~hull/downloadablepublications/Optimal%20Delta%20Hedging.pdf"
-      },
       {
         "title": "Investopedia \u2014 Delta Hedging",
         "url": "https://www.investopedia.com/terms/d/deltahedging.asp"
@@ -12486,10 +12474,6 @@
       {
         "title": "Wikipedia \u2014 Dynamic Programming",
         "url": "https://en.wikipedia.org/wiki/Dynamic_programming"
-      },
-      {
-        "title": "Brilliant \u2014 Dynamic Programming",
-        "url": "https://brilliant.org/wiki/dynamic-programming/"
       }
     ],
     "videos": [
@@ -19527,12 +19511,6 @@
     ]
   },
   "probability/gamma-function": {
-    "websites": [
-      {
-        "title": "Gamma Function \u2014 Paul's Online Math Notes",
-        "url": "https://tutorial.math.lamar.edu/Classes/DE/GammaFunction.aspx"
-      }
-    ],
     "videos": [
       {
         "title": "Factorials, the Gamma Function, and Related Functions \u2014 Brilliant",
@@ -19541,6 +19519,12 @@
       {
         "title": "Gamma Function \u2014 Wolfram MathWorld",
         "url": "https://mathworld.wolfram.com/GammaFunction.html"
+      }
+    ],
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Gamma function",
+        "url": "https://en.wikipedia.org/wiki/Gamma_function"
       }
     ]
   },

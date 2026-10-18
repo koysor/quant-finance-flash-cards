@@ -19,6 +19,16 @@ import aiohttp
 
 RESOURCES_PATH = Path(__file__).resolve().parent.parent / "resources.json"
 CONCURRENCY = 20
+# Wikipedia answers 429 when hit with the full concurrency, so cap each host.
+HOST_CONCURRENCY = 4
+MAX_ATTEMPTS = 4
+RETRY_STATUSES = {429, 500, 502, 503, 504}
+_host_semaphores: dict[str, asyncio.Semaphore] = {}
+
+
+def _host_semaphore(host: str) -> asyncio.Semaphore:
+    """One semaphore per host, created lazily inside the running event loop."""
+    return _host_semaphores.setdefault(host, asyncio.Semaphore(HOST_CONCURRENCY))
 TIMEOUT = aiohttp.ClientTimeout(total=20)
 USER_AGENT = (
     "Mozilla/5.0 (compatible; URLValidator/1.0; "
@@ -59,19 +69,30 @@ async def check_url(
     if any(host == d or host.endswith("." + d) for d in SKIP_DOMAINS):
         return card_id, category, title, url, True
 
-    async with semaphore:
+    host = (urlparse(url).hostname or "").lower()
+    async with semaphore, _host_semaphore(host):
+        ok = False
+        for attempt in range(MAX_ATTEMPTS):
+            retry_after = 0.0
+            try:
+                # General URL check
+                async with session.head(url, allow_redirects=True) as resp:
+                    status = resp.status
+                    if status == 405:
+                        async with session.get(url, allow_redirects=True) as resp2:
+                            status = resp2.status
+                            resp = resp2
+                    ok = status < 400
+                    if status in RETRY_STATUSES:
+                        retry_after = float(resp.headers.get("Retry-After", 0) or 0)
+            except (aiohttp.ClientError, asyncio.TimeoutError):
+                ok, status = False, None
 
-        try:
-            # General URL check
-            async with session.head(url, allow_redirects=True) as resp:
-                if resp.status == 405:
-                    async with session.get(url, allow_redirects=True) as resp2:
-                        ok = resp2.status < 400
-                else:
-                    ok = resp.status < 400
-        except (aiohttp.ClientError, asyncio.TimeoutError):
-            ok = False
-            
+            # A rate limit or transient server error is not a broken link: back off and retry.
+            if ok or (status is not None and status not in RETRY_STATUSES):
+                break
+            await asyncio.sleep(min(max(retry_after, 2 ** attempt), 30))
+
     return card_id, category, title, url, ok
 
 
@@ -87,7 +108,7 @@ async def main() -> int:
     semaphore = asyncio.Semaphore(CONCURRENCY)
     headers = {"User-Agent": USER_AGENT}
 
-    async with aiohttp.ClientSession(headers=headers) as session:
+    async with aiohttp.ClientSession(headers=headers, timeout=TIMEOUT) as session:
         for card_id, sections in resources.items():
             if not isinstance(sections, dict):
                 continue
