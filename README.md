@@ -53,9 +53,7 @@ A `.env.example` file is provided as a template.
 
 ## Deployment (AWS EC2)
 
-The app ships the same way as the other koysor apps: GitHub Actions runs the tests, builds `docker/Dockerfile`, pushes the image to GHCR and SSHes to the shared EC2 instance (secrets `EC2_HOST` and `EC2_SSH_KEY`) to run `docker/docker-compose.prod.yml`. The Caddy container from the `quant-finance` repo terminates TLS and serves the app at `https://koysor.duckdns.org/flashcards/`, stripping the prefix and passing `X-Forwarded-Prefix` (handled by `ProxyFix` in `app/__init__.py`). The container listens on host port 8506.
-
-One-time host setup: create `~/quant-finance-flash-cards/docker/.env` from `docker/.env.example` with a generated `SECRET_KEY`, make the GHCR package public, and check memory headroom with `free -m` and `docker stats --no-stream` (the instance is a shared 1 GiB t3.micro). `deploy/` holds an alternative systemd + nginx setup for a standalone host.
+Live at https://koysor.duckdns.org/flashcards/. The app ships like the other koysor apps: GitHub Actions runs the tests, builds the Docker image, pushes it to GHCR and deploys it over SSH to the shared EC2 instance, where Caddy serves it under `/flashcards/`. See [`docker/README.md`](docker/README.md) for the architecture, first-time host setup, deploy key, capacity and troubleshooting, and [`.github/workflows/DEPLOY-EC2.md`](.github/workflows/DEPLOY-EC2.md) for the workflow. `deploy/` holds an alternative systemd + nginx setup for a standalone host; it is not used for the EC2 deployment.
 
 ## Features
 

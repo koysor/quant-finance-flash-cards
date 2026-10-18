@@ -84,6 +84,8 @@ Flask routes use `<path:card_id>` to allow the `/` in URLs.
 
 **Frontend:** no build step. KaTeX (maths) and vis.js (graph) loaded from CDN. Theme (dark/light) and wide mode in `localStorage`, applied via `data-theme` / `data-wide` on `<html>` before paint. Visited cards tracked client-side in `localStorage`.
 
+**Deployment:** the app runs in Docker on a shared AWS EC2 instance behind Caddy at `/flashcards/`. Build templates' URLs with `url_for` (never root-relative strings) so the prefix works. See `docker/README.md` for the full process.
+
 ## Routes
 
 | Method | URL | Handler |

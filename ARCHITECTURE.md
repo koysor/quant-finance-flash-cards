@@ -182,6 +182,10 @@ The Flask debug reloader watches Python files. **It does not watch `cards/*.md`*
 
 ---
 
+## Deployment
+
+Production runs as a Docker container (`docker/Dockerfile`, gunicorn with one worker) on a shared EC2 instance. A Caddy reverse proxy owned by the `quant-finance` repo serves it at `/flashcards/`, stripping the prefix and sending `X-Forwarded-Prefix`; `create_app()` wraps the WSGI app in `ProxyFix` so `url_for` and the rate limiter see the original prefix and client IP. `graph.db` is not shipped: it is rebuilt from `cards/` and `edges.json` each time the container starts. Templates must build URLs with `url_for`, never root-relative strings, or they break behind the prefix. The full process is in [`docker/README.md`](docker/README.md); the `deploy/` directory is an alternative systemd + nginx setup for a standalone host.
+
 ## Adding Things
 
 **New card:** create `cards/<topic>/<slug>.md`, restart the server. No other changes needed if the topic already exists.

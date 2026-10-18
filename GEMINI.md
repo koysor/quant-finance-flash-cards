@@ -75,6 +75,8 @@ Card changes are picked up on server restart. Delete `graph.db` first to force a
 
 URL validation runs automatically on `git commit` when `resources.json` is staged, and **blocks the commit** if any link fails. Some well-known hosts reject automated requests outright (Real Python returns 403 to every user agent) while others rate-limit intermittently under concurrency — a failure on retry-friendly hosts such as Wikipedia or BIS is usually transient, but a hard 403 means the link must be replaced.
 
+**Deployment:** the app runs in Docker on a shared AWS EC2 instance behind Caddy at `/flashcards/`. Build templates' URLs with `url_for` (never root-relative strings) so the prefix works. See `docker/README.md` for the full process.
+
 ## Routes
 
 | Method | URL | Purpose |
