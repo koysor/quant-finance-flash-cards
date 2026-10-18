@@ -8,6 +8,7 @@ GET  /tag/<tag>                 Dedicated page showing all cards with a given ta
 GET  /card/<path:card_id>       Full card detail page.
 POST /card/<path:card_id>/remove-link  Delete an outgoing edge (CSRF-protected).
 GET  /graph                     Interactive vis.js graph of all cards and edges.
+GET  /path/<path:card_id>       Study path: every prerequisite of a card, in learning order.
 GET  /quiz                      Self-test: reveal the definition of each card in a topic.
 GET  /formulas                  Aggregated Key Formula sections from every card.
 GET  /recent                    Reverse-chronological card list (accepts ?start= / ?end=).
@@ -436,6 +437,76 @@ def formulas() -> str:
             "formula_html": formula_html,
         })
     return render_template("formulas.html", grouped=grouped)
+
+
+#: How many prerequisite levels a study path follows, and the most cards it lists.
+#: ``edges.json`` holds "related to" links as well as true prerequisites and contains
+#: cycles, so its full transitive closure reaches over a thousand cards for hub topics.
+_PATH_DEPTH = 2
+_PATH_MAX = 30
+
+
+def _study_path(card_id: str) -> tuple[list[dict], int]:
+    """
+    Return the nearest prerequisites of ``card_id`` in learning order, then the card.
+
+    An edge ``source -> target`` means *source* is a prerequisite of *target*.  A
+    breadth-first walk over incoming edges collects up to ``_PATH_DEPTH`` levels
+    (a visited set makes cycles harmless).  The path lists the furthest level first
+    and the direct prerequisites last, so each card comes before the ones that build
+    on it.  Within a level, cards that feed the most nearer cards come first, then
+    alphabetical.  If more than ``_PATH_MAX`` cards qualify, direct prerequisites are
+    kept in preference to the furthest level.
+
+    Returns ``(steps, omitted)``: each step has ``id``, ``name``, ``topic`` and
+    ``step`` (1-based); ``omitted`` is how many qualifying cards were left out.
+    """
+    cards = {c["id"]: c for c in get_all_cards()}
+    parents: dict[str, set[str]] = {}
+    for e in get_all_edges():
+        parents.setdefault(e["target_id"], set()).add(e["source_id"])
+
+    seen = {card_id}
+    levels: list[list[str]] = []
+    frontier = [card_id]
+    for _ in range(_PATH_DEPTH):
+        fed: dict[str, int] = {}
+        for node in frontier:
+            for p in parents.get(node, ()):
+                if p not in seen:
+                    fed[p] = fed.get(p, 0) + 1
+        if not fed:
+            break
+        level = sorted(fed, key=lambda c: (-fed[c], cards[c]["name"]))
+        seen.update(level)
+        levels.append(level)
+        frontier = level
+
+    budget = _PATH_MAX - 1
+    kept: list[list[str]] = []
+    omitted = 0
+    for level in levels:                      # nearest level first when trimming
+        take = level[:max(budget, 0)]
+        omitted += len(level) - len(take)
+        budget -= len(take)
+        kept.append(take)
+
+    ordered = [c for level in reversed(kept) for c in level] + [card_id]
+    steps = [
+        {"id": c, "name": cards[c]["name"], "topic": cards[c]["topic"], "step": i}
+        for i, c in enumerate(ordered, 1)
+    ]
+    return steps, omitted
+
+
+@bp.get("/path/<path:card_id>")
+@limiter.limit("60 per minute")
+def study_path(card_id: str) -> ResponseReturnValue:
+    """Show the learning order for a card: its nearest prerequisites, then the card."""
+    if get_card(card_id) is None:
+        abort(404)
+    steps, omitted = _study_path(card_id)
+    return render_template("path.html", steps=steps, omitted=omitted, card_id=card_id)
 
 
 _DEFINITION_RE = re.compile(

@@ -126,3 +126,28 @@ def test_index_collapses_topics_unless_filtered(client):
     full = client.get("/").data.decode()
     assert "<details class=\"topic-section\"" in full and "topic-section\" id=\"topic-1\" open" not in full
     assert "id=\"topic-1\" open" in client.get("/?topic=Probability").data.decode()
+
+
+def test_study_path_is_bounded_and_ends_at_card(app, client):
+    from app.routes import _PATH_MAX, _study_path
+    with app.app_context():
+        ids = [r["id"] for r in db.get_all_cards()]
+        for cid in ids[::50]:
+            steps, omitted = _study_path(cid)
+            assert steps[-1]["id"] == cid
+            assert len(steps) <= _PATH_MAX
+            assert len({s["id"] for s in steps}) == len(steps)
+        row = db.get_db().execute(
+            "SELECT target_id FROM edges GROUP BY target_id ORDER BY COUNT(*) DESC LIMIT 1"
+        ).fetchone()
+        steps, _ = _study_path(row["target_id"])
+        assert len(steps) > 1
+        # Direct prerequisites sit immediately before the card.
+        direct = {r["source_id"] for r in db.get_db().execute(
+            "SELECT source_id FROM edges WHERE target_id = ?", (row["target_id"],))}
+        assert steps[-2]["id"] in direct
+    assert client.get(f"/path/{row['target_id']}").status_code == 200
+
+
+def test_study_path_unknown_card_404(client):
+    assert client.get("/path/no-such/card").status_code == 404

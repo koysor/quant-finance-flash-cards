@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Study path: {{ steps[-1].name }} — QF Flash Cards{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Prerequisites of {{ steps[-1].name }} in learning order.">
+{% endblock %}
+
+{% block content %}
+<div class="path-page">
+  <h1>Study path: {{ steps[-1].name }}</h1>
+  {% if steps|length == 1 %}
+  <p class="muted">This card has no prerequisites. <a href="{{ url_for('main.card_detail', card_id=card_id) }}">Open the card</a>.</p>
+  {% else %}
+  <p class="muted">
+    Up to two levels of prerequisites ({{ steps|length - 1 }} card{{ '' if steps|length == 2 else 's' }}), ordered so each card comes after the ones it builds on.
+    <span id="path-progress"></span>
+    {% if omitted %}<br>{{ omitted }} more distant prerequisite{{ '' if omitted == 1 else 's' }} left out to keep the path short; open any card to follow its own path.{% endif %}
+  </p>
+  <ol class="path-list">
+    {% for s in steps %}
+    <li class="path-step{% if loop.last %} path-target{% endif %}" data-card-id="{{ s.id }}">
+      <span class="topic-dot" style="background:{{ topic_colour(s.topic) }}"></span>
+      <a href="{{ url_for('main.card_detail', card_id=s.id) }}">{{ s.name }}</a>
+      <span class="path-topic">{{ s.topic }}</span>
+      <span class="visited-check" aria-label="Visited">✓</span>
+    </li>
+    {% endfor %}
+  </ol>
+  <p><a class="btn-primary" id="path-next" href="#">Start at the first unvisited card</a></p>
+  {% endif %}
+</div>
+{% endblock %}
+
+{% block page_scripts %}
+<script>
+(function() {
+  let visited;
+  try { visited = new Set(JSON.parse(localStorage.getItem('visited_cards') || '[]')); }
+  catch (e) { visited = new Set(); }
+  const steps = Array.from(document.querySelectorAll('.path-step'));
+  steps.forEach(li => { if (visited.has(li.dataset.cardId)) li.classList.add('visited'); });
+  const done = steps.filter(li => li.classList.contains('visited')).length;
+  const prog = document.getElementById('path-progress');
+  if (prog && done) prog.textContent = done + ' of ' + steps.length + ' visited.';
+  const next = document.getElementById('path-next');
+  if (next) {
+    const target = steps.find(li => !li.classList.contains('visited')) || steps[steps.length - 1];
+    next.href = target.querySelector('a').href;
+  }
+})();
+</script>
+{% endblock %}

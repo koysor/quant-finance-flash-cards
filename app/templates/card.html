@@ -40,6 +40,7 @@
     </div>
 
     {% if incoming %}
+    <p class="study-path-link"><a href="{{ url_for('main.study_path', card_id=card['id']) }}">Study path: learn the prerequisites in order &rarr;</a></p>
     <details class="prerequisites-details">
       <summary class="prerequisites-summary">
         <h3 class="prerequisites-heading">Prerequisites</h3>
