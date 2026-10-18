@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}Quiz — QF Flash Cards{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Self-test mode: see a concept's name, recall its definition, then reveal it.">
+{% endblock %}
+
+{% block content %}
+<div class="quiz-page">
+  <h1>Quiz</h1>
+
+  {% if not topic %}
+  <p class="muted">Pick a topic. You see the name of each concept, recall its definition, then reveal it and mark whether you knew it.</p>
+  <div class="quiz-topics">
+    {% for t, n in counts|dictsort %}
+    <a class="topic-jump-link" href="{{ url_for('main.quiz', topic=t) }}">
+      <span class="topic-dot" style="background:{{ topic_colour(t) }}"></span>{{ t }}
+      <span class="topic-count">{{ n }}</span>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="muted">
+    <span class="topic-dot" style="background:{{ topic_colour(topic) }}"></span>
+    {{ topic }} &middot; <a href="{{ url_for('main.quiz') }}">change topic</a>
+    &middot; <label><input type="checkbox" id="only-unknown"> only cards I haven't marked known</label>
+  </p>
+
+  <div class="quiz-card" id="quiz-card" style="--tc:{{ topic_colour(topic) }}" hidden>
+    <div class="quiz-count" id="quiz-count"></div>
+    <h2 class="quiz-name" id="quiz-name"></h2>
+    <button class="btn-primary" id="quiz-reveal" type="button">Show answer (Space)</button>
+    <div id="quiz-answer" class="card-content" hidden>
+      <div id="quiz-definition"></div>
+      <div id="quiz-formula"></div>
+      <p><a id="quiz-link" href="#">Open full card</a></p>
+      <div class="quiz-actions">
+        <button class="btn-primary" id="quiz-known" type="button">Knew it (K)</button>
+        <button class="btn-primary" id="quiz-unknown" type="button">Review again (U)</button>
+      </div>
+    </div>
+  </div>
+  <p id="quiz-done" class="muted" hidden>Nothing left to show. Untick the filter, or <a href="{{ url_for('main.quiz') }}">pick another topic</a>.</p>
+  {% endif %}
+</div>
+{% endblock %}
+
+{% block page_scripts %}
+{% if topic %}
+<script>
+const ITEMS = {{ items|tojson }};
+const CARD_URL = {{ url_for('main.card_detail', card_id='__ID__')|tojson }};
+const KEY = 'quiz_known';
+function loadKnown() { try { return new Set(JSON.parse(localStorage.getItem(KEY) || '[]')); } catch (e) { return new Set(); } }
+function saveKnown(s) { try { localStorage.setItem(KEY, JSON.stringify([...s])); } catch (e) {} }
+
+let known = loadKnown(), queue = [], pos = 0;
+const $ = id => document.getElementById(id);
+
+function build() {
+  const only = $('only-unknown').checked;
+  queue = ITEMS.filter(i => !only || !known.has(i.id));
+  for (let i = queue.length - 1; i > 0; i--) {   // shuffle
+    const j = Math.floor(Math.random() * (i + 1));
+    [queue[i], queue[j]] = [queue[j], queue[i]];
+  }
+  pos = 0; show();
+}
+
+function show() {
+  const done = pos >= queue.length;
+  $('quiz-card').hidden = done;
+  $('quiz-done').hidden = !done;
+  if (done) return;
+  const it = queue[pos];
+  $('quiz-count').textContent = (pos + 1) + ' / ' + queue.length + ' · ' + [...known].filter(k => ITEMS.some(i => i.id === k)).length + ' known';
+  $('quiz-name').textContent = it.name;
+  $('quiz-definition').innerHTML = it.definition;
+  $('quiz-formula').innerHTML = it.formula;
+  $('quiz-link').href = CARD_URL.replace('__ID__', it.id);
+  $('quiz-answer').hidden = true;
+  $('quiz-reveal').hidden = false;
+  if (window.renderMathInElement) {
+    renderMathInElement($('quiz-answer'), {delimiters: [
+      {left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});
+  }
+}
+
+function reveal() { $('quiz-answer').hidden = false; $('quiz-reveal').hidden = true; }
+function mark(isKnown) {
+  const it = queue[pos];
+  if (isKnown) known.add(it.id); else known.delete(it.id);
+  saveKnown(known); pos++; show();
+}
+
+$('quiz-reveal').addEventListener('click', reveal);
+$('quiz-known').addEventListener('click', () => mark(true));
+$('quiz-unknown').addEventListener('click', () => mark(false));
+$('only-unknown').addEventListener('change', build);
+
+function handleCardNav(key) {
+  if ($('quiz-card').hidden) return;
+  const revealed = !$('quiz-answer').hidden;
+  if (key === ' ' && !revealed) reveal();
+  else if (revealed && (key === 'k')) mark(true);
+  else if (revealed && (key === 'u')) mark(false);
+}
+build();
+</script>
+{% endif %}
+{% endblock %}

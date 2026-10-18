@@ -72,6 +72,8 @@
          {% if request.endpoint == 'main.graph_view' %}class="active"{% endif %}>Graph</a>
       <a href="{{ url_for('main.formulas') }}"
          {% if request.endpoint == 'main.formulas' %}class="active"{% endif %}>Formulas</a>
+      <a href="{{ url_for('main.quiz') }}"
+         {% if request.endpoint == 'main.quiz' %}class="active"{% endif %}>Quiz</a>
     </div>
 
     <!-- Right controls (desktop) -->
@@ -161,6 +163,8 @@
        {% if request.endpoint == 'main.graph_view' %}class="active"{% endif %}>Graph</a>
     <a href="{{ url_for('main.formulas') }}"
        {% if request.endpoint == 'main.formulas' %}class="active"{% endif %}>Formulas</a>
+    <a href="{{ url_for('main.quiz') }}"
+       {% if request.endpoint == 'main.quiz' %}class="active"{% endif %}>Quiz</a>
     <div class="mobile-menu-footer">
       <button class="search-trigger" onclick="closeMenu();goRandom()">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -441,11 +445,12 @@ function renderSearchResults(query) {
         card: c,
         score: fuzzyScore(c.name, q) * 3 +
                fuzzyScore(c.topic, q)      +
-               fuzzyScore(c.tags, q),
+               fuzzyScore(c.tags, q)       +
+               (c.blurb && c.blurb.toLowerCase().includes(q.toLowerCase()) ? 4 : 0),
       }))
       .filter(x => x.score > 0)
       .sort((a, b) => b.score - a.score)
-      .slice(0, 8)
+      .slice(0, 15)
       .map(x => x.card);
   }
 
@@ -459,6 +464,7 @@ function renderSearchResults(query) {
       <span class="search-result-info">
         <span class="search-result-name">${hl(c.name, q)}</span>
         <span class="search-result-topic">${escHtml(c.topic)}</span>
+        ${q && c.blurb ? `<span class="search-result-topic">${escHtml(c.blurb.slice(0, 90))}…</span>` : ''}
       </span>
     </a>
   `).join('');

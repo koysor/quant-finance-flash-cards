@@ -1612,3 +1612,33 @@ a.tag:hover {
   }
   .formula-card-name { font-size: 10pt; }
 }
+
+
+/* ── Collapsible topic sections on the index ── */
+.topic-summary { list-style: none; cursor: pointer; }
+.topic-summary::-webkit-details-marker { display: none; }
+.topic-summary .topic-heading::before {
+  content: "▸"; display: inline-block; margin-right: 0.4rem; color: var(--muted);
+  transition: transform 0.15s;
+}
+details.topic-section[open] > .topic-summary .topic-heading::before { transform: rotate(90deg); }
+.topic-progress { margin-left: 0; font-size: 0.75rem; color: var(--muted); font-weight: 400; }
+.topic-jump { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 1.5rem; align-items: center; }
+.topic-jump-link, .topic-jump-toggle {
+  display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.3rem 0.7rem;
+  border: 1px solid var(--border, rgba(128,128,128,0.3)); border-radius: 999px;
+  background: transparent; color: inherit; font: inherit; font-size: 0.8rem;
+  text-decoration: none; cursor: pointer;
+}
+.topic-jump-toggle { margin-left: auto; }
+
+/* ── Quiz ── */
+.quiz-page { max-width: 760px; margin: 0 auto; }
+.quiz-topics { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+.quiz-card {
+  border: 1px solid var(--border); border-left: 4px solid var(--tc);
+  border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 1rem; background: var(--surface-2);
+}
+.quiz-count { font-size: 0.75rem; color: var(--muted); }
+.quiz-name { margin: 0.4rem 0 1rem; }
+.quiz-actions { display: flex; gap: 0.75rem; margin-top: 1rem; }

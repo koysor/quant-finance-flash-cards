@@ -8,6 +8,7 @@ GET  /tag/<tag>                 Dedicated page showing all cards with a given ta
 GET  /card/<path:card_id>       Full card detail page.
 POST /card/<path:card_id>/remove-link  Delete an outgoing edge (CSRF-protected).
 GET  /graph                     Interactive vis.js graph of all cards and edges.
+GET  /quiz                      Self-test: reveal the definition of each card in a topic.
 GET  /formulas                  Aggregated Key Formula sections from every card.
 GET  /recent                    Reverse-chronological card list (accepts ?start= / ?end=).
 GET  /random                    Redirect to a randomly selected card.
@@ -204,7 +205,7 @@ def search_data_json_view() -> Response:
     embedded in every HTML page.  Flask-caching stores the response in memory;
     nginx can additionally cache it for 24 h via ``proxy_cache``.
     """
-    cards = get_all_cards()
+    cards = get_all_cards_with_content()
     data = (
         json.dumps([
             {
@@ -212,6 +213,7 @@ def search_data_json_view() -> Response:
                 "name":   c["name"],
                 "topic":  c["topic"],
                 "tags":   c["tags"],
+                "blurb":  _card_excerpt(c["html_content"]),
                 "url":    url_for("main.card_detail", card_id=c["id"]),
                 "colour": _topic_colour(c["topic"]),
             }
@@ -434,6 +436,45 @@ def formulas() -> str:
             "formula_html": formula_html,
         })
     return render_template("formulas.html", grouped=grouped)
+
+
+_DEFINITION_RE = re.compile(
+    r'<h2[^>]*>\s*Definition\s*</h2>(.*?)(?=<h2|$)', re.IGNORECASE | re.DOTALL
+)
+
+
+@bp.get("/quiz")
+@limiter.limit("30 per minute")
+def quiz() -> str:
+    """
+    Self-test mode: show each card's title, reveal its Definition and Key Formula on demand.
+
+    ``?topic=<name>`` selects one topic (the page lists topics if omitted), so the
+    payload stays to one topic's cards rather than all of them.  Known / unknown
+    marks are kept client-side in localStorage.
+    """
+    topic = request.args.get("topic", "").strip()
+    cards = get_all_cards_with_content()
+    counts: dict[str, int] = {}
+    for c in cards:
+        counts[c["topic"]] = counts.get(c["topic"], 0) + 1
+
+    items = []
+    if topic:
+        for c in cards:
+            if c["topic"] != topic:
+                continue
+            d = _DEFINITION_RE.search(c["html_content"])
+            f = _FORMULA_RE.search(c["html_content"])
+            items.append({
+                "id":         c["id"],
+                "name":       c["name"],
+                "definition": d.group(1) if d else "",
+                "formula":    (f.group(1) + f.group(2)) if f else "",
+            })
+        if not items:
+            abort(404)
+    return render_template("quiz.html", topic=topic, counts=counts, items=items)
 
 
 @bp.get("/graph")

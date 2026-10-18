@@ -109,3 +109,20 @@ def test_search_data_urls_follow_forwarded_prefix(client):
     resp = client.get("/search-data.json", headers={"X-Forwarded-Prefix": "/flashcards"})
     urls = [c["url"] for c in json.loads(resp.data)]
     assert urls and all(u.startswith("/flashcards/card/") for u in urls)
+
+
+def test_search_data_has_blurb(client):
+    data = json.loads(client.get("/search-data.json").data)
+    assert all("blurb" in c for c in data)
+
+
+def test_quiz_lists_topics_and_serves_a_topic(client):
+    assert client.get("/quiz").status_code == 200
+    assert client.get("/quiz?topic=Probability").status_code == 200
+    assert client.get("/quiz?topic=Nope").status_code == 404
+
+
+def test_index_collapses_topics_unless_filtered(client):
+    full = client.get("/").data.decode()
+    assert "<details class=\"topic-section\"" in full and "topic-section\" id=\"topic-1\" open" not in full
+    assert "id=\"topic-1\" open" in client.get("/?topic=Probability").data.decode()
