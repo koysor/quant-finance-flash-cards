@@ -1,7 +1,5 @@
 """Test suite for card parsing, math protection, and loading logic."""
 import pytest
-import os
-from pathlib import Path
 from app.loader import _protect_math, _parse_card
 
 def test_protect_math_basic():

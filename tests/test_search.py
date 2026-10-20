@@ -1,6 +1,4 @@
 """Test suite for search context and index page filtering."""
-import json
-import pytest
 
 def test_search_data_json_context(client):
     """Verify pages load search data from /search-data.json and it is valid."""

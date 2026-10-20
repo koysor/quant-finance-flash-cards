@@ -23,7 +23,7 @@ bash scripts/install_hooks.sh
 
 | Variable | Default | Purpose |
 |---|---|---|
-| `SECRET_KEY` | Random (changes on restart) | Flask session signing key. Set a stable value in production to keep sessions valid across restarts. |
+| `SECRET_KEY` | Required unless `FLASK_DEBUG=1` | Flask session signing key. With `FLASK_DEBUG=1` (local development) a random key is generated and changes on restart; the launch scripts set this. Set a stable value in production. |
 | `PORT` | `5000` | Port for the development server. |
 | `DEBUG` | `false` | Enable Flask debug mode and the interactive reloader when running `run.py`. |
 | `ALLOW_EDGE_EDIT` | unset | Set to `1` to enable the card-page "remove link" button, which rewrites `edges.json`. Leave unset in production. |

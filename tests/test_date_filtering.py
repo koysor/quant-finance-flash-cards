@@ -1,5 +1,4 @@
 """Test suite for date range filtering and API responses."""
-import json
 import pytest
 
 def test_recent_route_json_response(client):

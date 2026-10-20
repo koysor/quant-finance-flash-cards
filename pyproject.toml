@@ -18,5 +18,12 @@ Repository = "https://github.com/koysor/quant-finance-flash-cards"
 dev = [
     "aiohttp>=3.13.3",
     "pytest>=8.0.0",
+    "pytest-cov>=7.1.0",
     "pytest-flask>=1.3.0",
+    "ruff>=0.17.1",
 ]
+
+[tool.ruff.lint]
+# Bug-catching rules only (syntax errors, undefined names, unused imports).
+# Same set as the sibling repos; style is left to the author.
+select = ["E4", "E7", "E9", "F"]

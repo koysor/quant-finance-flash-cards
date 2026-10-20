@@ -13,6 +13,9 @@ if ! uv sync; then
     exit 1
 fi
 
+# Local development: the app refuses to start without SECRET_KEY unless debug is on
+export FLASK_DEBUG=1
+
 # Start the application
 echo "Starting the Quantitative Finance Flash Cards app..."
 echo "The app will be available at http://127.0.0.1:5000"

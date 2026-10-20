@@ -43,7 +43,6 @@ from app.db import (
     delete_edge,
     find_cards_by_slug,
     get_all_cards,
-    get_all_cards_by_date,
     get_all_cards_with_content,
     get_all_edges,
     get_card,

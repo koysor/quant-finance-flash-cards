@@ -7,6 +7,7 @@ if %ERRORLEVEL% neq 0 (
     exit /b %ERRORLEVEL%
 )
 
+set FLASK_DEBUG=1
 echo Starting the Quantitative Finance Flash Cards app...
 echo The app will be available at http://127.0.0.1:5000
 uv run python run.py
