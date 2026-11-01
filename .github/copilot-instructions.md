@@ -14,8 +14,13 @@ FLASK_DEBUG=1 uv run python run.py
 ```
 
 Use the relevant test file or pytest node ID for a focused run. Local startup
-requires `FLASK_DEBUG=1` unless `SECRET_KEY` is set. Startup scans the card
-library; allow it to finish and treat malformed-card errors as failures.
+requires `FLASK_DEBUG=1` unless `SECRET_KEY` is set; in PowerShell, use
+`$env:FLASK_DEBUG=1; uv run python run.py`. Startup scans the card library;
+allow it to finish and treat malformed-card errors as failures.
+
+In CI, `code-quality.yml` runs only Ruff. Pytest runs in the `test` job of
+`deploy-ec2.yml`, on pull requests as well as pushes; the deploy step itself is
+skipped on pull requests.
 
 ## Architecture and sources of truth
 
@@ -38,11 +43,13 @@ vis-network are loaded from CDNs.
 
 ## Content and implementation conventions
 
-- A card lives at `cards/<topic>/<slug>.md`. Keep the required `Topic`, `Tags`,
-  and `Author` metadata, followed by `Definition`, `Key Formula`, `Example`,
+- A card lives at `cards/<topic>/<slug>.md`. The loader requires a `# Title`,
+  `Topic`, and `Tags`. `Author` (defaults to "Unknown") and `Created` (falls
+  back to the file's modification time) are optional to the loader, but include
+  both on new cards. Follow them with `Definition`, `Key Formula`, `Example`,
   and `Remember` sections. The loader extracts metadata by exact-format
-  patterns; malformed metadata or a topic not in
-  `app/routes.py::TOPIC_COLOURS` can prevent startup.
+  patterns; a missing required field or a topic not in
+  `app/routes.py::TOPIC_COLOURS` prevents startup.
 - Keep cards concise, use British English, and connect the `Remember` section
   to quantitative finance. Use `$...$` and `$$...$$` for KaTeX.
 - In Markdown table cells, avoid raw `|` in LaTeX and avoid multiline LaTeX
