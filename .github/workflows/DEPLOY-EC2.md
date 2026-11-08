@@ -28,7 +28,7 @@ Builds `docker/Dockerfile` with Buildx and pushes to GitHub Container Registry u
 
 ## Job 3: deploy
 
-Runs only for pushes and manual runs. It uses `appleboy/ssh-action` to connect to the instance as `ec2-user` and then:
+Runs only for pushes and manual runs. A "Set up SSH" step writes the `EC2_SSH_KEY` secret and an `ec2` host alias (`EC2_HOST`, user `ec2-user`, batch mode, connection retries and keep-alives) to `~/.ssh/config`. Each remote step then runs its script with the runner's own `ssh -n ec2 "$script"`. The workflow deliberately avoids `appleboy/ssh-action`, which downloads its `drone-ssh` binary from GitHub releases on every run and fails the deploy whenever those downloads are down. The deploy step connects to the instance as `ec2-user` and then:
 
 1. Clones `~/quant-finance-flash-cards` if missing, otherwise `git fetch` and `git reset --hard origin/main` (this supplies `docker-compose.prod.yml`)
 2. Aborts with a clear message if `docker/.env` does not exist

@@ -75,59 +75,85 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Set up SSH
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
+        run: |
+          # Plain OpenSSH from the runner image: nothing is downloaded at run time,
+          # so an outage of GitHub release downloads cannot break the deploy.
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$EC2_SSH_KEY" > ~/.ssh/ec2
+          chmod 600 ~/.ssh/ec2
+          cat >> ~/.ssh/config <<EOF
+          Host ec2
+            HostName $EC2_HOST
+            User ec2-user
+            IdentityFile ~/.ssh/ec2
+            IdentitiesOnly yes
+            BatchMode yes
+            StrictHostKeyChecking accept-new
+            ConnectTimeout 30
+            ConnectionAttempts 3
+            ServerAliveInterval 30
+            ServerAliveCountMax 4
+          EOF
+
       - name: Deploy to EC2 via SSH
-        uses: appleboy/ssh-action@v1.2.5
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ec2-user
-          key: ${{ secrets.EC2_SSH_KEY }}
-          script_stop: true
-          command_timeout: 20m
-          script: |
-            set -e
+        timeout-minutes: 20
+        run: |
+          # Sent as the ssh command (not on stdin), like appleboy/ssh-action
+          # did; -n gives the remote side an empty stdin for docker exec.
+          script=$(cat <<'REMOTE'
+          set -e
 
-            # Clone or update the repository (for the docker-compose file)
-            cd ~/quant-finance-flash-cards || git clone https://github.com/koysor/quant-finance-flash-cards.git ~/quant-finance-flash-cards
-            cd ~/quant-finance-flash-cards
-            git fetch origin
-            git reset --hard origin/main
+          # Clone or update the repository (for the docker-compose file)
+          cd ~/quant-finance-flash-cards || git clone https://github.com/koysor/quant-finance-flash-cards.git ~/quant-finance-flash-cards
+          cd ~/quant-finance-flash-cards
+          git fetch origin
+          git reset --hard origin/main
 
-            cd docker
-            if [ ! -f .env ]; then
-              echo "docker/.env is missing - create it with SECRET_KEY (see docker/.env.example)"
-              exit 1
-            fi
+          cd docker
+          if [ ! -f .env ]; then
+            echo "docker/.env is missing - create it with SECRET_KEY (see docker/.env.example)"
+            exit 1
+          fi
 
-            docker-compose -f docker-compose.prod.yml down --remove-orphans 2>/dev/null || true
+          docker-compose -f docker-compose.prod.yml down --remove-orphans 2>/dev/null || true
 
-            # Cleanup dangling images only; never --volumes (Caddy certificates live in caddy_data)
-            docker system prune -f || true
+          # Cleanup dangling images only; never --volumes (Caddy certificates live in caddy_data)
+          docker system prune -f || true
 
-            # Pull latest image from GHCR (public package, no auth required)
-            docker pull ghcr.io/koysor/quant-finance-flash-cards:latest
+          # Pull latest image from GHCR (public package, no auth required)
+          docker pull ghcr.io/koysor/quant-finance-flash-cards:latest
 
-            docker-compose -f docker-compose.prod.yml up -d
+          docker-compose -f docker-compose.prod.yml up -d
+          REMOTE
+          )
+          ssh -n ec2 "$script"
 
       - name: Health check
-        uses: appleboy/ssh-action@v1.2.5
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ec2-user
-          key: ${{ secrets.EC2_SSH_KEY }}
-          script: |
-            set -e
-            echo "Waiting for app to start..."
-            sleep 30
+        timeout-minutes: 10
+        run: |
+          # Sent as the ssh command (not on stdin), like appleboy/ssh-action
+          # did; -n gives the remote side an empty stdin for docker exec.
+          script=$(cat <<'REMOTE'
+          set -e
+          echo "Waiting for app to start..."
+          sleep 30
 
-            cd ~/quant-finance-flash-cards/docker
-            if ! docker-compose -f docker-compose.prod.yml ps | grep -q "flashcards"; then
-              echo "Container is not running!"
-              docker-compose -f docker-compose.prod.yml logs
-              exit 1
-            fi
+          cd ~/quant-finance-flash-cards/docker
+          if ! docker-compose -f docker-compose.prod.yml ps | grep -q "flashcards"; then
+            echo "Container is not running!"
+            docker-compose -f docker-compose.prod.yml logs
+            exit 1
+          fi
 
-            docker-compose -f docker-compose.prod.yml exec -T flashcards curl -f http://localhost:8000/
-            echo " Flash cards OK"
+          docker-compose -f docker-compose.prod.yml exec -T flashcards curl -f http://localhost:8000/
+          echo " Flash cards OK"
+          REMOTE
+          )
+          ssh -n ec2 "$script"
 
       - name: Deployment summary
         run: |
