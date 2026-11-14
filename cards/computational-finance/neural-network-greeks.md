@@ -21,10 +21,10 @@ Using reverse-mode AD (PyTorch):
 
 ```python
 S = torch.tensor([95.0], requires_grad=True)
-price = model(S, tau, sigma)          # forward pass
+price = model(S, tau, sigma)  # forward pass
 
 delta = torch.autograd.grad(price, S, create_graph=True)[0]
-gamma = torch.autograd.grad(delta, S)[0]   # second derivative
+gamma = torch.autograd.grad(delta, S)[0]  # second derivative
 ```
 
 All Greeks for all input dimensions are available in $O(1)$ backward passes regardless of the number of state variables.

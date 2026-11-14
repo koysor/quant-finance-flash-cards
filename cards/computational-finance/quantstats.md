@@ -29,7 +29,7 @@ A tail ratio above 1 indicates the strategy generates larger upside outliers tha
 import quantstats as qs
 
 qs.extend_pandas()
-qs.reports.html(returns, benchmark='^GSPC', output='tearsheet.html')
+qs.reports.html(returns, benchmark="^GSPC", output="tearsheet.html")
 ```
 
 A momentum strategy with annualised return 14\%, volatility 10\%, and skewed right returns: Sharpe = 1.4, Omega = 1.8 (gains outweigh losses by 80\% above the zero threshold), tail ratio = 1.3 (the best 5\% of days are 30\% larger than the worst 5\%). All three agree the strategy has positive asymmetry — something a Sharpe ratio alone cannot confirm.

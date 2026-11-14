@@ -29,15 +29,16 @@ Training a two-layer network as a Black-Scholes pricing surrogate:
 ```python
 import torch, torch.nn as nn
 
-model = nn.Sequential(nn.Linear(5, 64), nn.ReLU(),
-                      nn.Linear(64, 1))           # inputs: S, K, T, r, σ
-opt   = torch.optim.Adam(model.parameters(), lr=1e-3)
+model = nn.Sequential(
+    nn.Linear(5, 64), nn.ReLU(), nn.Linear(64, 1)
+)  # inputs: S, K, T, r, σ
+opt = torch.optim.Adam(model.parameters(), lr=1e-3)
 
-for X_batch, y_batch in loader:                   # y_batch: BS call price
+for X_batch, y_batch in loader:  # y_batch: BS call price
     pred = model(X_batch).squeeze()
     loss = nn.functional.mse_loss(pred, y_batch)
     opt.zero_grad()
-    loss.backward()                               # ∂L/∂θ via autograd
+    loss.backward()  # ∂L/∂θ via autograd
     opt.step()
 ```
 

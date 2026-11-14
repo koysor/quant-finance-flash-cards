@@ -27,10 +27,16 @@ $$C(k_u) = \frac{e^{-\alpha k_u}}{\pi} \text{Re}\!\left[\sum_{j=0}^{N-1} e^{-i \
 def carr_madan(phi, S, r, T, alpha=1.5, N=4096, eta=0.25):
     v = np.arange(N) * eta
     k = -np.pi / eta + (2 * np.pi / (N * eta)) * np.arange(N)
-    psi = np.exp(-r * T) * phi(v - (alpha + 1) * 1j) / (
-        alpha**2 + alpha - v**2 + 1j * (2 * alpha + 1) * v
+    psi = (
+        np.exp(-r * T)
+        * phi(v - (alpha + 1) * 1j)
+        / (alpha**2 + alpha - v**2 + 1j * (2 * alpha + 1) * v)
     )
-    prices = np.real(np.fft.fft(psi * np.exp(1j * v * k[0]) * eta)) * np.exp(-alpha * k) / np.pi
+    prices = (
+        np.real(np.fft.fft(psi * np.exp(1j * v * k[0]) * eta))
+        * np.exp(-alpha * k)
+        / np.pi
+    )
     return S * np.exp(k), prices
 ```
 

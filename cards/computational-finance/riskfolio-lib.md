@@ -28,16 +28,16 @@ where $\rho$ is any risk measure (volatility, CVaR, CDaR). Riskfolio's API switc
 ```python
 import riskfolio as rp
 
-port = rp.Portfolio(returns=returns)   # daily returns DataFrame
-port.assets_stats(method_mu='hist', method_cov='ledoit')
+port = rp.Portfolio(returns=returns)  # daily returns DataFrame
+port.assets_stats(method_mu="hist", method_cov="ledoit")
 
 w = port.optimization(
-    model='Classic',
-    rm='CVaR',          # minimise CVaR
-    obj='MinRisk',
+    model="Classic",
+    rm="CVaR",  # minimise CVaR
+    obj="MinRisk",
     hist=True,
     rf=0.0,
-    l=0
+    l=0,
 )
 ```
 

@@ -42,7 +42,7 @@ returns = np.log(prices[1:] / prices[:-1])
 The same calculation with a loop:
 
 ```python
-returns = [np.log(prices[i] / prices[i-1]) for i in range(1, len(prices))]
+returns = [np.log(prices[i] / prices[i - 1]) for i in range(1, len(prices))]
 ```
 
 For a universe of 5,000 stocks over 10 years of daily data (~12.5 million returns), the vectorised version runs in milliseconds; the loop version takes seconds.

@@ -16,11 +16,13 @@ Optuna is an open-source Python framework for automated hyperparameter optimisat
 ```python
 import optuna
 
+
 def objective(trial):
     alpha = trial.suggest_float("alpha", 1e-3, 10.0, log=True)
     model = Lasso(alpha=alpha)
     model.fit(X_train, y_train)
-    return model.score(X_val, y_val)   # maximise out-of-sample R²
+    return model.score(X_val, y_val)  # maximise out-of-sample R²
+
 
 study = optuna.create_study(direction="maximize")
 study.optimize(objective, n_trials=100)

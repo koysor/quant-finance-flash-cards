@@ -18,7 +18,7 @@
 ```python
 with tf.GradientTape() as tape:
     y_hat = model(X, training=True)
-    loss  = tf.reduce_mean(tf.square(y_hat - y))
+    loss = tf.reduce_mean(tf.square(y_hat - y))
 grads = tape.gradient(loss, model.trainable_variables)
 ```
 
@@ -36,10 +36,12 @@ One-day-ahead volatility forecasting on S&P 500 daily returns:
 ```python
 import tensorflow as tf
 
-model = tf.keras.Sequential([
-    tf.keras.layers.LSTM(64, input_shape=(20, 1)),
-    tf.keras.layers.Dense(1, activation="softplus"),
-])
+model = tf.keras.Sequential(
+    [
+        tf.keras.layers.LSTM(64, input_shape=(20, 1)),
+        tf.keras.layers.Dense(1, activation="softplus"),
+    ]
+)
 model.compile(optimizer="adam", loss="mse")
 model.fit(X_train, y_train, epochs=30, validation_split=0.1)
 ```

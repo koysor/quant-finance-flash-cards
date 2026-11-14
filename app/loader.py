@@ -30,6 +30,7 @@ mtime matches the stored value are skipped; only changed or new files are
 re-parsed.  Deleted files are detected by comparing the live file set against
 all IDs in the database and removing any that are no longer present.
 """
+
 import datetime
 import hashlib
 import json
@@ -41,37 +42,44 @@ from flask import Flask
 from markdown_it import MarkdownIt
 
 from app.db import (
-    delete_card, get_all_card_ids, get_all_card_mtimes, get_meta, set_meta, upsert_card,
+    delete_card,
+    get_all_card_ids,
+    get_all_card_mtimes,
+    get_meta,
+    set_meta,
+    upsert_card,
 )
 
 CARDS_DIR = Path(__file__).parent.parent / "cards"
 
 # Regex patterns for extracting required metadata fields from raw Markdown text.
-TITLE_RE  = re.compile(r'^#\s+(.+)$',              re.MULTILINE)
-CREATED_RE = re.compile(r'^\*\*Created:\*\*\s*(\d{4}-\d{2}-\d{2})\s*$', re.MULTILINE)
-TOPIC_RE  = re.compile(r'^\*\*Topic:\*\*\s*(.+)$', re.MULTILINE)
-TAGS_RE   = re.compile(r'^\*\*Tags:\*\*\s*(.+)$',  re.MULTILINE)
-AUTHOR_RE = re.compile(r'^\*\*Author:\*\*\s*(.+)$', re.MULTILINE)
+TITLE_RE = re.compile(r"^#\s+(.+)$", re.MULTILINE)
+CREATED_RE = re.compile(r"^\*\*Created:\*\*\s*(\d{4}-\d{2}-\d{2})\s*$", re.MULTILINE)
+TOPIC_RE = re.compile(r"^\*\*Topic:\*\*\s*(.+)$", re.MULTILINE)
+TAGS_RE = re.compile(r"^\*\*Tags:\*\*\s*(.+)$", re.MULTILINE)
+AUTHOR_RE = re.compile(r"^\*\*Author:\*\*\s*(.+)$", re.MULTILINE)
 
 # Strips all metadata lines from the raw text before passing it to the Markdown renderer
 # so that field labels like "**Topic:** Calculus" do not appear in the rendered HTML.
 # Level is included even though it is not a recognised field, to prevent legacy cards
 # that carry it from leaking the raw text into the rendered output.
-_METADATA_RE = re.compile(r'^\*\*(?:Topic|Tags|Created|Author|Level):\*\*\s*.+$', re.MULTILINE)
+_METADATA_RE = re.compile(
+    r"^\*\*(?:Topic|Tags|Created|Author|Level):\*\*\s*.+$", re.MULTILINE
+)
 
 # Matches both display math ($$...$$) and inline math ($...$), non-greedy.
 # Used to locate LaTeX regions for notation/key-term extraction and for math protection.
-_MATH_RE = re.compile(r'(\$\$[\s\S]*?\$\$|\$(?!\s)[^$\n]+?\$)')
+_MATH_RE = re.compile(r"(\$\$[\s\S]*?\$\$|\$(?!\s)[^$\n]+?\$)")
 
 # Shared Markdown-it instance with table support; raw HTML is escaped, not passed through.
 _md = MarkdownIt("commonmark", {"html": False}).enable("table")
 
 # Matches simple LaTeX command names, e.g. \sigma, \mathbb (without argument).
-_LATEX_CMD_RE = re.compile(r'\\([a-zA-Z]+)')
+_LATEX_CMD_RE = re.compile(r"\\([a-zA-Z]+)")
 
 # Matches compound LaTeX constructs whose argument matters for lookup, e.g.
 # \mathbb{E}, \mathcal{F}, \text{Var}, \operatorname{Cov}.
-_LATEX_CONSTRUCT_RE = re.compile(r'\\(mathbb|mathcal|text|operatorname)\{([^}]+)\}')
+_LATEX_CONSTRUCT_RE = re.compile(r"\\(mathbb|mathcal|text|operatorname)\{([^}]+)\}")
 
 # Sentinel used to temporarily replace underscores inside math blocks so that
 # markdown-it does not interpret them as emphasis markers.
@@ -81,7 +89,9 @@ _LATEX_CONSTRUCT_RE = re.compile(r'\\(mathbb|mathcal|text|operatorname)\{([^}]+)
 _MATH_UNDERSCORE_PLACEHOLDER = "USCORE"
 
 
-def extract_key_terms(raw_text: str, key_terms_dict: dict[str, Any]) -> list[dict[str, Any]]:
+def extract_key_terms(
+    raw_text: str, key_terms_dict: dict[str, Any]
+) -> list[dict[str, Any]]:
     """
     Find plain-text variable names that appear inside LaTeX math blocks.
 
@@ -124,7 +134,9 @@ def extract_key_terms(raw_text: str, key_terms_dict: dict[str, Any]) -> list[dic
     )
 
 
-def extract_notation(raw_text: str, notation_dict: dict[str, Any]) -> list[dict[str, Any]]:
+def extract_notation(
+    raw_text: str, notation_dict: dict[str, Any]
+) -> list[dict[str, Any]]:
     """
     Find LaTeX commands from *notation_dict* that appear anywhere in *raw_text*.
 
@@ -178,10 +190,12 @@ def _protect_math(text: str) -> str:
 
     ``_restore_math`` must be called on the rendered HTML to undo both changes.
     """
+
     def _escape(m: re.Match) -> str:
         s = m.group(0).replace("\\", "\\\\")
         s = s.replace("_", _MATH_UNDERSCORE_PLACEHOLDER)
         return s
+
     return _MATH_RE.sub(_escape, text)
 
 
@@ -233,11 +247,14 @@ def _parse_card(
         return m.group(1).strip()
 
     card_id = path.relative_to(CARDS_DIR).with_suffix("").as_posix()
-    name    = _require(TITLE_RE, "title (#)")
-    topic   = _require(TOPIC_RE, "**Topic:**")
-    tags    = _require(TAGS_RE,  "**Tags:**")
+    name = _require(TITLE_RE, "title (#)")
+    topic = _require(TOPIC_RE, "**Topic:**")
+    tags = _require(TAGS_RE, "**Tags:**")
 
-    from app.routes import TOPIC_COLOURS  # local import: routes imports app.db, not the loader
+    from app.routes import (
+        TOPIC_COLOURS,
+    )  # local import: routes imports app.db, not the loader
+
     if topic not in TOPIC_COLOURS:
         raise ValueError(f"Unknown topic '{topic}' in {path}; add it to TOPIC_COLOURS")
 
@@ -253,31 +270,31 @@ def _parse_card(
     if m_created:
         created_date = f"{m_created.group(1)} 00:00:00"
     else:
-        created_date = datetime.datetime.fromtimestamp(
-            stat.st_mtime
-        ).isoformat(sep=" ", timespec="seconds")
+        created_date = datetime.datetime.fromtimestamp(stat.st_mtime).isoformat(
+            sep=" ", timespec="seconds"
+        )
 
     m_author = AUTHOR_RE.search(text)
     author = m_author.group(1).strip() if m_author else "Unknown"
 
     # Strip metadata lines before rendering so they do not appear in the HTML.
     rendered_text = _METADATA_RE.sub("", text).strip()
-    html_content  = _restore_math(_md.render(_protect_math(rendered_text)))
+    html_content = _restore_math(_md.render(_protect_math(rendered_text)))
 
-    notation  = extract_notation(text, notation_dict)   if notation_dict   else []
-    key_terms = extract_key_terms(text, key_terms_dict) if key_terms_dict  else []
+    notation = extract_notation(text, notation_dict) if notation_dict else []
+    key_terms = extract_key_terms(text, key_terms_dict) if key_terms_dict else []
 
     return {
-        "id":           card_id,
-        "name":         name,
-        "topic":        topic,
-        "tags":         tags,
+        "id": card_id,
+        "name": name,
+        "topic": topic,
+        "tags": tags,
         "created_date": created_date,
-        "author":       author,
+        "author": author,
         "html_content": html_content,
-        "notation":     json.dumps(notation),
-        "key_terms":    json.dumps(key_terms),
-        "file_mtime":   stat.st_mtime,
+        "notation": json.dumps(notation),
+        "key_terms": json.dumps(key_terms),
+        "file_mtime": stat.st_mtime,
     }
 
 
@@ -310,7 +327,7 @@ def load_all_cards(
     int
         Total number of card files found on disk (not just those reloaded).
     """
-    paths         = sorted(CARDS_DIR.rglob("*.md"))
+    paths = sorted(CARDS_DIR.rglob("*.md"))
     stored_mtimes = get_all_card_mtimes()
 
     # Cards embed notation/key-term lookups and rendered HTML, so a change to
@@ -321,25 +338,24 @@ def load_all_cards(
     ).hexdigest()
     if get_meta("parse_fingerprint") != fingerprint:
         stored_mtimes = {}
-    loaded        = 0
+    loaded = 0
 
     for path in paths:
-        card_id       = path.relative_to(CARDS_DIR).with_suffix("").as_posix()
+        card_id = path.relative_to(CARDS_DIR).with_suffix("").as_posix()
         current_mtime = path.stat().st_mtime
-        stored_mtime  = stored_mtimes.get(card_id)
+        stored_mtime = stored_mtimes.get(card_id)
 
         if stored_mtime is not None and abs(current_mtime - stored_mtime) < 0.001:
             continue  # file unchanged — skip expensive re-parse
 
-        card = _parse_card(path, notation_dict, key_terms_dict)  # raises ValueError on bad card
+        card = _parse_card(
+            path, notation_dict, key_terms_dict
+        )  # raises ValueError on bad card
         upsert_card(card)
         loaded += 1
 
     # Remove database rows for cards whose source files have been deleted.
-    live_ids = {
-        p.relative_to(CARDS_DIR).with_suffix("").as_posix()
-        for p in paths
-    }
+    live_ids = {p.relative_to(CARDS_DIR).with_suffix("").as_posix() for p in paths}
     stale = get_all_card_ids() - live_ids
     for card_id in stale:
         delete_card(card_id)

@@ -21,12 +21,12 @@ Transformations are **chained** via `optax.chain(t_1, t_2, \ldots)`, applying ea
 
 ```python
 tx = optax.chain(
-    optax.clip_by_global_norm(1.0),   # clip gradient ℓ₂-norm to 1
-    optax.adam(learning_rate=1e-3)    # then Adam update
+    optax.clip_by_global_norm(1.0),  # clip gradient ℓ₂-norm to 1
+    optax.adam(learning_rate=1e-3),  # then Adam update
 )
-state          = tx.init(params)
+state = tx.init(params)
 updates, state = tx.update(grads, state, params)
-params         = optax.apply_updates(params, updates)
+params = optax.apply_updates(params, updates)
 ```
 
 ## Example

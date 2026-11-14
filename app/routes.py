@@ -28,13 +28,22 @@ strings.  Adding a new topic requires adding an entry here; the colour cascades
 automatically to card tiles, graph nodes, topic badges, and sidebar dots through
 the CSS custom property ``--tc`` set inline on elements.
 """
+
 import json
 import os
 import re
 
 from flask import (
-    Blueprint, Response, abort, current_app, jsonify,
-    redirect, render_template, request, session, url_for,
+    Blueprint,
+    Response,
+    abort,
+    current_app,
+    jsonify,
+    redirect,
+    render_template,
+    request,
+    session,
+    url_for,
 )
 from flask.typing import ResponseReturnValue
 
@@ -60,22 +69,22 @@ bp = Blueprint("main", __name__)
 # Topic name → hex colour.  Must be kept in sync with the card ``**Topic:**`` fields.
 # The colour is injected into every template via the context processor in __init__.py.
 TOPIC_COLOURS: dict[str, str] = {
-    "Banking Regulation":              "#a855f7",   # purple
-    "Calculus":                        "#f59e0b",   # amber
-    "Computational Finance":           "#84cc16",   # lime
-    "Derivatives":                     "#3b82f6",   # blue
-    "Financial Mathematics":           "#10b981",   # emerald
-    "Fixed Income":                    "#0d9488",   # teal-dark
-    "Linear Algebra":                  "#8b5cf6",   # violet
-    "Machine Learning":                "#22c55e",   # green
-    "Mathematical Notation":           "#f97316",   # orange
-    "Portfolio Theory & Asset Pricing":"#14b8a6",   # teal
-    "Probability":                     "#f43f5e",   # rose
-    "Risk":                            "#ef4444",   # red
-    "Short Selling":                   "#ec4899",   # pink
-    "Statistics":                      "#06b6d4",   # cyan
-    "Stochastic Processes":            "#6366f1",   # indigo
-    "Volatility":                      "#d946ef",   # fuchsia
+    "Banking Regulation": "#a855f7",  # purple
+    "Calculus": "#f59e0b",  # amber
+    "Computational Finance": "#84cc16",  # lime
+    "Derivatives": "#3b82f6",  # blue
+    "Financial Mathematics": "#10b981",  # emerald
+    "Fixed Income": "#0d9488",  # teal-dark
+    "Linear Algebra": "#8b5cf6",  # violet
+    "Machine Learning": "#22c55e",  # green
+    "Mathematical Notation": "#f97316",  # orange
+    "Portfolio Theory & Asset Pricing": "#14b8a6",  # teal
+    "Probability": "#f43f5e",  # rose
+    "Risk": "#ef4444",  # red
+    "Short Selling": "#ec4899",  # pink
+    "Statistics": "#06b6d4",  # cyan
+    "Stochastic Processes": "#6366f1",  # indigo
+    "Volatility": "#d946ef",  # fuchsia
 }
 _DEFAULT_COLOUR = "#4f9ef8"
 
@@ -99,20 +108,21 @@ def _card_excerpt(html_content: str) -> str:
     Returns a generic fallback string if no Definition section is found.
     """
     m = re.search(
-        r'<h2[^>]*>\s*Definition\s*</h2>(.*?)(?=<h2|$)',
-        html_content, re.IGNORECASE | re.DOTALL,
+        r"<h2[^>]*>\s*Definition\s*</h2>(.*?)(?=<h2|$)",
+        html_content,
+        re.IGNORECASE | re.DOTALL,
     )
     if not m:
-        return 'Bite-sized revision flash card for Quantitative Finance.'
-    text = re.sub(r'<[^>]+>', '', m.group(1))
-    text = ' '.join(text.split())
-    return text[:157] + '…' if len(text) > 157 else text
+        return "Bite-sized revision flash card for Quantitative Finance."
+    text = re.sub(r"<[^>]+>", "", m.group(1))
+    text = " ".join(text.split())
+    return text[:157] + "…" if len(text) > 157 else text
 
 
 # Regex to extract the Key Formula section from pre-rendered card HTML.
 # Used by the /formulas aggregation page to pull only that section from each card.
 _FORMULA_RE = re.compile(
-    r'(<h2[^>]*>\s*Key\s+Formul(?:a|ae)\s*</h2>)(.*?)(?=<h2|$)',
+    r"(<h2[^>]*>\s*Key\s+Formul(?:a|ae)\s*</h2>)(.*?)(?=<h2|$)",
     re.IGNORECASE | re.DOTALL,
 )
 
@@ -120,13 +130,37 @@ _FORMULA_RE = re.compile(
 # Operators like \frac, \sqrt, arrows, and comparison signs are excluded so that
 # the notation tooltip only fires on semantically meaningful symbols.
 _SKIP_TOOLTIP = {
-    "\\frac", "\\binom", "\\sqrt", "\\cdot", "\\times",
-    "\\hat", "\\bar", "\\tilde", "\\mathbf",
-    "\\log", "\\ln", "\\exp", "\\max", "\\min", "\\lim",
-    "\\leq", "\\geq", "\\neq", "\\approx", "\\equiv",
-    "\\in", "\\notin", "\\neg",
-    "\\infty", "\\sum", "\\prod", "\\int",
-    "\\Rightarrow", "\\Leftrightarrow", "\\rightarrow", "\\to",
+    "\\frac",
+    "\\binom",
+    "\\sqrt",
+    "\\cdot",
+    "\\times",
+    "\\hat",
+    "\\bar",
+    "\\tilde",
+    "\\mathbf",
+    "\\log",
+    "\\ln",
+    "\\exp",
+    "\\max",
+    "\\min",
+    "\\lim",
+    "\\leq",
+    "\\geq",
+    "\\neq",
+    "\\approx",
+    "\\equiv",
+    "\\in",
+    "\\notin",
+    "\\neg",
+    "\\infty",
+    "\\sum",
+    "\\prod",
+    "\\int",
+    "\\Rightarrow",
+    "\\Leftrightarrow",
+    "\\rightarrow",
+    "\\to",
 }
 
 
@@ -142,17 +176,14 @@ def index() -> str:
     Cards are grouped by topic for display.  The full tag list (from all cards,
     not just the filtered set) is passed for the filter strip.
     """
-    tag          = request.args.get("tag",   "").strip()
+    tag = request.args.get("tag", "").strip()
     topic_filter = request.args.get("topic", "").strip()
     all_cards_list = get_all_cards()
 
     # Collect every unique tag across all cards for the horizontal filter strip.
-    all_tags = sorted({
-        t.strip()
-        for c in all_cards_list
-        for t in c["tags"].split(",")
-        if t.strip()
-    })
+    all_tags = sorted(
+        {t.strip() for c in all_cards_list for t in c["tags"].split(",") if t.strip()}
+    )
 
     cards = get_cards_by_tag(tag) if tag else all_cards_list
 
@@ -163,8 +194,11 @@ def index() -> str:
         grouped.setdefault(card["topic"], []).append(card)
 
     return render_template(
-        "index.html", grouped=grouped, active_tag=tag,
-        active_topic=topic_filter, all_tags=all_tags,
+        "index.html",
+        grouped=grouped,
+        active_tag=tag,
+        active_topic=topic_filter,
+        all_tags=all_tags,
     )
 
 
@@ -207,18 +241,20 @@ def search_data_json_view() -> Response:
     """
     cards = get_all_cards_with_content()
     data = (
-        json.dumps([
-            {
-                "id":     c["id"],
-                "name":   c["name"],
-                "topic":  c["topic"],
-                "tags":   c["tags"],
-                "blurb":  _card_excerpt(c["html_content"]),
-                "url":    url_for("main.card_detail", card_id=c["id"]),
-                "colour": _topic_colour(c["topic"]),
-            }
-            for c in cards
-        ])
+        json.dumps(
+            [
+                {
+                    "id": c["id"],
+                    "name": c["name"],
+                    "topic": c["topic"],
+                    "tags": c["tags"],
+                    "blurb": _card_excerpt(c["html_content"]),
+                    "url": url_for("main.card_detail", card_id=c["id"]),
+                    "colour": _topic_colour(c["topic"]),
+                }
+                for c in cards
+            ]
+        )
         .replace("<", "\\u003c")
         .replace(">", "\\u003e")
         .replace("&", "\\u0026")
@@ -244,8 +280,8 @@ _DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}(?: \d{2}:\d{2}:\d{2})?")
 
 def _wants_json() -> bool:
     return (
-        request.args.get("format") == "json" or
-        request.headers.get("Accept") == "application/json"
+        request.args.get("format") == "json"
+        or request.headers.get("Accept") == "application/json"
     )
 
 
@@ -270,9 +306,9 @@ def recent() -> Response | str:
     so that the database ``>=`` / ``<=`` comparisons work correctly against the
     stored ``YYYY-MM-DD HH:MM:SS`` format.
     """
-    start    = request.args.get("start", "").strip() or None
-    end      = request.args.get("end",   "").strip() or None
-    is_json  = _wants_json()
+    start = request.args.get("start", "").strip() or None
+    end = request.args.get("end", "").strip() or None
+    is_json = _wants_json()
 
     for value in (start, end):
         if value and not _DATE_RE.fullmatch(value):
@@ -320,7 +356,7 @@ def card_detail(card_id: str) -> ResponseReturnValue:
     card = get_card(card_id)
     if card is None:
         # Card not found at the exact path — try resolving by slug alone.
-        slug    = card_id.rsplit("/", 1)[-1]
+        slug = card_id.rsplit("/", 1)[-1]
         matches = find_cards_by_slug(slug)
         if len(matches) == 1:
             return redirect(url_for("main.card_detail", card_id=matches[0]["id"]), 301)
@@ -333,12 +369,12 @@ def card_detail(card_id: str) -> ResponseReturnValue:
 
     # Determine the previous and next cards within the same topic for arrow-key navigation.
     siblings = get_topic_cards(card["topic"])
-    idx      = next((i for i, c in enumerate(siblings) if c["id"] == card_id), -1)
-    prev_card = dict(siblings[idx - 1]) if idx > 0             else None
+    idx = next((i for i, c in enumerate(siblings) if c["id"] == card_id), -1)
+    prev_card = dict(siblings[idx - 1]) if idx > 0 else None
     next_card = dict(siblings[idx + 1]) if 0 <= idx < len(siblings) - 1 else None
 
     resources = current_app.config["RESOURCES"].get(card_id, {})
-    notation  = json.loads(card["notation"])  if card["notation"]  else []
+    notation = json.loads(card["notation"]) if card["notation"] else []
     key_terms = json.loads(card["key_terms"]) if card["key_terms"] else []
 
     # Build a filtered symbol→meaning map for the JS tooltip system.
@@ -404,7 +440,10 @@ def remove_link(card_id: str) -> Response:
             abort(400)
         save_edges_to_file()
 
-        from app import _invalidate_global_cache  # local import: avoids a circular import
+        from app import (
+            _invalidate_global_cache,
+        )  # local import: avoids a circular import
+
         _invalidate_global_cache()
         cache.clear()
 
@@ -423,18 +462,20 @@ def formulas() -> str:
     Cards without a Key Formula section are silently skipped.
     Results are grouped by topic.
     """
-    cards   = get_all_cards_with_content()
+    cards = get_all_cards_with_content()
     grouped: dict[str, list] = {}
     for card in cards:
         m = _FORMULA_RE.search(card["html_content"])
         if not m:
             continue
         formula_html = m.group(1) + m.group(2)
-        grouped.setdefault(card["topic"], []).append({
-            "name":         card["name"],
-            "id":           card["id"],
-            "formula_html": formula_html,
-        })
+        grouped.setdefault(card["topic"], []).append(
+            {
+                "name": card["name"],
+                "id": card["id"],
+                "formula_html": formula_html,
+            }
+        )
     return render_template("formulas.html", grouped=grouped)
 
 
@@ -484,8 +525,8 @@ def _study_path(card_id: str) -> tuple[list[dict], int]:
     budget = _PATH_MAX - 1
     kept: list[list[str]] = []
     omitted = 0
-    for level in levels:                      # nearest level first when trimming
-        take = level[:max(budget, 0)]
+    for level in levels:  # nearest level first when trimming
+        take = level[: max(budget, 0)]
         omitted += len(level) - len(take)
         budget -= len(take)
         kept.append(take)
@@ -509,7 +550,7 @@ def study_path(card_id: str) -> ResponseReturnValue:
 
 
 _DEFINITION_RE = re.compile(
-    r'<h2[^>]*>\s*Definition\s*</h2>(.*?)(?=<h2|$)', re.IGNORECASE | re.DOTALL
+    r"<h2[^>]*>\s*Definition\s*</h2>(.*?)(?=<h2|$)", re.IGNORECASE | re.DOTALL
 )
 
 
@@ -536,12 +577,14 @@ def quiz() -> str:
                 continue
             d = _DEFINITION_RE.search(c["html_content"])
             f = _FORMULA_RE.search(c["html_content"])
-            items.append({
-                "id":         c["id"],
-                "name":       c["name"],
-                "definition": d.group(1) if d else "",
-                "formula":    (f.group(1) + f.group(2)) if f else "",
-            })
+            items.append(
+                {
+                    "id": c["id"],
+                    "name": c["name"],
+                    "definition": d.group(1) if d else "",
+                    "formula": (f.group(1) + f.group(2)) if f else "",
+                }
+            )
         if not items:
             abort(404)
     return render_template("quiz.html", topic=topic, counts=counts, items=items)
@@ -580,11 +623,11 @@ def graph_view() -> str:
 
     nodes = [
         {
-            "id":     c["id"],
-            "label":  c["name"],
-            "title":  c["topic"],
-            "color":  _topic_colour(c["topic"]),
-            "url":    url_for("main.card_detail", card_id=c["id"]),
+            "id": c["id"],
+            "label": c["name"],
+            "title": c["topic"],
+            "color": _topic_colour(c["topic"]),
+            "url": url_for("main.card_detail", card_id=c["id"]),
             "degree": degree.get(c["id"], 0),
         }
         for c in all_cards
@@ -592,14 +635,15 @@ def graph_view() -> str:
 
     edges = [
         {
-            "from":        e["source_id"],
-            "to":          e["target_id"],
-            "label":       e["label"],
+            "from": e["source_id"],
+            "to": e["target_id"],
+            "label": e["label"],
             "description": e["description"],
-            "arrows":      "to",
+            "arrows": "to",
             # Shared tag count is used by the graph JS to set edge width/opacity.
             "shared": len(
-                tag_sets.get(e["source_id"], set()) & tag_sets.get(e["target_id"], set())
+                tag_sets.get(e["source_id"], set())
+                & tag_sets.get(e["target_id"], set())
             ),
         }
         for e in all_edges

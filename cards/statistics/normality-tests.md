@@ -33,10 +33,13 @@ Where $x_{(i)}$ are the ordered sample values and $a_i$ are tabulated constants 
 ```python
 from scipy import stats
 
-w_stat, p_sw  = stats.shapiro(returns)          # Shapiro-Wilk
-ad_stat, crit, sig = stats.anderson(returns)    # Anderson-Darling
-ks_stat, p_ks = stats.kstest(returns, 'norm',   # KS test
-    args=(returns.mean(), returns.std()))
+w_stat, p_sw = stats.shapiro(returns)  # Shapiro-Wilk
+ad_stat, crit, sig = stats.anderson(returns)  # Anderson-Darling
+ks_stat, p_ks = stats.kstest(
+    returns,
+    "norm",  # KS test
+    args=(returns.mean(), returns.std()),
+)
 ```
 
 ## Example

@@ -19,14 +19,14 @@
 from scipy.interpolate import RectBivariateSpline
 import numpy as np
 
-strikes    = np.array([80, 90, 100, 110, 120])   # £
-expiries   = np.array([0.25, 0.5, 1.0, 2.0])     # years
-ivol_grid  = ...   # shape (4, 5) — market implied vols
+strikes = np.array([80, 90, 100, 110, 120])  # £
+expiries = np.array([0.25, 0.5, 1.0, 2.0])  # years
+ivol_grid = ...  # shape (4, 5) — market implied vols
 
 spline = RectBivariateSpline(expiries, strikes, ivol_grid, kx=3, ky=3)
 
 # Query at any (T, K)
-iv_at_105_6m = spline(0.5, 105)[0, 0]   # e.g. 0.187 → 18.7%
+iv_at_105_6m = spline(0.5, 105)[0, 0]  # e.g. 0.187 → 18.7%
 ```
 
 **1-D cubic spline along a single expiry slice:**
@@ -34,7 +34,7 @@ iv_at_105_6m = spline(0.5, 105)[0, 0]   # e.g. 0.187 → 18.7%
 ```python
 from scipy.interpolate import CubicSpline
 
-cs = CubicSpline(strikes, ivol_grid[2])   # T = 1 year slice
+cs = CubicSpline(strikes, ivol_grid[2])  # T = 1 year slice
 iv_105 = cs(105)
 ```
 

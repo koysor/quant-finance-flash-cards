@@ -22,13 +22,15 @@ $$\hat{\theta} = \arg\min_{\theta} \sum_{i=1}^{N} w_i \left( V_i^{\text{model}}(
 ```python
 from scipy.optimize import minimize
 
+
 def objective(params, market_prices, strikes, T):
     model_prices = price_model(params, strikes, T)
     return np.sum((model_prices - market_prices) ** 2)
 
-result = minimize(objective, x0=initial_guess,
-                  args=(market_prices, strikes, T),
-                  method="Nelder-Mead")
+
+result = minimize(
+    objective, x0=initial_guess, args=(market_prices, strikes, T), method="Nelder-Mead"
+)
 calibrated_params = result.x
 ```
 
@@ -39,11 +41,14 @@ Calibrate Black-Scholes implied volatility to three market call prices:
 ```python
 from scipy.optimize import brentq
 
+
 def bs_call(S, K, r, sigma, T):
-    d1 = (np.log(S/K) + (r + sigma**2/2)*T) / (sigma*np.sqrt(T))
-    d2 = d1 - sigma*np.sqrt(T)
+    d1 = (np.log(S / K) + (r + sigma**2 / 2) * T) / (sigma * np.sqrt(T))
+    d2 = d1 - sigma * np.sqrt(T)
     from scipy.stats import norm
-    return S*norm.cdf(d1) - K*np.exp(-r*T)*norm.cdf(d2)
+
+    return S * norm.cdf(d1) - K * np.exp(-r * T) * norm.cdf(d2)
+
 
 # Find implied vol for a market price of £10.45
 iv = brentq(lambda s: bs_call(100, 100, 0.05, s, 1) - 10.45, 0.01, 2.0)

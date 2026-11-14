@@ -29,10 +29,12 @@ from sklearn.model_selection import cross_val_score
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
-pipe = Pipeline([
-    ("scaler", StandardScaler()),
-    ("clf",    RandomForestClassifier(n_estimators=200, random_state=42)),
-])
+pipe = Pipeline(
+    [
+        ("scaler", StandardScaler()),
+        ("clf", RandomForestClassifier(n_estimators=200, random_state=42)),
+    ]
+)
 
 scores = cross_val_score(pipe, X_train, y_train, cv=5, scoring="roc_auc")
 print(f"Mean AUC: {scores.mean():.3f} ± {scores.std():.3f}")

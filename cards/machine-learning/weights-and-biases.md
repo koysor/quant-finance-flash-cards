@@ -20,7 +20,11 @@ import wandb
 
 wandb.init(
     project="equity-return-prediction",
-    config={"alpha": 0.01, "features": ["momentum", "vol_ratio", "pb"], "train_end": "2022-12-31"},
+    config={
+        "alpha": 0.01,
+        "features": ["momentum", "vol_ratio", "pb"],
+        "train_end": "2022-12-31",
+    },
 )
 
 for epoch in range(n_epochs):
@@ -37,7 +41,14 @@ wandb.finish()
 A quant is tuning a Ridge regression to forecast daily NIFTY 50 returns using three factors. She runs five experiments varying the regularisation strength $\alpha \in \{0.001, 0.01, 0.1, 1.0, 10.0\}$. Each run calls:
 
 ```python
-wandb.init(project="nifty-ridge", config={"alpha": alpha, "train_window": "2018-2023", "features": ["momentum_20d", "vol_ratio", "pb_ratio"]})
+wandb.init(
+    project="nifty-ridge",
+    config={
+        "alpha": alpha,
+        "train_window": "2018-2023",
+        "features": ["momentum_20d", "vol_ratio", "pb_ratio"],
+    },
+)
 wandb.log({"train_r2": 0.41, "test_r2": 0.18, "rmse": 0.0032})
 ```
 

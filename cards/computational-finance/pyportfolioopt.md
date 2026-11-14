@@ -26,12 +26,12 @@ $$\mathbf{w}^{\text{HRP}} = \text{RecursiveBisection}\!\left(\text{HClust}(\hat{
 ```python
 from pypfopt import EfficientFrontier, risk_models, expected_returns
 
-mu    = expected_returns.mean_historical_return(prices)
-S     = risk_models.CovarianceShrinkage(prices).ledoit_wolf()
+mu = expected_returns.mean_historical_return(prices)
+S = risk_models.CovarianceShrinkage(prices).ledoit_wolf()
 
-ef    = EfficientFrontier(mu, S)
-ef.add_constraint(lambda w: w >= 0.02)   # minimum 2% per asset
-ef.add_constraint(lambda w: w <= 0.30)   # maximum 30% per asset
+ef = EfficientFrontier(mu, S)
+ef.add_constraint(lambda w: w >= 0.02)  # minimum 2% per asset
+ef.add_constraint(lambda w: w <= 0.30)  # maximum 30% per asset
 weights = ef.max_sharpe()
 ef.portfolio_performance(verbose=True)
 # Expected annual return: 14.3%, Volatility: 10.1%, Sharpe: 1.42

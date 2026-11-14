@@ -1,26 +1,29 @@
 """Test suite for knowledge graph integrity and connectivity."""
+
 import json
 import pytest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
+
 def test_edges_integrity():
     """Verify all IDs in edges.json point to existing card files."""
     edges_path = ROOT / "edges.json"
     if not edges_path.exists():
         pytest.skip("edges.json not found")
-        
+
     with open(edges_path) as f:
         edges = json.load(f)
-        
+
     cards_dir = ROOT / "cards"
     for edge in edges:
         source = cards_dir / f"{edge['source']}.md"
         target = cards_dir / f"{edge['target']}.md"
-        
+
         assert source.exists(), f"Source card not found: {edge['source']}"
         assert target.exists(), f"Target card not found: {edge['target']}"
+
 
 def test_circular_dependencies_report():
     """Report cycles in edges.json.

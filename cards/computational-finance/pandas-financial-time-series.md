@@ -22,8 +22,9 @@ $$r_t = \frac{S_t - S_{t-1}}{S_{t-1}}$$
 ```python
 import pandas as pd
 
-prices = pd.Series([100, 102, 99, 101, 103],
-                   index=pd.date_range("2026-01-01", periods=5))
+prices = pd.Series(
+    [100, 102, 99, 101, 103], index=pd.date_range("2026-01-01", periods=5)
+)
 returns = prices.pct_change().dropna()
 ```
 

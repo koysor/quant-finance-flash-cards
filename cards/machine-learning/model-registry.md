@@ -44,12 +44,16 @@ A quant team builds a Ridge regression to forecast daily returns for FTSE 100 co
 
 ```python
 with mlflow.start_run() as run:
-    mlflow.log_params({"alpha": 1.0, "train_end": "2023-12-31",
-                       "features": ["momentum_20d", "vol_ratio", "pb"]})
+    mlflow.log_params(
+        {
+            "alpha": 1.0,
+            "train_end": "2023-12-31",
+            "features": ["momentum_20d", "vol_ratio", "pb"],
+        }
+    )
     mlflow.sklearn.log_model(ridge_model, "ridge_signal")
 
-mlflow.register_model(f"runs:/{run.info.run_id}/ridge_signal",
-                      "equity-alpha-ridge")
+mlflow.register_model(f"runs:/{run.info.run_id}/ridge_signal", "equity-alpha-ridge")
 # Registers as Version 3, Stage: None
 ```
 

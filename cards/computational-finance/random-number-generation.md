@@ -41,8 +41,8 @@ Generate 100,000 standard normal draws and verify the distribution:
 rng = np.random.default_rng(seed=42)
 Z = rng.standard_normal(100_000)
 
-print(f"Mean: {Z.mean():.4f}")    # ≈ 0.0000
-print(f"Std:  {Z.std():.4f}")     # ≈ 1.0000
+print(f"Mean: {Z.mean():.4f}")  # ≈ 0.0000
+print(f"Std:  {Z.std():.4f}")  # ≈ 1.0000
 print(f"Skew: {scipy.stats.skew(Z):.4f}")  # ≈ 0.00
 ```
 

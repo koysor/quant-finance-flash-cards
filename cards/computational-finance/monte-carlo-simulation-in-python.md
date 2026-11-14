@@ -22,6 +22,7 @@ $$S_{t+\Delta t} = S_t \exp\!\left[\left(r - \tfrac{\sigma^2}{2}\right)\Delta t 
 ```python
 import numpy as np
 
+
 def simulate_gbm(S0, r, sigma, T, n_steps, n_paths):
     dt = T / n_steps
     Z = np.random.standard_normal((n_steps, n_paths))

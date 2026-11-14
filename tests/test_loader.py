@@ -1,6 +1,8 @@
 """Test suite for card parsing, math protection, and loading logic."""
+
 import pytest
 from app.loader import _protect_math, _parse_card
+
 
 def test_protect_math_basic():
     """Verify that backslashes in math are doubled."""
@@ -9,11 +11,13 @@ def test_protect_math_basic():
     protected = _protect_math(text)
     assert r"Let $x = \\frac{1}{2}$ and $y = \\sigma^2$." == protected
 
+
 def test_protect_math_display():
     """Verify display math protection."""
     text = "Some math:\n$$\n\\mu = 0\n$$"
     protected = _protect_math(text)
     assert "Some math:\n$$\n\\\\mu = 0\n$$" == protected
+
 
 def test_parse_card_valid(tmp_path):
     """Test parsing a valid card."""
@@ -34,6 +38,7 @@ Testing.
     card_file.write_text(card_content, encoding="utf-8")
 
     import app.loader
+
     original_cards_dir = app.loader.CARDS_DIR
     app.loader.CARDS_DIR = cards_dir
     try:
@@ -44,6 +49,7 @@ Testing.
         assert card["tags"] == "test,math"
     finally:
         app.loader.CARDS_DIR = original_cards_dir
+
 
 def test_parse_card_missing_topic(tmp_path):
     """Verify that missing Topic raises ValueError."""
@@ -60,8 +66,9 @@ Testing.
     topic_dir.mkdir(parents=True)
     card_file = topic_dir / "bad-card.md"
     card_file.write_text(card_content, encoding="utf-8")
-    
+
     import app.loader
+
     original_cards_dir = app.loader.CARDS_DIR
     app.loader.CARDS_DIR = cards_dir
     try:
@@ -69,6 +76,7 @@ Testing.
             _parse_card(card_file)
     finally:
         app.loader.CARDS_DIR = original_cards_dir
+
 
 def test_parse_card_missing_tags(tmp_path):
     """Verify that missing Tags raises ValueError."""
@@ -85,8 +93,9 @@ Testing.
     topic_dir.mkdir(parents=True)
     card_file = topic_dir / "bad-card.md"
     card_file.write_text(card_content, encoding="utf-8")
-    
+
     import app.loader
+
     original_cards_dir = app.loader.CARDS_DIR
     app.loader.CARDS_DIR = cards_dir
     try:

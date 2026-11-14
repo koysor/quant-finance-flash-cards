@@ -21,7 +21,7 @@ Valid when the payoff is differentiable (European, Asian). Implemented in code:
 
 ```python
 # Pathwise delta for a European call
-ST = S0 * np.exp((r - 0.5*sig**2)*T + sig*np.sqrt(T)*Z)  # Z ~ N(0,1)
+ST = S0 * np.exp((r - 0.5 * sig**2) * T + sig * np.sqrt(T) * Z)  # Z ~ N(0,1)
 delta = np.mean((ST > K) * ST / S0) * np.exp(-r * T)
 ```
 
@@ -32,7 +32,7 @@ $$\Delta = \mathbb{E}^{\mathbb{Q}}\!\left[\text{payoff}(S_T) \cdot \frac{\partia
 Valid for **any** payoff including discontinuous ones (digital options, barriers):
 
 ```python
-score = (np.log(ST / S0) - (r - 0.5*sig**2)*T) / (sig**2 * T * S0)
+score = (np.log(ST / S0) - (r - 0.5 * sig**2) * T) / (sig**2 * T * S0)
 delta_lr = np.exp(-r * T) * np.mean(payoff * score)
 ```
 
@@ -41,11 +41,11 @@ delta_lr = np.exp(-r * T) * np.mean(payoff * score)
 Price a digital call (payoff = £1 if $S_T > 100$) with $S_0 = 100$, $r = 5\%$, $\sigma = 20\%$, $T = 1$ yr. The pathwise method fails — the payoff is a step function with zero derivative almost everywhere. The likelihood ratio method gives:
 
 ```python
-Z  = np.random.randn(100_000)
-ST = 100 * np.exp((0.05 - 0.02)*1 + 0.20*Z)
+Z = np.random.randn(100_000)
+ST = 100 * np.exp((0.05 - 0.02) * 1 + 0.20 * Z)
 payoff = (ST > 100).astype(float)
-score  = (np.log(ST/100) - 0.03) / (0.04 * 100)
-delta  = np.exp(-0.05) * np.mean(payoff * score)  # ≈ 0.043
+score = (np.log(ST / 100) - 0.03) / (0.04 * 100)
+delta = np.exp(-0.05) * np.mean(payoff * score)  # ≈ 0.043
 ```
 
 ## Remember

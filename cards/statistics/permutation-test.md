@@ -24,14 +24,16 @@ Where $T_{\text{obs}}$ is the test statistic on the original data and $T^{*(b)}$
 ```python
 import numpy as np
 
-returns = np.array([...])          # daily strategy returns
-obs_stat = returns.mean()          # observed mean
+returns = np.array([...])  # daily strategy returns
+obs_stat = returns.mean()  # observed mean
 
 B = 10_000
-perm_stats = np.array([
-    np.random.choice([-1, 1], size=len(returns)) @ returns / len(returns)
-    for _ in range(B)
-])                                 # sign-flip permutation under H₀: μ = 0
+perm_stats = np.array(
+    [
+        np.random.choice([-1, 1], size=len(returns)) @ returns / len(returns)
+        for _ in range(B)
+    ]
+)  # sign-flip permutation under H₀: μ = 0
 
 p_value = np.mean(np.abs(perm_stats) >= np.abs(obs_stat))
 ```

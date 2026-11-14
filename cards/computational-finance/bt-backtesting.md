@@ -30,17 +30,20 @@ import bt
 import pandas as pd
 
 # Equal-weight monthly rebalance across 3 ETFs
-strategy = bt.Strategy('EW-Monthly', [
-    bt.algos.RunMonthly(),
-    bt.algos.SelectAll(),
-    bt.algos.WeighEqually(),
-    bt.algos.Rebalance()
-])
+strategy = bt.Strategy(
+    "EW-Monthly",
+    [
+        bt.algos.RunMonthly(),
+        bt.algos.SelectAll(),
+        bt.algos.WeighEqually(),
+        bt.algos.Rebalance(),
+    ],
+)
 
-backtest = bt.Backtest(strategy, prices)   # prices: DataFrame of daily closes
+backtest = bt.Backtest(strategy, prices)  # prices: DataFrame of daily closes
 result = bt.run(backtest)
-result.display()   # prints Sharpe, CAGR, max drawdown
-result.plot()      # plots cumulative returns
+result.display()  # prints Sharpe, CAGR, max drawdown
+result.plot()  # plots cumulative returns
 ```
 
 Swapping `WeighEqually()` for `WeighMeanVar()` reruns the same backtest with mean-variance weights in two lines, enabling rapid strategy comparison.

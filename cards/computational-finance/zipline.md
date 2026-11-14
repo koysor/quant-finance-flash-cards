@@ -27,10 +27,11 @@ where $c$ is the per-share commission and spread is the bid-ask spread.
 
 ```python
 def initialize(context):
-    context.asset = symbol('AAPL')
+    context.asset = symbol("AAPL")
+
 
 def handle_data(context, data):
-    price_history = data.history(context.asset, 'price', 20, '1d')
+    price_history = data.history(context.asset, "price", 20, "1d")
     if price_history[-1] > price_history.mean():
         order_target_percent(context.asset, 0.10)  # 10% of portfolio
     else:

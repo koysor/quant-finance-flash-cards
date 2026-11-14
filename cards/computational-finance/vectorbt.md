@@ -25,16 +25,18 @@ where $w_{t,p}$ is the position for parameter set $p$ at time $t$ and $c$ is the
 import vectorbt as vbt
 
 # Test 2,500 SMA crossover combinations (50 fast × 50 slow periods)
-fast = vbt.IndicatorFactory.from_pandas_ta('SMA').run(
-    price, timeperiod=vbt.Param(range(5, 55)))
-slow = vbt.IndicatorFactory.from_pandas_ta('SMA').run(
-    price, timeperiod=vbt.Param(range(10, 105, 2)))
+fast = vbt.IndicatorFactory.from_pandas_ta("SMA").run(
+    price, timeperiod=vbt.Param(range(5, 55))
+)
+slow = vbt.IndicatorFactory.from_pandas_ta("SMA").run(
+    price, timeperiod=vbt.Param(range(10, 105, 2))
+)
 
 entries = fast.real_crossed_above(slow.real)
-exits   = fast.real_crossed_below(slow.real)
+exits = fast.real_crossed_below(slow.real)
 
-pf = vbt.Portfolio.from_signals(price, entries, exits, freq='1D')
-pf.sharpe_ratio().idxmax()   # find the best-performing parameter set
+pf = vbt.Portfolio.from_signals(price, entries, exits, freq="1D")
+pf.sharpe_ratio().idxmax()  # find the best-performing parameter set
 ```
 
 On a single laptop, this runs 2,500 backtests in under 5 seconds.

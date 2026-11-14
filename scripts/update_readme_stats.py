@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Update the stats line and per-topic card counts in README.md."""
+
 import json
 import re
 from pathlib import Path
@@ -12,15 +13,23 @@ EDGES_FILE = ROOT / "edges.json"
 TOPIC_RE = re.compile(r"^\*\*Topic:\*\*\s*(.+)$", re.MULTILINE)
 ROW_RE = re.compile(r"^\| ([^|]+?) \| \d+ \| ", re.MULTILINE)
 
-STATS_RE = re.compile(r"^\d+ cards · \d+ topics · \d+ concept connections$", re.MULTILINE)
+STATS_RE = re.compile(
+    r"^\d+ cards · \d+ topics · \d+ concept connections$", re.MULTILINE
+)
 
 
 def main() -> None:
     cards = list(CARDS_DIR.rglob("*.md"))
     topics = {p.parent.name for p in cards}
-    edges = json.loads(EDGES_FILE.read_text(encoding="utf-8")) if EDGES_FILE.exists() else []
+    edges = (
+        json.loads(EDGES_FILE.read_text(encoding="utf-8"))
+        if EDGES_FILE.exists()
+        else []
+    )
 
-    new_line = f"{len(cards)} cards · {len(topics)} topics · {len(edges)} concept connections"
+    new_line = (
+        f"{len(cards)} cards · {len(topics)} topics · {len(edges)} concept connections"
+    )
 
     counts: dict[str, int] = {}
     for p in cards:
@@ -31,9 +40,15 @@ def main() -> None:
     text = README.read_text(encoding="utf-8")
     listed = set(ROW_RE.findall(text))
     for topic in sorted(set(counts) - listed):
-        print(f"WARNING: topic '{topic}' has cards but no row in the README topic table")
+        print(
+            f"WARNING: topic '{topic}' has cards but no row in the README topic table"
+        )
     text = ROW_RE.sub(
-        lambda m: f"| {m.group(1)} | {counts[m.group(1)]} | " if m.group(1) in counts else m.group(0),
+        lambda m: (
+            f"| {m.group(1)} | {counts[m.group(1)]} | "
+            if m.group(1) in counts
+            else m.group(0)
+        ),
         text,
     )
     if not STATS_RE.search(text):

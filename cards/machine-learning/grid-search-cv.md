@@ -34,8 +34,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import GridSearchCV, TimeSeriesSplit
 
 param_grid = {
-    "C":       [0.001, 0.01, 0.1, 1, 10],   # 5 values
-    "penalty": ["l1", "l2"],                  # 2 values
+    "C": [0.001, 0.01, 0.1, 1, 10],  # 5 values
+    "penalty": ["l1", "l2"],  # 2 values
 }
 # 5 × 2 = 10 configurations × 5 folds = 50 total fits
 
@@ -43,11 +43,12 @@ search = GridSearchCV(
     LogisticRegression(solver="saga"),
     param_grid,
     cv=TimeSeriesSplit(n_splits=5),
-    scoring="roc_auc", n_jobs=-1
+    scoring="roc_auc",
+    n_jobs=-1,
 )
 search.fit(X_train, y_train)
-print(search.best_params_)   # e.g. {'C': 0.1, 'penalty': 'l2'}
-print(search.best_score_)    # e.g. 0.814
+print(search.best_params_)  # e.g. {'C': 0.1, 'penalty': 'l2'}
+print(search.best_score_)  # e.g. 0.814
 ```
 
 ## Remember

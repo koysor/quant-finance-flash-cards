@@ -6,7 +6,7 @@ bind = os.environ.get("GUNICORN_BIND", "0.0.0.0:8000")
 
 # sync workers are correct for SQLite (CPU-bound reads, no async I/O needed).
 # Default to one worker: the production host is a shared 1 GiB instance.
-workers      = int(os.environ.get("WEB_CONCURRENCY", 1))
+workers = int(os.environ.get("WEB_CONCURRENCY", 1))
 worker_class = "sync"
 
 # Load the app once in the master process, then fork.
@@ -14,10 +14,10 @@ worker_class = "sync"
 preload_app = True
 
 # Kill a hung worker after 30 s rather than accumulating stuck requests.
-timeout   = 30
+timeout = 30
 keepalive = 5
 
 # Log to stdout/stderr so `docker logs` (or journald) captures everything.
 accesslog = "-"
-errorlog  = "-"
-loglevel  = "info"
+errorlog = "-"
+loglevel = "info"
