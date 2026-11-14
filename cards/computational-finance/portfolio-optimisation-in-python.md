@@ -22,17 +22,23 @@ $$\min_{\mathbf{w}} \; \mathbf{w}^\top \Sigma \mathbf{w} \quad \text{subject to}
 ```python
 from scipy.optimize import minimize
 
+
 def portfolio_vol(w, cov_matrix):
     return np.sqrt(w @ cov_matrix @ w)
+
 
 n = len(expected_returns)
 constraints = [{"type": "eq", "fun": lambda w: np.sum(w) - 1}]
 bounds = [(0, 1)] * n
 
-result = minimize(portfolio_vol, x0=np.ones(n)/n,
-                  args=(cov_matrix,),
-                  method="SLSQP",
-                  bounds=bounds, constraints=constraints)
+result = minimize(
+    portfolio_vol,
+    x0=np.ones(n) / n,
+    args=(cov_matrix,),
+    method="SLSQP",
+    bounds=bounds,
+    constraints=constraints,
+)
 optimal_weights = result.x
 ```
 
@@ -42,13 +48,16 @@ Three assets with annual returns [8%, 12%, 6%] and covariance matrix estimated f
 
 ```python
 mu = np.array([0.08, 0.12, 0.06])
-cov = np.array([[0.04, 0.006, 0.002],
-                [0.006, 0.09, 0.009],
-                [0.002, 0.009, 0.01]])
+cov = np.array([[0.04, 0.006, 0.002], [0.006, 0.09, 0.009], [0.002, 0.009, 0.01]])
 
-result = minimize(portfolio_vol, x0=[1/3]*3, args=(cov,),
-                  method="SLSQP", bounds=[(0,1)]*3,
-                  constraints=[{"type":"eq","fun":lambda w: sum(w)-1}])
+result = minimize(
+    portfolio_vol,
+    x0=[1 / 3] * 3,
+    args=(cov,),
+    method="SLSQP",
+    bounds=[(0, 1)] * 3,
+    constraints=[{"type": "eq", "fun": lambda w: sum(w) - 1}],
+)
 print(result.x)  # ≈ [0.28, 0.07, 0.65]
 print(f"Vol: {portfolio_vol(result.x, cov):.2%}")  # ≈ 8.1%
 ```

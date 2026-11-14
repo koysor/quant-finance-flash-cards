@@ -23,11 +23,13 @@ The **`grad`** transform computes $\partial f / \partial x$ via reverse-mode aut
 import jax
 import jax.numpy as jnp
 
+
 def loss(params, x):
     return jnp.mean((params @ x - 1.0) ** 2)
 
-grad_fn = jax.jit(jax.grad(loss))   # compiled gradient function
-g = grad_fn(params, x)              # executes on GPU, returns gradient
+
+grad_fn = jax.jit(jax.grad(loss))  # compiled gradient function
+g = grad_fn(params, x)  # executes on GPU, returns gradient
 ```
 
 ## Example
@@ -39,10 +41,12 @@ def bs_call(S, K, r, sigma, T):
     d1 = (jnp.log(S / K) + (r + 0.5 * sigma**2) * T) / (sigma * jnp.sqrt(T))
     d2 = d1 - sigma * jnp.sqrt(T)
     from jax.scipy.stats import norm
+
     return S * norm.cdf(d1) - K * jnp.exp(-r * T) * norm.cdf(d2)
 
+
 batch_price = jax.jit(jax.vmap(bs_call, in_axes=(0, None, None, None, None)))
-prices = batch_price(S_array, 100.0, 0.05, 0.2, 1.0)   # shape (10_000,)
+prices = batch_price(S_array, 100.0, 0.05, 0.2, 1.0)  # shape (10_000,)
 ```
 
 A vectorised NumPy loop over 10,000 paths takes ~8 ms on CPU. The `jit(vmap(...))` version takes ~0.3 ms on GPU — a 25× speedup with no algorithmic change.

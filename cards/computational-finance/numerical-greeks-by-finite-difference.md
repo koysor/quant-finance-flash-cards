@@ -25,6 +25,7 @@ $$\Gamma \approx \frac{V(S + h) - 2V(S) + V(S - h)}{h^2}$$
 def numerical_delta(pricer, S, h=0.01):
     return (pricer(S + h) - pricer(S - h)) / (2 * h)
 
+
 def numerical_gamma(pricer, S, h=0.01):
     return (pricer(S + h) - 2 * pricer(S) + pricer(S - h)) / h**2
 ```

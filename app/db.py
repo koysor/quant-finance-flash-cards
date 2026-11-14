@@ -20,6 +20,7 @@ edges
 Both tables are created idempotently; ``init_db`` also runs ``ALTER TABLE``
 migrations for columns added after the initial schema was deployed.
 """
+
 import json
 import logging
 import os
@@ -31,7 +32,7 @@ from typing import Any
 
 from flask import g
 
-DB_PATH    = Path(__file__).parent.parent / "graph.db"
+DB_PATH = Path(__file__).parent.parent / "graph.db"
 EDGES_PATH = Path(__file__).parent.parent / "edges.json"
 
 DDL = """
@@ -94,12 +95,18 @@ def bulk_connection() -> Iterator[sqlite3.Connection]:
         conn.close()
 
 
-def _open_connection(factory: type[sqlite3.Connection] = _ClosingConnection) -> sqlite3.Connection:
+def _open_connection(
+    factory: type[sqlite3.Connection] = _ClosingConnection,
+) -> sqlite3.Connection:
     conn = sqlite3.connect(DB_PATH, factory=factory)
     conn.row_factory = sqlite3.Row
-    conn.execute("PRAGMA journal_mode = WAL")   # concurrent readers during writes
-    conn.execute("PRAGMA synchronous = NORMAL") # durable on OS crash; safe for derived cache
-    conn.execute("PRAGMA cache_size = -32000")  # 32 MB in-process page cache per connection
+    conn.execute("PRAGMA journal_mode = WAL")  # concurrent readers during writes
+    conn.execute(
+        "PRAGMA synchronous = NORMAL"
+    )  # durable on OS crash; safe for derived cache
+    conn.execute(
+        "PRAGMA cache_size = -32000"
+    )  # 32 MB in-process page cache per connection
     conn.execute("PRAGMA foreign_keys = ON")
     return conn
 
@@ -134,7 +141,9 @@ def init_db() -> None:
         conn.executescript(DDL)
         # Edges table: add description column introduced after initial release.
         try:
-            conn.execute("ALTER TABLE edges ADD COLUMN description TEXT NOT NULL DEFAULT ''")
+            conn.execute(
+                "ALTER TABLE edges ADD COLUMN description TEXT NOT NULL DEFAULT ''"
+            )
         except sqlite3.OperationalError as e:
             if "duplicate column" not in str(e).lower():
                 raise
@@ -156,6 +165,7 @@ def init_db() -> None:
 # ---------------------------------------------------------------------------
 # Card queries
 # ---------------------------------------------------------------------------
+
 
 def upsert_card(card: dict[str, Any]) -> None:
     """
@@ -191,7 +201,9 @@ def upsert_card(card: dict[str, Any]) -> None:
 def get_meta(key: str) -> str | None:
     """Return the ``meta`` value stored under *key*, or ``None``."""
     with get_db() as conn:
-        conn.execute("CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT)")
+        conn.execute(
+            "CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT)"
+        )
         row = conn.execute("SELECT value FROM meta WHERE key = ?", (key,)).fetchone()
     return row["value"] if row else None
 
@@ -199,7 +211,9 @@ def get_meta(key: str) -> str | None:
 def set_meta(key: str, value: str) -> None:
     """Store *value* under *key* in the ``meta`` table."""
     with get_db() as conn:
-        conn.execute("CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT)")
+        conn.execute(
+            "CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT)"
+        )
         conn.execute(
             "INSERT INTO meta (key, value) VALUES (?, ?)"
             " ON CONFLICT(key) DO UPDATE SET value = excluded.value",
@@ -285,9 +299,7 @@ def get_card(card_id: str) -> sqlite3.Row | None:
         Full card ID, e.g. ``stochastic-processes/brownian-motion``.
     """
     with get_db() as conn:
-        return conn.execute(
-            "SELECT * FROM cards WHERE id = ?", (card_id,)
-        ).fetchone()
+        return conn.execute("SELECT * FROM cards WHERE id = ?", (card_id,)).fetchone()
 
 
 def get_topic_cards(topic: str) -> list[sqlite3.Row]:
@@ -337,7 +349,9 @@ def get_cards_by_date_range(
     """
     _ORDER = {"ASC": "ASC", "DESC": "DESC"}
     if order not in _ORDER:
-        raise ValueError(f"Invalid order direction: {order!r}. Must be 'ASC' or 'DESC'.")
+        raise ValueError(
+            f"Invalid order direction: {order!r}. Must be 'ASC' or 'DESC'."
+        )
 
     query = "SELECT id, name, topic, tags, created_date, author FROM cards WHERE 1=1"
     params = []
@@ -388,9 +402,7 @@ def get_random_card() -> sqlite3.Row | None:
     Columns: ``id``.  The caller redirects to the full card URL.
     """
     with get_db() as conn:
-        return conn.execute(
-            "SELECT id FROM cards ORDER BY RANDOM() LIMIT 1"
-        ).fetchone()
+        return conn.execute("SELECT id FROM cards ORDER BY RANDOM() LIMIT 1").fetchone()
 
 
 def get_cards_by_tag(tag: str) -> list[sqlite3.Row]:
@@ -404,12 +416,7 @@ def get_cards_by_tag(tag: str) -> list[sqlite3.Row]:
 
     Columns: ``id``, ``name``, ``topic``, ``tags``.
     """
-    safe_tag = (
-        tag.strip()
-        .replace("\\", "\\\\")
-        .replace("%", "\\%")
-        .replace("_", "\\_")
-    )
+    safe_tag = tag.strip().replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_")
     with get_db() as conn:
         return conn.execute(
             "SELECT id, name, topic, tags FROM cards"
@@ -421,6 +428,7 @@ def get_cards_by_tag(tag: str) -> list[sqlite3.Row]:
 # ---------------------------------------------------------------------------
 # Edge queries
 # ---------------------------------------------------------------------------
+
 
 def get_outgoing(card_id: str) -> list[sqlite3.Row]:
     """
@@ -550,9 +558,9 @@ def save_edges_to_file() -> None:
         ).fetchall()
     data = [
         {
-            "source":      r["source_id"],
-            "target":      r["target_id"],
-            "label":       r["label"],
+            "source": r["source_id"],
+            "target": r["target_id"],
+            "label": r["label"],
             "description": r["description"],
         }
         for r in rows
@@ -588,7 +596,13 @@ def get_site_stats() -> dict[str, int]:
         ``{"card_count": int, "topic_count": int, "edge_count": int}``
     """
     with get_db() as conn:
-        card_count  = conn.execute("SELECT COUNT(*) FROM cards").fetchone()[0]
-        topic_count = conn.execute("SELECT COUNT(DISTINCT topic) FROM cards").fetchone()[0]
-        edge_count  = conn.execute("SELECT COUNT(*) FROM edges").fetchone()[0]
-    return {"card_count": card_count, "topic_count": topic_count, "edge_count": edge_count}
+        card_count = conn.execute("SELECT COUNT(*) FROM cards").fetchone()[0]
+        topic_count = conn.execute(
+            "SELECT COUNT(DISTINCT topic) FROM cards"
+        ).fetchone()[0]
+        edge_count = conn.execute("SELECT COUNT(*) FROM edges").fetchone()[0]
+    return {
+        "card_count": card_count,
+        "topic_count": topic_count,
+        "edge_count": edge_count,
+    }

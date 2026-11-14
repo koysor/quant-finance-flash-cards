@@ -24,16 +24,18 @@ Where $T_{\text{obs}}$ is the observed statistic (e.g. Sharpe ratio), $T^{*(b)}$
 ```python
 import numpy as np
 
-returns = np.array([...])           # observed daily returns
+returns = np.array([...])  # observed daily returns
 obs_sharpe = returns.mean() / returns.std() * np.sqrt(252)
 
 B = 10_000
-boot_sharpes = np.array([
-    np.random.choice(returns, size=len(returns), replace=True).mean()
-    / np.random.choice(returns, size=len(returns), replace=True).std()
-    * np.sqrt(252)
-    for _ in range(B)
-])
+boot_sharpes = np.array(
+    [
+        np.random.choice(returns, size=len(returns), replace=True).mean()
+        / np.random.choice(returns, size=len(returns), replace=True).std()
+        * np.sqrt(252)
+        for _ in range(B)
+    ]
+)
 
 p_value = np.mean(boot_sharpes >= obs_sharpe)
 ```

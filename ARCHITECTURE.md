@@ -76,11 +76,13 @@ Every function opens its own connection via `get_db()` and closes it at the end 
 `create_app()` wires everything together:
 
 ```python
-init_db()                       # idempotent DDL — safe to call every restart
+init_db()  # idempotent DDL — safe to call every restart
 # load notation.json  → app.config["NOTATION"]   (LaTeX symbol definitions)
 # load key-terms.json → app.config["KEY_TERMS"]  (plain variable definitions)
-load_all_cards(notation_dict, key_terms_dict)  # mtime-checked upserts + stale card removal
-load_edges_from_file()          # clears edges table, repopulates from edges.json
+load_all_cards(
+    notation_dict, key_terms_dict
+)  # mtime-checked upserts + stale card removal
+load_edges_from_file()  # clears edges table, repopulates from edges.json
 # load resources.json → app.config["RESOURCES"]  (per-card website/video links)
 app.register_blueprint(bp)
 # context_processor → injects topic_colour(), site_stats, csrf_token, edge_edit_enabled

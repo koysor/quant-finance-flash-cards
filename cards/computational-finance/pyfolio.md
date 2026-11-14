@@ -29,8 +29,8 @@ A full tear sheet also reports the Sortino ratio (penalises only downside volati
 import pyfolio as pf
 
 pf.create_full_tear_sheet(
-    returns,                     # daily return Series
-    benchmark_rets=spy_returns   # optional benchmark
+    returns,  # daily return Series
+    benchmark_rets=spy_returns,  # optional benchmark
 )
 ```
 

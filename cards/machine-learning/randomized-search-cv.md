@@ -34,17 +34,21 @@ from scipy.stats import loguniform, randint
 from sklearn.model_selection import RandomizedSearchCV, TimeSeriesSplit
 
 param_dist = {
-    "learning_rate":    loguniform(0.01, 0.3),
-    "max_depth":        randint(3, 10),
-    "subsample":        loguniform(0.5, 0.5),
-    "reg_lambda":       loguniform(0.1, 10),
-    "n_estimators":     randint(100, 500),
+    "learning_rate": loguniform(0.01, 0.3),
+    "max_depth": randint(3, 10),
+    "subsample": loguniform(0.5, 0.5),
+    "reg_lambda": loguniform(0.1, 10),
+    "n_estimators": randint(100, 500),
 }
 
 search = RandomizedSearchCV(
-    xgb_model, param_dist,
-    n_iter=60, cv=TimeSeriesSplit(n_splits=5),
-    scoring="roc_auc", n_jobs=-1, random_state=42
+    xgb_model,
+    param_dist,
+    n_iter=60,
+    cv=TimeSeriesSplit(n_splits=5),
+    scoring="roc_auc",
+    n_jobs=-1,
+    random_state=42,
 )
 search.fit(X_train, y_train)
 ```

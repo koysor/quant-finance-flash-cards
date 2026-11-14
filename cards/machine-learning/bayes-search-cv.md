@@ -33,16 +33,18 @@ from skopt.space import Real, Integer
 
 search_spaces = {
     "learning_rate": Real(0.01, 0.3, prior="log-uniform"),
-    "max_depth":     Integer(3, 9),
-    "reg_lambda":    Real(0.1, 10, prior="log-uniform"),
-    "n_estimators":  Integer(100, 500),
+    "max_depth": Integer(3, 9),
+    "reg_lambda": Real(0.1, 10, prior="log-uniform"),
+    "n_estimators": Integer(100, 500),
 }
 
 search = BayesSearchCV(
-    xgb_model, search_spaces,
-    n_iter=30,                          # vs 60 for RandomizedSearchCV
+    xgb_model,
+    search_spaces,
+    n_iter=30,  # vs 60 for RandomizedSearchCV
     cv=TimeSeriesSplit(n_splits=5),
-    scoring="roc_auc", random_state=42
+    scoring="roc_auc",
+    random_state=42,
 )
 search.fit(X_train, y_train)
 ```

@@ -28,6 +28,8 @@ _host_semaphores: dict[str, asyncio.Semaphore] = {}
 def _host_semaphore(host: str) -> asyncio.Semaphore:
     """One semaphore per host, created lazily inside the running event loop."""
     return _host_semaphores.setdefault(host, asyncio.Semaphore(HOST_CONCURRENCY))
+
+
 TIMEOUT = aiohttp.ClientTimeout(total=20)
 USER_AGENT = (
     "Mozilla/5.0 (compatible; URLValidator/1.0; "
@@ -45,7 +47,7 @@ def resources_staged() -> bool:
             check=True,
         )
         return "resources.json" in result.stdout.splitlines()
-    except (subprocess.CalledProcessError, FileNotFoundError):
+    except subprocess.CalledProcessError, FileNotFoundError:
         # Not in a git repo or git not available — run anyway
         return True
 
@@ -84,13 +86,13 @@ async def check_url(
                     ok = status < 400
                     if status in RETRY_STATUSES:
                         retry_after = float(resp.headers.get("Retry-After", 0) or 0)
-            except (aiohttp.ClientError, asyncio.TimeoutError):
+            except aiohttp.ClientError, asyncio.TimeoutError:
                 ok, status = False, None
 
             # A rate limit or transient server error is not a broken link: back off and retry.
             if ok or (status is not None and status not in RETRY_STATUSES):
                 break
-            await asyncio.sleep(min(max(retry_after, 2 ** attempt), 30))
+            await asyncio.sleep(min(max(retry_after, 2**attempt), 30))
 
     return card_id, category, title, url, ok
 

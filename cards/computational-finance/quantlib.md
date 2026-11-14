@@ -23,18 +23,24 @@ import QuantLib as ql
 today = ql.Date(31, 5, 2026)
 ql.Settings.instance().evaluationDate = today
 
-payoff   = ql.PlainVanillaPayoff(ql.Option.Call, 100.0)   # K=100
-exercise = ql.EuropeanExercise(ql.Date(31, 5, 2027))       # T=1y
-option   = ql.VanillaOption(payoff, exercise)
+payoff = ql.PlainVanillaPayoff(ql.Option.Call, 100.0)  # K=100
+exercise = ql.EuropeanExercise(ql.Date(31, 5, 2027))  # T=1y
+option = ql.VanillaOption(payoff, exercise)
 
-process  = ql.BlackScholesMertonProcess(
-    ql.QuoteHandle(ql.SimpleQuote(105.0)),                 # S=105
-    ql.YieldTermStructureHandle(ql.FlatForward(today, 0.02, ql.Actual365Fixed())),  # q=2%
-    ql.YieldTermStructureHandle(ql.FlatForward(today, 0.05, ql.Actual365Fixed())),  # r=5%
-    ql.BlackVolTermStructureHandle(ql.BlackConstantVol(today, ql.TARGET(), 0.20, ql.Actual365Fixed()))  # σ=20%
+process = ql.BlackScholesMertonProcess(
+    ql.QuoteHandle(ql.SimpleQuote(105.0)),  # S=105
+    ql.YieldTermStructureHandle(
+        ql.FlatForward(today, 0.02, ql.Actual365Fixed())
+    ),  # q=2%
+    ql.YieldTermStructureHandle(
+        ql.FlatForward(today, 0.05, ql.Actual365Fixed())
+    ),  # r=5%
+    ql.BlackVolTermStructureHandle(
+        ql.BlackConstantVol(today, ql.TARGET(), 0.20, ql.Actual365Fixed())
+    ),  # σ=20%
 )
 option.setPricingEngine(ql.AnalyticEuropeanEngine(process))
-print(option.NPV())   # ≈ 12.39
+print(option.NPV())  # ≈ 12.39
 ```
 
 ## Example

@@ -47,12 +47,14 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import cross_val_score, TimeSeriesSplit
 
-pipe = Pipeline([
-    ("scaler", StandardScaler()),
-    ("clf",    GradientBoostingClassifier(n_estimators=100, max_depth=3)),
-])
+pipe = Pipeline(
+    [
+        ("scaler", StandardScaler()),
+        ("clf", GradientBoostingClassifier(n_estimators=100, max_depth=3)),
+    ]
+)
 
-tscv   = TimeSeriesSplit(n_splits=5)          # respects chronological order
+tscv = TimeSeriesSplit(n_splits=5)  # respects chronological order
 scores = cross_val_score(pipe, X, y, cv=tscv, scoring="roc_auc")
 print(f"CV AUC: {scores.mean():.3f}")
 ```

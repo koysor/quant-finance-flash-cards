@@ -11,6 +11,7 @@ Startup sequence
 6. Load ``resources.json``  — per-card learning links stored in app.config["RESOURCES"].
 7. Register the main Blueprint and a context processor that injects template globals.
 """
+
 import json
 import os
 import secrets
@@ -78,11 +79,14 @@ def create_app() -> Flask:
 
     root = os.path.dirname(app.root_path)
 
-    cache.init_app(app, config={
-        "CACHE_TYPE":            os.environ.get("CACHE_TYPE", "SimpleCache"),
-        "CACHE_DEFAULT_TIMEOUT": 300,
-        "CACHE_REDIS_URL":       os.environ.get("REDIS_URL"),
-    })
+    cache.init_app(
+        app,
+        config={
+            "CACHE_TYPE": os.environ.get("CACHE_TYPE", "SimpleCache"),
+            "CACHE_DEFAULT_TIMEOUT": 300,
+            "CACHE_REDIS_URL": os.environ.get("REDIS_URL"),
+        },
+    )
     app.config.setdefault(
         "RATELIMIT_STORAGE_URI",
         os.environ.get("RATELIMIT_STORAGE_URI", "memory://"),
@@ -93,11 +97,13 @@ def create_app() -> Flask:
 
     # notation.json maps LaTeX commands (e.g. "\sigma") to {symbol, meaning} pairs.
     # Used at card-load time to annotate which LaTeX symbols appear in each card.
-    app.config["NOTATION"]  = _load_json_config(os.path.join(root, "notation.json"),  {})
+    app.config["NOTATION"] = _load_json_config(os.path.join(root, "notation.json"), {})
 
     # key-terms.json maps plain variable names (e.g. "dW", "S") to {symbol, meaning} pairs.
     # Used at card-load time to annotate which equation variables appear in each card.
-    app.config["KEY_TERMS"] = _load_json_config(os.path.join(root, "key-terms.json"), {})
+    app.config["KEY_TERMS"] = _load_json_config(
+        os.path.join(root, "key-terms.json"), {}
+    )
 
     with bulk_connection():
         load_all_cards(
@@ -111,7 +117,9 @@ def create_app() -> Flask:
         cache.clear()  # evict any stale cached responses from a previous run
 
     # resources.json maps card IDs to {websites, videos} lists shown in the sidebar.
-    app.config["RESOURCES"] = _load_json_config(os.path.join(root, "resources.json"), {})
+    app.config["RESOURCES"] = _load_json_config(
+        os.path.join(root, "resources.json"), {}
+    )
 
     @app.teardown_appcontext
     def close_db(exc: BaseException | None = None) -> None:
@@ -144,10 +152,10 @@ def create_app() -> Flask:
             session["csrf_token"] = secrets.token_hex(16)
 
         return {
-            "topic_colour":  _topic_colour,
+            "topic_colour": _topic_colour,
             "TOPIC_COLOURS": TOPIC_COLOURS,
-            "site_stats":    _get_site_stats(),
-            "csrf_token":    session["csrf_token"],
+            "site_stats": _get_site_stats(),
+            "csrf_token": session["csrf_token"],
             "edge_edit_enabled": os.environ.get("ALLOW_EDGE_EDIT") == "1",
         }
 

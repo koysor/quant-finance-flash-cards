@@ -31,14 +31,17 @@ For scalar $f: \mathbb{R}^n \to \mathbb{R}$, reverse mode computes all $n$ parti
 import jax
 import jax.numpy as jnp
 
+
 def bs_call(params):
     S, K, r, sigma, T = params
-    d1 = (jnp.log(S/K) + (r + 0.5*sigma**2)*T) / (sigma*jnp.sqrt(T))
-    d2 = d1 - sigma*jnp.sqrt(T)
+    d1 = (jnp.log(S / K) + (r + 0.5 * sigma**2) * T) / (sigma * jnp.sqrt(T))
+    d2 = d1 - sigma * jnp.sqrt(T)
     from jax.scipy.stats import norm
-    return S*norm.cdf(d1) - K*jnp.exp(-r*T)*norm.cdf(d2)
 
-greeks = jax.grad(bs_call)([100., 100., 0.05, 0.20, 1.0])
+    return S * norm.cdf(d1) - K * jnp.exp(-r * T) * norm.cdf(d2)
+
+
+greeks = jax.grad(bs_call)([100.0, 100.0, 0.05, 0.20, 1.0])
 # Returns [delta, -delta_K, rho, vega, theta] simultaneously
 ```
 

@@ -29,6 +29,7 @@ Credit default classification: 20 candidate features including LTV, income, debt
 
 ```python
 from sklearn.feature_selection import mutual_info_classif
+
 scores = mutual_info_classif(X_train, y_train, random_state=42)
 ```
 

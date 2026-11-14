@@ -33,15 +33,15 @@ from sklearn.model_selection import cross_val_score, TimeSeriesSplit
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
-pipe = Pipeline([
-    ("scaler", StandardScaler()),
-    ("clf",    LogisticRegression(C=0.1, penalty="l2")),
-])
+pipe = Pipeline(
+    [
+        ("scaler", StandardScaler()),
+        ("clf", LogisticRegression(C=0.1, penalty="l2")),
+    ]
+)
 
 scores = cross_val_score(
-    pipe, X_train, y_train,
-    cv=TimeSeriesSplit(n_splits=5),
-    scoring="roc_auc"
+    pipe, X_train, y_train, cv=TimeSeriesSplit(n_splits=5), scoring="roc_auc"
 )
 # scores = [0.81, 0.85, 0.79, 0.83, 0.82]
 print(f"CV AUC: {scores.mean():.3f} ± {scores.std():.3f}")

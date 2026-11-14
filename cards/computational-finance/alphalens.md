@@ -29,10 +29,10 @@ A factor is considered useful if Q5 − Q1 (top minus bottom quintile return) is
 import alphalens as al
 
 factor_data = al.utils.get_clean_factor_and_forward_returns(
-    factor,           # pd.Series indexed by (date, asset)
-    prices,           # pd.DataFrame of daily prices
+    factor,  # pd.Series indexed by (date, asset)
+    prices,  # pd.DataFrame of daily prices
     quantiles=5,
-    periods=(1, 5, 10)
+    periods=(1, 5, 10),
 )
 al.tears.create_full_tear_sheet(factor_data)
 ```

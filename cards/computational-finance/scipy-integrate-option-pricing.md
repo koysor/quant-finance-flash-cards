@@ -25,6 +25,7 @@ $$\Pi_j = \frac{1}{2} + \frac{1}{\pi} \int_0^\infty \text{Re}\!\left[\frac{e^{-i
 from scipy.integrate import quad
 import numpy as np
 
+
 def heston_price(S, K, r, T, kappa, theta, sigma, rho, v0):
     def integrand(omega, j):
         phi = heston_cf(omega, S, r, T, kappa, theta, sigma, rho, v0, j)
