@@ -3825,6 +3825,24 @@
       }
     ]
   },
+  "computational-finance/lmm-predictor-corrector": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Predictor\u2013Corrector Method",
+        "url": "https://en.wikipedia.org/wiki/Predictor%E2%80%93corrector_method"
+      },
+      {
+        "title": "Financial Mathematics notes \u2014 LMM Simulation and Discretisation",
+        "url": "https://sungchullee.github.io/financial_math_book_writing/ch19/lmm/lmm_simulation_and_discretization"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Milne's Predictor & Corrector Method - Part 1 | Engineering Mathematics",
+        "url": "https://www.youtube.com/watch?v=H91_QJ01mFI"
+      }
+    ]
+  },
   "computational-finance/longstaff-schwartz": {
     "websites": [
       {
@@ -5845,6 +5863,28 @@
       }
     ]
   },
+  "derivatives/covered-interest-parity": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Interest Rate Parity",
+        "url": "https://en.wikipedia.org/wiki/Interest_rate_parity"
+      },
+      {
+        "title": "Wikipedia \u2014 Covered Interest Arbitrage",
+        "url": "https://en.wikipedia.org/wiki/Covered_interest_arbitrage"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Covered Interest Rate Parity (CIRP) Explained | CFA Level 2 Economics",
+        "url": "https://www.youtube.com/watch?v=D0NdPBm437Y"
+      },
+      {
+        "title": "Covered Interest Arbitrage and Interest Rate Parity | International Finance",
+        "url": "https://www.youtube.com/watch?v=m0hNd7Bo6EY"
+      }
+    ]
+  },
   "derivatives/d1-and-d2-in-black-scholes": {
     "websites": [
       {
@@ -7603,6 +7643,28 @@
       }
     ]
   },
+  "financial-maths/fx-quote-conventions": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Currency Pair",
+        "url": "https://en.wikipedia.org/wiki/Currency_pair"
+      },
+      {
+        "title": "Investopedia \u2014 Currency Pair",
+        "url": "https://www.investopedia.com/terms/c/currencypair.asp"
+      }
+    ],
+    "videos": [
+      {
+        "title": "How Forex Currency Pairs Work: Base and Quote Currencies Explained",
+        "url": "https://www.youtube.com/watch?v=gVfD1Et8O80"
+      },
+      {
+        "title": "What are Base and Quote Currencies?",
+        "url": "https://www.youtube.com/watch?v=r5OVPsV-Hqc"
+      }
+    ]
+  },
   "financial-maths/haircut": {
     "websites": [
       {
@@ -8036,6 +8098,24 @@
       {
         "title": "Investopedia \u2014 VWAP",
         "url": "https://www.investopedia.com/terms/v/vwap.asp"
+      }
+    ]
+  },
+  "fixed-income/abcd-volatility-parametrisation": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 LIBOR Market Model",
+        "url": "https://en.wikipedia.org/wiki/LIBOR_market_model"
+      },
+      {
+        "title": "Financial Mathematics notes \u2014 LMM Calibration Cascade",
+        "url": "https://sungchullee.github.io/financial_math_book_writing/ch19/calibration/lmm_calibration_cascade"
+      }
+    ],
+    "videos": [
+      {
+        "title": "LIBOR Market Model",
+        "url": "https://www.youtube.com/watch?v=vbtkyczmy60"
       }
     ]
   },
@@ -20774,6 +20854,18 @@
       }
     ]
   },
+  "risk/crashmetrics": {
+    "websites": [
+      {
+        "title": "Hua & Wilmott \u2014 Modelling Market Crashes: The Worst Case Scenario (RePEc)",
+        "url": "https://ideas.repec.org/p/sbs/wpsefe/1999mf24.html"
+      },
+      {
+        "title": "GlobalCapital \u2014 Value-at-Risk and Market Crashes",
+        "url": "https://www.globalcapital.com/article/28mssnrew086objw95hf0/derivatives/value-at-risk-and-market-crashes"
+      }
+    ]
+  },
   "risk/credit-rating-transition-matrix": {
     "websites": [
       {
@@ -25601,6 +25693,18 @@
       {
         "title": "QuantPy \u2014 Local volatility and Dupire's equation",
         "url": "https://www.youtube.com/watch?v=nMNhAoNyLgg"
+      }
+    ]
+  },
+  "volatility/uncertain-volatility-model": {
+    "websites": [
+      {
+        "title": "Avellaneda (NYU) \u2014 Pricing and Hedging Derivative Securities in Markets with Uncertain Volatility",
+        "url": "https://math.nyu.edu/~avellane/uvm1.html"
+      },
+      {
+        "title": "Avellaneda & Par\u00e1s (NYU) \u2014 Managing the Volatility Risk of Portfolios of Derivative Securities",
+        "url": "https://math.nyu.edu/~avellane/lambdauvm.html"
       }
     ]
   },

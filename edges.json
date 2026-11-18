@@ -4728,6 +4728,24 @@
     "description": "Every supervised learning pipeline for financial data must begin with label construction: the choice of labelling method (fixed-horizon, triple-barrier, trend-following) determines the target variable and shapes all downstream modelling decisions."
   },
   {
+    "source": "computational-finance/lmm-predictor-corrector",
+    "target": "fixed-income/bermudan-swaption",
+    "label": "used to price",
+    "description": "Bermudan swaptions under the LIBOR market model are priced by Monte Carlo, where predictor-corrector steps keep simulation from date to date accurate."
+  },
+  {
+    "source": "computational-finance/lmm-predictor-corrector",
+    "target": "fixed-income/libor-market-model",
+    "label": "simulates",
+    "description": "Predictor-corrector stepping is the standard way to simulate the LIBOR market model accurately with long time steps, because its drift depends on the forwards."
+  },
+  {
+    "source": "computational-finance/lmm-predictor-corrector",
+    "target": "stochastic-processes/euler-maruyama-method",
+    "label": "refines",
+    "description": "Predictor-corrector improves on an Euler step by re-evaluating the state-dependent drift at the predicted end of the step and averaging."
+  },
+  {
     "source": "computational-finance/longstaff-schwartz",
     "target": "computational-finance/monte-carlo-simulation-in-python",
     "label": "extends",
@@ -6766,6 +6784,30 @@
     "target": "financial-maths/funding-rate",
     "label": "includes",
     "description": "The funding rate is the financing component of cost-of-carry \u2014 the interest paid to borrow cash (or received on collateral) is the dominant carry cost for financial assets and directly enters the forward pricing formula."
+  },
+  {
+    "source": "derivatives/covered-interest-parity",
+    "target": "derivatives/cash-and-carry-arbitrage",
+    "label": "enforced by",
+    "description": "Covered interest parity is enforced by a cash-and-carry trade in currencies: borrow, convert, deposit and sell forward."
+  },
+  {
+    "source": "derivatives/covered-interest-parity",
+    "target": "derivatives/forward-price",
+    "label": "specialises",
+    "description": "Covered interest parity is the forward price formula for currencies, with the foreign interest rate playing the role of a yield on the asset."
+  },
+  {
+    "source": "derivatives/covered-interest-parity",
+    "target": "derivatives/garman-kohlhagen-model",
+    "label": "feeds into",
+    "description": "The Garman-Kohlhagen formula can be written in terms of the forward, which covered interest parity fixes from spot and the two interest rates."
+  },
+  {
+    "source": "derivatives/covered-interest-parity",
+    "target": "fixed-income/cross-currency-swap",
+    "label": "violated in",
+    "description": "Since 2008 cross-currency swaps have priced in a persistent basis, the market's measure of how far covered interest parity fails."
   },
   {
     "source": "derivatives/d1-and-d2-in-black-scholes",
@@ -9048,6 +9090,24 @@
     "description": "FTP splits aggregate NII into a true lending margin, a true deposit spread, and a treasury residual, revealing which business units genuinely contribute to profitability after accounting for funding cost."
   },
   {
+    "source": "financial-maths/fx-quote-conventions",
+    "target": "derivatives/covered-interest-parity",
+    "label": "underlies",
+    "description": "Covered interest parity is written for a BASE/QUOTE pair, so the forward formula only makes sense once the base and quote currencies are identified."
+  },
+  {
+    "source": "financial-maths/fx-quote-conventions",
+    "target": "derivatives/garman-kohlhagen-model",
+    "label": "needed for",
+    "description": "Garman-Kohlhagen treats the base currency's rate as a dividend yield and the quote currency's rate as the discount rate, so reading the pair the right way round is essential."
+  },
+  {
+    "source": "financial-maths/fx-quote-conventions",
+    "target": "derivatives/triangular-arbitrage",
+    "label": "constrains",
+    "description": "Cross rates built from two quotes against a common currency must agree with the direct quote, and triangular arbitrage is what enforces it."
+  },
+  {
     "source": "financial-maths/haircut",
     "target": "financial-maths/leverage",
     "label": "caps",
@@ -9718,6 +9778,24 @@
     "target": "portfolio-theory/transaction-cost-analysis",
     "label": "benchmark for",
     "description": "VWAP is the most widely used benchmark in transaction cost analysis \u2014 execution quality is measured by comparing the achieved price against the day s VWAP."
+  },
+  {
+    "source": "fixed-income/abcd-volatility-parametrisation",
+    "target": "fixed-income/interest-rate-cap-floor",
+    "label": "calibrated to",
+    "description": "The abcd parameters and the per-forward scaling factors are fitted so the LIBOR market model reprices each caplet in the cap market."
+  },
+  {
+    "source": "fixed-income/abcd-volatility-parametrisation",
+    "target": "fixed-income/libor-market-model",
+    "label": "parametrises",
+    "description": "The abcd form supplies the instantaneous volatility of each forward rate in the LIBOR market model as a smooth, humped function of time to expiry."
+  },
+  {
+    "source": "fixed-income/abcd-volatility-parametrisation",
+    "target": "volatility/volatility-term-structure",
+    "label": "shapes",
+    "description": "The abcd function produces the humped volatility term structure seen in interest-rate markets, with medium-dated forwards the most volatile."
   },
   {
     "source": "fixed-income/accrued-interest",
@@ -23484,6 +23562,24 @@
     "description": "For hedge funds, counterparty risk is heavily concentrated in the prime brokerage relationship \u2014 a prime broker failure can freeze assets, borrows, and margin financing simultaneously."
   },
   {
+    "source": "risk/crashmetrics",
+    "target": "derivatives/delta-gamma-approximation",
+    "label": "built on",
+    "description": "CrashMetrics expands the portfolio's change in value to second order in the crash size, a delta-gamma approximation with crash coefficients scaling each asset's move."
+  },
+  {
+    "source": "risk/crashmetrics",
+    "target": "probability/correlation-breakdown",
+    "label": "motivated by",
+    "description": "Correlations rise towards one in a crash, which is why CrashMetrics links every asset to a single index move instead of using a correlation matrix."
+  },
+  {
+    "source": "risk/crashmetrics",
+    "target": "risk/value-at-risk",
+    "label": "complements",
+    "description": "VaR estimates losses under normal-times correlations, while CrashMetrics asks for the worst loss when every asset moves with the index in a crash."
+  },
+  {
     "source": "risk/credit-rating-transition-matrix",
     "target": "fixed-income/credit-spread",
     "label": "linked to",
@@ -29968,6 +30064,30 @@
     "target": "volatility/vol-surface-arbitrage-constraints",
     "label": "encodes calendar condition for",
     "description": "Calendar spread arbitrage is absent exactly when total variance is non-decreasing in maturity at each fixed moneyness, so the arbitrage check is a direct property of the total-variance surface."
+  },
+  {
+    "source": "volatility/uncertain-volatility-model",
+    "target": "derivatives/gamma-greeks",
+    "label": "driven by",
+    "description": "The uncertain volatility model picks the upper or lower volatility at each point according to the sign of gamma, so gamma decides which extreme hurts a hedged position."
+  },
+  {
+    "source": "volatility/uncertain-volatility-model",
+    "target": "derivatives/static-hedging",
+    "label": "tightened by",
+    "description": "Uncertain volatility spreads are too wide to trade on their own, and statically hedging with traded options narrows them because the model is nonlinear in the portfolio."
+  },
+  {
+    "source": "volatility/uncertain-volatility-model",
+    "target": "risk/knightian-uncertainty",
+    "label": "applies",
+    "description": "The uncertain volatility model treats volatility as Knightian uncertainty, a range with no probability distribution, and answers with a price range rather than an expected value."
+  },
+  {
+    "source": "volatility/uncertain-volatility-model",
+    "target": "volatility/local-volatility",
+    "label": "contrasts with",
+    "description": "Local volatility assumes volatility is a known function of spot and time, while the uncertain volatility model assumes only that it lies in a band and prices the worst and best cases."
   },
   {
     "source": "volatility/variance-gamma-model",
