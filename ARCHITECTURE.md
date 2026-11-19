@@ -67,9 +67,9 @@ edges
   created_at  TEXT           datetime('now')
 ```
 
-`ON DELETE CASCADE` on both edge FK columns means deleting a card automatically removes its edges. Foreign keys are enabled per-connection via `PRAGMA foreign_keys = ON`.
+`ON DELETE CASCADE` on both edge FK columns means deleting a card automatically removes its edges. Foreign keys are enabled per writable connection via `PRAGMA foreign_keys = ON`.
 
-Every function opens its own connection via `get_db()` and closes it at the end of a `with` block. There is no connection pool; this is fine for a single-process dev server.
+Functions get their connection from `get_db()`. Inside a request it is one connection per request, stored on `g` and closed at teardown. It is read-only (`mode=ro`, no PRAGMAs) unless edge editing is on, since nothing else writes after startup. During the startup load every call shares one `bulk_connection()` transaction, which takes precedence even if another app's request context is active. There is no connection pool: opening a read-only connection costs under 1 ms, and most requests are served from the page cache without touching the database. Foreign keys only matter for writes, so `PRAGMA foreign_keys = ON` is set on writable connections only.
 
 ### 4. Application factory — `app/__init__.py`
 
@@ -86,9 +86,11 @@ load_edges_from_file()  # clears edges table, repopulates from edges.json
 # load resources.json → app.config["RESOURCES"]  (per-card website/video links)
 app.register_blueprint(bp)
 # context_processor → injects topic_colour(), site_stats, csrf_token, edge_edit_enabled
+# after_request     → Cache-Control + weak ETag on GET 200s; ?v= hash on static URLs
+# CACHE_WARM_PREFIX set → render the heaviest pages into the page cache
 ```
 
-The context processor runs on every request and queries `get_all_cards()` + `get_site_stats()` — two SQLite round-trips per page render. Given the current card count (~900) and single-process dev server, this is negligible. If the card count grows substantially or multi-worker deployment is introduced, results should be cached (e.g. with `flask_caching` or a module-level dict with a short TTL).
+The context processor runs on every page render; `get_site_stats()` is memoised in a module-level dict, so it costs one SQLite query per process. The CSRF token is only created in edge-edit mode, so ordinary pages never touch the session or set a cookie. Rendered pages themselves are cached until restart (see [Caching and Performance](#caching-and-performance)), so most requests never render at all.
 
 ### 5. Routes — `app/routes.py`
 
@@ -175,7 +177,9 @@ uv run python run.py
        │                         also removes stale cards whose files no longer exist
        ├─ load_edges_from_file() clears edges table, repopulates from edges.json
        ├─ register_blueprint(bp)
-       └─ attach context_processor (CSRF token, topic_colour, search data, stats)
+       ├─ attach context_processor (topic_colour, stats; CSRF token in edit mode only)
+       ├─ attach after_request caching headers and static URL versioning
+       └─ warm the page cache       only when CACHE_WARM_PREFIX is set (production)
   └─ app.run(debug=True)        reloader active — file changes restart the server
                                  card changes are picked up on next restart
 ```
@@ -184,9 +188,39 @@ The Flask debug reloader watches Python files. **It does not watch `cards/*.md`*
 
 ---
 
+## Caching and Performance
+
+Nothing changes at runtime (outside edge-edit mode), so every page is a pure function of the files loaded at startup. Three layers exploit that.
+
+**In-process page cache** (`flask_caching` `SimpleCache`, at most `CACHE_THRESHOLD` entries, default 500). Every cached view uses `cached_page(...)` in `app/routes.py`, never `@cache.cached` directly. It:
+
+- keys on `request.script_root` as well as the path, because every link comes from `url_for`. A request without Caddy's `X-Forwarded-Prefix` (the Docker health check, or anyone reaching the host port) must not store pages whose links lack `/flashcards`;
+- keys on only the query parameters the view names, never the raw query string, so junk parameters create no entries;
+- stores only 200 responses (flask-caching 2.5 would otherwise store `abort(404)` and redirects too);
+- skips unbounded inputs through `cacheable=`: tag-filtered index pages (4,000+ tags at about 400 KB each) and dated `/recent` ranges. `SimpleCache` caps the entry count, not the size;
+- is bypassed while `ALLOW_EDGE_EDIT=1`. A cached page would skip the context processor that creates the CSRF token, and edits change the pages. `remove_link` clears the cache after an edit.
+
+With every card, study path, quiz topic and topic view visited, the cache holds about 280 entries and 20 MB. `create_app()` clears it on every start. When `CACHE_WARM_PREFIX` is set (production: `/flashcards`), `create_app()` renders `/`, `/graph`, `/formulas`, `/recent` and `/search-data.json` through a test client with that prefix. Under gunicorn's `preload_app` this runs once in the master, so forked workers start warm.
+
+**HTTP caching** (`add_cache_headers` in `create_app()`). Successful GET pages get `Cache-Control: public, max-age=300` unless the view set its own (`/search-data.json` uses a day). They also get a weak ETag built from a token generated at each start, so revalidation returns an empty 304 until the next restart or deploy. `url_for('static', ...)` appends a content hash (`?v=`), and versioned static responses are cached for a year (`immutable`). Debug and edit modes get none of these headers.
+
+**Cheaper rendering and requests.**
+
+- A Jinja extension strips every template line's indentation at compile time. It cut the index from 2.0 MB to 1.3 MB with identical rendering.
+- Request connections to SQLite are read-only and skip the PRAGMAs (edit mode keeps a writable one).
+- gunicorn's `gthread` workers stop one slow request from blocking the rest. Its `when_ready` hook trims the master's leftover startup memory (`gc.collect()` plus `malloc_trim(0)`) before forking, which took about 17 MB off the master.
+
+Measured with the Flask test client:
+
+| Page | Uncached | Cached |
+|---|---|---|
+| `/` | 110 ms | about 3 ms |
+| `/card/<id>` | 20 ms | 0.4 ms |
+| `/path/<id>` | 26 ms | 0.5 ms |
+
 ## Deployment
 
-Production runs as a Docker container (`docker/Dockerfile`, gunicorn with one worker) on a shared EC2 instance. A Caddy reverse proxy owned by the `quant-finance` repo serves it at `/flashcards/`, stripping the prefix and sending `X-Forwarded-Prefix`; `create_app()` wraps the WSGI app in `ProxyFix` so `url_for` and the rate limiter see the original prefix and client IP. `graph.db` is not shipped: it is rebuilt from `cards/` and `edges.json` each time the container starts. Templates must build URLs with `url_for`, never root-relative strings, or they break behind the prefix. The full process is in [`docker/README.md`](docker/README.md); the `deploy/` directory is an alternative systemd + nginx setup for a standalone host.
+Production runs as a Docker container (`docker/Dockerfile`, gunicorn with one `gthread` worker and two threads) on a shared EC2 instance. A Caddy reverse proxy owned by the `quant-finance` repo serves it at `/flashcards/`, stripping the prefix and sending `X-Forwarded-Prefix`; `create_app()` wraps the WSGI app in `ProxyFix` so `url_for` and the rate limiter see the original prefix and client IP. `graph.db` is built into the image at build time, so a container start only checks card mtimes (all unchanged) instead of re-parsing every card; it is never committed. Templates must build URLs with `url_for`, never root-relative strings, or they break behind the prefix. The full process is in [`docker/README.md`](docker/README.md); the `deploy/` directory is an alternative systemd + nginx setup for a standalone host.
 
 ## Adding Things
 

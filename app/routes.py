@@ -27,11 +27,20 @@ Topic colours
 strings.  Adding a new topic requires adding an entry here; the colour cascades
 automatically to card tiles, graph nodes, topic badges, and sidebar dots through
 the CSS custom property ``--tc`` set inline on elements.
+
+Page caching
+------------
+Every GET view except ``/random`` and ``/barbie`` is cached until restart with
+``@cached_page(...)``, defined below.  Never use ``@cache.cached`` directly: the
+decorator keys on the URL prefix, stores only 200 responses and skips caching in
+edge-edit mode, and each of those prevents a real bug.
 """
 
+import functools
 import json
-import os
 import re
+from collections.abc import Callable
+from typing import Any, TypeVar, cast
 
 from flask import (
     Blueprint,
@@ -39,6 +48,7 @@ from flask import (
     abort,
     current_app,
     jsonify,
+    make_response,
     redirect,
     render_template,
     request,
@@ -47,7 +57,7 @@ from flask import (
 )
 from flask.typing import ResponseReturnValue
 
-from app.extensions import cache, limiter
+from app.extensions import cache, edge_edit_enabled, limiter
 from app.db import (
     delete_edge,
     find_cards_by_slug,
@@ -65,6 +75,8 @@ from app.db import (
 )
 
 bp = Blueprint("main", __name__)
+
+F = TypeVar("F", bound=Callable[..., Any])
 
 # Topic name → hex colour.  Must be kept in sync with the card ``**Topic:**`` fields.
 # The colour is injected into every template via the context processor in __init__.py.
@@ -87,6 +99,72 @@ TOPIC_COLOURS: dict[str, str] = {
     "Volatility": "#d946ef",  # fuchsia
 }
 _DEFAULT_COLOUR = "#4f9ef8"
+
+
+# Page caching
+# ------------
+# Card content only changes on restart, so rendered pages are cached until then
+# (``create_app()`` clears the cache at startup).  ``cached_page`` is the one way
+# views are cached:
+#
+# - The key holds ``request.script_root`` because every link on a page comes
+#   from ``url_for``.  A request without Caddy's ``X-Forwarded-Prefix`` (such as
+#   the Docker health check) must not store a page whose links lack
+#   ``/flashcards`` for prefixed visitors to receive.
+# - The key holds only the query parameters the view names, never the raw query
+#   string, so junk parameters cannot create entries.
+# - Only 200 responses are stored.  flask-caching would otherwise also store
+#   ``abort(404)`` and redirects, letting junk URLs evict real pages.
+# - ``cacheable`` lets a view skip caching for unbounded inputs (any tag, any
+#   date range): SimpleCache caps the number of entries, not their size.
+# - Caching is bypassed while edge editing is on: a cached page would skip the
+#   context processor that puts the CSRF token in the session, and edits change
+#   the pages.
+
+
+def _is_ok(rv: Any) -> bool:
+    """True when a view's return value (str, tuple or response) is a 200."""
+    if isinstance(rv, tuple):
+        return next((x for x in rv[1:] if isinstance(x, int)), 200) == 200
+    return getattr(rv, "status_code", 200) == 200
+
+
+def cached_page(
+    *query_args: str,
+    timeout: int = 0,
+    variant: Callable[[], str] | None = None,
+    cacheable: Callable[[], bool] | None = None,
+) -> Callable[[F], F]:
+    """
+    Cache a view's response, keyed on the URL prefix, the path, the named query
+    parameters and, if given, ``variant()`` (for content negotiation).
+    """
+
+    def make_key(*_args: Any, **_kwargs: Any) -> str:
+        parts = [request.script_root, request.path]
+        parts += [request.args.get(a, "").strip() for a in query_args]
+        if variant is not None:
+            parts.append(variant())
+        return "page:" + json.dumps(parts)
+
+    def bypass() -> bool:
+        return edge_edit_enabled() or (cacheable is not None and not cacheable())
+
+    return cache.cached(
+        timeout=timeout, make_cache_key=make_key, unless=bypass, response_filter=_is_ok
+    )
+
+
+def vary_on_accept(view: F) -> F:
+    """Add ``Vary: Accept`` for views that pick HTML or JSON from that header."""
+
+    @functools.wraps(view)
+    def wrapper(*args: Any, **kwargs: Any) -> Response:
+        response = make_response(view(*args, **kwargs))
+        response.vary.add("Accept")
+        return response
+
+    return cast(F, wrapper)
 
 
 def _topic_colour(topic: str) -> str:
@@ -165,6 +243,16 @@ _SKIP_TOOLTIP = {
 
 
 @bp.get("/")
+@cached_page(
+    "tag",
+    "topic",
+    # Only the full grid and the per-topic views: there are thousands of tags
+    # and each tag-filtered page repeats the whole tag strip (~400 KB).
+    cacheable=lambda: (
+        not request.args.get("tag", "").strip()
+        and request.args.get("topic", "").strip() in ("", *TOPIC_COLOURS)
+    ),
+)
 def index() -> str:
     """
     Render the main card grid.
@@ -203,6 +291,7 @@ def index() -> str:
 
 
 @bp.get("/tag/<tag>")
+@cached_page()
 def tag_page(tag: str) -> str:
     """
     Render a dedicated page for all cards sharing a single *tag*.
@@ -230,7 +319,7 @@ def barbie_theme() -> Response:
 
 @bp.get("/search-data.json")
 @limiter.limit("60 per minute")
-@cache.cached(timeout=0, key_prefix="search_data_json")
+@cached_page()
 def search_data_json_view() -> Response:
     """
     Return the full card index as JSON for the client-side search overlay.
@@ -285,13 +374,15 @@ def _wants_json() -> bool:
     )
 
 
-def _recent_cache_key() -> str:
-    """Cache key that separates the HTML and JSON variants of ``/recent``."""
-    return f"recent:{'json' if _wants_json() else 'html'}:{request.full_path}"
-
-
 @bp.get("/recent")
-@cache.cached(timeout=300, make_cache_key=_recent_cache_key)
+@vary_on_accept
+@cached_page(
+    timeout=300,
+    variant=lambda: "json" if _wants_json() else "html",
+    # Any date range is valid and the full list is 1.8 MB: cache only the
+    # undated list, not every distinct ?start= / ?end= pair.
+    cacheable=lambda: not (request.args.get("start") or request.args.get("end")),
+)
 def recent() -> Response | str:
     """
     Render a reverse-chronological list of cards, grouped by date.
@@ -332,6 +423,7 @@ def recent() -> Response | str:
 
 
 @bp.get("/card/<path:card_id>")
+@cached_page()
 def card_detail(card_id: str) -> ResponseReturnValue:
     """
     Render the full detail page for a single card.
@@ -422,7 +514,7 @@ def remove_link(card_id: str) -> Response:
     Returns 403 on CSRF failure, 404 if the card does not exist.
     Redirects back to the card detail page on success.
     """
-    if os.environ.get("ALLOW_EDGE_EDIT") != "1":
+    if not edge_edit_enabled():
         abort(404)
 
     token = request.form.get("csrf_token", "")
@@ -452,7 +544,7 @@ def remove_link(card_id: str) -> Response:
 
 @bp.get("/formulas")
 @limiter.limit("30 per minute")
-@cache.cached(timeout=0, key_prefix="formulas_view")
+@cached_page()
 def formulas() -> str:
     """
     Render a page aggregating the Key Formula section from every card.
@@ -541,6 +633,7 @@ def _study_path(card_id: str) -> tuple[list[dict], int]:
 
 @bp.get("/path/<path:card_id>")
 @limiter.limit("60 per minute")
+@cached_page()
 def study_path(card_id: str) -> ResponseReturnValue:
     """Show the learning order for a card: its nearest prerequisites, then the card."""
     if get_card(card_id) is None:
@@ -556,6 +649,7 @@ _DEFINITION_RE = re.compile(
 
 @bp.get("/quiz")
 @limiter.limit("30 per minute")
+@cached_page("topic")
 def quiz() -> str:
     """
     Self-test mode: show each card's title, reveal its Definition and Key Formula on demand.
@@ -592,7 +686,7 @@ def quiz() -> str:
 
 @bp.get("/graph")
 @limiter.limit("10 per minute")
-@cache.cached(timeout=0, key_prefix="graph_view")
+@cached_page()
 def graph_view() -> str:
     """
     Render the interactive vis.js knowledge graph.

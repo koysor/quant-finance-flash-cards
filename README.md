@@ -26,7 +26,10 @@ bash scripts/install_hooks.sh
 | `SECRET_KEY` | Required unless `FLASK_DEBUG=1` | Flask session signing key. With `FLASK_DEBUG=1` (local development) a random key is generated and changes on restart; the launch scripts set this. Set a stable value in production. |
 | `PORT` | `5000` | Port for the development server. |
 | `DEBUG` | `false` | Enable Flask debug mode and the interactive reloader when running `run.py`. |
-| `ALLOW_EDGE_EDIT` | unset | Set to `1` to enable the card-page "remove link" button, which rewrites `edges.json`. Leave unset in production. |
+| `ALLOW_EDGE_EDIT` | unset | Set to `1` to enable the card-page "remove link" button, which rewrites `edges.json`. It also turns off page caching and caching headers. Leave unset in production. |
+| `CACHE_WARM_PREFIX` | unset | When set, render the heaviest pages into the page cache at startup, requested with this URL prefix (`/flashcards` in production; empty for a site served at `/`). |
+| `CACHE_THRESHOLD` | `500` | Maximum number of cached pages. A full cache is about 20–30 MB. |
+| `WEB_CONCURRENCY` / `GUNICORN_THREADS` | `1` / `2` | gunicorn workers, and threads per worker (`gunicorn.conf.py`). |
 
 A `.env.example` file is provided as a template.
 

@@ -38,7 +38,7 @@ if [ "$code" != "200" ]; then echo "FAILED ($code)"; tail -30 app.log; fi
 
 ## Testing
 
-Run `uv run pytest`. Tests copy the database and `edges.json` into a temp directory, so they never modify the real ones. A malformed card or unknown topic raises `ValueError` at startup.
+Run `uv run pytest`. Tests copy the database and `edges.json` into a temp directory, so they never modify the real ones. Caching behaviour (cache keys, headers, warm-up, read-only connections, dedented templates) is covered by `tests/test_caching.py`; extend it when adding a cached view. A malformed card or unknown topic raises `ValueError` at startup.
 
 Also verify changes by starting the server and checking:
 1. The card appears on the index page under the correct topic
@@ -62,7 +62,9 @@ Flask web application that reads Markdown flash cards from `cards/` and stores t
 4. `load_all_cards(notation_dict, key_terms_dict)` — scans `cards/**/*.md`, skips unchanged files (mtime check), upserts changed ones, removes stale cards whose files no longer exist
 5. `load_edges_from_file()` — clears the `edges` table and repopulates from `edges.json`
 6. Load `resources.json` → `app.config["RESOURCES"]` (per-card website/video links)
-7. Blueprint registered, context processor attached (CSRF token, topic colours, search data, stats)
+7. Blueprint registered, context processor attached (topic colours, stats; CSRF token only when `ALLOW_EDGE_EDIT=1`)
+8. `after_request` caching hook and static URL versioning attached
+9. If `CACHE_WARM_PREFIX` is set, the heaviest pages are rendered into the page cache
 
 **Edge mutations** (only when `ALLOW_EDGE_EDIT=1`): removing a link via the card detail sidebar writes to `graph.db` first, then calls `save_edges_to_file()` to keep `edges.json` in sync. Commit `edges.json` after changes. Adding edges is done by editing `edges.json` directly and restarting.
 
@@ -80,7 +82,11 @@ Flask routes use `<path:card_id>` to allow the `/` in URLs.
 - `topic_colour(topic)` — returns hex colour from `TOPIC_COLOURS`
 - `edge_edit_enabled` — true when `ALLOW_EDGE_EDIT=1`; shows the remove-link button
 - `site_stats` — `card_count`, `topic_count`, `edge_count`
-- `csrf_token` — session-based token for POST form protection
+- `csrf_token` — session-based token for POST form protection; created only when `ALLOW_EDGE_EDIT=1`, so normal pages set no cookie
+
+**Caching:** content changes only on restart, so views are cached until then with `@cached_page(...)` in `routes.py` (`create_app()` clears the cache at startup); never use `@cache.cached` directly. `cached_page` keys on the URL prefix (`request.script_root`), the path and only the query parameters you name, stores only 200 responses, and is bypassed while `ALLOW_EDGE_EDIT=1`. Pass `cacheable=` to skip unbounded inputs: `SimpleCache` caps the entry count (`CACHE_THRESHOLD`, default 500), not the size. An `after_request` hook in `create_app()` adds `Cache-Control: public, max-age=300` and a weak ETag to successful GET pages (not in debug or edit mode), and `url_for('static', ...)` adds a content-hash `?v=` so static files are cached for a year. gunicorn runs `gthread` workers (`gunicorn.conf.py`). Setting `CACHE_WARM_PREFIX` (production: `/flashcards`) renders the heaviest pages at startup, before gunicorn forks. Outside edit mode, request database connections are read-only.
+
+**Templates are dedented:** a Jinja extension in `app/__init__.py` strips each template line's leading indentation at compile time (a third of the large pages was indentation). Never put whitespace-sensitive markup (`<pre>`, `<textarea>`) directly in a template, and do not turn on `trim_blocks`: with dedent it can join tokens across a line break. Card HTML inserted through variables is not affected.
 
 **Frontend:** no build step. KaTeX (maths) and vis.js (graph) loaded from CDN. Theme (dark/light) and wide mode in `localStorage`, applied via `data-theme` / `data-wide` on `<html>` before paint. Visited cards tracked client-side in `localStorage`.
 

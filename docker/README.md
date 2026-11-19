@@ -74,11 +74,14 @@ There is no local compose file; use `docker build` and `docker run` as above.
 |---|---|---|
 | `SECRET_KEY` | `docker/.env` on the host (read via `env_file`) | Required. 64 hex characters, never committed |
 | `WEB_CONCURRENCY` | `docker-compose.prod.yml` | `1` gunicorn worker (`gunicorn.conf.py` default) |
+| `CACHE_WARM_PREFIX` | `docker-compose.prod.yml` | `/flashcards`. Renders the heaviest pages into the cache at startup, keyed as Caddy requests them. Unset elsewhere |
+| `CACHE_THRESHOLD` | unset | Defaults to `500` cached pages. Lower it if the container runs short of memory |
+| `GUNICORN_THREADS` | unset | Defaults to `2` threads per worker (`gthread` worker class). Each thread can render a 2 MB page at once while the cache is cold, so raise it only with memory to spare |
 | `GUNICORN_BIND` | unset | Defaults to `0.0.0.0:8000` |
 | `ALLOW_EDGE_EDIT` | unset | Leave unset. It enables the remove-link button, which rewrites `edges.json`; the container's copy is not persisted |
 | `mem_limit` / `memswap_limit` | `docker-compose.prod.yml` | `180m` / `256m`, the same as the other apps |
 
-`graph.db` is derived data. It is rebuilt from `cards/` and `edges.json` every time the container starts (a few seconds), so there is no volume to back up. Card changes reach production by pushing to `main`.
+`graph.db` is derived data. The image builds it from `cards/` and `edges.json` at build time (`RUN ... import wsgi` in the `Dockerfile`), so a container start only checks card mtimes and is up in 1–3 seconds. Nothing needs a volume or a backup. Card changes reach production by pushing to `main`.
 
 ### First-time host setup
 
@@ -186,7 +189,20 @@ The instance is a 1 GiB t3.micro shared by Caddy and five other containers, with
 | Instance before deploying this app | 550 MB used, 219 MB available, 86 MB swap used |
 | Instance just after | 567 MB used, 200 MB available, 166 MB swap used |
 
-The index, graph and formulas pages are 1.6–2.3 MB of HTML each, which is what drives memory spikes. Keep `WEB_CONCURRENCY=1`. Check `free -m` and `docker stats --no-stream` now and then; if swap use keeps climbing or a container restarts, move the instance to a t3.small (2 GiB).
+The graph, formulas and index pages are 1.3–2.3 MB of HTML each (the index was 2 MB before templates were dedented), which is what drives memory spikes. `CACHE_WARM_PREFIX` renders them once at startup, so they are cached before any request arrives. Keep `WEB_CONCURRENCY=1`: the one worker's threads share its memory and its page cache, while each extra worker would hold its own copy of both.
+
+Rendered pages are cached in memory until the next restart (`cached_page` in `app/routes.py`). Keys include the `/flashcards` prefix, so the health check's unprefixed requests cannot store pages with wrong links. Only 200 responses are cached, and only from bounded inputs: junk query parameters and 404s create no entries, and tag-filtered index pages (4,000+ tags at about 400 KB each) and dated `/recent` ranges are not cached. `SimpleCache` holds at most `CACHE_THRESHOLD` (500) entries, about 20–30 MB when full. Successful GET pages carry `Cache-Control: public, max-age=300` and a weak ETag (a 304 on revalidation) and set no cookie unless `ALLOW_EDGE_EDIT=1`, so Caddy or a CDN can cache them too. Static files get a content-hash `?v=` and are cached for a year. The image ships a pre-built `graph.db`, so a container start skips re-parsing the cards.
+
+Measured locally on 19 November 2026, with the production limits (`--memory 180m --memory-swap 256m`, one worker), comparing this image with the previous one (one sync worker, no page cache):
+
+| | Previous image | This image |
+|---|---|---|
+| Container start to first 200 | about 3 s | 1–3 s, including the warm-up |
+| Mixed browsing load, 50 clients | 45 req/s, p50 1.1 s, p95 1.6 s | 241 req/s, p50 158 ms, p95 438 ms |
+| Mixed browsing load, 200 clients | 43 req/s, p50 4.4 s, p95 5.5 s | 235 req/s, p50 703 ms, p95 1.6 s |
+| Process memory (anon) after the load test | 120 MiB | 142 MiB with a full cache (156 MiB before the `malloc_trim` hook); peak 171 MiB |
+
+Both images served 429s as well, from the per-IP rate limits, because the test ran from one IP. The extra 20 MiB or so is mostly the page cache. The gunicorn master also keeps whatever memory startup used (card parsing, the SQLite bulk-load cache, the warm-up renders), so `gunicorn.conf.py`'s `when_ready` hook runs `gc.collect()` and glibc's `malloc_trim(0)` before forking. That took the master from 82 MB to 65 MB and the load-test peak from 180 MiB (the cap, with the kernel reclaiming file cache) to 171 MiB. The margin is still smaller than before. If the container swaps heavily, lower `CACHE_THRESHOLD` first; lowering it from 500 to 300 saved only about 4 MB under this load. Check `free -m` and `docker stats --no-stream` now and then; if swap use keeps climbing or a container restarts, move the instance to a t3.small (2 GiB).
 
 ## Troubleshooting
 

@@ -9,22 +9,51 @@ Startup sequence
 4. ``load_all_cards()``     — scan ``cards/**/*.md``, upsert changed cards, remove stale ones.
 5. ``load_edges_from_file()`` — repopulate the edges table from ``edges.json``.
 6. Load ``resources.json``  — per-card learning links stored in app.config["RESOURCES"].
-7. Register the main Blueprint and a context processor that injects template globals.
+7. Register the main Blueprint and a context processor that injects template globals
+   (the CSRF token only in edge-edit mode, so ordinary pages set no cookie).
+8. Attach the HTTP caching hook (``Cache-Control`` and a weak ETag on GET 200s) and
+   ``?v=<hash>`` versioning of ``url_for('static', ...)`` URLs.
+9. If ``CACHE_WARM_PREFIX`` is set, render the heaviest pages into the page cache.
+
+Templates are dedented at compile time by ``_DedentTemplates``.  Page caching
+itself is ``cached_page`` in ``app/routes.py``; ARCHITECTURE.md describes the design.
 """
 
+import hashlib
 import json
 import os
+import re
 import secrets
 from typing import Any
 
-from flask import Flask, g, render_template, session
+from flask import Flask, Response, g, render_template, request, session
+from jinja2.ext import Extension
 from werkzeug.exceptions import HTTPException
 from werkzeug.middleware.proxy_fix import ProxyFix
 
 from app.db import bulk_connection, init_db, load_edges_from_file, get_site_stats
-from app.extensions import cache, limiter
+from app.extensions import cache, edge_edit_enabled, limiter
 from app.loader import load_all_cards
 from app.routes import bp, TOPIC_COLOURS, _topic_colour
+
+
+class _DedentTemplates(Extension):
+    """
+    Strip the leading indentation from every template source line before Jinja
+    compiles it.  Newlines stay, so whitespace between tokens never disappears
+    and rendering is unchanged.  Only template source is touched: card HTML
+    inserted through variables (including ``<pre>`` code blocks) is not.  Do not
+    put whitespace-sensitive content (``<pre>``, ``<textarea>``) directly in a
+    template.
+    """
+
+    def preprocess(
+        self, source: str, name: str | None, filename: str | None = None
+    ) -> str:
+        return _INDENT_RE.sub("", source)
+
+
+_INDENT_RE = re.compile(r"^[ \t]+", re.MULTILINE)
 
 _site_stats_cache: dict[str, int] | None = None
 
@@ -66,6 +95,12 @@ def create_app() -> Flask:
         A fully initialised application instance ready to serve requests.
     """
     app = Flask(__name__)
+    # Template indentation was over a third of the large pages (730 KB of the
+    # 2 MB index), all of it held in the page cache.  Drop it at compile time.
+    # Not trim_blocks: removing the newline after a block tag can join tokens
+    # once the next line's indentation is gone (``</span>{% endif %}`` then
+    # ``</a>`` would render ``</span></a>``, dropping a space).
+    app.jinja_env.add_extension(_DedentTemplates)
     # Behind Caddy: trust one proxy hop for client IP, scheme, host and the
     # X-Forwarded-Prefix header (the app is served under /flashcards/).
     app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
@@ -84,6 +119,9 @@ def create_app() -> Flask:
         config={
             "CACHE_TYPE": os.environ.get("CACHE_TYPE", "SimpleCache"),
             "CACHE_DEFAULT_TIMEOUT": 300,
+            # SimpleCache entry cap.  A full cache of card and study-path pages
+            # is about 20-30 MB; lower this if the container runs short.
+            "CACHE_THRESHOLD": int(os.environ.get("CACHE_THRESHOLD", 500)),
             "CACHE_REDIS_URL": os.environ.get("REDIS_URL"),
         },
     )
@@ -147,21 +185,111 @@ def create_app() -> Flask:
             Dict with ``card_count``, ``topic_count``, and ``edge_count``.
         csrf_token
             A per-session random hex token checked on every POST request.
+            Only created when edge editing is on; otherwise empty, so pages
+            set no session cookie and shared caches can store them.
         """
-        if "csrf_token" not in session:
+        edit = edge_edit_enabled()
+        if edit and "csrf_token" not in session:
             session["csrf_token"] = secrets.token_hex(16)
 
         return {
             "topic_colour": _topic_colour,
             "TOPIC_COLOURS": TOPIC_COLOURS,
             "site_stats": _get_site_stats(),
-            "csrf_token": session["csrf_token"],
-            "edge_edit_enabled": os.environ.get("ALLOW_EDGE_EDIT") == "1",
+            "csrf_token": session.get("csrf_token", "") if edit else "",
+            "edge_edit_enabled": edit,
         }
+
+    static_versions: dict[tuple[str, float], str] = {}
+
+    @app.url_defaults
+    def version_static_urls(endpoint: str, values: dict[str, Any]) -> None:
+        """
+        Add ``?v=<content hash>`` to every ``url_for('static', ...)`` URL, so
+        static files can be cached for a year and still change on deploy.
+        Keyed on mtime too, so an edited file gets a new hash in development.
+        """
+        if endpoint != "static" or "filename" not in values or not app.static_folder:
+            return
+        path = os.path.join(app.static_folder, values["filename"])
+        try:
+            key = (path, os.path.getmtime(path))
+        except OSError:
+            return
+        if key not in static_versions:
+            with open(path, "rb") as f:
+                static_versions[key] = hashlib.sha256(f.read()).hexdigest()[:12]
+        values["v"] = static_versions[key]
+
+    # Every page is a pure function of the files loaded at startup, so one
+    # token per start serves as the ETag: a restart or deploy changes it.
+    build_id = secrets.token_hex(8)
+
+    @app.after_request
+    def add_cache_headers(response: Response) -> Response:
+        """
+        Set caching headers on successful GET responses.
+
+        - Versioned static files (``?v=``): cached for a year.
+        - Pages: ``Cache-Control: public, max-age=300`` unless the view set its
+          own, plus a weak ETag, so browsers and shared caches (Caddy, a CDN)
+          keep them and revalidate with a 304 instead of re-downloading.
+
+        Pages are skipped in debug mode and in edge-edit mode, where they carry a
+        per-session CSRF token.  Outside edit mode nothing writes to the session,
+        so no page sets a cookie.  (The mode is checked rather than
+        ``session.accessed``: in Flask 3.1 merely touching the ``session`` proxy
+        marks it accessed and adds ``Vary: Cookie``.  Checking ``Set-Cookie``
+        here would not work either: Flask adds the session cookie after these
+        hooks run.)
+        """
+        if request.method != "GET" or response.status_code != 200:
+            return response
+        if request.endpoint == "static":
+            if request.args.get("v"):
+                response.headers["Cache-Control"] = (
+                    "public, max-age=31536000, immutable"
+                )
+            return response
+        if app.debug or edge_edit_enabled():
+            return response
+        response.headers.setdefault("Cache-Control", "public, max-age=300")
+        response.set_etag(f"{build_id}-{response.mimetype}", weak=True)
+        return response.make_conditional(request)
 
     @app.errorhandler(404)
     def not_found(e: HTTPException) -> tuple[str, int]:
         """Render the custom 404 page for any unmatched route."""
         return render_template("404.html"), 404
 
+    warm_prefix = os.environ.get("CACHE_WARM_PREFIX")
+    if warm_prefix is not None:
+        _warm_page_cache(app, warm_prefix)
+
     return app
+
+
+#: The heaviest pages (1–2.3 MB each, 70–110 ms to render).  Rendering them
+#: before serving means no visitor waits for them, and the threads of a cold
+#: worker never render several of them at once.
+_WARM_URLS = ("/", "/graph", "/formulas", "/recent", "/search-data.json")
+
+
+def _warm_page_cache(app: Flask, prefix: str) -> None:
+    """
+    Render the heaviest pages into the page cache before serving.
+
+    Cache keys include the URL prefix, so this requests them as Caddy will,
+    with ``X-Forwarded-Prefix: <prefix>`` (none when *prefix* is empty).  Under
+    gunicorn's ``preload_app`` it runs once in the master, and forked workers
+    inherit the warm cache.  Enabled by setting ``CACHE_WARM_PREFIX``; tests and
+    local runs leave it unset.
+    """
+    if edge_edit_enabled():
+        return  # pages are not cached in edit mode
+    headers = {"X-Forwarded-Prefix": prefix} if prefix else {}
+    client = app.test_client()
+    for url in _WARM_URLS:
+        status = client.get(url, headers=headers).status_code
+        if status != 200:
+            raise RuntimeError(f"Cache warm-up: {url} returned {status}")

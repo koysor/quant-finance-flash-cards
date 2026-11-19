@@ -34,8 +34,12 @@ COPY app/ ./app/
 COPY cards/ ./cards/
 COPY edges.json resources.json notation.json key-terms.json wsgi.py gunicorn.conf.py ./
 
-# graph.db is derived from cards/ and edges.json and is rebuilt at startup,
-# so /app must be writable by the runtime user.
+# graph.db is derived from cards/ and edges.json.  Build it here, so a container
+# start only compares file mtimes (unchanged inside the image) instead of
+# re-parsing every card, which takes 20 s or more.  Startup still syncs it, so
+# /app must be writable by the runtime user.
+RUN SECRET_KEY=build-only python -c "import wsgi"
+
 RUN useradd --create-home --shell /bin/bash appuser && \
     chown -R appuser:appuser /app
 USER appuser
