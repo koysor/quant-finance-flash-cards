@@ -58,7 +58,7 @@ FLASK_DEBUG=1 uv run python run.py    # Starts server at http://127.0.0.1:5000
 
 **`FLASK_DEBUG=1` is required for local development.** `create_app()` raises `RuntimeError` unless either `SECRET_KEY` is set in the environment or debug mode is on. If the server is launched in the background without it, the process dies immediately and the traceback is easily lost — always confirm the server is actually serving before assuming a restart succeeded.
 
-Startup rebuilds `graph.db` by parsing every card, which takes upwards of twenty seconds for a collection of this size. Poll for a response rather than waiting a fixed couple of seconds:
+Startup after deleting `graph.db` parses every card to rebuild it, which takes about 3 seconds for the current ~1,700 cards on a desktop (longer on slower machines). With an existing `graph.db`, unchanged cards are skipped and startup takes well under a second. Either way, poll for a response rather than waiting a fixed couple of seconds:
 
 ```bash
 for i in $(seq 1 30); do

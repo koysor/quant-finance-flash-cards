@@ -25,7 +25,7 @@ rm -f graph.db app.log
 FLASK_DEBUG=1 uv run python run.py > app.log 2>&1 &
 ```
 
-Startup reparses every card to rebuild `graph.db`, which takes upwards of twenty seconds at the current card count, so poll for a response instead of waiting a fixed couple of seconds — and treat a non-200 as a real failure, since the loader rejects malformed cards and unknown topics at this point:
+Startup after `rm -f graph.db` reparses every card to rebuild it, which takes about 3 seconds for the current ~1,700 cards on a desktop (longer on slower machines). With an existing `graph.db`, unchanged cards are skipped and startup takes well under a second. Either way, poll for a response instead of waiting a fixed couple of seconds — and treat a non-200 as a real failure, since the loader rejects malformed cards and unknown topics at this point:
 
 ```bash
 for i in $(seq 1 30); do
