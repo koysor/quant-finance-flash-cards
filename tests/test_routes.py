@@ -10,7 +10,7 @@ import app.db as db
 def _csrf(client) -> str:
     client.get("/")
     with client.session_transaction() as sess:
-        return sess["csrf_token"]
+        return sess.get("csrf_token", "")
 
 
 def _first_edge(app):

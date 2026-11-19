@@ -38,7 +38,9 @@ The project includes specialized Gemini skills to automate workflows:
 4. `load_all_cards(...)` — scans `cards/**/*.md`, skips unchanged files by `st_mtime`, upserts changed ones, removes cards whose files no longer exist
 5. `load_edges_from_file()` — clears the `edges` table and repopulates from `edges.json`
 6. Load `resources.json` → `app.config["RESOURCES"]`
-7. Register the blueprint and attach the context processor (CSRF token, topic colours, search data, site stats)
+7. Register the blueprint and attach the context processor (topic colours, site stats; CSRF token only when `ALLOW_EDGE_EDIT=1`)
+8. Attach the `after_request` caching hook and static URL versioning
+9. If `CACHE_WARM_PREFIX` is set, render the heaviest pages into the page cache
 
 ## Building and Running
 
@@ -164,9 +166,17 @@ Adding a topic requires a new entry in `TOPIC_COLOURS`; the colour cascades to c
 - **Edges:** Mutations (removing links) are written back to `edges.json`. Adding edges is currently manual via `edges.json`.
 - **Edge integrity:** Both `source` and `target` must be existing card IDs. Orphaned edges are skipped silently at load time, so a typo produces a missing link rather than an error — verify IDs when editing `edges.json` by hand, and never commit `edges.json` without the cards it references.
 
+### Caching and Performance
+Nothing changes at runtime outside edge-edit mode, so pages are cached until restart. See `ARCHITECTURE.md` for the full design.
+- **Page cache:** Cache every GET view with `@cached_page(...)` in `app/routes.py`, never `@cache.cached` directly. It keys on the URL prefix (`request.script_root`), the path and only the query parameters you name, stores only 200 responses, and is bypassed while `ALLOW_EDGE_EDIT=1`. Pass `cacheable=` to skip unbounded inputs: `SimpleCache` caps the entry count (`CACHE_THRESHOLD`, default 500), not the size.
+- **HTTP caching:** GET 200s get `Cache-Control: public, max-age=300` and a weak ETag. `url_for('static', ...)` adds a content hash (`?v=`), so static files are cached for a year.
+- **Templates are dedented:** a Jinja extension strips each template line's indentation at compile time. Never put `<pre>` or `<textarea>` directly in a template, and do not turn on `trim_blocks`.
+- **Warm-up and workers:** `CACHE_WARM_PREFIX` (production: `/flashcards`) renders the heaviest pages at startup. gunicorn runs one `gthread` worker with two threads. Request database connections are read-only outside edit mode.
+- **Tests:** `tests/test_caching.py` covers all of the above.
+
 ### Frontend
 - **No Build Step:** All CSS is in `app/static/style.css`. Third-party JS/CSS is loaded from CDNs.
 - **Theme:** Dark/Light theme is client-side only (`localStorage`, `data-theme` on `<html>`).
 - **Wide Mode:** Removes `max-width` constraints for full-viewport layouts (`localStorage`, `data-wide` on `<html>`). Toggle via the expand button in the navbar or the `w` keyboard shortcut.
-- **Search:** Fuzzy search is client-side using a JSON blob injected via context processor.
+- **Search:** Fuzzy search is client-side over `/search-data.json`, fetched once and cached by the browser for a day.
 - **Notation & Key Terms:** LaTeX symbols and plain-text variables used in each card are extracted at load time and displayed in the card sidebar, sourced from `notation.json` and `key-terms.json`.

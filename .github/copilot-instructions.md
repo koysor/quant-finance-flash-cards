@@ -40,6 +40,13 @@ vis-network are loaded from CDNs.
   changes its ID and can break edges/resources that refer to it.
 - Production is served behind a URL prefix. Build template links with Flask's
   `url_for`, not root-relative paths.
+- Pages are cached until restart. Cache a GET view with `@cached_page(...)`
+  from `app/routes.py`, never `@cache.cached` directly: it keys on the URL
+  prefix and only the query parameters you name, stores only 200 responses,
+  and is bypassed when `ALLOW_EDGE_EDIT=1`. Use `cacheable=` to skip
+  unbounded inputs. `tests/test_caching.py` covers caching.
+- Templates are dedented at compile time. Do not put `<pre>` or `<textarea>`
+  directly in a template, and do not enable Jinja's `trim_blocks`.
 
 ## Content and implementation conventions
 
