@@ -5010,6 +5010,30 @@
     "description": "The Python simulation discretises the GBM SDE into log-normal increments \u2014 each column of the random matrix is one realisation of the geometric Brownian motion path from t=0 to T."
   },
   {
+    "source": "computational-finance/monte-carlo-standard-error",
+    "target": "computational-finance/order-of-convergence",
+    "label": "balanced against",
+    "description": "Statistical error falls like one over the square root of the number of paths, while discretisation bias falls with the scheme's order of convergence, and a fixed budget must balance the two."
+  },
+  {
+    "source": "computational-finance/monte-carlo-standard-error",
+    "target": "probability/variance-reduction-techniques",
+    "label": "reduced by",
+    "description": "Variance reduction techniques shrink the payoff variance, so the same standard error needs far fewer paths."
+  },
+  {
+    "source": "computational-finance/monte-carlo-standard-error",
+    "target": "risk/monte-carlo-simulation",
+    "label": "measures",
+    "description": "The standard error measures how far a Monte Carlo price can be from the true value because only finitely many paths were simulated."
+  },
+  {
+    "source": "computational-finance/monte-carlo-standard-error",
+    "target": "statistics/confidence-intervals",
+    "label": "applies",
+    "description": "A Monte Carlo price is reported with a confidence interval built from its standard error, the same construction as for any sample mean."
+  },
+  {
     "source": "computational-finance/monte-carlo-vs-rl-pricing",
     "target": "computational-finance/longstaff-schwartz",
     "label": "bridges MC and RL via",
@@ -10774,6 +10798,30 @@
     "target": "fixed-income/hjm-framework",
     "label": "foundation of",
     "description": "The HJM framework takes the relationship P(t,T) = exp(-integral of f(t,u) du) as its starting point and models f(t,T) directly, with the no-arbitrage drift condition ensuring the bond prices implied by the forward curve are internally consistent."
+  },
+  {
+    "source": "fixed-income/forward-rate-correlation-parametrisation",
+    "target": "fixed-income/abcd-volatility-parametrisation",
+    "label": "complements",
+    "description": "In the LIBOR market model the abcd form sets each forward's volatility and the correlation parametrisation sets how forwards move together; both are needed to price a swaption."
+  },
+  {
+    "source": "fixed-income/forward-rate-correlation-parametrisation",
+    "target": "fixed-income/libor-market-model",
+    "label": "parametrises",
+    "description": "The LIBOR market model needs a correlation between every pair of forward rates, which a decaying parametric form supplies with one or two parameters."
+  },
+  {
+    "source": "fixed-income/forward-rate-correlation-parametrisation",
+    "target": "fixed-income/yield-curve-pca-factors",
+    "label": "mirrors",
+    "description": "The few factors kept from the correlation matrix correspond to the level, slope and curvature moves seen in yield curve PCA."
+  },
+  {
+    "source": "fixed-income/forward-rate-correlation-parametrisation",
+    "target": "statistics/principal-component-analysis",
+    "label": "reduced by",
+    "description": "Principal component analysis approximates the full forward-rate correlation matrix with a few factors, cutting the number of Brownian drivers to simulate."
   },
   {
     "source": "fixed-income/forward-rate-curve",
