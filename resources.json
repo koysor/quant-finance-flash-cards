@@ -4109,6 +4109,24 @@
       }
     ]
   },
+  "computational-finance/monte-carlo-standard-error": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Standard Error",
+        "url": "https://en.wikipedia.org/wiki/Standard_error"
+      },
+      {
+        "title": "Wikipedia \u2014 Monte Carlo Integration",
+        "url": "https://en.wikipedia.org/wiki/Monte_Carlo_integration"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MC simulations: 2.6 Confidence intervals",
+        "url": "https://www.youtube.com/watch?v=OltiO-WUKOE"
+      }
+    ]
+  },
   "computational-finance/monte-carlo-vs-rl-pricing": {
     "websites": [
       {
@@ -9274,6 +9292,18 @@
       {
         "title": "MIT OpenCourseWare \u2014 Term Structure of Interest Rates",
         "url": "https://www.youtube.com/watch?v=A5W8MMSRPXM"
+      }
+    ]
+  },
+  "fixed-income/forward-rate-correlation-parametrisation": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 LIBOR Market Model",
+        "url": "https://en.wikipedia.org/wiki/LIBOR_market_model"
+      },
+      {
+        "title": "Wikipedia \u2014 Principal Component Analysis",
+        "url": "https://en.wikipedia.org/wiki/Principal_component_analysis"
       }
     ]
   },
