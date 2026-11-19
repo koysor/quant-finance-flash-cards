@@ -3840,6 +3840,10 @@
       {
         "title": "Milne's Predictor & Corrector Method - Part 1 | Engineering Mathematics",
         "url": "https://www.youtube.com/watch?v=H91_QJ01mFI"
+      },
+      {
+        "title": "Heun's Method in solving ODE - Example 1",
+        "url": "https://www.youtube.com/watch?v=sk1DNAVDo08"
       }
     ]
   },
@@ -4124,6 +4128,10 @@
       {
         "title": "MC simulations: 2.6 Confidence intervals",
         "url": "https://www.youtube.com/watch?v=OltiO-WUKOE"
+      },
+      {
+        "title": "Monte Carlo Options pricing in Python (simple example)",
+        "url": "https://www.youtube.com/watch?v=pZxcLJof2gY"
       }
     ]
   },
@@ -9304,6 +9312,16 @@
       {
         "title": "Wikipedia \u2014 Principal Component Analysis",
         "url": "https://en.wikipedia.org/wiki/Principal_component_analysis"
+      }
+    ],
+    "videos": [
+      {
+        "title": "StatQuest: Principal Component Analysis (PCA), Step-by-Step",
+        "url": "https://www.youtube.com/watch?v=FgakZw6K1QQ"
+      },
+      {
+        "title": "LIBOR Market Model",
+        "url": "https://www.youtube.com/watch?v=vbtkyczmy60"
       }
     ]
   },
@@ -20894,6 +20912,16 @@
         "title": "GlobalCapital \u2014 Value-at-Risk and Market Crashes",
         "url": "https://www.globalcapital.com/article/28mssnrew086objw95hf0/derivatives/value-at-risk-and-market-crashes"
       }
+    ],
+    "videos": [
+      {
+        "title": "Stock Correlations and Betas During a Market Crash",
+        "url": "https://www.youtube.com/watch?v=_92eA3qWNLQ"
+      },
+      {
+        "title": "Paul Wilmott on Quantitative Finance, Chapter 16, Fat tails",
+        "url": "https://www.youtube.com/watch?v=jF-v_MAIFl8"
+      }
     ]
   },
   "risk/credit-rating-transition-matrix": {
@@ -25735,6 +25763,12 @@
       {
         "title": "Avellaneda & Par\u00e1s (NYU) \u2014 Managing the Volatility Risk of Portfolios of Derivative Securities",
         "url": "https://math.nyu.edu/~avellane/lambdauvm.html"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Paul Wilmott on Quantitative Finance, Chapter 12, How to arbitrage volatility",
+        "url": "https://www.youtube.com/watch?v=oNXayfuxjzw"
       }
     ]
   },
