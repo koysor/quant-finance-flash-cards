@@ -137,6 +137,21 @@ def test_index_collapses_topics_unless_filtered(client):
     assert 'id="topic-1" open' in client.get("/?topic=Probability").data.decode()
 
 
+def test_index_tile_fade_in_delay_is_capped(client):
+    """The stagger restarts in each topic and stops after a dozen tiles.
+
+    Closed topics only start animating when opened, so a page-wide counter
+    left later topics blank for up to a minute after expanding them.
+    """
+    import re
+
+    delays = [
+        int(d) for d in re.findall(r"--delay:(\d+)ms", client.get("/").data.decode())
+    ]
+    assert delays and max(delays) <= 12 * 35
+    assert delays.count(0) > 1  # one per topic
+
+
 def test_study_path_is_bounded_and_ends_at_card(app, client):
     from app.routes import _PATH_MAX, _study_path
 
