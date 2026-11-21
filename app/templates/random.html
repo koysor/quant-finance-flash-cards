@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{# Static site stand-in for the /random redirect: pick a card in the browser. #}
+
+{% block title %}Random Card — QF Flash Cards{% endblock %}
+
+{% block meta %}
+<meta name="robots" content="noindex">
+{% endblock %}
+
+{% block content %}
+<div class="error-page">
+  <h1>Picking a random card&hellip;</h1>
+  <a href="{{ url_for('main.index') }}" class="btn-primary">Back to all cards</a>
+</div>
+{% endblock %}
+
+{% block page_scripts %}
+<script>
+/* goRandom() in base.html prefers cards not yet visited; it needs the search data. */
+fetch({{ url_for('main.search_data_json_view') | tojson }})
+  .then(r => r.json())
+  .then(data => { ALL_CARDS = data; goRandom(); });
+</script>
+{% endblock %}

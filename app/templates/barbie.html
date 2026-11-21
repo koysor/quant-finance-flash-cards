@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{# Static site stand-in for /barbie: set the theme cookie in the browser. #}
+
+{% block meta %}
+<meta name="robots" content="noindex">
+{% endblock %}
+
+{% block head_extra %}
+<script>
+document.cookie = 'theme=barbie; max-age=31536000; path=/';
+location.replace({{ url_for('main.index') | tojson }});
+</script>
+{% endblock %}

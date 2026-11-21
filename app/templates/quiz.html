@@ -6,6 +6,11 @@
 <meta name="description" content="Self-test mode: see a concept's name, recall its definition, then reveal it.">
 {% endblock %}
 
+{% block head_extra %}
+{% set topic_endpoint = 'main.quiz_topic' %}
+{% include "_legacy_query.html" %}
+{% endblock %}
+
 {% block content %}
 <div class="quiz-page">
   <h1>Quiz</h1>
@@ -14,7 +19,7 @@
   <p class="muted">Pick a topic. You see the name of each concept, recall its definition, then reveal it and mark whether you knew it.</p>
   <div class="quiz-topics">
     {% for t, n in counts|dictsort %}
-    <a class="topic-jump-link" href="{{ url_for('main.quiz', topic=t) }}">
+    <a class="topic-jump-link" href="{{ url_for('main.quiz_topic', slug=topic_slug(t)) }}">
       <span class="topic-dot" style="background:{{ topic_colour(t) }}"></span>{{ t }}
       <span class="topic-count">{{ n }}</span>
     </a>

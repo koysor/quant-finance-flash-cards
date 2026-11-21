@@ -77,6 +77,8 @@ Card changes are picked up on server restart. Delete `graph.db` first to force a
 
 URL validation runs automatically on `git commit` when `resources.json` is staged, and **blocks the commit** if any link fails. Some well-known hosts reject automated requests outright (Real Python returns 403 to every user agent) while others rate-limit intermittently under concurrency — a failure on retry-friendly hosts such as Wikipedia or BIS is usually transient, but a hard 403 means the link must be replaced.
 
+**Static build:** `uv run python scripts/build_static.py --prefix /flashcards --out dist` renders every page to files (`app/static_site.py`) and fails if a page links to a file it did not write. It needs Linux (tags such as `P(A|B)` are not valid Windows file names), so run it in WSL or leave it to CI. Query strings cannot select a file, so templates link to path routes (`/topic/<slug>`, `/quiz/<slug>`), and with `STATIC_BUILD` set in the app config the pages carry small scripts that stand in for the server: old `?tag=`/`?topic=` links, `/recent?start=&end=`, `/random`, `/barbie` and the `/card/<slug>` lookup on the 404 page. Every new page must be reachable from `page_urls()` in `app/static_site.py`, and must not depend on a query string.
+
 **Deployment:** the app runs in Docker on a shared AWS EC2 instance behind Caddy at `/flashcards/`. Build templates' URLs with `url_for` (never root-relative strings) so the prefix works. See `docker/README.md` for the full process.
 
 ## Routes
@@ -84,7 +86,8 @@ URL validation runs automatically on `git commit` when `resources.json` is stage
 | Method | URL | Purpose |
 |---|---|---|
 | GET | `/` | Card grid, tag filter strip, `?tag=` / `?topic=` filtering |
-| GET | `/tag/<tag>` | All cards carrying one tag |
+| GET | `/tag/<path:tag>` | All cards carrying one tag |
+| GET | `/topic/<slug>` | Card grid for one topic (same page as `/?topic=`) |
 | GET | `/card/<path:card_id>` | Card content, prerequisites, see-also, sidebar |
 | POST | `/card/<path:card_id>/remove-link` | Delete an edge (CSRF-protected) |
 | GET | `/graph` | vis.js network — path finding, topic filtering, edge weights |

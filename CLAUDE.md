@@ -90,6 +90,8 @@ Flask routes use `<path:card_id>` to allow the `/` in URLs.
 
 **Frontend:** no build step. KaTeX (maths) and vis.js (graph) loaded from CDN. Theme (dark/light) and wide mode in `localStorage`, applied via `data-theme` / `data-wide` on `<html>` before paint. Visited cards tracked client-side in `localStorage`.
 
+**Static build:** `uv run python scripts/build_static.py --prefix /flashcards --out dist` renders every page to files (`app/static_site.py`) and fails if a page links to a file it did not write. It needs Linux (tags such as `P(A|B)` are not valid Windows file names), so run it in WSL or leave it to CI. Query strings cannot select a file, so templates link to path routes (`/topic/<slug>`, `/quiz/<slug>`), and with `STATIC_BUILD` set in the app config the pages carry small scripts that stand in for the server: old `?tag=`/`?topic=` links, `/recent?start=&end=`, `/random`, `/barbie` and the `/card/<slug>` lookup on the 404 page. Every new page must be reachable from `page_urls()` in `app/static_site.py`, and must not depend on a query string.
+
 **Deployment:** the app runs in Docker on a shared AWS EC2 instance behind Caddy at `/flashcards/`. Build templates' URLs with `url_for` (never root-relative strings) so the prefix works. See `docker/README.md` for the full process.
 
 ## Routes
@@ -97,7 +99,8 @@ Flask routes use `<path:card_id>` to allow the `/` in URLs.
 | Method | URL | Handler |
 |---|---|---|
 | GET | `/` | Card grid, tag filter strip, `?tag=` / `?topic=` filtering |
-| GET | `/tag/<tag>` | Dedicated tag page showing all cards with that tag |
+| GET | `/tag/<path:tag>` | Dedicated tag page showing all cards with that tag |
+| GET | `/topic/<slug>` | Card grid for one topic (same page as `/?topic=`) |
 | GET | `/card/<path:card_id>` | Card content + prerequisites + see-also + sidebar |
 | POST | `/card/<path:card_id>/remove-link` | Delete edge (CSRF-protected), redirect back |
 | GET | `/graph` | vis.js network — path finding, topic filtering, edge weights |

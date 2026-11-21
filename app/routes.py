@@ -4,15 +4,25 @@ Flask Blueprint containing every route handler for the application.
 URL map
 -------
 GET  /                          Card grid; supports ``?tag=`` and ``?topic=`` filters.
-GET  /tag/<tag>                 Dedicated page showing all cards with a given tag.
+GET  /tag/<path:tag>            Dedicated page showing all cards with a given tag.
+GET  /topic/<slug>              The card grid for one topic (same page as ``/?topic=``).
 GET  /card/<path:card_id>       Full card detail page.
 POST /card/<path:card_id>/remove-link  Delete an outgoing edge (CSRF-protected).
 GET  /graph                     Interactive vis.js graph of all cards and edges.
 GET  /path/<path:card_id>       Study path: every prerequisite of a card, in learning order.
 GET  /quiz                      Self-test: reveal the definition of each card in a topic.
+GET  /quiz/<slug>               The quiz for one topic (same page as ``/quiz?topic=``).
 GET  /formulas                  Aggregated Key Formula sections from every card.
 GET  /recent                    Reverse-chronological card list (accepts ?start= / ?end=).
 GET  /random                    Redirect to a randomly selected card.
+
+Static build
+------------
+``scripts/build_static.py`` renders every page to files with ``STATIC_BUILD``
+set in the app config.  Query strings cannot select a file, so templates link to
+the path routes (``/topic/<slug>``, ``/quiz/<slug>``) and the static pages turn
+old query-string URLs into those links in the browser.  ``/random`` and
+``/barbie`` become small pages that do their work in JavaScript.
 
 Slug-based redirect / disambiguation
 -------------------------------------
@@ -99,6 +109,20 @@ TOPIC_COLOURS: dict[str, str] = {
     "Volatility": "#d946ef",  # fuchsia
 }
 _DEFAULT_COLOUR = "#4f9ef8"
+
+
+def topic_slug(topic: str) -> str:
+    """URL slug for a topic name: ``Portfolio Theory & Asset Pricing`` → ``portfolio-theory-asset-pricing``."""
+    return re.sub(r"[^a-z0-9]+", "-", topic.lower()).strip("-")
+
+
+#: Slug → topic name, for the ``/topic/<slug>`` and ``/quiz/<slug>`` routes.
+TOPIC_BY_SLUG: dict[str, str] = {topic_slug(t): t for t in TOPIC_COLOURS}
+
+
+def static_build() -> bool:
+    """True while ``scripts/build_static.py`` is rendering the site to files."""
+    return bool(current_app.config.get("STATIC_BUILD"))
 
 
 # Page caching
@@ -264,8 +288,23 @@ def index() -> str:
     Cards are grouped by topic for display.  The full tag list (from all cards,
     not just the filtered set) is passed for the filter strip.
     """
-    tag = request.args.get("tag", "").strip()
-    topic_filter = request.args.get("topic", "").strip()
+    return _render_index(
+        request.args.get("tag", "").strip(), request.args.get("topic", "").strip()
+    )
+
+
+@bp.get("/topic/<slug>")
+@cached_page()
+def topic_page(slug: str) -> str:
+    """The card grid for one topic, at a path so the static build can store it."""
+    topic = TOPIC_BY_SLUG.get(slug)
+    if topic is None:
+        abort(404)
+    return _render_index("", topic)
+
+
+def _render_index(tag: str, topic_filter: str) -> str:
+    """Render the card grid, optionally filtered to a *tag* and/or a topic."""
     all_cards_list = get_all_cards()
 
     # Collect every unique tag across all cards for the horizontal filter strip.
@@ -290,7 +329,7 @@ def index() -> str:
     )
 
 
-@bp.get("/tag/<tag>")
+@bp.get("/tag/<path:tag>")
 @cached_page()
 def tag_page(tag: str) -> str:
     """
@@ -310,8 +349,10 @@ def tag_page(tag: str) -> str:
 
 
 @bp.get("/barbie")
-def barbie_theme() -> Response:
+def barbie_theme() -> ResponseReturnValue:
     """Secret Barbie theme — sets a ``theme`` cookie and redirects to the index."""
+    if static_build():
+        return render_template("barbie.html")
     resp = redirect(url_for("main.index"))
     resp.set_cookie("theme", "barbie", max_age=60 * 60 * 24 * 365)
     return resp
@@ -356,8 +397,10 @@ def search_data_json_view() -> Response:
 
 
 @bp.get("/random")
-def random_card() -> Response:
+def random_card() -> ResponseReturnValue:
     """Redirect to a randomly selected card, or 404 if the database is empty."""
+    if static_build():
+        return render_template("random.html")
     card = get_random_card()
     if card is None:
         abort(404)
@@ -658,7 +701,22 @@ def quiz() -> str:
     payload stays to one topic's cards rather than all of them.  Known / unknown
     marks are kept client-side in localStorage.
     """
-    topic = request.args.get("topic", "").strip()
+    return _render_quiz(request.args.get("topic", "").strip())
+
+
+@bp.get("/quiz/<slug>")
+@limiter.limit("30 per minute")
+@cached_page()
+def quiz_topic(slug: str) -> str:
+    """The quiz for one topic, at a path so the static build can store it."""
+    topic = TOPIC_BY_SLUG.get(slug)
+    if topic is None:
+        abort(404)
+    return _render_quiz(topic)
+
+
+def _render_quiz(topic: str) -> str:
+    """Render the topic list (no *topic*) or one topic's quiz cards."""
     cards = get_all_cards_with_content()
     counts: dict[str, int] = {}
     for c in cards:
