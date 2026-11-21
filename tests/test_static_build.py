@@ -5,12 +5,10 @@ Linux file system (the ``P(A|B)`` tag), so CI runs it as its own step; these tes
 build a representative subset.
 """
 
-import gzip
 import json
 from pathlib import PurePosixPath
 
 import pytest
-from compression import zstd
 
 import app.db as db
 from app.routes import TOPIC_BY_SLUG, topic_slug
@@ -127,12 +125,10 @@ def test_build_writes_browser_stand_ins(built):
     assert "data-date=" in (out / "recent.html").read_text(encoding="utf-8")
 
 
-def test_build_precompresses_only_large_files(built, card_id):
+def test_build_writes_no_compressed_copies(built):
+    """Caddy compresses on the fly; its precompressed option answers 206."""
     out, _ = built
-    index = (out / "index.html").read_bytes()
-    assert gzip.decompress((out / "index.html.gz").read_bytes()) == index
-    assert zstd.decompress((out / "index.html.zst").read_bytes()) == index
-    assert not (out / f"card/{card_id}.html.gz").exists()
+    assert not list(out.rglob("*.gz")) and not list(out.rglob("*.zst"))
 
 
 def test_build_leaves_the_live_app_unchanged(app, built, client):

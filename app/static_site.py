@@ -13,14 +13,12 @@ File layout: ``/`` → ``index.html``; ``/a/b`` → ``a/b.html``; URLs ending in
 ``a/b.html`` (Caddy: ``try_files {path} {path}.html``).  ``404.html`` is the
 not-found page, and ``app/static`` is copied to ``static/``.
 
-Large text files (the index, graph, formulas and recent pages, the JSON and
-the stylesheet) get ``.gz`` and ``.zst`` copies for Caddy's ``precompressed``.
-The thousands of small pages do not: copies would add half again to the output,
-and Caddy's ``encode`` compresses a 40 KB page on the fly at no real cost.  The
-build fails if any page links to a file that was not written.
+No compressed copies are written: Caddy's ``encode`` compresses on the fly
+(about 14 ms for the 2.3 MB graph page), and its ``precompressed`` option makes
+Caddy 2.10 answer ordinary requests with 206 Partial Content.  The build fails
+if any page links to a file that was not written.
 """
 
-import gzip
 import html
 import os
 import re
@@ -31,7 +29,6 @@ from dataclasses import dataclass, field
 from pathlib import Path, PurePosixPath
 from urllib.parse import unquote
 
-from compression import zstd
 from flask import Flask, url_for
 
 from app.db import get_all_cards
@@ -40,10 +37,6 @@ from app.routes import TOPIC_BY_SLUG
 
 #: Marks a directory as build output, so a rebuild only ever deletes its own files.
 MARKER = ".flashcards-static-build"
-
-#: Extensions that get precompressed ``.gz`` / ``.zst`` copies.
-_COMPRESS = {".html", ".json", ".css", ".js", ".svg", ".txt"}
-_MIN_COMPRESS_BYTES = 64 * 1024
 
 #: A segment that cannot safely be a file or directory name.  The site is served
 #: from Linux, where only these are a problem; Windows also forbids ``:*?"<>|``
@@ -133,19 +126,6 @@ def _write(out: Path, rel: PurePosixPath, data: bytes) -> Path:
     return dest
 
 
-def _compress_tree(out: Path) -> None:
-    for path in list(out.rglob("*")):
-        if not path.is_file() or path.suffix not in _COMPRESS:
-            continue
-        data = path.read_bytes()
-        if len(data) < _MIN_COMPRESS_BYTES:
-            continue
-        path.with_name(path.name + ".gz").write_bytes(
-            gzip.compress(data, compresslevel=9, mtime=0)
-        )
-        path.with_name(path.name + ".zst").write_bytes(zstd.compress(data, level=19))
-
-
 def _resolves(out: Path, path: str) -> bool:
     """Whether a site-relative URL path is served by a file in *out*."""
     if path in ("", "/"):
@@ -217,7 +197,6 @@ def build(
 
     if app.static_folder:
         shutil.copytree(app.static_folder, out / "static")
-    _compress_tree(out)
 
     if full:
         result.missing_links = find_missing_links(out, prefix or "")
