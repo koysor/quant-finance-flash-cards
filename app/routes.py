@@ -132,9 +132,9 @@ def static_build() -> bool:
 # views are cached:
 #
 # - The key holds ``request.script_root`` because every link on a page comes
-#   from ``url_for``.  A request without Caddy's ``X-Forwarded-Prefix`` (such as
-#   the Docker health check) must not store a page whose links lack
-#   ``/flashcards`` for prefixed visitors to receive.
+#   from ``url_for``.  A request without ``X-Forwarded-Prefix`` must not store
+#   a page whose links lack ``/flashcards`` for prefixed requests (the static
+#   build sends the header) to receive.
 # - The key holds only the query parameters the view names, never the raw query
 #   string, so junk parameters cannot create entries.
 # - Only 200 responses are stored.  flask-caching would otherwise also store

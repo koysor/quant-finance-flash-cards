@@ -57,7 +57,7 @@ def test_recent_varies_on_accept(client):
 
 
 def test_unprefixed_request_does_not_poison_prefixed_pages(client):
-    # The Docker health check hits / without X-Forwarded-Prefix.
+    # A local request hits / without X-Forwarded-Prefix; the static build sends it.
     # Card links appear as href="..." in pages and as "url": "..." in /graph's JSON.
     for url in ("/", CARD, "/graph"):
         bare = client.get(url).get_data(as_text=True)
@@ -111,19 +111,6 @@ def test_static_urls_are_versioned_and_long_lived(client):
     assert "immutable" not in client.get("/static/style.css").headers.get(
         "Cache-Control", ""
     )
-
-
-def test_warm_up_fills_prefixed_cache(app, monkeypatch):
-    from app import _WARM_URLS, create_app
-
-    monkeypatch.setenv("CACHE_WARM_PREFIX", "/flashcards")
-    warm = create_app()  # the app fixture has already pointed db at temp copies
-    keys = _page_keys(warm)
-    assert len(keys) == len(_WARM_URLS)
-    assert all('"/flashcards"' in k for k in keys)
-    client = warm.test_client()
-    html = client.get("/", headers=PREFIX).get_data(as_text=True)
-    assert 'href="/flashcards/card/' in html
 
 
 def test_request_connections_are_read_only(app):

@@ -32,4 +32,3 @@ graph.db-wal
 app.log
 
 .env
-docker/.env

@@ -13,7 +13,6 @@ Startup sequence
    (the CSRF token only in edge-edit mode, so ordinary pages set no cookie).
 8. Attach the HTTP caching hook (``Cache-Control`` and a weak ETag on GET 200s) and
    ``?v=<hash>`` versioning of ``url_for('static', ...)`` URLs.
-9. If ``CACHE_WARM_PREFIX`` is set, render the heaviest pages into the page cache.
 
 Templates are dedented at compile time by ``_DedentTemplates``.  Page caching
 itself is ``cached_page`` in ``app/routes.py``; ARCHITECTURE.md describes the design.
@@ -268,34 +267,4 @@ def create_app() -> Flask:
         """Render the custom 404 page for any unmatched route."""
         return render_template("404.html"), 404
 
-    warm_prefix = os.environ.get("CACHE_WARM_PREFIX")
-    if warm_prefix is not None:
-        _warm_page_cache(app, warm_prefix)
-
     return app
-
-
-#: The heaviest pages (1–2.3 MB each, 70–110 ms to render).  Rendering them
-#: before serving means no visitor waits for them, and the threads of a cold
-#: worker never render several of them at once.
-_WARM_URLS = ("/", "/graph", "/formulas", "/recent", "/search-data.json")
-
-
-def _warm_page_cache(app: Flask, prefix: str) -> None:
-    """
-    Render the heaviest pages into the page cache before serving.
-
-    Cache keys include the URL prefix, so this requests them as Caddy will,
-    with ``X-Forwarded-Prefix: <prefix>`` (none when *prefix* is empty).  Under
-    gunicorn's ``preload_app`` it runs once in the master, and forked workers
-    inherit the warm cache.  Enabled by setting ``CACHE_WARM_PREFIX``; tests and
-    local runs leave it unset.
-    """
-    if edge_edit_enabled():
-        return  # pages are not cached in edit mode
-    headers = {"X-Forwarded-Prefix": prefix} if prefix else {}
-    client = app.test_client()
-    for url in _WARM_URLS:
-        status = client.get(url, headers=headers).status_code
-        if status != 200:
-            raise RuntimeError(f"Cache warm-up: {url} returned {status}")

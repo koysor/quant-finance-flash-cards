@@ -38,7 +38,7 @@ if [ "$code" != "200" ]; then echo "FAILED ($code)"; tail -30 app.log; fi
 
 ## Testing
 
-Run `uv run pytest`. Tests copy the database and `edges.json` into a temp directory, so they never modify the real ones. Caching behaviour (cache keys, headers, warm-up, read-only connections, dedented templates) is covered by `tests/test_caching.py`; extend it when adding a cached view. A malformed card or unknown topic raises `ValueError` at startup.
+Run `uv run pytest`. Tests copy the database and `edges.json` into a temp directory, so they never modify the real ones. Caching behaviour (cache keys, headers, read-only connections, dedented templates) is covered by `tests/test_caching.py`; extend it when adding a cached view. The static build (URL→file mapping, link check, browser stand-ins, path routes) is covered by `tests/test_static_build.py`, which builds a subset of pages; CI's `static-build` job runs the full build. A malformed card or unknown topic raises `ValueError` at startup.
 
 Also verify changes by starting the server and checking:
 1. The card appears on the index page under the correct topic
@@ -53,18 +53,18 @@ Flask web application that reads Markdown flash cards from `cards/` and stores t
 - `cards/**/*.md` — card content (committed)
 - `edges.json` — relationships between cards: label + plain-English description (committed)
 - `resources.json` — per-card learning resources (websites, videos), keyed by card ID (committed)
+- `notation.json` / `key-terms.json` — LaTeX symbol and plain variable meanings for the card sidebar (committed)
 - `graph.db` — derived cache of cards+edges; gitignored; fully regenerable by deleting and restarting
 
 **Startup sequence** (`app/__init__.py` → `create_app()`):
-1. `init_db()` — idempotent DDL (creates `cards` and `edges` tables if absent)
+1. `init_db()` — idempotent DDL (creates `cards` and `edges` tables if absent; `load_edges_from_file()` adds a `meta` table)
 2. Load `notation.json` → `app.config["NOTATION"]` (LaTeX symbol definitions)
 3. Load `key-terms.json` → `app.config["KEY_TERMS"]` (plain variable definitions, e.g. `dW`, `S`)
 4. `load_all_cards(notation_dict, key_terms_dict)` — scans `cards/**/*.md`, skips unchanged files (mtime check), upserts changed ones, removes stale cards whose files no longer exist
-5. `load_edges_from_file()` — clears the `edges` table and repopulates from `edges.json`
+5. `load_edges_from_file()` — if `edges.json` changed since the last load (mtime in `meta`), clears the `edges` table and repopulates it; entries naming unknown cards are skipped with a warning
 6. Load `resources.json` → `app.config["RESOURCES"]` (per-card website/video links)
 7. Blueprint registered, context processor attached (topic colours, stats; CSRF token only when `ALLOW_EDGE_EDIT=1`)
 8. `after_request` caching hook and static URL versioning attached
-9. If `CACHE_WARM_PREFIX` is set, the heaviest pages are rendered into the page cache
 
 **Edge mutations** (only when `ALLOW_EDGE_EDIT=1`): removing a link via the card detail sidebar writes to `graph.db` first, then calls `save_edges_to_file()` to keep `edges.json` in sync. Commit `edges.json` after changes. Adding edges is done by editing `edges.json` directly and restarting.
 
@@ -84,7 +84,7 @@ Flask routes use `<path:card_id>` to allow the `/` in URLs.
 - `site_stats` — `card_count`, `topic_count`, `edge_count`
 - `csrf_token` — session-based token for POST form protection; created only when `ALLOW_EDGE_EDIT=1`, so normal pages set no cookie
 
-**Caching:** content changes only on restart, so views are cached until then with `@cached_page(...)` in `routes.py` (`create_app()` clears the cache at startup); never use `@cache.cached` directly. `cached_page` keys on the URL prefix (`request.script_root`), the path and only the query parameters you name, stores only 200 responses, and is bypassed while `ALLOW_EDGE_EDIT=1`. Pass `cacheable=` to skip unbounded inputs: `SimpleCache` caps the entry count (`CACHE_THRESHOLD`, default 500), not the size. An `after_request` hook in `create_app()` adds `Cache-Control: public, max-age=300` and a weak ETag to successful GET pages (not in debug or edit mode), and `url_for('static', ...)` adds a content-hash `?v=` so static files are cached for a year. gunicorn runs `gthread` workers (`gunicorn.conf.py`). Setting `CACHE_WARM_PREFIX` (production: `/flashcards`) renders the heaviest pages at startup, before gunicorn forks. Outside edit mode, request database connections are read-only.
+**Caching:** content changes only on restart, so views are cached until then with `@cached_page(...)` in `routes.py` (`create_app()` clears the cache at startup); never use `@cache.cached` directly. `cached_page` keys on the URL prefix (`request.script_root`), the path and only the query parameters you name, stores only 200 responses, and is bypassed while `ALLOW_EDGE_EDIT=1`. Pass `cacheable=` to skip unbounded inputs: `SimpleCache` caps the entry count (`CACHE_THRESHOLD`, default 500), not the size. An `after_request` hook in `create_app()` adds `Cache-Control: public, max-age=300` and a weak ETag to successful GET pages (not in debug or edit mode), and `url_for('static', ...)` adds a content-hash `?v=` so static files are cached for a year. Outside edit mode, request database connections are read-only.
 
 **Templates are dedented:** a Jinja extension in `app/__init__.py` strips each template line's leading indentation at compile time (a third of the large pages was indentation). Never put whitespace-sensitive markup (`<pre>`, `<textarea>`) directly in a template, and do not turn on `trim_blocks`: with dedent it can join tokens across a line break. Card HTML inserted through variables is not affected.
 
@@ -92,22 +92,26 @@ Flask routes use `<path:card_id>` to allow the `/` in URLs.
 
 **Static build:** `uv run python scripts/build_static.py --prefix /flashcards --out dist` renders every page to files (`app/static_site.py`) and fails if a page links to a file it did not write. It needs Linux (tags such as `P(A|B)` are not valid Windows file names), so run it in WSL or leave it to CI. Query strings cannot select a file, so templates link to path routes (`/topic/<slug>`, `/quiz/<slug>`), and with `STATIC_BUILD` set in the app config the pages carry small scripts that stand in for the server: old `?tag=`/`?topic=` links, `/recent?start=&end=`, `/random`, `/barbie` and the `/card/<slug>` lookup on the 404 page. Every new page must be reachable from `page_urls()` in `app/static_site.py`, and must not depend on a query string.
 
-**Deployment:** the app runs in Docker on a shared AWS EC2 instance behind Caddy at `/flashcards/`. Build templates' URLs with `url_for` (never root-relative strings) so the prefix works. See `docker/README.md` for the full process.
+**Deployment:** production is the static build, not a running app. On a push to `main`, CI renders the site, copies it to a shared AWS EC2 instance as `~/flashcards-site/releases/<sha>`, and repoints the `current` symlink. Caddy (quant-finance repo) serves it at `/flashcards/` with `file_server`. Build templates' URLs with `url_for` (never root-relative strings) so the prefix works. See `.github/workflows/DEPLOY-EC2.md` for the workflow, the Caddy configuration and rollback.
 
 ## Routes
 
 | Method | URL | Handler |
 |---|---|---|
 | GET | `/` | Card grid, tag filter strip, `?tag=` / `?topic=` filtering |
-| GET | `/tag/<path:tag>` | Dedicated tag page showing all cards with that tag |
+| GET | `/tag/<path:tag>` | Dedicated tag page showing all cards with that tag (`path:` because tags such as `30/360` contain a slash) |
 | GET | `/topic/<slug>` | Card grid for one topic (same page as `/?topic=`) |
 | GET | `/card/<path:card_id>` | Card content + prerequisites + see-also + sidebar |
-| POST | `/card/<path:card_id>/remove-link` | Delete edge (CSRF-protected), redirect back |
+| POST | `/card/<path:card_id>/remove-link` | Delete edge (CSRF-protected), redirect back; 404 unless `ALLOW_EDGE_EDIT=1` |
+| GET | `/path/<path:card_id>` | Study path: nearest prerequisites in learning order |
 | GET | `/graph` | vis.js network — path finding, topic filtering, edge weights |
 | GET | `/formulas` | All Key Formula sections aggregated by topic |
-| GET | `/recent` | Reverse-chronological card list, grouped by date (unlisted) |
-| GET | `/barbie` | Sets a cookie (undocumented easter egg) |
-| GET | `/random` | Redirect to a random card (JS version prefers unvisited) |
+| GET | `/quiz` | Quiz topic list; `?topic=` shows one topic's quiz |
+| GET | `/quiz/<slug>` | One topic's quiz (same page as `/quiz?topic=`) |
+| GET | `/recent` | Reverse-chronological card list, grouped by date (unlisted); `?start=` / `?end=`, JSON with `?format=json` (static site: `recent.json`) |
+| GET | `/search-data.json` | Card index for the search overlay |
+| GET | `/barbie` | Sets a cookie (undocumented easter egg); a JS page in the static build |
+| GET | `/random` | Redirect to a random card (JS version prefers unvisited); a JS page in the static build |
 
 ## Card Authoring
 

@@ -7,9 +7,10 @@ on:
     branches: [main]
   workflow_dispatch:
 
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+# Two publishes at once could prune each other's release.
+concurrency:
+  group: deploy-ec2-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   test:
@@ -114,138 +115,23 @@ jobs:
           mv -T current.tmp current
           ls -1dt releases/*/ | tail -n +4 | grep -vx "\$rel/" | xargs -r rm -rf
           echo "Published \$rel (\$(du -sh "\$rel" | cut -f1))"
+
+          # The site used to run as a gunicorn container (compose project
+          # "flashcards") from a clone in ~/quant-finance-flash-cards, whose
+          # docker/.env held its SECRET_KEY.  Remove the container, its image
+          # and the clone if still there; a no-op once they are gone.
+          docker ps -aq --filter label=com.docker.compose.project=flashcards | xargs -r docker rm -f
+          docker image rm ghcr.io/koysor/quant-finance-flash-cards:latest 2>/dev/null || true
+          rm -rf "\$HOME/quant-finance-flash-cards"
           REMOTE
           )
           ssh ec2 "$script" < site.tar.gz
 
-  build-and-push:
-    needs: test
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v7
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v4
-
-      - name: Log in to GitHub Container Registry
-        uses: docker/login-action@v4
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Extract metadata for Docker
-        id: meta
-        uses: docker/metadata-action@v6
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tags: |
-            type=sha,prefix=
-            type=raw,value=latest,enable={{is_default_branch}}
-
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v7
-        with:
-          context: .
-          file: docker/Dockerfile
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
-  deploy:
-    needs: build-and-push
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Set up SSH
-        env:
-          EC2_HOST: ${{ secrets.EC2_HOST }}
-          EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
+      # Caddy (quant-finance repo) serves ~/flashcards-site/current directly,
+      # so the new release is live as soon as the link is repointed.
+      - name: Check the live site
         run: |
-          # Plain OpenSSH from the runner image: nothing is downloaded at run time,
-          # so an outage of GitHub release downloads cannot break the deploy.
-          install -m 700 -d ~/.ssh
-          printf '%s\n' "$EC2_SSH_KEY" > ~/.ssh/ec2
-          chmod 600 ~/.ssh/ec2
-          cat >> ~/.ssh/config <<EOF
-          Host ec2
-            HostName $EC2_HOST
-            User ec2-user
-            IdentityFile ~/.ssh/ec2
-            IdentitiesOnly yes
-            BatchMode yes
-            StrictHostKeyChecking accept-new
-            ConnectTimeout 30
-            ConnectionAttempts 3
-            ServerAliveInterval 30
-            ServerAliveCountMax 4
-          EOF
-
-      - name: Deploy to EC2 via SSH
-        timeout-minutes: 20
-        run: |
-          # Sent as the ssh command (not on stdin), like appleboy/ssh-action
-          # did; -n gives the remote side an empty stdin for docker exec.
-          script=$(cat <<'REMOTE'
-          set -e
-
-          # Clone or update the repository (for the docker-compose file)
-          cd ~/quant-finance-flash-cards || git clone https://github.com/koysor/quant-finance-flash-cards.git ~/quant-finance-flash-cards
-          cd ~/quant-finance-flash-cards
-          git fetch origin
-          git reset --hard origin/main
-
-          cd docker
-          if [ ! -f .env ]; then
-            echo "docker/.env is missing - create it with SECRET_KEY (see docker/.env.example)"
-            exit 1
-          fi
-
-          docker-compose -f docker-compose.prod.yml down --remove-orphans 2>/dev/null || true
-
-          # Cleanup dangling images only; never --volumes (Caddy certificates live in caddy_data)
-          docker system prune -f || true
-
-          # Pull latest image from GHCR (public package, no auth required)
-          docker pull ghcr.io/koysor/quant-finance-flash-cards:latest
-
-          docker-compose -f docker-compose.prod.yml up -d
-          REMOTE
-          )
-          ssh -n ec2 "$script"
-
-      - name: Health check
-        timeout-minutes: 10
-        run: |
-          # Sent as the ssh command (not on stdin), like appleboy/ssh-action
-          # did; -n gives the remote side an empty stdin for docker exec.
-          script=$(cat <<'REMOTE'
-          set -e
-          echo "Waiting for app to start..."
-          sleep 30
-
-          cd ~/quant-finance-flash-cards/docker
-          if ! docker-compose -f docker-compose.prod.yml ps | grep -q "flashcards"; then
-            echo "Container is not running!"
-            docker-compose -f docker-compose.prod.yml logs
-            exit 1
-          fi
-
-          docker-compose -f docker-compose.prod.yml exec -T flashcards curl -f http://localhost:8000/
-          echo " Flash cards OK"
-          REMOTE
-          )
-          ssh -n ec2 "$script"
-
-      - name: Deployment summary
-        run: |
-          echo "Deployed to EC2"
-          echo "App available at: https://koysor.duckdns.org/flashcards/"
+          for path in "" graph card/derivatives/black-scholes-equation; do
+            curl -sf -o /dev/null "https://koysor.duckdns.org/flashcards/$path"
+            echo "OK /flashcards/$path"
+          done
