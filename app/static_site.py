@@ -32,7 +32,6 @@ from urllib.parse import unquote
 from flask import Flask, url_for
 
 from app.db import get_all_cards
-from app.extensions import cache, limiter
 from app.routes import TOPIC_BY_SLUG
 
 #: Marks a directory as build output, so a rebuild only ever deletes its own files.
@@ -163,12 +162,7 @@ def build(
     started = time.perf_counter()
     prefix = prefix.rstrip("/")
     full = urls is None
-    # Pages rendered before the build lack the static stand-ins, and pages
-    # rendered during it must not be served by the live app afterwards.
-    with app.app_context():
-        cache.clear()
     app.config["STATIC_BUILD"] = True
-    limiter.enabled = False  # thousands of requests from one "client"
     headers = {"X-Forwarded-Prefix": prefix} if prefix else {}
     client = app.test_client()
 
@@ -191,9 +185,6 @@ def build(
         _write(out, PurePosixPath("404.html"), fetch("/__static-build-404__", 404))
     finally:
         app.config["STATIC_BUILD"] = False
-        limiter.enabled = True
-        with app.app_context():
-            cache.clear()
 
     if app.static_folder:
         shutil.copytree(app.static_folder, out / "static")

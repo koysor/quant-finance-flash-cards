@@ -5,8 +5,9 @@ def test_search_data_json_context(client):
     """Verify pages load search data from /search-data.json and it is valid."""
     response = client.get("/")
     assert response.status_code == 200
-    # base.html fetches the card index lazily rather than embedding it.
-    assert b"fetch('/search-data.json')" in response.data
+    # base.html passes the URL to static/base.js, which fetches the card index
+    # lazily rather than embedding it.
+    assert b'searchData: "/search-data.json"' in response.data
 
     data = client.get("/search-data.json")
     assert data.status_code == 200

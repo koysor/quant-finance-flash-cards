@@ -29,8 +29,7 @@ bash scripts/install_hooks.sh
 | `PORT` | `5000` | Port for the development server. |
 | `FLASK_DEBUG` | unset | Set to `1` for local development: lets the app start without `SECRET_KEY` (a random key is generated). |
 | `DEBUG` | `false` | Set to `true` to run `run.py` with Flask's debugger and reloader. |
-| `ALLOW_EDGE_EDIT` | unset | Set to `1` to enable the card-page "remove link" button, which rewrites `edges.json`. It also turns off page caching and caching headers. Never set it for the static build, which refuses to run with it. |
-| `CACHE_THRESHOLD` | `500` | Maximum number of pages the dev server caches in memory. A full cache is about 20–30 MB. |
+| `ALLOW_EDGE_EDIT` | unset | Set to `1` to enable the card-page "remove link" button, which rewrites `edges.json`. Never set it for the static build, which refuses to run with it. |
 
 ## Topics
 
@@ -107,12 +106,12 @@ key-terms.json  Plain variable meanings (dW, S, …) for the Key Terms sidebar
 app/            Flask application package
   __init__.py   Application factory (create_app)
   db.py         SQLite schema and all query functions
-  extensions.py Page cache, rate limiter, edit-mode switch
+  extensions.py Edit-mode switch (ALLOW_EDGE_EDIT)
   loader.py     Scans cards/, parses metadata, upserts to DB
   routes.py     All routes + topic colour map
   static_site.py Renders every page to static files for production
   templates/    Jinja2 templates
-  static/       CSS and favicon
+  static/       CSS, shared page script (base.js) and favicon
 scripts/        Static build, README stats, URL validation, git hook installer
 tests/          pytest suite
 run.py          Development server entry point

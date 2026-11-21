@@ -37,20 +37,10 @@ Topic colours
 strings.  Adding a new topic requires adding an entry here; the colour cascades
 automatically to card tiles, graph nodes, topic badges, and sidebar dots through
 the CSS custom property ``--tc`` set inline on elements.
-
-Page caching
-------------
-Every GET view except ``/random`` and ``/barbie`` is cached until restart with
-``@cached_page(...)``, defined below.  Never use ``@cache.cached`` directly: the
-decorator keys on the URL prefix, stores only 200 responses and skips caching in
-edge-edit mode, and each of those prevents a real bug.
 """
 
-import functools
 import json
 import re
-from collections.abc import Callable
-from typing import Any, TypeVar, cast
 
 from flask import (
     Blueprint,
@@ -58,7 +48,6 @@ from flask import (
     abort,
     current_app,
     jsonify,
-    make_response,
     redirect,
     render_template,
     request,
@@ -67,7 +56,7 @@ from flask import (
 )
 from flask.typing import ResponseReturnValue
 
-from app.extensions import cache, edge_edit_enabled, limiter
+from app.extensions import edge_edit_enabled
 from app.db import (
     delete_edge,
     find_cards_by_slug,
@@ -85,8 +74,6 @@ from app.db import (
 )
 
 bp = Blueprint("main", __name__)
-
-F = TypeVar("F", bound=Callable[..., Any])
 
 # Topic name → hex colour.  Must be kept in sync with the card ``**Topic:**`` fields.
 # The colour is injected into every template via the context processor in __init__.py.
@@ -123,72 +110,6 @@ TOPIC_BY_SLUG: dict[str, str] = {topic_slug(t): t for t in TOPIC_COLOURS}
 def static_build() -> bool:
     """True while ``scripts/build_static.py`` is rendering the site to files."""
     return bool(current_app.config.get("STATIC_BUILD"))
-
-
-# Page caching
-# ------------
-# Card content only changes on restart, so rendered pages are cached until then
-# (``create_app()`` clears the cache at startup).  ``cached_page`` is the one way
-# views are cached:
-#
-# - The key holds ``request.script_root`` because every link on a page comes
-#   from ``url_for``.  A request without ``X-Forwarded-Prefix`` must not store
-#   a page whose links lack ``/flashcards`` for prefixed requests (the static
-#   build sends the header) to receive.
-# - The key holds only the query parameters the view names, never the raw query
-#   string, so junk parameters cannot create entries.
-# - Only 200 responses are stored.  flask-caching would otherwise also store
-#   ``abort(404)`` and redirects, letting junk URLs evict real pages.
-# - ``cacheable`` lets a view skip caching for unbounded inputs (any tag, any
-#   date range): SimpleCache caps the number of entries, not their size.
-# - Caching is bypassed while edge editing is on: a cached page would skip the
-#   context processor that puts the CSRF token in the session, and edits change
-#   the pages.
-
-
-def _is_ok(rv: Any) -> bool:
-    """True when a view's return value (str, tuple or response) is a 200."""
-    if isinstance(rv, tuple):
-        return next((x for x in rv[1:] if isinstance(x, int)), 200) == 200
-    return getattr(rv, "status_code", 200) == 200
-
-
-def cached_page(
-    *query_args: str,
-    timeout: int = 0,
-    variant: Callable[[], str] | None = None,
-    cacheable: Callable[[], bool] | None = None,
-) -> Callable[[F], F]:
-    """
-    Cache a view's response, keyed on the URL prefix, the path, the named query
-    parameters and, if given, ``variant()`` (for content negotiation).
-    """
-
-    def make_key(*_args: Any, **_kwargs: Any) -> str:
-        parts = [request.script_root, request.path]
-        parts += [request.args.get(a, "").strip() for a in query_args]
-        if variant is not None:
-            parts.append(variant())
-        return "page:" + json.dumps(parts)
-
-    def bypass() -> bool:
-        return edge_edit_enabled() or (cacheable is not None and not cacheable())
-
-    return cache.cached(
-        timeout=timeout, make_cache_key=make_key, unless=bypass, response_filter=_is_ok
-    )
-
-
-def vary_on_accept(view: F) -> F:
-    """Add ``Vary: Accept`` for views that pick HTML or JSON from that header."""
-
-    @functools.wraps(view)
-    def wrapper(*args: Any, **kwargs: Any) -> Response:
-        response = make_response(view(*args, **kwargs))
-        response.vary.add("Accept")
-        return response
-
-    return cast(F, wrapper)
 
 
 def _topic_colour(topic: str) -> str:
@@ -267,16 +188,6 @@ _SKIP_TOOLTIP = {
 
 
 @bp.get("/")
-@cached_page(
-    "tag",
-    "topic",
-    # Only the full grid and the per-topic views: there are thousands of tags
-    # and each tag-filtered page repeats the whole tag strip (~400 KB).
-    cacheable=lambda: (
-        not request.args.get("tag", "").strip()
-        and request.args.get("topic", "").strip() in ("", *TOPIC_COLOURS)
-    ),
-)
 def index() -> str:
     """
     Render the main card grid.
@@ -294,7 +205,6 @@ def index() -> str:
 
 
 @bp.get("/topic/<slug>")
-@cached_page()
 def topic_page(slug: str) -> str:
     """The card grid for one topic, at a path so the static build can store it."""
     topic = TOPIC_BY_SLUG.get(slug)
@@ -330,7 +240,6 @@ def _render_index(tag: str, topic_filter: str) -> str:
 
 
 @bp.get("/tag/<path:tag>")
-@cached_page()
 def tag_page(tag: str) -> str:
     """
     Render a dedicated page for all cards sharing a single *tag*.
@@ -359,15 +268,12 @@ def barbie_theme() -> ResponseReturnValue:
 
 
 @bp.get("/search-data.json")
-@limiter.limit("60 per minute")
-@cached_page()
 def search_data_json_view() -> Response:
     """
     Return the full card index as JSON for the client-side search overlay.
 
-    Served as a separate cacheable endpoint so the ~350 KB payload is not
-    embedded in every HTML page.  Flask-caching stores the response in memory;
-    nginx can additionally cache it for 24 h via ``proxy_cache``.
+    A separate file (about 770 KB) rather than embedded in every page, so the
+    browser downloads it once and every page reuses it.
     """
     cards = get_all_cards_with_content()
     data = (
@@ -389,11 +295,7 @@ def search_data_json_view() -> Response:
         .replace(">", "\\u003e")
         .replace("&", "\\u0026")
     )
-    return Response(
-        data,
-        mimetype="application/json",
-        headers={"Cache-Control": "public, max-age=86400"},
-    )
+    return Response(data, mimetype="application/json")
 
 
 @bp.get("/random")
@@ -411,21 +313,10 @@ _DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}(?: \d{2}:\d{2}:\d{2})?")
 
 
 def _wants_json() -> bool:
-    return (
-        request.args.get("format") == "json"
-        or request.headers.get("Accept") == "application/json"
-    )
+    return request.args.get("format") == "json"
 
 
 @bp.get("/recent")
-@vary_on_accept
-@cached_page(
-    timeout=300,
-    variant=lambda: "json" if _wants_json() else "html",
-    # Any date range is valid and the full list is 1.8 MB: cache only the
-    # undated list, not every distinct ?start= / ?end= pair.
-    cacheable=lambda: not (request.args.get("start") or request.args.get("end")),
-)
 def recent() -> Response | str:
     """
     Render a reverse-chronological list of cards, grouped by date.
@@ -433,8 +324,8 @@ def recent() -> Response | str:
     Optional query parameters:
     - ``?start=YYYY-MM-DD`` — earliest date (inclusive).
     - ``?end=YYYY-MM-DD``   — latest date (inclusive).
-    - ``?format=json``      — return JSON instead of HTML (also triggered by
-      an ``Accept: application/json`` header).
+    - ``?format=json``      — return JSON instead of HTML (the static build
+      stores it as ``recent.json``).
 
     Date strings without a time component are padded to ``00:00:00`` / ``23:59:59``
     so that the database ``>=`` / ``<=`` comparisons work correctly against the
@@ -466,7 +357,6 @@ def recent() -> Response | str:
 
 
 @bp.get("/card/<path:card_id>")
-@cached_page()
 def card_detail(card_id: str) -> ResponseReturnValue:
     """
     Render the full detail page for a single card.
@@ -543,7 +433,6 @@ def card_detail(card_id: str) -> ResponseReturnValue:
 
 
 @bp.post("/card/<path:card_id>/remove-link")
-@limiter.limit("5 per minute")
 def remove_link(card_id: str) -> Response:
     """
     Delete a single outgoing edge from a card.
@@ -580,14 +469,11 @@ def remove_link(card_id: str) -> Response:
         )  # local import: avoids a circular import
 
         _invalidate_global_cache()
-        cache.clear()
 
     return redirect(url_for("main.card_detail", card_id=card_id))
 
 
 @bp.get("/formulas")
-@limiter.limit("30 per minute")
-@cached_page()
 def formulas() -> str:
     """
     Render a page aggregating the Key Formula section from every card.
@@ -675,8 +561,6 @@ def _study_path(card_id: str) -> tuple[list[dict], int]:
 
 
 @bp.get("/path/<path:card_id>")
-@limiter.limit("60 per minute")
-@cached_page()
 def study_path(card_id: str) -> ResponseReturnValue:
     """Show the learning order for a card: its nearest prerequisites, then the card."""
     if get_card(card_id) is None:
@@ -691,8 +575,6 @@ _DEFINITION_RE = re.compile(
 
 
 @bp.get("/quiz")
-@limiter.limit("30 per minute")
-@cached_page("topic")
 def quiz() -> str:
     """
     Self-test mode: show each card's title, reveal its Definition and Key Formula on demand.
@@ -705,8 +587,6 @@ def quiz() -> str:
 
 
 @bp.get("/quiz/<slug>")
-@limiter.limit("30 per minute")
-@cached_page()
 def quiz_topic(slug: str) -> str:
     """The quiz for one topic, at a path so the static build can store it."""
     topic = TOPIC_BY_SLUG.get(slug)
@@ -743,8 +623,6 @@ def _render_quiz(topic: str) -> str:
 
 
 @bp.get("/graph")
-@limiter.limit("10 per minute")
-@cached_page()
 def graph_view() -> str:
     """
     Render the interactive vis.js knowledge graph.
