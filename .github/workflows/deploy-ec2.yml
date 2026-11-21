@@ -117,10 +117,12 @@ jobs:
           echo "Published \$rel (\$(du -sh "\$rel" | cut -f1))"
 
           # The site used to run as a gunicorn container (compose project
-          # "flashcards").  Remove it and its image if still there; a no-op once
-          # they are gone.
+          # "flashcards") from a clone in ~/quant-finance-flash-cards, whose
+          # docker/.env held its SECRET_KEY.  Remove the container, its image
+          # and the clone if still there; a no-op once they are gone.
           docker ps -aq --filter label=com.docker.compose.project=flashcards | xargs -r docker rm -f
           docker image rm ghcr.io/koysor/quant-finance-flash-cards:latest 2>/dev/null || true
+          rm -rf "\$HOME/quant-finance-flash-cards"
           REMOTE
           )
           ssh ec2 "$script" < site.tar.gz

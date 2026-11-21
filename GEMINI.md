@@ -32,11 +32,11 @@ The project includes specialized Gemini skills to automate workflows:
 
 ### Startup Sequence
 `app/__init__.py` → `create_app()` performs, in order:
-1. `init_db()` — idempotent DDL for the `cards` and `edges` tables
+1. `init_db()` — idempotent DDL for the `cards` and `edges` tables (`load_edges_from_file()` adds a `meta` table)
 2. Load `notation.json` → `app.config["NOTATION"]`
 3. Load `key-terms.json` → `app.config["KEY_TERMS"]`
 4. `load_all_cards(...)` — scans `cards/**/*.md`, skips unchanged files by `st_mtime`, upserts changed ones, removes cards whose files no longer exist
-5. `load_edges_from_file()` — clears the `edges` table and repopulates from `edges.json`
+5. `load_edges_from_file()` — if `edges.json` changed since the last load (mtime in `meta`), clears the `edges` table and repopulates it; entries naming unknown cards are skipped with a warning
 6. Load `resources.json` → `app.config["RESOURCES"]`
 7. Register the blueprint and attach the context processor (topic colours, site stats; CSRF token only when `ALLOW_EDGE_EDIT=1`)
 8. Attach the `after_request` caching hook and static URL versioning
@@ -85,14 +85,19 @@ URL validation runs automatically on `git commit` when `resources.json` is stage
 | Method | URL | Purpose |
 |---|---|---|
 | GET | `/` | Card grid, tag filter strip, `?tag=` / `?topic=` filtering |
-| GET | `/tag/<path:tag>` | All cards carrying one tag |
+| GET | `/tag/<path:tag>` | All cards carrying one tag (`path:` because tags such as `30/360` contain a slash) |
 | GET | `/topic/<slug>` | Card grid for one topic (same page as `/?topic=`) |
 | GET | `/card/<path:card_id>` | Card content, prerequisites, see-also, sidebar |
-| POST | `/card/<path:card_id>/remove-link` | Delete an edge (CSRF-protected) |
+| POST | `/card/<path:card_id>/remove-link` | Delete an edge (CSRF-protected); 404 unless `ALLOW_EDGE_EDIT=1` |
+| GET | `/path/<path:card_id>` | Study path: nearest prerequisites in learning order |
 | GET | `/graph` | vis.js network — path finding, topic filtering, edge weights |
 | GET | `/formulas` | All Key Formula sections aggregated by topic |
-| GET | `/recent` | Reverse-chronological card list grouped by date (unlisted) |
-| GET | `/random` | Redirect to a random card |
+| GET | `/quiz` | Quiz topic list; `?topic=` shows one topic's quiz |
+| GET | `/quiz/<slug>` | One topic's quiz (same page as `/quiz?topic=`) |
+| GET | `/recent` | Reverse-chronological card list grouped by date (unlisted); `?start=` / `?end=`, JSON with `?format=json` (static site: `recent.json`) |
+| GET | `/search-data.json` | Card index for the search overlay |
+| GET | `/random` | Redirect to a random card; a JS page in the static build |
+| GET | `/barbie` | Sets the theme cookie (easter egg); a JS page in the static build |
 
 ## Testing
 
@@ -165,8 +170,8 @@ Adding a topic requires a new entry in `TOPIC_COLOURS`; the colour cascades to c
 ### Database and Loading
 - **Card IDs:** Derived from file paths (e.g., `derivatives/black-scholes-equation`).
 - **Loader:** `app/loader.py` performs incremental reloads based on file `st_mtime`.
-- **Edges:** Mutations (removing links) are written back to `edges.json`. Adding edges is currently manual via `edges.json`.
-- **Edge integrity:** Both `source` and `target` must be existing card IDs. Orphaned edges are skipped silently at load time, so a typo produces a missing link rather than an error — verify IDs when editing `edges.json` by hand, and never commit `edges.json` without the cards it references.
+- **Edges:** With `ALLOW_EDGE_EDIT=1`, removing a link is written back to `edges.json`. Adding edges is manual via `edges.json`.
+- **Edge integrity:** Both `source` and `target` must be existing card IDs. Orphaned edges are skipped at load time with only a log warning, so a typo produces a missing link rather than an error — verify IDs when editing `edges.json` by hand, and never commit `edges.json` without the cards it references.
 
 ### Caching and Performance
 Nothing changes at runtime outside edge-edit mode, so pages are cached until restart. See `ARCHITECTURE.md` for the full design.
@@ -174,10 +179,10 @@ Nothing changes at runtime outside edge-edit mode, so pages are cached until res
 - **HTTP caching:** GET 200s get `Cache-Control: public, max-age=300` and a weak ETag. `url_for('static', ...)` adds a content hash (`?v=`), so static files are cached for a year.
 - **Templates are dedented:** a Jinja extension strips each template line's indentation at compile time. Never put `<pre>` or `<textarea>` directly in a template, and do not turn on `trim_blocks`.
 - **Database connections:** request connections are read-only outside edit mode.
-- **Tests:** `tests/test_caching.py` covers all of the above.
+- **Tests:** `tests/test_caching.py` covers all of the above; `tests/test_static_build.py` covers the static build.
 
 ### Frontend
-- **No Build Step:** All CSS is in `app/static/style.css`. Third-party JS/CSS is loaded from CDNs.
+- **No frontend build step:** All CSS is in `app/static/style.css`. Third-party JS/CSS is loaded from CDNs. (Production is a static render of the Flask pages; see the Static build section.)
 - **Theme:** Dark/Light theme is client-side only (`localStorage`, `data-theme` on `<html>`).
 - **Wide Mode:** Removes `max-width` constraints for full-viewport layouts (`localStorage`, `data-wide` on `<html>`). Toggle via the expand button in the navbar or the `w` keyboard shortcut.
 - **Search:** Fuzzy search is client-side over `/search-data.json`, fetched once and cached by the browser for a day.
