@@ -23,15 +23,12 @@ bash scripts/install_hooks.sh
 
 | Variable | Default | Purpose |
 |---|---|---|
-| `SECRET_KEY` | Required unless `FLASK_DEBUG=1` | Flask session signing key. With `FLASK_DEBUG=1` (local development) a random key is generated and changes on restart; the launch scripts set this. Set a stable value in production. |
+| `SECRET_KEY` | Required unless `FLASK_DEBUG=1` | Flask session signing key. With `FLASK_DEBUG=1` (local development) a random key is generated and changes on restart; the launch scripts set this. The static build sets a throwaway one. |
 | `PORT` | `5000` | Port for the development server. |
 | `DEBUG` | `false` | Enable Flask debug mode and the interactive reloader when running `run.py`. |
-| `ALLOW_EDGE_EDIT` | unset | Set to `1` to enable the card-page "remove link" button, which rewrites `edges.json`. It also turns off page caching and caching headers. Leave unset in production. |
-| `CACHE_WARM_PREFIX` | unset | When set, render the heaviest pages into the page cache at startup, requested with this URL prefix (`/flashcards` in production; empty for a site served at `/`). |
+| `ALLOW_EDGE_EDIT` | unset | Set to `1` to enable the card-page "remove link" button, which rewrites `edges.json`. It also turns off page caching and caching headers. Never set it for the static build, which refuses to run with it. |
 | `CACHE_THRESHOLD` | `500` | Maximum number of cached pages. A full cache is about 20–30 MB. |
-| `WEB_CONCURRENCY` / `GUNICORN_THREADS` | `1` / `2` | gunicorn workers, and threads per worker (`gunicorn.conf.py`). |
 
-A `.env.example` file is provided as a template.
 
 ## Topics
 
@@ -56,7 +53,13 @@ A `.env.example` file is provided as a template.
 
 ## Deployment (AWS EC2)
 
-Live at https://koysor.duckdns.org/flashcards/. The app ships like the other koysor apps: GitHub Actions runs the tests, builds the Docker image, pushes it to GHCR and deploys it over SSH to the shared EC2 instance, where Caddy serves it under `/flashcards/`. See [`docker/README.md`](docker/README.md) for the architecture, first-time host setup, deploy key, capacity and troubleshooting, and [`.github/workflows/DEPLOY-EC2.md`](.github/workflows/DEPLOY-EC2.md) for the workflow. `deploy/` holds an alternative systemd + nginx setup for a standalone host; it is not used for the EC2 deployment.
+Live at https://koysor.duckdns.org/flashcards/ as a static site. On every push to `main`, GitHub Actions runs the tests, renders every page to HTML with `scripts/build_static.py` (failing on any broken link), and copies the files over SSH to the shared EC2 instance. There, Caddy from the quant-finance repo serves them under `/flashcards/`, and no Python runs on the server. See [`.github/workflows/DEPLOY-EC2.md`](.github/workflows/DEPLOY-EC2.md) for the workflow, the Caddy configuration, rollback and the deploy key.
+
+To build the site locally (Linux or WSL; some tag names are not valid Windows file names):
+
+```bash
+uv run python scripts/build_static.py --prefix /flashcards --out dist
+```
 
 ## Features
 

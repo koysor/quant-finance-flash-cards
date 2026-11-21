@@ -87,7 +87,6 @@ load_edges_from_file()  # clears edges table, repopulates from edges.json
 app.register_blueprint(bp)
 # context_processor → injects topic_colour(), site_stats, csrf_token, edge_edit_enabled
 # after_request     → Cache-Control + weak ETag on GET 200s; ?v= hash on static URLs
-# CACHE_WARM_PREFIX set → render the heaviest pages into the page cache
 ```
 
 The context processor runs on every page render; `get_site_stats()` is memoised in a module-level dict, so it costs one SQLite query per process. The CSRF token is only created in edge-edit mode, so ordinary pages never touch the session or set a cookie. Rendered pages themselves are cached until restart (see [Caching and Performance](#caching-and-performance)), so most requests never render at all.
@@ -178,8 +177,7 @@ uv run python run.py
        ├─ load_edges_from_file() clears edges table, repopulates from edges.json
        ├─ register_blueprint(bp)
        ├─ attach context_processor (topic_colour, stats; CSRF token in edit mode only)
-       ├─ attach after_request caching headers and static URL versioning
-       └─ warm the page cache       only when CACHE_WARM_PREFIX is set (production)
+       └─ attach after_request caching headers and static URL versioning
   └─ app.run(debug=True)        reloader active — file changes restart the server
                                  card changes are picked up on next restart
 ```
@@ -190,17 +188,17 @@ The Flask debug reloader watches Python files. **It does not watch `cards/*.md`*
 
 ## Caching and Performance
 
-Nothing changes at runtime (outside edge-edit mode), so every page is a pure function of the files loaded at startup. Three layers exploit that.
+Nothing changes at runtime (outside edge-edit mode), so every page is a pure function of the files loaded at startup. Production takes that to its end: the whole site is rendered to files at deploy time (see [Deployment](#deployment)). The three layers below apply when the Flask app itself serves pages, as the dev server does, and the static build renders through them.
 
 **In-process page cache** (`flask_caching` `SimpleCache`, at most `CACHE_THRESHOLD` entries, default 500). Every cached view uses `cached_page(...)` in `app/routes.py`, never `@cache.cached` directly. It:
 
-- keys on `request.script_root` as well as the path, because every link comes from `url_for`. A request without Caddy's `X-Forwarded-Prefix` (the Docker health check, or anyone reaching the host port) must not store pages whose links lack `/flashcards`;
+- keys on `request.script_root` as well as the path, because every link comes from `url_for`. A request without `X-Forwarded-Prefix` must not store pages whose links lack `/flashcards` for prefixed requests, such as the static build's, to receive;
 - keys on only the query parameters the view names, never the raw query string, so junk parameters create no entries;
 - stores only 200 responses (flask-caching 2.5 would otherwise store `abort(404)` and redirects too);
 - skips unbounded inputs through `cacheable=`: tag-filtered index pages (4,000+ tags at about 400 KB each) and dated `/recent` ranges. `SimpleCache` caps the entry count, not the size;
 - is bypassed while `ALLOW_EDGE_EDIT=1`. A cached page would skip the context processor that creates the CSRF token, and edits change the pages. `remove_link` clears the cache after an edit.
 
-With every card, study path, quiz topic and topic view visited, the cache holds about 280 entries and 20 MB. `create_app()` clears it on every start. When `CACHE_WARM_PREFIX` is set (production: `/flashcards`), `create_app()` renders `/`, `/graph`, `/formulas`, `/recent` and `/search-data.json` through a test client with that prefix. Under gunicorn's `preload_app` this runs once in the master, so forked workers start warm.
+With every card, study path, quiz topic and topic view visited, the cache holds about 280 entries and 20 MB. `create_app()` clears it on every start, and the static build clears it before and after rendering.
 
 **HTTP caching** (`add_cache_headers` in `create_app()`). Successful GET pages get `Cache-Control: public, max-age=300` unless the view set its own (`/search-data.json` uses a day). They also get a weak ETag built from a token generated at each start, so revalidation returns an empty 304 until the next restart or deploy. `url_for('static', ...)` appends a content hash (`?v=`), and versioned static responses are cached for a year (`immutable`). Debug and edit modes get none of these headers.
 
@@ -208,7 +206,6 @@ With every card, study path, quiz topic and topic view visited, the cache holds 
 
 - A Jinja extension strips every template line's indentation at compile time. It cut the index from 2.0 MB to 1.3 MB with identical rendering.
 - Request connections to SQLite are read-only and skip the PRAGMAs (edit mode keeps a writable one).
-- gunicorn's `gthread` workers stop one slow request from blocking the rest. Its `when_ready` hook trims the master's leftover startup memory (`gc.collect()` plus `malloc_trim(0)`) before forking, which took about 17 MB off the master.
 
 Measured with the Flask test client:
 
@@ -220,7 +217,16 @@ Measured with the Flask test client:
 
 ## Deployment
 
-Production runs as a Docker container (`docker/Dockerfile`, gunicorn with one `gthread` worker and two threads) on a shared EC2 instance. A Caddy reverse proxy owned by the `quant-finance` repo serves it at `/flashcards/`, stripping the prefix and sending `X-Forwarded-Prefix`; `create_app()` wraps the WSGI app in `ProxyFix` so `url_for` and the rate limiter see the original prefix and client IP. `graph.db` is built into the image at build time, so a container start only checks card mtimes (all unchanged) instead of re-parsing every card; it is never committed. Templates must build URLs with `url_for`, never root-relative strings, or they break behind the prefix. The full process is in [`docker/README.md`](docker/README.md); the `deploy/` directory is an alternative systemd + nginx setup for a standalone host.
+Production is static. `scripts/build_static.py` (logic in `app/static_site.py`) requests every page through the Flask test client with `X-Forwarded-Prefix: /flashcards` and writes each response to a file: `/a/b` becomes `a/b.html`, plus `404.html`, the JSON files and `static/`. That's about 7,450 pages. The build fails if any page links to a file it did not write. `create_app()` wraps the app in `ProxyFix`, which turns the header into `SCRIPT_NAME`, so every `url_for` link carries the prefix. Templates must build URLs with `url_for`, never root-relative strings.
+
+A query string cannot select a file, so templates link to path routes (`/topic/<slug>`, `/quiz/<slug>`, `/tag/<path:tag>`). With `STATIC_BUILD` set in the app config, pages carry small scripts that do the server's remaining jobs in the browser:
+
+- forwarding old `?tag=`/`?topic=` URLs;
+- filtering `/recent?start=&end=`;
+- picking a random card (`/random`) and setting the Barbie theme cookie (`/barbie`);
+- resolving `/card/<slug>` on the 404 page.
+
+CI copies the files to the shared EC2 instance as `~/flashcards-site/releases/<sha>` and repoints a `current` symlink, and Caddy from the `quant-finance` repo serves them with `file_server`. The workflow, Caddy configuration and rollback are in [`.github/workflows/DEPLOY-EC2.md`](.github/workflows/DEPLOY-EC2.md).
 
 ## Adding Things
 

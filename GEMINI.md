@@ -40,7 +40,6 @@ The project includes specialized Gemini skills to automate workflows:
 6. Load `resources.json` → `app.config["RESOURCES"]`
 7. Register the blueprint and attach the context processor (topic colours, site stats; CSRF token only when `ALLOW_EDGE_EDIT=1`)
 8. Attach the `after_request` caching hook and static URL versioning
-9. If `CACHE_WARM_PREFIX` is set, render the heaviest pages into the page cache
 
 ## Building and Running
 
@@ -79,7 +78,7 @@ URL validation runs automatically on `git commit` when `resources.json` is stage
 
 **Static build:** `uv run python scripts/build_static.py --prefix /flashcards --out dist` renders every page to files (`app/static_site.py`) and fails if a page links to a file it did not write. It needs Linux (tags such as `P(A|B)` are not valid Windows file names), so run it in WSL or leave it to CI. Query strings cannot select a file, so templates link to path routes (`/topic/<slug>`, `/quiz/<slug>`), and with `STATIC_BUILD` set in the app config the pages carry small scripts that stand in for the server: old `?tag=`/`?topic=` links, `/recent?start=&end=`, `/random`, `/barbie` and the `/card/<slug>` lookup on the 404 page. Every new page must be reachable from `page_urls()` in `app/static_site.py`, and must not depend on a query string.
 
-**Deployment:** the app runs in Docker on a shared AWS EC2 instance behind Caddy at `/flashcards/`. Build templates' URLs with `url_for` (never root-relative strings) so the prefix works. See `docker/README.md` for the full process.
+**Deployment:** production is the static build, not a running app. On a push to `main`, CI renders the site, copies it to a shared AWS EC2 instance as `~/flashcards-site/releases/<sha>`, and repoints the `current` symlink. Caddy (quant-finance repo) serves it at `/flashcards/` with `file_server`. Build templates' URLs with `url_for` (never root-relative strings) so the prefix works. See `.github/workflows/DEPLOY-EC2.md` for the workflow, the Caddy configuration and rollback.
 
 ## Routes
 
@@ -174,7 +173,7 @@ Nothing changes at runtime outside edge-edit mode, so pages are cached until res
 - **Page cache:** Cache every GET view with `@cached_page(...)` in `app/routes.py`, never `@cache.cached` directly. It keys on the URL prefix (`request.script_root`), the path and only the query parameters you name, stores only 200 responses, and is bypassed while `ALLOW_EDGE_EDIT=1`. Pass `cacheable=` to skip unbounded inputs: `SimpleCache` caps the entry count (`CACHE_THRESHOLD`, default 500), not the size.
 - **HTTP caching:** GET 200s get `Cache-Control: public, max-age=300` and a weak ETag. `url_for('static', ...)` adds a content hash (`?v=`), so static files are cached for a year.
 - **Templates are dedented:** a Jinja extension strips each template line's indentation at compile time. Never put `<pre>` or `<textarea>` directly in a template, and do not turn on `trim_blocks`.
-- **Warm-up and workers:** `CACHE_WARM_PREFIX` (production: `/flashcards`) renders the heaviest pages at startup. gunicorn runs one `gthread` worker with two threads. Request database connections are read-only outside edit mode.
+- **Database connections:** request connections are read-only outside edit mode.
 - **Tests:** `tests/test_caching.py` covers all of the above.
 
 ### Frontend
