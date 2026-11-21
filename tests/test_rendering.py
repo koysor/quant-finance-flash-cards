@@ -2,6 +2,8 @@
 connections and template dedenting.  The static build renders every page this
 way, so these properties are what the live site gets."""
 
+import re
+
 import pytest
 
 CARD = "/card/derivatives/black-scholes-equation"
@@ -49,8 +51,31 @@ def test_shared_script_is_a_static_file(client):
     assert 'searchData: "/flashcards/search-data.json"' in html
     assert "function openSearch" not in html
     js = client.get("/static/base.js").get_data(as_text=True)
-    assert "function openSearch" in js and "FC_URLS.searchData" in js
+    assert "function openSearch" in js and "fcUrl('searchData'" in js
     assert "{{" not in js
+
+
+def test_header_buttons_use_data_actions(client):
+    """Inline onclick calls into base.js would throw if clicked before it loads."""
+    html = client.get("/").get_data(as_text=True)
+    js = client.get("/static/base.js").get_data(as_text=True)
+    actions = set(re.findall(r'data-action="([a-z]+)"', html))
+    assert {"random", "search", "theme", "font", "menu"} <= actions
+    for action in actions:
+        assert f"  {action}:" in js, action
+    for name in ("goRandom", "openSearch", "setTheme", "changeFontSize"):
+        assert f'onclick="{name}' not in html, name
+
+
+def test_base_js_fallback_urls_match_the_routes(client):
+    """fcUrl()'s fallback paths stand in for FC_URLS on stale cached pages."""
+    html = client.get("/").get_data(as_text=True)
+    js = client.get("/static/base.js").get_data(as_text=True)
+    page_urls = dict(re.findall(r'(\w+): "(/[^"]*)"', html.split("FC_URLS")[1]))
+    fallbacks = dict(re.findall(r"fcUrl\('(\w+)', '([^']*)'\)", js))
+    assert fallbacks, "no fcUrl() calls found"
+    for key, path in fallbacks.items():
+        assert page_urls[key] == "/" + path, key
 
 
 def test_edit_mode_puts_the_csrf_token_in_the_page(client, edit_enabled):

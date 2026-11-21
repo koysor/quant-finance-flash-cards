@@ -16,9 +16,8 @@
 
 {% block page_scripts %}
 <script>
-/* goRandom() in base.html prefers cards not yet visited; it needs the search data. */
-fetch({{ url_for('main.search_data_json_view') | tojson }})
-  .then(r => r.json())
-  .then(data => { ALL_CARDS = data; goRandom(); });
+/* goRandom() in static/base.js prefers cards not yet visited; wait for the
+   card index base.js is already fetching rather than fetching it again. */
+CARDS_READY.then(goRandom);
 </script>
 {% endblock %}

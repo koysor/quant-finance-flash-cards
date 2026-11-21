@@ -2,14 +2,31 @@
  * Shared behaviour for every page: search overlay, theme and wide mode,
  * mobile menu, random card, keyboard shortcuts.  A plain (not module, not
  * deferred) script loaded at the end of <body>, so its top-level names
- * (ALL_CARDS, goRandom, setTheme, ...) are globals for the inline onclick
- * handlers and each page's own scripts.  Server URLs come from FC_URLS, set
- * in base.html just before this file loads.
+ * (ALL_CARDS, CARDS_READY, goRandom, setTheme, ...) are globals for each
+ * page's own scripts.  Header buttons carry data-action attributes instead
+ * of inline onclick handlers, so a click before this file has loaded does
+ * nothing rather than throwing a ReferenceError.
  */
+
+/*
+ * Server URLs come from FC_URLS, set in base.html just before this file
+ * loads.  Caddy serves /static/* as immutable for a year and ignores ?v=, so
+ * a page cached from an older deploy can run a newer copy of this file.
+ * Read every URL through fcUrl() with a fallback path relative to the site
+ * root (worked out from this script's own URL), so a key the page does not
+ * define still resolves.
+ */
+const SITE_ROOT = new URL('..', document.currentScript.src).pathname;
+function fcUrl(key, fallbackPath) {
+  const urls = typeof FC_URLS === 'object' && FC_URLS ? FC_URLS : {};
+  return urls[key] || SITE_ROOT + fallbackPath;
+}
+
 let ALL_CARDS = [];
-fetch(FC_URLS.searchData)
+/* Resolves once the card index has loaded; pages wait on it, never refetch. */
+const CARDS_READY = fetch(fcUrl('searchData', 'search-data.json'))
   .then(r => r.json())
-  .then(data => { ALL_CARDS = data; });
+  .then(data => { ALL_CARDS = data; return data; });
 
 /* ── Theme toggle ── */
 function setTheme(theme) {
@@ -248,9 +265,26 @@ document.addEventListener('keydown', e => {
   if (e.key === '/')  { e.preventDefault(); openSearch();   return; }
   if (e.key === '?')  { openShortcuts();                    return; }
   if (e.key === 'r')  { goRandom();                         return; }
-  if (e.key === 'g')  { window.location.href = FC_URLS.graph; return; }
-  if (e.key === 'f')  { window.location.href = FC_URLS.formulas;   return; }
-  if (e.key === 'c')  { window.location.href = FC_URLS.index;      return; }
-  if (e.key === 'w')  { toggleWideMode();                                           return; }
+  if (e.key === 'g')  { window.location.href = fcUrl('graph', 'graph'); return; }
+  if (e.key === 'f')  { window.location.href = fcUrl('formulas', 'formulas'); return; }
+  if (e.key === 'c')  { window.location.href = fcUrl('index', ''); return; }
+  if (e.key === 'w')  { toggleWideMode();                   return; }
   if (typeof handleCardNav === 'function') handleCardNav(e.key);
+});
+
+/* ── Header buttons ── */
+const ACTIONS = {
+  random:    goRandom,
+  search:    openSearch,
+  shortcuts: openShortcuts,
+  wide:      toggleWideMode,
+  menu:      toggleMobileMenu,
+  font:      arg => changeFontSize(Number(arg)),
+  theme:     arg => setTheme(arg),
+};
+document.addEventListener('click', e => {
+  const el = e.target.closest('[data-action]');
+  if (!el || !ACTIONS[el.dataset.action]) return;
+  if (el.hasAttribute('data-close-menu')) closeMenu();
+  ACTIONS[el.dataset.action](el.dataset.arg);
 });

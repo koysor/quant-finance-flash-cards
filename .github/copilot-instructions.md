@@ -52,8 +52,9 @@ vis-network are loaded from CDNs.
   page) and the `/recent` date filter. `tests/test_static_build.py` covers it.
 - The app has no page cache, caching headers or rate limiting; Caddy handles
   those for the static site. The shared page script is `app/static/base.js`,
-  which gets server URLs from the inline `FC_URLS` object in `base.html`; do
-  not write Jinja into it. `tests/test_rendering.py` covers rendering.
+  which gets server URLs from the inline `FC_URLS` object in `base.html`
+  through `fcUrl(key, fallbackPath)`; do not write Jinja into it. Header
+  buttons use `data-action` attributes, not inline `onclick`. `tests/test_rendering.py` covers rendering.
 - Templates are dedented at compile time. Do not put `<pre>` or `<textarea>`
   directly in a template, and do not enable Jinja's `trim_blocks`.
 
