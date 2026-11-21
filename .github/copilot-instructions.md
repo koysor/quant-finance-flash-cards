@@ -50,11 +50,10 @@ vis-network are loaded from CDNs.
   set, pages carry small browser scripts in place of the server's redirects
   (`/random`, `/barbie`, old `?tag=`/`?topic=` URLs, `/card/<slug>` on the 404
   page) and the `/recent` date filter. `tests/test_static_build.py` covers it.
-- The dev server caches pages until restart. Cache a GET view with `@cached_page(...)`
-  from `app/routes.py`, never `@cache.cached` directly: it keys on the URL
-  prefix and only the query parameters you name, stores only 200 responses,
-  and is bypassed when `ALLOW_EDGE_EDIT=1`. Use `cacheable=` to skip
-  unbounded inputs. `tests/test_caching.py` covers caching.
+- The app has no page cache, caching headers or rate limiting; Caddy handles
+  those for the static site. The shared page script is `app/static/base.js`,
+  which gets server URLs from the inline `FC_URLS` object in `base.html`; do
+  not write Jinja into it. `tests/test_rendering.py` covers rendering.
 - Templates are dedented at compile time. Do not put `<pre>` or `<textarea>`
   directly in a template, and do not enable Jinja's `trim_blocks`.
 

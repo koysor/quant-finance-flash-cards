@@ -39,7 +39,7 @@ The project includes specialized Gemini skills to automate workflows:
 5. `load_edges_from_file()` — if `edges.json` changed since the last load (mtime in `meta`), clears the `edges` table and repopulates it; entries naming unknown cards are skipped with a warning
 6. Load `resources.json` → `app.config["RESOURCES"]`
 7. Register the blueprint and attach the context processor (topic colours, site stats; CSRF token only when `ALLOW_EDGE_EDIT=1`)
-8. Attach the `after_request` caching hook and static URL versioning
+8. Attach static URL versioning (`?v=` content hash)
 
 ## Building and Running
 
@@ -174,12 +174,12 @@ Adding a topic requires a new entry in `TOPIC_COLOURS`; the colour cascades to c
 - **Edge integrity:** Both `source` and `target` must be existing card IDs. Orphaned edges are skipped at load time with only a log warning, so a typo produces a missing link rather than an error — verify IDs when editing `edges.json` by hand, and never commit `edges.json` without the cards it references.
 
 ### Caching and Performance
-Nothing changes at runtime outside edge-edit mode, so pages are cached until restart. See `ARCHITECTURE.md` for the full design.
-- **Page cache:** Cache every GET view with `@cached_page(...)` in `app/routes.py`, never `@cache.cached` directly. It keys on the URL prefix (`request.script_root`), the path and only the query parameters you name, stores only 200 responses, and is bypassed while `ALLOW_EDGE_EDIT=1`. Pass `cacheable=` to skip unbounded inputs: `SimpleCache` caps the entry count (`CACHE_THRESHOLD`, default 500), not the size.
-- **HTTP caching:** GET 200s get `Cache-Control: public, max-age=300` and a weak ETag. `url_for('static', ...)` adds a content hash (`?v=`), so static files are cached for a year.
+Production is static and Caddy handles compression, `Cache-Control` and ETags, so the app has no page cache, caching headers or rate limiting. See `ARCHITECTURE.md` for the full design.
+- **Static assets:** `url_for('static', ...)` adds a content hash (`?v=`), because Caddy caches `/static/*` for a year.
+- **Shared script:** `app/static/base.js` holds the search overlay, theme, wide mode, menu, random card and shortcuts. `base.html` passes it server URLs in an inline `FC_URLS` object; never write Jinja into the JS file.
 - **Templates are dedented:** a Jinja extension strips each template line's indentation at compile time. Never put `<pre>` or `<textarea>` directly in a template, and do not turn on `trim_blocks`.
 - **Database connections:** request connections are read-only outside edit mode.
-- **Tests:** `tests/test_caching.py` covers all of the above; `tests/test_static_build.py` covers the static build.
+- **Tests:** `tests/test_rendering.py` covers all of the above; `tests/test_static_build.py` covers the static build.
 
 ### Frontend
 - **No frontend build step:** All CSS is in `app/static/style.css`. Third-party JS/CSS is loaded from CDNs. (Production is a static render of the Flask pages; see the Static build section.)

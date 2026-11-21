@@ -4,8 +4,8 @@ import pytest
 
 
 def test_recent_route_json_response(client):
-    """Test that /recent returns JSON when requested."""
-    response = client.get("/recent", headers={"Accept": "application/json"})
+    """Test that /recent returns JSON with ?format=json (the static build's recent.json)."""
+    response = client.get("/recent?format=json")
     assert response.status_code == 200
     # response.is_json might not be reliable if charset is included, check content_type
     assert "application/json" in response.content_type

@@ -38,7 +38,7 @@ if [ "$code" != "200" ]; then echo "FAILED ($code)"; tail -30 app.log; fi
 
 ## Testing
 
-Run `uv run pytest`. Tests copy the database and `edges.json` into a temp directory, so they never modify the real ones. Caching behaviour (cache keys, headers, read-only connections, dedented templates) is covered by `tests/test_caching.py`; extend it when adding a cached view. The static build (URL→file mapping, link check, browser stand-ins, path routes) is covered by `tests/test_static_build.py`, which builds a subset of pages; CI's `static-build` job runs the full build. A malformed card or unknown topic raises `ValueError` at startup.
+Run `uv run pytest`. Tests copy the database and `edges.json` into a temp directory, so they never modify the real ones. Rendering behaviour (URL prefix, static asset hashes, `base.js`, no cookies, read-only connections, dedented templates) is covered by `tests/test_rendering.py`. The static build (URL→file mapping, link check, browser stand-ins, path routes) is covered by `tests/test_static_build.py`, which builds a subset of pages; CI's `static-build` job runs the full build. A malformed card or unknown topic raises `ValueError` at startup.
 
 Also verify changes by starting the server and checking:
 1. The card appears on the index page under the correct topic
@@ -64,7 +64,7 @@ Flask web application that reads Markdown flash cards from `cards/` and stores t
 5. `load_edges_from_file()` — if `edges.json` changed since the last load (mtime in `meta`), clears the `edges` table and repopulates it; entries naming unknown cards are skipped with a warning
 6. Load `resources.json` → `app.config["RESOURCES"]` (per-card website/video links)
 7. Blueprint registered, context processor attached (topic colours, stats; CSRF token only when `ALLOW_EDGE_EDIT=1`)
-8. `after_request` caching hook and static URL versioning attached
+8. Static URL versioning attached (`?v=` content hash)
 
 **Edge mutations** (only when `ALLOW_EDGE_EDIT=1`): removing a link via the card detail sidebar writes to `graph.db` first, then calls `save_edges_to_file()` to keep `edges.json` in sync. Commit `edges.json` after changes. Adding edges is done by editing `edges.json` directly and restarting.
 
@@ -84,7 +84,7 @@ Flask routes use `<path:card_id>` to allow the `/` in URLs.
 - `site_stats` — `card_count`, `topic_count`, `edge_count`
 - `csrf_token` — session-based token for POST form protection; created only when `ALLOW_EDGE_EDIT=1`, so normal pages set no cookie
 
-**Caching:** content changes only on restart, so views are cached until then with `@cached_page(...)` in `routes.py` (`create_app()` clears the cache at startup); never use `@cache.cached` directly. `cached_page` keys on the URL prefix (`request.script_root`), the path and only the query parameters you name, stores only 200 responses, and is bypassed while `ALLOW_EDGE_EDIT=1`. Pass `cacheable=` to skip unbounded inputs: `SimpleCache` caps the entry count (`CACHE_THRESHOLD`, default 500), not the size. An `after_request` hook in `create_app()` adds `Cache-Control: public, max-age=300` and a weak ETag to successful GET pages (not in debug or edit mode), and `url_for('static', ...)` adds a content-hash `?v=` so static files are cached for a year. Outside edit mode, request database connections are read-only.
+**Caching:** the app has no page cache, HTTP caching headers or rate limiting. Production is static, and Caddy handles compression, `Cache-Control` and ETags. `url_for('static', ...)` adds a content-hash `?v=`, because Caddy caches `/static/*` for a year. The shared page script is `app/static/base.js`; `base.html` passes it server URLs in an inline `FC_URLS` object, so add any new URL it needs there rather than writing Jinja into the JS file. Outside edit mode, request database connections are read-only.
 
 **Templates are dedented:** a Jinja extension in `app/__init__.py` strips each template line's leading indentation at compile time (a third of the large pages was indentation). Never put whitespace-sensitive markup (`<pre>`, `<textarea>`) directly in a template, and do not turn on `trim_blocks`: with dedent it can join tokens across a line break. Card HTML inserted through variables is not affected.
 

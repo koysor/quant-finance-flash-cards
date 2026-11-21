@@ -77,7 +77,7 @@ meta
 
 `ON DELETE CASCADE` on both edge FK columns means deleting a card automatically removes its edges. When `edges.json` is reloaded, entries whose source or target card does not exist are skipped with a warning. Foreign keys are enabled per writable connection via `PRAGMA foreign_keys = ON`.
 
-Functions get their connection from `get_db()`. Inside a request it is one connection per request, stored on `g` and closed at teardown. It is read-only (`mode=ro`, no PRAGMAs) unless edge editing is on, since nothing else writes after startup. During the startup load every call shares one `bulk_connection()` transaction, which takes precedence even if another app's request context is active. There is no connection pool: opening a read-only connection costs under 1 ms, and most requests are served from the page cache without touching the database. Foreign keys only matter for writes, so `PRAGMA foreign_keys = ON` is set on writable connections only.
+Functions get their connection from `get_db()`. Inside a request it is one connection per request, stored on `g` and closed at teardown. It is read-only (`mode=ro`, no PRAGMAs) unless edge editing is on, since nothing else writes after startup. During the startup load every call shares one `bulk_connection()` transaction, which takes precedence even if another app's request context is active. There is no connection pool: opening a read-only connection costs under 1 ms. Foreign keys only matter for writes, so `PRAGMA foreign_keys = ON` is set on writable connections only.
 
 ### 4. Application factory — `app/__init__.py`
 
@@ -95,10 +95,10 @@ load_edges_from_file()  # if edges.json changed: clear edges table, repopulate
 app.register_blueprint(bp)
 # context_processor → injects topic_colour(), topic_slug(), TOPIC_COLOURS, site_stats,
 #                     csrf_token, edge_edit_enabled, static_build
-# after_request     → Cache-Control + weak ETag on GET 200s; ?v= hash on static URLs
+# url_defaults      → ?v= content hash on static URLs
 ```
 
-The context processor runs on every page render; `get_site_stats()` is memoised in a module-level dict, so it costs one SQLite query per process. The CSRF token is only created in edge-edit mode, so ordinary pages never touch the session or set a cookie. Rendered pages themselves are cached until restart (see [Caching and Performance](#caching-and-performance)), so most requests never render at all.
+The context processor runs on every page render; `get_site_stats()` is memoised in a module-level dict, so it costs one SQLite query per process. The CSRF token is only created in edge-edit mode, so ordinary pages never touch the session or set a cookie.
 
 ### 5. Routes — `app/routes.py`
 
@@ -202,7 +202,7 @@ FLASK_DEBUG=1 uv run python run.py
        ├─ load_edges_from_file() if edges.json changed: clear edges table, repopulate
        ├─ register_blueprint(bp)
        ├─ attach context_processor (topic_colour, stats; CSRF token in edit mode only)
-       └─ attach after_request caching headers and static URL versioning
+       └─ attach static URL versioning (?v= content hash)
   └─ app.run(debug=(DEBUG == "true"), port=PORT or 5000)
 ```
 
@@ -212,34 +212,19 @@ The static build (`scripts/build_static.py`) calls the same `create_app()`, then
 
 ---
 
-## Caching and Performance
+## Rendering and Performance
 
-Nothing changes at runtime (outside edge-edit mode), so every page is a pure function of the files loaded at startup. Production takes that to its end: the whole site is rendered to files at deploy time (see [Deployment](#deployment)). The three layers below apply when the Flask app itself serves pages, as the dev server does, and the static build renders through them.
+Nothing changes at runtime (outside edge-edit mode), so every page is a pure function of the files loaded at startup. Production takes that to its end: the whole site is rendered to files at deploy time, and Caddy handles compression, `Cache-Control` and ETags (see [Deployment](#deployment)). The Flask app therefore has no page cache, HTTP caching headers or rate limiting. The dev server renders each request afresh, which is fast enough locally.
 
-**In-process page cache** (`flask_caching` `SimpleCache`, at most `CACHE_THRESHOLD` entries, default 500). Every cached view uses `cached_page(...)` in `app/routes.py`, never `@cache.cached` directly. It:
+What the app still does for the pages it renders:
 
-- keys on `request.script_root` as well as the path, because every link comes from `url_for`. A request without `X-Forwarded-Prefix` must not store pages whose links lack `/flashcards` for prefixed requests, such as the static build's, to receive;
-- keys on only the query parameters the view names, never the raw query string, so junk parameters create no entries;
-- stores only 200 responses (flask-caching 2.5 would otherwise store `abort(404)` and redirects too);
-- skips unbounded inputs through `cacheable=`: tag-filtered index pages (4,000+ tags at about 400 KB each) and dated `/recent` ranges. `SimpleCache` caps the entry count, not the size;
-- is bypassed while `ALLOW_EDGE_EDIT=1`. A cached page would skip the context processor that creates the CSRF token, and edits change the pages. `remove_link` clears the cache after an edit.
+- **Static asset URLs carry a content hash.** `url_for('static', ...)` appends `?v=<hash>` (`version_static_urls` in `create_app()`). Caddy caches `/static/*` for a year, and a changed file gets a new URL.
+- **Shared JavaScript is one file.** The search overlay, theme and wide-mode toggles, mobile menu, random card and keyboard shortcuts live in `app/static/base.js`. It is a plain script loaded at the end of `<body>`, so its top-level names are globals for inline `onclick` handlers and page scripts. `base.html` passes it the server URLs it needs in a small inline `FC_URLS` object. Kept inline, the script added about 8.6 KB to each of the ~7,450 static pages.
+- **Templates are dedented.** A Jinja extension strips every template line's indentation at compile time. It cut the index from 2.0 MB to 1.3 MB with identical rendering.
+- **Request connections to SQLite are read-only** and skip the PRAGMAs (edit mode keeps a writable one).
+- **No cookies.** The CSRF token is only created in edge-edit mode, so ordinary pages never touch the session.
 
-With every card, study path, quiz topic and topic view visited, the cache holds about 280 entries and 20 MB. `create_app()` clears it on every start, and the static build clears it before and after rendering.
-
-**HTTP caching** (`add_cache_headers` in `create_app()`). Successful GET pages get `Cache-Control: public, max-age=300` unless the view set its own (`/search-data.json` uses a day). They also get a weak ETag built from a token generated at each start, so revalidation returns an empty 304 until the next restart or deploy. `url_for('static', ...)` appends a content hash (`?v=`), and versioned static responses are cached for a year (`immutable`). Debug and edit modes get none of these headers.
-
-**Cheaper rendering and requests.**
-
-- A Jinja extension strips every template line's indentation at compile time. It cut the index from 2.0 MB to 1.3 MB with identical rendering.
-- Request connections to SQLite are read-only and skip the PRAGMAs (edit mode keeps a writable one).
-
-Measured with the Flask test client:
-
-| Page | Uncached | Cached |
-|---|---|---|
-| `/` | 110 ms | about 3 ms |
-| `/card/<id>` | 20 ms | 0.4 ms |
-| `/path/<id>` | 26 ms | 0.5 ms |
+Render times with the Flask test client: `/` about 110 ms, `/card/<id>` about 20 ms, `/path/<id>` about 26 ms. The static build renders every page once, in about 50 s.
 
 ## Deployment
 
@@ -268,4 +253,4 @@ CI copies the files to the shared EC2 instance as `~/flashcards-site/releases/<s
 
 **New key term:** add an entry to `key-terms.json` mapping a plain variable name (e.g. `dW`) to `{symbol, meaning}`. It will appear in the sidebar of every card whose LaTeX math blocks contain that variable.
 
-**New route:** add a handler to `app/routes.py` (wrapped in `@cached_page(...)`) and a template to `app/templates/`. The context processor variables (`topic_colour`, `topic_slug`, `site_stats`, `static_build`) are available in all templates automatically. For the page to exist in production, add its URLs to `page_urls()` in `app/static_site.py`, and don't make its content depend on a query string. The build's link check fails if a page links to a URL it did not render.
+**New route:** add a handler to `app/routes.py` and a template to `app/templates/`. The context processor variables (`topic_colour`, `topic_slug`, `site_stats`, `static_build`) are available in all templates automatically. For the page to exist in production, add its URLs to `page_urls()` in `app/static_site.py`, and don't make its content depend on a query string. The build's link check fails if a page links to a URL it did not render.
