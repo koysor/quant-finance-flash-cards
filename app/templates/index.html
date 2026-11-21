@@ -54,7 +54,6 @@
 
 {% if grouped %}
   {% set collapse = not active_tag and not active_topic %}
-  {% set card_i = namespace(value=0) %}
   {% for topic, cards in grouped|dictsort %}
     {% set tc = topic_colour(topic) %}
     <details class="topic-section" id="topic-{{ loop.index }}" {% if not collapse %}open{% endif %}>
@@ -71,7 +70,7 @@
           <a class="card-tile"
              href="{{ url_for('main.card_detail', card_id=card['id']) }}"
              data-card-id="{{ card['id'] }}"
-             style="--tc:{{ tc }};--delay:{{ card_i.value * 35 }}ms"
+             style="--tc:{{ tc }};--delay:{{ [loop.index0, 12]|min * 35 }}ms"
              tabindex="0">
             <div class="card-tile-header">
               <span class="card-tile-name">{{ card['name'] }}</span>
@@ -83,7 +82,6 @@
               {% endfor %}
             </span>
           </a>
-          {% set card_i.value = card_i.value + 1 %}
         {% endfor %}
       </div>
     </details>
