@@ -176,7 +176,7 @@ Adding a topic requires a new entry in `TOPIC_COLOURS`; the colour cascades to c
 ### Caching and Performance
 Production is static and Caddy handles compression, `Cache-Control` and ETags, so the app has no page cache, caching headers or rate limiting. See `ARCHITECTURE.md` for the full design.
 - **Static assets:** `url_for('static', ...)` adds a content hash (`?v=`), because Caddy caches `/static/*` for a year.
-- **Shared script:** `app/static/base.js` holds the search overlay, theme, wide mode, menu, random card and shortcuts. `base.html` passes it server URLs in an inline `FC_URLS` object; never write Jinja into the JS file.
+- **Shared script:** `app/static/base.js` holds the search overlay, theme, wide mode, menu, random card and shortcuts. `base.html` passes it server URLs in an inline `FC_URLS` object, read through `fcUrl(key, fallbackPath)` so a stale cached page still works; never write Jinja into the JS file. Header buttons use `data-action` attributes, not inline `onclick`.
 - **Templates are dedented:** a Jinja extension strips each template line's indentation at compile time. Never put `<pre>` or `<textarea>` directly in a template, and do not turn on `trim_blocks`.
 - **Database connections:** request connections are read-only outside edit mode.
 - **Tests:** `tests/test_rendering.py` covers all of the above; `tests/test_static_build.py` covers the static build.

@@ -78,7 +78,7 @@
 
     <!-- Right controls (desktop) -->
     <div class="nav-right">
-      <button class="search-trigger" onclick="goRandom()" title="Random card (r)">
+      <button class="search-trigger" data-action="random" title="Random card (r)">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/>
@@ -87,7 +87,7 @@
         Random <kbd>r</kbd>
       </button>
 
-      <button class="search-trigger" onclick="openSearch()" title="Search (/)">
+      <button class="search-trigger" data-action="search" title="Search (/)">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
@@ -95,10 +95,10 @@
         Search <kbd>/</kbd>
       </button>
 
-      <button class="help-btn" onclick="openShortcuts()" title="Keyboard shortcuts (?)">?</button>
+      <button class="help-btn" data-action="shortcuts" title="Keyboard shortcuts (?)">?</button>
 
       <!-- Wide mode toggle -->
-      <button class="icon-btn" id="wide-btn" onclick="toggleWideMode()" title="Wide mode (w)">
+      <button class="icon-btn" id="wide-btn" data-action="wide" title="Wide mode (w)">
         <svg id="wide-icon-expand" width="14" height="14" viewBox="0 0 24 24" fill="none"
              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
              aria-hidden="true">
@@ -115,20 +115,20 @@
 
       <!-- Font size controls -->
       <div class="font-size-controls" role="group" aria-label="Font size">
-        <button class="font-btn" onclick="changeFontSize(-1)" title="Decrease font size">A&minus;</button>
-        <button class="font-btn" onclick="changeFontSize(0)" title="Reset font size">A</button>
-        <button class="font-btn" onclick="changeFontSize(1)" title="Increase font size">A+</button>
+        <button class="font-btn" data-action="font" data-arg="-1" title="Decrease font size">A&minus;</button>
+        <button class="font-btn" data-action="font" data-arg="0" title="Reset font size">A</button>
+        <button class="font-btn" data-action="font" data-arg="1" title="Increase font size">A+</button>
       </div>
 
       <!-- Sliding theme toggle -->
       <div class="theme-toggle" role="group" aria-label="Colour theme">
         <div class="toggle-pill" id="toggle-pill"></div>
-        <button class="toggle-btn" id="btn-dark"  onclick="setTheme('dark')"  title="Dark">
+        <button class="toggle-btn" id="btn-dark"  data-action="theme" data-arg="dark"  title="Dark">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
           </svg>Dark
         </button>
-        <button class="toggle-btn" id="btn-light" onclick="setTheme('light')" title="Light">
+        <button class="toggle-btn" id="btn-light" data-action="theme" data-arg="light" title="Light">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="5"/>
@@ -144,7 +144,7 @@
     </div>
 
     <!-- Hamburger (mobile only) -->
-    <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileMenu()"
+    <button class="nav-hamburger" id="nav-hamburger" data-action="menu"
             aria-label="Open menu" aria-expanded="false">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
            stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
@@ -166,32 +166,32 @@
     <a href="{{ url_for('main.quiz') }}"
        {% if request.endpoint == 'main.quiz' %}class="active"{% endif %}>Quiz</a>
     <div class="mobile-menu-footer">
-      <button class="search-trigger" onclick="closeMenu();goRandom()">
+      <button class="search-trigger" data-action="random" data-close-menu>
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/>
           <polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/>
         </svg>Random
       </button>
-      <button class="search-trigger" onclick="closeMenu();openSearch()">
+      <button class="search-trigger" data-action="search" data-close-menu>
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
         </svg>Search
       </button>
       <div class="font-size-controls" role="group" aria-label="Font size">
-        <button class="font-btn" onclick="changeFontSize(-1)" title="Decrease font size">A&minus;</button>
-        <button class="font-btn" onclick="changeFontSize(0)" title="Reset font size">A</button>
-        <button class="font-btn" onclick="changeFontSize(1)" title="Increase font size">A+</button>
+        <button class="font-btn" data-action="font" data-arg="-1" title="Decrease font size">A&minus;</button>
+        <button class="font-btn" data-action="font" data-arg="0" title="Reset font size">A</button>
+        <button class="font-btn" data-action="font" data-arg="1" title="Increase font size">A+</button>
       </div>
       <div class="theme-toggle" role="group" aria-label="Colour theme">
         <div class="toggle-pill" id="toggle-pill-mobile"></div>
-        <button class="toggle-btn" id="btn-dark-m"  onclick="setTheme('dark')"  title="Dark">
+        <button class="toggle-btn" id="btn-dark-m"  data-action="theme" data-arg="dark"  title="Dark">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
           </svg>Dark
         </button>
-        <button class="toggle-btn" id="btn-light-m" onclick="setTheme('light')" title="Light">
+        <button class="toggle-btn" id="btn-light-m" data-action="theme" data-arg="light" title="Light">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="5"/>
