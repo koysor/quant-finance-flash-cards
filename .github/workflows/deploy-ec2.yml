@@ -28,6 +28,96 @@ jobs:
           uv sync --locked
           uv run pytest -q
 
+  static-build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+
+      # Renders every page and fails if any page links to a file that was not
+      # written, so this also runs on pull requests.  Linux only: tags such as
+      # P(A|B) cannot be Windows file names.
+      - name: Render the static site
+        run: |
+          uv sync --locked
+          uv run python scripts/build_static.py --prefix /flashcards --out dist
+          tar czf site.tar.gz -C dist .
+          ls -l site.tar.gz
+
+      - name: Upload the site
+        uses: actions/upload-artifact@v4
+        with:
+          name: static-site
+          path: site.tar.gz
+          retention-days: 7
+
+  publish-static:
+    needs: static-build
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download the site
+        uses: actions/download-artifact@v4
+        with:
+          name: static-site
+
+      - name: Set up SSH
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$EC2_SSH_KEY" > ~/.ssh/ec2
+          chmod 600 ~/.ssh/ec2
+          cat >> ~/.ssh/config <<EOF
+          Host ec2
+            HostName $EC2_HOST
+            User ec2-user
+            IdentityFile ~/.ssh/ec2
+            IdentitiesOnly yes
+            BatchMode yes
+            StrictHostKeyChecking accept-new
+            ConnectTimeout 30
+            ConnectionAttempts 3
+            ServerAliveInterval 30
+            ServerAliveCountMax 4
+          EOF
+
+      # Unpacks into ~/flashcards-site/releases/<sha>, then repoints the
+      # "current" symlink in one rename.  The target is relative, so it also
+      # resolves inside the Caddy container, which mounts ~/flashcards-site.
+      # Keeps the three newest releases for a quick rollback (repoint the link).
+      - name: Publish to EC2
+        timeout-minutes: 10
+        env:
+          SHA: ${{ github.sha }}
+        run: |
+          script=$(cat <<REMOTE
+          set -e
+          site=\$HOME/flashcards-site
+          rel=releases/$SHA
+          mkdir -p "\$site/releases"
+          cd "\$site"
+          rm -rf "\$rel.tmp"
+          mkdir "\$rel.tmp"
+          tar xzf - -C "\$rel.tmp"
+          rm -rf "\$rel"
+          mv "\$rel.tmp" "\$rel"
+          # tar gives the directory the archive's mtime; stamp it so the
+          # newest-first pruning below sees publish order.
+          touch "\$rel"
+          ln -sfn "\$rel" current.tmp
+          mv -T current.tmp current
+          ls -1dt releases/*/ | tail -n +4 | grep -vx "\$rel/" | xargs -r rm -rf
+          echo "Published \$rel (\$(du -sh "\$rel" | cut -f1))"
+          REMOTE
+          )
+          ssh ec2 "$script" < site.tar.gz
+
   build-and-push:
     needs: test
     runs-on: ubuntu-latest

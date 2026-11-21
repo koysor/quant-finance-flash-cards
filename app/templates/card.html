@@ -17,7 +17,7 @@
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <a href="{{ url_for('main.index') }}">Cards</a>
   <span class="breadcrumb-sep">›</span>
-  <a href="{{ url_for('main.index', topic=card['topic']) }}">{{ card['topic'] }}</a>
+  <a href="{{ url_for('main.topic_page', slug=topic_slug(card['topic'])) }}">{{ card['topic'] }}</a>
   <span class="breadcrumb-sep">›</span>
   <span class="breadcrumb-current">{{ card['name'] }}</span>
   <button class="copy-link-btn" onclick="copyLink()" title="Copy link" aria-label="Copy link to clipboard">

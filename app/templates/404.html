@@ -7,6 +7,44 @@
   <div class="error-code">404</div>
   <h1>Card not found</h1>
   <p>This card doesn't exist in the deck. It may have been moved or the URL is incorrect.</p>
+  <ul class="disambig-list" id="slug-matches" hidden></ul>
   <a href="{{ url_for('main.index') }}" class="btn-primary">Back to all cards</a>
 </div>
+{% endblock %}
+
+{% block page_scripts %}
+<script>
+/* A card URL with the wrong or no topic (/card/<slug>, or a card that moved
+   topic): look the slug up in the search data.  One match → go there; several
+   → list them.  The server already does this, so it matters on the static site. */
+(function () {
+  const i = location.pathname.indexOf('/card/');
+  if (i < 0) return;
+  const slug = decodeURIComponent(location.pathname.slice(i + 6)).replace(/\/+$/, '').split('/').pop();
+  if (!slug) return;
+  fetch({{ url_for('main.search_data_json_view') | tojson }})
+    .then(r => r.json())
+    .then(cards => {
+      const matches = cards.filter(c => c.id.split('/').pop() === slug);
+      if (matches.length === 1) { location.replace(matches[0].url); return; }
+      if (matches.length < 2) return;
+      document.querySelector('.error-page h1').textContent = 'Multiple cards match ' + slug;
+      document.querySelector('.error-page p').textContent = 'This concept exists in more than one topic. Choose the one you want:';
+      const list = document.getElementById('slug-matches');
+      matches.forEach(c => {
+        const a = document.createElement('a');
+        a.className = 'disambig-link';
+        a.href = c.url;
+        a.style.setProperty('--tc', c.colour);
+        a.innerHTML = '<span class="disambig-topic"></span><span class="disambig-name"></span>';
+        a.firstChild.textContent = c.topic;
+        a.lastChild.textContent = c.name;
+        const li = document.createElement('li');
+        li.append(a);
+        list.append(li);
+      });
+      list.hidden = false;
+    });
+})();
+</script>
 {% endblock %}

@@ -16,6 +16,7 @@
         <a class="card-tile"
            href="{{ url_for('main.card_detail', card_id=card['id']) }}"
            data-card-id="{{ card['id'] }}"
+           data-date="{{ date }}"
            style="--tc:{{ tc }};--delay:{{ card_i.value * 35 }}ms"
            tabindex="0">
           <div class="card-tile-header">
@@ -48,5 +49,27 @@
     if (visited.has(tile.dataset.cardId)) tile.classList.add('visited');
   });
 })();
+{% if static_build %}
+/* Static site: the server cannot filter by ?start= / ?end=, so hide the
+   cards outside the range here (dates compare as YYYY-MM-DD strings). */
+(function() {
+  const q = new URLSearchParams(location.search);
+  const start = (q.get('start') || '').slice(0, 10), end = (q.get('end') || '').slice(0, 10);
+  if (!start && !end) return;
+  let shown = 0;
+  document.querySelectorAll('.card-tile[data-date]').forEach(tile => {
+    const d = tile.dataset.date;
+    const keep = d !== 'Unknown' && (!start || d >= start) && (!end || d <= end);
+    tile.hidden = !keep;
+    if (keep) shown++;
+  });
+  if (!shown) {
+    const p = document.createElement('p');
+    p.className = 'muted';
+    p.textContent = 'No cards found.';
+    document.querySelector('.card-grid').after(p);
+  }
+})();
+{% endif %}
 </script>
 {% endblock %}

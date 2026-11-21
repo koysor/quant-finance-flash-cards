@@ -34,7 +34,7 @@ from werkzeug.middleware.proxy_fix import ProxyFix
 from app.db import bulk_connection, init_db, load_edges_from_file, get_site_stats
 from app.extensions import cache, edge_edit_enabled, limiter
 from app.loader import load_all_cards
-from app.routes import bp, TOPIC_COLOURS, _topic_colour
+from app.routes import bp, TOPIC_COLOURS, _topic_colour, static_build, topic_slug
 
 
 class _DedentTemplates(Extension):
@@ -181,6 +181,10 @@ def create_app() -> Flask:
             the client-side search box.
         TOPIC_COLOURS
             The full topic → colour mapping, used by the graph legend and filters.
+        topic_slug(topic)
+            Callable — the URL slug for ``/topic/<slug>`` and ``/quiz/<slug>``.
+        static_build
+            True while ``scripts/build_static.py`` renders the site to files.
         site_stats
             Dict with ``card_count``, ``topic_count``, and ``edge_count``.
         csrf_token
@@ -194,6 +198,8 @@ def create_app() -> Flask:
 
         return {
             "topic_colour": _topic_colour,
+            "topic_slug": topic_slug,
+            "static_build": static_build(),
             "TOPIC_COLOURS": TOPIC_COLOURS,
             "site_stats": _get_site_stats(),
             "csrf_token": session.get("csrf_token", "") if edit else "",

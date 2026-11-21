@@ -1,0 +1,19 @@
+{# Static site only: a query string cannot select a file, so the old
+   ?tag= / ?topic= URLs are sent on to the path pages that replaced them.
+   Set topic_endpoint before including; ?tag= is only handled on the index. #}
+{% if static_build %}
+<script>
+(function () {
+  const q = new URLSearchParams(location.search);
+  const tag = (q.get('tag') || '').trim(), topic = (q.get('topic') || '').trim();
+  const topicUrls = {
+    {% for t in TOPIC_COLOURS %}{{ t | tojson }}: {{ url_for(topic_endpoint, slug=topic_slug(t)) | tojson }}{% if not loop.last %},{% endif %}
+    {% endfor %}
+  };
+  {% if topic_endpoint == 'main.topic_page' %}
+  if (tag) { location.replace({{ url_for('main.tag_page', tag='TAG') | tojson }}.replace('TAG', encodeURIComponent(tag))); return; }
+  {% endif %}
+  if (topic && topicUrls[topic]) location.replace(topicUrls[topic]);
+})();
+</script>
+{% endif %}
