@@ -1404,6 +1404,18 @@
     "description": "Jensen\u2019s inequality is stated in terms of convex and concave functions \u2014 understanding convexity is a prerequisite for applying the inequality to expected values in finance."
   },
   {
+    "source": "calculus/corollary",
+    "target": "derivatives/put-call-parity",
+    "label": "illustrated by",
+    "description": "Setting the strike equal to the forward price in put-call parity gives the corollary that at-the-money-forward calls and puts have equal value \u2014 the reason FX desks quote straddles and risk reversals at that strike."
+  },
+  {
+    "source": "calculus/corollary",
+    "target": "statistics/square-root-rule",
+    "label": "exemplified by",
+    "description": "The square-root rule is a corollary of variance additivity for independent returns \u2014 one square root turns n\u03c3\u00b2 into \u03c3\u221an, and the rule inherits the independence assumption that breaks under autocorrelation."
+  },
+  {
     "source": "calculus/cosine-rule",
     "target": "calculus/cosine",
     "label": "uses",
@@ -2590,6 +2602,12 @@
     "target": "stochastic-processes/fokker-planck-equation",
     "label": "applied in",
     "description": "Deriving moment equations from the Fokker-Planck equation requires differentiating integrals of the form \u222b x^n p(x,t) dx with respect to time, a step justified by the Leibniz rule that converts the PDE for the density into ODEs for the moments."
+  },
+  {
+    "source": "calculus/lemma",
+    "target": "calculus/corollary",
+    "label": "complemented by",
+    "description": "A lemma comes before a main result as a stepping stone, while a corollary follows it as an immediate consequence \u2014 the variance addition lemma and the square-root rule for volatility are a matched pair."
   },
   {
     "source": "calculus/lemma",
