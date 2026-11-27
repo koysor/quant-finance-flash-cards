@@ -1399,6 +1399,18 @@
       }
     ]
   },
+  "calculus/corollary": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Corollary",
+        "url": "https://en.wikipedia.org/wiki/Corollary"
+      },
+      {
+        "title": "Division by Zero \u2014 Theorem, Lemma and Corollary: What Is the Difference?",
+        "url": "https://divisbyzero.com/2008/09/22/what-is-the-difference-between-a-theorem-a-lemma-and-a-corollary/"
+      }
+    ]
+  },
   "calculus/cosine-rule": {
     "websites": [
       {
