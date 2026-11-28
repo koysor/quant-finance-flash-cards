@@ -24770,6 +24770,28 @@
       }
     ]
   },
+  "stochastic-processes/kolmogorov-equations": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Kolmogorov Equations",
+        "url": "https://en.wikipedia.org/wiki/Kolmogorov_equations"
+      },
+      {
+        "title": "Wikipedia \u2014 Kolmogorov Backward Equations (Diffusion)",
+        "url": "https://en.wikipedia.org/wiki/Kolmogorov_backward_equations_(diffusion)"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Kolmogorov Forward and Backward Equations as Adjoints",
+        "url": "https://www.youtube.com/watch?v=PaZ0L2hj7PE"
+      },
+      {
+        "title": "Don't Solve Stochastic Differential Equations (Solve a PDE Instead!)",
+        "url": "https://www.youtube.com/watch?v=OUGDlKnRLOI"
+      }
+    ]
+  },
   "stochastic-processes/levy-processes": {
     "websites": [
       {

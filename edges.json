@@ -28596,6 +28596,30 @@
     "description": "Kazamaki's condition (sup E[e^{M_T/2}] < \u221e) is strictly weaker than Novikov's (E[e^{\u00bd[M,M]_\u221e}] < \u221e): every process satisfying Novikov also satisfies Kazamaki, making Kazamaki applicable in cases \u2014 such as rapidly growing market prices of risk \u2014 where Novikov fails."
   },
   {
+    "source": "stochastic-processes/kolmogorov-equations",
+    "target": "stochastic-processes/backward-kolmogorov-equation",
+    "label": "specialises to",
+    "description": "The backward Kolmogorov equation is the half of the pair that acts on the starting point (x, t) through the generator L \u2014 it is the form used to price a single payoff from every spot level, and with discounting it becomes the Black-Scholes PDE."
+  },
+  {
+    "source": "stochastic-processes/kolmogorov-equations",
+    "target": "stochastic-processes/fokker-planck-equation",
+    "label": "specialises to",
+    "description": "The Fokker-Planck equation is the forward half of the pair, acting on the end point (y, T) through the adjoint generator L* \u2014 it evolves the whole terminal density from one known spot, which is why it underpins Dupire local-volatility calibration."
+  },
+  {
+    "source": "stochastic-processes/kolmogorov-equations",
+    "target": "stochastic-processes/transition-probability-density",
+    "label": "governs",
+    "description": "The transition density p(x, t; y, T) satisfies both Kolmogorov equations at once \u2014 the backward one in its present variables and the forward one in its future variables \u2014 so integrating a payoff against it gives the same price either way."
+  },
+  {
+    "source": "stochastic-processes/kolmogorov-equations",
+    "target": "volatility/dupire-formula",
+    "label": "rearranged into",
+    "description": "Dupire's formula comes from the forward Kolmogorov equation \u2014 differentiating call prices twice in strike turns the forward equation for the risk-neutral density into a forward PDE in (K, T), which is solved for the one local volatility that reproduces every quoted option price."
+  },
+  {
     "source": "stochastic-processes/levy-processes",
     "target": "probability/fat-tailed-distributions",
     "label": "motivated by",
@@ -28702,6 +28726,12 @@
     "target": "stochastic-processes/brownian-motion",
     "label": "satisfied by",
     "description": "Standard Brownian motion is both Markov and a martingale \u2014 its future depends only on the current value (Markov) and its conditional expectation equals the current value (martingale)."
+  },
+  {
+    "source": "stochastic-processes/markov-property",
+    "target": "stochastic-processes/kolmogorov-equations",
+    "label": "prerequisite of",
+    "description": "The Kolmogorov equations exist only because the process is Markov \u2014 the future depends on the present state alone, so the Chapman-Kolmogorov identity holds and the transition density can be described by a local PDE in the current state."
   },
   {
     "source": "stochastic-processes/markov-property",
