@@ -11,6 +11,8 @@
 
 **Itô's lemma** is the stochastic calculus analogue of the chain rule. Given a stochastic process $X_t$ and a twice-differentiable function $f(t, X_t)$, it tells us how $f$ evolves over time. The key departure from ordinary calculus is an extra second-order term that arises because $(dW_t)^2 = dt$.
 
+**Notation $(t, X_t)$:** the two arguments of a function. $t$ is time, and $X_t$ is the value of the process at time $t$ (a single random number). $f(t, X_t)$ means: take an ordinary function $f(t, x)$ of two variables and substitute the random value $X_t$ for $x$, which makes $f(t, X_t)$ itself random. The partial derivatives refer to these two slots: $\frac{\partial f}{\partial t}$ is the change in $f$ as time moves with $x$ held fixed, and $\frac{\partial f}{\partial x}$, $\frac{\partial^2 f}{\partial x^2}$ are the changes as the process value moves with time held fixed. Likewise, $\mu(t, X_t)$ and $\sigma(t, X_t)$ say the drift and volatility may depend on time and on the current level of the process.
+
 ## Key Formula
 
 Suppose $X_t$ satisfies the SDE:
@@ -44,5 +46,5 @@ which gives the closed-form GBM solution $S_T = S_0 \exp\!\left(\left(\mu - \tfr
 ## Remember
 
 - The Itô correction is what produces the $-\tfrac{\sigma^2}{2}$ **volatility drag** term in GBM — higher volatility lowers the expected log return even when the drift $\mu$ is fixed.
-- Itô's lemma is used directly to derive the **Black-Scholes PDE**: apply it to the option price $V(t, S_t)$, then construct a risk-free portfolio to eliminate the $dW_t$ term.
+- Itô's lemma is used directly to derive the **Black-Scholes PDE**: apply it to the option price $V(t, S_t)$, then construct a risk-free portfolio to eliminate the $dW_t$ term. $V$ depends on both arguments (the stock price and time decay towards expiry), which is where the $\frac{\partial V}{\partial t}$ term comes from; $\ln S_t$ in the example above depends only on the second argument, so its $\frac{\partial f}{\partial t} = 0$.
 - In quantitative finance, every time you see a function of a stochastic process, Itô's lemma is the tool that lets you differentiate it.
