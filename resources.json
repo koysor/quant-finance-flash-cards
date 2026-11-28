@@ -24770,6 +24770,28 @@
       }
     ]
   },
+  "stochastic-processes/kolmogorov-equations": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Kolmogorov Equations",
+        "url": "https://en.wikipedia.org/wiki/Kolmogorov_equations"
+      },
+      {
+        "title": "Wikipedia \u2014 Kolmogorov Backward Equations (Diffusion)",
+        "url": "https://en.wikipedia.org/wiki/Kolmogorov_backward_equations_(diffusion)"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Kolmogorov Forward and Backward Equations as Adjoints",
+        "url": "https://www.youtube.com/watch?v=PaZ0L2hj7PE"
+      },
+      {
+        "title": "Don't Solve Stochastic Differential Equations (Solve a PDE Instead!)",
+        "url": "https://www.youtube.com/watch?v=OUGDlKnRLOI"
+      }
+    ]
+  },
   "stochastic-processes/levy-processes": {
     "websites": [
       {
@@ -24885,6 +24907,28 @@
       {
         "title": "Investopedia \u2014 Mean Reversion",
         "url": "https://www.investopedia.com/terms/m/meanreversion.asp"
+      }
+    ]
+  },
+  "stochastic-processes/mean-square-limit": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Convergence of Random Variables (Convergence in Mean)",
+        "url": "https://en.wikipedia.org/wiki/Convergence_of_random_variables"
+      },
+      {
+        "title": "Wikipedia \u2014 It\u00f4 Calculus",
+        "url": "https://en.wikipedia.org/wiki/It%C3%B4_calculus"
+      }
+    ],
+    "videos": [
+      {
+        "title": "MIT 18.S096 \u2014 18. It\u014d Calculus",
+        "url": "https://www.youtube.com/watch?v=Z5yRMMVUC5w"
+      },
+      {
+        "title": "It\u00f4 Integrals: An Intuitive Introduction",
+        "url": "https://www.youtube.com/watch?v=ErJp91YBXbo"
       }
     ]
   },
@@ -25205,6 +25249,50 @@
       {
         "title": "MIT OpenCourseWare \u2014 Stochastic Calculus Lecture Notes (18.S096)",
         "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/pages/lecture-notes/"
+      }
+    ]
+  },
+  "stochastic-processes/stratonovich-integral": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Stratonovich Integral",
+        "url": "https://en.wikipedia.org/wiki/Stratonovich_integral"
+      },
+      {
+        "title": "Wikipedia \u2014 It\u00f4 Calculus",
+        "url": "https://en.wikipedia.org/wiki/It%C3%B4_calculus"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Ito versus Stratonovich: Stochastic Integration",
+        "url": "https://www.youtube.com/watch?v=MJhiPaSoGhI"
+      },
+      {
+        "title": "All of Basic Stochastic Calculus (~90 Minute Speedrun)",
+        "url": "https://www.youtube.com/watch?v=3Ar1aw7IRds"
+      }
+    ]
+  },
+  "stochastic-processes/strong-markov-property": {
+    "websites": [
+      {
+        "title": "Wikipedia \u2014 Markov Property (Strong Markov Property)",
+        "url": "https://en.wikipedia.org/wiki/Markov_property"
+      },
+      {
+        "title": "Wikipedia \u2014 Reflection Principle (Wiener Process)",
+        "url": "https://en.wikipedia.org/wiki/Reflection_principle_(Wiener_process)"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Part 03, Strong Markov Property",
+        "url": "https://www.youtube.com/watch?v=Z6Jxv45s7ko"
+      },
+      {
+        "title": "Reflection Principles for Brownian Motion \u2014 Part 1",
+        "url": "https://www.youtube.com/watch?v=pvhPYHDSEJg"
       }
     ]
   },
