@@ -19008,6 +19008,12 @@
     "description": "The CLT is stated using convergence in distribution: the arrow \u2192\u1d48 N(0,1) means the standardised sample mean\u2019s CDF approaches the standard normal CDF as n grows."
   },
   {
+    "source": "mathematical-notation/convergence-notation",
+    "target": "stochastic-processes/mean-square-limit",
+    "label": "notation for",
+    "description": "The arrow with L\u00b2 above it in convergence notation is read 'converges in mean square' \u2014 the mode of convergence used to define stochastic integrals and to state results such as dW\u00b2 = dt."
+  },
+  {
     "source": "mathematical-notation/definition-assignment-notation",
     "target": "mathematical-notation/function-notation",
     "label": "used when introducing",
@@ -19696,6 +19702,12 @@
     "target": "stochastic-processes/stochastic-integrals",
     "label": "notation for",
     "description": "The stochastic integrals card covers the probabilistic construction and properties of the Ito integral; this notation card explains how to read the symbols int H dW, the adaptedness requirement, and the Ito versus Stratonovich conventions."
+  },
+  {
+    "source": "mathematical-notation/stochastic-integral-notation",
+    "target": "stochastic-processes/stratonovich-integral",
+    "label": "notation for",
+    "description": "The circle in \u222b H \u2218 dW marks a Stratonovich integral, distinguishing it from the It\u00f4 integral \u222b H dW used for trading gains."
   },
   {
     "source": "mathematical-notation/stopping-time-notation",
@@ -28740,6 +28752,12 @@
     "description": "The Markov property (memoryless) and the martingale property (driftless) are logically independent \u2014 a process can be one, both, or neither, and confusing them is a common error."
   },
   {
+    "source": "stochastic-processes/markov-property",
+    "target": "stochastic-processes/strong-markov-property",
+    "label": "strengthened by",
+    "description": "The strong Markov property extends memorylessness from fixed times to random stopping times such as barrier hits \u2014 the extra strength needed whenever a payoff switches on or off at a random moment."
+  },
+  {
     "source": "stochastic-processes/martingale-representation-theorem",
     "target": "derivatives/risk-neutral-pricing",
     "label": "guarantees hedging for",
@@ -28816,6 +28834,24 @@
     "target": "volatility/volatility-term-structure",
     "label": "shapes",
     "description": "Mean reversion in volatility determines the shape of the term structure \u2014 fast mean reversion produces a steeply sloped or inverted curve as short-term vol deviates from the long-run level."
+  },
+  {
+    "source": "stochastic-processes/mean-square-limit",
+    "target": "stochastic-processes/dx-squared-equals-dt",
+    "label": "makes precise",
+    "description": "The rule dW\u00b2 = dt holds as a mean square limit, not path by path \u2014 the sum of squared increments has mean square error 2t\u00b2/n, which vanishes as the time step shrinks and gives the It\u00f4 correction its exact form."
+  },
+  {
+    "source": "stochastic-processes/mean-square-limit",
+    "target": "stochastic-processes/euler-maruyama-method",
+    "label": "measures convergence of",
+    "description": "The strong convergence order of Euler-Maruyama is stated as an expected path error \u2014 the same mean-error yardstick that decides how many time steps a Monte Carlo pricer needs before simulated paths are accurate enough for path-dependent payoffs."
+  },
+  {
+    "source": "stochastic-processes/mean-square-limit",
+    "target": "stochastic-processes/ito-integral",
+    "label": "defines",
+    "description": "The It\u00f4 integral is defined as the mean square limit of left-endpoint sums \u2014 the left endpoint mirrors a trader fixing a hedge before the next price move, and mean square is the only mode of convergence in which these sums settle for Brownian paths."
   },
   {
     "source": "stochastic-processes/milstein-method",
@@ -29308,6 +29344,42 @@
     "target": "stochastic-processes/itos-lemma",
     "label": "derived via",
     "description": "The stochastic logarithm formula for a continuous semimartingale follows directly from It\u00f4's lemma applied to ln Z, with the It\u00f4 correction term \u00bd d[Z,Z]/Z\u00b2 appearing as the adjustment between log-price and log-return."
+  },
+  {
+    "source": "stochastic-processes/stratonovich-integral",
+    "target": "stochastic-processes/ito-integral",
+    "label": "converts to",
+    "description": "A Stratonovich integral equals the It\u00f4 integral plus half a dt correction, and a Stratonovich SDE becomes an It\u00f4 SDE with extra drift \u00bd b \u2202b/\u2202x \u2014 the conversion needed before a model written in Stratonovich form can be priced under no-arbitrage."
+  },
+  {
+    "source": "stochastic-processes/stratonovich-integral",
+    "target": "stochastic-processes/itos-lemma",
+    "label": "avoids",
+    "description": "Stratonovich calculus obeys the ordinary chain rule, so the \u00bd\u03c3\u00b2 correction in It\u00f4's lemma disappears \u2014 the price is that the integral is no longer a martingale, which is why finance keeps It\u00f4's lemma and the correction."
+  },
+  {
+    "source": "stochastic-processes/stratonovich-integral",
+    "target": "stochastic-processes/rough-path-theory",
+    "label": "generalised by",
+    "description": "Smooth approximations of noise converge to Stratonovich solutions (Wong-Zakai), and rough path theory extends this ordinary-chain-rule calculus to paths rougher than Brownian motion \u2014 the setting of rough volatility models."
+  },
+  {
+    "source": "stochastic-processes/strong-markov-property",
+    "target": "derivatives/barrier-option",
+    "label": "underpins",
+    "description": "When the barrier is hit, a knock-in option turns into a vanilla whose value depends only on the spot at that moment \u2014 the strong Markov property is what lets barrier options be priced in closed form or on a PDE grid instead of path by path."
+  },
+  {
+    "source": "stochastic-processes/strong-markov-property",
+    "target": "stochastic-processes/first-passage-time",
+    "label": "restarts at",
+    "description": "A first passage time is a stopping time, so by the strong Markov property the process after the hit is a fresh diffusion started from the barrier level \u2014 which is how hitting-time densities and perpetual option values are derived."
+  },
+  {
+    "source": "stochastic-processes/strong-markov-property",
+    "target": "stochastic-processes/running-maximum-distribution",
+    "label": "justifies",
+    "description": "The reflection principle behind the running-maximum distribution restarts Brownian motion at the first hitting time of the barrier \u2014 a step that is valid only because of the strong Markov property, and which gives the closed-form touch probability 2P(W_T \u2265 b)."
   },
   {
     "source": "stochastic-processes/submartingales-and-supermartingales",
